@@ -1,0 +1,2 @@
+# BFCM 2026 live log. Filled daily 24 Nov – 2 Dec 2026 by the scheduled update. day must match a day in bfcm2025_daily.csv (Tue-Thu (pre-BF), Black Friday, Saturday, Sunday, Cyber Monday) or 'Cyber Week'. metric: spend, revenue, mer, cac (YoY %) or a free-text headline. source: Northbeam / Triple Whale / Adobe / Salesforce / Shopify.
+date,day,source,metric,value,note,url

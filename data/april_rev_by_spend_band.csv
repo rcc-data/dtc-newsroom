@@ -1,0 +1,9 @@
+# April 2026 YoY change in median revenue by monthly ad spend band
+band,median_revenue_yoy
+<$50k,-15.1
+$50k-$100k,2.4
+$100k-$200k,4.9
+$200k-$500k,6.2
+$500k-$1m,18.8
+$1m-$3m,3.3
+$3m+,2.5

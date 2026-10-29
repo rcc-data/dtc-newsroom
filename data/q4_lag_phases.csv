@@ -1,0 +1,8 @@
+# Northbeam example apparel brand, Facebook Ads ROAS by Q4 phase (MB 2026-09-10). Exact values from table.
+phase,dates,roas_1d,roas_7d,roas_30d,roas_ltv,mult_30d_1d,mult_ltv_1d
+Early Oct,Oct 1-14,0.64,0.95,1.45,2.61,2.27,4.08
+Late Oct,Oct 15-31,0.75,1.18,1.92,2.89,2.56,3.85
+Pre-BFCM,Nov 1-23,0.86,1.38,2.25,2.70,2.62,3.14
+BFCM Week,Nov 24-Dec 1,0.91,1.42,1.68,1.94,1.85,2.13
+Early Dec,Dec 2-15,1.32,1.84,2.13,2.48,1.61,1.88
+Late Dec,Dec 16-31,1.01,1.44,1.79,2.34,1.77,2.32

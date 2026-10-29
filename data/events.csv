@@ -1,0 +1,13 @@
+# Calendar events used to annotate weekly charts (US retail calendar + events Northbeam cites)
+date,label,type
+2026-01-01,New Year,calendar
+2026-02-08,Super Bowl,calendar
+2026-02-14,Valentine's,calendar
+2026-03-10,Meta algorithm update,platform
+2026-05-10,Mother's Day,calendar
+2026-05-25,Memorial Day,calendar
+2026-06-24,Prime Day,amazon
+2026-07-04,July 4th,calendar
+2026-08-17,Back to school,calendar
+2026-09-07,Labor Day,calendar
+2026-10-07,Prime Big Deal Days,amazon

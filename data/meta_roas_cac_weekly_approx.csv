@@ -1,0 +1,25 @@
+# Approx monthly-typical values read from two X charts (@northbeam 2026-10-23 "Average Meta blended ROAS up >30% YoY" and 2026-10-28 "Meta New Customer CACs down 33% YoY"). Avg weekly across all NB accounts, 1-day clicks. Exact annotated points: ROAS 0.37 Jan 2025, 0.54 mid-Oct 2026, peak 0.57 wk Sep 6 2026; CAC peak $309.17 wk Nov 30 2025 (BFCM); Prime Day spike Jun 23-26 2026.
+month,blended_roas,first_time_cac
+2025-01,0.37,258
+2025-02,0.38,270
+2025-03,0.39,262
+2025-04,0.36,280
+2025-05,0.39,278
+2025-06,0.38,272
+2025-07,0.38,266
+2025-08,0.38,265
+2025-09,0.43,280
+2025-10,0.42,276
+2025-11,0.44,272
+2025-BFCM,0.48,309.17
+2025-12,0.44,255
+2026-01,0.44,235
+2026-02,0.46,236
+2026-03,0.46,233
+2026-04,0.46,246
+2026-05,0.47,250
+2026-06,0.45,268
+2026-07,0.48,215
+2026-08,0.50,212
+2026-09,0.55,200
+2026-10,0.54,185

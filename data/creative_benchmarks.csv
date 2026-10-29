@@ -1,0 +1,29 @@
+# Creative volume and testing benchmarks quoted by Northbeam, 2025-2026. Each row cites its post.
+metric,value,unit,context,source_id
+Ads launched per week - top 25% of Northbeam businesses,189,ads/week,average,mb-hudson
+Ads launched per week - everyone else,83,ads/week,average,mb-hudson
+Ads launched per week - Northbeam top-performing brands,200-300,ads/week,range,mb-ugc1
+Ads launched per week - most advertisers,90,ads/week,approx,mb-ugc1
+Share of budget on freshly launched ads (top cohort),10,% of weekly budget,top-performing cohort,mb-ugc1
+True high performers labelled underperformers in-platform,17,% of fresh ads,top cohort,mb-ugc1
+True underperformers labelled over-performers in-platform,29,% (up to),top cohort,mb-ugc1
+Ads mistracked by in-platform reporting each week,50,% (roughly),all,mb-ugc1
+Extra conversions attributed with deterministic views,56,% (up to),vs clicks-only,mb-ugc1
+Posts per active creator per month - program dying,4,posts (below),creator programs,mb-ugc2
+Posts per active creator per month - flywheel working,10,posts (above),creator programs,mb-ugc2
+Creators one community manager can handle,500-1000,creators,creator programs,mb-ugc2
+Testable ad units per creator video,8-12,ad units,disciplined team,mb-ugc3
+Distinct ads inside one creator video,5-15,ads,variations,mb-ugc3
+Share of ad performance driven by the hook,60-80,%,first 3 seconds,mb-ugc3
+Places one piece of creator content should live,8+,placements,repurposing,mb-ugc3
+Comfrt partner creators with <1000 followers,54,%,Comfrt,mb-hudson
+Comfrt affiliates,600000,people,Comfrt,mb-hudson
+Comfrt content partners,250000,people,Comfrt,mb-hudson
+Bonus threshold for creator video volume,100,videos/month,Sean Frank advice,mb-hudson
+Click likelihood drop after 4 repetitions of same creative,-45,%,Meta study cited,bl-fatigue
+Frequency where fatigue sets in,3-4,impressions,rule of thumb,bl-fatigue
+Budget increase per step when an ad clears benchmark,10,% per day,needs >10 AOV-sized purchases in 7 days,mb-framework
+Cut threshold,<5,purchases in window,and below nROAS / above nCAC,mb-framework
+Ad spend most growth marketers waste,40+,%,Northbeam claim,mb-framework
+Daily optimisation time,15-30,minutes/day,framework,mb-framework
+Clean data needed before framework,90,days,framework,mb-framework

@@ -1,0 +1,15 @@
+# Northbeam "all businesses" median YoY changes, assembled from multiple Northbeam posts. Where two posts disagree for the same month both are kept (source column) - Northbeam re-cuts samples between articles.
+period,spend,revenue,revenue_new,mer,mer_new,cac_new,cvr,source
+2025-01,,4.33,-1.57,,-6.24,6.58,,Blog 2026-03-24 Planning Q1-Q2
+2025-02,,2.06,-0.33,,-9.91,12.20,,Blog 2026-03-24 Planning Q1-Q2
+2025-05,,6.82,3.95,,-5.19,,,Blog 2026-03-24 Planning Q1-Q2
+2025-06,,8.84,4.47,,-3.43,,,Blog 2026-03-24 Planning Q1-Q2
+2025-CW,9.23,13.35,,3.77,,8.03,,Blog 2025-12-22 Cyber Week 2025 (aggregate Cyber Week vs 2024)
+2025-FY,~5,~5,,~-2pts,,~9,,Blog 2026-02-25 Cost of Growth (median; average spend +15% rev +14%)
+2026-01,5.91,3.99,,0.40,-5.21,11.49,-6.20,Blog 2026-02-18 January 2026 Benchmarks
+2026-01,,7.30,3.17,,-5.21,8.71,,Blog 2026-03-24 Planning Q1-Q2
+2026-02,10.40,9.56,-1.46,0.73,-8.45,19.56,,Blog 2026-03-13 February 2026 Data
+2026-02,,9.05,6.18,,-4.42,9.81,,Blog 2026-03-24 Planning Q1-Q2
+2026-04,9.6,4.4,,,-3.5,9.7,,MB 2026-05-13 April retrospective
+2026-05,10.9,3.2,0.6,-1.1,-6.2,9.7,,MB 2026-06-22 May retrospective
+2026-H1,12.38,4.47,3.32,-1.11,-5.73,10.34,,MB 2026-08-06 H1 2026 report

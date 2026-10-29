@@ -1,0 +1,7 @@
+# Runneth (Motion) Creative Benchmarks 2026: 550,000+ ads, 6,000+ advertisers, ~$1.3B Meta spend, Sep 2025 – early Jan 2026. Winner = spends >=10x the account's median ad. Loser = off before 28 days. Mid-range = 28+ days, not a winner. Winner % and winner share of spend given only for micro and enterprise.
+tier,monthly_spend,median_ads_wk,mean_ads_wk,hit_rate,winner_pct_of_ads,winner_share_of_spend
+Micro,<$10K,2.8,3.3,4.0,3.8,23
+Small,$10K-$50K,4.1,5.1,6.5,,
+Medium,$50K-$200K,6.7,9.3,8.1,,
+Large,$200K-$1M,11.2,16.6,8.6,,
+Enterprise,$1M+,18.9,29.2,8.8,8.2,64

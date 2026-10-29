@@ -1,0 +1,8 @@
+# May 2026 vs May 2025 median YoY by AOV band (all platforms). Low-contrast cells in the <$150 rows read approximately.
+aov_band,spend,revenue,revenue_new,mer,mer_new,cac_new
+<$50,3.7,0.4,-5.9,0.0,-11.6,13.8
+$50-$100,2.0,-0.0,-4.5,2.5,-9.0,9.6
+$100-$150,5.1,-0.1,-4.1,-0.4,-2.9,5.5
+$150-$200,14.5,10.5,10.1,-7.5,-8.4,12.7
+$200-$500,12.2,4.3,6.5,-1.2,-5.3,6.8
+$500+,25.8,20.9,21.8,-3.2,-4.9,15.6

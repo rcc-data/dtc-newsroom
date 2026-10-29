@@ -1,0 +1,8 @@
+# April 2026 vs April 2025 average YoY change by annual revenue band
+revenue_band,spend,revenue,revenue_new,mer,mer_new,cac_new
+<$5m,14.2,-0.9,-1.5,-8.4,-7.0,9.6
+$5m-$10m,8.0,-1.0,-8.6,-5.9,-7.8,17.1
+$10m-$20m,6.3,8.7,14.3,5.9,5.0,4.0
+$20m-$50m,13.5,11.1,8.1,1.2,-5.2,9.8
+$50m-$100m,6.1,-0.4,-7.2,-4.4,-8.3,10.1
+$100m+,7.6,10.4,7.3,4.7,1.0,-0.4

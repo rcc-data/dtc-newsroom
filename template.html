@@ -1,0 +1,1369 @@
+<title>DTC Newsroom</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700;6..72,800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: broadsheet front page on newsprint, with always-dark terminal panels carrying the market data. Masthead, ticker tape, desk nav, then stories + quote boards. */
+:root{
+  --paper:#ecebe5; --paper-2:#f6f5f1; --ink:#141414; --ink-2:#4a4a46; --rule:#1d1d1b; --hair:#c9c7bf; --flag:#b3121f;
+  --t-bg:#0a0d0c; --t-panel:#101513; --t-line:#232c28; --t-text:#d9e1dd; --t-dim:#7f8c87; --t-amber:#ffb020; --t-up:#2fd27a; --t-down:#ff5a4f; --t-blue:#5aa9ff;
+  --head:"Newsreader",Georgia,"Times New Roman",serif;
+  --body:"Public Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#141413;--paper-2:#1b1b19;--ink:#ecebe5;--ink-2:#a9a8a0;--rule:#d9d8d0;--hair:#34342f;--flag:#ff4d5a;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#141413;--paper-2:#1b1b19;--ink:#ecebe5;--ink-2:#a9a8a0;--rule:#d9d8d0;--hair:#34342f;--flag:#ff4d5a;color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:20;background:var(--t-bg)}
+.wrap{max-width:1280px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--t-amber);outline-offset:2px}
+
+/* masthead */
+.mast .wrap{padding-block:18px 10px;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:12px}
+.mast .l,.mast .r{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);line-height:1.4}
+.mast .r{text-align:right}
+.mast h1{margin:0;font-family:var(--head);font-weight:800;font-size:clamp(34px,6vw,64px);letter-spacing:-.02em;line-height:.95;text-align:center;white-space:nowrap}
+@media (max-width:720px){.mast .wrap{grid-template-columns:1fr}.mast .l,.mast .r{text-align:center}.mast h1{white-space:normal}}
+.rule2{border-top:3px double var(--rule);border-bottom:1px solid var(--rule);height:6px}
+
+/* ticker */
+.ticker{background:var(--t-bg);color:var(--t-text);font-family:var(--mono);font-size:12.5px;overflow:hidden;white-space:nowrap;border-bottom:1px solid var(--t-line)}
+.ticker .track{display:inline-flex;gap:28px;padding:8px 0;animation:tick 90s linear infinite}
+.ticker:hover .track{animation-play-state:paused}
+.ticker .it b{color:var(--t-amber);font-weight:600;margin-right:6px}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker .track{animation:none}.ticker{overflow-x:auto}}
+.up{color:var(--t-up)}.down{color:var(--t-down)}.flat{color:var(--t-dim)}
+
+/* nav */
+nav.desks{position:sticky;top:env(safe-area-inset-top,0px);z-index:15;background:var(--paper);border-bottom:1px solid var(--rule)}
+nav.desks .wrap{display:flex;flex-direction:column;gap:0}
+.deskrow,.subrow{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.deskrow a{font-family:var(--body);font-weight:700;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--ink-2);padding:10px 12px;white-space:nowrap;border-bottom:3px solid transparent}
+.deskrow a[aria-current="true"]{color:var(--ink);border-bottom-color:var(--flag)}
+.deskrow a .soon{font-family:var(--mono);font-size:9.5px;letter-spacing:0;text-transform:none;color:var(--ink-2);border:1px solid var(--hair);padding:0 4px;margin-left:5px;border-radius:3px}
+.subrow{border-top:1px solid var(--hair)}
+.subrow a{font-family:var(--mono);font-size:12px;text-decoration:none;color:var(--ink-2);padding:8px 10px;white-space:nowrap}
+.subrow a[aria-current="page"]{color:var(--ink);background:var(--paper-2);box-shadow:inset 0 -2px 0 var(--ink)}
+
+main .wrap{padding-block:22px 64px;display:flex;flex-direction:column;gap:22px}
+section.view{display:flex;flex-direction:column;gap:22px}
+
+/* editorial */
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--flag)}
+h2{font-family:var(--head);font-weight:800;font-size:clamp(26px,3.6vw,40px);line-height:1.05;letter-spacing:-.015em;margin:2px 0 0;text-wrap:balance}
+h3{font-family:var(--head);font-weight:700;font-size:21px;line-height:1.15;margin:0;text-wrap:balance}
+.dek{font-size:16px;color:var(--ink-2);max-width:70ch;margin:8px 0 0}
+.byline{font-family:var(--mono);font-size:11px;color:var(--ink-2);margin-top:8px}
+.front{display:grid;grid-template-columns:minmax(0,2.1fr) minmax(0,1fr);gap:0;border-top:1px solid var(--rule)}
+.front>*{padding:16px 0}
+.front .lead{padding-right:22px;border-right:1px solid var(--hair)}
+.front .side{padding-left:22px;display:flex;flex-direction:column;gap:0}
+.story{padding:12px 0;border-bottom:1px solid var(--hair);display:flex;flex-direction:column;gap:4px}
+.story:last-child{border-bottom:0}
+.story h4{font-family:var(--head);font-weight:700;font-size:18.5px;line-height:1.2;margin:0;text-wrap:balance}
+.story p{margin:0;font-size:14px;color:var(--ink-2)}
+.story a.more{font-family:var(--mono);font-size:11.5px;color:var(--flag);text-decoration:none}
+@media (max-width:860px){.front{grid-template-columns:1fr}.front .lead{padding-right:0;border-right:0;border-bottom:1px solid var(--hair)}.front .side{padding-left:0}}
+.cols3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:0;border-top:1px solid var(--rule)}
+.cols3>.story{padding:14px 18px 14px 0;border-bottom:0}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--rule);padding-bottom:6px}
+.section-head .label{font-family:var(--body);font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.section-head a{font-family:var(--mono);font-size:11.5px;color:var(--flag);text-decoration:none}
+
+/* terminal panels */
+.term{background:var(--t-panel);color:var(--t-text);border:1px solid var(--t-line);border-radius:4px;padding:14px;display:flex;flex-direction:column;gap:10px;min-width:0;color-scheme:dark}
+.term .th{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--t-line);padding-bottom:8px}
+.term .th .t{font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)}
+.term .th .m{font-family:var(--mono);font-size:11px;color:var(--t-dim)}
+.term p.note{font-size:12.5px;color:var(--t-dim);margin:0;max-width:90ch}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.chart{position:relative;width:100%;height:360px}
+.chart.tall{height:500px}.chart.short{height:290px}.chart.mini{height:150px}
+@media (max-width:620px){.chart{height:300px}.chart.tall{height:380px}}
+.chart .fail{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--mono);font-size:12px;color:var(--t-dim);text-align:center;padding:10px}
+.multi{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:10px}
+.multi .cell{border:1px solid var(--t-line);border-radius:3px;padding:8px 8px 4px;min-width:0}
+.multi .cell .h{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11.5px}
+.multi .cell .h b{font-weight:600}
+.ctl{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.ctl label{font-family:var(--mono);font-size:11px;color:var(--t-dim);text-transform:uppercase;letter-spacing:.06em}
+.term select,.term input{font:500 13px var(--mono);color:var(--t-text);background:var(--t-bg);border:1px solid var(--t-line);border-radius:3px;padding:5px 8px}
+.seg{display:inline-flex;border:1px solid var(--t-line);border-radius:3px;overflow:hidden}
+.seg button{font:500 12px var(--mono);color:var(--t-dim);background:var(--t-bg);border:0;border-right:1px solid var(--t-line);padding:6px 10px;cursor:pointer}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--t-amber);color:#111}
+.chip{font:500 12px var(--mono);border:1px solid var(--t-line);background:var(--t-bg);color:var(--t-dim);border-radius:3px;padding:4px 8px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chip .sw{width:9px;height:9px;border-radius:2px;display:inline-block}
+.chip[aria-pressed="true"]{color:var(--t-text);border-color:var(--t-dim)}
+
+/* quote board tables */
+.tw{overflow:auto;border:1px solid var(--t-line);border-radius:3px}
+table.q{border-collapse:collapse;width:100%;font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums}
+table.q th,table.q td{padding:6px 9px;text-align:right;border-bottom:1px solid var(--t-line);white-space:nowrap}
+table.q th:first-child,table.q td:first-child{text-align:left;position:sticky;left:0;background:var(--t-panel);z-index:1}
+table.q thead th{color:var(--t-dim);font-weight:500;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;background:var(--t-bg);position:sticky;top:0;z-index:2}
+table.q thead th:first-child{z-index:3;background:var(--t-bg)}
+table.q tbody tr:hover td{background:#16201c}
+table.q tbody tr:last-child td{border-bottom:0}
+table.q td .pf{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:7px}
+th button.sort{all:unset;cursor:pointer}
+
+/* stat strip */
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:0;border:1px solid var(--t-line);border-radius:4px;background:var(--t-panel)}
+.strip .s{padding:12px 14px;border-right:1px solid var(--t-line);min-width:0}
+.strip .s:last-child{border-right:0}
+.strip .k{font-family:var(--mono);font-size:10.5px;color:var(--t-dim);text-transform:uppercase;letter-spacing:.06em}
+.strip .v{font-family:var(--mono);font-weight:600;font-size:24px;line-height:1.15;color:var(--t-text);font-variant-numeric:tabular-nums}
+.strip .d{font-family:var(--mono);font-size:11px;color:var(--t-dim)}
+
+/* paper cards for takeaways & library */
+.takes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:0;border-top:1px solid var(--rule)}
+.takes .story{padding:14px 18px 14px 0}
+.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--flag)}
+.calc{display:flex;flex-wrap:wrap;gap:14px;align-items:end}
+.calc label{display:flex;flex-direction:column;gap:4px}
+.calc input{width:110px}
+.lib{display:flex;flex-direction:column}
+.lib article{display:grid;grid-template-columns:120px minmax(0,1fr);gap:4px 18px;padding:14px 0;border-bottom:1px solid var(--hair)}
+.lib .d{font-family:var(--mono);font-size:11.5px;color:var(--ink-2)}
+.lib .src{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--flag)}
+.lib h4{font-family:var(--head);font-weight:700;font-size:19px;margin:0;line-height:1.2}
+.lib h4 a{text-decoration:none}.lib h4 a:hover{text-decoration:underline}
+.lib ul{margin:6px 0 0;padding-left:18px;font-size:14px}
+.lib .dsl{font-size:12.5px;color:var(--ink-2);margin-top:6px}
+.lib .dsl a{color:var(--flag)}
+@media (max-width:620px){.lib article{grid-template-columns:1fr}}
+.lsearch{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.lsearch input{font:500 14px var(--body);color:var(--ink);background:var(--paper-2);border:1px solid var(--hair);border-radius:3px;padding:7px 10px;flex:1;min-width:200px}
+.pseg{display:inline-flex;border:1px solid var(--rule)}
+.pseg button{font:600 12px var(--body);background:transparent;color:var(--ink-2);border:0;border-right:1px solid var(--rule);padding:6px 11px;cursor:pointer}
+.pseg button:last-child{border-right:0}
+.pseg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+details.ds{border-bottom:1px solid var(--hair)}
+details.ds summary{cursor:pointer;padding:10px 0;font-weight:600;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+details.ds summary span{font-family:var(--mono);font-size:11px;color:var(--ink-2);font-weight:400}
+details.ds .inner{padding:0 0 14px;display:flex;flex-direction:column;gap:8px}
+details.ds .inner p{margin:0;font-size:12.5px;color:var(--ink-2)}
+.pull blockquote{margin:0;font-family:var(--head);font-style:italic;font-weight:500;font-size:clamp(20px,2.4vw,27px);line-height:1.25;border-left:4px solid var(--flag);padding-left:14px}
+.pull figcaption{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);margin-top:8px;padding-left:18px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.chk{display:inline-flex;align-items:center;gap:6px;font:500 12px var(--mono);color:var(--t-dim);cursor:pointer}
+.chk input{accent-color:var(--t-amber)}
+.countdown{display:inline-flex;gap:8px;align-items:baseline;font-family:var(--mono);font-size:11.5px}
+.countdown b{font-size:15px;color:var(--flag);font-weight:600}
+.star{all:unset;cursor:pointer;color:var(--t-dim);margin-right:6px;font-size:13px}
+.star[aria-pressed="true"]{color:var(--t-amber);text-shadow:0 0 8px rgba(255,176,32,.7)}
+.lens-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:12px}
+.lens-card{border:1px solid var(--t-line);border-radius:3px;padding:10px;display:flex;flex-direction:column;gap:8px;min-width:0;transition:border-color .2s,box-shadow .2s}
+.lens-card:hover{border-color:rgba(255,176,32,.55);box-shadow:0 0 20px -8px rgba(255,176,32,.55)}
+.lens-card .lh{display:flex;justify-content:space-between;gap:8px;align-items:baseline;font:600 12px var(--mono);color:var(--t-text)}
+.lens-card .lh span{color:var(--t-dim);font-weight:400;font-size:11px}
+.big{font:600 30px var(--mono);color:var(--t-text);line-height:1.1}
+.playbook{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:0;border-top:1px solid var(--rule)}
+.playbook .story{padding:14px 18px 14px 12px}
+.notes{font-size:13px;color:var(--ink-2);max-width:95ch;margin:0;padding-left:18px}
+.notes li{margin-bottom:5px}
+.wire{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:0;border-top:1px solid var(--rule)}
+.wire .story{padding:14px 18px 14px 0}
+.wire .cad{font-family:var(--mono);font-size:11px;color:var(--ink-2)}
+.soonbox{border:1px dashed var(--hair);padding:22px;display:flex;flex-direction:column;gap:10px}
+.soonbox ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink-2)}
+
+/* interaction: hover glow + sources */
+.term{transition:border-color .2s ease,box-shadow .25s ease}
+.term:hover{border-color:rgba(255,176,32,.5);box-shadow:0 0 0 1px rgba(255,176,32,.22),0 0 30px -6px rgba(255,176,32,.38)}
+.story{padding-left:12px!important;transition:background .2s ease,box-shadow .2s ease}
+.story:hover{background:var(--paper-2);box-shadow:inset 3px 0 0 var(--flag),0 6px 22px -14px rgba(179,18,31,.55)}
+.multi .cell{transition:border-color .2s,box-shadow .2s;cursor:pointer}
+.multi .cell:hover{border-color:rgba(255,176,32,.6);box-shadow:0 0 18px -6px rgba(255,176,32,.55)}
+.strip .s{transition:background .2s,box-shadow .2s}
+.strip .s:hover{background:#16201c;box-shadow:inset 0 -2px 0 var(--t-amber),0 0 22px -8px rgba(255,176,32,.5)}
+table.q tbody tr{transition:background .12s}
+table.q tbody tr:hover td{background:#18241f;text-shadow:0 0 8px rgba(255,176,32,.25)}
+table.q tbody tr.link{cursor:pointer}
+.src-btn{font:600 10.5px var(--mono);letter-spacing:.06em;color:var(--t-amber);background:transparent;border:1px solid rgba(255,176,32,.45);border-radius:3px;padding:2px 7px;cursor:pointer;transition:box-shadow .2s,background .2s;white-space:nowrap}
+.src-btn:hover,.src-btn:focus-visible{background:rgba(255,176,32,.12);box-shadow:0 0 14px -2px rgba(255,176,32,.6)}
+.story .src-btn,.byline .src-btn,.takes .src-btn{color:var(--flag);border-color:color-mix(in srgb,var(--flag) 45%,transparent);align-self:flex-start}
+.story .src-btn:hover{background:color-mix(in srgb,var(--flag) 10%,transparent);box-shadow:0 0 14px -3px color-mix(in srgb,var(--flag) 60%,transparent)}
+.strip .src-btn{margin-top:6px}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);z-index:40;background:var(--t-panel);color:var(--t-text);border-left:1px solid rgba(255,176,32,.5);box-shadow:-20px 0 60px -20px rgba(0,0,0,.7),0 0 40px -10px rgba(255,176,32,.3);display:flex;flex-direction:column;padding:calc(16px + env(safe-area-inset-top,0px)) max(18px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) 18px;gap:12px;overflow-y:auto;color-scheme:dark}
+.drawer .dh{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--t-line);padding-bottom:10px}
+.drawer .dh span{font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--t-amber)}
+.drawer .x{font:600 13px var(--mono);background:transparent;color:var(--t-text);border:1px solid var(--t-line);border-radius:3px;padding:4px 9px;cursor:pointer}
+.drawer .src-item{border:1px solid var(--t-line);border-radius:4px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.drawer .src-item:hover{border-color:rgba(255,176,32,.45)}
+.drawer .meta{font:500 11px var(--mono);color:var(--t-dim);text-transform:uppercase;letter-spacing:.06em}
+.drawer h5{font-family:var(--head);font-weight:700;font-size:19px;line-height:1.2;margin:0;color:#fff}
+.drawer blockquote{margin:0;padding:6px 0 6px 12px;border-left:3px solid var(--t-amber);font-family:var(--head);font-style:italic;font-size:17px;line-height:1.35;color:#f3f0e6}
+.drawer blockquote cite{display:block;font:500 11px var(--mono);font-style:normal;color:var(--t-dim);margin-top:4px}
+.drawer ul{margin:0;padding-left:18px;font-size:13px;color:var(--t-text)}
+.drawer a.open{font:600 12px var(--mono);color:var(--t-amber);text-decoration:none}
+.drawer a.open:hover{text-decoration:underline}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:39}
+@media (prefers-reduced-motion:reduce){.term,.story,.multi .cell,.strip .s{transition:none}}
+.live{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--flag);margin-right:6px;vertical-align:1px;box-shadow:0 0 0 0 rgba(179,18,31,.6);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,77,90,.55)}70%{box-shadow:0 0 0 8px rgba(255,77,90,0)}100%{box-shadow:0 0 0 0 rgba(255,77,90,0)}}
+@media (prefers-reduced-motion:reduce){.live{animation:none}}
+.deskrow a .new{font-family:var(--mono);font-size:9.5px;letter-spacing:0;text-transform:none;color:#fff;background:var(--flag);padding:0 4px;margin-left:5px;border-radius:3px}
+.callout{border:1px solid var(--t-line);border-left:3px solid var(--t-amber);background:var(--t-panel);color:var(--t-text);padding:14px 16px;border-radius:4px;font-size:14px;line-height:1.5}
+.callout b{color:var(--t-amber);font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:4px}
+.cad-t td,.cad-t th{text-align:left!important;white-space:normal}.cad-t td:first-child{white-space:nowrap}
+.empty{font-family:var(--mono);font-size:12.5px;color:var(--t-dim);padding:18px;text-align:center;border:1px dashed var(--t-line);border-radius:4px}
+.bar-in{display:inline-block;height:8px;border-radius:2px;background:var(--t-amber);vertical-align:middle;margin-right:6px}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="l" id="dateline">Wednesday, 28 October 2026<br>Market pulse for DTC performance marketers</div>
+    <h1>DTC Newsroom</h1>
+    <div class="r"><span class="countdown" id="countdown"></span><br>Data through week ending <span id="thru">18 Oct 2026</span></div>
+  </div>
+  <div class="wrap" style="display:block;padding-block:0"><div class="rule2"></div></div>
+</header>
+<div class="ticker" aria-label="Latest weekly moves"><div class="track" id="ticker"></div></div>
+<nav class="desks" aria-label="Desks">
+  <div class="wrap">
+    <div class="deskrow" id="deskrow">
+      <a href="#front" data-desk="front">Front page</a>
+      <a href="#bfcm" data-desk="bfcm"><span class="live" aria-hidden="true"></span>BFCM Live</a>
+      <a href="#nb-channels" data-desk="nb">Northbeam</a>
+      <a href="#mo-bench" data-desk="mo">Motion<span class="new">new</span></a>
+      <a href="#mkt" data-desk="mkt">Earnings<span class="new">new</span></a>
+      <a href="#haus" data-desk="haus">Haus<span class="soon">scouted</span></a>
+      <a href="#triplewhale" data-desk="triplewhale">Triple Whale<span class="soon">scouted</span></a>
+      <a href="#wire" data-desk="wire">Wire sources</a>
+    </div>
+    <div class="subrow" id="subrow" data-for="nb" hidden>
+      <a href="#nb-channels">Channel tracker</a>
+      <a href="#nb-share">Share of spend</a>
+      <a href="#nb-bench">Benchmarks</a>
+      <a href="#nb-creative">Creative</a>
+      <a href="#nb-q4">Q4 playbook</a>
+      <a href="#nb-meta">Meta trends</a>
+      <a href="#nb-library">Library</a>
+    </div>
+    <div class="subrow" id="subrow-mo" data-for="mo" hidden>
+      <a href="#mo-bench">Creative benchmarks</a>
+      <a href="#mo-trend">Trending this week</a>
+      <a href="#mo-research">Research &amp; cadence</a>
+    </div>
+  </div>
+</nav>
+
+<main><div class="wrap">
+
+<!-- FRONT -->
+<section class="view" id="v-front">
+  <div class="front">
+    <div class="lead">
+      <div class="kicker">Lead story · Northbeam desk</div>
+      <h2>Meta CPMs run 25% hot as the Black Friday auction opens six weeks early</h2>
+      <p class="dek">Reach is the dearest it has been outside a holiday in 18 months, yet Meta's blended ROAS is up 30% and new-customer CAC down a third. Amazon has already pulled $2 billion of holiday demand into October.</p>
+      <div class="byline">Sources: Northbeam Media Buyer Index, 22 Oct · X, 23 & 28 Oct 2026 <button type="button" class="src-btn" data-src="mb-cpm25,x-roas,x-ncac">SOURCES · QUOTES</button></div>
+      <div class="term" style="margin-top:14px">
+        <div class="th"><span class="t">Meta CPM · 2025 vs 2026</span><span class="m">avg weekly, all Northbeam accounts</span></div>
+        <div class="chart short"><canvas id="fCpm"></canvas></div>
+      </div>
+      <div class="strip" id="fKpis" style="margin-top:14px"></div>
+      <figure class="pull" style="margin:16px 0 0">
+        <blockquote>“A generational Black Friday Cyber Monday, and not in a good way.”</blockquote>
+        <figcaption>Bryan Bumgardner, The Media Buyer by Northbeam, 22 Oct 2026 <button type="button" class="src-btn" data-src="mb-cpm25">SOURCE</button></figcaption>
+      </figure>
+    </div>
+    <div class="side" id="frontSide"></div>
+  </div>
+
+  <div class="section-head"><span class="label">Market pulse · week ending <span class="thru2">18 Oct 2026</span></span><a href="#nb-channels">Full channel tracker →</a></div>
+  <div class="term">
+    <div class="th"><span class="t">Quote board</span><span class="m">week-over-week change · ▲▼ direction, colour = better or worse for advertisers</span></div>
+    <div class="tw"><table class="q" id="fBoard"></table></div>
+  </div>
+
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">Share of spend, week by week</span><a href="#nb-share" class="m" style="color:var(--t-amber);text-decoration:none">Share desk →</a></div>
+      <div class="chart"><canvas id="fShare"></canvas></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">Biggest movers this week</span><span class="m">largest absolute weekly moves</span></div>
+      <div class="tw"><table class="q" id="fMovers"></table></div>
+    </div>
+  </div>
+
+  <div class="section-head"><span class="label">Benchmarks</span><a href="#nb-bench">Benchmarks desk →</a></div>
+  <div class="cols3" id="frontBench"></div>
+</section>
+
+<!-- CHANNEL TRACKER -->
+<section class="view" id="v-nb-channels" hidden>
+  <div>
+    <div class="kicker">Northbeam · Media Buyer Index</div>
+    <h2>Weekly channel tracker</h2>
+    <p class="dek"><span id="nwk">Forty</span> weeks of Northbeam's weekly platform tables, from w/e 28 Dec 2025 to w/e <span class="thru2">18 Oct 2026</span>. Pick a metric to see every platform side by side, or pick a platform to see all its metrics.</p>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t">Compare channels</span><span class="m">hover anywhere on the chart for every platform's value that week · click legend items to hide or show</span></div>
+    <div class="ctl">
+      <label for="cmpMetric">Metric</label>
+      <select id="cmpMetric"><option value="cpm">CPM</option><option value="ctr">CTR</option><option value="cpc">CPC</option><option value="cac">CAC (new)</option><option value="cvr">CVR</option><option value="roas" >ROAS</option></select>
+      <div class="seg" role="group" aria-label="Mode" id="cmpMode"><button type="button" data-m="cum" aria-pressed="true">Cumulative change</button><button type="button" data-m="wow" aria-pressed="false">Weekly change</button></div>
+      <label for="cmpRange">Range</label>
+      <select id="cmpRange"><option value="all">All weeks</option><option value="26" selected>Last 26 weeks</option><option value="13">Last 13 weeks</option></select>
+      <label class="chk"><input type="checkbox" id="cmpEvents" checked> Calendar events</label>
+    </div>
+    <div class="ctl" id="cmpChips"></div>
+    <div class="chart tall"><canvas id="cCmp"></canvas></div>
+    <p class="note">Cumulative change compounds Northbeam's weekly moves from the first week in the range, so every platform starts at 0% and you can see which one has drifted most. Chained figures drift over long periods because each week compares a slightly different set of accounts; use them for direction and turning points.</p>
+  </div>
+  <div class="term">
+    <div class="ctl">
+      <div class="seg" role="group" aria-label="View" id="trMode">
+        <button type="button" data-v="metric" aria-pressed="true">By metric</button>
+        <button type="button" data-v="platform" aria-pressed="false">By platform</button>
+      </div>
+      <label for="trMetric">Metric</label>
+      <select id="trMetric"><option value="cpm">CPM</option><option value="ctr">CTR</option><option value="cpc">CPC</option><option value="cac">CAC (new)</option><option value="cvr">CVR</option><option value="roas">ROAS</option><option value="share">Budget share</option></select>
+      <label for="trPlat">Platform</label>
+      <select id="trPlat"></select>
+      <label for="trRange">Range</label>
+      <select id="trRange"><option value="all">All weeks</option><option value="26">Last 26 weeks</option><option value="13" selected>Last 13 weeks</option><option value="8">Last 8 weeks</option></select>
+    </div>
+    <div class="th"><span class="t" id="trTitle"></span><span class="m" id="trMeta"></span></div>
+    <div class="multi" id="trMulti"></div>
+    <p class="note">Bars are the week-over-week % change Northbeam published. Green is better for advertisers (lower costs; higher CTR, CVR, ROAS), red is worse. The figure in each corner is the cumulative change over the range shown. Weeks Northbeam skipped are left blank.</p>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t" id="hmTitle"></span><span class="m">newest week first · hover a row to highlight</span></div>
+    <div class="tw" style="max-height:560px"><table class="q" id="tHeat"></table></div>
+  </div>
+</section>
+
+<!-- SHARE -->
+<section class="view" id="v-nb-share" hidden>
+  <div>
+    <div class="kicker">Northbeam · Budget share</div>
+    <h2>Where the money went, week by week</h2>
+    <p class="dek">Share of all ad spend Northbeam tracks. Northbeam changed its base in May 2026 to add "All other platforms" (mostly Amazon). The default view rebases every week to the eight named core platforms, so the full year lines up; switch to the published figures for May onward.</p>
+  </div>
+  <div class="term">
+    <div class="ctl">
+      <div class="seg" role="group" aria-label="Basis" id="shBasis">
+        <button type="button" data-b="core" aria-pressed="true">Core 8 platforms · full year</button>
+        <button type="button" data-b="pub" aria-pressed="false">As published · May onward</button>
+      </div>
+      <div class="seg" role="group" aria-label="Chart" id="shChart">
+        <button type="button" data-c="lines" aria-pressed="true">Lines · all</button>
+        <button type="button" data-c="linesx" aria-pressed="false">Lines · ex-Meta</button>
+        <button type="button" data-c="stack" aria-pressed="false">Stacked 100%</button>
+      </div>
+      <div class="seg" role="group" aria-label="Scale" id="shScale">
+        <button type="button" data-s="log" aria-pressed="true">Log scale</button>
+        <button type="button" data-s="linear" aria-pressed="false">Linear</button>
+      </div>
+      <label class="chk"><input type="checkbox" id="shEvents" checked> Calendar events</label>
+    </div>
+    <div class="chart tall"><canvas id="cShare"></canvas></div>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t">Share trend · who is gaining and losing</span><span class="m">share of core 8 · change in percentage points</span></div>
+    <div class="tw"><table class="q" id="tTrend"></table></div>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t">Share change week on week</span><span class="m" id="shUnit">percentage points vs prior published week</span></div>
+    <div class="tw" style="max-height:560px"><table class="q" id="tShare"></table></div>
+  </div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">Q1 share of wallet · 2025 vs 2026</span><span class="m">all tracked spend</span></div>
+      <div class="tw"><table class="q" id="tQ1"></table></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">Fastest-growing small platforms · H1 2026</span><span class="m">spend growth vs H1 2025, under $100M tracked</span></div>
+      <div class="tw"><table class="q" id="tEmerg"></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- BENCHMARKS -->
+<section class="view" id="v-nb-bench" hidden>
+  <div>
+    <div class="kicker">Northbeam · Benchmarks</div>
+    <h2>Spend is up, revenue lags, new customers cost more</h2>
+    <p class="dek">Northbeam's monthly, half-year and quarterly year-over-year cuts. All figures compare advertisers present in both periods.</p>
+  </div>
+  <div class="term" id="lensTerm">
+    <div class="th"><span class="t">Segment lens</span><span class="m">filter every benchmark cut to one company size, revenue band, AOV band or sector</span></div>
+    <div class="ctl">
+      <label for="lensDim">Filter by</label>
+      <select id="lensDim"><option value="spend">Monthly ad spend</option><option value="rev">Company revenue</option><option value="aov">Average order value</option><option value="vert">Sector</option></select>
+      <label for="lensSeg">Segment</label>
+      <select id="lensSeg"></select>
+    </div>
+    <div class="chart"><canvas id="cLens"></canvas></div>
+    <div class="lens-cards" id="lensCards"></div>
+    <p class="note" id="lensNote"></p>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t">Median business, period by period</span><span class="m">YoY % · hover for source</span></div>
+    <div class="chart"><canvas id="cMonthly"></canvas></div>
+    <div class="tw"><table class="q" id="tMonthly"></table></div>
+  </div>
+  <div class="term">
+    <div class="ctl"><span class="t" style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">H1 vs Q3 2026 by monthly ad spend</span>
+      <label for="selBand" style="margin-left:auto">Metric</label>
+      <select id="selBand"><option>Spend</option><option>Revenue</option><option>Revenue (New)</option><option>MER</option><option>MER (New)</option><option selected>CAC (New)</option></select></div>
+    <div class="chart"><canvas id="cBand"></canvas></div>
+    <div class="tw"><table class="q" id="tBand"></table></div>
+  </div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">H1 2026 by company revenue</span><span class="m">YoY %</span></div><div class="tw"><table class="q" id="tH1rev"></table></div></div>
+    <div class="term"><div class="th"><span class="t">H1 2026 by AOV</span><span class="m">YoY %</span></div><div class="tw"><table class="q" id="tH1aov"></table></div></div>
+  </div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">2025 by company size</span><span class="m">spend vs revenue growth</span></div><div class="chart short"><canvas id="cSize"></canvas></div></div>
+    <div class="term"><div class="th"><span class="t">2025 by vertical</span><span class="m">median YoY</span></div><div class="tw"><table class="q" id="tVert"></table></div></div>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t">Q1 2026 channel mix by vertical</span><span class="m">share of spend · median active Meta ads per brand</span></div>
+    <div class="tw"><table class="q" id="tMix"></table></div>
+  </div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">Meta ads launched per month, 2025</span><span class="m">by monthly spend level</span></div><div class="tw"><table class="q" id="tAds"></table></div></div>
+    <div class="term"><div class="th"><span class="t">AI share of organic search</span><span class="m">read from chart</span></div><div class="chart short"><canvas id="cAI"></canvas></div></div>
+  </div>
+</section>
+
+<!-- CREATIVE -->
+<section class="view" id="v-nb-creative" hidden>
+  <div>
+    <div class="kicker">Northbeam · Creative desk</div>
+    <h2>Creative volume is the lever: winners ship two to three times more ads</h2>
+    <p class="dek">Everything Northbeam has published on creative output, testing and measurement in the past year: ads launched by spend level, creative volume by sector, how in-platform data misjudges new ads, and the UGC and optimisation playbooks behind the top accounts.</p>
+  </div>
+  <div class="strip" id="crKpis"></div>
+  <div class="term">
+    <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Meta ads launched per month, 2025</span>
+      <div class="seg" role="group" aria-label="View" id="adsMode" style="margin-left:auto"><button type="button" data-m="abs" aria-pressed="true">Ads per month</button><button type="button" data-m="idx" aria-pressed="false">vs band's own average</button></div></div>
+    <div class="chart tall"><canvas id="cAdsLaunch"></canvas></div>
+    <p class="note">Each line is a monthly ad-spend band. "vs band's own average" shows each month as a % of that band's 2025 monthly average, so seasonality is comparable across bands: every band peaks in November.</p>
+  </div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">Ads launched per week</span><span class="m">top accounts vs the rest</span></div>
+      <div class="chart short"><canvas id="cAdsWeek"></canvas></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">How in-platform data misjudges new ads</span><span class="m">top-performing cohort, freshly launched ads</span></div>
+      <div class="chart short"><canvas id="cMis"></canvas></div>
+    </div>
+  </div>
+  <div class="term">
+    <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Active Meta ads per brand, by sector · Q1 2026</span>
+      <label class="chk" style="margin-left:auto"><input type="checkbox" id="mixShow" checked> Show Meta share of spend</label></div>
+    <div class="chart"><canvas id="cVertAds"></canvas></div>
+    <p class="note">Mean vs median live Meta ads per brand. A mean far above the median means a few very high-volume brands in that sector (Pets: mean 1,382, median 357).</p>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t">Creative capacity planner</span><span class="m">from the UGC Flywheel benchmarks</span></div>
+    <div class="calc">
+      <label for="cpVid"><span style="font-family:var(--mono);font-size:11px;color:var(--t-dim)">SOURCE VIDEOS / MONTH</span><input id="cpVid" type="number" min="0" step="5" value="40"></label>
+      <label for="cpUnits"><span style="font-family:var(--mono);font-size:11px;color:var(--t-dim)">AD UNITS PER VIDEO (8–12)</span><input id="cpUnits" type="number" min="1" max="20" step="1" value="10"></label>
+      <label for="cpStatic"><span style="font-family:var(--mono);font-size:11px;color:var(--t-dim)">OTHER ADS / WEEK</span><input id="cpStatic" type="number" min="0" step="5" value="15"></label>
+      <label for="cpBand"><span style="font-family:var(--mono);font-size:11px;color:var(--t-dim)">MONTHLY SPEND BAND</span><select id="cpBand"></select></label>
+    </div>
+    <div class="grid2"><div class="chart short"><canvas id="cCap"></canvas></div><div id="capOut" style="display:flex;flex-direction:column;gap:8px;font-size:13.5px"></div></div>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t">Creative benchmarks</span><span class="m">every figure links to its post</span></div>
+    <div class="tw"><table class="q" id="tCreative"></table></div>
+  </div>
+  <div class="section-head"><span class="label">Playbooks</span></div>
+  <div class="playbook" id="playbook"></div>
+</section>
+
+<!-- Q4 -->
+<section class="view" id="v-nb-q4" hidden>
+  <div>
+    <div class="kicker">Northbeam · Q4 2026 playbook</div>
+    <h2>Last season's Black Friday, set against this one</h2>
+    <p class="dek">BFCM 2025, the post-BFCM come-down and this autumn's numbers side by side. Projections are scenarios built from 2025's seasonal shape and are labelled as such.</p>
+  </div>
+  <div class="strip" id="q4kpis"></div>
+  <div class="term">
+    <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Meta, 2025 vs 2026, month by month</span>
+      <div class="seg" role="group" aria-label="Metric" id="ovSeg" style="margin-left:auto">
+        <button type="button" data-m="cpm" aria-pressed="true">CPM</button><button type="button" data-m="roas" aria-pressed="false">Blended ROAS</button><button type="button" data-m="cac" aria-pressed="false">First-time CAC</button></div></div>
+    <div class="chart tall"><canvas id="cOverlay"></canvas></div>
+    <p class="note" id="ovScenario"></p>
+  </div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">Cyber Week 2025, day by day</span><span class="m">YoY vs 2024</span></div><div class="chart"><canvas id="cArc"></canvas></div></div>
+    <div class="term"><div class="th"><span class="t">Cyber Five 2024 spend pacing</span><span class="m">change in avg daily spend</span></div><div class="chart short"><canvas id="cPace"></canvas></div><p class="note" id="startNote"></p></div>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t">1-day ROAS floors by Q4 phase</span><span class="m">Northbeam example apparel brand, Facebook</span></div>
+    <div class="calc">
+      <label for="tgt30"><span style="font-family:var(--mono);font-size:11px;color:var(--t-dim)">TARGET 30-DAY ROAS</span><input id="tgt30" type="number" step="0.05" min="0.1" value="2.00"></label>
+      <label for="tgtLtv"><span style="font-family:var(--mono);font-size:11px;color:var(--t-dim)">TARGET LIFETIME ROAS</span><input id="tgtLtv" type="number" step="0.05" min="0.1" value="3.00"></label>
+    </div>
+    <div class="grid2"><div class="chart short"><canvas id="cLag"></canvas></div><div class="tw"><table class="q" id="tLag"></table></div></div>
+  </div>
+  <div class="term"><div class="th"><span class="t">BFCM 2025 by industry</span><span class="m">Tue–Mon of BFCM week vs 2024 · click a column to sort</span></div><div class="tw"><table class="q" id="tInd"></table></div></div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">Post-BFCM: Christmas to mid-January</span><span class="m">week-over-week</span></div><div class="chart short"><canvas id="cPost"></canvas></div></div>
+    <div class="term"><div class="th"><span class="t">January 2026: median vs top quartile</span><span class="m">YoY</span></div><div class="chart short"><canvas id="cJan"></canvas></div></div>
+  </div>
+  <div class="section-head"><span class="label">What it means for Q4 2026</span></div>
+  <div class="takes" id="takeaways"></div>
+</section>
+
+<!-- META -->
+<section class="view" id="v-nb-meta" hidden>
+  <div>
+    <div class="kicker">Northbeam · Meta</div>
+    <h2>Clicks got cheaper, conversion got harder, then efficiency turned in June</h2>
+    <p class="dek">Monthly values read off Northbeam's published Meta charts (one-day click, all accounts). Close approximations; labelled peaks and lows are exact.</p>
+  </div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">CPM and CPC</span><span class="m">Jan 2025 – Jun 2026</span></div><div class="chart"><canvas id="cM1"></canvas></div></div>
+    <div class="term"><div class="th"><span class="t">CTR and conversion rate</span><span class="m">Jan 2025 – Jun 2026</span></div><div class="chart"><canvas id="cM2"></canvas></div></div>
+  </div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">Blended ROAS and first-time CAC</span><span class="m">Jan 2025 – Oct 2026</span></div><div class="chart"><canvas id="cM3"></canvas></div></div>
+    <div class="term"><div class="th"><span class="t">TikTok conversion rate</span><span class="m">1-day click</span></div><div class="chart"><canvas id="cTT"></canvas></div></div>
+  </div>
+</section>
+
+<!-- LIBRARY -->
+<section class="view" id="v-nb-library" hidden>
+  <div>
+    <div class="kicker">Northbeam · Archive</div>
+    <h2>Research library</h2>
+    <p class="dek">Every Northbeam post with data in it from the last 12 months, newest first, with the key numbers and the datasets transcribed from its charts.</p>
+  </div>
+  <div class="lsearch">
+    <input type="search" id="libQ" placeholder="Search titles, numbers, tags" aria-label="Search the library">
+    <div class="pseg" role="group" aria-label="Source" id="libSrc">
+      <button type="button" data-s="all" aria-pressed="true">All</button><button type="button" data-s="Newsletter" aria-pressed="false">Newsletter</button><button type="button" data-s="Blog" aria-pressed="false">Blog</button><button type="button" data-s="X" aria-pressed="false">X</button>
+    </div>
+  </div>
+  <div class="byline" id="libCount"></div>
+  <div class="lib" id="libList"></div>
+  <div class="section-head"><span class="label">Transcribed datasets</span></div>
+  <div id="dsList"></div>
+  <div class="section-head"><span class="label">Notes on the data</span></div>
+  <ul class="notes">
+    <li>Northbeam's samples change between posts (all accounts, accounts present in both periods, one-day clicks, accrual or cash). January and February 2026 appear twice with different values for this reason.</li>
+    <li>Weekly index weeks run Saturday–Friday until mid-April 2026 and Sunday–Sunday after. Not published: 29 Dec – 2 Jan, 31 Jan – 6 Feb, 14 – 21 Jun 2026. No weekly index ran Oct – mid-Dec 2025, so BFCM 2025 comes from the Cyber Week reports.</li>
+    <li>The week of 7–14 Jun 2026 was published twice (18 and 25 Jun); the later version is used.</li>
+    <li>Snapchat CPC shows +12.25% in four consecutive weeks (28 Feb – 27 Mar 2026), likely a carry-over error in Northbeam's graphic.</li>
+    <li>Until w/e 10 May 2026, budget share excludes "All other platforms"; the share desk rebases every week to the eight core platforms so the year is comparable.</li>
+    <li>Meta's average first-time CAC fell 33% YoY in Q3 while the median account's new CAC rose in most spend bands. Benchmark against your own spend band.</li>
+  </ul>
+</section>
+
+
+<!-- BFCM LIVE -->
+<section class="view" id="v-bfcm" hidden>
+  <div>
+    <div class="kicker"><span class="live" aria-hidden="true"></span>BFCM Live · 2026</div>
+    <h2 id="bfH">The Cyber Week desk</h2>
+    <p class="dek" id="bfDek">Last year's day-by-day results are set as the baseline. From Tuesday 24 November the scheduled update logs each new figure from Northbeam, Triple Whale and the daily trackers here, day by day against 2025.</p>
+  </div>
+  <div class="strip" id="bfKpis"></div>
+  <div class="term">
+    <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Day by day · 2025 vs 2026</span>
+      <div class="seg" role="group" aria-label="Metric" id="bfSeg" style="margin-left:auto"><button type="button" data-m="spend" aria-pressed="true">Spend</button><button type="button" data-m="revenue" aria-pressed="false">Revenue</button><button type="button" data-m="mer" aria-pressed="false">MER</button><button type="button" data-m="cac" aria-pressed="false">New CAC</button></div></div>
+    <div class="chart tall"><canvas id="cBfLive"></canvas></div>
+    <p class="note">Bars: Northbeam's BFCM 2025 results, YoY vs 2024, by day. Bright markers: BFCM 2026 vs 2025 as each figure is published. The two years use different comparison bases, so read the 2026 markers as "is this year running hotter or cooler than last year's growth?"</p>
+  </div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">Live log</span><span class="m">newest first · every line links to its source</span></div>
+      <div id="bfLog"></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">What lands when</span><span class="m">based on 2025 publishing dates</span></div>
+      <div class="tw"><table class="q cad-t" id="tBfSched"></table></div>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">2025 scoreboard</span><span class="m">Northbeam (YoY) and Triple Whale (absolute)</span></div>
+      <div class="tw"><table class="q" id="tBf25"></table></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">Checks for each day</span><span class="m">from the Q4 playbook</span></div>
+      <div id="bfChecks" style="display:flex;flex-direction:column;gap:10px;font-size:13.5px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- EARNINGS -->
+<section class="view" id="v-mkt" hidden>
+  <div>
+    <div class="kicker">Earnings desk · Quarterly ad price check</div>
+    <h2>Meta's price per ad is rising fastest in the US, at +23% a year</h2>
+    <p class="dek">Each quarter Meta reports how many ad impressions it served and how much the average ad cost, both year on year. It is a market-wide read on auction inflation, covering every advertiser on Meta, to set against Northbeam's DTC sample.</p>
+  </div>
+  <div class="strip" id="mkKpis"></div>
+  <div class="term">
+    <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Volume vs price, quarter by quarter</span>
+      <label class="chk" style="margin-left:auto"><input type="checkbox" id="mkRev" checked> Ad revenue bars</label></div>
+    <div class="chart tall"><canvas id="cEarn"></canvas></div>
+    <p class="note">Lines are YoY % changes Meta reports in each release. When impressions grow fast (new placements such as Threads and Reels, and growth in Asia-Pacific), the average price is held down. When impression growth slows, price takes over: the second half of 2026 is that pattern.</p>
+  </div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">Price per ad by region</span><span class="m">YoY %</span></div>
+      <div class="chart"><canvas id="cEarnReg"></canvas></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">Two independent reads</span><span class="m">Meta's own numbers vs Northbeam's DTC sample</span></div>
+      <div class="chart"><canvas id="cEarnVsNb"></canvas></div>
+    </div>
+  </div>
+  <div class="callout" id="mkRead"></div>
+  <div class="term">
+    <div class="th"><span class="t">Quarterly table</span><span class="m">Meta Family of Apps</span></div>
+    <div class="tw"><table class="q" id="tEarn"></table></div>
+  </div>
+</section>
+
+<!-- MOTION · BENCHMARKS -->
+<section class="view" id="v-mo-bench" hidden>
+  <div>
+    <div class="kicker">Motion (now Runneth) · Creative Benchmarks 2026</div>
+    <h2>Roughly one ad in twenty becomes a winner. Volume is how you find it</h2>
+    <p class="dek">Motion analysed 550,000 Meta ads from 6,000 advertisers ($1.3 billion of spend, September 2025 to early January 2026). A winner is an ad that spends at least ten times its account's median ad. Motion rebranded as Runneth in 2026; the Thumbstop newsletter and reports carry on under the new name.</p>
+  </div>
+  <div class="strip" id="moKpis"></div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">Ads launched per week and hit rate</span><span class="m">by monthly spend tier</span></div>
+      <div class="chart"><canvas id="cMoTier"></canvas></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">Where the money goes</span><span class="m">share of spend on winning ads</span></div>
+      <div class="chart"><canvas id="cMoPort"></canvas></div>
+    </div>
+  </div>
+  <div class="term">
+    <div class="ctl">
+      <div class="seg" role="group" aria-label="Dimension" id="moDim"><button type="button" data-d="formats" aria-pressed="true">Visual formats</button><button type="button" data-d="hooks" aria-pressed="false">Hooks &amp; headlines</button><button type="button" data-d="assets" aria-pressed="false">Asset types</button></div>
+      <div class="seg" role="group" aria-label="View" id="moView" style="margin-left:auto"><button type="button" data-v="map" aria-pressed="true">Scale vs hit rate map</button><button type="button" data-v="rank" aria-pressed="false">Ranked by hit rate</button></div>
+    </div>
+    <div class="chart tall"><canvas id="cMoFmt"></canvas></div>
+    <p class="note" id="moFmtNote"></p>
+  </div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">Winner planner</span><span class="m">how many winners your testing volume should find</span></div>
+      <div class="calc">
+        <label for="moAds"><span style="font-family:var(--mono);font-size:11px;color:var(--t-dim)">NEW ADS / WEEK</span><input id="moAds" type="number" min="0" step="1" value="8"></label>
+        <label for="moTierSel"><span style="font-family:var(--mono);font-size:11px;color:var(--t-dim)">MONTHLY SPEND TIER</span><select id="moTierSel"></select></label>
+      </div>
+      <div id="moPlanOut" style="display:flex;flex-direction:column;gap:8px;font-size:13.5px;margin-top:10px"></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">BFCM 2025: what Health &amp; Wellness over-used</span><span class="m">index vs all advertisers · 1.0 = average</span></div>
+      <div class="chart"><canvas id="cMoHW"></canvas></div>
+    </div>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t" id="moTblT">Visual formats</span><span class="m">click a column to sort</span></div>
+    <div class="tw" style="max-height:520px"><table class="q" id="tMoFmt"></table></div>
+  </div>
+</section>
+
+<!-- MOTION · TRENDING -->
+<section class="view" id="v-mo-trend" hidden>
+  <div>
+    <div class="kicker">Motion (now Runneth) · Weekly</div>
+    <h2>The 30 most-saved ads this week</h2>
+    <p class="dek">Runneth ranks the top Meta, TikTok and Instagram ads each week by how often its users save them to their boards. It is Motion's only weekly-cadence feed, so the newsroom snapshots it every week to build a history of which brands and formats keep showing up.</p>
+  </div>
+  <div class="strip" id="trKpis"></div>
+  <div class="ctl" style="padding:0"><label for="trSnap">Week</label><select id="trSnap"></select></div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">Brands in the top 30</span><span class="m">ads per brand this week</span></div>
+      <div class="chart"><canvas id="cTrBrand"></canvas></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">Format of the top 30</span><span class="m">aspect ratio</span></div>
+      <div class="chart"><canvas id="cTrAspect"></canvas></div>
+    </div>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t">This week's list</span><span class="m">rank · brand · format · days live where shown</span></div>
+    <div class="tw" style="max-height:560px"><table class="q cad-t" id="tTrend30"></table></div>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t">Brand streaks</span><span class="m">weeks in the top 30 since tracking began</span></div>
+    <div id="trStreak"></div>
+  </div>
+</section>
+
+<!-- MOTION · RESEARCH -->
+<section class="view" id="v-mo-research" hidden>
+  <div>
+    <div class="kicker">Motion (now Runneth) · Research &amp; cadence</div>
+    <h2>What Motion publishes, and how often</h2>
+    <p class="dek">Motion's sitemaps (runneth.com and motionapp.com) list 300+ pages but no newsletter archive. Thumbstop goes out every Sunday by email only; its long-form pieces reappear as "Thumbstop" posts on the blog, and its data lands in quarterly "Thumbstop Pulse" reports.</p>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t">Publishing cadence</span><span class="m">what the newsroom will pull, and when</span></div>
+    <div class="tw"><table class="q cad-t" id="tMoCad"></table></div>
+  </div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">Where creative teams use AI</span><span class="m">% using AI at each stage · Thumbstop Pulse, Nov 2025</span></div>
+      <div class="chart"><canvas id="cMoAI"></canvas></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">State of Creative Strategy 2027</span><span class="m">1,195 practitioners · 1,410 job posts</span></div>
+      <div class="strip" id="socsKpis" style="grid-template-columns:repeat(2,1fr)"></div>
+    </div>
+  </div>
+  <div class="section-head"><span class="label">Motion library</span></div>
+  <div class="lib" id="moLib"></div>
+</section>
+
+<!-- HAUS / TW -->
+<section class="view" id="v-haus" hidden>
+  <div><div class="kicker">Haus desk · scouted</div><h2>Incrementality research, in bursts rather than weekly</h2><p class="dek">Haus publishes long research reports built on hundreds of its customers' lift tests, plus a podcast. There is no weekly data series, so this desk will be report-led: each one becomes a dataset and library entry, with a chart of incremental vs platform-reported ROAS by channel.</p></div>
+  <div class="term"><div class="th"><span class="t">What Haus publishes</span><span class="m">quick scan, Oct 2026</span></div><div class="tw"><table class="q cad-t" id="tHausCad"></table></div></div>
+  <div class="term"><div class="th"><span class="t">Research reports, newest first</span><span class="m">15 since 2023 · about one every two months since 2025</span></div><div class="tw"><table class="q" id="tHausRep"></table></div></div>
+</section>
+<section class="view" id="v-triplewhale" hidden>
+  <div><div class="kicker">Triple Whale desk · scouted</div><h2>Always-on benchmarks and the biggest live BFCM feed</h2><p class="dek">Triple Whale's most useful regular source is its free benchmarks tool, which covers 60,000+ brands across 35 industries and is updated continuously. A weekly snapshot of it would give the newsroom a by-industry series alongside Northbeam's. Around Cyber Week it runs a live revenue and spend page, and publishes a BFCM breakdown a few days later.</p></div>
+  <div class="strip" id="twKpis"></div>
+  <div class="term"><div class="th"><span class="t">What Triple Whale publishes</span><span class="m">quick scan, Oct 2026</span></div><div class="tw"><table class="q cad-t" id="tTwCad"></table></div></div>
+</section>
+
+<!-- WIRE -->
+<section class="view" id="v-wire" hidden>
+  <div><div class="kicker">Wire sources</div><h2>Other feeds worth bringing into the newsroom</h2><p class="dek">Sources that publish data on a regular cadence, grouped by what they would add.</p></div>
+  <div class="wire" id="wireList"></div>
+</section>
+
+</div></main>
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="drawerTitle"><div class="dh"><span id="drawerTitle">Sources</span><button type="button" class="x" id="drawerClose">Close ✕</button></div><div id="drawerBody" style="display:flex;flex-direction:column;gap:12px"></div></aside>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+<script>
+const D=/*__DATA__*/null;
+const LIB=/*__LIB__*/null;
+const SRC=Object.fromEntries(LIB.map(x=>[x.id,x]));
+const srcBtn=(ids,label)=>`<button type="button" class="src-btn" data-src="${ids}" aria-label="Show sources and quotes">${label||'SRC ↗'}</button>`;
+let lastFocus=null;
+function openSources(ids){
+  const list=ids.split(',').map(i=>SRC[i.trim()]).filter(Boolean);
+  document.getElementById('drawerBody').innerHTML=list.map(x=>`<div class="src-item"><div class="meta">${x.src} · ${x.pub||'Northbeam'} · ${new Date(x.date+'T12:00').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})}</div><h5>${esc(x.title)}</h5>${(x.q||[]).map(q=>{const [t,c]=q.split(' — ');return `<blockquote>“${esc(t)}”${c?`<cite>${esc(c)}</cite>`:''}</blockquote>`}).join('')}<ul>${x.stats.slice(0,4).map(t=>`<li>${esc(t)}</li>`).join('')}</ul><a class="open" href="${x.url}" target="_blank" rel="noopener">Open original ↗</a></div>`).join('')||'<p>No source found.</p>';
+  document.getElementById('drawerTitle').textContent=list.length>1?`${list.length} sources`:'Source';
+  lastFocus=document.activeElement;document.getElementById('drawer').hidden=false;document.getElementById('scrim').hidden=false;document.getElementById('drawerClose').focus();
+}
+function closeSources(){document.getElementById('drawer').hidden=true;document.getElementById('scrim').hidden=true;lastFocus&&lastFocus.focus&&lastFocus.focus()}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-src]');if(b){e.preventDefault();openSources(b.dataset.src)}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.getElementById('drawer').hidden)closeSources()});
+const SRC_MAP={cBfLive:'mb-bfcm,bl-cyberweek',cEarn:'meta-q3-26,meta-q2-26,meta-q1-26,meta-q4-25',cEarnReg:'meta-apac,meta-q2-26',cEarnVsNb:'meta-q3-26,mb-cpm25,x-roas',cMoTier:'mo-cb26key',cMoPort:'mo-cb26key',cMoFmt:'mo-cb26',cMoHW:'mo-bfcm26',cTrBrand:'mo-trending',cTrAspect:'mo-trending',cMoAI:'mo-ai',cCmp:'mb-weekly',cAdsLaunch:'bl-jan',cAdsWeek:'mb-hudson,mb-ugc1,bl-jan',cMis:'mb-ugc1',cVertAds:'x-verticals',cCap:'mb-ugc3,mb-ugc2,bl-jan',fCpm:'mb-cpm25',fBoard:'mb-weekly',fShare:'mb-weekly',fMovers:'mb-weekly',trMulti:'mb-weekly',tHeat:'mb-weekly',cShare:'mb-weekly,mb-may',tTrend:'mb-weekly',tShare:'mb-weekly',tQ1:'mb-may',tEmerg:'x-emerging',cMonthly:'bl-planning,bl-jan,bl-feb,mb-april,mb-may,mb-h1,bl-cyberweek,bl-cost',cBand:'mb-h1,mb-cpm25',tH1rev:'mb-h1',tH1aov:'mb-h1',cSize:'bl-under5,bl-cost',tVert:'bl-power',tMix:'x-verticals',tAds:'bl-jan',cAI:'mb-ai',cOverlay:'mb-cpm25,x-roas,x-ncac',cArc:'mb-bfcm,bl-cyberweek',cPace:'bl-cyberfive',cLag:'mb-lag',tInd:'x-industry',cPost:'mb-weekly,bl-q5',cJan:'bl-jan',cM1:'mb-h1,mb-metatank',cM2:'mb-h1,mb-metatank',cM3:'x-roas,x-ncac',cTT:'mb-tiktok'};
+function injectSources(){Object.entries(SRC_MAP).forEach(([id,ids])=>{const el=document.getElementById(id);if(!el)return;const term=el.closest('.term');if(!term||term.querySelector(':scope > .th .src-btn, :scope > .ctl .src-btn'))return;const host=term.querySelector(':scope > .th')||term.querySelector(':scope > .ctl');if(host){const n=ids.split(',').length;host.insertAdjacentHTML('beforeend',srcBtn(ids,n>1?`SRC ×${n} ↗`:'SRC ↗'))}})}
+const n=v=>{if(v===undefined||v===null)return null;const s=String(v).trim();if(s===''||s==='-')return null;const x=parseFloat(s.replace('~',''));return isNaN(x)?null:x};
+const rowsOf=k=>D[k].rows.map(r=>Object.fromEntries(D[k].cols.map((c,i)=>[c,r[i]])));
+const fmtP=(v,d=1)=>v==null?'–':(v>0?'+':'')+v.toFixed(d)+'%';
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const T={bg:'#0a0d0c',panel:'#101513',line:'#232c28',text:'#d9e1dd',dim:'#7f8c87',amber:'#ffb020',up:'#2fd27a',down:'#ff5a4f',blue:'#5aa9ff',past:'#ff9a3c'};
+const PCOL={"Meta":"#5b8cff","Google":"#f2b632","All other":"#9aa5a0","TikTok":"#ff4f9a","YouTube":"#ff7a59","AppLovin":"#a98bff","Microsoft":"#2ec4d6","Snapchat":"#f5e44a","Pinterest":"#e0607e","Vibe":"#44d19a","Amazon":"#c8a26a","TV":"#7fa6c9"};
+const CORE=["Meta","Google","TikTok","YouTube","AppLovin","Microsoft","Snapchat","Pinterest"];
+const PLATS=["Meta","Google","All other","TikTok","YouTube","AppLovin","Microsoft","Snapchat","Pinterest","Vibe"];
+const MNAME={cpm:"CPM",ctr:"CTR",cpc:"CPC",cac:"CAC (new)",cvr:"CVR",roas:"ROAS",share:"Budget share"};
+const COST={cpm:1,cpc:1,cac:1};
+const charts={};
+const HAS_CHART=typeof Chart!=='undefined';
+if(HAS_CHART){Chart.defaults.font.family='"IBM Plex Mono",ui-monospace,Menlo,monospace';Chart.defaults.font.size=11;Chart.defaults.color=T.dim;Chart.defaults.borderColor=T.line;Chart.defaults.maintainAspectRatio=false;Chart.defaults.plugins.legend.labels.boxWidth=9;Chart.defaults.plugins.legend.labels.boxHeight=9;Chart.defaults.plugins.legend.labels.color=T.text;Chart.defaults.plugins.tooltip.backgroundColor='#000';Chart.defaults.plugins.tooltip.borderColor=T.line;Chart.defaults.plugins.tooltip.borderWidth=1;Chart.defaults.animation=matchMedia('(prefers-reduced-motion: reduce)').matches?false:{duration:450,easing:'easeOutQuart'};
+  Chart.defaults.interaction.mode='index';Chart.defaults.interaction.intersect=false;Chart.defaults.interaction.axis='x';Chart.defaults.elements.point.radius=2;Chart.defaults.elements.point.hitRadius=16;Chart.defaults.plugins.tooltip.itemSort=(a,b)=>(b.parsed.y??b.parsed.x??0)-(a.parsed.y??a.parsed.x??0);Chart.defaults.plugins.tooltip.bodyFont={family:'"IBM Plex Mono",monospace',size:12};Chart.defaults.plugins.tooltip.boxPadding=4;Chart.defaults.plugins.legend.onHover=(e,item,leg)=>{leg.chart.canvas.style.cursor='pointer'};
+  Chart.defaults.elements.line.hoverBorderWidth=4;Chart.defaults.elements.point.hoverRadius=6;Chart.defaults.elements.point.hoverBorderWidth=2;Chart.defaults.elements.bar.hoverBorderWidth=1;Chart.defaults.elements.bar.hoverBorderColor='#ffd27a';
+  Chart.defaults.plugins.tooltip.padding=10;Chart.defaults.plugins.tooltip.titleFont={family:'"IBM Plex Mono",monospace',weight:'600',size:12};Chart.defaults.plugins.tooltip.titleColor=T.amber;
+  Chart.register({id:'glow',beforeDatasetDraw(c,a){const ctx=c.ctx;ctx.save();const ds=c.data.datasets[a.index];const col=typeof ds.borderColor==='string'?ds.borderColor:(typeof ds.backgroundColor==='string'?ds.backgroundColor:null);const act=c.getActiveElements().some(e=>e.datasetIndex===a.index);if(col){ctx.shadowColor=col;ctx.shadowBlur=act?16:(c.config.type==='line'?7:0)}if(c.getActiveElements().length&&!act&&c.data.datasets.length>1)ctx.globalAlpha=.45},afterDatasetDraw(c){c.ctx.restore()}},
+   {id:'events',afterDatasetsDraw(c){const ev=EVMAP[c.canvas.id];if(!ev||!ev.length)return;const x=c.scales.x,ar=c.chartArea,ctx=c.ctx;ctx.save();ev.forEach(raw=>{const k=String(raw).indexOf('|');const e={i:+String(raw).slice(0,k),label:String(raw).slice(k+1)};const px=x.getPixelForValue(e.i);if(px<ar.left||px>ar.right)return;ctx.strokeStyle='rgba(90,169,255,.45)';ctx.setLineDash([2,4]);ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(px,ar.top);ctx.lineTo(px,ar.bottom);ctx.stroke();ctx.setLineDash([]);ctx.save();ctx.translate(px+3,ar.top+4);ctx.rotate(Math.PI/2);ctx.fillStyle='rgba(150,195,255,.85)';ctx.font='10px "IBM Plex Mono",monospace';ctx.fillText(e.label,0,0);ctx.restore()});ctx.restore()}},
+   {id:'crosshair',afterDatasetsDraw(c){const a=c.tooltip&&c.tooltip.getActiveElements&&c.tooltip.getActiveElements();if(!a||!a.length||c.options.indexAxis==='y')return;const x=a[0].element.x;const ctx=c.ctx,ar=c.chartArea;ctx.save();ctx.strokeStyle='rgba(255,176,32,.55)';ctx.setLineDash([3,3]);ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x,ar.top);ctx.lineTo(x,ar.bottom);ctx.stroke();ctx.restore()}});
+}
+const EVMAP={};
+function mk(id,cfg){if(cfg.options&&cfg.options.plugins&&'events' in cfg.options.plugins){EVMAP[id]=cfg.options.plugins.events||[];delete cfg.options.plugins.events}else EVMAP[id]=[];const el=document.getElementById(id);if(!el)return;if(charts[id]){charts[id].destroy();delete charts[id]}
+  const box=el.parentElement;box.querySelector('.fail')?.remove();
+  if(!HAS_CHART){box.insertAdjacentHTML('beforeend','<div class="fail">Chart library could not load in this viewer.<br>The table views on this page still work.</div>');return}
+  try{charts[id]=new Chart(el,cfg)}catch(e){box.insertAdjacentHTML('beforeend',`<div class="fail">This chart could not be drawn (${esc(e.message)}).</div>`)}}
+const grid={color:T.line};
+const pctAxis=(o={})=>Object.assign({grid,ticks:{callback:v=>(v>0?'+':'')+v+'%'}},o);
+const zeroLine={id:'zero',beforeDatasetsDraw(c){const y=c.scales.y;if(!y||y.min>0||y.max<0)return;const ctx=c.ctx;ctx.save();ctx.strokeStyle=T.dim;ctx.lineWidth=1;const yy=y.getPixelForValue(0);ctx.beginPath();ctx.moveTo(c.chartArea.left,yy);ctx.lineTo(c.chartArea.right,yy);ctx.stroke();ctx.restore()}};
+const goodCol=(v,cost)=>v==null?T.dim:((cost?v<0:v>0)?T.up:(v===0?T.dim:T.down));
+const arrow=v=>v==null?'':(v>0?'▲':v<0?'▼':'■');
+function heat(v,cost,scale=20){if(v==null)return `color:${T.dim}`;const good=cost?v<0:v>0;const a=Math.min(Math.abs(v)/scale,1)*.6+.06;const c=good?'47,210,122':'255,90,79';return `background:rgba(${c},${a.toFixed(2)});color:${a>.45?'#fff':T.text}`}
+
+/* ---------- MBI ---------- */
+const MBI=rowsOf('mbi').map(r=>({ws:r.week_start,we:r.week_end,p:r.platform,cpm:n(r.cpm),ctr:n(r.ctr),cpc:n(r.cpc),cac:n(r.cac),cvr:n(r.cvr),roas:n(r.roas),share:n(r.share),sd:n(r.share_delta)}));
+const WEEKS=[...new Set(MBI.map(r=>r.ws))].sort();
+const WE=Object.fromEntries(MBI.map(r=>[r.ws,r.we]));
+const GAP_BEFORE={"2026-01-03":"29 Dec–2 Jan","2026-02-07":"31 Jan–6 Feb","2026-06-22":"14–21 Jun"};
+const dfmt=(s,y)=>{const d=new Date(s+'T12:00:00');return d.toLocaleDateString('en-GB',y?{day:'numeric',month:'short',year:'2-digit'}:{day:'numeric',month:'short'})};
+const wkLab=ws=>'w/e '+dfmt(WE[ws]);
+function val(ws,p,m){const r=MBI.find(x=>x.ws===ws&&x.p===p);if(!r)return null;if(m==='share')return coreShare(ws,p);return r[m]}
+function coreSum(ws){return CORE.reduce((a,p)=>{const r=MBI.find(x=>x.ws===ws&&x.p===p);return a+(r&&r.share!=null?r.share:0)},0)}
+function coreShare(ws,p){if(!CORE.includes(p))return null;const r=MBI.find(x=>x.ws===ws&&x.p===p);if(!r||r.share==null)return null;return +(r.share/coreSum(ws)*100).toFixed(2)}
+function shareDelta(ws,p){const i=WEEKS.indexOf(ws);if(i<1)return null;const a=coreShare(ws,p),b=coreShare(WEEKS[i-1],p);return a==null||b==null?null:+(a-b).toFixed(2)}
+const LAST=WEEKS[WEEKS.length-1];
+const EVENTS=rowsOf('events');
+function evFor(ws){const out=[];EVENTS.forEach(e=>{const i=ws.findIndex(w=>w<=e.date&&e.date<=WE[w]);if(i>=0)out.push(i+'|'+e.label)});return out}
+function evAt(w){const e=EVENTS.filter(e=>w<=e.date&&e.date<=WE[w]).map(e=>e.label);return e.length?'Event: '+e.join(', '):''}
+let WATCH=(()=>{try{return JSON.parse(localStorage.getItem('dtcWatch')||'[]')}catch(e){return[]}})();
+function toggleWatch(p){WATCH=WATCH.includes(p)?WATCH.filter(x=>x!==p):[...WATCH,p];try{localStorage.setItem('dtcWatch',JSON.stringify(WATCH))}catch(e){}buildTicker();if(!document.getElementById('v-front').hidden)renderFront()}
+
+/* ---------- ticker & front ---------- */
+function buildTicker(){
+  const items=[];
+  PLATS.forEach(p=>['cpm','cac','roas','cvr'].forEach(m=>{const v=val(LAST,p,m);if(v==null)return;const c=goodCol(v,m in COST);items.push(`<span class="it"><b>${p.toUpperCase().replace(' ','')} ${MNAME[m]}</b><span style="color:${c}">${arrow(v)} ${fmtP(v,2)}</span></span>`)}));
+  const extra=['<span class="it"><b>META CPM YoY</b><span class="down">▲ +25%</span></span>','<span class="it"><b>META ROAS YoY</b><span class="up">▲ +30%</span></span>','<span class="it"><b>META nCAC YoY</b><span class="up">▼ −33%</span></span>','<span class="it"><b>AMAZON BIG DEAL DAYS</b><span class="flat">$2B pulled from BFCM</span></span>','<span class="it"><b>Q3 SPEND YoY</b><span class="flat">&gt;+30% avg</span></span>','<span class="it"><b>AI SEARCH REV SHARE</b><span class="flat">7.1% Jun 26</span></span>','<span class="it"><b>META PRICE/AD Q3</b><span class="down">▲ +14%</span></span>','<span class="it"><b>META US&amp;CA PRICE/AD</b><span class="down">▲ +23%</span></span>','<span class="it"><b>META IMPRESSIONS Q3</b><span class="flat">▲ +10%</span></span>','<span class="it"><b>MOTION HIT RATE</b><span class="flat">~5% of ads win</span></span>'];
+  const wi=items.filter(t=>WATCH.some(p=>t.includes('<b>'+p.toUpperCase().replace(' ','')+' ')));const all=[...wi.map(t=>t.replace('<span class="it">','<span class="it">★ ')),...extra,...items.filter(t=>!wi.includes(t))].join('');document.getElementById('ticker').innerHTML=all+all;
+}
+const STORIES=[
+ {k:'Channels',h:'Snapchat costs spike, TikTok conversion jumps in post-Prime week',p:'In the week ending 18 Oct, Snapchat CAC rose 12.8% and ROAS fell 17.9%; TikTok CVR rose 12.4% and Pinterest ROAS 20.2%. Meta CPM up 4.7%.',to:'#nb-channels',src:'mb-weekly'},
+ {k:'Share of spend',h:'Meta holds 55% of tracked spend as budgets consolidate for Q4',p:'Meta at 55.0% and Google 16.5% of everything Northbeam tracks. "All other", mostly Amazon, rose to 16.7% after Big Deal Days.',to:'#nb-share',src:'mb-weekly'},
+ {k:'Amazon',h:'Amazon pulls $2B of holiday demand into October',p:'Prime Big Deal Days took about $2B in two days, against roughly $35B over Cyber Five 2025.',to:'#nb-q4',src:'mb-amazon,mb-cpm25'},
+ {k:'Benchmarks',h:'Q3: spend up 30%, but the median account gained little',p:'Accounts spending $200k–$500k a month: top quartile revenue +43.5% YoY, median +8.1%. Sub-$50k accounts: median revenue −18.1%.',to:'#nb-bench',src:'mb-cpm25'},
+ {k:'Earnings',h:'Meta confirms it: US ad prices up 23% a year',p:'Q3 2026 price per ad rose 14% worldwide and 23% in the US & Canada, while impression growth slowed to 10%. That matches Northbeam\'s +25% Meta CPM.',to:'#mkt',src:'meta-q3-26,meta-apac'},
+ {k:'Creative · Motion',h:'One ad in twenty wins; enterprise accounts ship 19 a week',p:'Motion\'s 550,000-ad study: winners take ~55% of spend, and hit rates rise from 4% for micro accounts to 8.8% for enterprise.',to:'#mo-bench',src:'mo-cb26,mo-cb26key'},
+ {k:'Search',h:'AI tools now drive 7% of DTC organic search revenue',p:'Up from almost nothing two years ago, with a step up after ChatGPT ads opened to self-serve in April.',to:'#nb-bench',src:'mb-ai'},
+];
+function renderFront(){
+  document.getElementById('frontSide').innerHTML=STORIES.map(s=>`<div class="story"><span class="tag">${s.k}</span><h4>${esc(s.h)}</h4><p>${esc(s.p)}</p><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><a class="more" href="${s.to}">Read more →</a>${srcBtn(s.src,'SOURCE · QUOTE')}</div></div>`).join('');
+  // board
+  const cols=['cpm','ctr','cpc','cac','cvr','roas'];
+  let h='<thead><tr><th>Platform</th>'+cols.map(c=>`<th>${MNAME[c]}</th>`).join('')+'<th>Share</th><th>Share Δ</th></tr></thead><tbody>';
+  [...PLATS].sort((a,b)=>(WATCH.includes(b)?1:0)-(WATCH.includes(a)?1:0)).forEach(p=>{const r=MBI.find(x=>x.ws===LAST&&x.p===p);if(!r)return;h+=`<tr class="link" data-drill="${p}" title="Open ${p} in the channel tracker"><td><button type="button" class="star" data-star="${p}" aria-pressed="${WATCH.includes(p)}" aria-label="Watch ${p}">★</button><span class="pf" style="background:${PCOL[p]}"></span>${p}</td>`+cols.map(c=>{const v=r[c];return `<td style="color:${goodCol(v,c in COST)}">${v==null?'–':arrow(v)+' '+fmtP(v,2)}</td>`}).join('')+`<td>${r.share==null?'–':r.share.toFixed(2)+'%'}</td><td style="color:${goodCol(r.sd,false)}">${r.sd==null?'–':(r.sd>0?'+':'')+r.sd.toFixed(2)+'pp'}</td></tr>`});
+  document.getElementById('fBoard').innerHTML=h+'</tbody>';
+  // movers
+  const mv=[];MBI.filter(r=>r.ws===LAST).forEach(r=>['cpm','ctr','cpc','cac','cvr','roas'].forEach(m=>{if(r[m]!=null)mv.push({p:r.p,m,v:r[m]})}));
+  mv.sort((a,b)=>Math.abs(b.v)-Math.abs(a.v));
+  document.getElementById('fMovers').innerHTML='<thead><tr><th>Platform</th><th>Metric</th><th>Move</th><th>Read</th></tr></thead><tbody>'+mv.slice(0,10).map(x=>{const good=(x.m in COST)?x.v<0:x.v>0;return `<tr class="link" data-drill="${x.p}"><td><span class="pf" style="background:${PCOL[x.p]}"></span>${x.p}</td><td>${MNAME[x.m]}</td><td style="color:${good?T.up:T.down}">${arrow(x.v)} ${fmtP(x.v,2)}</td><td style="color:${T.dim}">${good?'better':'worse'}</td></tr>`}).join('')+'</tbody>';
+  // cpm chart
+  const {s25,s26,proj}=seasonPair('cpm');
+  mk('fCpm',{type:'line',data:{labels:MON,datasets:[{label:'2025',data:s25,borderColor:T.past,backgroundColor:T.past,borderWidth:2,pointRadius:2,tension:.3,spanGaps:true},{label:'2026',data:s26,borderColor:T.amber,backgroundColor:T.amber,borderWidth:3,pointRadius:2,tension:.3,spanGaps:true},{label:'2026 scenario',data:proj,borderColor:T.amber,borderDash:[5,4],borderWidth:2,pointRadius:3,backgroundColor:T.bg,tension:.3,spanGaps:true}]},options:{interaction:{mode:'index',intersect:false},scales:{y:{grid,ticks:{callback:v=>'$'+v}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.parsed.y==null?null:`${c.dataset.label}: $${c.parsed.y.toFixed(2)}`}}}}});
+  shareChart('fShare','core','lines',26,true,'log',false);
+  const fk=[['Meta blended ROAS','0.54','+30% YoY',T.up,'x-roas'],['Meta first-time CAC','−33%','YoY · Q3',T.up,'x-ncac'],['BFCM 25 CPM peak','$23.06','w/c 30 Nov',T.text,'mb-cpm25'],['Meta share of spend',(MBI.find(x=>x.ws===LAST&&x.p==='Meta').share).toFixed(1)+'%','of all tracked',T.text,'mb-weekly']];
+  document.getElementById('fKpis').innerHTML=fk.map(([k,v,d,c,sr])=>`<div class="s"><div class="k">${k}</div><div class="v" style="color:${c};text-shadow:0 0 18px ${c}55">${v}</div><div class="d">${d}</div>${srcBtn(sr)}</div>`).join('');
+  // bench stories
+  const bs=[
+   {src:'mb-h1',k:'H1 2026',h:'More expensive, less efficient',p:'Median spend +12.4%, revenue +4.5%, new-customer CAC +10.3%. Bottom-quartile accounts saw new CAC rise 32.6%.'},
+   {src:'mb-may',k:'May 2026',h:'Spend grew three times faster than revenue',p:'Median spend +10.9%, revenue +3.2%, first-time MER −6.2%. Every AOV band paid more per new customer.'},
+   {src:'bl-jan',k:'January 2026',h:'The top quartile played a different game',p:'Median first-time CAC +11.5%; the 75th percentile cut it 18.2% while spending 35% more.'}];
+  document.getElementById('frontBench').innerHTML=bs.map(s=>`<div class="story"><span class="tag">${s.k}</span><h4>${s.h}</h4><p>${s.p}</p><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><a class="more" href="#nb-bench">Benchmarks →</a>${srcBtn(s.src,'SOURCE · QUOTE')}</div></div>`).join('');
+}
+
+/* ---------- channel tracker ---------- */
+let trMode='metric';
+function rangeWeeks(){const r=document.getElementById('trRange').value;return r==='all'?WEEKS:WEEKS.slice(-(+r))}
+function cumul(ws,p,m){if(m==='share'){const a=coreShare(ws[0],p),b=coreShare(ws[ws.length-1],p);return a==null||b==null?null:{v:b-a,u:'pp'}}let x=1,any=false;ws.slice(1).forEach(w=>{const v=val(w,p,m);if(v!=null){x*=1+v/100;any=true}});return any?{v:(x-1)*100,u:'%'}:null}
+function miniBar(id,ws,p,m){
+  const data=ws.map(w=>m==='share'?coreShare(w,p):val(w,p,m));
+  const cost=m in COST;
+  const colors=data.map(v=>m==='share'?PCOL[p]:goodCol(v,cost));
+  mk(id,{type:m==='share'?'line':'bar',data:{labels:ws.map(wkLab),datasets:[{data,backgroundColor:colors,borderColor:m==='share'?PCOL[p]:colors,borderWidth:m==='share'?2:0,pointRadius:0,fill:false,tension:.25,spanGaps:true,barPercentage:.9,categoryPercentage:.9}]},
+    options:{animation:false,plugins:{legend:{display:false},tooltip:{callbacks:{title:it=>it[0].label,label:c=>m==='share'?`${p}: ${c.parsed.y?.toFixed(2)}% of core`:`${MNAME[m]}: ${fmtP(c.parsed.y,2)}`}}},scales:{x:{display:false},y:{grid,ticks:{maxTicksLimit:4,callback:v=>m==='share'?v+'%':(v>0?'+':'')+v+'%'}}}},plugins:m==='share'?[]:[zeroLine]});
+}
+function renderTracker(){
+  const m=document.getElementById('trMetric').value,p=document.getElementById('trPlat').value,ws=rangeWeeks();
+  document.getElementById('trPlat').disabled=trMode==='metric';document.getElementById('trMetric').disabled=trMode==='platform';
+  Object.keys(charts).filter(k=>k.startsWith('mini')).forEach(k=>{charts[k].destroy();delete charts[k]});
+  const box=document.getElementById('trMulti');
+  if(trMode==='metric'){
+    document.getElementById('trTitle').textContent=`${MNAME[m]} · every platform`;
+    const plats=m==='share'?CORE:PLATS;
+    box.innerHTML=plats.map((pl,i)=>{const c=cumul(ws,pl,m);const good=c&&((m in COST)?c.v<0:c.v>0);return `<div class="cell" data-drill="${pl}" title="Open ${pl}: all metrics"><div class="h"><b style="color:${PCOL[pl]}">${pl}</b><span style="color:${c?(m==='share'?(c.v>0?T.up:T.down):(good?T.up:T.down)):T.dim}">${c?(c.v>0?'+':'')+c.v.toFixed(1)+c.u:'n/a'}</span></div><div class="chart mini"><canvas id="mini${i}"></canvas></div></div>`}).join('');
+    plats.forEach((pl,i)=>miniBar('mini'+i,ws,pl,m));
+  }else{
+    document.getElementById('trTitle').textContent=`${p} · every metric`;
+    const ms=['cpm','ctr','cpc','cac','cvr','roas','share'];
+    box.innerHTML=ms.map((mm,i)=>{const c=cumul(ws,p,mm);const good=c&&((mm in COST)?c.v<0:c.v>0);return `<div class="cell"><div class="h"><b>${MNAME[mm]}</b><span style="color:${c?(good?T.up:T.down):T.dim}">${c?(c.v>0?'+':'')+c.v.toFixed(1)+c.u:'n/a'}</span></div><div class="chart mini"><canvas id="mini${i}"></canvas></div></div>`}).join('');
+    ms.forEach((mm,i)=>miniBar('mini'+i,ws,p,mm));
+  }
+  document.getElementById('trMeta').textContent=`${wkLab(ws[0])} → ${wkLab(ws[ws.length-1])} · ${ws.length} weeks`;
+  // heat table
+  const hm=trMode==='metric'?m:'cpm';const metric=trMode==='metric'?m:null;
+  let h,title;
+  if(trMode==='metric'){
+    title=`Weekly ${MNAME[m]} by platform`;const cols=m==='share'?CORE:PLATS;
+    h='<thead><tr><th>Week</th>'+cols.map(c=>`<th>${c}</th>`).join('')+'</tr></thead><tbody>';
+    [...ws].reverse().forEach(w=>{h+=`<tr><td>${wkLab(w)} '${WE[w].slice(2,4)}${GAP_BEFORE[w]?' ◦':''}</td>`+cols.map(c=>{if(m==='share'){const s=coreShare(w,c),d=shareDelta(w,c);return `<td title="${d==null?'':(d>0?'+':'')+d+'pp WoW'}" style="${d==null?'':heat(d,false,2)}">${s==null?'·':s.toFixed(1)+'%'}</td>`}const v=val(w,c,m);return `<td style="${heat(v,m in COST)}">${v==null?'·':fmtP(v)}</td>`}).join('')+'</tr>'});
+  }else{
+    title=`${p} · weekly moves on every metric`;const ms=['cpm','ctr','cpc','cac','cvr','roas'];
+    h='<thead><tr><th>Week</th>'+ms.map(c=>`<th>${MNAME[c]}</th>`).join('')+'<th>Share (core)</th><th>Share Δ</th></tr></thead><tbody>';
+    [...ws].reverse().forEach(w=>{h+=`<tr><td>${wkLab(w)} '${WE[w].slice(2,4)}</td>`+ms.map(c=>{const v=val(w,p,c);return `<td style="${heat(v,c in COST)}">${v==null?'·':fmtP(v)}</td>`}).join('')+`<td>${coreShare(w,p)==null?'·':coreShare(w,p).toFixed(2)+'%'}</td><td style="${heat(shareDelta(w,p),false,2)}">${shareDelta(w,p)==null?'·':(shareDelta(w,p)>0?'+':'')+shareDelta(w,p).toFixed(2)+'pp'}</td></tr>`});
+  }
+  document.getElementById('hmTitle').textContent=title;
+  document.getElementById('tHeat').innerHTML=h+'</tbody>';
+}
+
+/* ---------- share ---------- */
+let shBasis='core',shChartT='lines',shScale='log';
+function shareChart(id,basis,kind,last,compact,scale,events){
+  let ws=basis==='core'?WEEKS:WEEKS.filter(w=>w>='2026-05-03');if(last)ws=ws.slice(-last);
+  const plats=basis==='core'?CORE:PLATS;
+  const get=(w,p)=>basis==='core'?coreShare(w,p):(MBI.find(x=>x.ws===w&&x.p===p)||{}).share??null;
+  const useP=kind==='linesx'?plats.filter(p=>p!=='Meta'):plats;const stack=kind==='stack';
+  const logY=!stack&&scale==='log';
+  mk(id,{type:stack?'bar':'line',data:{labels:ws.map(wkLab),datasets:useP.map(p=>({label:p,data:ws.map(w=>get(w,p)),backgroundColor:PCOL[p],borderColor:PCOL[p],borderWidth:stack?0:(p==='Meta'||p==='Google'?3:2.2),pointRadius:stack?0:1.5,pointHoverRadius:6,tension:.25,barPercentage:1,categoryPercentage:.85,spanGaps:true}))},
+    options:{scales:{x:{stacked:stack,grid:{display:false},ticks:{maxRotation:0,autoSkip:true,maxTicksLimit:compact?6:12}},y:stack?{stacked:true,max:100,min:0,grid,ticks:{callback:v=>v+'%'}}:(logY?{type:'logarithmic',min:0.2,max:80,grid,ticks:{callback:v=>[0.25,0.5,1,2,5,10,20,50].includes(v)?v+'%':''}}:{min:0,grid,ticks:{callback:v=>v+'%'}})},
+      plugins:{events:events?evFor(ws):[],legend:{position:'bottom',labels:{font:{size:10.5}}},tooltip:{callbacks:{label:c=>{if(c.parsed.y==null)return null;const w=ws[c.dataIndex];const d=basis==='core'?shareDelta(w,c.dataset.label):(MBI.find(x=>x.ws===w&&x.p===c.dataset.label)||{}).sd;return ` ${c.dataset.label}: ${c.parsed.y.toFixed(2)}%${d==null?'':`  (${d>0?'+':''}${d.toFixed(2)}pp)`}`},footer:it=>evAt(ws[it[0].dataIndex])}}}}});
+}
+function renderShare(){
+  shareChart('cShare',shBasis,shChartT,0,false,shScale,document.getElementById('shEvents').checked);
+  const ws=shBasis==='core'?WEEKS:WEEKS.filter(w=>w>='2026-05-03');const plats=shBasis==='core'?CORE:PLATS;
+  document.getElementById('shUnit').textContent=shBasis==='core'?'share of core 8 · change in pp vs prior published week':'share as published · Δ as published (pp)';
+  let h='<thead><tr><th>Week</th>'+plats.map(p=>`<th>${p}</th>`).join('')+'</tr></thead><tbody>';
+  [...ws].reverse().forEach(w=>{h+=`<tr><td>${wkLab(w)} '${WE[w].slice(2,4)}</td>`+plats.map(p=>{let s,d;if(shBasis==='core'){s=coreShare(w,p);d=shareDelta(w,p)}else{const r=MBI.find(x=>x.ws===w&&x.p===p)||{};s=r.share??null;d=r.sd??null}
+    return `<td style="${d==null?'':heat(d,false,1.5)}">${s==null?'·':s.toFixed(1)+'%'} <span style="opacity:.75">${d==null?'':(d>0?'+':'')+d.toFixed(2)}</span></td>`}).join('')+'</tr>'});
+  document.getElementById('tShare').innerHTML=h+'</tbody>';
+  const tr=(p,k)=>{const a=coreShare(LAST,p),b=coreShare(WEEKS[Math.max(0,WEEKS.length-1-k)],p);return a==null||b==null?null:a-b};
+  document.getElementById('tTrend').innerHTML='<thead><tr><th>Platform</th><th>Share now</th><th>vs last wk</th><th>vs 4 wks</th><th>vs 13 wks</th><th>vs 28 Dec 25</th><th style="min-width:140px">Last 13 weeks</th></tr></thead><tbody>'+CORE.map(p=>{const sp=WEEKS.slice(-13).map(w=>coreShare(w,p)).filter(v=>v!=null);const mn=Math.min(...sp),mx=Math.max(...sp);const pts=sp.map((v,i)=>`${(i/(sp.length-1)*130).toFixed(1)},${(18-(mx===mn?9:(v-mn)/(mx-mn)*16)-1).toFixed(1)}`).join(' ');
+    return `<tr class="link" data-drill="${p}"><td><span class="pf" style="background:${PCOL[p]}"></span>${p}</td><td>${coreShare(LAST,p).toFixed(2)}%</td>`+[1,4,13,WEEKS.length-1].map(k=>{const d=tr(p,k);return `<td style="${heat(d,false,2)}">${d==null?'·':(d>0?'+':'')+d.toFixed(2)+'pp'}</td>`}).join('')+`<td><svg width="130" height="18" viewBox="0 0 130 18" aria-hidden="true"><polyline points="${pts}" fill="none" stroke="${PCOL[p]}" stroke-width="1.8" style="filter:drop-shadow(0 0 3px ${PCOL[p]})"/></svg></td></tr>`}).join('')+'</tbody>';
+  const q=rowsOf('q1_share');
+  document.getElementById('tQ1').innerHTML='<thead><tr><th>Platform</th><th>Q1 2025</th><th>Q1 2026</th><th>Change</th></tr></thead><tbody>'+q.map(r=>{const c=n(r.relative_change_pct);return `<tr><td><span class="pf" style="background:${PCOL[r.platform]||T.dim}"></span>${r.platform}</td><td>${r.q1_2025}%</td><td>${r.q1_2026}%</td><td style="color:${goodCol(c,false)}">${arrow(c)} ${fmtP(c,0)}</td></tr>`}).join('')+'</tbody>';
+  const e=rowsOf('emerging');const mx=Math.max(...e.map(r=>n(r.spend_growth_pct)));
+  document.getElementById('tEmerg').innerHTML='<thead><tr><th>Platform</th><th>Growth</th><th style="width:50%"></th></tr></thead><tbody>'+e.map(r=>{const v=n(r.spend_growth_pct);return `<tr><td>${r.platform}</td><td class="up">+${v.toLocaleString()}%</td><td><div style="height:8px;background:${T.amber};width:${Math.max(2,Math.sqrt(v/mx)*100)}%"></div></td></tr>`}).join('')+'</tbody>';
+}
+
+/* ---------- Q4 ---------- */
+const CPM=rowsOf('meta_cpm').map(r=>({d:r.period,v:n(r.cpm_usd)}));
+const RC=rowsOf('meta_roas_cac').map(r=>({m:r.month,roas:n(r.blended_roas),cac:n(r.first_time_cac)}));
+const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","BFCM wk","Dec"];
+function seasonPair(metric){
+  const s25=Array(13).fill(null),s26=Array(13).fill(null);
+  if(metric==='cpm'){CPM.forEach(r=>{const [y,mm,dd]=r.d.split('-').map(Number);let i=mm-1;if(y===2025&&mm===11&&dd>=24)i=11;else if(mm===12)i=12;else if(mm===11)i=10;
+    if(y===2025){if(s25[i]==null||(i===10&&dd<10))s25[i]=r.v}else{if(mm===9&&dd>15)return;s26[i]=r.v}})}
+  else{RC.forEach(r=>{const v=r[metric];if(r.m==='2025-BFCM'){s25[11]=v;return}const [y,mm]=r.m.split('-').map(Number);const i=mm===12?12:(mm===11?10:mm-1);(y===2025?s25:s26)[i]=v})}
+  const proj=Array(13).fill(null);const o25=s25[9],o26=s26[9];
+  if(o25&&o26){proj[9]=o26;[10,11,12].forEach(i=>{if(s25[i]!=null)proj[i]=+(o26*s25[i]/o25).toFixed(metric==='roas'?3:2)})}
+  return {s25,s26,proj};
+}
+let ovMetric='cpm';
+const OVI={cpm:{u:v=>'$'+v.toFixed(2),n:'CPM'},roas:{u:v=>v.toFixed(2),n:'blended ROAS'},cac:{u:v=>'$'+v.toFixed(0),n:'first-time CAC'}};
+function renderOverlay(){
+  const {s25,s26,proj}=seasonPair(ovMetric);const I=OVI[ovMetric];
+  mk('cOverlay',{type:'line',data:{labels:MON,datasets:[{label:'2025',data:s25,borderColor:T.past,backgroundColor:T.past,borderWidth:2.5,pointRadius:3,tension:.3,spanGaps:true},{label:'2026',data:s26,borderColor:T.amber,backgroundColor:T.amber,borderWidth:3,pointRadius:3,tension:.3,spanGaps:true},{label:'2026 scenario',data:proj,borderColor:T.amber,borderDash:[6,5],borderWidth:2,pointRadius:4,backgroundColor:T.bg,tension:.3,spanGaps:true}]},
+    options:{interaction:{mode:'index',intersect:false},scales:{y:{grid,ticks:{callback:v=>ovMetric==='roas'?v.toFixed(2):'$'+v}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.parsed.y==null?null:`${c.dataset.label}: ${I.u(c.parsed.y)}`}}}}});
+  const o25=s25[9],b25=s25[11],o26=s26[9],b26=proj[11];
+  let t=`Scenario, not a forecast. In 2025 Meta ${I.n} went from ${I.u(o25)} in October to ${I.u(b25)} in BFCM week (${fmtP((b25/o25-1)*100,0)}). The same move from October 2026's ${I.u(o26)} gives about ${I.u(b26)} for BFCM week 2026.`;
+  if(ovMetric==='cpm')t+=' This year\'s run-up started in September, so some of that rise may already be priced in.';
+  if(ovMetric==='cac')t+=' Northbeam expects CAC to rise through BFCM and stay high until Christmas.';
+  document.getElementById('ovScenario').textContent=t;
+}
+function renderQ4(){
+  const cw=Object.fromEntries(rowsOf('cw2025').map(r=>[r.metric,n(r.yoy_pct)]));
+  const kp=[['Meta CPM vs Oct 2025','+25%','≈ $20.40 avg',T.down,'mb-cpm25'],['Meta blended ROAS','0.54','+30% YoY',T.up,'x-roas'],['Meta first-time CAC','−33%','YoY, Q3 avg',T.up,'x-ncac'],['BFCM 2025 CPM peak','$23.06','w/c 30 Nov',T.text,'mb-cpm25'],['Cyber Week 25 MER',fmtP(cw['MER']),`spend ${fmtP(cw['Spend'])}`,T.up,'bl-cyberweek'],['Cyber Week 25 CAC',fmtP(cw['CAC (1st time)']),'first-time',T.down,'bl-cyberweek']];
+  document.getElementById('q4kpis').innerHTML=kp.map(([k,v,d,c,sr])=>`<div class="s"><div class="k">${k}</div><div class="v" style="color:${c};text-shadow:0 0 18px ${c}55">${v}</div><div class="d">${d}</div>${srcBtn(sr)}</div>`).join('');
+  renderOverlay();
+  const bd=rowsOf('bfcm_daily'),bs=rowsOf('bfcm_spend');const lab=['Nov 4–24',...bd.map(r=>r.day.replace(' (pre-BF)',''))];
+  mk('cArc',{type:'bar',data:{labels:lab,datasets:[{label:'Spend',data:[n(bs[0].spend_yoy),...bd.map(r=>n(r.spend))],backgroundColor:T.dim},{label:'Revenue',data:[null,...bd.map(r=>n(r.revenue))],backgroundColor:T.up},{label:'MER',data:[null,...bd.map(r=>n(r.mer))],backgroundColor:T.blue},{label:'CAC',data:[null,...bd.map(r=>n(r.cac))],backgroundColor:T.down}]},
+    options:{scales:{y:pctAxis(),x:{grid:{display:false},ticks:{maxRotation:0,autoSkip:false,font:{size:10}}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.parsed.y==null?null:`${c.dataset.label}: ${fmtP(c.parsed.y,2)}`,afterBody:it=>{const i=it[0].dataIndex;return i?bd[i-1].note:'Run-up: spend up mid-single digits, first-time CAC up mid-teens'}}}}},plugins:[zeroLine]});
+  const pc=rowsOf('bfcm_pacing');
+  mk('cPace',{type:'bar',data:{labels:[['BF vs','Thanksgiving'],['Weekend','vs BF'],['Cyber Mon','vs weekend']],datasets:pc.map((r,i)=>({label:r.cohort,data:[n(r.bf_vs_thanksgiving),n(r.weekend_vs_bf),n(r.cm_vs_weekend)],backgroundColor:i?T.amber:T.dim}))},options:{scales:{y:pctAxis(),x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>`${c.dataset.label}: ${fmtP(c.parsed.y,2)}`}}}},plugins:[zeroLine]});
+  document.getElementById('startNote').textContent='When big spenders started BFCM 2024 sales: '+rowsOf('bfcm_start').map(r=>`${r.start_week} ${r.share_pct}%`).join(' · ');
+  renderLag();renderInd();
+  const pw=['2025-12-22','2026-01-03','2026-01-10','2026-01-17'];
+  const ds=[['Meta','cpm','Meta CPM',PCOL.Meta,[]],['Meta','roas','Meta ROAS',PCOL.Meta,[5,4]],['Google','cpm','Google CPM',PCOL.Google,[]],['Google','roas','Google ROAS',PCOL.Google,[5,4]]];
+  mk('cPost',{type:'line',data:{labels:['w/e 28 Dec','w/e 9 Jan','w/e 16 Jan','w/e 23 Jan'],datasets:ds.map(([p,m,l,c,dash])=>({label:l,data:pw.map(w=>val(w,p,m)),borderColor:c,backgroundColor:c,borderDash:dash,borderWidth:2.5,pointRadius:4,tension:.2}))},options:{interaction:{mode:'index',intersect:false},scales:{y:pctAxis(),x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>`${c.dataset.label}: ${fmtP(c.parsed.y,2)}`}}}},plugins:[zeroLine]});
+  const j=rowsOf('jan2026');
+  mk('cJan',{type:'bar',data:{labels:j.map(r=>r.metric.replace(' (conversion rate)','').replace(' (1st time)',' 1st')),datasets:[{label:'Median',data:j.map(r=>n(r.median)),backgroundColor:T.dim},{label:'75th percentile',data:j.map(r=>n(r.p75)),backgroundColor:T.amber}]},options:{scales:{y:pctAxis(),x:{grid:{display:false},ticks:{maxRotation:0,autoSkip:false,font:{size:10}}}},plugins:{legend:{position:'bottom'}}},plugins:[zeroLine]});
+  document.getElementById('takeaways').innerHTML=TAKE.map(x=>`<div class="story"><span class="tag">${x.tag}</span><h4>${esc(x.t)}</h4><p>${esc(x.p)}</p><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="byline" style="margin:0">Source: ${esc(x.e)}</span>${srcBtn(x.src,'SOURCE · QUOTE')}</div></div>`).join('');
+}
+function renderLag(){
+  const L=rowsOf('lag');const t30=n(document.getElementById('tgt30').value)||2,tl=n(document.getElementById('tgtLtv').value)||3;const cs=['#7f8c87','#9fb3ab',T.up,T.down,T.blue,'#a98bff'];
+  mk('cLag',{type:'line',data:{labels:['1 day','7 days','30 days','Lifetime'],datasets:L.map((r,i)=>({label:r.phase,data:[n(r.roas_1d),n(r.roas_7d),n(r.roas_30d),n(r.roas_ltv)],borderColor:cs[i],backgroundColor:cs[i],borderWidth:r.phase.includes('BFCM')?3.5:2,pointRadius:3,tension:.2}))},options:{interaction:{mode:'index',intersect:false},scales:{y:{grid},x:{grid:{display:false}}},plugins:{legend:{position:'bottom',labels:{font:{size:10}}}}}});
+  document.getElementById('tLag').innerHTML='<thead><tr><th>Phase</th><th>Dates</th><th>30d÷1d</th><th>Floor 30d</th><th>Floor LTV</th></tr></thead><tbody>'+L.map(r=>{const m30=n(r.mult_30d_1d),ml=n(r.mult_ltv_1d);return `<tr><td>${r.phase}</td><td>${r.dates}</td><td>${m30.toFixed(2)}×</td><td style="color:${T.amber}">${(t30/m30).toFixed(2)}</td><td>${(tl/ml).toFixed(2)}</td></tr>`}).join('')+'</tbody>';
+}
+let indSort={k:'cac_first_time',dir:-1};
+function renderInd(){
+  const R=rowsOf('bfcm_industry');const cols=[['industry','Industry'],['spend','Spend'],['revenue_cash','Revenue'],['mer','MER'],['cac_first_time','1st-time CAC']];
+  const s=[...R].sort((a,b)=>indSort.k==='industry'?a.industry.localeCompare(b.industry)*indSort.dir:(n(a[indSort.k])-n(b[indSort.k]))*indSort.dir);
+  const t=document.getElementById('tInd');
+  t.innerHTML='<thead><tr>'+cols.map(([k,l])=>`<th><button type="button" class="sort" data-k="${k}">${l}${indSort.k===k?(indSort.dir<0?' ↓':' ↑'):''}</button></th>`).join('')+'</tr></thead><tbody>'+s.map(r=>'<tr>'+cols.map(([k])=>k==='industry'?`<td>${r[k]}</td>`:`<td style="${k==='spend'?'':heat(n(r[k]),k==='cac_first_time',30)}">${fmtP(n(r[k]),2)}</td>`).join('')+'</tr>').join('')+'</tbody>';
+  t.querySelectorAll('button.sort').forEach(b=>b.onclick=()=>{indSort={k:b.dataset.k,dir:indSort.k===b.dataset.k?-indSort.dir:-1};renderInd()});
+}
+const TAKE=[
+ {src:'mb-cpm25',tag:'Budget',t:'Budget for Meta CPMs in the high $20s in BFCM week.',p:'CPMs are already ~25% above last October and the spike began in September. Last year\'s October-to-BFCM rise (+41%) applied to this October gives about $28–29. Midterm political spend (election day 3 Nov) adds pressure early in November.',e:'Media Buyer Index 22 Oct · X 21 Oct'},
+ {src:'x-roas,x-ncac',tag:'Efficiency',t:'Dearer reach is not the same as worse results.',p:'Blended ROAS is up 30% YoY (0.54) and average first-time CAC down 33% since mid-June. If last year\'s CAC shape repeats, BFCM-week CAC lands near $207 vs $309 last year. Hold prospecting budgets when CPMs jump.',e:'X 23 & 28 Oct'},
+ {src:'mb-cpm25',tag:'Benchmark',t:'Benchmark against your spend band, not the average.',p:'The 33% CAC drop is an average. In Q3 the median account\'s new CAC still rose in five of seven spend bands, and sub-$50k accounts saw median revenue fall 18%.',e:'Q3 heatmap 22 Oct'},
+ {src:'mb-lag',tag:'Measurement',t:'Judge November on lagged returns with phase-specific floors.',p:'Pre-BFCM ads (1–23 Nov) grow 2.6× from day 1 to day 30; BFCM-week ads only 1.85×. One 1-day target for the quarter will cut seeding campaigns that are working.',e:'Conversion lag post 10 Sep'},
+ {src:'mb-bfcm,bl-cyberfive',tag:'Pacing',t:'Plan Cyber Week as an arc from Tuesday to Monday.',p:'Black Friday 2025: spend +13.5%, MER −2.8%, CAC +13.9%. Saturday and Sunday MER +8.6% and +9.2%, Cyber Monday +5.9%. In 2024 the top quartile cut weekend spend 21% and added just 1% on Monday.',e:'BFCM 2025 report · Cyber Five pattern'},
+ {src:'x-industry',tag:'Category',t:'Set category-specific CAC ceilings before the week starts.',p:'At BFCM 2025 Health & Wellness first-time CAC rose 71% and Baby & Kids 26%; Beauty (−7.5%) and Sporting Goods (−10.5%) got cheaper.',e:'X 4 Dec 2025'},
+ {src:'mb-amazon,mb-cpm25',tag:'Amazon',t:'Expect Amazon and TikTok noise in weekly numbers.',p:'Prime Big Deal Days pulled about $2B forward (Cyber Five 2025 ≈ $35B). "All other", mostly Amazon, swings 20–40% in a week and TikTok tends to move with it.',e:'Newsletter 15 & 22 Oct'},
+ {src:'mb-weekly,x-emerging,bl-cyberweek',tag:'Channels',t:'Keep Meta and Google as the spine; test where share falls but conversion holds.',p:'Meta holds ~55% of tracked spend; Meta plus Google were ~80% of Cyber Week 2025. Vibe (+1,900%) and Snapchat (+91%) grew fastest among smaller platforms in H1.',e:'Media Buyer Index · X 14 Jul'},
+ {src:'mb-weekly,bl-q5',tag:'Post-BFCM',t:'Have Q5 creative and budget ready for 22 Dec.',p:'Christmas week 2025: Meta CPM −17.8% WoW, ROAS +16.3%. By mid-January CPMs were rising again. The cheap window lasts about two weeks.',e:'Media Buyer Index Dec–Jan'},
+ {src:'bl-jan',tag:'Post-BFCM',t:'Reset benchmarks in early January, first-time metrics separate.',p:'January 2026 median: spend +5.9%, first-time CAC +11.5%. Top quartile: spend +35%, CAC −18%.',e:'January 2026 benchmarks'},
+ {src:'bl-jan',tag:'Creative',t:'Ship creative volume ahead of November.',p:'Every spend band launched the most Meta ads in November 2025; $1m–$2m/month accounts went from 473 in October to 659.',e:'January 2026 benchmarks blog'},
+];
+
+/* ---------- Benchmarks ---------- */
+function qTable(id,key,cost=k=>k.startsWith('CAC')){
+  const R=rowsOf(key);const cols=D[key].cols.slice(2);
+  document.getElementById(id).innerHTML='<thead><tr><th>Metric</th><th>Pctl</th>'+cols.map(c=>`<th>${c}</th>`).join('')+'</tr></thead><tbody>'+R.map(r=>`<tr><td>${r.percentile==='P25'?r.metric:''}</td><td style="color:${T.dim}">${r.percentile}</td>`+cols.map(c=>{const v=n(r[c]);return `<td style="${heat(v,cost(r.metric))}">${fmtP(v)}</td>`}).join('')+'</tr>').join('')+'</tbody>';
+}
+function renderBench(){
+  const M=rowsOf('monthly_yoy');const seen=new Set(),P=[];M.forEach(r=>{if(seen.has(r.period))return;seen.add(r.period);P.push(r)});
+  const lbl={'2025-CW':'Cyber Wk 25','2025-FY':'FY 2025','2026-H1':'H1 2026'};const L=P.map(r=>lbl[r.period]||new Date(r.period+'-15').toLocaleDateString('en-GB',{month:'short',year:'2-digit'}));
+  mk('cMonthly',{type:'bar',data:{labels:L,datasets:[{label:'Revenue',data:P.map(r=>n(r.revenue)),backgroundColor:T.up},{label:'First-time MER',data:P.map(r=>n(r.mer_new)),backgroundColor:T.blue},{label:'First-time CAC',data:P.map(r=>n(r.cac_new)),backgroundColor:T.down}]},options:{scales:{y:pctAxis(),x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.parsed.y==null?null:`${c.dataset.label}: ${fmtP(c.parsed.y,2)}`,afterBody:it=>'Source: '+P[it[0].dataIndex].source}}}},plugins:[zeroLine]});
+  const cols=['spend','revenue','revenue_new','mer','mer_new','cac_new'];const nm={spend:'Spend',revenue:'Revenue',revenue_new:'Rev (new)',mer:'MER',mer_new:'MER (new)',cac_new:'CAC (new)'};
+  document.getElementById('tMonthly').innerHTML='<thead><tr><th>Period</th>'+cols.map(c=>`<th>${nm[c]}</th>`).join('')+'<th>Source</th></tr></thead><tbody>'+M.map(r=>`<tr><td>${lbl[r.period]||r.period}</td>`+cols.map(c=>{const v=n(r[c]);return `<td style="${c==='spend'?'':heat(v,c==='cac_new',15)}">${r[c]?(r[c].startsWith('~')?'≈':'')+fmtP(v):'·'}</td>`}).join('')+`<td style="color:${T.dim};text-align:left">${esc(r.source)}</td></tr>`).join('')+'</tbody>';
+  renderBand();qTable('tH1rev','h1_rev');qTable('tH1aov','h1_aov');
+  const S=rowsOf('size_2025');
+  mk('cSize',{type:'bar',data:{labels:S.map(r=>r.company_size),datasets:[{label:'Spend',data:S.map(r=>n(r.spend)),backgroundColor:T.dim},{label:'Revenue',data:S.map(r=>n(r.revenue)),backgroundColor:T.amber}]},options:{scales:{y:pctAxis(),x:{grid:{display:false}}},plugins:{legend:{position:'bottom'}}},plugins:[zeroLine]});
+  const V=rowsOf('verticals_2025');
+  document.getElementById('tVert').innerHTML='<thead><tr><th>Vertical</th><th>Spend</th><th>Revenue</th><th>MER</th><th>1st MER</th><th>1st CAC</th></tr></thead><tbody>'+V.map(r=>`<tr><td title="${esc(r.best_windows)}">${r.vertical}</td>`+['spend','revenue','mer','first_time_mer','first_time_cac'].map(k=>{const v=n(r[k]);return `<td style="${k==='spend'?'':heat(v,k==='first_time_cac',15)}">${fmtP(v)}</td>`}).join('')+'</tr>').join('')+'</tbody>';
+  const X=rowsOf('vertical_mix');const verts=[...new Set(X.map(r=>r.vertical))];const pl=["Meta","Google","TikTok","YouTube","AppLovin","TV","Snapchat","Pinterest"];
+  document.getElementById('tMix').innerHTML='<thead><tr><th>Vertical</th><th>Ads/brand</th>'+pl.map(p=>`<th>${p}</th>`).join('')+'</tr></thead><tbody>'+verts.map(v=>{const r0=X.find(x=>x.vertical===v);return `<tr><td>${v}</td><td>${r0.ads_median}</td>`+pl.map(p=>{const r=X.find(x=>x.vertical===v&&x.platform===p);const s=r?n(r.share):null;const a=s==null?0:Math.min(s/60,1)*.7+.05;return `<td style="background:rgba(255,176,32,${a.toFixed(2)});color:${a>.45?'#111':T.text}">${s==null?'·':s.toFixed(1)+'%'}</td>`}).join('')+'</tr>'}).join('')+'</tbody>';
+  const A=rowsOf('ads_launched');const bands=D.ads_launched.cols.slice(1);
+  document.getElementById('tAds').innerHTML='<thead><tr><th>Month</th>'+bands.map(b=>`<th>${b}</th>`).join('')+'</tr></thead><tbody>'+A.map(r=>`<tr><td>${r.month}</td>`+bands.map(b=>{const v=n(r[b]);const a=Math.min(v/900,1)*.7+.03;return `<td style="background:rgba(90,169,255,${a.toFixed(2)})">${v}</td>`}).join('')+'</tr>').join('')+'</tbody>';
+  const AI=rowsOf('ai_search');
+  mk('cAI',{type:'line',data:{labels:AI.map(r=>new Date(r.month+'-15').toLocaleDateString('en-GB',{month:'short',year:'2-digit'})),datasets:[{label:'Organic search revenue',data:AI.map(r=>n(r.ai_pct_organic_search_revenue)),borderColor:T.amber,backgroundColor:T.amber,borderWidth:2.5,pointRadius:2,tension:.3},{label:'Organic search visits',data:AI.map(r=>n(r.ai_pct_organic_visits)),borderColor:T.blue,backgroundColor:T.blue,borderWidth:2.5,pointRadius:2,tension:.3}]},options:{interaction:{mode:'index',intersect:false},scales:{y:{grid,ticks:{callback:v=>v+'%'}},x:{grid:{display:false},ticks:{maxTicksLimit:7,maxRotation:0}}},plugins:{legend:{position:'bottom'}}}});
+}
+function renderBand(){
+  const m=document.getElementById('selBand').value;const H=rowsOf('h1_spend'),Q=rowsOf('q3_heatmap');const bands=D.h1_spend.cols.slice(2);
+  const g=(R,b,pc)=>n((R.find(r=>r.metric===m&&r.percentile===pc)||{})[b]);const cost=m.startsWith('CAC');
+  mk('cBand',{type:'bar',data:{labels:bands,datasets:[{label:'H1 2026 median',data:bands.map(b=>g(H,b,'Median')),backgroundColor:T.dim},{label:'Q3 2026 median',data:bands.map(b=>g(Q,b,'Median')),backgroundColor:T.amber}]},options:{scales:{y:pctAxis(),x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>`${c.dataset.label}: ${fmtP(c.parsed.y)}`}}}},plugins:[zeroLine]});
+  document.getElementById('tBand').innerHTML='<thead><tr><th>'+esc(m)+'</th>'+bands.map(b=>`<th>${b}</th>`).join('')+'</tr></thead><tbody>'+[['H1','P25'],['H1','Median'],['H1','P75'],['Q3','P25'],['Q3','Median'],['Q3','P75']].map(([per,pc])=>`<tr><td>${per} ${pc}</td>`+bands.map(b=>{const v=g(per==='H1'?H:Q,b,pc);return `<td style="${heat(v,cost)}">${fmtP(v)}</td>`}).join('')+'</tr>').join('')+'</tbody>';
+}
+
+/* ---------- Meta ---------- */
+function renderMeta(){
+  const R=rowsOf('meta_monthly');const lab=R.map(r=>new Date(r.month+'-15').toLocaleDateString('en-GB',{month:'short',year:'2-digit'}));
+  const dual=(id,a,b,la,lb,fa,fb,ca,cb,rows,labs)=>mk(id,{type:'line',data:{labels:labs,datasets:[{label:la,data:rows.map(r=>n(r[a])),borderColor:ca,backgroundColor:ca,yAxisID:'y',borderWidth:2.5,pointRadius:2,tension:.3},{label:lb,data:rows.map(r=>n(r[b])),borderColor:cb,backgroundColor:cb,yAxisID:'y1',borderWidth:2.5,pointRadius:2,tension:.3}]},options:{interaction:{mode:'index',intersect:false},scales:{y:{position:'left',grid,ticks:{callback:fa}},y1:{position:'right',grid:{display:false},ticks:{callback:fb}},x:{grid:{display:false},ticks:{maxTicksLimit:7,maxRotation:0}}},plugins:{legend:{position:'bottom'}}}});
+  dual('cM1','cpm','cpc','CPM','CPC',v=>'$'+v,v=>'$'+v.toFixed(2),PCOL.Meta,T.amber,R,lab);
+  dual('cM2','ctr_pct','cvr_pct','CTR','CVR',v=>v.toFixed(2)+'%',v=>v.toFixed(2)+'%',T.up,T.down,R,lab);
+  const RC2=rowsOf('meta_roas_cac').filter(r=>r.month!=='2025-BFCM');
+  dual('cM3','blended_roas','first_time_cac','Blended ROAS','First-time CAC',v=>v.toFixed(2),v=>'$'+v,T.up,T.down,RC2,RC2.map(r=>new Date(r.month+'-15').toLocaleDateString('en-GB',{month:'short',year:'2-digit'})));
+  const TT=rowsOf('tiktok_cvr');
+  mk('cTT',{type:'line',data:{labels:TT.map(r=>new Date(r.month+'-15').toLocaleDateString('en-GB',{month:'short',year:'2-digit'})),datasets:[{label:'TikTok CVR',data:TT.map(r=>n(r.cvr_pct)),borderColor:PCOL.TikTok,backgroundColor:'rgba(255,79,154,.15)',fill:true,borderWidth:2.5,pointRadius:2,tension:.3}]},options:{scales:{y:{min:0,grid,ticks:{callback:v=>v+'%'}},x:{grid:{display:false},ticks:{maxTicksLimit:7,maxRotation:0}}},plugins:{legend:{display:false}}}});
+}
+
+/* ---------- Library ---------- */
+let libSrc='all';
+function renderLib(){
+  const q=document.getElementById('libQ').value.trim().toLowerCase();
+  const L=LIB.filter(x=>x.pub==='Northbeam'&&(libSrc==='all'||x.src===libSrc)&&(!q||(x.title+' '+x.stats.join(' ')+' '+x.tags.join(' ')).toLowerCase().includes(q))).sort((a,b)=>a.date<b.date?1:-1);
+  document.getElementById('libCount').textContent=`${L.length} of ${LIB.filter(x=>x.pub==='Northbeam').length} Northbeam sources`;
+  document.getElementById('libList').innerHTML=L.map(x=>`<article><div><div class="d">${new Date(x.date+'T12:00').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})}</div><div class="src">${x.src}</div></div><div style="min-width:0"><h4><a href="${x.url}" target="_blank" rel="noopener">${esc(x.title)}</a></h4><ul>${x.stats.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>${x.data.length?`<div class="dsl">Data: ${x.data.map(k=>`<a href="#nb-library" data-ds="${k}">${esc(D[k].title)}</a>`).join(' · ')}</div>`:''}</div></article>`).join('')||'<p class="dek">No sources match that search.</p>';
+  document.querySelectorAll('[data-ds]').forEach(a=>a.onclick=e=>{e.preventDefault();const d=document.getElementById('ds-'+a.dataset.ds);if(d){d.open=true;d.scrollIntoView({behavior:'smooth',block:'start'})}});
+}
+function renderDS(){
+  document.getElementById('dsList').innerHTML=Object.entries(D).map(([k,d])=>`<details class="ds" id="ds-${k}"><summary>${esc(d.title)}<span>${esc(d.source)} · ${d.rows.length} rows · ${esc(d.file)}</span></summary><div class="inner">${d.note?`<p>${esc(d.note)}</p>`:''}<div class="term" style="padding:0"><div class="tw" style="max-height:420px;border:0"><table class="q"><thead><tr>${d.cols.map(c=>`<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${d.rows.map(r=>`<tr>${r.map(v=>`<td>${esc(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div></div></details>`).join('');
+}
+
+/* ---------- Wire ---------- */
+const WIRE=[
+ {k:'Measurement peers',n:'Triple Whale',c:'Weekly benchmarks · live BFCM tracker',p:'Shopify-wide ROAS, CPM and AOV benchmarks by vertical, plus an hourly GMV and spend tracker through Cyber Week. Closest like-for-like to Northbeam.'},
+ {k:'Measurement peers',n:'Haus',c:'Monthly research posts',p:'Published incrementality and geo-lift results by channel: the best public source on how far platform ROAS overstates true lift.'},
+ {k:'Measurement peers',n:'Varos',c:'Weekly benchmark emails',p:'Peer benchmarks for Meta, Google and TikTok (CPM, CTR, CPA, ROAS) by vertical and spend tier, drawn from connected ad accounts.'},
+ {k:'Measurement peers',n:'Recast and Measured',c:'Monthly',p:'MMM and incrementality research, including channel saturation curves and holiday planning notes.'},
+ {k:'Platforms as stocks',n:'Meta, Alphabet, Amazon, Pinterest, Snap, AppLovin earnings',c:'Quarterly · Meta Q3 out late Oct',p:'Meta reports ad impressions and average price per ad each quarter: a hard, market-wide read on CPM inflation to set beside Northbeam\'s.'},
+ {k:'Holiday trackers',n:'Adobe Digital Insights',c:'Daily during Cyber Week',p:'US online spend by day for Thanksgiving to Cyber Monday, with forecasts in early November. The scoreboard every BFCM story cites.'},
+ {k:'Holiday trackers',n:'Shopify BFCM live globe & Salesforce Shopping Index',c:'Live in Cyber Week · Salesforce quarterly',p:'Real-time merchant sales and global order volume; Salesforce adds discount depth and traffic by channel.'},
+ {k:'Creative & lifecycle',n:'Motion, Klaviyo, Attentive',c:'Quarterly reports · BFCM recaps',p:'Motion: which ad formats and hooks scale. Klaviyo and Attentive: email and SMS revenue share and benchmarks around BFCM.'},
+ {k:'Operator newsletters',n:'Common Thread Collective, Foxwell Digital, 2PM, Modern Retail',c:'Weekly',p:'CTC\'s DTC index and Prophit posts, Foxwell\'s agency surveys and Meta updates, 2PM and Modern Retail for brand and retail news.'},
+ {k:'Macro',n:'US Census e-commerce, Conference Board, University of Michigan, CPI',c:'Monthly / quarterly',p:'E-commerce share of retail, consumer confidence and inflation. The backdrop to the K-shaped spending Northbeam keeps pointing to.'},
+ {k:'Podcasts',n:'9 Operators, MarketingOperators, Scalability School',c:'Weekly',p:'Where Northbeam and others share charts first. Worth logging episodes with data in them alongside the written posts.'},
+ {k:'Your own desk',n:'Client data: Lifetimely, Klaviyo, Meta, Google Sheets',c:'Weekly',p:'Your clients\' weekly numbers sat beside the market benchmarks, so each client can be checked against the median for their spend band.'},
+];
+function renderWire(){document.getElementById('wireList').innerHTML=WIRE.map(w=>`<div class="story"><span class="tag">${w.k}</span><h4>${esc(w.n)}</h4><span class="cad">${esc(w.c)}</span><p>${esc(w.p)}</p></div>`).join('')}
+
+/* ---------- compare channels ---------- */
+let cmpSel=new Set(["Meta","Google","TikTok","AppLovin","YouTube","Snapchat"]),cmpMode='cum';
+function rangeOf(id){const r=document.getElementById(id).value;return r==='all'?WEEKS:WEEKS.slice(-(+r))}
+function renderCompare(){
+  const m=document.getElementById('cmpMetric').value,ws=rangeOf('cmpRange');
+  const chips=document.getElementById('cmpChips');
+  chips.innerHTML=PLATS.map(p=>`<button type="button" class="chip" data-p="${p}" aria-pressed="${cmpSel.has(p)}"><span class="sw" style="background:${PCOL[p]};box-shadow:0 0 6px ${PCOL[p]}"></span>${p}</button>`).join('')+`<button type="button" class="chip" data-p="__all">All</button><button type="button" class="chip" data-p="__none">None</button>`;
+  chips.querySelectorAll('button').forEach(b=>b.onclick=()=>{const p=b.dataset.p;if(p==='__all')cmpSel=new Set(PLATS);else if(p==='__none')cmpSel=new Set();else cmpSel.has(p)?cmpSel.delete(p):cmpSel.add(p);renderCompare()});
+  const ds=PLATS.filter(p=>cmpSel.has(p)).map(p=>{let data;if(cmpMode==='wow')data=ws.map(w=>val(w,p,m));else{let x=1,started=false;data=ws.map((w,i)=>{const v=val(w,p,m);if(!started){if(i===0||v!=null){started=true;return 0}return null}if(v!=null)x*=1+v/100;return +((x-1)*100).toFixed(2)})}
+    return {label:p,data,borderColor:PCOL[p],backgroundColor:PCOL[p],borderWidth:p==='Meta'?3.5:2.2,pointRadius:cmpMode==='wow'?2.5:1.5,pointHoverRadius:7,tension:.25,spanGaps:true}});
+  const cost=m in COST;
+  mk('cCmp',{type:'line',data:{labels:ws.map(wkLab),datasets:ds},options:{scales:{y:pctAxis({title:{display:true,text:(cmpMode==='wow'?'Week-over-week ':'Cumulative ')+MNAME[m]+' change',color:T.dim}}),x:{grid:{display:false},ticks:{maxRotation:0,autoSkip:true,maxTicksLimit:10}}},
+    plugins:{events:document.getElementById('cmpEvents').checked?evFor(ws):[],legend:{position:'bottom'},tooltip:{callbacks:{label:c=>{if(c.parsed.y==null)return null;const w=val(ws[c.dataIndex],c.dataset.label,m);const good=cost?c.parsed.y<0:c.parsed.y>0;return ` ${c.dataset.label}: ${fmtP(c.parsed.y,1)}${cmpMode==='cum'?`  (week ${fmtP(w,1)})`:''}  ${good?'better':'worse'}`},footer:it=>evAt(ws[it[0].dataIndex])}}}},plugins:[zeroLine]});
+}
+
+/* ---------- lens ---------- */
+const SEGS={spend:['<$50k','$50k-$100k','$100k-$200k','$200k-$500k','$500k-$1m','$1m-$3m','$3m+'],rev:['<$5m','$5m-$10m','$10m-$20m','$20m-$50m','$50m-$100m','$100m+'],aov:['<$50','$50-$100','$100-$150','$150-$200','$200-$500','$500+'],
+  vert:['Sporting Goods & Fitness','Food & Beverage','Home & Furniture','Fashion & Accessories','Beauty & Personal Care','Health & Wellness','Baby & Kids','Technology','Pets','Accessories & Jewelry','Kitchen & Cookware']};
+const VMAP={'Sporting Goods & Fitness':{v25:1,bf:1,mix:'Sporting Goods & Outdoors'},'Food & Beverage':{v25:1,bf:1,mix:1},'Home & Furniture':{v25:1,bf:1,mix:1},'Fashion & Accessories':{v25:1,bf:1,mix:'Fashion & Apparel'},'Beauty & Personal Care':{v25:1,bf:1,mix:1},'Health & Wellness':{v25:1,bf:1,mix:'Health & Supplements'},'Baby & Kids':{v25:1,bf:1,mix:1},'Technology':{v25:1,bf:1},'Pets':{bf:1,mix:1},'Accessories & Jewelry':{mix:1},'Kitchen & Cookware':{mix:1}};
+const M6=['Spend','Revenue','Revenue (New)','MER','MER (New)','CAC (New)'];
+const KEY6={Spend:'spend',Revenue:'revenue','Revenue (New)':'revenue_new',MER:'mer','MER (New)':'mer_new','CAC (New)':'cac_new'};
+const PCOLS=['#ffb020','#5aa9ff','#a98bff','#2ec4d6','#ff7a59','#9fb3ab'];
+function pctRows(key,seg){const R=rowsOf(key);const o={};M6.forEach(m=>{const g=pc=>n((R.find(r=>r.metric===m&&r.percentile===pc)||{})[seg]);o[m]={med:g('Median'),p25:g('P25'),p75:g('P75')}});return o}
+function lensCard(title,src,rows,base,extra){
+  const has=rows.filter(r=>r[1]!=null);if(!has.length)return '';
+  return `<div class="lens-card"><div class="lh">${esc(title)}${srcBtn(src)}</div><div class="tw"><table class="q"><thead><tr><th>Metric</th><th>Segment</th>${rows.some(r=>r[2]!=null)?'<th>P25 / P75</th>':''}${base?'<th>All biz</th>':''}</tr></thead><tbody>${has.map(([m,v,rng,b])=>{const cost=m.startsWith('CAC');return `<tr><td>${m}</td><td style="${heat(v,cost)}">${fmtP(v)}</td>${rows.some(r=>r[2]!=null)?`<td style="color:${T.dim}">${rng||'–'}</td>`:''}${base?`<td style="color:${T.dim}">${b==null?'–':fmtP(b)}</td>`:''}</tr>`}).join('')}</tbody></table></div>${extra||''}</div>`}
+function renderLens(){
+  const dim=document.getElementById('lensDim').value,sel=document.getElementById('lensSeg');
+  if(sel.dataset.dim!==dim){sel.innerHTML=SEGS[dim].map(s=>`<option>${s}</option>`).join('');sel.dataset.dim=dim;if(dim==='spend')sel.value='$200k-$500k'}
+  const seg=sel.value;const cards=[];const series=[];let note='';
+  const H1A=Object.fromEntries(rowsOf('h1_dist').map(r=>[r.metric,n(r.median)]));
+  const AP=Object.fromEntries(rowsOf('april_retro').map(r=>[r.metric,n(r.median_yoy)]));
+  const MY=Object.fromEntries(rowsOf('may_retro').map(r=>[r.metric,n(r.median)]));
+  if(dim!=='vert'){
+    const hk={spend:'h1_spend',rev:'h1_rev',aov:'h1_aov'}[dim];const h=pctRows(hk,seg);
+    cards.push(lensCard(`H1 2026 · ${seg}`,'mb-h1',M6.map(m=>[m,h[m].med,`${fmtP(h[m].p25)} / ${fmtP(h[m].p75)}`,H1A[m]]),true));
+    series.push({label:'H1 2026',data:M6.map(m=>h[m].med)});
+    if(dim==='spend'){const q=pctRows('q3_heatmap',seg);cards.push(lensCard(`Q3 2026 · ${seg}`,'mb-cpm25',M6.map(m=>[m,q[m].med,`${fmtP(q[m].p25)} / ${fmtP(q[m].p75)}`])));series.push({label:'Q3 2026',data:M6.map(m=>q[m].med)});
+      const a=rowsOf('april_spend').find(r=>r.band===seg);const mm=rowsOf('may_meta').find(r=>r.band===seg);
+      cards.push(lensCard(`April & May 2026 · ${seg}`,'mb-april,mb-may',[['Revenue (Apr, median)',a?n(a.median_revenue_yoy):null,null,AP['Revenue']],['Meta spend (May, median)',mm?n(mm.median):null,null,null],['Meta spend (May, average)',mm?n(mm.average):null,null,null]],true));
+      series.push({label:'Apr 2026',data:M6.map(m=>m==='Revenue'&&a?n(a.median_revenue_yoy):null)});
+      note='The weekly channel tracker and share of spend are not published by segment, so they cannot be filtered.';}
+    if(dim==='rev'){const a=rowsOf('april_rev_band').find(r=>r.revenue_band===seg);if(a){cards.push(lensCard(`April 2026 · ${seg} (average)`,'mb-april',M6.map(m=>[m,n(a[KEY6[m]]),null,AP[m==='Spend'?'Ad spend':m==='MER (New)'?'MER (New)':m]]),true));series.push({label:'Apr 2026',data:M6.map(m=>n(a[KEY6[m]]))})}
+      const s5=rowsOf('size_2025').find(r=>r.company_size===seg);if(s5){cards.push(lensCard(`Full year 2025 · ${seg}`,'bl-under5,bl-cost',[['Spend',n(s5.spend)],['Revenue',n(s5.revenue)]]));series.push({label:'FY 2025',data:M6.map(m=>m==='Spend'?n(s5.spend):m==='Revenue'?n(s5.revenue):null)})}
+      const f=rowsOf('feb_size');const fr=f.find(r=>r.cohort===seg),fa=f.find(r=>r.cohort==='All businesses');if(fr){cards.push(lensCard(`February 2026 · ${seg}`,'bl-feb',M6.map(m=>[m,n(fr[KEY6[m]]),null,n(fa[KEY6[m]])]),true));series.push({label:'Feb 2026',data:M6.map(m=>n(fr[KEY6[m]]))})}
+      note='Q3 2026 benchmarks were published by ad spend only. Feb 2026 detail exists for $50m+ bands only.';}
+    if(dim==='aov'){const a=rowsOf('april_aov').find(r=>r.aov_band===seg),my=rowsOf('may_aov').find(r=>r.aov_band===seg);
+      if(a){cards.push(lensCard(`April 2026 · AOV ${seg} (average)`,'mb-april',M6.map(m=>[m,n(a[KEY6[m]]),null,AP[m==='Spend'?'Ad spend':m]]),true));series.push({label:'Apr 2026',data:M6.map(m=>n(a[KEY6[m]]))})}
+      if(my){cards.push(lensCard(`May 2026 · AOV ${seg}`,'mb-may',M6.map(m=>[m,n(my[KEY6[m]]),null,MY[m==='Spend'?'Ad spend':m]]),true));series.push({label:'May 2026',data:M6.map(m=>n(my[KEY6[m]]))})}
+      note='Low-contrast May AOV cells were read approximately from Northbeam\'s graphic.';}
+    series.push({label:'All businesses · H1',data:M6.map(m=>H1A[m]),type:'line'});
+    mk('cLens',{type:'bar',data:{labels:M6,datasets:series.map((s,i)=>s.type==='line'?{type:'line',label:s.label,data:s.data,borderColor:'#fff',backgroundColor:'#fff',showLine:false,pointStyle:'line',pointRadius:16,pointHoverRadius:18,borderWidth:3,order:-1}:{label:s.label,data:s.data,backgroundColor:PCOLS[i],hoverBackgroundColor:PCOLS[i]})},
+      options:{interaction:{mode:'index',intersect:false},scales:{y:pctAxis({title:{display:true,text:'YoY change · '+seg,color:T.dim}}),x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.parsed.y==null?null:` ${c.dataset.label}: ${fmtP(c.parsed.y,1)}`}}}},plugins:[zeroLine]});
+  }else{
+    const V=VMAP[seg];const v25=V.v25&&rowsOf('verticals_2025').find(r=>r.vertical===seg),bf=V.bf&&rowsOf('bfcm_industry').find(r=>r.industry===seg);
+    const mixName=V.mix===1?seg:V.mix;const mix=mixName&&rowsOf('vertical_mix').filter(r=>r.vertical===mixName);
+    const VM=['Spend','Revenue','MER','First-time MER','First-time CAC'];
+    if(v25)cards.push(lensCard(`Full year 2025 · ${seg} (median)`,'bl-power',[['Spend',n(v25.spend)],['Revenue',n(v25.revenue)],['MER',n(v25.mer)],['First-time MER',n(v25.first_time_mer)],['First-time CAC',n(v25.first_time_cac)]],false,v25.best_windows?`<p class="note">Best windows: ${esc(v25.best_windows)}</p>`:''));
+    if(bf)cards.push(lensCard(`BFCM 2025 · ${seg}`,'x-industry',[['Spend',n(bf.spend)],['Revenue (cash)',n(bf.revenue_cash)],['MER',n(bf.mer)],['First-time CAC',n(bf.cac_first_time)]]));
+    if(mix&&mix.length)cards.push(`<div class="lens-card"><div class="lh">Q1 2026 channel mix · ${esc(mixName)}${srcBtn('x-verticals')}</div><div style="display:flex;gap:18px"><div><div class="big">${mix[0].ads_median}</div><div class="note" style="margin:0">median active Meta ads</div></div><div><div class="big">${mix[0].ads_mean}</div><div class="note" style="margin:0">mean</div></div></div><div class="tw"><table class="q"><tbody>${mix.map(r=>`<tr><td><span class="pf" style="background:${PCOL[r.platform]||T.dim}"></span>${r.platform}</td><td>${r.share}%</td><td style="width:55%"><div style="height:7px;background:${PCOL[r.platform]||T.dim};width:${Math.min(100,n(r.share)/62*100)}%;box-shadow:0 0 6px ${PCOL[r.platform]||T.dim}"></div></td></tr>`).join('')}</tbody></table></div></div>`);
+    const ds=[];if(v25)ds.push({label:'Full year 2025',data:[n(v25.spend),n(v25.revenue),n(v25.mer),n(v25.first_time_mer),n(v25.first_time_cac)],backgroundColor:PCOLS[0]});if(bf)ds.push({label:'BFCM 2025',data:[n(bf.spend),n(bf.revenue_cash),n(bf.mer),null,n(bf.cac_first_time)],backgroundColor:PCOLS[1]});
+    mk('cLens',{type:'bar',data:{labels:VM,datasets:ds},options:{scales:{y:pctAxis({title:{display:true,text:'YoY change · '+seg,color:T.dim}}),x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.parsed.y==null?null:` ${c.dataset.label}: ${fmtP(c.parsed.y,1)}`}}}},plugins:[zeroLine]});
+    note=ds.length?'Sector cuts come from the 2025 Year in Review, the BFCM 2025 industry table and the Q1 2026 channel-mix thread.':'Northbeam only published channel mix and creative volume for this sector.';
+  }
+  document.getElementById('lensCards').innerHTML=cards.join('');document.getElementById('lensNote').textContent=note;
+}
+
+/* ---------- creative ---------- */
+let adsMode='abs';
+function renderCreative(){
+  const kp=[['Ads / week · top 25%','189','vs 83 for the rest',T.up,'mb-hudson'],['Ads / week · top brands','200–300','most ship ~90',T.text,'mb-ugc1'],['Winners misjudged in-platform','17%','labelled underperformers',T.down,'mb-ugc1'],['Losers misjudged in-platform','29%','labelled winners (up to)',T.down,'mb-ugc1'],['Hook share of performance','60–80%','first 3 seconds',T.amber,'mb-ugc3'],['Ad units per creator video','8–12','5–15 possible',T.text,'mb-ugc3']];
+  document.getElementById('crKpis').innerHTML=kp.map(([k,v,d,c,sr])=>`<div class="s"><div class="k">${k}</div><div class="v" style="color:${c};text-shadow:0 0 18px ${c}55">${v}</div><div class="d">${d}</div>${srcBtn(sr)}</div>`).join('');
+  const A=rowsOf('ads_launched'),bands=D.ads_launched.cols.slice(1),bc=['#9fb3ab','#2ec4d6','#5aa9ff','#a98bff','#ff7a59','#ffb020'];
+  const avg=Object.fromEntries(bands.map(b=>[b,A.reduce((s,r)=>s+n(r[b]),0)/A.length]));
+  mk('cAdsLaunch',{type:'line',data:{labels:A.map(r=>r.month),datasets:bands.map((b,i)=>({label:b+'/mo spend',data:A.map(r=>adsMode==='abs'?n(r[b]):+(n(r[b])/avg[b]*100).toFixed(0)),borderColor:bc[i],backgroundColor:bc[i],borderWidth:i===5?3.5:2.2,pointRadius:3,tension:.3}))},
+    options:{scales:{y:adsMode==='abs'?{type:'logarithmic',min:20,max:1000,grid,ticks:{callback:v=>[20,50,100,200,500,1000].includes(v)?v:''},title:{display:true,text:'Meta ads launched (log)',color:T.dim}}:{grid,ticks:{callback:v=>v+'%'},title:{display:true,text:'% of band\'s 2025 monthly average',color:T.dim}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${adsMode==='abs'?c.parsed.y+' ads (≈'+Math.round(c.parsed.y/4.33)+'/wk)':c.parsed.y+'% of avg'}`}}}}});
+  const wk=[['Top brands (200–300)',250,T.up],['Top 25% of businesses',189,T.up],['Most advertisers',90,T.dim],['Everyone outside top 25%',83,T.dim],...bands.slice().reverse().map((b,i)=>[`2025 avg · ${b}/mo`,Math.round(avg[b]/4.33),'#5aa9ff'])];
+  mk('cAdsWeek',{type:'bar',data:{labels:wk.map(w=>w[0]),datasets:[{label:'Ads per week',data:wk.map(w=>w[1]),backgroundColor:wk.map(w=>w[2])}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,title:{display:true,text:'ads launched per week',color:T.dim}},y:{grid:{display:false},ticks:{font:{size:10.5}}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x} ads/week`}}}}});
+  mk('cMis',{type:'bar',data:{labels:['Ads that are truly winning','Ads that are truly losing'],datasets:[{label:'Judged correctly in-platform',data:[83,71],backgroundColor:T.up},{label:'Judged wrongly in-platform',data:[17,29],backgroundColor:T.down}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{stacked:true,max:100,grid,ticks:{callback:v=>v+'%'}},y:{stacked:true,grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.x}%`,footer:()=>'Top-performing Northbeam cohort; losers figure is "as much as 29%"'}}}}});
+  renderVertAds();renderCap();
+  const C=rowsOf('creative');
+  document.getElementById('tCreative').innerHTML='<thead><tr><th>Benchmark</th><th>Value</th><th>Unit</th><th>Context</th><th>Source</th></tr></thead><tbody>'+C.map(r=>`<tr><td style="white-space:normal;min-width:260px">${esc(r.metric)}</td><td style="color:${T.amber}">${esc(r.value)}</td><td>${esc(r.unit)}</td><td style="color:${T.dim}">${esc(r.context)}</td><td>${srcBtn(r.source_id)}</td></tr>`).join('')+'</tbody>';
+  const PB=[
+   {k:'Optimisation',h:'Daily Ad Optimization Framework',p:'Judge every ad on new-customer ROAS or CAC with 7-day clicks, accrual. With 10+ AOV-sized purchases and above target, raise budget 10% a day until results flatten. Under 5 purchases and below target, cut. Favour prospecting over catalog and retargeting.',src:'mb-framework'},
+   {k:'Creator programs',h:'The UGC Flywheel: source, track, pay, retain, repurpose',p:'Measure posts per active creator per month (under 4 means the program is dying, over 10 means it is working). Pay weekly or bi-weekly. One community manager can run 500–1,000 creators from a Discord. Track licences per asset.',src:'mb-ugc1,mb-ugc2,mb-ugc3'},
+   {k:'Multiplication',h:'One video, twelve ads',p:'Swap five hooks on the same body, cut 30/15/6-second versions, make 9:16, 1:1 and 4:5, vary CTA end cards, captions and music, and pull stills and quote cards. 100 source videos a month becomes 800–1,200 ad variations.',src:'mb-ugc3'},
+   {k:'Case study',h:'The Hudson Method behind Comfrt',p:'Seed hundreds of small creators (54% under 1,000 followers) at once, pay on volume, views and commission, own the rights, then run the content as ads on every channel.',src:'mb-hudson'},
+   {k:'Fatigue',h:'Spot creative fatigue early',p:'Falling CTR, rising CPC or CPM at steady budget and frequency above 3–4 are the signals. Meta found click likelihood falls about 45% after four repeats of the same creative.',src:'bl-fatigue'},
+   {k:'Measurement',h:'Credit views, or top-of-funnel creative looks broken',p:'With deterministic views, prospecting and reach/traffic campaigns gain the most credit, mostly taken from unattributed, branded search and shopping. Video-heavy placements gain more than static.',src:'bl-cdv,mb-ugc1'},
+  ];
+  document.getElementById('playbook').innerHTML=PB.map(s=>`<div class="story"><span class="tag">${s.k}</span><h4>${esc(s.h)}</h4><p>${esc(s.p)}</p>${srcBtn(s.src,'SOURCE · QUOTE')}</div>`).join('');
+}
+function renderVertAds(){
+  const X=rowsOf('vertical_mix');const vs=[...new Set(X.map(r=>r.vertical))].map(v=>{const r=X.find(x=>x.vertical===v);const m=X.find(x=>x.vertical===v&&x.platform==='Meta');return {v,mean:n(r.ads_mean),med:n(r.ads_median),meta:m?n(m.share):null}}).sort((a,b)=>b.med-a.med);
+  const show=document.getElementById('mixShow').checked;
+  const ds=[{label:'Median ads per brand',data:vs.map(x=>x.med),backgroundColor:T.amber,yAxisID:'y'},{label:'Mean ads per brand',data:vs.map(x=>x.mean),backgroundColor:'rgba(255,176,32,.35)',yAxisID:'y'}];
+  if(show)ds.push({type:'line',label:'Meta share of spend',data:vs.map(x=>x.meta),borderColor:PCOL.Meta,backgroundColor:PCOL.Meta,yAxisID:'y1',pointRadius:4,borderWidth:2,tension:.2});
+  mk('cVertAds',{type:'bar',data:{labels:vs.map(x=>x.v),datasets:ds},options:{scales:{y:{grid,title:{display:true,text:'active Meta ads per brand',color:T.dim}},y1:{display:show,position:'right',min:30,max:70,grid:{display:false},ticks:{callback:v=>v+'%'}},x:{grid:{display:false},ticks:{maxRotation:40,minRotation:0,font:{size:10.5}}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.parsed.y==null?null:` ${c.dataset.label}: ${c.dataset.yAxisID==='y1'?c.parsed.y+'%':c.parsed.y}`,footer:it=>{const x=vs[it[0].dataIndex];return `Mean is ${(x.mean/x.med).toFixed(1)}× the median`}}}}}});
+}
+function renderCap(){
+  const A=rowsOf('ads_launched'),bands=D.ads_launched.cols.slice(1);const sel=document.getElementById('cpBand');
+  if(!sel.options.length){sel.innerHTML=bands.map(b=>`<option>${b}</option>`).join('');sel.value='$200k-$500k'}
+  const vid=n(document.getElementById('cpVid').value)||0,u=n(document.getElementById('cpUnits').value)||0,o=n(document.getElementById('cpStatic').value)||0,b=sel.value;
+  const plan=Math.round(vid*u/4.33+o);const avg=Math.round(A.reduce((s,r)=>s+n(r[b]),0)/A.length/4.33),nov=Math.round(n(A.find(r=>r.month==='Nov')[b])/4.33);
+  const rows=[['Your plan',plan,T.amber],[`2025 avg · ${b}/mo`,avg,'#5aa9ff'],[`Nov 2025 peak · ${b}/mo`,nov,'#a98bff'],['Top 25% of businesses',189,T.up],['Top brands (midpoint)',250,T.up]];
+  mk('cCap',{type:'bar',data:{labels:rows.map(r=>r[0]),datasets:[{label:'Ads per week',data:rows.map(r=>r[1]),backgroundColor:rows.map(r=>r[2])}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid},y:{grid:{display:false},ticks:{font:{size:10.5}}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x} ads/week`}}}}});
+  const gap=nov-plan;const creators=[Math.ceil(vid/10),Math.ceil(vid/4)];
+  document.getElementById('capOut').innerHTML=`<div><span class="big" style="color:${T.amber}">${plan}</span> <span class="note">ads a week from ${vid} videos × ${u} units + ${o} other</span></div>
+  <div>${gap>0?`<span style="color:${T.down}">${gap} a week short</span> of what ${b}/mo accounts launched in November 2025 (${nov}/wk).`:`<span style="color:${T.up}">${-gap} a week above</span> the November 2025 level for ${b}/mo accounts (${nov}/wk).`}</div>
+  <div style="color:${T.dim}">At 4–10 posts per creator per month, ${vid} videos needs about ${creators[0]}–${creators[1]} active creators.</div>`;
+}
+
+/* ---------- shared helpers for new desks ---------- */
+const SEGBIND=(id,fn)=>document.getElementById(id).addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#'+id+' button').forEach(x=>x.setAttribute('aria-pressed',x===b));fn(b)});
+const kpiStrip=(id,arr)=>{document.getElementById(id).innerHTML=arr.map(([k,v,d,c,sr])=>`<div class="s"><div class="k">${k}</div><div class="v" style="color:${c||T.text};${c?`text-shadow:0 0 18px ${c}55`:''}">${v}</div><div class="d">${d||''}</div>${sr?srcBtn(sr):''}</div>`).join('')};
+const libCards=list=>list.sort((a,b)=>a.date<b.date?1:-1).map(x=>`<article><div><div class="d">${new Date(x.date+'T12:00').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})}</div><div class="src">${x.src}</div></div><div style="min-width:0"><h4><a href="${x.url}" target="_blank" rel="noopener">${esc(x.title)}</a></h4><ul>${x.stats.map(s=>`<li>${esc(s)}</li>`).join('')}</ul><div style="margin-top:6px">${srcBtn(x.id,'QUOTES ↗')}</div></div></article>`).join('');
+function sortable(tid,cols,rows,fmt){let key=null,dir=-1;const draw=()=>{const r=[...rows];if(key!=null)r.sort((a,b)=>{const x=a[key],y=b[key];return (typeof x==='number'&&typeof y==='number'?x-y:String(x).localeCompare(String(y)))*dir});document.getElementById(tid).innerHTML='<thead><tr>'+cols.map((c,i)=>`<th data-k="${i}" style="cursor:pointer">${c}${key===i?(dir<0?' ▼':' ▲'):''}</th>`).join('')+'</tr></thead><tbody>'+r.map(x=>'<tr>'+x.map((v,i)=>`<td>${fmt?fmt(v,i,x):esc(v)}</td>`).join('')+'</tr>').join('')+'</tbody>';document.querySelectorAll('#'+tid+' th').forEach(th=>th.onclick=()=>{const k=+th.dataset.k;dir=key===k?-dir:-1;key=k;draw()})};draw()}
+
+/* ---------- BFCM live ---------- */
+let bfMetric='spend';
+const BFDAYS=['Tue-Thu (pre-BF)','Black Friday','Saturday','Sunday','Cyber Monday'];
+function renderBfcm(){
+  const now=new Date(),open=new Date(2026,10,24),bf=new Date(2026,10,27),end=new Date(2026,11,3);
+  const days=Math.ceil((bf-now)/864e5);
+  const LIVE=rowsOf('bfcm_live');
+  const H=document.getElementById('bfH');
+  if(now<open){H.textContent=`${days} days to Black Friday. The live desk opens on Tuesday 24 November`}
+  else if(now<=end){H.textContent='Cyber Week 2026 is live'}
+  else H.textContent='Cyber Week 2026: the final scorecard';
+  const cw=Object.fromEntries(rowsOf('cw2025').map(r=>[r.metric,n(r.yoy_pct)]));
+  const tw=Object.fromEntries(rowsOf('tw_bfcm').map(r=>[r.metric,r.value]));
+  kpiStrip('bfKpis',[
+    ['Countdown',days>0?days+' days':'Live','to Black Friday, 27 Nov',T.amber],
+    ['Figures logged',String(LIVE.length),LIVE.length?'latest '+LIVE[LIVE.length-1].date:'first update Tue 24 Nov',LIVE.length?T.up:T.dim],
+    ['2025 Cyber Week spend',fmtP(cw['Spend']),'Northbeam, YoY vs 2024',T.text,'bl-cyberweek'],
+    ['2025 Cyber Week revenue',fmtP(cw['Revenue']),'Northbeam, YoY vs 2024',T.up,'bl-cyberweek'],
+    ['2025 new-customer CAC',fmtP(cw['CAC (1st time)']),'Northbeam, YoY vs 2024',T.down,'bl-cyberweek'],
+    ['2025 weekend revenue','$'+tw['Revenue']+'bn',`Triple Whale · $${tw['Ad spend']}m ad spend`,T.text,'tw-bfcm25']]);
+  const BD=rowsOf('bfcm_daily');
+  const base=BFDAYS.map(d=>{const r=BD.find(x=>x.day===d);return r?n(r[bfMetric]):null});
+  const live=BFDAYS.map(d=>{const r=[...LIVE].reverse().find(x=>x.day===d&&x.metric===bfMetric&&n(x.value)!=null);return r?n(r.value):null});
+  const cost=bfMetric==='cac';
+  mk('cBfLive',{type:'bar',data:{labels:BFDAYS.map(d=>d.replace(' (pre-BF)','')),datasets:[
+    {label:'BFCM 2025 vs 2024',data:base,backgroundColor:base.map(v=>v==null?T.dim:(cost?(v>0?'rgba(255,90,79,.55)':'rgba(47,210,122,.55)'):(v>0?'rgba(255,154,60,.6)':'rgba(255,90,79,.55)'))),borderColor:T.past,borderWidth:1,order:2},
+    {type:'line',label:'BFCM 2026 vs 2025 (live)',data:live,borderColor:T.amber,backgroundColor:T.amber,pointRadius:8,pointHoverRadius:11,pointStyle:'rectRot',showLine:false,order:1}]},
+    options:{scales:{y:pctAxis(),x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.parsed.y==null?` ${c.dataset.label}: not yet published`:` ${c.dataset.label}: ${fmtP(c.parsed.y)}`,footer:it=>{const r=BD.find(x=>x.day===BFDAYS[it[0].dataIndex]);return r?r.note:''}}}}},plugins:[zeroLine]});
+  document.getElementById('bfLog').innerHTML=LIVE.length?'<div class="tw"><table class="q"><thead><tr><th>Date</th><th>Source</th><th>Figure</th></tr></thead><tbody>'+[...LIVE].reverse().map(r=>`<tr><td>${esc(r.date)}<br><span style="color:${T.dim}">${esc(r.day)}</span></td><td>${esc(r.source)}</td><td>${esc(r.metric)}${n(r.value)!=null?' <b>'+fmtP(n(r.value))+'</b>':': '+esc(r.value)} ${r.note?`<span style="color:${T.dim}">· ${esc(r.note)}</span>`:''} ${r.url?`<a href="${esc(r.url)}" target="_blank" rel="noopener" style="color:${T.amber}">↗</a>`:''}</td></tr>`).join('')+'</tbody></table></div>':'<div class="empty">Nothing logged yet. The first update runs on Tuesday 24 November, then daily to 2 December.</div>';
+  const SC=rowsOf('bfcm_sched');
+  document.getElementById('tBfSched').innerHTML='<thead><tr><th>When</th><th>Source</th><th>What</th></tr></thead><tbody>'+SC.map(r=>`<tr><td>${esc(r.when)}</td><td>${r.url?`<a href="${esc(r.url)}" target="_blank" rel="noopener" style="color:${T.amber}">${esc(r.source)} ↗</a>`:esc(r.source)}</td><td>${esc(r.what)}</td></tr>`).join('')+'</tbody>';
+  const tb=[['Northbeam','Cyber Week spend',fmtP(cw['Spend']),'bl-cyberweek'],['Northbeam','Cyber Week revenue',fmtP(cw['Revenue']),'bl-cyberweek'],['Northbeam','Cyber Week MER',fmtP(cw['MER']),'bl-cyberweek'],['Northbeam','First-time CAC',fmtP(cw['CAC (1st time)']),'bl-cyberweek'],['Northbeam','Meta CPM, BFCM week','$23.06','mb-cpm25'],['Triple Whale','Revenue, 28 Nov – 1 Dec','$2.9bn','tw-bfcm25'],['Triple Whale','Orders','26m','tw-bfcm25'],['Triple Whale','Ad spend','$607m','tw-bfcm25'],['Triple Whale','Blended ROAS (derived)','4.78×','tw-bfcm25'],['Triple Whale','AOV (derived)','$111.50','tw-bfcm25']];
+  document.getElementById('tBf25').innerHTML='<thead><tr><th>Source</th><th>Metric</th><th>2025</th><th></th></tr></thead><tbody>'+tb.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td><b>${r[2]}</b></td><td>${srcBtn(r[3])}</td></tr>`).join('')+'</tbody>';
+  const ck=[['Tue–Thu','Spend rose 11.6% YoY in 2025 while revenue rose 15.2%: warm-up money worked. Check whether Meta CPM is already above last year\'s BFCM-week peak of $23.06.','mb-bfcm,mb-cpm25'],['Black Friday','2025\'s biggest spend day (+13.5%) and the only day MER fell (−2.8%). A worse Black Friday MER than the weekend is normal.','mb-bfcm'],['Saturday','The lull: 2025 brands cut spend growth to +2.9% and MER rebounded +8.6%. Northbeam calls the weekend dip normal, not an offer problem.','mb-bfcm,bl-cyberfive'],['Sunday – Cyber Monday','Demand re-accelerated (+16.9% revenue Sunday). Judge Cyber Monday on new-customer CAC, which rose 6.5%.','mb-bfcm'],['After the weekend','Conversion lag: Facebook ROAS keeps landing for days after the click. Hold verdicts until the following week.','mb-lag']];
+  document.getElementById('bfChecks').innerHTML=ck.map(([d,t,sr])=>`<div class="callout"><b>${d}</b>${esc(t)} ${srcBtn(sr)}</div>`).join('');
+}
+
+/* ---------- Earnings ---------- */
+function renderMkt(){
+  const E=rowsOf('meta_earn').map(r=>({q:r.quarter,rev:n(r.ad_rev_bn),imp:n(r.impr_yoy),pr:n(r.price_yoy),us:n(r.usc_price_yoy),ap:n(r.apac_price_yoy),g:r.next_q_guide_bn}));
+  const L=E[E.length-1];
+  kpiStrip('mkKpis',[['Price per ad · Q3 26',fmtP(L.pr,0),'worldwide, YoY',T.down,'meta-q3-26'],['Ad impressions · Q3 26',fmtP(L.imp,0),'YoY, slowest since Q1 25',T.text,'meta-q3-26'],['US & Canada price',fmtP(L.us,0),'YoY · fifth straight rise',T.down,'meta-apac'],['Ad revenue · Q3 26','$'+L.rev.toFixed(1)+'bn','+26% YoY',T.text,'meta-q3-26'],['Q4 26 guidance','$'+L.g+'bn','total revenue',T.amber,'meta-q3-26']]);
+  const showRev=document.getElementById('mkRev').checked;
+  const ds=[{type:'line',label:'Price per ad (YoY)',data:E.map(x=>x.pr),borderColor:T.down,backgroundColor:T.down,borderWidth:3,pointRadius:4,tension:.25,yAxisID:'y'},{type:'line',label:'Ad impressions (YoY)',data:E.map(x=>x.imp),borderColor:T.blue,backgroundColor:T.blue,borderWidth:3,pointRadius:4,tension:.25,yAxisID:'y'},{type:'line',label:'US & Canada price per ad',data:E.map(x=>x.us),borderColor:T.amber,backgroundColor:T.amber,borderDash:[5,4],borderWidth:2,pointRadius:4,tension:.25,spanGaps:false,yAxisID:'y'}];
+  if(showRev)ds.push({type:'bar',label:'Ad revenue ($bn)',data:E.map(x=>x.rev),backgroundColor:'rgba(127,140,135,.22)',borderColor:'rgba(127,140,135,.5)',borderWidth:1,yAxisID:'y1',order:5});
+  mk('cEarn',{type:'bar',data:{labels:E.map(x=>x.q),datasets:ds},options:{scales:{y:pctAxis({min:-5,max:26}),y1:{display:showRev,position:'right',grid:{display:false},ticks:{callback:v=>'$'+v+'bn'}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.parsed.y==null?null:` ${c.dataset.label}: ${c.dataset.yAxisID==='y1'?'$'+c.parsed.y.toFixed(2)+'bn':fmtP(c.parsed.y,0)}`}}}},plugins:[zeroLine]});
+  const R=E.filter(x=>x.us!=null);
+  mk('cEarnReg',{type:'bar',data:{labels:R.map(x=>x.q),datasets:[{label:'US & Canada',data:R.map(x=>x.us),backgroundColor:T.amber},{label:'Worldwide',data:R.map(x=>x.pr),backgroundColor:T.down},{label:'Asia-Pacific',data:R.map(x=>x.ap),backgroundColor:T.blue}]},options:{scales:{y:pctAxis(),x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${fmtP(c.parsed.y,0)}`}}}},plugins:[zeroLine]});
+  const vs=[['Meta price per ad, worldwide (Q3)',L.pr,T.down],['Meta price per ad, US & Canada (Q3)',L.us,T.amber],['Northbeam Meta CPM, Oct 2026',25,'#5b8cff'],['Meta ad revenue (Q3)',26,T.dim]];
+  mk('cEarnVsNb',{type:'bar',data:{labels:vs.map(x=>x[0]),datasets:[{label:'YoY',data:vs.map(x=>x[1]),backgroundColor:vs.map(x=>x[2])}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:pctAxis(),y:{grid:{display:false},ticks:{font:{size:10.5}}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fmtP(c.parsed.x,0)} YoY`}}}}});
+  document.getElementById('mkRead').innerHTML=`<b>The read</b>Two independent sources now agree. Meta says the average US &amp; Canada ad cost 23% more than a year ago; Northbeam's DTC accounts paid about 25% more per thousand Meta impressions in October. Worldwide price (+14%) looks gentler only because cheap Asia-Pacific impressions are growing fast (+14%) at flat prices. With impression growth slowing to 10% and Q4 guidance of $73–76bn, expect US CPM inflation to carry into BFCM rather than ease. Next check: Meta's Q4 2026 results, late January 2027. ${srcBtn('meta-q3-26,meta-apac,mb-cpm25,x-roas','SOURCES ×4 ↗')}`;
+  document.getElementById('tEarn').innerHTML='<thead><tr><th>Quarter</th><th>Ad revenue</th><th>Impressions YoY</th><th>Price per ad YoY</th><th>US &amp; Canada price</th><th>Asia-Pacific price</th><th>Next-quarter guide</th></tr></thead><tbody>'+[...E].reverse().map(x=>`<tr><td>${x.q}</td><td>$${x.rev.toFixed(2)}bn</td><td>${fmtP(x.imp,0)}</td><td style="color:${T.down}">${fmtP(x.pr,0)}</td><td>${x.us==null?'·':fmtP(x.us,0)}</td><td>${x.ap==null?'·':fmtP(x.ap,0)}</td><td>${x.g?'$'+x.g+'bn':'·'}</td></tr>`).join('')+'</tbody>';
+}
+
+/* ---------- Motion ---------- */
+let moDim='formats',moView='map';
+const MODS={formats:['mo_formats','format','Visual formats'],hooks:['mo_hooks','hook','Hooks & headlines'],assets:['mo_assets','asset','Asset types']};
+function renderMoBench(){
+  kpiStrip('moKpis',[['Ads analysed','550k+','6,000+ advertisers',T.text,'mo-cb26'],['Spend covered','$1.3bn','Meta, Sep 25 – Jan 26',T.text,'mo-cb26'],['Winners','~5%','spend ≥10× account median',T.amber,'mo-cb26'],['Spend on winners','~55%','mid-range 28% · losers 17%',T.up,'mo-cb26key'],['Off before 28 days','50–53%','of all creatives',T.down,'mo-cb26key']]);
+  const TR=rowsOf('mo_tiers');
+  mk('cMoTier',{type:'bar',data:{labels:TR.map(r=>r.tier+' '+r.monthly_spend),datasets:[{label:'Median ads / week',data:TR.map(r=>n(r.median_ads_wk)),backgroundColor:T.amber,yAxisID:'y'},{label:'Mean ads / week',data:TR.map(r=>n(r.mean_ads_wk)),backgroundColor:'rgba(255,176,32,.35)',yAxisID:'y'},{type:'line',label:'Hit rate',data:TR.map(r=>n(r.hit_rate)),borderColor:T.up,backgroundColor:T.up,pointRadius:5,borderWidth:2,yAxisID:'y1'}]},options:{scales:{y:{grid,title:{display:true,text:'new ads per week',color:T.dim}},y1:{position:'right',min:0,max:10,grid:{display:false},ticks:{callback:v=>v+'%'}},x:{grid:{display:false},ticks:{font:{size:10.5}}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.dataset.yAxisID==='y1'?c.parsed.y+'%':c.parsed.y}`}}}}});
+  mk('cMoPort',{type:'bar',data:{labels:['Micro <$10K','All advertisers','Enterprise $1M+'],datasets:[{label:'Winners',data:[23,55,64],backgroundColor:T.up},{label:'Mid-range and losers',data:[77,45,36],backgroundColor:'rgba(127,140,135,.35)'}]},options:{indexAxis:'y',interaction:{mode:'index',axis:'y',intersect:false},scales:{x:{stacked:true,max:100,grid,ticks:{callback:v=>v+'%'}},y:{stacked:true,grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.x}% of spend`}}}}});
+  const [k,col,title]=MODS[moDim];const R=rowsOf(k).map(r=>({n:r[col],w:n(r.winners),m:n(r.mid_range),h:n(r.hit_rate)}));
+  const medH=[...R.map(x=>x.h)].sort((a,b)=>a-b)[Math.floor(R.length/2)],medV=[...R.map(x=>x.w+x.m)].sort((a,b)=>a-b)[Math.floor(R.length/2)];
+  const quad=x=>x.h>=medH&&(x.w+x.m)>=medV?['Scale: used a lot, wins often',T.up]:x.h>=medH?['Volatile: wins often, used less',T.amber]:(x.w+x.m)>=medV?['Coverage: used a lot, wins less',T.blue]:['Niche',T.dim];
+  if(moView==='map'){
+    mk('cMoFmt',{type:'bubble',data:{datasets:[{label:title,data:R.map(x=>({x:x.w+x.m,y:x.h,r:Math.max(4,Math.sqrt(x.w)/4.5),name:x.n,w:x.w})),backgroundColor:R.map(x=>quad(x)[1]+'99'),borderColor:R.map(x=>quad(x)[1]),borderWidth:1}]},options:{interaction:{mode:'nearest',intersect:true},scales:{x:{type:'logarithmic',grid,title:{display:true,text:'ads that ran 28+ days or won (log scale)',color:T.dim},ticks:{callback:v=>[100,300,1000,3000,10000,30000,100000].includes(v)?v.toLocaleString():''}},y:{grid,title:{display:true,text:'hit rate',color:T.dim},ticks:{callback:v=>v+'%'}}},plugins:{legend:{display:false},tooltip:{callbacks:{title:it=>it[0].raw.name,label:c=>[` Hit rate ${c.raw.y}%`,` Winners ${c.raw.w.toLocaleString()} · ads ${c.raw.x.toLocaleString()}`,` ${quad({h:c.raw.y,w:c.raw.w,m:c.raw.x-c.raw.w})[0]}`]}}}},plugins:[{id:'lbl',afterDatasetsDraw(c){const ctx=c.ctx;ctx.save();ctx.font='10px "IBM Plex Mono",monospace';ctx.fillStyle='rgba(217,225,221,.8)';c.getDatasetMeta(0).data.forEach((p,i)=>{const d=c.data.datasets[0].data[i];if(d.w>1500||d.y>8.2)ctx.fillText(d.name,p.x+p.options.radius+3,p.y+3)});const xs=c.scales.x,ys=c.scales.y;ctx.strokeStyle='rgba(255,176,32,.35)';ctx.setLineDash([4,4]);ctx.beginPath();const px=xs.getPixelForValue(medV),py=ys.getPixelForValue(medH);ctx.moveTo(px,c.chartArea.top);ctx.lineTo(px,c.chartArea.bottom);ctx.moveTo(c.chartArea.left,py);ctx.lineTo(c.chartArea.right,py);ctx.stroke();ctx.restore()}}]});
+    document.getElementById('moFmtNote').textContent=`Bubble size = number of winners. Dashed lines are the medians (hit rate ${medH}%). Top right: scale ${moDim} that are used a lot and win often. Top left: volatile ones that win often but get less budget. Bottom right: coverage ${moDim} used for exploration. The window includes BFCM, so offer-led ${moDim} are flattered.`;
+  }else{
+    const S=[...R].sort((a,b)=>b.h-a.h);
+    mk('cMoFmt',{type:'bar',data:{labels:S.map(x=>x.n),datasets:[{label:'Hit rate',data:S.map(x=>x.h),backgroundColor:S.map(x=>quad(x)[1])}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,ticks:{callback:v=>v+'%'}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10.5}}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>{const x=S[c.dataIndex];return [` Hit rate ${x.h}%`,` Winners ${x.w.toLocaleString()}`,` ${quad(x)[0]}`]}}}}}});
+    document.getElementById('moFmtNote').textContent='Colour shows the same groups as the map: green scale, amber volatile, blue coverage, grey niche.';
+  }
+  document.getElementById('moTblT').textContent=title;
+  sortable('tMoFmt',[title.replace(/s$/,''),'Winners','Mid-range','Hit rate','Group'],R.map(x=>[x.n,x.w,x.m,x.h,quad(x)[0]]),(v,i,row)=>i===3?`<span class="bar-in" style="width:${v*6}px;background:${quad({h:row[3],w:row[1],m:row[2]})[1]}"></span>${v}%`:typeof v==='number'?v.toLocaleString():esc(v));
+  const sel=document.getElementById('moTierSel');if(!sel.options.length){sel.innerHTML=TR.map(r=>`<option value="${r.tier}">${r.tier} (${r.monthly_spend})</option>`).join('');sel.value='Medium'}
+  renderMoPlan();
+  const HW=rowsOf('mo_bfcm_hw');
+  mk('cMoHW',{type:'bar',data:{labels:HW.map(r=>r.tactic),datasets:[{label:'Index vs all advertisers',data:HW.map(r=>n(r.index)),backgroundColor:HW.map(r=>r.type==='Hook'?T.amber:r.type==='Format'?T.blue:'#a98bff')}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,min:0,ticks:{callback:v=>v+'×'}},y:{grid:{display:false},ticks:{font:{size:10.5}}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${HW[c.dataIndex].type}: used ${c.parsed.x}× as often as average`}}}}});
+}
+function renderMoPlan(){
+  const TR=rowsOf('mo_tiers');const t=TR.find(r=>r.tier===document.getElementById('moTierSel').value);const a=n(document.getElementById('moAds').value)||0;
+  const hr=n(t.hit_rate)/100,med=n(t.median_ads_wk);const yours=a*4.33*hr,peer=med*4.33*hr;
+  const next=TR[TR.indexOf(t)+1];
+  document.getElementById('moPlanOut').innerHTML=`<div><span class="big" style="color:${T.amber}">${yours.toFixed(1)}</span> <span class="note">winners a month expected from ${a} new ads a week at the ${t.tier} hit rate (${t.hit_rate}%)</span></div>
+  <div>The median ${t.tier} account ships <b>${med}</b> a week, so about <b>${peer.toFixed(1)}</b> winners a month. ${a>=med?`<span style="color:${T.up}">You are ${(a/med).toFixed(1)}× the median.</span>`:`<span style="color:${T.down}">You are ${Math.round((1-a/med)*100)}% below the median.</span>`}</div>
+  ${next?`<div style="color:${T.dim}">Accounts one tier up (${next.tier}) ship ${next.median_ads_wk} a week at a ${next.hit_rate}% hit rate.</div>`:''}
+  <div style="color:${T.dim}">Rule of thumb from the report: don't expect more than 1 in 10–13 creatives to win. ${srcBtn('mo-cb26key')}</div>`;
+}
+function renderMoTrend(){
+  const A=rowsOf('mo_trending');const snaps=[...new Set(A.map(r=>r.snapshot))].sort().reverse();const sel=document.getElementById('trSnap');
+  if(!sel.options.length)sel.innerHTML=snaps.map(s=>`<option value="${s}">Week of ${dfmt(s,true)}</option>`).join('');
+  const S=A.filter(r=>r.snapshot===sel.value);
+  const cnt={};S.forEach(r=>cnt[r.brand]=(cnt[r.brand]||0)+1);const br=Object.entries(cnt).sort((a,b)=>b[1]-a[1]);
+  const asp={};S.forEach(r=>asp[r.aspect]=(asp[r.aspect]||0)+1);
+  const v916=Math.round((asp['9:16']||0)/S.length*100);
+  kpiStrip('trKpis',[['Snapshot',dfmt(sel.value,true),snaps.length+' week'+(snaps.length>1?'s':'')+' tracked',T.text,'mo-trending'],['Distinct brands',String(br.length),'in the top 30',T.text],['Vertical 9:16',v916+'%','of the top 30',T.amber],['Most repeated',br[0][0],br[0][1]+' ads in the top 30',T.up],['Shortest-lived',S.filter(r=>n(r.active_days)!=null).sort((a,b)=>n(a.active_days)-n(b.active_days))[0]?.brand||'–',(S.filter(r=>n(r.active_days)!=null).sort((a,b)=>n(a.active_days)-n(b.active_days))[0]?.active_days||'?')+' day(s) live',T.text]]);
+  const top=br.slice(0,14);
+  mk('cTrBrand',{type:'bar',data:{labels:top.map(x=>x[0]),datasets:[{label:'Ads in top 30',data:top.map(x=>x[1]),backgroundColor:top.map(x=>x[1]>1?T.amber:'rgba(255,176,32,.4)')}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,ticks:{stepSize:1}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10.5}}}},plugins:{legend:{display:false}}}});
+  const ak=Object.keys(asp);
+  mk('cTrAspect',{type:'bar',data:{labels:ak,datasets:[{label:'Ads',data:ak.map(k=>asp[k]),backgroundColor:ak.map(k=>k==='9:16'?T.amber:k==='4:5'?T.blue:'#a98bff')}]},options:{scales:{y:{grid,ticks:{stepSize:5}},x:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.y} of ${S.length} ads (${Math.round(c.parsed.y/S.length*100)}%)`}}}}});
+  document.getElementById('tTrend30').innerHTML='<thead><tr><th>#</th><th>Brand</th><th>Format</th><th>Days live</th></tr></thead><tbody>'+S.map(r=>`<tr><td>${r.rank}</td><td>${esc(r.brand)}</td><td>${r.aspect}</td><td>${r.active_days||'·'}</td></tr>`).join('')+'</tbody>';
+  const wk={};A.forEach(r=>{wk[r.brand]=wk[r.brand]||new Set();wk[r.brand].add(r.snapshot)});
+  document.getElementById('trStreak').innerHTML=snaps.length<2?`<div class="empty">History starts this week. Each Thursday's update adds a new snapshot, and brands that stay in the top 30 week after week will show here.</div>`:'<div class="tw"><table class="q"><thead><tr><th>Brand</th><th>Weeks in top 30</th></tr></thead><tbody>'+Object.entries(wk).sort((a,b)=>b[1].size-a[1].size).slice(0,15).map(([b,s])=>`<tr><td>${esc(b)}</td><td>${s.size}</td></tr>`).join('')+'</tbody></table></div>';
+}
+function renderMoResearch(){
+  const cad=[['Weekly · Sunday','Thumbstop newsletter','Email only, 50k+ readers. Long pieces reappear on the blog as "Thumbstop" posts.','mo-thumbstop'],['Weekly','Top ads this week (trending)','Top 30 ads by community saves, 31 industry cuts. Snapshotted every Thursday into this desk.','mo-trending'],['Quarterly','Thumbstop Pulse reports','Survey and data reports: AI Divide (Nov 2025), Creative Benchmarks 2026.','mo-ai,mo-cb26'],['Annual','Creative Benchmarks','550k ads, hit rates by format, hook and asset type. Next edition likely early 2027, after BFCM 2026.','mo-cb26'],['Annual','State of Creative Strategy','Salary, sentiment and job-market survey (2027 edition out now).','mo-socs'],['Seasonal','BFCM planner and webinars','BFCM 2026 planner built on 25,499 BFCM 2025 Health & Wellness ads.','mo-bfcm26']];
+  document.getElementById('tMoCad').innerHTML='<thead><tr><th>Cadence</th><th>Series</th><th>What it gives the newsroom</th><th></th></tr></thead><tbody>'+cad.map(r=>`<tr><td>${r[0]}</td><td><b>${r[1]}</b></td><td>${esc(r[2])}</td><td>${srcBtn(r[3])}</td></tr>`).join('')+'</tbody>';
+  const AI=rowsOf('mo_ai');
+  mk('cMoAI',{type:'bar',data:{labels:AI.map(r=>r.stage),datasets:[{label:'Using AI',data:AI.map(r=>n(r.usage_pct)),backgroundColor:AI.map((r,i)=>i<3?T.amber:'rgba(255,176,32,.4)')}]},options:{scales:{y:{grid,max:100,ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.y}% of creative teams`}}}}});
+  kpiStrip('socsKpis',[['Feel underpaid','58%','vs 23% well paid',T.down,'mo-socs'],['Use AI','~90%','heavy users most satisfied',T.text,'mo-socs'],['Job posts naming AI','45%','up from 21%',T.amber,'mo-socs'],['Work solo or in 2–3','~80%','of practitioners',T.text,'mo-socs']]);
+  document.getElementById('moLib').innerHTML=libCards(LIB.filter(x=>x.pub==='Motion'));
+}
+function renderHaus(){
+  const cad=[['Every 1–3 months','Research reports','Long reports built on hundreds of lift tests (Meta: 640 tests; YouTube: 190; Cyber Week: 100+). The source of the newsroom\'s incrementality benchmarks.'],['Irregular, ~monthly','Blog: methodology and platform','How Haus tests, product updates, staff profiles. Little data.'],['Regular','Open Haus podcast','Episodes on incrementality basics and operator interviews.'],['December','Cyber Week incrementality report','2025 edition on 11 Dec: delayed conversion effects from CTV, YouTube and paid social around BFCM.']];
+  document.getElementById('tHausCad').innerHTML='<thead><tr><th>Cadence</th><th>Series</th><th>Notes</th></tr></thead><tbody>'+cad.map(r=>`<tr><td>${r[0]}</td><td><b>${r[1]}</b></td><td>${esc(r[2])}</td></tr>`).join('')+'</tbody>';
+  const rep=[['14 Oct 2026','Do YouTube Ads Still Perform?'],['23 Jul 2026','Fast, Confident, and Wrong: The Risk of Noisy Incrementality Tests'],['16 Jul 2026','Is Meta\'s Incremental Attribution Outperforming Standard Attribution?'],['25 Jun 2026','How Film Studios and Streamers Measure Marketing ROI'],['18 Jun 2026','Is AppLovin More Than a Hype Channel?'],['24 Feb 2026','How Haus Scales Causal Marketing Measurement Without Human Bias'],['11 Dec 2025','The Cyber Week Incrementality Report'],['4 Dec 2025','The TikTok Report'],['29 Sep 2025','When Is Branded Search Worth the Investment?'],['28 Jul 2025','The Meta Report: Lessons from 640 Incrementality Experiments'],['6 Mar 2025','Do YouTube Ads Perform? Lessons From 190 Incrementality Tests']];
+  document.getElementById('tHausRep').innerHTML='<thead><tr><th>Date</th><th>Report</th><th></th></tr></thead><tbody>'+rep.map(r=>`<tr><td>${r[0]}</td><td>${esc(r[1])}</td><td>${srcBtn('haus-reports')}</td></tr>`).join('')+'</tbody>';
+}
+function renderTW(){
+  kpiStrip('twKpis',[['BFCM 2025 revenue','$2.9bn','28 Nov – 1 Dec',T.text,'tw-bfcm25'],['BFCM 2025 ad spend','$607m','26m orders',T.text,'tw-bfcm25'],['Benchmark base','60k+','brands, 35 industries',T.amber,'tw-bench']]);
+  const cad=[['Always on','Free benchmarks tool','ROAS, CPA, AOV by industry and revenue range. Best candidate for a weekly snapshot series.'],['Live, BFCM weekend','BFCM live page','Running revenue, orders and ad spend counters through Cyber Week.'],['Early December','BFCM Breakdown report','Weekend totals, industry split, platform metrics (gated PDF).'],['Weekly','Whale Mail newsletter','Industry newsletter; mostly links and product news.'],['Periodic','Benchmark pages (Facebook, TikTok, Amazon)','YoY CPA, CPM, CVR, ROAS by industry, labelled "updated" with no fixed date.'],['Seasonal','Guides and reports','BFCM 2026 calendar, prompt playbooks, Amazon Big Deal Days benchmarks, health & beauty report.']];
+  document.getElementById('tTwCad').innerHTML='<thead><tr><th>Cadence</th><th>Series</th><th>Notes</th></tr></thead><tbody>'+cad.map(r=>`<tr><td>${r[0]}</td><td><b>${r[1]}</b></td><td>${esc(r[2])}</td></tr>`).join('')+'</tbody>';
+}
+SEGBIND('bfSeg',b=>{bfMetric=b.dataset.m;renderBfcm()});
+SEGBIND('moDim',b=>{moDim=b.dataset.d;renderMoBench()});
+SEGBIND('moView',b=>{moView=b.dataset.v;renderMoBench()});
+['moAds','moTierSel'].forEach(id=>document.getElementById(id).addEventListener('input',renderMoPlan));
+document.getElementById('mkRev').addEventListener('change',renderMkt);
+document.getElementById('trSnap').addEventListener('change',renderMoTrend);
+
+/* ---------- routing ---------- */
+const VIEWS={front:renderFront,'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:renderBfcm,mkt:renderMkt,'mo-bench':renderMoBench,'mo-trend':renderMoTrend,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,wire:renderWire};
+function show(){let v=(location.hash||'#front').slice(1);if(!(v in VIEWS))v='front';
+  Object.keys(VIEWS).forEach(x=>document.getElementById('v-'+x).hidden=x!==v);
+  const desk=/^(nb|mo)-/.test(v)?v.split('-')[0]:v;
+  document.querySelectorAll('#deskrow a').forEach(a=>a.setAttribute('aria-current',a.dataset.desk===desk?'true':'false'));
+  document.querySelectorAll('.subrow').forEach(r=>r.hidden=r.dataset.for!==desk);
+  document.querySelectorAll('.subrow a').forEach(a=>a.getAttribute('href')==='#'+v?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+  try{VIEWS[v]()}catch(e){console.error(e)}
+}
+document.getElementById('trPlat').innerHTML=PLATS.map(p=>`<option>${p}</option>`).join('');
+document.getElementById('trMode').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;trMode=b.dataset.v;document.querySelectorAll('#trMode button').forEach(x=>x.setAttribute('aria-pressed',x===b));renderTracker()});
+['trMetric','trPlat','trRange'].forEach(id=>document.getElementById(id).addEventListener('change',renderTracker));
+document.getElementById('shBasis').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;shBasis=b.dataset.b;document.querySelectorAll('#shBasis button').forEach(x=>x.setAttribute('aria-pressed',x===b));renderShare()});
+document.getElementById('shChart').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;shChartT=b.dataset.c;document.querySelectorAll('#shChart button').forEach(x=>x.setAttribute('aria-pressed',x===b));renderShare()});
+document.getElementById('ovSeg').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;ovMetric=b.dataset.m;document.querySelectorAll('#ovSeg button').forEach(x=>x.setAttribute('aria-pressed',x===b));renderOverlay()});
+document.getElementById('selBand').addEventListener('change',renderBand);
+['cmpMetric','cmpRange','cmpEvents'].forEach(id=>document.getElementById(id).addEventListener('change',renderCompare));
+document.getElementById('cmpMode').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;cmpMode=b.dataset.m;document.querySelectorAll('#cmpMode button').forEach(x=>x.setAttribute('aria-pressed',x===b));renderCompare()});
+['lensDim','lensSeg'].forEach(id=>document.getElementById(id).addEventListener('change',renderLens));
+document.getElementById('adsMode').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;adsMode=b.dataset.m;document.querySelectorAll('#adsMode button').forEach(x=>x.setAttribute('aria-pressed',x===b));renderCreative()});
+document.getElementById('mixShow').addEventListener('change',renderVertAds);
+['cpVid','cpUnits','cpStatic','cpBand'].forEach(id=>document.getElementById(id).addEventListener('input',renderCap));
+document.getElementById('shScale').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;shScale=b.dataset.s;document.querySelectorAll('#shScale button').forEach(x=>x.setAttribute('aria-pressed',x===b));renderShare()});
+document.getElementById('shEvents').addEventListener('change',renderShare);
+['tgt30','tgtLtv'].forEach(id=>document.getElementById(id).addEventListener('input',renderLag));
+document.getElementById('libQ').addEventListener('input',renderLib);
+document.getElementById('libSrc').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;libSrc=b.dataset.s;document.querySelectorAll('#libSrc button').forEach(x=>x.setAttribute('aria-pressed',x===b));renderLib()});
+addEventListener('hashchange',()=>{show();scrollTo(0,0)});
+document.addEventListener('click',e=>{const st=e.target.closest('[data-star]');if(st){e.stopPropagation();toggleWatch(st.dataset.star);return}if(e.target.closest('[data-src]'))return;const d=e.target.closest('[data-drill]');if(!d)return;const p=d.dataset.drill;trMode='platform';document.getElementById('trPlat').value=p;document.querySelectorAll('#trMode button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.v==='platform'));if(location.hash!=='#nb-channels')location.hash='nb-channels';else renderTracker()});
+document.getElementById('drawerClose').addEventListener('click',closeSources);document.getElementById('scrim').addEventListener('click',closeSources);
+injectSources();
+try{const tl=dfmt(WE[LAST],false)+' '+WE[LAST].slice(0,4);document.getElementById('thru').textContent=tl;document.querySelectorAll('.thru2').forEach(e=>e.textContent=tl);document.getElementById('nwk').textContent=String(WEEKS.length);document.getElementById('dateline').firstChild.textContent=new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}catch(e){}
+(function(){const now=new Date(),bf=new Date(2026,10,27),cm=new Date(2026,10,30,23,59);const d=Math.ceil((bf-now)/864e5);const el=document.getElementById('countdown');el.innerHTML=d>0?`<b>${d}</b> days to Black Friday · Cyber Monday 30 Nov`:(now<=cm?'<b>Cyber Week</b> is live':'<b>Q5</b> window: late Dec – mid Jan')})();
+buildTicker();show();
+</script>

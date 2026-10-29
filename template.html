@@ -1123,8 +1123,8 @@ function buildTicker(){
   const wi=items.filter(t=>WATCH.some(p=>t.includes('<b>'+p.toUpperCase().replace(' ','')+' ')));const all=[...wi.map(t=>t.replace('<span class="it">','<span class="it">★ ')),...extra,...items.filter(t=>!wi.includes(t))].join('');document.getElementById('ticker').innerHTML=all+all;
 }
 const STORIES=[
- {k:'Channels',h:'Snapchat costs spike, TikTok conversion jumps in post-Prime week',p:'In the week ending 18 Oct, Snapchat CAC rose 12.8% and ROAS fell 17.9%; TikTok CVR rose 12.4% and Pinterest ROAS 20.2%. Meta CPM up 4.7%.',to:'#nb-channels',src:'mb-weekly'},
- {k:'Share of spend',h:'Meta holds 55% of tracked spend as budgets consolidate for Q4',p:'Meta at 55.0% and Google 16.5% of everything Northbeam tracks. "All other", mostly Amazon, rose to 16.7% after Big Deal Days.',to:'#nb-share',src:'mb-weekly'},
+ {k:'Channels',h:'Meta costs ease in the last week before the midterms',p:'In the week ending 25 Oct, Meta CPM fell 4.6%, CPC 6.9% and new-customer CAC 5.4%, with ROAS up 3.9%. AppLovin CAC fell 19.2%; Snapchat CPC jumped 27.4%. Northbeam warns of swings after the 3 Nov election.',to:'#nb-channels',src:'mb-weekly,mb-kitsch'},
+ {k:'Share of spend',h:'Meta climbs to 56% of tracked spend as Amazon pulls back',p:'Meta at 56.0% and Google 17.3% of everything Northbeam tracks. "All other", mostly Amazon, fell back to 14.6% after the Big Deal Days bump.',to:'#nb-share',src:'mb-weekly'},
  {k:'Amazon',h:'Amazon pulls $2B of holiday demand into October',p:'Prime Big Deal Days took about $2B in two days, against roughly $35B over Cyber Five 2025.',to:'#nb-q4',src:'mb-amazon,mb-cpm25'},
  {k:'Benchmarks',h:'Q3: spend up 30%, but the median account gained little',p:'Accounts spending $200k–$500k a month: top quartile revenue +43.5% YoY, median +8.1%. Sub-$50k accounts: median revenue −18.1%.',to:'#nb-bench',src:'mb-cpm25'},
  {k:'Earnings',h:'Meta confirms it: US ad prices up 23% a year',p:'Q3 2026 price per ad rose 14% worldwide and 23% in the US & Canada, while impression growth slowed to 10%. That matches Northbeam\'s +25% Meta CPM.',to:'#mkt',src:'meta-q3-26,meta-apac'},

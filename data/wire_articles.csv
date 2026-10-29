@@ -1,9 +1,11 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
+2026-10-29,Northbeam,How Kitsch cracked Meta Ads in 2026,https://themediabuyer.northbeam.io/p/how-kitsch-cracked-meta-ads-in-2026,Newsletter,Meta
 2026-10-29,Modern Retail,‘Our biggest challenge has been keeping them in stock’: Mahjong sets are big business for brands,https://www.modernretail.co/operations/our-biggest-challenge-has-been-keeping-them-in-stock-mahjong-sets-are-big-business-for-brands/,News,
 2026-10-29,Modern Retail,"From Celsius to Maybelline, more brands are showing up for the New York City Marathon’s 50th anniversary",https://www.modernretail.co/marketing/from-celsius-to-maybelline-more-brands-are-showing-up-for-the-new-york-city-marathons-50th-anniversary/,News,
 2026-10-29,Modern Retail,"Big-Box Briefing: What to watch this holiday season as Target, Walmart and more battle for sales",https://www.modernretail.co/marketing/big-box-briefing-what-to-watch-this-holiday-season-as-target-walmart-and-more-battle-for-sales/,News,BFCM / Q4;Retail
 2026-10-29,Meta,Meta Q3 2026: price per ad up 14% worldwide but 1% in Asia-Pacific,https://www.relevantaudience.com/meta/meta-q3-2026-ad-price-impressions-asia-pacific/,News,Meta;Benchmarks;Earnings
+2026-10-29,Foxwell,Unlock Your Q4 Potential: How to Grow Your List When Times Are Tough,https://www.foxwelldigital.com/blog/unlock-your-q4-potential-how-to-grow-your-list-when-times-are-tough,Blog,BFCM / Q4
 2026-10-28,Northbeam,Meta new-customer CACs down 33% year over year,https://x.com/northbeam/status/2115572652005818373,X,Meta;BFCM / Q4;Benchmarks
 2026-10-28,Modern Retail,"Intake Breathing nabs $62M investment, joining the emerging nasal wellness trend",https://www.modernretail.co/operations/intake-breathing-62-million-funding-round/,News,
 2026-10-28,Meta,Meta Reports Third Quarter 2026 Results,https://www.sec.gov/Archives/edgar/data/0001326801/000162828026066700/meta-09302026xexhibit991.htm,Earnings,Meta;Benchmarks;Earnings

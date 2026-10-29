@@ -2,6 +2,7 @@ MB="https://themediabuyer.northbeam.io/p/"
 BL="https://www.northbeam.io/blog/"
 X="https://x.com/"
 LIB=[
+ dict(date="2026-10-29",src="Newsletter",title="How Kitsch cracked Meta Ads in 2026",url=MB+"how-kitsch-cracked-meta-ads-in-2026",tags=["meta","weekly index","measurement","case study"],stats=["Week of 10/18-10/25: Meta CPM -4.58%, CPC -6.92%, new-customer CAC -5.35%, ROAS +3.85%; budget share 55.98% (+1.21)","AppLovin CAC -19.21%, ROAS +8.65%; Snapchat CPC +27.44%","Kitsch 3-week A/B test of Apex vs Meta standard attribution: new-customer ROAS +8.2%, cost per new-customer order -8.7%","Apex A/B tests (chart, updated 26 Aug 2026), median vs average: ROAS +12.88% / +21.31%, new-customer ROAS +18.01% / +23.48%, CPO -13.05% / -14.27%, new-customer CPO -18.55% / -17.00%","~$2.1B of midterm political ad spend since mid-summer; >$560M on one Texas Senate seat","Meta Ads ROAS up 30% year over year"],data=["mbi"]),
  dict(date="2026-10-28",src="X",title="Meta new-customer CACs down 33% year over year",url=X+"northbeam/status/2115572652005818373",tags=["meta","cac","q4"],stats=["Average first-time CAC on Meta down ~33% YoY in Q3 across 1,000+ accounts present in both periods","YoY lower every week since mid-June 2026; BFCM 2025 CAC peak $309.17 (week of Nov 30)","Northbeam expects CACs to rise in BFCM and stay elevated through Christmas","Spike in late June = Prime Day + Father's Day + 4th of July clustering"],data=["meta_roas_cac"]),
  dict(date="2026-10-23",src="X",title="Average Meta blended ROAS up more than 30% YoY",url=X+"northbeam/status/2113615925601579018",tags=["meta","roas","q4"],stats=["Average weekly blended ROAS (1-day click) 0.37 in Jan 2025 to 0.54 mid-Oct 2026","Peak 0.57, week of Sep 6 2026; beat prior year every week of 2026","Inflection point late June 2026"],data=["meta_roas_cac"]),
  dict(date="2026-10-22",src="Newsletter",title="Meta CPMs are up 25% and it's only October",url=MB+"meta-cpms-are-up-25-and-it-s-only-october",tags=["meta","cpm","q4","amazon","weekly index"],stats=["Meta CPMs ~+25% YoY; CPM peak last year $23.06 (week of Nov 30, BFCM)","CPMs rise through Q1, plateau Q2/Q3, spike Q4; this year's spike started in September","Amazon Prime Big Deal Days pulled >$2B forward from BFCM","~$10B already spent on midterm candidate ads, suppressing performance","Q3: ad spend up >30% on average; $200k-$500k/mo accounts P75 revenue +43.5% vs median +8.1%"],data=["meta_cpm","q3_heatmap","mbi"]),
@@ -35,6 +36,7 @@ LIB=[
 ]
 
 IDQ={
+"how-kitsch-cracked":("mb-kitsch",["Be prepared to see crazy shifting performance in your accounts after November 3rd.","Reports of Meta\u2019s Ads death are greatly exaggerated."]),
 "2115572652005818373":("x-ncac",["costs dropped by as much as 33% in Q3 year over year","CACs will increase during BFCM and stay elevated through Christmas"]),
 "2113615925601579018":("x-roas",["Meta blended ROAS is skyrocketing right now. And it all started this summer."]),
 "meta-cpms-are-up-25":("mb-cpm25",["a generational Black Friday Cyber Monday, and not in a good way","Amazon pulled forward more than $2 billion in ad spend from Black Friday"]),
@@ -73,7 +75,7 @@ for e in LIB:
     else:
         raise SystemExit("no id for "+e["url"])
 EXTRA=[
- dict(id="mb-weekly",date="2026-10-22",src="Newsletter",title="The Media Buyer Index (weekly, Dec 2025 – Oct 2026)",url="https://themediabuyer.northbeam.io/archive",tags=["weekly index"],stats=["Weekly week-over-week CPM, CTR, CPC, CAC, CVR, ROAS and budget share by platform, published in each Thursday issue","40 weeks transcribed; three weeks not published"],data=["mbi"],q=["Advertisers consolidate to Meta when times get tough. — The Media Buyer #130, 5 Mar 2026","We're predicting that 2026 will be the year of diversified budgets. — The Media Buyer #124, 22 Jan 2026"]),
+ dict(id="mb-weekly",date="2026-10-29",src="Newsletter",title="The Media Buyer Index (weekly, Dec 2025 – Oct 2026)",url="https://themediabuyer.northbeam.io/archive",tags=["weekly index"],stats=["Weekly week-over-week CPM, CTR, CPC, CAC, CVR, ROAS and budget share by platform, published in each Thursday issue","41 weeks transcribed (latest w/e 25 Oct 2026, issue of 29 Oct); three weeks not published"],data=["mbi"],q=["Advertisers consolidate to Meta when times get tough. — The Media Buyer #130, 5 Mar 2026","We're predicting that 2026 will be the year of diversified budgets. — The Media Buyer #124, 22 Jan 2026"]),
 ]
 LIB.extend(EXTRA)
 MB2="https://themediabuyer.northbeam.io/p/"

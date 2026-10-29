@@ -2,7 +2,7 @@
 // Fails if any page error fires or any visible chart canvas ends up blank.
 // usage: node tests/sweep.js [normal|dead]
 const {chromium}=require('playwright');const fs=require('fs');
-const VIEWS=['front','ctc','bfcm','nb-channels','nb-share','nb-bench','nb-creative','nb-q4','nb-meta','nb-library','mkt','mo-bench','mo-trend','mo-research','haus','triplewhale','wire'];
+const VIEWS=['front','trends','ctc','bfcm','nb-channels','nb-share','nb-bench','nb-creative','nb-q4','nb-meta','nb-library','mkt','mo-bench','mo-trend','mo-research','haus','triplewhale','wire'];
 (async()=>{
  const mode=process.argv[2]||'normal';
  const b=await chromium.launch();const p=await b.newPage({viewport:{width:1280,height:900},colorScheme:'dark'});
@@ -23,7 +23,7 @@ const VIEWS=['front','ctc','bfcm','nb-channels','nb-share','nb-bench','nb-creati
   for(const bt of btns){if(!await bt.isVisible())continue;await bt.click();actions++;await p.waitForTimeout(250)}
   // every select: pick each option
   for(const sel of await p.$$(`#v-${v} select`)){if(!await sel.isVisible()||!await sel.isEnabled())continue;const vals=await sel.$$eval('option',o=>o.map(x=>x.value));for(const val of vals.slice(0,6)){await sel.selectOption(val);actions++;await p.waitForTimeout(200)}}
-  for(const cb of await p.$$(`#v-${v} input[type=checkbox]`)){if(!await cb.isVisible())continue;await cb.click();await p.waitForTimeout(200);await cb.click();actions+=2;await p.waitForTimeout(200)}
+  for(const cb of await p.$$(`#v-${v} input[type=checkbox]`)){if(!await cb.isVisible()||!await cb.isEnabled())continue;await cb.click();await p.waitForTimeout(200);await cb.click();actions+=2;await p.waitForTimeout(200)}
   // hover and click every chart
   for(const c of await p.$$(`#v-${v} canvas`)){if(!await c.isVisible())continue;const bx=await c.boundingBox();if(!bx||bx.width<20)continue;await c.scrollIntoViewIfNeeded();const bb=await c.boundingBox();for(const fx of [.3,.6,.9]){await p.mouse.move(bb.x+bb.width*fx,bb.y+bb.height*.5);await p.waitForTimeout(120)}await p.mouse.click(bb.x+bb.width*.5,bb.y+bb.height*.5);actions++;await p.waitForTimeout(150)}
   await p.mouse.move(2,2);await p.waitForTimeout(900);

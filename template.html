@@ -231,6 +231,7 @@ table.q tbody tr.link{cursor:pointer}
     <div class="deskrow" id="deskrow">
       <a href="#front" data-desk="front">Front page</a>
       <a href="#bfcm" data-desk="bfcm"><span class="live" aria-hidden="true"></span>BFCM Live</a>
+      <a href="#trends" data-desk="trends">Trends</a>
       <a href="#nb-channels" data-desk="nb">Northbeam</a>
       <a href="#mo-bench" data-desk="mo">Motion</a>
       <a href="#mkt" data-desk="mkt">Earnings</a>
@@ -312,9 +313,10 @@ table.q tbody tr.link{cursor:pointer}
     <div class="ctl">
       <label for="cmpMetric">Metric</label>
       <select id="cmpMetric"><option value="cpm">CPM</option><option value="ctr">CTR</option><option value="cpc">CPC</option><option value="cac">CAC (new)</option><option value="cvr">CVR</option><option value="roas" >ROAS</option></select>
-      <div class="seg" role="group" aria-label="Mode" id="cmpMode"><button type="button" data-m="cum" aria-pressed="true">Cumulative change</button><button type="button" data-m="wow" aria-pressed="false">Weekly change</button></div>
+      <div class="seg" role="group" aria-label="Mode" id="cmpMode"><button type="button" data-m="cum" aria-pressed="true">Cumulative change</button><button type="button" data-m="wow" aria-pressed="false">Weekly change</button><button type="button" data-m="qtr" aria-pressed="false">By quarter</button></div>
       <label for="cmpRange">Range</label>
       <select id="cmpRange"><option value="all">All weeks</option><option value="26" selected>Last 26 weeks</option><option value="13">Last 13 weeks</option></select>
+      <label class="chk"><input type="checkbox" id="cmpRoll"> 4-week average</label>
       <label class="chk"><input type="checkbox" id="cmpEvents" checked> Calendar events</label>
     </div>
     <div class="ctl" id="cmpChips"></div>
@@ -816,7 +818,63 @@ table.q tbody tr.link{cursor:pointer}
     <div class="ctl"><label for="twInd">Industry</label><select id="twInd"></select></div>
     <div class="tw"><table class="q" id="tTwCh"></table></div>
   </div>
+  <div class="term">
+    <div class="th"><span class="t">Snapshot history</span><span class="m" id="twHistM">selected metric and channel, week by week</span></div>
+    <div class="chart"><canvas id="cTwHist"></canvas></div>
+    <p class="note" id="twHistNote"></p>
+  </div>
   <div class="term"><div class="th"><span class="t">What Triple Whale publishes</span><span class="m">cadence</span></div><div class="tw"><table class="q cad-t" id="tTwCad"></table></div></div>
+</section>
+
+<!-- TRENDS -->
+<section class="view" id="v-trends" hidden>
+  <div><div class="kicker">Trends · every publisher on one timeline</div><h2 id="tdH">The long view</h2><p class="dek">Weekly, monthly and quarterly figures from Northbeam, Meta, Common Thread, Triple Whale and Haus, plotted on the same calendar so you can see where they agree. Each publisher measures a different set of brands in a different way, so compare direction and turning points, not exact levels. Values marked ≈ were read off a published chart.</p></div>
+  <div class="strip" id="tdKpis"></div>
+  <div class="term">
+    <div class="ctl">
+      <span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">All charts</span>
+      <div class="seg" role="group" aria-label="Date range" id="tdRange"><button type="button" data-r="2023" aria-pressed="false">Since 2023</button><button type="button" data-r="2025" aria-pressed="true">Since 2025</button><button type="button" data-r="2026" aria-pressed="false">2026</button><button type="button" data-r="6m" aria-pressed="false">Last 6 months</button></div>
+      <label class="chk"><input type="checkbox" id="tdRoll" checked> 4-week average</label>
+      <label class="chk"><input type="checkbox" id="tdLY"> Same period last year</label>
+      <label class="chk"><input type="checkbox" id="tdEvents" checked> Events</label>
+    </div>
+  </div>
+  <div class="term">
+    <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Meta ad prices</span>
+      <div class="seg" role="group" aria-label="Units" id="tdPriceMode" style="margin-left:auto"><button type="button" data-v="lvl" aria-pressed="true">CPM in $</button><button type="button" data-v="yoy" aria-pressed="false">Change vs last year</button></div></div>
+    <div class="chart tall"><canvas id="cTdPrice"></canvas></div>
+    <p class="note" id="tdPriceNote"></p>
+  </div>
+  <div class="term">
+    <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Efficiency: what the spend returns</span>
+      <div class="seg" role="group" aria-label="Units" id="tdEffMode" style="margin-left:auto"><button type="button" data-v="lvl" aria-pressed="true">Meta ROAS and CAC</button><button type="button" data-v="yoy" aria-pressed="false">Change vs last year</button></div></div>
+    <div class="chart tall"><canvas id="cTdEff"></canvas></div>
+    <p class="note" id="tdEffNote"></p>
+  </div>
+  <div class="term">
+    <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Share of ad spend</span>
+      <div class="seg" role="group" aria-label="Platforms" id="tdShareGrp" style="margin-left:auto"><button type="button" data-v="big" aria-pressed="true">Meta and Google</button><button type="button" data-v="chal" aria-pressed="false">Challengers</button></div></div>
+    <div class="chart tall"><canvas id="cTdShare"></canvas></div>
+    <p class="note">Lines: Northbeam's weekly share of core platform spend. Markers are other publishers' quarterly snapshots of the same platform: ▲ Northbeam share of all tracked spend, ■ Common Thread portfolio (Meta and Google include all campaign types), ◆ Haus share of wallet. Their bases differ, so markers sit above or below the line by design.</p>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t">Demand signals</span><span class="m">shopper confidence, revenue growth and Meta's ad volume</span></div>
+    <div class="chart tall"><canvas id="cTdDemand"></canvas></div>
+    <p class="note">Left axis: the DTC Consumer Confidence Index (Common Thread × KnoCommerce, 5,000 shoppers a day; 100 = neutral). Right axis: Northbeam's median brand revenue change vs last year, and Meta's ad impressions change vs last year from its earnings.</p>
+  </div>
+  <div class="section-head"><span class="label">Quarter scoreboard</span></div>
+  <div class="term">
+    <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Northbeam weekly moves, added up by quarter</span>
+      <label for="tdQMetric" style="margin-left:auto">Metric</label><select id="tdQMetric"><option value="cpm">CPM</option><option value="cpc">CPC</option><option value="ctr">CTR</option><option value="cvr">CVR</option><option value="cac">CAC (new)</option><option value="roas">ROAS</option><option value="share">Share of core spend</option></select></div>
+    <div class="tw"><table class="q" id="tTdQ"></table></div>
+    <p class="note" id="tdQNote"></p>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t">Every publisher by quarter</span><span class="m">quarter average of each series · completed 2026 quarters coloured against the same quarter of 2025 (green = better for the buyer)</span></div>
+    <div class="tw"><table class="q" id="tTdQX"></table></div>
+  </div>
+  <div class="section-head"><span class="label">What the long view says</span></div>
+  <div class="takes" id="tdTakes"></div>
 </section>
 
 <!-- CTC -->
@@ -905,7 +963,7 @@ function openSources(ids){
 function closeSources(){document.getElementById('drawer').hidden=true;document.getElementById('scrim').hidden=true;lastFocus&&lastFocus.focus&&lastFocus.focus()}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-src]');if(b){e.preventDefault();openSources(b.dataset.src)}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.getElementById('drawer').hidden)closeSources()});
-const SRC_MAP={cBfLive:'mb-bfcm,bl-cyberweek',cEarn:'meta-q3-26,meta-q2-26,meta-q1-26,meta-q4-25',cEarnReg:'meta-apac,meta-q2-26',cEarnVsNb:'meta-q3-26,mb-cpm25,x-roas',cMoTier:'mo-cb26key',cMoPort:'mo-cb26key',cMoFmt:'mo-cb26',cMoHW:'mo-bfcm26',cTrBrand:'mo-trending',cTrAspect:'mo-trending',cTrInd:'mo-trending',cHsCh:'haus-yt26,haus-meta25,haus-tiktok,haus-applovin',cHsIA:'haus-ia-jul,haus-ia-oct',cHsRep:'haus-ia-oct',cHs7dc:'haus-ia-oct',cHsCat:'haus-catalog',cHsSearch:'haus-search',cHsTN:'haus-textnow',cHsCW:'haus-cw25',cHsApp:'haus-applovin',cTwInd:'tw-weekly',cCtMix:'ctc-mix',cCtCci:'ctc-dtcci',cCtCpm:'ctc-cpm',cCtTier:'ctc-mix',cCtMer:'ctc-mix',cCtHits:'ctc-hits',tCtIdx:'ctc-q1idx,ctc-h1,ctc-applovin',tCtBf:'ctc-bfcm25',tTwCh:'tw-weekly',cMoAI:'mo-ai',cCmp:'mb-weekly',cAdsLaunch:'bl-jan',cAdsWeek:'mb-hudson,mb-ugc1,bl-jan',cMis:'mb-ugc1',cVertAds:'x-verticals',cCap:'mb-ugc3,mb-ugc2,bl-jan',fCpm:'mb-cpm25',fBoard:'mb-weekly',fShare:'mb-weekly',fMovers:'mb-weekly',trMulti:'mb-weekly',tHeat:'mb-weekly',cShare:'mb-weekly,mb-may',tTrend:'mb-weekly',tShare:'mb-weekly',tQ1:'mb-may',tEmerg:'x-emerging',cMonthly:'bl-planning,bl-jan,bl-feb,mb-april,mb-may,mb-h1,bl-cyberweek,bl-cost',cBand:'mb-h1,mb-cpm25',tH1rev:'mb-h1',tH1aov:'mb-h1',cSize:'bl-under5,bl-cost',tVert:'bl-power',tMix:'x-verticals',tAds:'bl-jan',cAI:'mb-ai',cOverlay:'mb-cpm25,x-roas,x-ncac',cArc:'mb-bfcm,bl-cyberweek',cPace:'bl-cyberfive',cLag:'mb-lag',tInd:'x-industry',cPost:'mb-weekly,bl-q5',cJan:'bl-jan',cM1:'mb-h1,mb-metatank',cM2:'mb-h1,mb-metatank',cM3:'x-roas,x-ncac',cTT:'mb-tiktok'};
+const SRC_MAP={cTdPrice:'mb-cpm25,meta-q3-26,ctc-cpm,tw-weekly',cTdEff:'x-roas,x-ncac,bl-planning,mb-h1,ctc-q1idx',cTdShare:'mb-weekly,mb-may,ctc-mix,haus-sow',cTdDemand:'ctc-dtcci,meta-q3-26,bl-planning,mb-h1',tTdQ:'mb-weekly',cBfLive:'mb-bfcm,bl-cyberweek',cEarn:'meta-q3-26,meta-q2-26,meta-q1-26,meta-q4-25',cEarnReg:'meta-apac,meta-q2-26',cEarnVsNb:'meta-q3-26,mb-cpm25,x-roas',cMoTier:'mo-cb26key',cMoPort:'mo-cb26key',cMoFmt:'mo-cb26',cMoHW:'mo-bfcm26',cTrBrand:'mo-trending',cTrAspect:'mo-trending',cTrInd:'mo-trending',cHsCh:'haus-yt26,haus-meta25,haus-tiktok,haus-applovin',cHsIA:'haus-ia-jul,haus-ia-oct',cHsRep:'haus-ia-oct',cHs7dc:'haus-ia-oct',cHsCat:'haus-catalog',cHsSearch:'haus-search',cHsTN:'haus-textnow',cHsCW:'haus-cw25',cHsApp:'haus-applovin',cTwInd:'tw-weekly',cTwHist:'tw-weekly',cCtMix:'ctc-mix',cCtCci:'ctc-dtcci',cCtCpm:'ctc-cpm',cCtTier:'ctc-mix',cCtMer:'ctc-mix',cCtHits:'ctc-hits',tCtIdx:'ctc-q1idx,ctc-h1,ctc-applovin',tCtBf:'ctc-bfcm25',tTwCh:'tw-weekly',cMoAI:'mo-ai',cCmp:'mb-weekly',cAdsLaunch:'bl-jan',cAdsWeek:'mb-hudson,mb-ugc1,bl-jan',cMis:'mb-ugc1',cVertAds:'x-verticals',cCap:'mb-ugc3,mb-ugc2,bl-jan',fCpm:'mb-cpm25',fBoard:'mb-weekly',fShare:'mb-weekly',fMovers:'mb-weekly',trMulti:'mb-weekly',tHeat:'mb-weekly',cShare:'mb-weekly,mb-may',tTrend:'mb-weekly',tShare:'mb-weekly',tQ1:'mb-may',tEmerg:'x-emerging',cMonthly:'bl-planning,bl-jan,bl-feb,mb-april,mb-may,mb-h1,bl-cyberweek,bl-cost',cBand:'mb-h1,mb-cpm25',tH1rev:'mb-h1',tH1aov:'mb-h1',cSize:'bl-under5,bl-cost',tVert:'bl-power',tMix:'x-verticals',tAds:'bl-jan',cAI:'mb-ai',cOverlay:'mb-cpm25,x-roas,x-ncac',cArc:'mb-bfcm,bl-cyberweek',cPace:'bl-cyberfive',cLag:'mb-lag',tInd:'x-industry',cPost:'mb-weekly,bl-q5',cJan:'bl-jan',cM1:'mb-h1,mb-metatank',cM2:'mb-h1,mb-metatank',cM3:'x-roas,x-ncac',cTT:'mb-tiktok'};
 function injectSources(){Object.entries(SRC_MAP).forEach(([id,ids])=>{const el=document.getElementById(id);if(!el)return;const term=el.closest('.term');if(!term||term.querySelector(':scope > .th .src-btn, :scope > .ctl .src-btn'))return;const host=term.querySelector(':scope > .th')||term.querySelector(':scope > .ctl');if(host){const n=ids.split(',').length;host.insertAdjacentHTML('beforeend',srcBtn(ids,n>1?`SRC ×${n} ↗`:'SRC ↗'))}})}
 const n=v=>{if(v===undefined||v===null)return null;const s=String(v).trim();if(s===''||s==='-')return null;const x=parseFloat(s.replace('~',''));return isNaN(x)?null:x};
 const rowsOf=k=>D[k].rows.map(r=>Object.fromEntries(D[k].cols.map((c,i)=>[c,r[i]])));
@@ -1224,10 +1282,15 @@ function renderCompare(){
   const chips=document.getElementById('cmpChips');
   chips.innerHTML=PLATS.map(p=>`<button type="button" class="chip" data-p="${p}" aria-pressed="${cmpSel.has(p)}"><span class="sw" style="background:${PCOL[p]};box-shadow:0 0 6px ${PCOL[p]}"></span>${p}</button>`).join('')+`<button type="button" class="chip" data-p="__all">All</button><button type="button" class="chip" data-p="__none">None</button>`;
   chips.querySelectorAll('button').forEach(b=>b.onclick=()=>{const p=b.dataset.p;if(p==='__all')cmpSel=new Set(PLATS);else if(p==='__none')cmpSel=new Set();else cmpSel.has(p)?cmpSel.delete(p):cmpSel.add(p);renderCompare()});
-  const ds=PLATS.filter(p=>cmpSel.has(p)).map(p=>{let data;if(cmpMode==='wow')data=ws.map(w=>val(w,p,m));else{let x=1,started=false;data=ws.map((w,i)=>{const v=val(w,p,m);if(!started){if(i===0||v!=null){started=true;return 0}return null}if(v!=null)x*=1+v/100;return +((x-1)*100).toFixed(2)})}
+  document.getElementById('cmpRoll').disabled=cmpMode!=='wow';
+  if(cmpMode==='qtr'){const Q={};ws.forEach(w=>{const q=qOf(tsD(WE[w]));(Q[q]=Q[q]||[]).push(w)});const qk=Object.keys(Q).sort().filter(q=>Q[q].length>1);const cur=qOf(tsD(WE[LAST]));const cost=m in COST;
+    const cq=(p,wk)=>{let x=1,k=0;wk.forEach(w=>{const v=val(w,p,m);if(v!=null){x*=1+v/100;k++}});return k?+((x-1)*100).toFixed(2):null};
+    mk('cCmp',{type:'bar',data:{labels:qk.map(q=>q+(q===cur?' to date':'')+' ('+Q[q].length+' wks)'),datasets:PLATS.filter(p=>cmpSel.has(p)).map(p=>({label:p,data:qk.map(q=>cq(p,Q[q])),backgroundColor:PCOL[p]}))},options:{scales:{y:pctAxis({title:{display:true,text:MNAME[m]+' change within the quarter',color:T.dim}}),x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.parsed.y==null?null:` ${c.dataset.label}: ${fmtP(c.parsed.y,1)}  ${(cost?c.parsed.y<0:c.parsed.y>0)?'better':'worse'}`}}}},plugins:[zeroLine]});return}
+  const roll=cmpMode==='wow'&&document.getElementById('cmpRoll').checked;
+  const ds=PLATS.filter(p=>cmpSel.has(p)).map(p=>{let data;if(cmpMode==='wow'){data=ws.map(w=>val(w,p,m));if(roll)data=data.map((v,i)=>{const w=data.slice(Math.max(0,i-3),i+1).filter(x=>x!=null);return w.length?+(w.reduce((a,b)=>a+b,0)/w.length).toFixed(2):null})}else{let x=1,started=false;data=ws.map((w,i)=>{const v=val(w,p,m);if(!started){if(i===0||v!=null){started=true;return 0}return null}if(v!=null)x*=1+v/100;return +((x-1)*100).toFixed(2)})}
     return {label:p,data,borderColor:PCOL[p],backgroundColor:PCOL[p],borderWidth:p==='Meta'?3.5:2.2,pointRadius:cmpMode==='wow'?2.5:1.5,pointHoverRadius:7,tension:.25,spanGaps:true}});
   const cost=m in COST;
-  mk('cCmp',{type:'line',data:{labels:ws.map(wkLab),datasets:ds},options:{scales:{y:pctAxis({title:{display:true,text:(cmpMode==='wow'?'Week-over-week ':'Cumulative ')+MNAME[m]+' change',color:T.dim}}),x:{grid:{display:false},ticks:{maxRotation:0,autoSkip:true,maxTicksLimit:10}}},
+  mk('cCmp',{type:'line',data:{labels:ws.map(wkLab),datasets:ds},options:{scales:{y:pctAxis({title:{display:true,text:(cmpMode==='wow'?(roll?'4-week average of weekly ':'Week-over-week '):'Cumulative ')+MNAME[m]+' change',color:T.dim}}),x:{grid:{display:false},ticks:{maxRotation:0,autoSkip:true,maxTicksLimit:10}}},
     plugins:{events:document.getElementById('cmpEvents').checked?evFor(ws):[],legend:{position:'bottom'},tooltip:{callbacks:{label:c=>{if(c.parsed.y==null)return null;const w=val(ws[c.dataIndex],c.dataset.label,m);const good=cost?c.parsed.y<0:c.parsed.y>0;return ` ${c.dataset.label}: ${fmtP(c.parsed.y,1)}${cmpMode==='cum'?`  (week ${fmtP(w,1)})`:''}  ${good?'better':'worse'}`},footer:it=>evAt(ws[it[0].dataIndex])}}}},plugins:[zeroLine]});
 }
 
@@ -1515,9 +1578,116 @@ function renderTW(){
   const cell=(k,mm)=>{const r=R.find(x=>x.snapshot===sn&&x.industry===I&&x.channel===k&&x.metric===mm);return r?TWFMT[mm](n(r.median)):'·'};
   document.getElementById('tTwCh').innerHTML='<thead><tr><th>Channel</th><th>Cohort</th><th>ROAS</th><th>CPA</th><th>CPM</th><th>CTR</th><th>CVR</th><th>New cust.</th></tr></thead><tbody>'+chs.map(k=>`<tr><td>${TWCH[k]}</td><td>${(R.find(x=>x.snapshot===sn&&x.industry===I&&x.channel===k)||{}).cohort_size||''}</td>${MS.map(mm=>`<td>${cell(k,mm)}</td>`).join('')}</tr>`).join('')+'</tbody>';
   const cad=[['Weekly (captured Thursdays)','Free benchmarks tool','Trailing-30-day p25/median/p75 by industry, revenue band and channel. Captured into this desk.'],['Live, BFCM weekend','BFCM live page','Running revenue, orders and ad spend counters through Cyber Week; feeds BFCM Live.'],['Early December','BFCM Breakdown report','Weekend totals, industry split, platform metrics (2025: $2.9bn revenue, $607m spend).'],['Weekly','Whale Mail newsletter','Mostly links and product news.'],['Periodic','Benchmark pages (Facebook, TikTok, Amazon)','YoY CPA, CPM, CVR, ROAS by industry, labelled "updated" with no fixed date.']];
+  const chron=[...snaps].reverse();const midOf=s=>{const v=R.filter(r=>r.snapshot===s&&r.channel===ch&&r.metric===m&&r.industry!=='industry').map(r=>n(r.median)).filter(v=>v!=null).sort((a,b)=>a-b);return v.length?v[Math.floor(v.length/2)]:null};const indOf=(s,k)=>{const r=R.find(x=>x.snapshot===s&&x.channel===ch&&x.metric===m&&x.industry===I);return r?n(r[k]):null};
+  document.getElementById('twHistM').textContent=`${TWCH[ch]} · ${m.toUpperCase()} · ${IND_NAME(I)} vs all industries`;
+  mk('cTwHist',{type:'line',data:{labels:chron.map(s=>dfmt(s,true)),datasets:[{label:'Middle industry (median of medians)',data:chron.map(midOf),borderColor:T.amber,backgroundColor:T.amber,borderWidth:3,pointRadius:5},{label:IND_NAME(I)+' median',data:chron.map(s=>indOf(s,'median')),borderColor:T.blue,backgroundColor:T.blue,borderWidth:2.5,pointRadius:5},{label:IND_NAME(I)+' 25th–75th',data:chron.map(s=>indOf(s,'p75')),borderColor:'rgba(90,169,255,.25)',backgroundColor:'rgba(90,169,255,.12)',fill:'+1',pointRadius:0,borderWidth:1},{label:'p25',data:chron.map(s=>indOf(s,'p25')),borderColor:'rgba(90,169,255,.25)',pointRadius:0,borderWidth:1}]},options:{scales:{y:{grid,ticks:{callback:v=>f(v)}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom',labels:{filter:it=>it.text!=='p25'}},tooltip:{callbacks:{label:c=>c.parsed.y==null||c.dataset.label==='p25'?null:` ${c.dataset.label}: ${f(c.parsed.y)}`}}}}});
+  document.getElementById('twHistNote').textContent=snaps.length<2?`One weekly snapshot so far (${dfmt(snaps[0],true)}). Each Thursday adds a point, so this becomes a weekly trend of the trailing-30-day benchmark. Triple Whale's older windows are modelled from today's distribution, so they are not backfilled.`:`${snaps.length} weekly snapshots. Each point is the trailing 30 days up to that Thursday, so neighbouring points overlap by about three weeks: look for sustained moves, not single-week wiggles.`;
   document.getElementById('tTwCad').innerHTML='<thead><tr><th>Cadence</th><th>Series</th><th>Notes</th></tr></thead><tbody>'+cad.map(r=>`<tr><td>${r[0]}</td><td><b>${r[1]}</b></td><td>${esc(r[2])}</td></tr>`).join('')+'</tbody>';
 }
 
+
+/* ---------- Trends ---------- */
+const DAY=864e5;
+const tsD=d=>Date.UTC(+d.slice(0,4),+d.slice(5,7)-1,d.length>7?+d.slice(8,10):15);
+const tsLab=(t,day)=>new Date(t).toLocaleDateString('en-GB',day?{day:'numeric',month:'short',year:'2-digit',timeZone:'UTC'}:{month:'short',year:'2-digit',timeZone:'UTC'});
+const qOf=t=>{const d=new Date(t);return d.getUTCFullYear()+' Q'+(Math.floor(d.getUTCMonth()/3)+1)};
+function rollAvg(pts,k=4){return pts.map((p,i)=>{const w=pts.slice(Math.max(0,i-k+1),i+1).map(q=>q.y).filter(v=>v!=null);return {x:p.x,y:w.length>=Math.min(2,i+1)?+(w.reduce((a,b)=>a+b,0)/w.length).toFixed(3):null}})}
+if(HAS_CHART){Chart.Interaction.modes.xNear=function(chart,e){const pos=Chart.helpers.getRelativePosition(e,chart);const v=chart.scales.x.getValueForPixel(pos.x);const out=[];chart.data.datasets.forEach((ds,di)=>{if(!chart.isDatasetVisible(di)||ds.noTip)return;const meta=chart.getDatasetMeta(di);let b=-1,bd=Infinity;ds.data.forEach((p,i)=>{if(p.y==null)return;const d=Math.abs(p.x-v);if(d<bd){bd=d;b=i}});if(b>=0&&bd<=(ds.win||20)*DAY&&meta.data[b])out.push({element:meta.data[b],datasetIndex:di,index:b})});return out}}
+let tdRange='2025',tdPrice='lvl',tdEff='lvl',tdShare='big';
+function tdBounds(){const max=Date.now()+12*DAY;const min=tdRange==='6m'?max-195*DAY:Date.UTC(+tdRange,0,1);return [min,max]}
+function tdChart(id,series,o){
+  const [min,max]=tdBounds();const ly=document.getElementById('tdLY').checked;const ds=[];
+  series.forEach(s=>{const pts=s.pts.filter(p=>p.y!=null);
+    const base={label:s.label,borderColor:s.color,backgroundColor:s.color,yAxisID:s.axis||'y',win:s.win||20,src:s.src,approx:s.approx,fmt:s.fmt||o.fmt,notes:s.notes,pointStyle:s.ps||'circle',spanGaps:true,tension:.25,cubicInterpolationMode:'monotone'};
+    if(s.raw)ds.push(Object.assign({},base,{label:s.label+' (weekly)',data:s.raw.filter(p=>p.x>=min-30*DAY),borderWidth:1,pointRadius:0,borderColor:s.color+'55',backgroundColor:s.color+'55',noTip:true}));
+    ds.push(Object.assign(base,{data:pts.filter(p=>p.x>=min-40*DAY),showLine:!s.dots,borderWidth:s.dots?1.5:(s.w||2.6),pointRadius:s.dots?(s.r||6):(s.pr??2),pointHoverRadius:s.dots?9:6,borderDash:s.dash||[]}));
+    if(ly&&!s.dots&&s.ly!==false){const sh=pts.map(p=>({x:p.x+Math.round(365.25*DAY),y:p.y,orig:p.x})).filter(p=>p.x>=min&&p.x<=max);if(sh.length)ds.push(Object.assign({},base,{label:s.label+' · last year',data:sh,borderDash:[5,4],borderWidth:1.8,pointRadius:0,borderColor:s.color+'99',backgroundColor:s.color+'99',ly:true}))}});
+  const ev=document.getElementById('tdEvents').checked?EVENTS.map(e=>[tsD(e.date),e.label]).filter(([t])=>t>=min&&t<=max).map(([t,l])=>t+'|'+l):[];
+  const span=(max-min)/DAY;const step=span>900?6:span>500?3:span>250?2:1;
+  const scales={x:{type:'linear',min,max,grid:{display:false},afterBuildTicks:sc=>{const t=[];const d=new Date(min);let y=d.getUTCFullYear(),m=d.getUTCMonth()+1;for(;;m++){if(m>11){m=0;y++}const v=Date.UTC(y,m,1);if(v>max)break;if(m%step===0)t.push({value:v})}sc.ticks=t},ticks:{maxRotation:0,autoSkip:false,callback:v=>tsLab(v)}},y:Object.assign({grid,ticks:{callback:o.fmt}},o.y||{})};
+  if(o.y1)scales.y1=Object.assign({position:'right',grid:{display:false},ticks:{callback:o.fmt1||o.fmt}},o.y1);
+  mk(id,{type:'line',data:{datasets:ds},options:{parsing:true,interaction:{mode:'xNear',intersect:false},scales,plugins:{events:ev,legend:{position:'bottom',labels:{filter:it=>!/\(weekly\)$/.test(it.text),font:{size:10.5}}},tooltip:{callbacks:{title:it=>{const r=it[0].raw;return r.orig?tsLab(r.orig,true)+' (shown a year on)':tsLab(r.x,it[0].dataset.win<10)},label:c=>{const d=c.dataset;return ` ${d.label}: ${d.approx?'≈':''}${d.fmt(c.parsed.y)}`},footer:it=>{const f=[];it.forEach(c=>{const nt=c.raw.note;if(nt)f.push(nt)});return f.join('\n')}}}}},plugins:o.zero?[zeroLine]:[]});
+}
+const fUSD=v=>'$'+(+v).toFixed(2),fUSD0=v=>'$'+Math.round(v),fPct=v=>(v>0?'+':'')+(+v).toFixed(Math.abs(v)<10?1:0)+'%',fX=v=>(+v).toFixed(2)+'×';
+function tdData(){
+  const cpm=rowsOf('meta_cpm').map(r=>({x:tsD(r.period),y:n(r.cpm_usd),yoy:n(r.yoy_pct)}));
+  const rc=rowsOf('meta_roas_cac').map(r=>({x:r.month==='2025-BFCM'?tsD('2025-11-30'):tsD(r.month),m:r.month,roas:n(r.blended_roas),cac:n(r.first_time_cac)}));
+  const ctc=rowsOf('ctc_cpm').map(r=>({x:tsD(r.month),m:r.month,y:n(r.cpm),note:r.note}));
+  const me=rowsOf('meta_earn').map(r=>({x:tsD(r.q_end)-45*DAY,q:r.quarter,price:n(r.price_yoy),impr:n(r.impr_yoy)}));
+  const cci=rowsOf('ctc_dtcci').map(r=>({x:tsD(r.month),m:r.month,y:n(r.dtcci)}));
+  const seen=new Set();const yoy=rowsOf('monthly_yoy').filter(r=>/^\d{4}-\d\d$/.test(r.period)&&!seen.has(r.period)&&seen.add(r.period)).map(r=>({x:tsD(r.period),rev:n(r.revenue),mer:n(r.mer_new),cac:n(r.cac_new),src:r.source}));
+  const tw=rowsOf('tw_weekly');const twSn=[...new Set(tw.map(r=>r.snapshot))].sort();
+  const twMed=(ch,m)=>twSn.map(s=>{const v=tw.filter(r=>r.snapshot===s&&r.channel===ch&&r.metric===m&&r.industry!=='industry').map(r=>n(r.median)).filter(v=>v!=null).sort((a,b)=>a-b);return v.length?{x:tsD(s),y:v[Math.floor(v.length/2)],note:'Median of '+v.length+' industry medians, trailing 30 days'}:null}).filter(Boolean);
+  const lyOf=(arr,k,i)=>{const t=arr[i];const d=new Date(t.x);const p=arr.find(a=>{const e=new Date(a.x);return e.getUTCFullYear()===d.getUTCFullYear()-1&&e.getUTCMonth()===d.getUTCMonth()&&(a.m||'').length===(t.m||'').length});return p&&p[k]!=null&&t[k]!=null?+((t[k]/p[k]-1)*100).toFixed(1):null};
+  return {cpm,rc,ctc,me,cci,yoy,twMed,lyOf};
+}
+function renderTrends(){
+  const X=tdData();const roll=document.getElementById('tdRoll').checked;
+  const lastC=X.cpm[X.cpm.length-1],lastR=X.rc[X.rc.length-1],lyR=X.rc.find(r=>r.m===(+lastR.m.slice(0,4)-1)+lastR.m.slice(4));const lastM=X.me[X.me.length-1];const lastCci=X.cci[X.cci.length-1],lyCci=X.cci.find(r=>r.m===(+lastCci.m.slice(0,4)-1)+lastCci.m.slice(4));
+  const qs=WEEKS.filter(w=>qOf(tsD(WE[w]))===qOf(tsD(WE[LAST])));const metaQ=qs.map(w=>coreShare(w,'Meta')).filter(v=>v!=null);const metaQavg=metaQ.reduce((a,b)=>a+b,0)/metaQ.length;
+  kpiStrip('tdKpis',[['Meta CPM · Northbeam','≈'+fUSD(lastC.y),`${fPct(lastC.yoy)} vs last year · ${tsLab(lastC.x,true)}`,T.down,'mb-cpm25'],['Meta price per ad',fPct(lastM.price),`${lastM.q} · impressions ${fPct(lastM.impr)}`,T.down,'meta-q3-26'],['Meta blended ROAS','≈'+lastR.roas.toFixed(2),lyR?`${fPct((lastR.roas/lyR.roas-1)*100)} vs ${tsLab(lyR.x)}`:'',T.up,'x-roas'],['First-time CAC','≈'+fUSD0(lastR.cac),lyR?`${fPct((lastR.cac/lyR.cac-1)*100)} vs ${tsLab(lyR.x)}`:'',T.up,'x-ncac'],['Shopper confidence',lastCci.y.toFixed(1),lyCci?`${fPct((lastCci.y/lyCci.y-1)*100)} vs ${tsLab(lyCci.x)}`:'',T.up,'ctc-dtcci'],['Meta share of core spend',metaQavg.toFixed(1)+'%',`${qOf(tsD(WE[LAST]))} to date · ${metaQ.length} weeks`,PCOL.Meta,'mb-weekly']]);
+  /* prices */
+  if(tdPrice==='lvl'){tdChart('cTdPrice',[
+      {label:'Northbeam weekly Meta CPM ≈',pts:X.cpm.map(p=>({x:p.x,y:p.y})),color:PCOL.Meta,approx:true,src:'mb-cpm25',w:3},
+      {label:'Common Thread portfolio Meta CPM',pts:X.ctc.map(p=>({x:p.x,y:p.y,note:p.note})),color:T.amber,win:40,ps:'rect',pr:4,ly:false},
+      {label:'Triple Whale median Meta CPM',pts:X.twMed('meta','cpm'),color:'#2ec4d6',dots:true,ps:'triangle'}],{fmt:fUSD0,y:{title:{display:true,text:'Meta CPM ($)',color:T.dim}}});
+    document.getElementById('tdPriceNote').textContent='Northbeam and Common Thread draw on different brands, so the levels differ, but both show the same shape: a flat-to-rising year, a November spike, a January reset and a higher base in 2026. Common Thread only publishes selected months, so its line joins the months it has published. Triple Whale adds one point a week from 28 Oct 2026.';}
+  else{const ctcY=X.ctc.map((p,i)=>({x:p.x,y:X.lyOf(X.ctc,'y',i)})).filter(p=>p.y!=null);
+    tdChart('cTdPrice',[
+      {label:'Northbeam Meta CPM vs last year ≈',pts:X.cpm.filter(p=>p.yoy!=null).map(p=>({x:p.x,y:p.yoy})),color:PCOL.Meta,approx:true,w:3},
+      {label:'Meta price per ad vs last year (earnings)',pts:X.me.map(p=>({x:p.x,y:p.price,note:p.q+' · impressions '+fPct(p.impr)})),color:T.amber,win:50,ps:'rect',pr:5},
+      {label:'Common Thread Meta CPM vs same month last year',pts:ctcY,color:'#a98bff',dots:true,ps:'rectRot'}],{fmt:fPct,zero:true,y:{title:{display:true,text:'Change vs last year',color:T.dim}}});
+    document.getElementById('tdPriceNote').textContent='Meta reports price per ad each quarter (plotted mid-quarter). It turned up in 2026 at the same time as Northbeam\'s CPMs: +12% in Q1 and Q2 and +14% in Q3, with US and Canada at +23%. Common Thread points are the year-on-year change for months it published in both years.';}
+  /* efficiency */
+  if(tdEff==='lvl'){tdChart('cTdEff',[
+      {label:'Meta blended ROAS ≈ (Northbeam, 1-day click)',pts:X.rc.filter(r=>r.m!=='2025-BFCM').map(r=>({x:r.x,y:r.roas})),color:T.up,approx:true,w:3,fmt:v=>(+v).toFixed(2)},
+      {label:'Meta first-time CAC ≈ (Northbeam)',pts:X.rc.filter(r=>r.m!=='2025-BFCM').map(r=>({x:r.x,y:r.cac})),color:T.down,axis:'y1',approx:true,w:3,fmt:fUSD0}],
+      {fmt:v=>(+v).toFixed(2),fmt1:fUSD0,y:{title:{display:true,text:'ROAS (1-day click)',color:T.dim}},y1:{title:{display:true,text:'First-time CAC',color:T.dim}}});
+    document.getElementById('tdEffNote').textContent='Monthly values read off Northbeam\'s weekly charts (1-day click, all accounts). From mid-2026 ROAS climbs and new-customer CAC falls even as CPMs rise: buyers pay more per impression but convert more of it. Turn on "Same period last year" to see the gap open from July.';}
+  else{const rY=X.rc.filter(r=>r.m!=='2025-BFCM');tdChart('cTdEff',[
+      {label:'Meta ROAS vs last year ≈ (Northbeam)',pts:rY.map((p,i)=>({x:p.x,y:X.lyOf(rY,'roas',i)})),color:T.up,approx:true,w:3},
+      {label:'Meta first-time CAC vs last year ≈ (Northbeam)',pts:rY.map((p,i)=>({x:p.x,y:X.lyOf(rY,'cac',i)})),color:T.down,approx:true,w:3},
+      {label:'Median new-customer MER vs last year (Northbeam)',pts:X.yoy.filter(r=>r.mer!=null).map(r=>({x:r.x,y:r.mer,note:r.src})),color:'#a98bff',dots:true,ps:'rect'},
+      {label:'Median new-customer CAC vs last year (Northbeam)',pts:X.yoy.filter(r=>r.cac!=null).map(r=>({x:r.x,y:r.cac,note:r.src})),color:T.past,dots:true,ps:'triangle'},
+      {label:'Common Thread Meta ROAS vs last year',pts:[{x:tsD('2026-02-15'),y:-3,note:'Q1 2026 DTC Index'}],color:T.amber,dots:true,ps:'rectRot',r:8}],{fmt:fPct,zero:true,y:{title:{display:true,text:'Change vs last year',color:T.dim}}});
+    document.getElementById('tdEffNote').textContent='Two views of efficiency. Northbeam\'s Meta-only lines (1-day click) turn sharply better from July 2026. Northbeam\'s all-channel median brand (markers) still had new-customer CAC up about 10% a year through H1, and Common Thread\'s Meta ROAS was down 3% in Q1. The improvement is recent and Meta-specific.';}
+  /* share */
+  const grp=tdShare==='big'?['Meta','Google']:['TikTok','AppLovin','YouTube','Snapchat','Pinterest','Microsoft'];
+  const sh=[];grp.forEach(p=>{const raw=WEEKS.map(w=>({x:tsD(WE[w]),y:coreShare(w,p)}));sh.push({label:p+(roll?' · 4-week average':''),pts:roll?rollAvg(raw):raw,raw:roll?raw:null,color:PCOL[p],w:p==='Meta'||p==='Google'?3:2.2,pr:0,win:5,fmt:v=>(+v).toFixed(1)+'%',ly:false})});
+  const q1=rowsOf('q1_share'),cq=rowsOf('ctc_qoq'),hs=rowsOf('haus_sow');const CMAP={Meta:['Meta Acquisition','Meta Non-Acquisition'],Google:['Google Non-Brand','Google Brand'],TikTok:['TikTok'],AppLovin:['AppLovin'],YouTube:['YouTube'],Snapchat:['Snapchat'],Pinterest:['Pinterest']};
+  grp.forEach(p=>{const r=q1.find(x=>x.platform===p);if(r)sh.push({label:p+' · Northbeam Q1',pts:[{x:tsD('2025-02-15'),y:n(r.q1_2025),note:'Q1 2025, all tracked spend'},{x:tsD('2026-02-15'),y:n(r.q1_2026),note:'Q1 2026, all tracked spend'}],color:PCOL[p],dots:true,ps:'triangle',win:50,fmt:v=>(+v).toFixed(1)+'%'});
+    if(CMAP[p]){const sum=k=>CMAP[p].reduce((a,c)=>{const r=cq.find(x=>x.channel===c);return a+(r?n(r[k]):0)},0);if(cq.some(x=>CMAP[p].includes(x.channel)))sh.push({label:p+' · Common Thread',pts:[{x:tsD('2025-11-15'),y:+sum('q4_2025_share').toFixed(1),note:'Q4 2025, 299 brands'},{x:tsD('2026-02-15'),y:+sum('q1_2026_share').toFixed(1),note:'Q1 2026, 299 brands'}],color:PCOL[p],dots:true,ps:'rect',win:50,fmt:v=>(+v).toFixed(1)+'%'})}
+    const h=hs.find(x=>x.platform===p);if(h)sh.push({label:p+' · Haus',pts:[{x:tsD('2025-11-15'),y:n(h.share),note:'Q4 2025 share of wallet'}],color:PCOL[p],dots:true,ps:'rectRot',win:50,fmt:v=>(+v).toFixed(1)+'%'})});
+  tdChart('cTdShare',sh,{fmt:v=>v+'%',y:{min:0}});
+  /* demand */
+  tdChart('cTdDemand',[
+    {label:'Consumer confidence (DTCCI)',pts:X.cci.map(p=>({x:p.x,y:p.y})),color:T.amber,w:3,fmt:v=>(+v).toFixed(1),win:20},
+    {label:'Northbeam median revenue vs last year',pts:X.yoy.filter(r=>r.rev!=null).map(r=>({x:r.x,y:r.rev,note:r.src})),color:T.up,axis:'y1',dots:true,ps:'rect',fmt:fPct},
+    {label:'Meta ad impressions vs last year',pts:X.me.map(p=>({x:p.x,y:p.impr,note:p.q})),color:PCOL.Meta,axis:'y1',ps:'triangle',pr:5,win:50,fmt:fPct}],
+    {fmt:v=>(+v).toFixed(0),fmt1:fPct,y:{title:{display:true,text:'DTCCI (100 = neutral)',color:T.dim}},y1:{title:{display:true,text:'Change vs last year',color:T.dim}}});
+  renderTdQ();renderTdQX(X);
+  const big=WEEKS.map(w=>coreShare(w,'Meta')).filter(v=>v!=null);
+  const tk=[['Prices up, returns up',`Northbeam's Meta CPM is up about ${Math.round(lastC.yoy)}% on last year and Meta's own price per ad rose ${lastM.price}% in ${lastM.q}. Over the same months Northbeam's Meta ROAS rose and first-time CAC fell. Paying more per impression has not cost efficiency this autumn.`,'mb-cpm25,meta-q3-26,x-roas,x-ncac'],['November is the pattern to plan for',`Every series that covers a November shows it: Northbeam's Meta CPM peaked at $23.06 in the week of 30 Nov 2025, and Common Thread's portfolio CPM has jumped 17–43% from October to November every year since 2022.`,'mb-cpm25,ctc-cpm'],['Meta keeps its share',`Across ${WEEKS.length} weeks Meta's share of Northbeam core spend has stayed between ${Math.min(...big).toFixed(0)}% and ${Math.max(...big).toFixed(0)}%. Common Thread (61% in Q1) and Haus (57% in Q4 2025) put it in the same range.`,'mb-weekly,ctc-mix,haus-sow'],['Shoppers are more confident than a year ago',`The DTCCI reads ${lastCci.y.toFixed(1)} for ${tsLab(lastCci.x)}, against ${lyCci?lyCci.y.toFixed(1):'–'} a year earlier. Meta's ad impressions are still growing (${fPct(lastM.impr)} in ${lastM.q}), so more supply is meeting firmer demand.`,'ctc-dtcci,meta-q3-26']];
+  document.getElementById('tdTakes').innerHTML=tk.map(([h,p,s])=>`<div class="story"><h4>${esc(h)}</h4><p>${esc(p)}</p>${srcBtn(s,'SOURCE · QUOTE')}</div>`).join('');
+}
+function renderTdQ(){
+  const m=document.getElementById('tdQMetric').value;const Q={};WEEKS.forEach(w=>{const q=qOf(tsD(WE[w]));(Q[q]=Q[q]||[]).push(w)});const qk=Object.keys(Q).sort().filter(q=>Q[q].length>1);const cur=qOf(tsD(WE[LAST]));
+  const plats=m==='share'?CORE:PLATS;const cost=m in COST;
+  const cell=(p,ws)=>{if(m==='share'){const v=ws.map(w=>coreShare(w,p)).filter(v=>v!=null);return v.length?v.reduce((a,b)=>a+b,0)/v.length:null}let x=1,k=0;ws.forEach(w=>{const v=val(w,p,m);if(v!=null){x*=1+v/100;k++}});return k?(x-1)*100:null};
+  document.getElementById('tTdQ').innerHTML='<thead><tr><th>Platform</th>'+qk.map(q=>`<th>${q}${q===cur?' to date':''}<br><span style="color:${T.dim};font-weight:400">${Q[q].length} wks</span></th>`).join('')+(m==='share'?'<th>Change</th>':'<th>Whole period</th>')+'</tr></thead><tbody>'+plats.map(p=>{const v=qk.map(q=>cell(p,Q[q]));const tot=m==='share'?(v[v.length-1]!=null&&v[0]!=null?v[v.length-1]-v[0]:null):cell(p,WEEKS.slice(1));
+    return `<tr><td><span class="pf" style="background:${PCOL[p]}"></span>${p}</td>`+v.map(x=>m==='share'?`<td>${x==null?'·':x.toFixed(1)+'%'}</td>`:`<td style="${heat(x,cost,25)}">${x==null?'·':fmtP(x,1)}</td>`).join('')+(m==='share'?`<td style="${heat(tot,false,3)}">${tot==null?'·':(tot>0?'+':'')+tot.toFixed(1)+'pp'}</td>`:`<td style="${heat(tot,cost,40)}">${tot==null?'·':fmtP(tot,1)}</td>`)+'</tr>'}).join('')+'</tbody>';
+  document.getElementById('tdQNote').textContent=m==='share'?'Average weekly share of core platform spend (Meta, Google, TikTok, YouTube, AppLovin, Microsoft, Snapchat, Pinterest) in each quarter.':`Each cell compounds Northbeam's week-over-week ${MNAME[m]} changes for the weeks ending in that quarter, so it reads as "how far ${MNAME[m]} moved during the quarter". Green is good for the buyer (cheaper or more efficient). Chained weekly figures drift, so treat them as direction, not exact levels.`;
+}
+function renderTdQX(X){
+  const qs=['2025 Q1','2025 Q2','2025 Q3','2025 Q4','2026 Q1','2026 Q2','2026 Q3','2026 Q4'];const cur=qOf(Date.now());
+  const avg=(pts)=>{const o={};pts.forEach(p=>{if(p.y==null)return;const q=qOf(p.x);(o[q]=o[q]||[]).push(p.y)});return Object.fromEntries(Object.entries(o).map(([k,v])=>[k,v.reduce((a,b)=>a+b,0)/v.length]))};
+  const rc=X.rc.filter(r=>r.m!=='2025-BFCM');
+  const rows=[['Meta price per ad vs LY','Meta earnings',Object.fromEntries(X.me.map(p=>[qOf(p.x),p.price])),fPct,'down','meta-q3-26'],['Meta ad impressions vs LY','Meta earnings',Object.fromEntries(X.me.map(p=>[qOf(p.x),p.impr])),fPct,null,'meta-q3-26'],['Meta CPM ≈','Northbeam',avg(X.cpm),fUSD,'down','mb-cpm25'],['Meta CPM','Common Thread',avg(X.ctc),fUSD,'down','ctc-cpm'],['Meta blended ROAS ≈','Northbeam',avg(rc.map(r=>({x:r.x,y:r.roas}))),v=>v.toFixed(2),'up','x-roas'],['Meta first-time CAC ≈','Northbeam',avg(rc.map(r=>({x:r.x,y:r.cac}))),fUSD0,'down','x-ncac'],['Median revenue vs LY','Northbeam',avg(X.yoy.map(r=>({x:r.x,y:r.rev}))),fPct,null,'bl-planning,mb-h1'],['Meta share of core spend','Northbeam',avg(WEEKS.slice(1).map(w=>({x:tsD(WE[w]),y:coreShare(w,'Meta')}))),v=>v.toFixed(1)+'%',null,'mb-weekly'],['Consumer confidence','Common Thread DTCCI',avg(X.cci),v=>v.toFixed(1),'up','ctc-dtcci']];
+  document.getElementById('tTdQX').innerHTML='<thead><tr><th>Series</th><th>Publisher</th>'+qs.map(q=>`<th>${q.replace('20','\'').replace(' ','<br>')}${q===cur?'<br><span style="color:'+T.dim+';font-weight:400">to date</span>':''}</th>`).join('')+'</tr></thead><tbody>'+rows.map(([lab,pub,o,f,better,src])=>`<tr><td>${lab} ${srcBtn(src,'↗')}</td><td style="color:${T.dim}">${pub}</td>`+qs.map(q=>{const v=o[q];if(v==null)return '<td style="color:'+T.dim+'">·</td>';let st='';if(better&&q.startsWith('2026')&&q!==cur){const p=o[q.replace('2026','2025')];if(p!=null){const d=(v/p-1)*100;st=heat(d,better==='down',25)}}return `<td style="${st}">${f(v)}</td>`}).join('')+'</tr>').join('')+'</tbody>';
+}
+SEGBIND('tdRange',b=>{tdRange=b.dataset.r;renderTrends()});SEGBIND('tdPriceMode',b=>{tdPrice=b.dataset.v;renderTrends()});SEGBIND('tdEffMode',b=>{tdEff=b.dataset.v;renderTrends()});SEGBIND('tdShareGrp',b=>{tdShare=b.dataset.v;renderTrends()});
+['tdRoll','tdLY','tdEvents'].forEach(id=>document.getElementById(id).addEventListener('change',renderTrends));
+document.getElementById('tdQMetric').addEventListener('change',renderTdQ);
 
 /* ---------- CTC ---------- */
 let ctView='roas';
@@ -1565,7 +1735,7 @@ SEGBIND('hsMeasure',b=>{hsMeasure=b.dataset.m;renderHaus()});
 ['twMetric','twChan','twSnap','twInd'].forEach(id=>document.getElementById(id).addEventListener('change',renderTW));
 
 /* ---------- routing ---------- */
-const VIEWS={front:renderFront,'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:renderBfcm,mkt:renderMkt,'mo-bench':renderMoBench,'mo-trend':renderMoTrend,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,wire:renderWire};
+const VIEWS={front:renderFront,'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:renderBfcm,mkt:renderMkt,'mo-bench':renderMoBench,'mo-trend':renderMoTrend,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,wire:renderWire};
 function show(){let v=(location.hash||'#front').slice(1);if(!(v in VIEWS))v='front';
   Object.keys(VIEWS).forEach(x=>document.getElementById('v-'+x).hidden=x!==v);
   const desk=/^(nb|mo)-/.test(v)?v.split('-')[0]:v;
@@ -1581,7 +1751,7 @@ document.getElementById('shBasis').addEventListener('click',e=>{const b=e.target
 document.getElementById('shChart').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;shChartT=b.dataset.c;document.querySelectorAll('#shChart button').forEach(x=>x.setAttribute('aria-pressed',x===b));renderShare()});
 document.getElementById('ovSeg').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;ovMetric=b.dataset.m;document.querySelectorAll('#ovSeg button').forEach(x=>x.setAttribute('aria-pressed',x===b));renderOverlay()});
 document.getElementById('selBand').addEventListener('change',renderBand);
-['cmpMetric','cmpRange','cmpEvents'].forEach(id=>document.getElementById(id).addEventListener('change',renderCompare));
+['cmpMetric','cmpRange','cmpEvents','cmpRoll'].forEach(id=>document.getElementById(id).addEventListener('change',renderCompare));
 document.getElementById('cmpMode').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;cmpMode=b.dataset.m;document.querySelectorAll('#cmpMode button').forEach(x=>x.setAttribute('aria-pressed',x===b));renderCompare()});
 ['lensDim','lensSeg'].forEach(id=>document.getElementById(id).addEventListener('change',renderLens));
 document.getElementById('adsMode').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;adsMode=b.dataset.m;document.querySelectorAll('#adsMode button').forEach(x=>x.setAttribute('aria-pressed',x===b));renderCreative()});

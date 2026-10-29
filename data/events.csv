@@ -1,5 +1,12 @@
 # Calendar events used to annotate weekly charts (US retail calendar + events Northbeam cites)
 date,label,type
+2024-07-16,Prime Day 2024,amazon
+2024-11-29,Black Friday 2024,calendar
+2025-04-02,US tariffs announced,macro
+2025-07-08,Prime Day 2025,amazon
+2025-08-29,US de minimis ends,macro
+2025-10-07,Prime Big Deal Days 2025,amazon
+2025-11-28,Black Friday 2025,calendar
 2026-01-01,New Year,calendar
 2026-02-08,Super Bowl,calendar
 2026-02-14,Valentine's,calendar

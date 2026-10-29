@@ -72,3 +72,9 @@ This file is the procedure scheduled runs follow. The page is built from `templa
 ## Front page and nav
 - Front page lead is cross-source (Northbeam, Meta, CTC, Foxwell). Refresh its headline/dek when the story changes; the chart, KPI strip and "From the desks" tiles compute from the data automatically (tiles show each publisher's newest library entry, excluding cadence entries).
 - New publisher desks go in the Desks dropdown (`#deskMenu`) and in `PUBDESKS`. Run `node tests/nav.js` after nav changes.
+
+## Northbeam Meta desk (weekly)
+- Log every Northbeam / Bryan Bumgardner post with Meta or market data in data/nb_x_posts.csv (date, account, headline, figure, feeds, url).
+- When Northbeam republishes a weekly Meta chart (CPM/YoY, CPC, CTR/CVR, CAC/ROAS), digitise it week by week rather than by month: load the pbs.twimg.com image (?format=png&name=large) in the built-in browser, read line pixels per column on a canvas, calibrate y from the axis label rows and x from the month labels, then pin the chart's annotated values exactly. Update data/meta_cpm_weekly_approx.csv (CPM + YoY) or data/meta_weekly_h1.csv. Mark interpolated weeks.
+- Northbeam's public weekly index (Media Buyer Index) starts w/e 3 Jan 2026; nothing earlier was published. The weekly Meta CPM chart is the longest weekly series (from Jan 2025).
+- Share of wallet: Northbeam has not published Q3 2025. The share page computes Q2-Q4 2026 from the weekly index (all-tracked basis from w/c 3 May). Replace with a published quarterly figure if one appears.

@@ -415,9 +415,10 @@ table.q tbody tr.link{cursor:pointer}
     <div class="tw" style="max-height:560px"><table class="q" id="tShare"></table></div>
   </div>
   <div class="grid2">
-    <div class="term">
-      <div class="th"><span class="t">Q1 share of wallet · 2025 vs 2026</span><span class="m">all tracked spend</span></div>
+    <div class="term" style="grid-column:1/-1">
+      <div class="th"><span class="t">Share of wallet by quarter</span><span class="m">all tracked spend</span></div>
       <div class="tw"><table class="q" id="tQ1"></table></div>
+      <p class="note" id="tQ1Note"></p>
     </div>
     <div class="term">
       <div class="th"><span class="t">Fastest-growing small platforms · H1 2026</span><span class="m">spend growth vs H1 2025, under $100M tracked</span></div>
@@ -563,16 +564,34 @@ table.q tbody tr.link{cursor:pointer}
 <section class="view" id="v-nb-meta" hidden>
   <div>
     <div class="kicker">Northbeam · Meta</div>
-    <h2>Clicks got cheaper, conversion got harder, then efficiency turned in June</h2>
-    <p class="dek">Monthly values read off Northbeam's published Meta charts (one-day click, all accounts). Close approximations; labelled peaks and lows are exact.</p>
+    <h2>Meta CPMs are running about 25% above last year, and the gap is widening into Q4</h2>
+    <p class="dek">Northbeam's weekly Meta CPM across every account it tracks since January 2025, its monthly CPC, CTR, conversion, ROAS and CAC charts, the weekly index for Meta, and the Q3 2026 benchmark heatmap. Values read off Northbeam's charts are marked ≈; its labelled peaks are exact.</p>
+  </div>
+  <div class="strip" id="mtKpis"></div>
+  <div class="term">
+    <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Meta CPM, week by week</span>
+      <div class="seg" role="group" aria-label="View" id="mtView" style="margin-left:auto"><button type="button" data-v="line" aria-pressed="true">Timeline with YoY</button><button type="button" data-v="season" aria-pressed="false">2025 vs 2026</button></div>
+      <label class="chk"><input type="checkbox" id="mtEvents" checked> Events</label></div>
+    <div class="chart tall"><canvas id="cMtCpm"></canvas></div>
+    <p class="note" id="mtNote"></p>
   </div>
   <div class="grid2">
-    <div class="term"><div class="th"><span class="t">CPM and CPC</span><span class="m">Jan 2025 – Jun 2026</span></div><div class="chart"><canvas id="cM1"></canvas></div></div>
-    <div class="term"><div class="th"><span class="t">CTR and conversion rate</span><span class="m">Jan 2025 – Jun 2026</span></div><div class="chart"><canvas id="cM2"></canvas></div></div>
+    <div class="term"><div class="th"><span class="t">Average Meta CPM by quarter</span><span class="m">mean of weekly values ≈</span></div><div class="tw"><table class="q" id="tMtQ"></table></div><p class="note">Q3 2026 vs Q3 2025 is the like-for-like read on the quarter just closed.</p></div>
+    <div class="term"><div class="th"><span class="t">Meta in the weekly index</span><span class="m">last 8 weeks · week-over-week change</span></div><div class="tw"><table class="q" id="tMtWk"></table></div></div>
   </div>
   <div class="grid2">
-    <div class="term"><div class="th"><span class="t">Blended ROAS and first-time CAC</span><span class="m">Jan 2025 – Oct 2026</span></div><div class="chart"><canvas id="cM3"></canvas></div></div>
-    <div class="term"><div class="th"><span class="t">TikTok conversion rate</span><span class="m">1-day click</span></div><div class="chart"><canvas id="cTT"></canvas></div></div>
+    <div class="term"><div class="th"><span class="t">CPM and CPC</span><span class="m">weekly ≈ · Jan 2025 – May 2026</span></div><div class="chart"><canvas id="cM1"></canvas></div></div>
+    <div class="term"><div class="th"><span class="t">CTR and conversion rate</span><span class="m">weekly ≈ · Jan 2025 – May 2026</span></div><div class="chart"><canvas id="cM2"></canvas></div></div>
+  </div>
+  <div class="term"><div class="th"><span class="t">Blended ROAS and new-customer CAC</span><span class="m">weekly ≈ Jan 2025 – May 2026, then monthly ≈ to Oct 2026 · 1-day click</span></div><div class="chart"><canvas id="cM3"></canvas></div><p class="note">Solid lines are the weekly series from Northbeam&#39;s June charts. Dashed lines continue with monthly values read from its October posts, which use a slightly different cut (BFCM CAC $309 there vs about $270 here), so read the two as direction rather than one series.</p></div>
+  <div class="term">
+    <div class="th"><span class="t">Q3 2026 vs Q3 2025 by monthly ad spend</span><span class="m">all platforms, all Northbeam accounts · green = better, red = worse (CAC inverted)</span></div>
+    <div class="tw"><table class="q" id="tMtHeat"></table></div>
+    <p class="note">Northbeam's headline: ad spend up more than 30% on average in Q3. Accounts spending $200k–$500k a month did best at the median (revenue +8.1%, new-customer revenue +6.3%); the $500k–$1m band saw median new-customer CAC rise 13%.</p>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t">Northbeam's Meta snapshots on X</span><span class="m">captured weekly · where each one is used on this site</span></div>
+    <div class="tw"><table class="q cad-t" id="tMtX"></table></div>
   </div>
 </section>
 
@@ -1024,7 +1043,7 @@ function openSources(ids){
 function closeSources(){document.getElementById('drawer').hidden=true;document.getElementById('scrim').hidden=true;lastFocus&&lastFocus.focus&&lastFocus.focus()}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-src]');if(b){e.preventDefault();openSources(b.dataset.src)}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.getElementById('drawer').hidden)closeSources()});
-const SRC_MAP={cFxMood:'fox-q4-26',cFxChan:'fox-q4-26',cFxDaily:'fox-q4-26',cFxAndro:'fox-q4-26',tFxField:'fox-andromeda,fox-hw,fox-pricing26,fox-bfcm25',cFxAgency:'fox-agency25,fox-agency26',tFxCad:'fox-cadence',cTdPrice:'mb-cpm25,meta-q3-26,ctc-cpm,tw-weekly,varos-archive',cTdEff:'x-roas,x-ncac,bl-planning,mb-h1,ctc-q1idx',cTdShare:'mb-weekly,mb-may,ctc-mix,haus-sow',cTdDemand:'ctc-dtcci,meta-q3-26,bl-planning,mb-h1',tTdQ:'mb-weekly',cBfLive:'mb-bfcm,bl-cyberweek',cEarn:'meta-q3-26,meta-q2-26,meta-q1-26,meta-q4-25',cEarnReg:'meta-apac,meta-q2-26',cEarnVsNb:'meta-q3-26,mb-cpm25,x-roas',cMoTier:'mo-cb26key',cMoPort:'mo-cb26key',cMoFmt:'mo-cb26',cMoHW:'mo-bfcm26',cTrBrand:'mo-trending',cTrAspect:'mo-trending',cTrInd:'mo-trending',cHsCh:'haus-yt26,haus-meta25,haus-tiktok,haus-applovin',cHsIA:'haus-ia-jul,haus-ia-oct',cHsRep:'haus-ia-oct',cHs7dc:'haus-ia-oct',cHsCat:'haus-catalog',cHsSearch:'haus-search',cHsTN:'haus-textnow',cHsCW:'haus-cw25',cHsApp:'haus-applovin',cTwInd:'tw-weekly',cTwHist:'tw-weekly',cCtMix:'ctc-mix',cCtCci:'ctc-dtcci',cCtCpm:'ctc-cpm',cCtTier:'ctc-mix',cCtMer:'ctc-mix',cCtHits:'ctc-hits',tCtIdx:'ctc-q1idx,ctc-h1,ctc-applovin',tCtBf:'ctc-bfcm25',tTwCh:'tw-weekly',cMoAI:'mo-ai',cCmp:'mb-weekly',cAdsLaunch:'bl-jan',cAdsWeek:'mb-hudson,mb-ugc1,bl-jan',cMis:'mb-ugc1',cVertAds:'x-verticals',cCap:'mb-ugc3,mb-ugc2,bl-jan',fCross:'mb-cpm25,meta-q3-26,ctc-cpm',fBoard:'mb-weekly',fShare:'mb-weekly',fMovers:'mb-weekly',trMulti:'mb-weekly',tHeat:'mb-weekly',cShare:'mb-weekly,mb-may',tTrend:'mb-weekly',tShare:'mb-weekly',tQ1:'mb-may',tEmerg:'x-emerging',cMonthly:'bl-planning,bl-jan,bl-feb,mb-april,mb-may,mb-h1,bl-cyberweek,bl-cost',cBand:'mb-h1,mb-cpm25',tH1rev:'mb-h1',tH1aov:'mb-h1',cSize:'bl-under5,bl-cost',tVert:'bl-power',tMix:'x-verticals',tAds:'bl-jan',cAI:'mb-ai',cOverlay:'mb-cpm25,x-roas,x-ncac',cArc:'mb-bfcm,bl-cyberweek',cPace:'bl-cyberfive',cLag:'mb-lag',tInd:'x-industry',cPost:'mb-weekly,bl-q5',cJan:'bl-jan',cM1:'mb-h1,mb-metatank',cM2:'mb-h1,mb-metatank',cM3:'x-roas,x-ncac',cTT:'mb-tiktok'};
+const SRC_MAP={cMtCpm:'mb-cpm25',tMtQ:'mb-cpm25',tMtWk:'mb-weekly',tMtHeat:'mb-cpm25',cFxMood:'fox-q4-26',cFxChan:'fox-q4-26',cFxDaily:'fox-q4-26',cFxAndro:'fox-q4-26',tFxField:'fox-andromeda,fox-hw,fox-pricing26,fox-bfcm25',cFxAgency:'fox-agency25,fox-agency26',tFxCad:'fox-cadence',cTdPrice:'mb-cpm25,meta-q3-26,ctc-cpm,tw-weekly,varos-archive',cTdEff:'x-roas,x-ncac,bl-planning,mb-h1,ctc-q1idx',cTdShare:'mb-weekly,mb-may,ctc-mix,haus-sow',cTdDemand:'ctc-dtcci,meta-q3-26,bl-planning,mb-h1',tTdQ:'mb-weekly',cBfLive:'mb-bfcm,bl-cyberweek',cEarn:'meta-q3-26,meta-q2-26,meta-q1-26,meta-q4-25',cEarnReg:'meta-apac,meta-q2-26',cEarnVsNb:'meta-q3-26,mb-cpm25,x-roas',cMoTier:'mo-cb26key',cMoPort:'mo-cb26key',cMoFmt:'mo-cb26',cMoHW:'mo-bfcm26',cTrBrand:'mo-trending',cTrAspect:'mo-trending',cTrInd:'mo-trending',cHsCh:'haus-yt26,haus-meta25,haus-tiktok,haus-applovin',cHsIA:'haus-ia-jul,haus-ia-oct',cHsRep:'haus-ia-oct',cHs7dc:'haus-ia-oct',cHsCat:'haus-catalog',cHsSearch:'haus-search',cHsTN:'haus-textnow',cHsCW:'haus-cw25',cHsApp:'haus-applovin',cTwInd:'tw-weekly',cTwHist:'tw-weekly',cCtMix:'ctc-mix',cCtCci:'ctc-dtcci',cCtCpm:'ctc-cpm',cCtTier:'ctc-mix',cCtMer:'ctc-mix',cCtHits:'ctc-hits',tCtIdx:'ctc-q1idx,ctc-h1,ctc-applovin',tCtBf:'ctc-bfcm25',tTwCh:'tw-weekly',cMoAI:'mo-ai',cCmp:'mb-weekly',cAdsLaunch:'bl-jan',cAdsWeek:'mb-hudson,mb-ugc1,bl-jan',cMis:'mb-ugc1',cVertAds:'x-verticals',cCap:'mb-ugc3,mb-ugc2,bl-jan',fCross:'mb-cpm25,meta-q3-26,ctc-cpm',fBoard:'mb-weekly',fShare:'mb-weekly',fMovers:'mb-weekly',trMulti:'mb-weekly',tHeat:'mb-weekly',cShare:'mb-weekly,mb-may',tTrend:'mb-weekly',tShare:'mb-weekly',tQ1:'mb-may',tEmerg:'x-emerging',cMonthly:'bl-planning,bl-jan,bl-feb,mb-april,mb-may,mb-h1,bl-cyberweek,bl-cost',cBand:'mb-h1,mb-cpm25',tH1rev:'mb-h1',tH1aov:'mb-h1',cSize:'bl-under5,bl-cost',tVert:'bl-power',tMix:'x-verticals',tAds:'bl-jan',cAI:'mb-ai',cOverlay:'mb-cpm25,x-roas,x-ncac',cArc:'mb-bfcm,bl-cyberweek',cPace:'bl-cyberfive',cLag:'mb-lag',tInd:'x-industry',cPost:'mb-weekly,bl-q5',cJan:'bl-jan',cM1:'x-metaweekly,mb-metatank',cM2:'x-metaweekly,mb-metatank',cM3:'x-metaweekly,x-roas,x-ncac'};
 function injectSources(){Object.entries(SRC_MAP).forEach(([id,ids])=>{const el=document.getElementById(id);if(!el)return;const term=el.closest('.term');if(!term||term.querySelector(':scope > .th .src-btn, :scope > .ctl .src-btn'))return;const host=term.querySelector(':scope > .th')||term.querySelector(':scope > .ctl');if(host){const n=ids.split(',').length;host.insertAdjacentHTML('beforeend',srcBtn(ids,n>1?`SRC ×${n} ↗`:'SRC ↗'))}})}
 const n=v=>{if(v===undefined||v===null)return null;const s=String(v).trim();if(s===''||s==='-')return null;const x=parseFloat(s.replace('~',''));return isNaN(x)?null:x};
 const rowsOf=k=>D[k].rows.map(r=>Object.fromEntries(D[k].cols.map((c,i)=>[c,r[i]])));
@@ -1208,8 +1227,14 @@ function renderShare(){
   const tr=(p,k)=>{const a=coreShare(LAST,p),b=coreShare(WEEKS[Math.max(0,WEEKS.length-1-k)],p);return a==null||b==null?null:a-b};
   document.getElementById('tTrend').innerHTML='<thead><tr><th>Platform</th><th>Share now</th><th>vs last wk</th><th>vs 4 wks</th><th>vs 13 wks</th><th>vs 28 Dec 25</th><th style="min-width:140px">Last 13 weeks</th></tr></thead><tbody>'+CORE.map(p=>{const sp=WEEKS.slice(-13).map(w=>coreShare(w,p)).filter(v=>v!=null);const mn=Math.min(...sp),mx=Math.max(...sp);const pts=sp.map((v,i)=>`${(i/(sp.length-1)*130).toFixed(1)},${(18-(mx===mn?9:(v-mn)/(mx-mn)*16)-1).toFixed(1)}`).join(' ');
     return `<tr class="link" data-drill="${p}"><td><span class="pf" style="background:${PCOL[p]}"></span>${p}</td><td>${coreShare(LAST,p).toFixed(2)}%</td>`+[1,4,13,WEEKS.length-1].map(k=>{const d=tr(p,k);return `<td style="${heat(d,false,2)}">${d==null?'·':(d>0?'+':'')+d.toFixed(2)+'pp'}</td>`}).join('')+`<td><svg width="130" height="18" viewBox="0 0 130 18" aria-hidden="true"><polyline points="${pts}" fill="none" stroke="${PCOL[p]}" stroke-width="1.8" style="filter:drop-shadow(0 0 3px ${PCOL[p]})"/></svg></td></tr>`}).join('')+'</tbody>';
-  const q=rowsOf('q1_share');
-  document.getElementById('tQ1').innerHTML='<thead><tr><th>Platform</th><th>Q1 2025</th><th>Q1 2026</th><th>Change</th></tr></thead><tbody>'+q.map(r=>{const c=n(r.relative_change_pct);return `<tr><td><span class="pf" style="background:${PCOL[r.platform]||T.dim}"></span>${r.platform}</td><td>${r.q1_2025}%</td><td>${r.q1_2026}%</td><td style="color:${goodCol(c,false)}">${arrow(c)} ${fmtP(c,0)}</td></tr>`}).join('')+'</tbody>';
+  const q=rowsOf('q1_share');const qOfW=w=>qOf(tsD(WE[w]));
+  const qavg=(qq,from)=>{const ws=WEEKS.filter(w=>qOfW(w)===qq&&w>=(from||'')&&w>='2026-05-03');return {ws,get:p=>{const v=ws.map(w=>(MBI.find(x=>x.ws===w&&x.p===p)||{}).share).filter(v=>v!=null);return v.length?v.reduce((a,b)=>a+b,0)/v.length:null}}};
+  const Q2=qavg('2026 Q2'),Q3=qavg('2026 Q3'),Q4=qavg('2026 Q4');
+  const rowsP=['Meta','Google','All other','TikTok','AppLovin','YouTube','Microsoft','Pinterest','Snapchat'];
+  const sk=(p,k)=>{if(p==='All other'){const a=q.find(r=>r.platform==='All other'),b=q.find(r=>r.platform==='Amazon');return a&&b?n(a[k])+n(b[k]):null}const r=q.find(r=>r.platform===p);return r?n(r[k]):null};
+  const f=v=>v==null?'·':v.toFixed(1)+'%';
+  document.getElementById('tQ1').innerHTML=`<thead><tr><th>Platform</th><th>Q1 2025</th><th>Q1 2026</th><th>Q2 2026*</th><th>Q3 2026</th>${Q4.ws.length?'<th>Q4 to date</th>':''}<th>Q3 vs Q1 '26</th></tr></thead><tbody>`+rowsP.map(p=>{const a=sk(p,'q1_2025'),b=sk(p,'q1_2026'),c=Q2.get(p),d=Q3.get(p),e=Q4.get(p);const ch=d!=null&&b!=null?d-b:null;return `<tr><td><span class="pf" style="background:${PCOL[p]||T.dim}"></span>${p==='All other'?'All other (incl. Amazon)':p}</td><td>${f(a)}</td><td>${f(b)}</td><td>${f(c)}</td><td><b>${f(d)}</b></td>${Q4.ws.length?`<td>${f(e)}</td>`:''}<td style="${heat(ch,false,3)}">${ch==null?'·':(ch>0?'+':'')+ch.toFixed(1)+'pp'}</td></tr>`}).join('')+'</tbody>';
+  document.getElementById('tQ1Note').textContent=`Q1 columns are Northbeam's published share-of-wallet chart. Q2, Q3 and Q4 average the weekly index on the same all-tracked basis (Q3: ${Q3.ws.length} weeks; *Q2 only from w/c 3 May, ${Q2.ws.length} weeks, when "All other" was added). Northbeam has not published a Q3 2025 share, so Q3 2026 is compared with Q1 2026; the weekly index will give a true Q3-vs-Q3 read next year.`;
   const e=rowsOf('emerging');const mx=Math.max(...e.map(r=>n(r.spend_growth_pct)));
   document.getElementById('tEmerg').innerHTML='<thead><tr><th>Platform</th><th>Growth</th><th style="width:50%"></th></tr></thead><tbody>'+e.map(r=>{const v=n(r.spend_growth_pct);return `<tr><td>${r.platform}</td><td class="up">+${v.toLocaleString()}%</td><td><div style="height:8px;background:${T.amber};width:${Math.max(2,Math.sqrt(v/mx)*100)}%"></div></td></tr>`}).join('')+'</tbody>';
 }
@@ -1220,21 +1245,21 @@ const RC=rowsOf('meta_roas_cac').map(r=>({m:r.month,roas:n(r.blended_roas),cac:n
 const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","BFCM wk","Dec"];
 function seasonPair(metric){
   const s25=Array(13).fill(null),s26=Array(13).fill(null);
-  if(metric==='cpm'){CPM.forEach(r=>{const [y,mm,dd]=r.d.split('-').map(Number);let i=mm-1;if(y===2025&&mm===11&&dd>=24)i=11;else if(mm===12)i=12;else if(mm===11)i=10;
-    if(y===2025){if(s25[i]==null||(i===10&&dd<10))s25[i]=r.v}else{if(mm===9&&dd>15)return;s26[i]=r.v}})}
+  if(metric==='cpm'){const acc={};CPM.forEach(r=>{const [y,mm,dd]=r.d.split('-').map(Number);let i=mm-1;if(mm===11)i=dd>=23?11:10;else if(mm===12)i=dd<=6?11:12;const k=y+'|'+i;(acc[k]=acc[k]||[]).push(r.v)});
+    Object.entries(acc).forEach(([k,v])=>{const [y,i]=k.split('|').map(Number);const val=i===11?Math.max(...v):+(v.reduce((a,b)=>a+b,0)/v.length).toFixed(2);(y===2025?s25:s26)[i]=val})}
   else{RC.forEach(r=>{const v=r[metric];if(r.m==='2025-BFCM'){s25[11]=v;return}const [y,mm]=r.m.split('-').map(Number);const i=mm===12?12:(mm===11?10:mm-1);(y===2025?s25:s26)[i]=v})}
-  const proj=Array(13).fill(null);const o25=s25[9],o26=s26[9];
-  if(o25&&o26){proj[9]=o26;[10,11,12].forEach(i=>{if(s25[i]!=null)proj[i]=+(o26*s25[i]/o25).toFixed(metric==='roas'?3:2)})}
-  return {s25,s26,proj};
+  const proj=Array(13).fill(null);let ok=9;while(ok>0&&(s25[ok]==null||s26[ok]==null))ok--;const o25=s25[ok],o26=s26[ok];
+  if(o25&&o26){proj[ok]=o26;[10,11,12].forEach(i=>{if(s25[i]!=null)proj[i]=+(o26*s25[i]/o25).toFixed(metric==='roas'?3:2)})}
+  return {s25,s26,proj,ok};
 }
 let ovMetric='cpm';
 const OVI={cpm:{u:v=>'$'+v.toFixed(2),n:'CPM'},roas:{u:v=>v.toFixed(2),n:'blended ROAS'},cac:{u:v=>'$'+v.toFixed(0),n:'first-time CAC'}};
 function renderOverlay(){
-  const {s25,s26,proj}=seasonPair(ovMetric);const I=OVI[ovMetric];
+  const {s25,s26,proj,ok}=seasonPair(ovMetric);const I=OVI[ovMetric];const MN=['January','February','March','April','May','June','July','August','September','October'][ok];
   mk('cOverlay',{type:'line',data:{labels:MON,datasets:[{label:'2025',data:s25,borderColor:T.past,backgroundColor:T.past,borderWidth:2.5,pointRadius:3,tension:.3,spanGaps:true},{label:'2026',data:s26,borderColor:T.amber,backgroundColor:T.amber,borderWidth:3,pointRadius:3,tension:.3,spanGaps:true},{label:'2026 scenario',data:proj,borderColor:T.amber,borderDash:[6,5],borderWidth:2,pointRadius:4,backgroundColor:T.bg,tension:.3,spanGaps:true}]},
     options:{interaction:{mode:'index',intersect:false},scales:{y:{grid,ticks:{callback:v=>ovMetric==='roas'?v.toFixed(2):'$'+v}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.parsed.y==null?null:`${c.dataset.label}: ${I.u(c.parsed.y)}`}}}}});
-  const o25=s25[9],b25=s25[11],o26=s26[9],b26=proj[11];
-  let t=`Scenario, not a forecast. In 2025 Meta ${I.n} went from ${I.u(o25)} in October to ${I.u(b25)} in BFCM week (${fmtP((b25/o25-1)*100,0)}). The same move from October 2026's ${I.u(o26)} gives about ${I.u(b26)} for BFCM week 2026.`;
+  const o25=s25[ok],b25=s25[11],o26=s26[ok],b26=proj[11];
+  let t=`Scenario, not a forecast. In 2025 Meta ${I.n} went from ${I.u(o25)} in ${MN} to ${I.u(b25)} in BFCM week (${fmtP((b25/o25-1)*100,0)}). The same move from ${MN} 2026's ${I.u(o26)} gives about ${I.u(b26)} for BFCM week 2026.`;
   if(ovMetric==='cpm')t+=' This year\'s run-up started in September, so some of that rise may already be priced in.';
   if(ovMetric==='cac')t+=' Northbeam expects CAC to rise through BFCM and stay high until Christmas.';
   document.getElementById('ovScenario').textContent=t;
@@ -1316,15 +1341,36 @@ function renderBand(){
 }
 
 /* ---------- Meta ---------- */
+let mtView='line';
 function renderMeta(){
-  const R=rowsOf('meta_monthly');const lab=R.map(r=>new Date(r.month+'-15').toLocaleDateString('en-GB',{month:'short',year:'2-digit'}));
-  const dual=(id,a,b,la,lb,fa,fb,ca,cb,rows,labs)=>mk(id,{type:'line',data:{labels:labs,datasets:[{label:la,data:rows.map(r=>n(r[a])),borderColor:ca,backgroundColor:ca,yAxisID:'y',borderWidth:2.5,pointRadius:2,tension:.3},{label:lb,data:rows.map(r=>n(r[b])),borderColor:cb,backgroundColor:cb,yAxisID:'y1',borderWidth:2.5,pointRadius:2,tension:.3}]},options:{interaction:{mode:'index',intersect:false},scales:{y:{position:'left',grid,ticks:{callback:fa}},y1:{position:'right',grid:{display:false},ticks:{callback:fb}},x:{grid:{display:false},ticks:{maxTicksLimit:7,maxRotation:0}}},plugins:{legend:{position:'bottom'}}}});
-  dual('cM1','cpm','cpc','CPM','CPC',v=>'$'+v,v=>'$'+v.toFixed(2),PCOL.Meta,T.amber,R,lab);
-  dual('cM2','ctr_pct','cvr_pct','CTR','CVR',v=>v.toFixed(2)+'%',v=>v.toFixed(2)+'%',T.up,T.down,R,lab);
-  const RC2=rowsOf('meta_roas_cac').filter(r=>r.month!=='2025-BFCM');
-  dual('cM3','blended_roas','first_time_cac','Blended ROAS','First-time CAC',v=>v.toFixed(2),v=>'$'+v,T.up,T.down,RC2,RC2.map(r=>new Date(r.month+'-15').toLocaleDateString('en-GB',{month:'short',year:'2-digit'})));
-  const TT=rowsOf('tiktok_cvr');
-  mk('cTT',{type:'line',data:{labels:TT.map(r=>new Date(r.month+'-15').toLocaleDateString('en-GB',{month:'short',year:'2-digit'})),datasets:[{label:'TikTok CVR',data:TT.map(r=>n(r.cvr_pct)),borderColor:PCOL.TikTok,backgroundColor:'rgba(255,79,154,.15)',fill:true,borderWidth:2.5,pointRadius:2,tension:.3}]},options:{scales:{y:{min:0,grid,ticks:{callback:v=>v+'%'}},x:{grid:{display:false},ticks:{maxTicksLimit:7,maxRotation:0}}},plugins:{legend:{display:false}}}});
+  const W=rowsOf('meta_cpm').map(r=>({d:r.period,x:tsD(r.period),c:n(r.cpm_usd),y:n(r.yoy_pct),src:r.yoy_src}));const L=W[W.length-1];
+  const avgQ=(y,q)=>{const v=W.filter(w=>+w.d.slice(0,4)===y&&Math.floor((+w.d.slice(5,7)-1)/3)+1===q).map(w=>w.c);return v.length?{v:v.reduce((a,b)=>a+b,0)/v.length,n:v.length}:null};
+  const q25=avgQ(2025,3),q26=avgQ(2026,3);const w26=W.filter(w=>w.d>='2026-01-01'&&w.y!=null);const above=w26.filter(w=>w.y>0).length;
+  kpiStrip('mtKpis',[['Meta CPM · latest week','≈$'+L.c.toFixed(2),'week of '+dfmt(L.d,true),T.down,'mb-cpm25'],['vs same week 2025','≈'+fPct(L.y),(Math.max(...w26.map(w=>w.y))===L.y?'widest gap of 2026 so far':'week of '+dfmt(L.d,true)),T.down,'mb-cpm25'],['Q3 2026 vs Q3 2025',q25&&q26?'≈'+fPct((q26.v/q25.v-1)*100):'–',q26?'≈$'+q26.v.toFixed(2)+' vs $'+q25.v.toFixed(2)+' avg':'',T.down,'mb-cpm25'],['2026 weeks above 2025',above+' of '+w26.length,'every week of 2026 so far',T.amber,'mb-cpm25'],['BFCM 2025 peak','$23.06','week of 30 Nov 2025 (exact)',T.text,'mb-cpm25']]);
+  if(mtView==='line'){
+    tdChart('cMtCpm',[{label:'Meta CPM ≈',pts:W.map(w=>({x:w.x,y:w.c,note:w.d==='2025-11-30'?'Peak $23.06, week of 30 Nov (BFCM) · exact':''})),color:PCOL.Meta,w:3,pr:1.5,win:4,fmt:v=>'$'+(+v).toFixed(2)},{label:'Change vs same week last year ≈',pts:W.filter(w=>w.y!=null).map(w=>({x:w.x,y:w.y,note:w.src==='derived'?'Computed from the CPM line (YoY line hidden this week)':''})),color:'#ff7a59',axis:'y1',w:2.2,pr:1.5,win:4,fmt:fPct}],{fmt:v=>'$'+v,fmt1:fPct,range:[Date.UTC(2025,0,1),W[W.length-1].x+20*DAY],noLY:true,events:document.getElementById('mtEvents').checked,y:{min:12,max:24,title:{display:true,text:'Meta CPM',color:T.dim}},y1:{min:-15,max:30,title:{display:true,text:'YoY change',color:T.dim}}});
+    document.getElementById('mtNote').textContent='Blue: average weekly Meta CPM across all Northbeam accounts. Orange: change against the same week a year earlier. CPMs rose through Q1 2025, plateaued in Q2–Q3, spiked in Q4, and have run above 2025 every week of 2026, pulling further ahead since mid-September. Digitised week by week from Northbeam\'s chart (≈ ±$0.15).';
+  }else{
+    const a25=W.filter(w=>w.d<'2026-01-01'),a26=W.filter(w=>w.d>='2026-01-01');const n=Math.max(a25.length,a26.length);
+    const lab=a25.map(w=>new Date(w.x).toLocaleDateString('en-GB',{day:'numeric',month:'short',timeZone:'UTC'}));
+    mk('cMtCpm',{type:'line',data:{labels:lab,datasets:[{label:'2025',data:a25.map(w=>w.c),borderColor:T.past,backgroundColor:T.past,borderWidth:2.2,pointRadius:1,tension:.25},{label:'2026',data:a26.map(w=>w.c),borderColor:PCOL.Meta,backgroundColor:PCOL.Meta,borderWidth:3.2,pointRadius:1.5,tension:.25}]},options:{scales:{y:{grid,min:12,max:24,ticks:{callback:v=>'$'+v}},x:{grid:{display:false},ticks:{maxRotation:0,autoSkip:true,maxTicksLimit:12}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{title:it=>'Week '+(it[0].dataIndex+1)+' · from '+it[0].label,label:c=>` ${c.dataset.label}: ≈$${c.parsed.y.toFixed(2)}`,footer:it=>{const i=it[0].dataIndex;return a25[i]&&a26[i]?'Gap: '+fPct((a26[i].c/a25[i].c-1)*100):''}}}}}});
+    document.getElementById('mtNote').textContent='Same week of the year, 2025 against 2026. 2026 has sat above 2025 the whole way, and the late-September climb is starting from a higher base than last year\'s run into BFCM (2025 peaked at $23.06 in the week of 30 Nov).';
+  }
+  document.getElementById('tMtQ').innerHTML='<thead><tr><th>Quarter</th><th>2025</th><th>2026</th><th>Change</th></tr></thead><tbody>'+[1,2,3,4].map(q=>{const a=avgQ(2025,q),b=avgQ(2026,q);const c=a&&b?(b.v/a.v-1)*100:null;return `<tr><td>Q${q}${b&&b.n<13&&q===4?' (to date)':''}</td><td>${a?'$'+a.v.toFixed(2):'·'}</td><td>${b?'$'+b.v.toFixed(2)+(b.n<13?` <span style="color:${T.dim}">(${b.n} wks)</span>`:''):'·'}</td><td style="${heat(c,true,25)}">${c==null?'·':fmtP(c,1)}</td></tr>`}).join('')+'</tbody>';
+  const ws=WEEKS.slice(-8).reverse();const ms=['cpm','ctr','cpc','cac','cvr','roas'];
+  document.getElementById('tMtWk').innerHTML='<thead><tr><th>Week</th>'+ms.map(m=>`<th>${MNAME[m]}</th>`).join('')+'<th>Share</th></tr></thead><tbody>'+ws.map(w=>{const r=MBI.find(x=>x.ws===w&&x.p==='Meta')||{};return `<tr><td>${wkLab(w)}</td>`+ms.map(m=>`<td style="${heat(r[m],m in COST)}">${r[m]==null?'·':fmtP(r[m],1)}</td>`).join('')+`<td>${r.share==null?'·':r.share.toFixed(1)+'%'}</td></tr>`}).join('')+'</tbody>';
+  const MW=rowsOf('meta_wk').map(r=>({x:tsD(r.week),d:r.week,cpm:n(r.cpm),cpc:n(r.cpc),ctr:n(r.ctr_pct),cvr:n(r.cvr_pct),cac:n(r.cac_new),roas:n(r.roas_1d),ip:(r.interp||'').split('/')}));
+  const COLN={ctr:'ctr_pct',cvr:'cvr_pct',cac:'cac_new',roas:'roas_1d',cpm:'cpm',cpc:'cpc'};
+  const pts=(k,ex)=>MW.filter(w=>w[k]!=null).map(w=>({x:w.x,y:w[k],note:(ex&&ex[w.d])||(w.ip.includes(COLN[k])?'Hidden behind a chart label; interpolated':'')}));
+  const rg=[Date.UTC(2025,0,1),Date.UTC(2026,5,8)],ev=document.getElementById('mtEvents').checked;
+  tdChart('cM1',[{label:'CPM ≈',pts:pts('cpm',{'2025-11-30':'Peak $23.47 (exact)'}),color:PCOL.Meta,w:2.6,pr:1,win:4,fmt:v=>'$'+(+v).toFixed(2)},{label:'CPC ≈',pts:pts('cpc',{'2026-02-01':'Low $1.33 (exact)'}),color:T.amber,axis:'y1',w:2.6,pr:1,win:4,fmt:v=>'$'+(+v).toFixed(2)}],{fmt:v=>'$'+v,fmt1:v=>'$'+(+v).toFixed(2),range:rg,noLY:true,events:ev,y:{title:{display:true,text:'CPM',color:T.dim}},y1:{title:{display:true,text:'CPC',color:T.dim}}});
+  tdChart('cM2',[{label:'CTR ≈',pts:pts('ctr',{'2026-04-12':'Peak 1.23% (exact)'}),color:T.up,w:2.6,pr:1,win:4,fmt:v=>(+v).toFixed(2)+'%'},{label:'CVR ≈',pts:pts('cvr',{'2025-01-26':'Peak 1.35% (exact)'}),color:T.down,w:2.6,pr:1,win:4,fmt:v=>(+v).toFixed(2)+'%'}],{fmt:v=>(+v).toFixed(1)+'%',range:rg,noLY:true,events:ev,y:{min:0.5,max:1.4}});
+  const RC2=rowsOf('meta_roas_cac').filter(r=>r.month!=='2025-BFCM'&&r.month>='2026-06').map(r=>({x:tsD(r.month),roas:n(r.blended_roas),cac:n(r.first_time_cac)}));
+  tdChart('cM3',[{label:'ROAS ≈',pts:pts('roas',{'2025-11-30':'Peak 0.55 (exact)'}),color:T.up,w:2.6,pr:1,win:4,fmt:v=>(+v).toFixed(2)},{label:'New-customer CAC ≈',pts:pts('cac',{'2026-02-01':'Low $190 (exact)'}),color:T.down,axis:'y1',w:2.6,pr:1,win:4,fmt:v=>'$'+Math.round(v)},{label:'ROAS, later posts (monthly ≈)',pts:RC2.map(r=>({x:r.x,y:r.roas})),color:T.up,dash:[5,4],w:2,pr:3,win:20,fmt:v=>(+v).toFixed(2)},{label:'CAC, later posts (monthly ≈)',pts:RC2.map(r=>({x:r.x,y:r.cac})),color:T.down,axis:'y1',dash:[5,4],w:2,pr:3,win:20,fmt:v=>'$'+Math.round(v)}],{fmt:v=>(+v).toFixed(2),fmt1:v=>'$'+v,range:[Date.UTC(2025,0,1),Date.now()+10*DAY],noLY:true,events:ev,y:{title:{display:true,text:'ROAS (1-day click)',color:T.dim}},y1:{title:{display:true,text:'CAC',color:T.dim}}});
+  const Hm=D.q3_heatmap;const bands=Hm.cols.slice(2);const HR=rowsOf('q3_heatmap');const mets=[...new Set(HR.map(r=>r.metric))];
+  document.getElementById('tMtHeat').innerHTML='<thead><tr><th>Metric</th><th>Percentile</th>'+bands.map(b=>`<th>${esc(b)}</th>`).join('')+'</tr></thead><tbody>'+HR.map((r,i)=>{const cost=/CAC/i.test(r.metric);const first=HR.findIndex(x=>x.metric===r.metric)===i;return `<tr${first&&i?' style="border-top:2px solid var(--t-line)"':''}><td>${first?'<b>'+esc(r.metric)+'</b>'+(cost?' <span style="color:'+T.dim+'">↓ better</span>':''):''}</td><td style="color:${T.dim}">${r.percentile.replace('P','')}${/^\d/.test(r.percentile.replace('P',''))?'th':''}</td>`+bands.map(b=>{const v=n(r[b]);return `<td style="${heat(v,cost,40)}">${v==null?'·':fmtP(v,1)}</td>`}).join('')+'</tr>'}).join('')+'</tbody>';
+  const XP=rowsOf('nb_x');
+  document.getElementById('tMtX').innerHTML='<thead><tr><th>Date</th><th>Post</th><th>What it shows</th><th>Used in</th></tr></thead><tbody>'+XP.map(r=>`<tr><td>${dfmt(r.date,true)}</td><td><a href="${r.url}" target="_blank" rel="noopener">${esc(r.headline)}</a><br><span style="color:${T.dim}">${esc(r.account)}</span></td><td>${esc(r.figure)}</td><td style="color:${T.dim}">${esc(r.feeds)}</td></tr>`).join('')+'</tbody>';
 }
 
 /* ---------- Library ---------- */
@@ -1847,6 +1893,8 @@ SEGBIND('hsMeasure',b=>{hsMeasure=b.dataset.m;renderHaus()});
 
 /* ---------- routing ---------- */
 const VIEWS={front:renderFront,'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:renderBfcm,mkt:renderMkt,'mo-bench':renderMoBench,'mo-trend':renderMoTrend,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,wire:renderWire};
+SEGBIND('mtView',b=>{mtView=b.dataset.v;renderMeta()});
+document.getElementById('mtEvents').addEventListener('change',renderMeta);
 const PUBDESKS=['nb','mo','ctc','haus','triplewhale','foxwell'];
 const ddBtn=document.getElementById('deskBtn'),ddMenu=document.getElementById('deskMenu');let ddT=null;
 function ddOpen(){clearTimeout(ddT);ddMenu.hidden=false;ddBtn.setAttribute('aria-expanded','true')}

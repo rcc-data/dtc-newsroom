@@ -80,6 +80,11 @@ REG=[
  ("ctc_bfcm","CTC BFCM 2025 results","ctc_bfcm2025.csv","CTC, Dec 2025",None),
  ("ctc_hits","CTC creative hit rates","ctc_creative_hits.csv","CTC, Jul 2026",None),
  ("ctc_cpmr","CTC iROAS by within-brand CPMr quartile","ctc_cpmr.csv","CTC research, Apr 2026",None),
+ ("varos_cpm","Varos Meta CPM benchmark snapshots (archive)","varos_meta_cpm_archive.csv","varos.com via Wayback Machine, 2024-2025",None),
+ ("fox_q4","Foxwell Founders x Northbeam Q4 2026 survey","fox_q4_2026_survey.csv","foxwelldigital.com, 29 Sep 2026",None),
+ ("fox_agency","Foxwell Founders agency surveys 2025 and 2026","fox_agency_survey.csv","foxwelldigital.com / GlobeNewswire",None),
+ ("fox_field","Foxwell member field reports","fox_field_reports.csv","foxwelldigital.com blog",None),
+ ("wire_heads","Latest headlines on the wire","wire_headlines.csv","RSS / blog listings, weekly",None),
 ]
 DATA={}
 for k,t,fn,src,extra in REG:

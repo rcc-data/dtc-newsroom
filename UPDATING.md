@@ -52,3 +52,19 @@ This file is the procedure scheduled runs follow. The page is built from `templa
 - Blog and podcast: scan /blogs/ecommerce-playbook and /blogs/coachs-corner for posts since last run that publish portfolio data (DTC Index, CPM, BFCM, incrementality). Add figures with a library entry per figure; never estimate.
 - Meta CPM: if CTC publishes a new portfolio CPM month, append to data/ctc_meta_cpm.csv.
 - The weekly DTC Index email has no public archive. Skip unless a Gmail source is set up.
+
+## Trends desk (no separate capture)
+- Built entirely from the other desks' CSVs. When you add a week or month anywhere, check the Trends page renders and the KPI strip and "What the long view says" sentences still read correctly (they are computed from the latest rows).
+- Quarter scoreboard drops any quarter with fewer than 2 Northbeam weeks; the current quarter is never colour-compared with last year.
+
+## Foxwell Digital (weekly check)
+- List new posts: fetch https://www.foxwelldigital.com/blog?format=json in the built-in browser (items[].publishOn, title). Look for surveys (agency benchmark, Q4 outlook with Northbeam) and member field reports with figures.
+- New survey: add rows to data/fox_q4_2026_survey.csv (new question/answer rows; new year → new file or a year column) or data/fox_agency_survey.csv, only figures stated in text. Library entry pub="Foxwell".
+- Dated member reports with figures: append to data/fox_field_reports.csv.
+- The Foxwell Digital Download email has no archive. Skip.
+
+## Wire headlines (weekly)
+- Replace data/wire_headlines.csv with the latest ~12 items: Modern Retail (https://www.modernretail.co/feed/, strip utm params), 2PM (https://2pml.com/feed/), Foxwell blog, CTC Coach's Corner (sitemap lastmod). Real article URLs only.
+
+## Varos
+- Stopped publishing ecommerce benchmarks in 2025 (varos.com is now an AI business-analyst product). Nothing to capture. data/varos_meta_cpm_archive.csv is a fixed archive.

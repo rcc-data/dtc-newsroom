@@ -1,0 +1,9 @@
+# Varos public benchmark page "Facebook Ads CPM" (varos.com/benchmarks/facebook-cpm), read from Wayback Machine snapshots. Median across 5,000+ companies connected to Varos, ALL advertisers incl. B2B SaaS and lead gen. Values are month-to-date as of the page's "last update" date, so partial months. sales_median = campaigns with the Sales objective (closest to DTC). Nov 2024 is the full prior month shown on the Dec 2024 page. Varos stopped publishing ecommerce benchmarks in 2025 (varos.com is now an AI business-analyst product).
+month,data_through,all_median,all_mom_pct,sales_median,sales_mom_pct,snapshot
+2024-04,2024-04-21,9.83,-7.03,10.52,-3.89,20240422162016
+2024-07,2024-07-07,10.03,-7.03,11.12,-8.99,20240721014609
+2024-11,2024-11-30,14.38,,15.08,,20241229205953
+2024-12,2024-12-29,14.19,-1.31,15.03,-0.28,20241229205953
+2025-01,2025-01-12,8.90,-34.55,9.80,-29.12,20250116155155
+2025-02,2025-02-09,10.71,9.41,10.72,6.52,20250213162733
+2025-04,2025-04-13,10.96,-3.24,10.98,-0.09,20250614204939

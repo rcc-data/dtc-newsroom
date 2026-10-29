@@ -212,7 +212,7 @@ table.q tbody tr.link{cursor:pointer}
 .deskrow a .new{font-family:var(--mono);font-size:9.5px;letter-spacing:0;text-transform:none;color:#fff;background:var(--flag);padding:0 4px;margin-left:5px;border-radius:3px}
 .callout{border:1px solid var(--t-line);border-left:3px solid var(--t-amber);background:var(--t-panel);color:var(--t-text);padding:14px 16px;border-radius:4px;font-size:14px;line-height:1.5}
 .callout b{color:var(--t-amber);font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:4px}
-.cad-t td,.cad-t th{text-align:left!important;white-space:normal}.cad-t td:first-child{white-space:nowrap}
+.cad-t td,.cad-t th{text-align:left!important;white-space:normal!important;min-width:90px}.cad-t td:first-child{white-space:nowrap}
 .empty{font-family:var(--mono);font-size:12.5px;color:var(--t-dim);padding:18px;text-align:center;border:1px dashed var(--t-line);border-radius:4px}
 .bar-in{display:inline-block;height:8px;border-radius:2px;background:var(--t-amber);vertical-align:middle;margin-right:6px}
 </style>
@@ -238,6 +238,7 @@ table.q tbody tr.link{cursor:pointer}
       <a href="#haus" data-desk="haus">Haus</a>
       <a href="#triplewhale" data-desk="triplewhale">Triple Whale</a>
       <a href="#ctc" data-desk="ctc">CTC</a>
+      <a href="#foxwell" data-desk="foxwell">Foxwell</a>
       <a href="#wire" data-desk="wire">Wire sources</a>
     </div>
     <div class="subrow" id="subrow" data-for="nb" hidden>
@@ -877,6 +878,32 @@ table.q tbody tr.link{cursor:pointer}
   <div class="takes" id="tdTakes"></div>
 </section>
 
+<!-- FOXWELL -->
+<section class="view" id="v-foxwell" hidden>
+  <div><div class="kicker">Foxwell Digital · Foxwell Founders</div><h2>What 600 media buyers and agency owners are saying</h2><p class="dek">Foxwell runs Foxwell Founders, a paid community of agency owners and brand marketers managing over $1B a month in ad spend. It doesn't publish a running data series: its numbers come from member surveys (a yearly agency benchmark and, this year, a Q4 outlook survey with Northbeam) and from field reports in its blog, which posts two or three times a week. Treat this desk as the practitioner view beside the platform data.</p></div>
+  <div class="strip" id="fxKpis"></div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">Q4 2026 mood</span><span class="m">vs Q4 2025 · and how much Q4 matters</span></div><div class="chart"><canvas id="cFxMood"></canvas></div></div>
+    <div class="term"><div class="th"><span class="t">Where Q4 growth is expected</span><span class="m">channel expected to drive most growth vs last Q4</span></div><div class="chart"><canvas id="cFxChan"></canvas></div></div>
+  </div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">What buyers check every day</span><span class="m">% tracking each metric daily</span></div><div class="chart"><canvas id="cFxDaily"></canvas></div><p class="note">Only 28% look at contribution margin daily, against 72% for ROAS. 43% still pace spend from a manual spreadsheet.</p></div>
+    <div class="term"><div class="th"><span class="t">Andromeda and the creative workload</span><span class="m">% of respondents</span></div><div class="chart"><canvas id="cFxAndro"></canvas></div><p class="note">"No difference" is stated as "a third" in the write-up.</p></div>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t">Field reports, dated</span><span class="m">what members saw in their accounts, and how it lines up with the platform data</span></div>
+    <div class="tw"><table class="q cad-t" id="tFxField"></table></div>
+  </div>
+  <div class="term">
+    <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Agency benchmarks</span><div class="seg" role="group" aria-label="Year" id="fxYear" style="margin-left:auto"><button type="button" data-v="2025" aria-pressed="true">2025 survey</button><button type="button" data-v="2026" aria-pressed="false">2026 survey</button></div></div>
+    <div class="chart tall"><canvas id="cFxAgency"></canvas></div>
+    <p class="note" id="fxAgNote"></p>
+  </div>
+  <div class="term"><div class="th"><span class="t">What Foxwell publishes</span><span class="m">cadence</span></div><div class="tw"><table class="q cad-t" id="tFxCad"></table></div></div>
+  <div class="section-head"><span class="label">Foxwell library</span></div>
+  <div class="lib" id="fxLib"></div>
+</section>
+
 <!-- CTC -->
 <section class="view" id="v-ctc" hidden>
   <div><div class="kicker">Common Thread Collective · Portfolio data</div><h2>What 299 brands spend, and what each channel is really worth</h2><p class="dek">Common Thread Collective runs growth for hundreds of DTC brands and publishes their pooled data: the DTC Index (200–300 stores with two or more years of history), interactive research pages, and a daily consumer confidence survey with KnoCommerce. Their weekly DTC Index email has no public archive, so this section is built from the published benchmarks, podcasts and blog.</p></div>
@@ -933,6 +960,7 @@ table.q tbody tr.link{cursor:pointer}
 <!-- WIRE -->
 <section class="view" id="v-wire" hidden>
   <div><div class="kicker">Wire sources</div><h2>Other feeds worth bringing into the newsroom</h2><p class="dek">Sources that publish data on a regular cadence, grouped by what they would add.</p></div>
+  <div class="term"><div class="th"><span class="t">This week on the wire</span><span class="m">latest headlines from the news and operator sources · refreshed weekly</span></div><div class="tw"><table class="q cad-t" id="tWireHeads"></table></div></div>
   <div class="wire" id="wireList"></div>
 </section>
 
@@ -963,7 +991,7 @@ function openSources(ids){
 function closeSources(){document.getElementById('drawer').hidden=true;document.getElementById('scrim').hidden=true;lastFocus&&lastFocus.focus&&lastFocus.focus()}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-src]');if(b){e.preventDefault();openSources(b.dataset.src)}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.getElementById('drawer').hidden)closeSources()});
-const SRC_MAP={cTdPrice:'mb-cpm25,meta-q3-26,ctc-cpm,tw-weekly',cTdEff:'x-roas,x-ncac,bl-planning,mb-h1,ctc-q1idx',cTdShare:'mb-weekly,mb-may,ctc-mix,haus-sow',cTdDemand:'ctc-dtcci,meta-q3-26,bl-planning,mb-h1',tTdQ:'mb-weekly',cBfLive:'mb-bfcm,bl-cyberweek',cEarn:'meta-q3-26,meta-q2-26,meta-q1-26,meta-q4-25',cEarnReg:'meta-apac,meta-q2-26',cEarnVsNb:'meta-q3-26,mb-cpm25,x-roas',cMoTier:'mo-cb26key',cMoPort:'mo-cb26key',cMoFmt:'mo-cb26',cMoHW:'mo-bfcm26',cTrBrand:'mo-trending',cTrAspect:'mo-trending',cTrInd:'mo-trending',cHsCh:'haus-yt26,haus-meta25,haus-tiktok,haus-applovin',cHsIA:'haus-ia-jul,haus-ia-oct',cHsRep:'haus-ia-oct',cHs7dc:'haus-ia-oct',cHsCat:'haus-catalog',cHsSearch:'haus-search',cHsTN:'haus-textnow',cHsCW:'haus-cw25',cHsApp:'haus-applovin',cTwInd:'tw-weekly',cTwHist:'tw-weekly',cCtMix:'ctc-mix',cCtCci:'ctc-dtcci',cCtCpm:'ctc-cpm',cCtTier:'ctc-mix',cCtMer:'ctc-mix',cCtHits:'ctc-hits',tCtIdx:'ctc-q1idx,ctc-h1,ctc-applovin',tCtBf:'ctc-bfcm25',tTwCh:'tw-weekly',cMoAI:'mo-ai',cCmp:'mb-weekly',cAdsLaunch:'bl-jan',cAdsWeek:'mb-hudson,mb-ugc1,bl-jan',cMis:'mb-ugc1',cVertAds:'x-verticals',cCap:'mb-ugc3,mb-ugc2,bl-jan',fCpm:'mb-cpm25',fBoard:'mb-weekly',fShare:'mb-weekly',fMovers:'mb-weekly',trMulti:'mb-weekly',tHeat:'mb-weekly',cShare:'mb-weekly,mb-may',tTrend:'mb-weekly',tShare:'mb-weekly',tQ1:'mb-may',tEmerg:'x-emerging',cMonthly:'bl-planning,bl-jan,bl-feb,mb-april,mb-may,mb-h1,bl-cyberweek,bl-cost',cBand:'mb-h1,mb-cpm25',tH1rev:'mb-h1',tH1aov:'mb-h1',cSize:'bl-under5,bl-cost',tVert:'bl-power',tMix:'x-verticals',tAds:'bl-jan',cAI:'mb-ai',cOverlay:'mb-cpm25,x-roas,x-ncac',cArc:'mb-bfcm,bl-cyberweek',cPace:'bl-cyberfive',cLag:'mb-lag',tInd:'x-industry',cPost:'mb-weekly,bl-q5',cJan:'bl-jan',cM1:'mb-h1,mb-metatank',cM2:'mb-h1,mb-metatank',cM3:'x-roas,x-ncac',cTT:'mb-tiktok'};
+const SRC_MAP={cFxMood:'fox-q4-26',cFxChan:'fox-q4-26',cFxDaily:'fox-q4-26',cFxAndro:'fox-q4-26',tFxField:'fox-andromeda,fox-hw,fox-pricing26,fox-bfcm25',cFxAgency:'fox-agency25,fox-agency26',tFxCad:'fox-cadence',cTdPrice:'mb-cpm25,meta-q3-26,ctc-cpm,tw-weekly,varos-archive',cTdEff:'x-roas,x-ncac,bl-planning,mb-h1,ctc-q1idx',cTdShare:'mb-weekly,mb-may,ctc-mix,haus-sow',cTdDemand:'ctc-dtcci,meta-q3-26,bl-planning,mb-h1',tTdQ:'mb-weekly',cBfLive:'mb-bfcm,bl-cyberweek',cEarn:'meta-q3-26,meta-q2-26,meta-q1-26,meta-q4-25',cEarnReg:'meta-apac,meta-q2-26',cEarnVsNb:'meta-q3-26,mb-cpm25,x-roas',cMoTier:'mo-cb26key',cMoPort:'mo-cb26key',cMoFmt:'mo-cb26',cMoHW:'mo-bfcm26',cTrBrand:'mo-trending',cTrAspect:'mo-trending',cTrInd:'mo-trending',cHsCh:'haus-yt26,haus-meta25,haus-tiktok,haus-applovin',cHsIA:'haus-ia-jul,haus-ia-oct',cHsRep:'haus-ia-oct',cHs7dc:'haus-ia-oct',cHsCat:'haus-catalog',cHsSearch:'haus-search',cHsTN:'haus-textnow',cHsCW:'haus-cw25',cHsApp:'haus-applovin',cTwInd:'tw-weekly',cTwHist:'tw-weekly',cCtMix:'ctc-mix',cCtCci:'ctc-dtcci',cCtCpm:'ctc-cpm',cCtTier:'ctc-mix',cCtMer:'ctc-mix',cCtHits:'ctc-hits',tCtIdx:'ctc-q1idx,ctc-h1,ctc-applovin',tCtBf:'ctc-bfcm25',tTwCh:'tw-weekly',cMoAI:'mo-ai',cCmp:'mb-weekly',cAdsLaunch:'bl-jan',cAdsWeek:'mb-hudson,mb-ugc1,bl-jan',cMis:'mb-ugc1',cVertAds:'x-verticals',cCap:'mb-ugc3,mb-ugc2,bl-jan',fCpm:'mb-cpm25',fBoard:'mb-weekly',fShare:'mb-weekly',fMovers:'mb-weekly',trMulti:'mb-weekly',tHeat:'mb-weekly',cShare:'mb-weekly,mb-may',tTrend:'mb-weekly',tShare:'mb-weekly',tQ1:'mb-may',tEmerg:'x-emerging',cMonthly:'bl-planning,bl-jan,bl-feb,mb-april,mb-may,mb-h1,bl-cyberweek,bl-cost',cBand:'mb-h1,mb-cpm25',tH1rev:'mb-h1',tH1aov:'mb-h1',cSize:'bl-under5,bl-cost',tVert:'bl-power',tMix:'x-verticals',tAds:'bl-jan',cAI:'mb-ai',cOverlay:'mb-cpm25,x-roas,x-ncac',cArc:'mb-bfcm,bl-cyberweek',cPace:'bl-cyberfive',cLag:'mb-lag',tInd:'x-industry',cPost:'mb-weekly,bl-q5',cJan:'bl-jan',cM1:'mb-h1,mb-metatank',cM2:'mb-h1,mb-metatank',cM3:'x-roas,x-ncac',cTT:'mb-tiktok'};
 function injectSources(){Object.entries(SRC_MAP).forEach(([id,ids])=>{const el=document.getElementById(id);if(!el)return;const term=el.closest('.term');if(!term||term.querySelector(':scope > .th .src-btn, :scope > .ctl .src-btn'))return;const host=term.querySelector(':scope > .th')||term.querySelector(':scope > .ctl');if(host){const n=ids.split(',').length;host.insertAdjacentHTML('beforeend',srcBtn(ids,n>1?`SRC ×${n} ↗`:'SRC ↗'))}})}
 const n=v=>{if(v===undefined||v===null)return null;const s=String(v).trim();if(s===''||s==='-')return null;const x=parseFloat(s.replace('~',''));return isNaN(x)?null:x};
 const rowsOf=k=>D[k].rows.map(r=>Object.fromEntries(D[k].cols.map((c,i)=>[c,r[i]])));
@@ -1261,18 +1289,21 @@ function renderDS(){
 const WIRE=[
  {k:'Measurement peers',n:'Triple Whale',c:'Weekly benchmarks · live BFCM tracker',p:'Shopify-wide ROAS, CPM and AOV benchmarks by vertical, plus an hourly GMV and spend tracker through Cyber Week. Closest like-for-like to Northbeam.'},
  {k:'Measurement peers',n:'Haus',c:'Monthly research posts',p:'Published incrementality and geo-lift results by channel: the best public source on how far platform ROAS overstates true lift.'},
- {k:'Measurement peers',n:'Varos',c:'Weekly benchmark emails',p:'Peer benchmarks for Meta, Google and TikTok (CPM, CTR, CPA, ROAS) by vertical and spend tier, drawn from connected ad accounts.'},
+ {k:'Measurement peers',n:'Varos (stopped)',c:'No longer published',p:'Varos used to publish monthly Meta, Google and TikTok benchmarks from 5,000+ connected accounts. In 2025 it pivoted to an AI business-analyst product and the benchmark pages now redirect there. Its archived Meta CPM snapshots (2024 to April 2025) are on the Trends desk.'},
  {k:'Measurement peers',n:'Recast and Measured',c:'Monthly',p:'MMM and incrementality research, including channel saturation curves and holiday planning notes.'},
  {k:'Platforms as stocks',n:'Meta, Alphabet, Amazon, Pinterest, Snap, AppLovin earnings',c:'Quarterly · Meta Q3 out late Oct',p:'Meta reports ad impressions and average price per ad each quarter: a hard, market-wide read on CPM inflation to set beside Northbeam\'s.'},
  {k:'Holiday trackers',n:'Adobe Digital Insights',c:'Daily during Cyber Week',p:'US online spend by day for Thanksgiving to Cyber Monday, with forecasts in early November. The scoreboard every BFCM story cites.'},
  {k:'Holiday trackers',n:'Shopify BFCM live globe & Salesforce Shopping Index',c:'Live in Cyber Week · Salesforce quarterly',p:'Real-time merchant sales and global order volume; Salesforce adds discount depth and traffic by channel.'},
  {k:'Creative & lifecycle',n:'Motion, Klaviyo, Attentive',c:'Quarterly reports · BFCM recaps',p:'Motion: which ad formats and hooks scale. Klaviyo and Attentive: email and SMS revenue share and benchmarks around BFCM.'},
- {k:'Operator newsletters',n:'Common Thread Collective, Foxwell Digital, 2PM, Modern Retail',c:'Weekly',p:'CTC\'s DTC index and Prophit posts, Foxwell\'s agency surveys and Meta updates, 2PM and Modern Retail for brand and retail news.'},
+ {k:'Operator newsletters',n:'Common Thread Collective',c:'Weekly email · daily blog · monthly DTCCI',p:'Now its own desk. Prophit posts are mostly CTC explaining its own forecasting system; the one hard number is a client claim (revenue +35%, contribution margin +41.5% in 2025).'},
+ {k:'Operator newsletters',n:'Foxwell Digital',c:'Blog 2-3 a week · surveys yearly',p:'Now its own desk: member surveys, agency benchmarks and dated field reports from Foxwell Founders.'},
+ {k:'Brand & retail news',n:'Modern Retail (Digiday)',c:'Daily news · weekly Brands Briefing · weekly podcast',p:'Brand funding, retail operations, TikTok Shop and Amazon. News rather than data; headlines are logged weekly above.'},
+ {k:'Brand & retail news',n:'2PM (Web Smith)',c:'Irregular · 2-4 essays a month',p:'Long-form deep dives and member briefs on DTC brands, M&A and commerce strategy. Mostly paywalled; useful context for brand moves, not a data source.'},
  {k:'Macro',n:'US Census e-commerce, Conference Board, University of Michigan, CPI',c:'Monthly / quarterly',p:'E-commerce share of retail, consumer confidence and inflation. The backdrop to the K-shaped spending Northbeam keeps pointing to.'},
  {k:'Podcasts',n:'9 Operators, MarketingOperators, Scalability School',c:'Weekly',p:'Where Northbeam and others share charts first. Worth logging episodes with data in them alongside the written posts.'},
  {k:'Your own desk',n:'Client data: Lifetimely, Klaviyo, Meta, Google Sheets',c:'Weekly',p:'Your clients\' weekly numbers sat beside the market benchmarks, so each client can be checked against the median for their spend band.'},
 ];
-function renderWire(){document.getElementById('wireList').innerHTML=WIRE.map(w=>`<div class="story"><span class="tag">${w.k}</span><h4>${esc(w.n)}</h4><span class="cad">${esc(w.c)}</span><p>${esc(w.p)}</p></div>`).join('')}
+function renderWire(){const WH=rowsOf('wire_heads');document.getElementById('tWireHeads').innerHTML='<thead><tr><th>Date</th><th>Source</th><th>Headline</th></tr></thead><tbody>'+WH.map(r=>`<tr><td>${dfmt(r.date,true)}</td><td>${esc(r.pub)}</td><td><a href="${r.url}" target="_blank" rel="noopener">${esc(r.title)}</a></td></tr>`).join('')+'</tbody>';document.getElementById('wireList').innerHTML=WIRE.map(w=>`<div class="story"><span class="tag">${w.k}</span><h4>${esc(w.n)}</h4><span class="cad">${esc(w.c)}</span><p>${esc(w.p)}</p></div>`).join('')}
 
 /* ---------- compare channels ---------- */
 let cmpSel=new Set(["Meta","Google","TikTok","AppLovin","YouTube","Snapchat"]),cmpMode='cum';
@@ -1630,8 +1661,9 @@ function renderTrends(){
   if(tdPrice==='lvl'){tdChart('cTdPrice',[
       {label:'Northbeam weekly Meta CPM ≈',pts:X.cpm.map(p=>({x:p.x,y:p.y})),color:PCOL.Meta,approx:true,src:'mb-cpm25',w:3},
       {label:'Common Thread portfolio Meta CPM',pts:X.ctc.map(p=>({x:p.x,y:p.y,note:p.note})),color:T.amber,win:40,ps:'rect',pr:4,ly:false},
-      {label:'Triple Whale median Meta CPM',pts:X.twMed('meta','cpm'),color:'#2ec4d6',dots:true,ps:'triangle'}],{fmt:fUSD0,y:{title:{display:true,text:'Meta CPM ($)',color:T.dim}}});
-    document.getElementById('tdPriceNote').textContent='Northbeam and Common Thread draw on different brands, so the levels differ, but both show the same shape: a flat-to-rising year, a November spike, a January reset and a higher base in 2026. Common Thread only publishes selected months, so its line joins the months it has published. Triple Whale adds one point a week from 28 Oct 2026.';}
+      {label:'Triple Whale median Meta CPM',pts:X.twMed('meta','cpm'),color:'#2ec4d6',dots:true,ps:'triangle'},
+      {label:'Varos Sales-objective CPM (archive)',pts:rowsOf('varos_cpm').map(r=>({x:tsD(r.month),y:n(r.sales_median),note:'Month to '+dfmt(r.data_through,true)+' · all-advertiser median $'+r.all_median})),color:'#e0607e',dots:true,ps:'crossRot',r:7,win:40}],{fmt:fUSD0,y:{title:{display:true,text:'Meta CPM ($)',color:T.dim}}});
+    document.getElementById('tdPriceNote').textContent='Northbeam and Common Thread draw on different brands, so the levels differ, but both show the same shape: a flat-to-rising year, a November spike, a January reset and a higher base in 2026. Common Thread only publishes selected months, so its line joins the months it has published. Triple Whale adds one point a week from 28 Oct 2026. Varos crosses are archived month-to-date snapshots across all advertiser types (2024–Apr 2025); Varos has since stopped publishing.';}
   else{const ctcY=X.ctc.map((p,i)=>({x:p.x,y:X.lyOf(X.ctc,'y',i)})).filter(p=>p.y!=null);
     tdChart('cTdPrice',[
       {label:'Northbeam Meta CPM vs last year ≈',pts:X.cpm.filter(p=>p.yoy!=null).map(p=>({x:p.x,y:p.yoy})),color:PCOL.Meta,approx:true,w:3},
@@ -1689,6 +1721,30 @@ SEGBIND('tdRange',b=>{tdRange=b.dataset.r;renderTrends()});SEGBIND('tdPriceMode'
 ['tdRoll','tdLY','tdEvents'].forEach(id=>document.getElementById(id).addEventListener('change',renderTrends));
 document.getElementById('tdQMetric').addEventListener('change',renderTdQ);
 
+/* ---------- Foxwell ---------- */
+let fxYear='2025';
+function renderFoxwell(){
+  const Q=rowsOf('fox_q4');const g=(q,a)=>{const r=Q.find(x=>x.question===q&&x.answer===a);return r?n(r.pct):null};const qs=q=>Q.filter(x=>x.question===q);
+  kpiStrip('fxKpis',[['Respondents','600+','~60% agency · 40% brand · $1B+/mo spend',T.text,'fox-q4-26'],['Rising CPMs top worry',g('Top concern','Rising CPMs and auction costs')+'%','more than double any other concern',T.down,'fox-q4-26'],['Meta top revenue driver',g('Top revenue driver','Meta')+'%','69% expect it to lead Q4 growth',PCOL.Meta,'fox-q4-26'],['More optimistic than 2025',g('Q4 2026 vs Q4 2025 sentiment','More optimistic')+'%','vs 29% less optimistic',T.up,'fox-q4-26'],['Agency fee for Meta only','3–10%','of ad spend a month, no creative',T.amber,'fox-pricing26']]);
+  const mood=qs('Q4 2026 vs Q4 2025 sentiment'),imp=qs('Importance of Q4');
+  mk('cFxMood',{type:'bar',data:{labels:['Sentiment vs Q4 2025','Importance of Q4'],datasets:[...mood.map((r,i)=>({label:r.answer,data:[n(r.pct),null],backgroundColor:[T.up,'#7f8c87',T.down][i],stack:'s'})),...imp.map((r,i)=>({label:r.answer,data:[null,n(r.pct)],backgroundColor:[T.amber,'#ff7a59','#5aa9ff'][i],stack:'s'}))]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:true},scales:{x:{stacked:true,max:100,grid,ticks:{callback:v=>v+'%'}},y:{stacked:true,grid:{display:false}}},plugins:{legend:{position:'bottom',labels:{font:{size:10}}},tooltip:{callbacks:{label:c=>c.parsed.x==null?null:` ${c.dataset.label}: ${c.parsed.x}%`}}}}});
+  const ch=qs('Channel expected to drive most Q4 growth');
+  mk('cFxChan',{type:'bar',data:{labels:ch.map(r=>r.answer),datasets:[{label:'Expect most Q4 growth',data:ch.map(r=>n(r.pct)),backgroundColor:ch.map(r=>PCOL[r.answer]||T.dim)}]},options:{scales:{y:{grid,max:100,ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.y}% of respondents`}}}}});
+  const dm=qs('Daily metric tracked');
+  mk('cFxDaily',{type:'bar',data:{labels:dm.map(r=>r.answer),datasets:[{label:'Track daily',data:dm.map(r=>n(r.pct)),backgroundColor:dm.map(r=>/margin/i.test(r.answer)?T.up:T.amber)}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,max:100,ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x}% check it daily`}}}}});
+  const an=qs('Andromeda effect on creative testing');const ai=[...qs('AI'),...qs('Messaging')];
+  mk('cFxAndro',{type:'bar',data:{labels:[...an.map(r=>'Andromeda: '+r.answer.toLowerCase()),...ai.map(r=>r.answer)],datasets:[{label:'% of respondents',data:[...an,...ai].map(r=>n(r.pct)),backgroundColor:[...an.map((r,i)=>[T.down,T.up,'#7f8c87'][i]),...ai.map(()=>'#a98bff')]}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,max:100,ticks:{callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{size:10}}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${[...an,...ai][c.dataIndex].approx?'≈':''}${c.parsed.x}%`}}}}});
+  const F=rowsOf('fox_field');const cmp={'Meta delivery shift':'Northbeam\'s weekly Meta CPM kept rising through September (≈$19.20 w/c 21 Sep, +22% YoY). The member reports cover a subset of accounts and several countries, so they don\'t contradict the US average: they show that some accounts got cheaper, lower-quality reach.','Health & Wellness flag':'Worth checking for any client in supplements, skincare or wellness before reading their CPMs against the market.','Agency pricing':'',' BFCM 2025 recap':'','BFCM 2025 recap':'Single-brand case study, not a benchmark.'};
+  document.getElementById('tFxField').innerHTML='<thead><tr><th>Date</th><th>Topic</th><th>What members reported</th><th>Read against the data</th></tr></thead><tbody>'+[...F].reverse().map(r=>`<tr><td>${dfmt(r.date,true)}</td><td><b>${esc(r.topic)}</b></td><td>${esc(r.report)} <a href="${r.url}" target="_blank" rel="noopener">↗</a></td><td style="color:${T.dim}">${esc(cmp[r.topic]||'')}</td></tr>`).join('')+'</tbody>';
+  const A=rowsOf('fox_agency').filter(r=>r.year===fxYear);
+  mk('cFxAgency',{type:'bar',data:{labels:A.map(r=>r.metric),datasets:[{label:fxYear+' survey',data:A.map(r=>n(r.value)),backgroundColor:A.map(r=>/in-housing/i.test(r.metric)?T.down:(/AI/.test(r.metric)?'#a98bff':T.amber))}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,max:100,ticks:{callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{size:10}}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x}%`}}}}});
+  document.getElementById('fxAgNote').textContent=fxYear==='2025'?'540+ agency leaders in 30+ countries, $400M a month in Meta spend (June 2025). Red: in-housing was the top reason clients left.':'Hundreds of agency leaders, with Motion (March 2026). Only four figures were published in the release; in-housing is again the top reason clients leave (29%, as in 2025).';
+  const cad=[['2-3 a week','Foxwell Digital blog','Meta tactics, AI workflows, agency operations; field reports from members. About 120 posts since mid-2025.'],['Yearly (Jun 2025, Mar 2026)','Agency benchmark survey','Agency economics: margins, churn, pricing, AI use. 2026 edition with Motion.'],['Ad hoc (Sep 2026)','Q4 outlook survey with Northbeam','Sentiment, channel bets, concerns, timing and daily metrics for Q4.'],['Weekly · email','The Foxwell Digital Download','Email only, no public archive.'],['Ongoing','Foxwell Founders Slack and MCP','Members-only discussion; the "Foxwell MCP" sells query access to six years of it.']];
+  document.getElementById('tFxCad').innerHTML='<thead><tr><th>Cadence</th><th>Series</th><th>Notes</th></tr></thead><tbody>'+cad.map(r=>`<tr><td>${r[0]}</td><td><b>${r[1]}</b></td><td>${esc(r[2])}</td></tr>`).join('')+'</tbody>';
+  document.getElementById('fxLib').innerHTML=libCards(LIB.filter(x=>x.pub==='Foxwell'));
+}
+SEGBIND('fxYear',b=>{fxYear=b.dataset.v;renderFoxwell()});
+
 /* ---------- CTC ---------- */
 let ctView='roas';
 function renderCTC(){
@@ -1717,7 +1773,7 @@ function renderCTC(){
   document.getElementById('tCtBf').innerHTML='<thead><tr><th>Metric</th><th>Value</th><th>Note</th></tr></thead><tbody>'+rowsOf('ctc_bfcm').map(r=>`<tr><td>${esc(r.metric)}</td><td><b>${r.unit==='%'?fmtP(n(r.value),0):(r.unit==='$M'?'$'+r.value+'M':r.value+(r.unit==='x'?'×':''))}</b></td><td style="color:${T.dim}">${esc(r.note)}</td></tr>`).join('')+'</tbody>';
   const tk=[['Do not cut Meta prospecting to protect ROAS','Meta acquisition shows the lowest reported ROAS (1.83×) but is under-reported (IF 1.13×). Haus and Northbeam both point the same way on Meta in Q4.','ctc-mix,haus-ia-oct'],['Discount branded search and Snapchat in your BFCM reporting','At 0.30× IF, Google brand search\'s 19× reported ROAS is about 5.7× in reality; Snapchat\'s 6.2× is about 1.9×.','ctc-mix'],['Expect a 17–43% CPM jump from October to November','CTC\'s portfolio Meta CPM has risen every November since 2022; November 2025 was the highest month on record at $21.55.','ctc-cpm,mb-cpm25'],['Confidence is up on last year','The DTCCI reads 96.3 in October 2026, above October 2025 (87.3), after a soft summer. Northbeam\'s Q3 spend data and Adobe\'s holiday forecast point the same way.','ctc-dtcci']];
   document.getElementById('ctTakes').innerHTML=tk.map(([h,p,s])=>`<div class="story"><h4>${esc(h)}</h4><p>${esc(p)}</p>${srcBtn(s,'SOURCE · QUOTE')}</div>`).join('');
-  const cad=[['Daily (published monthly)','DTC Consumer Confidence Index','dtcci.co: 5,000 shoppers a day via KnoCommerce. Monthly reading captured here.'],['Weekly · email','DTC Index newsletter','Last-28-day YoY/MoM for Meta, Google, MER across ~200–300 brands. Email only, no public archive.'],['Weekly · Friday','The Thread','Industry roundup; public archive stops in Feb 2026.'],['Quarterly-ish','Research pages','Channel Mix Benchmark (Q1 2026), CPMr vs iROAS. Interactive pages on commonthreadco.com/pages and research.commonthreadco.com.'],['Half-yearly','DTC Index reports','Q1 and H1 data reports by Steve Rekuc, via podcast and blog.'],['Daily','Coach\'s Corner blog and Ecommerce Playbook podcast','Platform-change explainers several times a day; data episodes a few times a month.']];
+  const cad=[['Daily (published monthly)','DTC Consumer Confidence Index','dtcci.co: 5,000 shoppers a day via KnoCommerce. Monthly reading captured here.'],['Weekly · email','DTC Index newsletter','Last-28-day YoY/MoM for Meta, Google, MER across ~200–300 brands. Email only, no public archive.'],['Weekly · Friday','The Thread','Industry roundup; public archive stops in Feb 2026.'],['Quarterly-ish','Research pages','Channel Mix Benchmark (Q1 2026), CPMr vs iROAS. Interactive pages on commonthreadco.com/pages and research.commonthreadco.com.'],['Half-yearly','DTC Index reports','Q1 and H1 data reports by Steve Rekuc, via podcast and blog.'],['Occasional','Prophit Engine posts','CTC explaining its own forecasting and growth system (15 posts, 13 in 2026). Mostly method; the one figure is a client claim: revenue +35% and contribution margin +41.5% in 2025.'],['Daily','Coach\'s Corner blog and Ecommerce Playbook podcast','Platform-change explainers several times a day; data episodes a few times a month.']];
   document.getElementById('tCtCad').innerHTML='<thead><tr><th>Cadence</th><th>Series</th><th>Notes</th></tr></thead><tbody>'+cad.map(r=>`<tr><td>${r[0]}</td><td><b>${r[1]}</b></td><td>${esc(r[2])}</td></tr>`).join('')+'</tbody>';
   document.getElementById('ctLib').innerHTML=libCards(LIB.filter(x=>x.pub==='CTC'));
 }
@@ -1735,7 +1791,7 @@ SEGBIND('hsMeasure',b=>{hsMeasure=b.dataset.m;renderHaus()});
 ['twMetric','twChan','twSnap','twInd'].forEach(id=>document.getElementById(id).addEventListener('change',renderTW));
 
 /* ---------- routing ---------- */
-const VIEWS={front:renderFront,'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:renderBfcm,mkt:renderMkt,'mo-bench':renderMoBench,'mo-trend':renderMoTrend,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,wire:renderWire};
+const VIEWS={front:renderFront,'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:renderBfcm,mkt:renderMkt,'mo-bench':renderMoBench,'mo-trend':renderMoTrend,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,wire:renderWire};
 function show(){let v=(location.hash||'#front').slice(1);if(!(v in VIEWS))v='front';
   Object.keys(VIEWS).forEach(x=>document.getElementById('v-'+x).hidden=x!==v);
   const desk=/^(nb|mo)-/.test(v)?v.split('-')[0]:v;

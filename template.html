@@ -1406,6 +1406,7 @@ function renderDS(){
 
 /* ---------- Wire ---------- */
 const WIRE=[
+ {k:'AI search',n:'Graphite',c:'Research posts · 1–3 a month',p:'Research-led SEO/AEO agency (with Similarweb data). Measures how big AI search is next to Google, how much AI traffic GA4 misses, and early ChatGPT Ads benchmarks. Listed on the Wire; figures not yet in the charts.'},
  {k:'Measurement peers',n:'Triple Whale',c:'Weekly benchmarks · live BFCM tracker',p:'Shopify-wide ROAS, CPM and AOV benchmarks by vertical, plus an hourly GMV and spend tracker through Cyber Week. Closest like-for-like to Northbeam.'},
  {k:'Measurement peers',n:'Haus',c:'Monthly research posts',p:'Published incrementality and geo-lift results by channel: the best public source on how far platform ROAS overstates true lift.'},
  {k:'Measurement peers',n:'Varos (stopped)',c:'No longer published',p:'Varos used to publish monthly Meta, Google and TikTok benchmarks from 5,000+ connected accounts. In 2025 it pivoted to an AI business-analyst product and the benchmark pages now redirect there. Its archived Meta CPM snapshots (2024 to April 2025) are on the Trends desk.'},
@@ -1437,7 +1438,7 @@ function renderWire(){const R=wvRows();const pubs=[...new Set(R.map(r=>r.pub))];
   document.getElementById('wvDek').textContent=`${R.length.toLocaleString()} newsletter issues, blog posts, reports, podcasts and posts from ${pubs.length} publishers since 1 January 2026, pulled from their sites and inboxes each weekday at noon. Rows marked DATA have figures in the newsroom's charts.`;
   renderWireCharts(R);renderWireTakes(R);renderWireInv();
   document.getElementById('wireList').innerHTML=WIRE.map(w=>`<div class="story"><span class="tag">${w.k}</span><h4>${esc(w.n)}</h4><span class="cad">${esc(w.c)}</span><p>${esc(w.p)}</p></div>`).join('')}
-const WVCOL={'Northbeam':'#ffb020','CTC':'#5aa9ff','Foxwell':'#a98bff','Haus':'#2ec4d6','Triple Whale':'#ff7a59','Motion':'#ff4f9a','Meta':'#5b8cff','2PM':'#f5e44a','Modern Retail':'#5f6b66','Varos':'#44d19a'};
+const WVCOL={'Northbeam':'#ffb020','CTC':'#5aa9ff','Foxwell':'#a98bff','Haus':'#2ec4d6','Triple Whale':'#ff7a59','Motion':'#ff4f9a','Meta':'#5b8cff','2PM':'#f5e44a','Modern Retail':'#5f6b66','Varos':'#44d19a','Graphite':'#9fd36a'};
 function renderWireCharts(R){const inc=document.getElementById('wvMR').checked;const S=R.filter(r=>inc||WVOPS(r));const ms=[...new Set(R.map(r=>r.m))].sort();const pubs=[...new Set(S.map(r=>r.pub))].sort((a,b)=>S.filter(r=>r.pub===b).length-S.filter(r=>r.pub===a).length);
   mk('cWireVol',{type:'bar',data:{labels:ms.map(MLAB),datasets:pubs.map(p=>({label:p,data:ms.map(m=>S.filter(r=>r.pub===p&&r.m===m).length),backgroundColor:WVCOL[p]||T.dim,stack:'a'}))},options:{scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,grid,ticks:{precision:0}}},plugins:{tooltip:{callbacks:{footer:it=>'Total '+it.reduce((a,b)=>a+b.parsed.y,0)}}}}});
   const O=R.filter(WVOPS);const TOP=['AI','Measurement','Meta','BFCM / Q4','Benchmarks','Creative'];const TC=['#a98bff','#2ec4d6','#5b8cff','#ff7a59','#ffb020','#ff4f9a'];

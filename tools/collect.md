@@ -35,6 +35,9 @@ const all=[];for(let p=1;p<=10;p++){const r=await fetch(`/wp-json/wp/v2/posts?af
 ```
 For Modern Retail, strip `https://www.modernretail.co/` from the link (the merge script adds it back).
 
+## GRAPHITE: Graphite, https://graphite.io
+`/sitemap.xml` lists `/research/<slug>` pages. Fetch each new one (6 at a time) and read `datePublished` from the JSON-LD and the `h1`; extra = `research`. Skip `/case-studies/` (placeholder dates) and `/five-percent/` author and press pages. The State of ChatGPT Ads report page is a gated download with no date: skip it.
+
 ## Not collected
 - Runneth (Motion) blog: pages carry no publish date. New Motion reports go in via the library.
 - X posts and Meta earnings: added through `library.py` entries, which the merge picks up automatically.

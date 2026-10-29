@@ -26,14 +26,14 @@ SRC = {  # inbox source code -> (publisher, default type)
     'NBNL': ('Northbeam', 'Newsletter'), 'NBBLOG': ('Northbeam', 'Blog'), 'NBX': ('Northbeam', 'X'),
     'CTC': ('CTC', 'Blog'), 'FOX': ('Foxwell', 'Blog'), 'HAUS': ('Haus', 'Blog'), 'TW': ('Triple Whale', 'Blog'),
     'MO': ('Motion', 'Newsletter'), 'MR': ('Modern Retail', 'News'), '2PM': ('2PM', 'Memo'), 'META': ('Meta', 'Earnings'),
-    'VAROS': ('Varos', 'Report'),
+    'VAROS': ('Varos', 'Report'), 'GRAPHITE': ('Graphite', 'Report'),
 }
 
 TOPICS = [
     ('Meta', r'\bmeta\b|facebook|instagram|andromeda|advantage\+|\bgem\b|reels'),
     ('TikTok', r'tiktok'), ('Google', r'google|youtube|pmax|performance max|\bdemand gen'),
     ('Amazon', r'amazon|prime day|prime big deal'), ('AppLovin', r'applovin'),
-    ('AI', r'\bai\b|agentic|llm|chatgpt|moby|claude|gemini|agents?\b'),
+    ('AI', r'\bai\b|\baeo\b|\bgeo\b|parametric|prompt|agentic|llm|chatgpt|moby|claude|gemini|agents?\b'),
     ('Measurement', r'attribution|incremental|\bmmm\b|mix model|lift|geo|measure|view-?through|causal'),
     ('Creative', r'creative|\bugc\b|\bads? that|hook|thumbstop|video'),
     ('BFCM / Q4', r'bfcm|black friday|cyber|holiday|\bq4\b|peak season|q5'),
@@ -73,6 +73,7 @@ def mr_type(cats):
 def guess_type(pub, dflt, title, extra):
     t = title.lower()
     if pub == 'Modern Retail': return mr_type(extra)
+    if pub == 'Graphite': return 'Guide' if re.search(r'^how (to|do)|playbook|guide', t) else 'Report'
     if pub == 'CTC' and extra:
         b = {'research': 'Report', 'thread': 'Newsletter', 'dtc-hotline': 'Podcast', 'taylor-reacts': 'Podcast', 'bridges-live': 'Podcast', 'outliers': 'Podcast'}.get(extra)
         if b: return b

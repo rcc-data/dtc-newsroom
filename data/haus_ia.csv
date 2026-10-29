@@ -1,0 +1,14 @@
+# Meta Incremental Attribution (IA) vs standard attribution: incremental return of IA-optimised campaigns divided by standard-attribution campaigns in Haus holdout tests (geometric mean). Reads published 14-15 Jul 2026 and 9 Oct 2026.
+read,period,segment,ratio,low,high
+Jul 2026,Jul 2024 - Jun 2025,All brands,0.80,0.58,1.10
+Jul 2026,Jul 2025 - Jun 2026,All brands,1.26,1.11,1.43
+Jul 2026,All tests,All brands,1.11,0.96,1.27
+Jul 2026,Jul 2024 - Jun 2025,DTC-only,0.94,,
+Jul 2026,Jul 2024 - Jun 2025,Omnichannel,0.76,,
+Jul 2026,Jul 2025 - Jun 2026,DTC-only,1.38,,
+Jul 2026,Jul 2025 - Jun 2026,Omnichannel,1.02,,
+Oct 2026,Since mid-2025,All brands,1.18,,
+Oct 2026,Since mid-2025,DTC-only,1.26,,
+Oct 2026,Since mid-2025,Omnichannel,1.09,,
+Oct 2026,Since mid-2025,Diversified media mix,1.17,,
+Oct 2026,Since mid-2025,Meta-heavy media mix,1.17,,

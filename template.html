@@ -232,10 +232,10 @@ table.q tbody tr.link{cursor:pointer}
       <a href="#front" data-desk="front">Front page</a>
       <a href="#bfcm" data-desk="bfcm"><span class="live" aria-hidden="true"></span>BFCM Live</a>
       <a href="#nb-channels" data-desk="nb">Northbeam</a>
-      <a href="#mo-bench" data-desk="mo">Motion<span class="new">new</span></a>
-      <a href="#mkt" data-desk="mkt">Earnings<span class="new">new</span></a>
-      <a href="#haus" data-desk="haus">Haus<span class="soon">scouted</span></a>
-      <a href="#triplewhale" data-desk="triplewhale">Triple Whale<span class="soon">scouted</span></a>
+      <a href="#mo-bench" data-desk="mo">Motion</a>
+      <a href="#mkt" data-desk="mkt">Earnings</a>
+      <a href="#haus" data-desk="haus">Haus</a>
+      <a href="#triplewhale" data-desk="triplewhale">Triple Whale</a>
       <a href="#wire" data-desk="wire">Wire sources</a>
     </div>
     <div class="subrow" id="subrow" data-for="nb" hidden>
@@ -685,28 +685,35 @@ table.q tbody tr.link{cursor:pointer}
 <section class="view" id="v-mo-trend" hidden>
   <div>
     <div class="kicker">Motion (now Runneth) · Weekly</div>
-    <h2>The 30 most-saved ads this week</h2>
-    <p class="dek">Runneth ranks the top Meta, TikTok and Instagram ads each week by how often its users save them to their boards. It is Motion's only weekly-cadence feed, so the newsroom snapshots it every week to build a history of which brands and formats keep showing up.</p>
+    <h2>The most-saved ads, overall and in 31 industries</h2>
+    <p class="dek">Runneth ranks the top 30 Meta, TikTok and Instagram ads by how often its users save them, on a main list plus 31 industry lists (found through a hidden sitemap, all marked "weekly"). Past weeks come from the Internet Archive; from 28 October the Thursday update captures all 32 lists.</p>
   </div>
   <div class="strip" id="trKpis"></div>
-  <div class="ctl" style="padding:0"><label for="trSnap">Week</label><select id="trSnap"></select></div>
+  <div class="ctl" style="padding:0;flex-wrap:wrap;gap:10px"><label for="trList">List</label><select id="trList"></select><label for="trSnap">Week</label><select id="trSnap"></select></div>
+  <div class="callout" id="trFresh"></div>
   <div class="grid2">
     <div class="term">
-      <div class="th"><span class="t">Brands in the top 30</span><span class="m">ads per brand this week</span></div>
+      <div class="th"><span class="t">Brands in the top 30</span><span class="m">ads per brand in the selected week</span></div>
       <div class="chart"><canvas id="cTrBrand"></canvas></div>
     </div>
     <div class="term">
-      <div class="th"><span class="t">Format of the top 30</span><span class="m">aspect ratio</span></div>
+      <div class="th"><span class="t">Format mix over time</span><span class="m">share of the top 30 by aspect ratio, each captured week</span></div>
       <div class="chart"><canvas id="cTrAspect"></canvas></div>
     </div>
   </div>
   <div class="term">
-    <div class="th"><span class="t">This week's list</span><span class="m">rank · brand · format · days live where shown</span></div>
-    <div class="tw" style="max-height:560px"><table class="q cad-t" id="tTrend30"></table></div>
+    <div class="th"><span class="t">Format by industry</span><span class="m">vertical 9:16 share of each industry's top 30 · May vs Oct 2026</span></div>
+    <div class="chart tall"><canvas id="cTrInd"></canvas></div>
   </div>
-  <div class="term">
-    <div class="th"><span class="t">Brand streaks</span><span class="m">weeks in the top 30 since tracking began</span></div>
-    <div id="trStreak"></div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">The list</span><span class="m">rank · brand · format · days live where shown</span></div>
+      <div class="tw" style="max-height:560px"><table class="q cad-t" id="tTrend30"></table></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">Staying power</span><span class="m">weeks each brand appears in this list across captured weeks</span></div>
+      <div id="trStreak"></div>
+    </div>
   </div>
 </section>
 
@@ -737,14 +744,78 @@ table.q tbody tr.link{cursor:pointer}
 
 <!-- HAUS / TW -->
 <section class="view" id="v-haus" hidden>
-  <div><div class="kicker">Haus desk · scouted</div><h2>Incrementality research, in bursts rather than weekly</h2><p class="dek">Haus publishes long research reports built on hundreds of its customers' lift tests, plus a podcast. There is no weekly data series, so this desk will be report-led: each one becomes a dataset and library entry, with a chart of incremental vs platform-reported ROAS by channel.</p></div>
-  <div class="term"><div class="th"><span class="t">What Haus publishes</span><span class="m">quick scan, Oct 2026</span></div><div class="tw"><table class="q cad-t" id="tHausCad"></table></div></div>
-  <div class="term"><div class="th"><span class="t">Research reports, newest first</span><span class="m">15 since 2023 · about one every two months since 2025</span></div><div class="tw"><table class="q" id="tHausRep"></table></div></div>
+  <div><div class="kicker">Haus · Incrementality</div><h2>What actually moves sales: Haus's lift tests, channel by channel</h2><p class="dek">Haus runs geo holdout experiments for its customers and publishes what thousands of them show. Long research reports arrive every one to three months; between them, CMO Olivia Kory and @HausAnalytics post smaller data snapshots on X several times a month. Both are gathered here.</p></div>
+  <div class="strip" id="hsKpis"></div>
+  <div class="term">
+    <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Channel scorecard</span>
+      <div class="seg" role="group" aria-label="Measure" id="hsMeasure" style="margin-left:auto"><button type="button" data-m="ptw_share" aria-pressed="true">Lift after ads stop</button><button type="button" data-m="halo" aria-pressed="false">Off-site halo</button><button type="button" data-m="new_cust" aria-pressed="false">New customers</button></div></div>
+    <div class="chart"><canvas id="cHsCh"></canvas></div>
+    <p class="note" id="hsChNote"></p>
+  </div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">Meta Incremental Attribution vs standard</span><span class="m">incremental return ratio · 1.0 = no difference</span></div>
+      <div class="chart"><canvas id="cHsIA"></canvas></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">Which Meta number to trust</span><span class="m">rank correlation with holdout lift · band = middle 50%</span></div>
+      <div class="chart"><canvas id="cHsRep"></canvas></div>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">Meta's click change, March 2026</span><span class="m">7-day click purchases per 100 Incremental Attribution</span></div>
+      <div class="chart"><canvas id="cHs7dc"></canvas></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">Catalog ads fall behind in Q4</span><span class="m">return vs the same brand's other Meta ads</span></div>
+      <div class="chart"><canvas id="cHsCat"></canvas></div>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">Google non-brand: text vs shopping</span><span class="m">indexed iROAS vs brand's other media, by half-year</span></div>
+      <div class="chart"><canvas id="cHsSearch"></canvas></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">Upper-funnel YouTube takes months</span><span class="m">TextNow geo test, cumulative lift (final = 100)</span></div>
+      <div class="chart"><canvas id="cHsTN"></canvas></div>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">Cyber Week 2025: lift after the ads stop</span><span class="m">extra efficiency once delayed BFCM lift is counted</span></div>
+      <div class="chart"><canvas id="cHsCW"></canvas></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">AppLovin is coming back to earth</span><span class="m">% of tests beating the brand's typical result</span></div>
+      <div class="chart"><canvas id="cHsApp"></canvas></div>
+    </div>
+  </div>
+  <div class="section-head"><span class="label">What it means for Q4 2026</span></div>
+  <div class="takes" id="hsTakes"></div>
+  <div class="term"><div class="th"><span class="t">What Haus publishes</span><span class="m">cadence</span></div><div class="tw"><table class="q cad-t" id="tHausCad"></table></div></div>
+  <div class="section-head"><span class="label">Haus library</span></div>
+  <div class="lib" id="hsLib"></div>
 </section>
 <section class="view" id="v-triplewhale" hidden>
-  <div><div class="kicker">Triple Whale desk · scouted</div><h2>Always-on benchmarks and the biggest live BFCM feed</h2><p class="dek">Triple Whale's most useful regular source is its free benchmarks tool, which covers 60,000+ brands across 35 industries and is updated continuously. A weekly snapshot of it would give the newsroom a by-industry series alongside Northbeam's. Around Cyber Week it runs a live revenue and spend page, and publishes a BFCM breakdown a few days later.</p></div>
+  <div><div class="kicker">Triple Whale · Weekly benchmarks</div><h2>Where each industry stands this month</h2><p class="dek">A weekly snapshot of Triple Whale's free benchmarks: brands with $1–10M annual revenue, trailing 30 days, 12 DTC industries, every channel. Only real snapshots are kept. Triple Whale's tool will return past date ranges, but those are a scaled seasonal index rather than weekly data, so history builds from 28 October 2026.</p></div>
   <div class="strip" id="twKpis"></div>
-  <div class="term"><div class="th"><span class="t">What Triple Whale publishes</span><span class="m">quick scan, Oct 2026</span></div><div class="tw"><table class="q cad-t" id="tTwCad"></table></div></div>
+  <div class="term">
+    <div class="ctl" style="flex-wrap:wrap">
+      <label for="twMetric">Metric</label><select id="twMetric"><option value="roas">ROAS</option><option value="cpa">CPA</option><option value="cpm">CPM</option><option value="cpc">CPC</option><option value="ctr">CTR</option><option value="cvr">CVR</option><option value="aov">AOV</option><option value="ncPercent">New-customer %</option></select>
+      <label for="twChan">Channel</label><select id="twChan"></select>
+      <label for="twSnap">Snapshot</label><select id="twSnap"></select>
+    </div>
+    <div class="chart tall"><canvas id="cTwInd"></canvas></div>
+    <p class="note">Bars run from the 25th to the 75th percentile brand; the marker is the median. Channels with too few brands in an industry are left out by Triple Whale.</p>
+  </div>
+  <div class="term">
+    <div class="th"><span class="t">Channel comparison</span><span class="m">median by channel for the selected industry</span></div>
+    <div class="ctl"><label for="twInd">Industry</label><select id="twInd"></select></div>
+    <div class="tw"><table class="q" id="tTwCh"></table></div>
+  </div>
+  <div class="term"><div class="th"><span class="t">What Triple Whale publishes</span><span class="m">cadence</span></div><div class="tw"><table class="q cad-t" id="tTwCad"></table></div></div>
 </section>
 
 <!-- WIRE -->
@@ -780,7 +851,7 @@ function openSources(ids){
 function closeSources(){document.getElementById('drawer').hidden=true;document.getElementById('scrim').hidden=true;lastFocus&&lastFocus.focus&&lastFocus.focus()}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-src]');if(b){e.preventDefault();openSources(b.dataset.src)}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.getElementById('drawer').hidden)closeSources()});
-const SRC_MAP={cBfLive:'mb-bfcm,bl-cyberweek',cEarn:'meta-q3-26,meta-q2-26,meta-q1-26,meta-q4-25',cEarnReg:'meta-apac,meta-q2-26',cEarnVsNb:'meta-q3-26,mb-cpm25,x-roas',cMoTier:'mo-cb26key',cMoPort:'mo-cb26key',cMoFmt:'mo-cb26',cMoHW:'mo-bfcm26',cTrBrand:'mo-trending',cTrAspect:'mo-trending',cMoAI:'mo-ai',cCmp:'mb-weekly',cAdsLaunch:'bl-jan',cAdsWeek:'mb-hudson,mb-ugc1,bl-jan',cMis:'mb-ugc1',cVertAds:'x-verticals',cCap:'mb-ugc3,mb-ugc2,bl-jan',fCpm:'mb-cpm25',fBoard:'mb-weekly',fShare:'mb-weekly',fMovers:'mb-weekly',trMulti:'mb-weekly',tHeat:'mb-weekly',cShare:'mb-weekly,mb-may',tTrend:'mb-weekly',tShare:'mb-weekly',tQ1:'mb-may',tEmerg:'x-emerging',cMonthly:'bl-planning,bl-jan,bl-feb,mb-april,mb-may,mb-h1,bl-cyberweek,bl-cost',cBand:'mb-h1,mb-cpm25',tH1rev:'mb-h1',tH1aov:'mb-h1',cSize:'bl-under5,bl-cost',tVert:'bl-power',tMix:'x-verticals',tAds:'bl-jan',cAI:'mb-ai',cOverlay:'mb-cpm25,x-roas,x-ncac',cArc:'mb-bfcm,bl-cyberweek',cPace:'bl-cyberfive',cLag:'mb-lag',tInd:'x-industry',cPost:'mb-weekly,bl-q5',cJan:'bl-jan',cM1:'mb-h1,mb-metatank',cM2:'mb-h1,mb-metatank',cM3:'x-roas,x-ncac',cTT:'mb-tiktok'};
+const SRC_MAP={cBfLive:'mb-bfcm,bl-cyberweek',cEarn:'meta-q3-26,meta-q2-26,meta-q1-26,meta-q4-25',cEarnReg:'meta-apac,meta-q2-26',cEarnVsNb:'meta-q3-26,mb-cpm25,x-roas',cMoTier:'mo-cb26key',cMoPort:'mo-cb26key',cMoFmt:'mo-cb26',cMoHW:'mo-bfcm26',cTrBrand:'mo-trending',cTrAspect:'mo-trending',cTrInd:'mo-trending',cHsCh:'haus-yt26,haus-meta25,haus-tiktok,haus-applovin',cHsIA:'haus-ia-jul,haus-ia-oct',cHsRep:'haus-ia-oct',cHs7dc:'haus-ia-oct',cHsCat:'haus-catalog',cHsSearch:'haus-search',cHsTN:'haus-textnow',cHsCW:'haus-cw25',cHsApp:'haus-applovin',cTwInd:'tw-weekly',tTwCh:'tw-weekly',cMoAI:'mo-ai',cCmp:'mb-weekly',cAdsLaunch:'bl-jan',cAdsWeek:'mb-hudson,mb-ugc1,bl-jan',cMis:'mb-ugc1',cVertAds:'x-verticals',cCap:'mb-ugc3,mb-ugc2,bl-jan',fCpm:'mb-cpm25',fBoard:'mb-weekly',fShare:'mb-weekly',fMovers:'mb-weekly',trMulti:'mb-weekly',tHeat:'mb-weekly',cShare:'mb-weekly,mb-may',tTrend:'mb-weekly',tShare:'mb-weekly',tQ1:'mb-may',tEmerg:'x-emerging',cMonthly:'bl-planning,bl-jan,bl-feb,mb-april,mb-may,mb-h1,bl-cyberweek,bl-cost',cBand:'mb-h1,mb-cpm25',tH1rev:'mb-h1',tH1aov:'mb-h1',cSize:'bl-under5,bl-cost',tVert:'bl-power',tMix:'x-verticals',tAds:'bl-jan',cAI:'mb-ai',cOverlay:'mb-cpm25,x-roas,x-ncac',cArc:'mb-bfcm,bl-cyberweek',cPace:'bl-cyberfive',cLag:'mb-lag',tInd:'x-industry',cPost:'mb-weekly,bl-q5',cJan:'bl-jan',cM1:'mb-h1,mb-metatank',cM2:'mb-h1,mb-metatank',cM3:'x-roas,x-ncac',cTT:'mb-tiktok'};
 function injectSources(){Object.entries(SRC_MAP).forEach(([id,ids])=>{const el=document.getElementById(id);if(!el)return;const term=el.closest('.term');if(!term||term.querySelector(':scope > .th .src-btn, :scope > .ctl .src-btn'))return;const host=term.querySelector(':scope > .th')||term.querySelector(':scope > .ctl');if(host){const n=ids.split(',').length;host.insertAdjacentHTML('beforeend',srcBtn(ids,n>1?`SRC ×${n} ↗`:'SRC ↗'))}})}
 const n=v=>{if(v===undefined||v===null)return null;const s=String(v).trim();if(s===''||s==='-')return null;const x=parseFloat(s.replace('~',''));return isNaN(x)?null:x};
 const rowsOf=k=>D[k].rows.map(r=>Object.fromEntries(D[k].cols.map((c,i)=>[c,r[i]])));
@@ -1133,10 +1204,11 @@ function renderLens(){
       cards.push(lensCard(`April & May 2026 · ${seg}`,'mb-april,mb-may',[['Revenue (Apr, median)',a?n(a.median_revenue_yoy):null,null,AP['Revenue']],['Meta spend (May, median)',mm?n(mm.median):null,null,null],['Meta spend (May, average)',mm?n(mm.average):null,null,null]],true));
       series.push({label:'Apr 2026',data:M6.map(m=>m==='Revenue'&&a?n(a.median_revenue_yoy):null)});
       note='The weekly channel tracker and share of spend are not published by segment, so they cannot be filtered.';}
+    if(dim==='rev'){const q=pctRows('q3_rev',seg);cards.push(lensCard(`Q3 2026 · ${seg}`,'x-q3rev',M6.map(m=>[m,q[m].med,`${fmtP(q[m].p25)} / ${fmtP(q[m].p75)}`])));series.push({label:'Q3 2026',data:M6.map(m=>q[m].med)});}
     if(dim==='rev'){const a=rowsOf('april_rev_band').find(r=>r.revenue_band===seg);if(a){cards.push(lensCard(`April 2026 · ${seg} (average)`,'mb-april',M6.map(m=>[m,n(a[KEY6[m]]),null,AP[m==='Spend'?'Ad spend':m==='MER (New)'?'MER (New)':m]]),true));series.push({label:'Apr 2026',data:M6.map(m=>n(a[KEY6[m]]))})}
       const s5=rowsOf('size_2025').find(r=>r.company_size===seg);if(s5){cards.push(lensCard(`Full year 2025 · ${seg}`,'bl-under5,bl-cost',[['Spend',n(s5.spend)],['Revenue',n(s5.revenue)]]));series.push({label:'FY 2025',data:M6.map(m=>m==='Spend'?n(s5.spend):m==='Revenue'?n(s5.revenue):null)})}
       const f=rowsOf('feb_size');const fr=f.find(r=>r.cohort===seg),fa=f.find(r=>r.cohort==='All businesses');if(fr){cards.push(lensCard(`February 2026 · ${seg}`,'bl-feb',M6.map(m=>[m,n(fr[KEY6[m]]),null,n(fa[KEY6[m]])]),true));series.push({label:'Feb 2026',data:M6.map(m=>n(fr[KEY6[m]]))})}
-      note='Q3 2026 benchmarks were published by ad spend only. Feb 2026 detail exists for $50m+ bands only.';}
+      note='Q3 2026 by company revenue comes from Northbeam\'s X post of 24 Oct. Feb 2026 detail exists for $50m+ bands only.';}
     if(dim==='aov'){const a=rowsOf('april_aov').find(r=>r.aov_band===seg),my=rowsOf('may_aov').find(r=>r.aov_band===seg);
       if(a){cards.push(lensCard(`April 2026 · AOV ${seg} (average)`,'mb-april',M6.map(m=>[m,n(a[KEY6[m]]),null,AP[m==='Spend'?'Ad spend':m]]),true));series.push({label:'Apr 2026',data:M6.map(m=>n(a[KEY6[m]]))})}
       if(my){cards.push(lensCard(`May 2026 · AOV ${seg}`,'mb-may',M6.map(m=>[m,n(my[KEY6[m]]),null,MY[m==='Spend'?'Ad spend':m]]),true));series.push({label:'May 2026',data:M6.map(m=>n(my[KEY6[m]]))})}
@@ -1298,22 +1370,6 @@ function renderMoPlan(){
   ${next?`<div style="color:${T.dim}">Accounts one tier up (${next.tier}) ship ${next.median_ads_wk} a week at a ${next.hit_rate}% hit rate.</div>`:''}
   <div style="color:${T.dim}">Rule of thumb from the report: don't expect more than 1 in 10–13 creatives to win. ${srcBtn('mo-cb26key')}</div>`;
 }
-function renderMoTrend(){
-  const A=rowsOf('mo_trending');const snaps=[...new Set(A.map(r=>r.snapshot))].sort().reverse();const sel=document.getElementById('trSnap');
-  if(!sel.options.length)sel.innerHTML=snaps.map(s=>`<option value="${s}">Week of ${dfmt(s,true)}</option>`).join('');
-  const S=A.filter(r=>r.snapshot===sel.value);
-  const cnt={};S.forEach(r=>cnt[r.brand]=(cnt[r.brand]||0)+1);const br=Object.entries(cnt).sort((a,b)=>b[1]-a[1]);
-  const asp={};S.forEach(r=>asp[r.aspect]=(asp[r.aspect]||0)+1);
-  const v916=Math.round((asp['9:16']||0)/S.length*100);
-  kpiStrip('trKpis',[['Snapshot',dfmt(sel.value,true),snaps.length+' week'+(snaps.length>1?'s':'')+' tracked',T.text,'mo-trending'],['Distinct brands',String(br.length),'in the top 30',T.text],['Vertical 9:16',v916+'%','of the top 30',T.amber],['Most repeated',br[0][0],br[0][1]+' ads in the top 30',T.up],['Shortest-lived',S.filter(r=>n(r.active_days)!=null).sort((a,b)=>n(a.active_days)-n(b.active_days))[0]?.brand||'–',(S.filter(r=>n(r.active_days)!=null).sort((a,b)=>n(a.active_days)-n(b.active_days))[0]?.active_days||'?')+' day(s) live',T.text]]);
-  const top=br.slice(0,14);
-  mk('cTrBrand',{type:'bar',data:{labels:top.map(x=>x[0]),datasets:[{label:'Ads in top 30',data:top.map(x=>x[1]),backgroundColor:top.map(x=>x[1]>1?T.amber:'rgba(255,176,32,.4)')}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,ticks:{stepSize:1}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10.5}}}},plugins:{legend:{display:false}}}});
-  const ak=Object.keys(asp);
-  mk('cTrAspect',{type:'bar',data:{labels:ak,datasets:[{label:'Ads',data:ak.map(k=>asp[k]),backgroundColor:ak.map(k=>k==='9:16'?T.amber:k==='4:5'?T.blue:'#a98bff')}]},options:{scales:{y:{grid,ticks:{stepSize:5}},x:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.y} of ${S.length} ads (${Math.round(c.parsed.y/S.length*100)}%)`}}}}});
-  document.getElementById('tTrend30').innerHTML='<thead><tr><th>#</th><th>Brand</th><th>Format</th><th>Days live</th></tr></thead><tbody>'+S.map(r=>`<tr><td>${r.rank}</td><td>${esc(r.brand)}</td><td>${r.aspect}</td><td>${r.active_days||'·'}</td></tr>`).join('')+'</tbody>';
-  const wk={};A.forEach(r=>{wk[r.brand]=wk[r.brand]||new Set();wk[r.brand].add(r.snapshot)});
-  document.getElementById('trStreak').innerHTML=snaps.length<2?`<div class="empty">History starts this week. Each Thursday's update adds a new snapshot, and brands that stay in the top 30 week after week will show here.</div>`:'<div class="tw"><table class="q"><thead><tr><th>Brand</th><th>Weeks in top 30</th></tr></thead><tbody>'+Object.entries(wk).sort((a,b)=>b[1].size-a[1].size).slice(0,15).map(([b,s])=>`<tr><td>${esc(b)}</td><td>${s.size}</td></tr>`).join('')+'</tbody></table></div>';
-}
 function renderMoResearch(){
   const cad=[['Weekly · Sunday','Thumbstop newsletter','Email only, 50k+ readers. Long pieces reappear on the blog as "Thumbstop" posts.','mo-thumbstop'],['Weekly','Top ads this week (trending)','Top 30 ads by community saves, 31 industry cuts. Snapshotted every Thursday into this desk.','mo-trending'],['Quarterly','Thumbstop Pulse reports','Survey and data reports: AI Divide (Nov 2025), Creative Benchmarks 2026.','mo-ai,mo-cb26'],['Annual','Creative Benchmarks','550k ads, hit rates by format, hook and asset type. Next edition likely early 2027, after BFCM 2026.','mo-cb26'],['Annual','State of Creative Strategy','Salary, sentiment and job-market survey (2027 edition out now).','mo-socs'],['Seasonal','BFCM planner and webinars','BFCM 2026 planner built on 25,499 BFCM 2025 Health & Wellness ads.','mo-bfcm26']];
   document.getElementById('tMoCad').innerHTML='<thead><tr><th>Cadence</th><th>Series</th><th>What it gives the newsroom</th><th></th></tr></thead><tbody>'+cad.map(r=>`<tr><td>${r[0]}</td><td><b>${r[1]}</b></td><td>${esc(r[2])}</td><td>${srcBtn(r[3])}</td></tr>`).join('')+'</tbody>';
@@ -1322,23 +1378,101 @@ function renderMoResearch(){
   kpiStrip('socsKpis',[['Feel underpaid','58%','vs 23% well paid',T.down,'mo-socs'],['Use AI','~90%','heavy users most satisfied',T.text,'mo-socs'],['Job posts naming AI','45%','up from 21%',T.amber,'mo-socs'],['Work solo or in 2–3','~80%','of practitioners',T.text,'mo-socs']]);
   document.getElementById('moLib').innerHTML=libCards(LIB.filter(x=>x.pub==='Motion'));
 }
-function renderHaus(){
-  const cad=[['Every 1–3 months','Research reports','Long reports built on hundreds of lift tests (Meta: 640 tests; YouTube: 190; Cyber Week: 100+). The source of the newsroom\'s incrementality benchmarks.'],['Irregular, ~monthly','Blog: methodology and platform','How Haus tests, product updates, staff profiles. Little data.'],['Regular','Open Haus podcast','Episodes on incrementality basics and operator interviews.'],['December','Cyber Week incrementality report','2025 edition on 11 Dec: delayed conversion effects from CTV, YouTube and paid social around BFCM.']];
-  document.getElementById('tHausCad').innerHTML='<thead><tr><th>Cadence</th><th>Series</th><th>Notes</th></tr></thead><tbody>'+cad.map(r=>`<tr><td>${r[0]}</td><td><b>${r[1]}</b></td><td>${esc(r[2])}</td></tr>`).join('')+'</tbody>';
-  const rep=[['14 Oct 2026','Do YouTube Ads Still Perform?'],['23 Jul 2026','Fast, Confident, and Wrong: The Risk of Noisy Incrementality Tests'],['16 Jul 2026','Is Meta\'s Incremental Attribution Outperforming Standard Attribution?'],['25 Jun 2026','How Film Studios and Streamers Measure Marketing ROI'],['18 Jun 2026','Is AppLovin More Than a Hype Channel?'],['24 Feb 2026','How Haus Scales Causal Marketing Measurement Without Human Bias'],['11 Dec 2025','The Cyber Week Incrementality Report'],['4 Dec 2025','The TikTok Report'],['29 Sep 2025','When Is Branded Search Worth the Investment?'],['28 Jul 2025','The Meta Report: Lessons from 640 Incrementality Experiments'],['6 Mar 2025','Do YouTube Ads Perform? Lessons From 190 Incrementality Tests']];
-  document.getElementById('tHausRep').innerHTML='<thead><tr><th>Date</th><th>Report</th><th></th></tr></thead><tbody>'+rep.map(r=>`<tr><td>${r[0]}</td><td>${esc(r[1])}</td><td>${srcBtn('haus-reports')}</td></tr>`).join('')+'</tbody>';
+const refLine=(v,axis='y',label)=>({id:'ref'+axis+v,afterDatasetsDraw(c){const sc=c.scales[axis];if(!sc)return;const p=sc.getPixelForValue(v);const ar=c.chartArea;if(axis==='y'&&(p<ar.top||p>ar.bottom))return;if(axis==='x'&&(p<ar.left||p>ar.right))return;const ctx=c.ctx;ctx.save();ctx.strokeStyle='rgba(217,225,221,.55)';ctx.setLineDash([4,4]);ctx.lineWidth=1;ctx.beginPath();if(axis==='y'){ctx.moveTo(ar.left,p);ctx.lineTo(ar.right,p)}else{ctx.moveTo(p,ar.top);ctx.lineTo(p,ar.bottom)}ctx.stroke();if(label){ctx.setLineDash([]);ctx.fillStyle='rgba(217,225,221,.7)';ctx.font='10px "IBM Plex Mono",monospace';axis==='y'?ctx.fillText(label,ar.right-ctx.measureText(label).width-4,p-4):ctx.fillText(label,p+4,ar.top+10)}ctx.restore()}});
+const IND_NAME=s=>s.replace(/_and_/g,' & ').replace(/_/g,' ').replace(/-/g,' ').replace(/\b\w/g,m=>m.toUpperCase());
+
+/* ---------- Motion trending (lists + history) ---------- */
+function renderMoTrend(){
+  const A=rowsOf('mo_trending');
+  const lsel=document.getElementById('trList'),ssel=document.getElementById('trSnap');
+  if(!lsel.options.length){const lists=[...new Set(A.map(r=>r.list))].filter(l=>l!=='all').sort();lsel.innerHTML='<option value="all">All industries (main list)</option>'+lists.map(l=>`<option value="${l}">${IND_NAME(l)}</option>`).join('')}
+  const L=lsel.value;const LA=A.filter(r=>r.list===L);const snaps=[...new Set(LA.map(r=>r.snapshot))].sort().reverse();
+  if(ssel.dataset.list!==L){ssel.innerHTML=snaps.map(s=>`<option value="${s}">Week of ${dfmt(s,true)}</option>`).join('');ssel.dataset.list=L}
+  const W=ssel.value||snaps[0];const S=LA.filter(r=>r.snapshot===W);
+  const cnt={};S.forEach(r=>{const b=r.brand||'(unnamed)';cnt[b]=(cnt[b]||0)+1});const br=Object.entries(cnt).sort((a,b)=>b[1]-a[1]);
+  const asp={};S.forEach(r=>{const k=r.aspect||'unknown';asp[k]=(asp[k]||0)+1});
+  const v916=S.length?Math.round((asp['9:16']||0)/S.length*100):0;
+  const prev=snaps[snaps.indexOf(W)+1];let same=null;
+  if(prev){const key=r=>r.rank+'|'+r.brand+'|'+r.aspect+'|'+r.active_days;const P=new Set(LA.filter(r=>r.snapshot===prev).map(key));same=S.filter(r=>P.has(key(r))).length;
+    const pb=new Set(LA.filter(r=>r.snapshot===prev).map(r=>r.brand));const nb=new Set(S.map(r=>r.brand));const newB=[...nb].filter(b=>!pb.has(b));
+    document.getElementById('trFresh').innerHTML=`<b>Week on week</b>${same} of ${S.length} positions are identical to ${dfmt(prev,true)} (same rank, brand, format and days live); ${newB.length} brand${newB.length===1?'':'s'} new to the list${newB.length?': '+esc(newB.slice(0,8).join(', '))+(newB.length>8?'…':''):''}. ${same>=S.length*0.6?'<span style="color:'+T.down+'">This list has barely refreshed, so read it as a standing ranking rather than this week\'s trend.</span>':''} ${srcBtn('mo-trending')}`}
+  else document.getElementById('trFresh').innerHTML=`<b>History</b>This is the earliest captured week for this list. ${L==='all'?'Earlier weeks: none archived.':'Industry lists were archived once (13 May 2026); weekly capture runs from 28 Oct.'} ${srcBtn('mo-trending')}`;
+  const sl=S.filter(r=>n(r.active_days)!=null).sort((a,b)=>n(a.active_days)-n(b.active_days));
+  kpiStrip('trKpis',[['List',L==='all'?'All':IND_NAME(L),snaps.length+' week'+(snaps.length>1?'s':'')+' captured',T.text,'mo-trending'],['Distinct brands',String(br.length),'in the top '+S.length,T.text],['Vertical 9:16',v916+'%','of the list',T.amber],['Most repeated',br[0]?br[0][0]:'–',br[0]?br[0][1]+' ads in the list':'',T.up],['Newest ad',sl[0]?sl[0].brand:'–',sl[0]?sl[0].active_days+' day(s) live':'',T.text]]);
+  const top=br.slice(0,14);
+  mk('cTrBrand',{type:'bar',data:{labels:top.map(x=>x[0]),datasets:[{label:'Ads in list',data:top.map(x=>x[1]),backgroundColor:top.map(x=>x[1]>1?T.amber:'rgba(255,176,32,.4)')}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,ticks:{stepSize:1}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10.5}}}},plugins:{legend:{display:false}}}});
+  const chron=[...snaps].reverse();const AR=['9:16','4:5','1:1'];const ACOL={'9:16':T.amber,'4:5':T.blue,'1:1':'#a98bff'};
+  mk('cTrAspect',{type:'line',data:{labels:chron.map(s=>dfmt(s,true)),datasets:AR.map(a=>({label:a,data:chron.map(s=>{const R=LA.filter(r=>r.snapshot===s);return R.length?Math.round(R.filter(r=>r.aspect===a).length/R.length*100):null}),borderColor:ACOL[a],backgroundColor:ACOL[a],borderWidth:3,pointRadius:5,tension:.2}))},options:{scales:{y:{grid,min:0,max:100,ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y}% of the list`}}}}});
+  const inds=[...new Set(A.filter(r=>r.list!=='all').map(r=>r.list))].sort();const share=(l,s)=>{const R=A.filter(r=>r.list===l&&r.snapshot===s);return R.length?Math.round(R.filter(r=>r.aspect==='9:16').length/R.length*100):null};
+  const IS=inds.map(l=>({l,a:share(l,'2026-05-13'),b:share(l,'2026-10-28')})).sort((x,y)=>(y.b??-1)-(x.b??-1));
+  mk('cTrInd',{type:'bar',data:{labels:IS.map(x=>IND_NAME(x.l)),datasets:[{label:'13 May 2026',data:IS.map(x=>x.a),backgroundColor:'rgba(90,169,255,.55)'},{label:'28 Oct 2026',data:IS.map(x=>x.b),backgroundColor:T.amber}]},options:{scales:{y:{grid,min:0,max:100,ticks:{callback:v=>v+'%'}},x:{grid:{display:false},ticks:{autoSkip:false,maxRotation:60,minRotation:45,font:{size:10}}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.parsed.y==null?null:` ${c.dataset.label}: ${c.parsed.y}% vertical 9:16`}}}}});
+  document.getElementById('tTrend30').innerHTML='<thead><tr><th>#</th><th>Brand</th><th>Format</th><th>Days live</th></tr></thead><tbody>'+S.map(r=>`<tr><td>${r.rank}</td><td>${esc(r.brand||'(unnamed)')}</td><td>${r.aspect||'·'}</td><td>${r.active_days||'·'}</td></tr>`).join('')+'</tbody>';
+  const wk={};LA.forEach(r=>{const b=r.brand||'(unnamed)';wk[b]=wk[b]||{w:new Set(),n:0};wk[b].w.add(r.snapshot);wk[b].n++});
+  document.getElementById('trStreak').innerHTML=snaps.length<2?`<div class="empty">Only one week captured for this list so far. Each Thursday adds another.</div>`:'<div class="tw" style="max-height:560px"><table class="q cad-t"><thead><tr><th>Brand</th><th>Weeks present</th><th>Total ads listed</th></tr></thead><tbody>'+Object.entries(wk).sort((a,b)=>b[1].w.size-a[1].w.size||b[1].n-a[1].n).slice(0,20).map(([b,x])=>`<tr><td>${esc(b)}</td><td>${x.w.size} of ${snaps.length}</td><td>${x.n}</td></tr>`).join('')+'</tbody></table></div>';
 }
+
+/* ---------- Haus ---------- */
+let hsMeasure='ptw_share';
+function renderHaus(){
+  kpiStrip('hsKpis',[['YouTube: tests vs Google Ads','2.3×','DTC sales geo tests find vs reported',T.up,'haus-yt26'],['Meta IA vs standard','1.18×','incremental return, Oct 2026',T.up,'haus-ia-oct'],['Catalog ads in Q4','0.64×','vs brand\'s other Meta ads',T.down,'haus-catalog'],['Cyber Week delayed lift','+75%','efficiency once lag counted',T.amber,'haus-cw25'],['Non-brand text search','0.75×','vs brand\'s other media, H1 2026',T.down,'haus-search']]);
+  const C=rowsOf('haus_ch');const lab={ptw_share:['% of lift after ads stop','%'],halo:['Extra off-site sales per $1 DTC (¢) or halo %',''],new_cust:['% of DTC lift from new customers','%']};
+  const R=C.filter(r=>n(r[hsMeasure])!=null);
+  mk('cHsCh',{type:'bar',data:{labels:R.map(r=>r.channel),datasets:[{label:lab[hsMeasure][0],data:R.map(r=>n(r[hsMeasure])),backgroundColor:R.map(r=>({YouTube:'#ff7a59',Meta:'#5b8cff',TikTok:'#ff4f9a',AppLovin:'#a98bff'}[r.channel]||T.amber))}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,beginAtZero:true},y:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>{const r=R[c.dataIndex];return [` ${c.parsed.x}${hsMeasure==='halo'?(r.halo_note.startsWith('%')?'%':'¢'):'%'} · ${r.report}`,` ${hsMeasure==='halo'?r.halo_note:r.note}`]}}}}}});
+  document.getElementById('hsChNote').textContent={ptw_share:'Share of each channel\'s total lift that lands after the ads switch off. A test read on the last day of spend misses it. TikTok and AppLovin shares are derived from the post-treatment uplift each report states.',halo:'Sales on Amazon and in retail stores that come with each $1 of DTC sales. Meta and AppLovin are reported as a % halo rather than cents.',new_cust:'Share of each channel\'s measured DTC lift that comes from first-time customers.'}[hsMeasure];
+  const IA=rowsOf('haus_ia');const g=(rd,p,s)=>{const r=IA.find(x=>x.read===rd&&x.period===p&&x.segment===s);return r?n(r.ratio):null};
+  const reads=[['Jul 2024–Jun 2025','Jul 2026','Jul 2024 - Jun 2025'],['Jul 2025–Jun 2026','Jul 2026','Jul 2025 - Jun 2026'],['Oct 2026 read','Oct 2026','Since mid-2025']];
+  mk('cHsIA',{type:'bar',data:{labels:reads.map(r=>r[0]),datasets:[['All brands',T.amber],['DTC-only','#5b8cff'],['Omnichannel','#2ec4d6']].map(([s,c])=>({label:s,data:reads.map(r=>g(r[1],r[2],s)),backgroundColor:c}))},options:{scales:{y:{grid,min:0.6,max:1.5,ticks:{callback:v=>v.toFixed(1)+'×'}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.parsed.y==null?null:` ${c.dataset.label}: ${c.parsed.y.toFixed(2)}×`}}}},plugins:[refLine(1,'y','parity')]});
+  const RP=rowsOf('haus_rep');
+  mk('cHsRep',{type:'bar',data:{labels:RP.map(r=>r.setting),datasets:[{label:'Middle 50%',data:RP.map(r=>[n(r.band_low),n(r.band_high)]),backgroundColor:'rgba(90,169,255,.35)',borderSkipped:false,borderRadius:6,barPercentage:.5},{type:'line',label:'Typical',data:RP.map(r=>n(r.correlation)),showLine:false,pointRadius:8,pointHoverRadius:10,backgroundColor:RP.map((r,i)=>['#3b6cff','#5aa9ff','#2ec4d6','#ff7a59'][i]),borderColor:'#fff'}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,min:0,max:1},y:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>Array.isArray(c.raw)?` Middle 50%: ${c.raw[0]}–${c.raw[1]}`:` Correlation ${c.parsed.x.toFixed(2)}`}}}}});
+  const D7=rowsOf('haus_7dc');const ci=D7.findIndex(r=>r.month==='2026-04');
+  mk('cHs7dc',{type:'line',data:{labels:D7.map(r=>dfmt(r.month+'-15').replace(/^\d+ /,'')+" '"+r.month.slice(2,4)),datasets:[{label:'7-day click per 100 IA',data:D7.map(r=>n(r.per_100_ia)),borderColor:'#5aa9ff',backgroundColor:'#5aa9ff',borderWidth:3,pointRadius:4,tension:.2,segment:{borderDash:ctx=>ctx.p1DataIndex===ci?[4,4]:undefined}}]},options:{scales:{y:{grid,min:85,max:125},x:{grid:{display:false}}},plugins:{legend:{display:false},events:[ci+'|Meta: link clicks only'],tooltip:{callbacks:{label:c=>` ${c.parsed.y} per 100 IA`}}}},plugins:[refLine(100,'y','IA = 100')]});
+  const CT=rowsOf('haus_cat');const pick=['Tests starting Jan-Sep','Tests starting Oct-Dec (Q4)','No catalog (under 2% of Meta)','Light catalog (2-20%)','Heavy catalog (20%+)'];const CR=pick.map(p=>CT.find(r=>r.cut===p));
+  mk('cHsCat',{type:'bar',data:{labels:CR.map(r=>r.cut.replace(' (under 2% of Meta)','').replace('Tests starting ','Tests ')),datasets:[{label:'Return vs other Meta ads',data:CR.map(r=>n(r.value)),backgroundColor:CR.map(r=>/Q4/.test(r.cut)?T.down:/Light/.test(r.cut)?T.up:'rgba(90,169,255,.7)')}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,min:0,max:1.6,ticks:{callback:v=>v.toFixed(1)+'×'}},y:{grid:{display:false},ticks:{font:{size:10.5}}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>{const r=CR[c.dataIndex];return ` ${(+r.value).toFixed(2)}×${r.low?` (middle 50% ${r.low}–${r.high}×)`:''}${r.note?' · '+r.note:''}`}}}}},plugins:[refLine(1,'x','1.0×')]});
+  const SR=rowsOf('haus_search');
+  mk('cHsSearch',{type:'line',data:{labels:SR.map(r=>r.half),datasets:[{label:'Non-brand text',data:SR.map(r=>n(r.text)),borderColor:'#5aa9ff',backgroundColor:'#5aa9ff',borderWidth:3,pointRadius:5,tension:.15},{label:'Non-brand shopping',data:SR.map(r=>n(r.shopping)),borderColor:T.amber,backgroundColor:T.amber,borderWidth:3,pointRadius:5,tension:.15}]},options:{scales:{y:{grid,min:0.4,max:1.7,ticks:{callback:v=>v.toFixed(1)+'×'}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},events:['2|AI Overviews accelerate'],tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y.toFixed(2)}×`}}}},plugins:[refLine(1,'y','parity')]});
+  const TN=rowsOf('haus_textnow');
+  mk('cHsTN',{type:'line',data:{labels:TN.map(r=>dfmt(r.date,true)),datasets:[{label:'Cumulative lift',data:TN.map(r=>n(r.cumulative)),borderColor:'#ff7a59',backgroundColor:'rgba(255,122,89,.15)',fill:true,borderWidth:3,pointRadius:4,tension:.3}]},options:{scales:{y:{grid,min:0,max:100},x:{grid:{display:false}}},plugins:{legend:{display:false},events:['8|Flight ends'],tooltip:{callbacks:{label:c=>` ${c.parsed.y} of final 100`}}}}});
+  const CW=rowsOf('haus_cw').filter(r=>!/Share|doubled/.test(r.item));
+  mk('cHsCW',{type:'bar',data:{labels:CW.map(r=>r.item),datasets:[{label:'Extra efficiency',data:CW.map(r=>n(r.value)),backgroundColor:CW.map(r=>/CTV|YouTube/.test(r.item)?T.amber:/Evergreen/.test(r.item)?'rgba(127,140,135,.6)':'rgba(90,169,255,.7)')}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,ticks:{callback:v=>'+'+v+'%'}},y:{grid:{display:false},ticks:{font:{size:10.5}}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>{const r=CW[c.dataIndex];return ` +${r.value}% · ${r.note}`}}}}}});
+  const AP=rowsOf('haus_app').filter(r=>!/range/.test(r.period));const rng=rowsOf('haus_app').filter(r=>/range/.test(r.period)).map(r=>n(r.beat_rate));
+  const apl=['2025 (range)',...AP.map(r=>r.period)];
+  mk('cHsApp',{type:'bar',data:{labels:apl,datasets:[{label:'Beat rate',data:[rng,...AP.map(r=>n(r.beat_rate))],backgroundColor:['rgba(169,139,255,.5)',...AP.map(r=>/Q/.test(r.period)?'#a98bff':'rgba(127,140,135,.6)')],borderSkipped:false}]},options:{scales:{y:{grid,min:0,max:100,ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>Array.isArray(c.raw)?` ${c.raw[0]}–${c.raw[1]}% across 2025 quarters`:` ${c.parsed.y}% of tests beat the brand's typical result`}}}},plugins:[refLine(50,'y','coin flip')]});
+  const tk=[['Hold off on Meta product browsing','Catalog ads returned 0.64× the brand\'s other Meta ads in Q4 tests. Meta switched product browsing on by default on 28 Oct; Haus suggests opting out if you already run catalog.','haus-catalog'],['Spend before the weekend, judge after it','Haus\'s Cyber Week tests found 41% of value arrived after spend stopped, and tests ending 3+ weeks before BFCM saw +105% delayed lift. Northbeam\'s warm-up numbers point the same way.','haus-cw25,mb-bfcm'],['Optimise Meta to Incremental Attribution','IA campaigns returned 1.18× standard in holdout tests and track true lift most closely. If your incrementality factor is built on pre-March 7-day click, re-base it.','haus-ia-oct'],['Give YouTube and CTV longer reads','Google Ads sees under half of YouTube\'s DTC effect (2.3×), 24% of lift lands after the flight, and an upper-funnel test can take months to show.','haus-yt26,haus-textnow']];
+  document.getElementById('hsTakes').innerHTML=tk.map(([h,p,s])=>`<div class="story"><h4>${esc(h)}</h4><p>${esc(p)}</p>${srcBtn(s,'SOURCE · QUOTE')}</div>`).join('');
+  const cad=[['Several a month','X posts (@oliviaakory, @HausAnalytics)','Single charts from Haus\'s test database: Meta settings, catalog, search, case studies. Captured into this desk.'],['Every 1–3 months','Research reports','Long reports built on hundreds of lift tests (Meta: 640; YouTube; TikTok; AppLovin; Cyber Week).'],['December','Cyber Week incrementality report','2025 edition on 11 Dec: delayed impact from CTV, YouTube and paid social around BFCM.'],['Regular','Open Haus podcast','Operator interviews and test design.']];
+  document.getElementById('tHausCad').innerHTML='<thead><tr><th>Cadence</th><th>Series</th><th>Notes</th></tr></thead><tbody>'+cad.map(r=>`<tr><td>${r[0]}</td><td><b>${r[1]}</b></td><td>${esc(r[2])}</td></tr>`).join('')+'</tbody>';
+  document.getElementById('hsLib').innerHTML=libCards(LIB.filter(x=>x.pub==='Haus'));
+}
+
+/* ---------- Triple Whale weekly ---------- */
+const TWFMT={roas:v=>v.toFixed(2)+'×',cpa:v=>'$'+v.toFixed(2),cpm:v=>'$'+v.toFixed(2),cpc:v=>'$'+v.toFixed(2),aov:v=>'$'+v.toFixed(0),ctr:v=>(v*100).toFixed(2)+'%',cvr:v=>(v*100).toFixed(2)+'%',ncPercent:v=>(v*100).toFixed(0)+'%'};
+const TWCH={all:'All channels',meta:'Meta',google:'Google',tiktok:'TikTok',applovin:'AppLovin',pinterest:'Pinterest',snapchat:'Snapchat',bing:'Microsoft (Bing)'};
 function renderTW(){
-  kpiStrip('twKpis',[['BFCM 2025 revenue','$2.9bn','28 Nov – 1 Dec',T.text,'tw-bfcm25'],['BFCM 2025 ad spend','$607m','26m orders',T.text,'tw-bfcm25'],['Benchmark base','60k+','brands, 35 industries',T.amber,'tw-bench']]);
-  const cad=[['Always on','Free benchmarks tool','ROAS, CPA, AOV by industry and revenue range. Best candidate for a weekly snapshot series.'],['Live, BFCM weekend','BFCM live page','Running revenue, orders and ad spend counters through Cyber Week.'],['Early December','BFCM Breakdown report','Weekend totals, industry split, platform metrics (gated PDF).'],['Weekly','Whale Mail newsletter','Industry newsletter; mostly links and product news.'],['Periodic','Benchmark pages (Facebook, TikTok, Amazon)','YoY CPA, CPM, CVR, ROAS by industry, labelled "updated" with no fixed date.'],['Seasonal','Guides and reports','BFCM 2026 calendar, prompt playbooks, Amazon Big Deal Days benchmarks, health & beauty report.']];
+  const R=rowsOf('tw_weekly');const snaps=[...new Set(R.map(r=>r.snapshot))].sort().reverse();
+  const ms=document.getElementById('twMetric'),cs=document.getElementById('twChan'),ss=document.getElementById('twSnap'),is=document.getElementById('twInd');
+  if(!cs.options.length){const ch=[...new Set(R.map(r=>r.channel))];cs.innerHTML=Object.keys(TWCH).filter(k=>ch.includes(k)).map(k=>`<option value="${k}">${TWCH[k]}</option>`).join('');ss.innerHTML=snaps.map(s=>`<option value="${s}">${dfmt(s,true)}</option>`).join('');const inds=[...new Set(R.map(r=>r.industry))];is.innerHTML=inds.map(i=>`<option value="${i}">${IND_NAME(i)}</option>`).join('');is.value='health_and_wellness'}
+  const m=ms.value,ch=cs.value,sn=ss.value||snaps[0],f=TWFMT[m];
+  const S=R.filter(r=>r.snapshot===sn&&r.channel===ch&&r.metric===m).map(r=>({i:IND_NAME(r.industry),lo:n(r.p25),md:n(r.median),hi:n(r.p75),sz:r.cohort_size})).sort((a,b)=>b.md-a.md);
+  const all=R.filter(r=>r.snapshot===sn&&r.channel==='all');const med=k=>{const v=all.filter(r=>r.metric===k).map(r=>n(r.median)).sort((a,b)=>a-b);return v[Math.floor(v.length/2)]};
+  const meta=R.filter(r=>r.snapshot===sn&&r.channel==='meta'&&r.metric==='cpm').map(r=>n(r.median)).sort((a,b)=>a-b);
+  kpiStrip('twKpis',[['Snapshot',dfmt(sn,true),'trailing 30 days · '+snaps.length+' week'+(snaps.length>1?'s':''),T.text,'tw-weekly'],['Median ROAS',TWFMT.roas(med('roas')),'middle industry, all channels',T.text,'tw-weekly'],['Median CPA',TWFMT.cpa(med('cpa')),'middle industry, all channels',T.text,'tw-weekly'],['Meta CPM',meta.length?TWFMT.cpm(meta[Math.floor(meta.length/2)]):'–','middle industry median',T.amber,'tw-weekly'],['Median AOV',TWFMT.aov(med('aov')),'middle industry',T.text,'tw-weekly']]);
+  mk('cTwInd',{type:'bar',data:{labels:S.map(x=>x.i),datasets:[{label:'25th–75th percentile',data:S.map(x=>[x.lo,x.hi]),backgroundColor:'rgba(90,169,255,.35)',borderSkipped:false,borderRadius:4,barPercentage:.6},{type:'line',label:'Median',data:S.map(x=>x.md),showLine:false,pointRadius:7,pointHoverRadius:9,backgroundColor:T.amber,borderColor:'#fff'}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,beginAtZero:true,ticks:{callback:v=>f(+v)}},y:{grid:{display:false},ticks:{font:{size:10.5}}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>{const x=S[c.dataIndex];return Array.isArray(c.raw)?` P25 ${f(x.lo)} · P75 ${f(x.hi)}`:` Median ${f(x.md)} · cohort ${x.sz}`}}}}}});
+  const I=is.value;const chs=Object.keys(TWCH).filter(k=>R.some(r=>r.snapshot===sn&&r.industry===I&&r.channel===k));const MS=['roas','cpa','cpm','ctr','cvr','ncPercent'];
+  const cell=(k,mm)=>{const r=R.find(x=>x.snapshot===sn&&x.industry===I&&x.channel===k&&x.metric===mm);return r?TWFMT[mm](n(r.median)):'·'};
+  document.getElementById('tTwCh').innerHTML='<thead><tr><th>Channel</th><th>Cohort</th><th>ROAS</th><th>CPA</th><th>CPM</th><th>CTR</th><th>CVR</th><th>New cust.</th></tr></thead><tbody>'+chs.map(k=>`<tr><td>${TWCH[k]}</td><td>${(R.find(x=>x.snapshot===sn&&x.industry===I&&x.channel===k)||{}).cohort_size||''}</td>${MS.map(mm=>`<td>${cell(k,mm)}</td>`).join('')}</tr>`).join('')+'</tbody>';
+  const cad=[['Weekly (captured Thursdays)','Free benchmarks tool','Trailing-30-day p25/median/p75 by industry, revenue band and channel. Captured into this desk.'],['Live, BFCM weekend','BFCM live page','Running revenue, orders and ad spend counters through Cyber Week; feeds BFCM Live.'],['Early December','BFCM Breakdown report','Weekend totals, industry split, platform metrics (2025: $2.9bn revenue, $607m spend).'],['Weekly','Whale Mail newsletter','Mostly links and product news.'],['Periodic','Benchmark pages (Facebook, TikTok, Amazon)','YoY CPA, CPM, CVR, ROAS by industry, labelled "updated" with no fixed date.']];
   document.getElementById('tTwCad').innerHTML='<thead><tr><th>Cadence</th><th>Series</th><th>Notes</th></tr></thead><tbody>'+cad.map(r=>`<tr><td>${r[0]}</td><td><b>${r[1]}</b></td><td>${esc(r[2])}</td></tr>`).join('')+'</tbody>';
 }
+
 SEGBIND('bfSeg',b=>{bfMetric=b.dataset.m;renderBfcm()});
 SEGBIND('moDim',b=>{moDim=b.dataset.d;renderMoBench()});
 SEGBIND('moView',b=>{moView=b.dataset.v;renderMoBench()});
 ['moAds','moTierSel'].forEach(id=>document.getElementById(id).addEventListener('input',renderMoPlan));
 document.getElementById('mkRev').addEventListener('change',renderMkt);
 document.getElementById('trSnap').addEventListener('change',renderMoTrend);
+document.getElementById('trList').addEventListener('change',renderMoTrend);
+SEGBIND('hsMeasure',b=>{hsMeasure=b.dataset.m;renderHaus()});
+['twMetric','twChan','twSnap','twInd'].forEach(id=>document.getElementById(id).addEventListener('change',renderTW));
 
 /* ---------- routing ---------- */
 const VIEWS={front:renderFront,'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:renderBfcm,mkt:renderMkt,'mo-bench':renderMoBench,'mo-trend':renderMoTrend,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,wire:renderWire};

@@ -23,10 +23,19 @@ This file is the procedure scheduled runs follow. The page is built from `templa
 4. Rewrite the front-page lead (`<h2>` + dek in `#v-front`) and the `STORIES` array Channels / Share items to reflect the new week. Update the ticker `extra` list if a headline number changed.
 5. Update the `mb-weekly` library entry stats (weeks transcribed count, latest issue date).
 
-## Weekly — Motion / Runneth "Top ads this week"
-1. Open https://motionapp.com/trending/ . In the page, the ad list is in `self.__next_f` (fields `brandName`, `aspectRatio`, `activeForDays`).
-2. Append 30 rows to `data/motion_trending.csv` with `snapshot` = today's date (YYYY-MM-DD), keeping older snapshots.
-3. Check https://runneth.com/sitemap-index.xml for new `/thumbstop-pulse/` or `/research/` pages; add any new report as data + library entries (`pub="Motion"`).
+## Weekly — Motion / Runneth "Top ads this week" (32 lists)
+1. Lists come from https://motionapp.com/trending/sitemap.xml (main page + 31 industry slugs). In the built-in browser on motionapp.com, fetch each `/trending/<slug>/` and parse `brandName`, `aspectRatio`, `activeForDays` from the page's `self.__next_f` payload (first 30 per list).
+2. Append rows to `data/motion_trending.csv`: `snapshot,list,rank,brand,aspect,active_days` (snapshot = today, list = `all` or the slug). Keep older snapshots. Fix escapes (`\u0026` → `&`).
+3. Check https://runneth.com/sitemap-index.xml for new `/thumbstop-pulse/` or `/research/` pages; add new reports as data + library entries (`pub="Motion"`).
+
+## Weekly — Triple Whale benchmarks snapshot
+1. Open https://benchmark.triplewhalelabs.com/benchmarks/health_and_wellness/ in the built-in browser and note the `/api/cohort?...&dateStart=…&dateEnd=…` request the page makes (trailing 30 days ending today).
+2. For the 12 industries already in `data/tw_benchmarks_weekly.csv`, request that same cohort view (gmvBand=1m-10m, aovBand=any, the page's own date window) and append rows: `snapshot,window_start,window_end,industry,gmv_band,channel,cohort_size,metric,p25,median,p75` for `total` (channel `all`) and each `byChannel` entry, metrics roas,cpa,cpm,cpc,ctr,cvr,aov,ncPercent,addToCartRate,discountRate.
+3. Never request past date windows: Triple Whale's history is a modelled seasonal index, not weekly data.
+
+## Weekly — Haus and Northbeam on X
+1. Search X (signed-in built-in browser) for `from:oliviaakory filter:media`, `from:HausAnalytics filter:media` and `from:northbeam filter:media` since the last run. For posts with data charts, open the image (`pbs.twimg.com/media/<id>.jpg?name=large`), transcribe to a CSV (state "read from chart (approx)" where values aren't labelled), and add a library entry with the post URL and an exact short quote.
+2. Check https://haus.io/blog-categories/research-reports for new reports.
 
 ## Daily 24 Nov – 2 Dec 2026 — BFCM Live
 1. Look for new BFCM 2026 figures: Northbeam (X, blog, newsletter), Triple Whale live BFCM page / report, Adobe Digital Insights and Shopify press releases, Haus.

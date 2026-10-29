@@ -1,0 +1,20 @@
+# Meta 7-day-click purchases for every 100 that Incremental Attribution reports, median brand by month (same brands each month). Read from Haus chart, 9 Oct 2026 (approx; labelled points 117 in Mar 2026, ~97 after). Meta changed click counting (link clicks only) in March 2026.
+month,per_100_ia
+2025-04,119
+2025-05,119
+2025-06,118
+2025-07,113
+2025-08,112
+2025-09,113
+2025-10,119
+2025-11,119
+2025-12,113
+2026-01,112
+2026-02,119
+2026-03,117
+2026-04,98
+2026-05,97
+2026-06,97
+2026-07,97
+2026-08,97
+2026-09,94

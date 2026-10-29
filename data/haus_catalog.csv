@@ -1,0 +1,13 @@
+# Meta catalog / DPA ads in Haus geo tests vs the same brand's other Meta ads (return per dollar, 1.0 = same). Haus, 25 and 28 Oct 2026. Bands read from chart (approx, middle 50%).
+cut,value,low,high,note
+Tests starting Jan-Sep,1.07,0.83,1.27,
+Tests starting Oct-Dec (Q4),0.64,0.45,0.95,
+Whole year,0.96,0.77,1.18,all catalog vs no catalog inside the same brand
+Catalog-led Meta tests,0.95,,,vs brand's typical conversion test
+Other Meta conversion ads,1.07,,,vs brand's typical conversion test
+Non-Meta conversion media,0.97,,,vs brand's typical conversion test
+No catalog (under 2% of Meta),1.25,,,Meta tests vs brand's typical test
+Light catalog (2-20%),1.45,,,Meta tests vs brand's typical test
+Heavy catalog (20%+),1.28,,,Meta tests vs brand's typical test
+Amazon + retail lift per dollar,0.50,,,50% lower than brand's other Meta ads
+Meta 7-day click over-credit,0.89,,,incrementality factor 11% lower

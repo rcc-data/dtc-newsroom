@@ -1,0 +1,6 @@
+# How closely each Meta-reported number tracks Haus holdout results: rank correlation with measured lift (1.0 = perfect). Band = middle 50%, read from chart (approx). Haus, 9 Oct 2026, early read.
+setting,correlation,band_low,band_high
+Incremental Attribution,0.79,0.67,0.86
+7-day click,0.73,0.60,0.82
+7-day click + 1-day view,0.68,0.53,0.81
+1-day view,0.40,0.23,0.58

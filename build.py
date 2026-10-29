@@ -58,6 +58,18 @@ REG=[
  ("tw_bfcm","Triple Whale BFCM 2025 weekend totals","tw_bfcm2025.csv","Triple Whale, Dec 2025",None),
  ("bfcm_live","BFCM 2026 live log","bfcm2026_live.csv","Scheduled update, 24 Nov – 2 Dec 2026",None),
  ("bfcm_sched","BFCM 2026: what lands when","bfcm2026_schedule.csv","Newsroom",None),
+ ("q3_rev","Q3 2026 YoY by company revenue & percentile","q3_revenue_band.csv","X 2026-10-24",None),
+ ("tw_weekly","Triple Whale benchmarks, weekly snapshots","tw_benchmarks_weekly.csv","benchmark.triplewhalelabs.com, weekly from 28 Oct 2026",None),
+ ("haus_ch","Haus incrementality benchmarks by channel","haus_channels.csv","Haus research reports, 2025-2026",None),
+ ("haus_ia","Meta Incremental Attribution vs standard (Haus)","haus_ia.csv","Haus / Olivia Kory, X, Jul & Oct 2026",None),
+ ("haus_rep","Which Meta number tracks holdout lift (Haus)","haus_meta_reporting.csv","Haus, X, 9 Oct 2026",None),
+ ("haus_7dc","7-day click purchases per 100 IA, monthly (Haus)","haus_7dc_per_ia.csv","Haus, X, 9 Oct 2026",None),
+ ("haus_search","Google non-brand text vs shopping incrementality (Haus)","haus_search.csv","Haus, X, 28 Aug 2026",None),
+ ("haus_cat","Meta catalog ads incrementality (Haus)","haus_catalog.csv","Haus, X, 25 & 28 Oct 2026",None),
+ ("haus_textnow","TextNow YouTube geo test, cumulative lift (Haus)","haus_textnow.csv","Haus, X, 20 Aug 2026",None),
+ ("haus_cw","Cyber Week 2025 delayed lift (Haus)","haus_cyberweek2025.csv","Haus report, 11 Dec 2025",None),
+ ("haus_app","AppLovin beat rate by quarter (Haus)","haus_applovin.csv","Haus report, 18 Jun 2026",None),
+ ("haus_sow","Spend share for brands live on AppLovin, Q4 2025 (Haus)","haus_sow_q4_2025.csv","Haus, X, 14 Jan 2026",None),
 ]
 DATA={}
 for k,t,fn,src,extra in REG:

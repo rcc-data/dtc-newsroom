@@ -1,0 +1,7 @@
+# Share of AppLovin tests beating the median efficiency of the same brand's other tests in the same quarter. Haus AppLovin report, 18 Jun 2026 (2025 quarters given as a 63-85% range only).
+period,beat_rate
+2025 (range low),63
+2025 (range high),85
+Q1 2026,53
+Q2 2026,50
+All tests,64

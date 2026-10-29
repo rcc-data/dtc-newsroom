@@ -1,0 +1,12 @@
+# TextNow 26-week upper-funnel YouTube geo test (Dec 2025 - May 2026) plus 6-week post-treatment window: cumulative incremental users, indexed so the final read = 100. Labelled points exact (13 by 1 Feb, 50 by 1 Mar, 92 at flight end, 100 final); others read from chart.
+date,cumulative
+2025-12-01,0
+2026-01-01,1
+2026-01-15,4
+2026-02-01,13
+2026-02-15,29
+2026-03-01,50
+2026-04-01,66
+2026-05-01,79
+2026-05-31,92
+2026-07-12,100

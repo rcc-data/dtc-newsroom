@@ -1,0 +1,15 @@
+# CTC DTC Index and portfolio headline figures (YoY % unless noted). DTC Index = 200-300 stores with 2+ years of consistent revenue and Meta + Google spend.
+period,metric,value,unit,source
+Q1 2026,Total revenue,13.6,%,DTC Index (23 Apr 2026)
+Q1 2026,Meta spend,25.28,%,DTC Index
+Q1 2026,Meta ROAS,-3,%,DTC Index
+Q1 2026,Google spend,3.65,%,DTC Index
+Q1 2026,Google ROAS,12,%,DTC Index
+H1 2026,Median revenue,15.2,%,H1 2026 D2C report (28 Jul 2026)
+H1 2026,Ad spend,28,%,H1 2026 D2C report
+H1 2026,Google ROAS,10,%,on 13% more spend
+H1 2026,Meta incrementality,113.4,% (avg),portfolio
+H1 2026,AppLovin incrementality,171,% (avg of 18 tests),portfolio
+Apr 2026,AppLovin Discovery incrementality,284,% (avg; 190% ex-outliers),CTC tests
+Q1 2026,Median MER,4.23,x,Channel Mix Benchmark
+Q1 2026,Contribution margin,29.3,% of revenue,Channel Mix Benchmark

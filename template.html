@@ -236,6 +236,7 @@ table.q tbody tr.link{cursor:pointer}
       <a href="#mkt" data-desk="mkt">Earnings</a>
       <a href="#haus" data-desk="haus">Haus</a>
       <a href="#triplewhale" data-desk="triplewhale">Triple Whale</a>
+      <a href="#ctc" data-desk="ctc">CTC</a>
       <a href="#wire" data-desk="wire">Wire sources</a>
     </div>
     <div class="subrow" id="subrow" data-for="nb" hidden>
@@ -818,6 +819,59 @@ table.q tbody tr.link{cursor:pointer}
   <div class="term"><div class="th"><span class="t">What Triple Whale publishes</span><span class="m">cadence</span></div><div class="tw"><table class="q cad-t" id="tTwCad"></table></div></div>
 </section>
 
+<!-- CTC -->
+<section class="view" id="v-ctc" hidden>
+  <div><div class="kicker">Common Thread Collective · Portfolio data</div><h2>What 299 brands spend, and what each channel is really worth</h2><p class="dek">Common Thread Collective runs growth for hundreds of DTC brands and publishes their pooled data: the DTC Index (200–300 stores with two or more years of history), interactive research pages, and a daily consumer confidence survey with KnoCommerce. Their weekly DTC Index email has no public archive, so this section is built from the published benchmarks, podcasts and blog.</p></div>
+  <div class="strip" id="ctKpis"></div>
+  <div class="term">
+    <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Platform ROAS vs incremental ROAS · Q1 2026</span>
+      <div class="seg" role="group" aria-label="View" id="ctView" style="margin-left:auto"><button type="button" data-v="roas" aria-pressed="true">Reported vs incremental</button><button type="button" data-v="if" aria-pressed="false">Incrementality factor</button><button type="button" data-v="share" aria-pressed="false">Share of spend</button></div></div>
+    <div class="chart tall"><canvas id="cCtMix"></canvas></div>
+    <p class="note" id="ctMixNote"></p>
+  </div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">Consumer confidence (DTCCI)</span><span class="m">monthly · same month across years</span></div>
+      <div class="chart"><canvas id="cCtCci"></canvas></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">Meta CPM, October to November</span><span class="m">CTC portfolio · the BFCM jump each year</span></div>
+      <div class="chart"><canvas id="cCtCpm"></canvas></div>
+    </div>
+  </div>
+  <div class="term">
+    <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Channel mix by quarterly spend</span>
+      <label class="chk" style="margin-left:auto"><input type="checkbox" id="ctMajors"> Hide Meta and Google</label></div>
+    <div class="chart"><canvas id="cCtTier"></canvas></div>
+    <p class="note">Bigger spenders diversify: above $500K a quarter, TikTok, AppLovin and YouTube take a combined 4–5% of spend. Tick the box to zoom in on the smaller channels.</p>
+  </div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">Efficiency vs margin</span><span class="m">brands grouped by MER · median contribution margin and Meta / Google mix</span></div>
+      <div class="chart"><canvas id="cCtMer"></canvas></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">Creative is a hits business</span><span class="m">% of Meta ads reaching each spend level · 504 stores</span></div>
+      <div class="chart"><canvas id="cCtHits"></canvas></div>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">DTC Index headlines</span><span class="m">YoY unless noted</span></div>
+      <div class="tw"><table class="q cad-t" id="tCtIdx"></table></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">BFCM 2025 across 147 CTC brands</span><span class="m">Thu–Mon · vs plan where noted</span></div>
+      <div class="tw"><table class="q cad-t" id="tCtBf"></table></div>
+    </div>
+  </div>
+  <div class="section-head"><span class="label">What it means for Q4 2026</span></div>
+  <div class="takes" id="ctTakes"></div>
+  <div class="term"><div class="th"><span class="t">What CTC publishes</span><span class="m">cadence</span></div><div class="tw"><table class="q cad-t" id="tCtCad"></table></div></div>
+  <div class="section-head"><span class="label">CTC library</span></div>
+  <div class="lib" id="ctLib"></div>
+</section>
+
 <!-- WIRE -->
 <section class="view" id="v-wire" hidden>
   <div><div class="kicker">Wire sources</div><h2>Other feeds worth bringing into the newsroom</h2><p class="dek">Sources that publish data on a regular cadence, grouped by what they would add.</p></div>
@@ -851,7 +905,7 @@ function openSources(ids){
 function closeSources(){document.getElementById('drawer').hidden=true;document.getElementById('scrim').hidden=true;lastFocus&&lastFocus.focus&&lastFocus.focus()}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-src]');if(b){e.preventDefault();openSources(b.dataset.src)}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.getElementById('drawer').hidden)closeSources()});
-const SRC_MAP={cBfLive:'mb-bfcm,bl-cyberweek',cEarn:'meta-q3-26,meta-q2-26,meta-q1-26,meta-q4-25',cEarnReg:'meta-apac,meta-q2-26',cEarnVsNb:'meta-q3-26,mb-cpm25,x-roas',cMoTier:'mo-cb26key',cMoPort:'mo-cb26key',cMoFmt:'mo-cb26',cMoHW:'mo-bfcm26',cTrBrand:'mo-trending',cTrAspect:'mo-trending',cTrInd:'mo-trending',cHsCh:'haus-yt26,haus-meta25,haus-tiktok,haus-applovin',cHsIA:'haus-ia-jul,haus-ia-oct',cHsRep:'haus-ia-oct',cHs7dc:'haus-ia-oct',cHsCat:'haus-catalog',cHsSearch:'haus-search',cHsTN:'haus-textnow',cHsCW:'haus-cw25',cHsApp:'haus-applovin',cTwInd:'tw-weekly',tTwCh:'tw-weekly',cMoAI:'mo-ai',cCmp:'mb-weekly',cAdsLaunch:'bl-jan',cAdsWeek:'mb-hudson,mb-ugc1,bl-jan',cMis:'mb-ugc1',cVertAds:'x-verticals',cCap:'mb-ugc3,mb-ugc2,bl-jan',fCpm:'mb-cpm25',fBoard:'mb-weekly',fShare:'mb-weekly',fMovers:'mb-weekly',trMulti:'mb-weekly',tHeat:'mb-weekly',cShare:'mb-weekly,mb-may',tTrend:'mb-weekly',tShare:'mb-weekly',tQ1:'mb-may',tEmerg:'x-emerging',cMonthly:'bl-planning,bl-jan,bl-feb,mb-april,mb-may,mb-h1,bl-cyberweek,bl-cost',cBand:'mb-h1,mb-cpm25',tH1rev:'mb-h1',tH1aov:'mb-h1',cSize:'bl-under5,bl-cost',tVert:'bl-power',tMix:'x-verticals',tAds:'bl-jan',cAI:'mb-ai',cOverlay:'mb-cpm25,x-roas,x-ncac',cArc:'mb-bfcm,bl-cyberweek',cPace:'bl-cyberfive',cLag:'mb-lag',tInd:'x-industry',cPost:'mb-weekly,bl-q5',cJan:'bl-jan',cM1:'mb-h1,mb-metatank',cM2:'mb-h1,mb-metatank',cM3:'x-roas,x-ncac',cTT:'mb-tiktok'};
+const SRC_MAP={cBfLive:'mb-bfcm,bl-cyberweek',cEarn:'meta-q3-26,meta-q2-26,meta-q1-26,meta-q4-25',cEarnReg:'meta-apac,meta-q2-26',cEarnVsNb:'meta-q3-26,mb-cpm25,x-roas',cMoTier:'mo-cb26key',cMoPort:'mo-cb26key',cMoFmt:'mo-cb26',cMoHW:'mo-bfcm26',cTrBrand:'mo-trending',cTrAspect:'mo-trending',cTrInd:'mo-trending',cHsCh:'haus-yt26,haus-meta25,haus-tiktok,haus-applovin',cHsIA:'haus-ia-jul,haus-ia-oct',cHsRep:'haus-ia-oct',cHs7dc:'haus-ia-oct',cHsCat:'haus-catalog',cHsSearch:'haus-search',cHsTN:'haus-textnow',cHsCW:'haus-cw25',cHsApp:'haus-applovin',cTwInd:'tw-weekly',cCtMix:'ctc-mix',cCtCci:'ctc-dtcci',cCtCpm:'ctc-cpm',cCtTier:'ctc-mix',cCtMer:'ctc-mix',cCtHits:'ctc-hits',tCtIdx:'ctc-q1idx,ctc-h1,ctc-applovin',tCtBf:'ctc-bfcm25',tTwCh:'tw-weekly',cMoAI:'mo-ai',cCmp:'mb-weekly',cAdsLaunch:'bl-jan',cAdsWeek:'mb-hudson,mb-ugc1,bl-jan',cMis:'mb-ugc1',cVertAds:'x-verticals',cCap:'mb-ugc3,mb-ugc2,bl-jan',fCpm:'mb-cpm25',fBoard:'mb-weekly',fShare:'mb-weekly',fMovers:'mb-weekly',trMulti:'mb-weekly',tHeat:'mb-weekly',cShare:'mb-weekly,mb-may',tTrend:'mb-weekly',tShare:'mb-weekly',tQ1:'mb-may',tEmerg:'x-emerging',cMonthly:'bl-planning,bl-jan,bl-feb,mb-april,mb-may,mb-h1,bl-cyberweek,bl-cost',cBand:'mb-h1,mb-cpm25',tH1rev:'mb-h1',tH1aov:'mb-h1',cSize:'bl-under5,bl-cost',tVert:'bl-power',tMix:'x-verticals',tAds:'bl-jan',cAI:'mb-ai',cOverlay:'mb-cpm25,x-roas,x-ncac',cArc:'mb-bfcm,bl-cyberweek',cPace:'bl-cyberfive',cLag:'mb-lag',tInd:'x-industry',cPost:'mb-weekly,bl-q5',cJan:'bl-jan',cM1:'mb-h1,mb-metatank',cM2:'mb-h1,mb-metatank',cM3:'x-roas,x-ncac',cTT:'mb-tiktok'};
 function injectSources(){Object.entries(SRC_MAP).forEach(([id,ids])=>{const el=document.getElementById(id);if(!el)return;const term=el.closest('.term');if(!term||term.querySelector(':scope > .th .src-btn, :scope > .ctl .src-btn'))return;const host=term.querySelector(':scope > .th')||term.querySelector(':scope > .ctl');if(host){const n=ids.split(',').length;host.insertAdjacentHTML('beforeend',srcBtn(ids,n>1?`SRC ×${n} ↗`:'SRC ↗'))}})}
 const n=v=>{if(v===undefined||v===null)return null;const s=String(v).trim();if(s===''||s==='-')return null;const x=parseFloat(s.replace('~',''));return isNaN(x)?null:x};
 const rowsOf=k=>D[k].rows.map(r=>Object.fromEntries(D[k].cols.map((c,i)=>[c,r[i]])));
@@ -1464,6 +1518,42 @@ function renderTW(){
   document.getElementById('tTwCad').innerHTML='<thead><tr><th>Cadence</th><th>Series</th><th>Notes</th></tr></thead><tbody>'+cad.map(r=>`<tr><td>${r[0]}</td><td><b>${r[1]}</b></td><td>${esc(r[2])}</td></tr>`).join('')+'</tbody>';
 }
 
+
+/* ---------- CTC ---------- */
+let ctView='roas';
+function renderCTC(){
+  const MX=rowsOf('ctc_mix');const cci=rowsOf('ctc_dtcci');const last=cci[cci.length-1],ly=cci.find(r=>r.month===(+last.month.slice(0,4)-1)+last.month.slice(4));
+  kpiStrip('ctKpis',[['Brands · Q1 2026','299','$231M spend · $1.01B revenue',T.text,'ctc-mix'],['Median MER','4.23×','contribution margin 29.3%',T.text,'ctc-mix'],['Meta share of spend','61%','acquisition 59% + retargeting 3%',T.amber,'ctc-mix'],['Google brand search','0.30×','incrementality factor (19.1× → 5.7×)',T.down,'ctc-mix'],['Consumer confidence',(+last.dtcci).toFixed(1),`${dfmt(last.month+'-15').replace(/^\d+ /,'')} · ${ly?fmtP((last.dtcci/ly.dtcci-1)*100,0)+' YoY':''}`,T.up,'ctc-dtcci']]);
+  const col=r=>({'Meta Acquisition':'#5b8cff','Meta Non-Acquisition':'#8fb0ff','Google Non-Brand':'#f2b632','Google Brand':'#c99a2e',TikTok:'#ff4f9a',AppLovin:'#a98bff',YouTube:'#ff7a59',Snapchat:'#f5e44a',Pinterest:'#e0607e'}[r.channel]||T.amber);
+  let cfg;
+  if(ctView==='roas'){cfg={type:'bar',data:{labels:MX.map(r=>r.channel),datasets:[{label:'Platform-reported ROAS',data:MX.map(r=>n(r.platform_roas)),backgroundColor:'rgba(127,140,135,.45)'},{label:'Incremental ROAS',data:MX.map(r=>n(r.iroas)),backgroundColor:MX.map(col)}]},options:{scales:{y:{type:'logarithmic',grid,ticks:{callback:v=>[1,2,3,5,10,20].includes(+v)?v+'×':''}},x:{grid:{display:false},ticks:{font:{size:10.5}}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y.toFixed(2)}×`,footer:it=>{const r=MX[it[0].dataIndex];return `IF ${r.if}× · ${r.bias} · $${r.spend_m}M spend`}}}}}};
+    document.getElementById('ctMixNote').textContent='Log scale. Grey is what each platform reports; colour is after CTC\'s incrementality factor from geo-holdout tests and MMM. Branded search and Snapchat lose about 70% of their reported value; Meta acquisition, YouTube and AppLovin gain.';}
+  else if(ctView==='if'){const S=[...MX].sort((a,b)=>b.if-a.if);cfg={type:'bar',data:{labels:S.map(r=>r.channel),datasets:[{label:'Incrementality factor',data:S.map(r=>n(r.if)),backgroundColor:S.map(r=>n(r.if)>=1?T.up:T.down)}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,min:0,max:1.6,ticks:{callback:v=>v.toFixed(1)+'×'}},y:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>{const r=S[c.dataIndex];return ` IF ${r.if}× · ${r.platform_roas}× reported → ${r.iroas}× incremental`}}}}},plugins:[refLine(1,'x','1.0× = platform is right')]};
+    document.getElementById('ctMixNote').textContent='Above 1.0, the platform under-reports its true value (green); below 1.0, it over-reports (red). Compare Haus: YouTube geo tests find 2.3× what Google Ads reports.';}
+  else{const Q=rowsOf('ctc_qoq');cfg={type:'bar',data:{labels:Q.map(r=>r.channel),datasets:[{label:'Q4 2025',data:Q.map(r=>n(r.q4_2025_share)),backgroundColor:'rgba(90,169,255,.5)'},{label:'Q1 2026',data:Q.map(r=>n(r.q1_2026_share)),backgroundColor:Q.map(r=>col(r))}]},options:{scales:{y:{type:'logarithmic',grid,ticks:{callback:v=>[0.5,1,2,5,10,20,50].includes(+v)?v+'%':''}},x:{grid:{display:false},ticks:{font:{size:10.5}}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>{const r=Q[c.dataIndex];return ` ${c.dataset.label}: ${c.parsed.y}% ($${c.datasetIndex?r.q1_2026_m:r.q4_2025_m}M)`}}}}}};
+    document.getElementById('ctMixNote').textContent='Same 299 brands. Log scale so the small channels are visible. After the holidays Meta acquisition gained 3.2 points of share; Google and AppLovin gave some back.';}
+  mk('cCtMix',cfg);
+  const yrs=['2023','2024','2025','2026'];const M=['01','02','03','04','05','06','07','08','09','10','11','12'];const YC={'2023':'rgba(127,140,135,.7)','2024':'#5aa9ff','2025':T.past,'2026':T.amber};
+  mk('cCtCci',{type:'line',data:{labels:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],datasets:yrs.map(y=>({label:y,data:M.map(m=>{const r=cci.find(x=>x.month===y+'-'+m);return r?n(r.dtcci):null}),borderColor:YC[y],backgroundColor:YC[y],borderWidth:y==='2026'?4:2,pointRadius:y==='2026'?4:2,tension:.25,spanGaps:false}))},options:{scales:{y:{grid,min:60,max:185},x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.parsed.y==null?null:` ${c.dataset.label}: ${c.parsed.y.toFixed(1)}`}}}},plugins:[refLine(100,'y','100')]});
+  const CP=rowsOf('ctc_cpm');const yy=['2022','2023','2024','2025'];
+  mk('cCtCpm',{type:'bar',data:{labels:yy,datasets:[{label:'October',data:yy.map(y=>{const r=CP.find(x=>x.month===y+'-10');return r?n(r.cpm):null}),backgroundColor:'rgba(90,169,255,.6)'},{label:'November',data:yy.map(y=>{const r=CP.find(x=>x.month===y+'-11');return r?n(r.cpm):null}),backgroundColor:T.down}]},options:{scales:{y:{grid,beginAtZero:true,ticks:{callback:v=>'$'+v}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: $${c.parsed.y.toFixed(2)}`,footer:it=>{const y=yy[it[0].dataIndex];const o=CP.find(x=>x.month===y+'-10'),nv=CP.find(x=>x.month===y+'-11');return o&&nv?`Oct → Nov: +${Math.round((nv.cpm/o.cpm-1)*100)}%`:''}}}}}});
+  const TI=rowsOf('ctc_tier');const hide=document.getElementById('ctMajors').checked;const keys=[['meta_acq','Meta acq.','#5b8cff'],['meta_ret','Meta retargeting','#8fb0ff'],['google_nb','Google non-brand','#f2b632'],['google_br','Google brand','#c99a2e'],['tiktok','TikTok','#ff4f9a'],['applovin','AppLovin','#a98bff'],['youtube','YouTube','#ff7a59'],['snap','Snapchat','#f5e44a'],['pinterest','Pinterest','#e0607e']].filter(k=>!hide||!/meta_acq|google_nb|google_br/.test(k[0]));
+  mk('cCtTier',{type:'bar',data:{labels:TI.map(r=>r.tier+' ('+r.brands+')'),datasets:keys.map(([k,l,c])=>({label:l,data:TI.map(r=>n(r[k])),backgroundColor:c}))},options:{scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,grid,max:hide?undefined:100,ticks:{callback:v=>v+'%'}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y}%`}}}}});
+  const MB=rowsOf('ctc_mer');
+  mk('cCtMer',{type:'bar',data:{labels:MB.map(r=>r.mer_bucket+' MER'),datasets:[{label:'Median contribution margin',data:MB.map(r=>n(r.median_cm)),backgroundColor:T.up,yAxisID:'y'},{type:'line',label:'Meta % of spend',data:MB.map(r=>n(r.meta)),borderColor:'#5b8cff',backgroundColor:'#5b8cff',yAxisID:'y',borderWidth:3,pointRadius:5},{type:'line',label:'Google % of spend',data:MB.map(r=>n(r.google)),borderColor:'#f2b632',backgroundColor:'#f2b632',yAxisID:'y',borderWidth:3,pointRadius:5}]},options:{scales:{y:{grid,min:0,max:80,ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y}%`,footer:it=>MB[it[0].dataIndex].brands+' brands'}}}}});
+  const H=rowsOf('ctc_hits');
+  mk('cCtHits',{type:'bar',data:{labels:H.map(r=>r.tier),datasets:[{label:'Share of ads',data:H.map(r=>n(r.share_of_ads)),backgroundColor:H.map((r,i)=>i>=3?T.amber:'rgba(255,176,32,.45)')}]},options:{scales:{y:{type:'logarithmic',grid,min:0.5,max:100,ticks:{callback:v=>[1,10,100].includes(+v)?v+'%':''}},x:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.y}% of ads`}}}}});
+  document.getElementById('tCtIdx').innerHTML='<thead><tr><th>Period</th><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody>'+rowsOf('ctc_idx').map(r=>`<tr><td>${r.period}</td><td>${esc(r.metric)}</td><td><b>${r.unit==='%'?fmtP(n(r.value),1):r.value+(r.unit==='x'?'×':' '+r.unit)}</b></td><td style="color:${T.dim}">${esc(r.source)}</td></tr>`).join('')+'</tbody>';
+  document.getElementById('tCtBf').innerHTML='<thead><tr><th>Metric</th><th>Value</th><th>Note</th></tr></thead><tbody>'+rowsOf('ctc_bfcm').map(r=>`<tr><td>${esc(r.metric)}</td><td><b>${r.unit==='%'?fmtP(n(r.value),0):(r.unit==='$M'?'$'+r.value+'M':r.value+(r.unit==='x'?'×':''))}</b></td><td style="color:${T.dim}">${esc(r.note)}</td></tr>`).join('')+'</tbody>';
+  const tk=[['Do not cut Meta prospecting to protect ROAS','Meta acquisition shows the lowest reported ROAS (1.83×) but is under-reported (IF 1.13×). Haus and Northbeam both point the same way on Meta in Q4.','ctc-mix,haus-ia-oct'],['Discount branded search and Snapchat in your BFCM reporting','At 0.30× IF, Google brand search\'s 19× reported ROAS is about 5.7× in reality; Snapchat\'s 6.2× is about 1.9×.','ctc-mix'],['Expect a 17–43% CPM jump from October to November','CTC\'s portfolio Meta CPM has risen every November since 2022; November 2025 was the highest month on record at $21.55.','ctc-cpm,mb-cpm25'],['Confidence is up on last year','The DTCCI reads 96.3 in October 2026, above October 2025 (87.3), after a soft summer. Northbeam\'s Q3 spend data and Adobe\'s holiday forecast point the same way.','ctc-dtcci']];
+  document.getElementById('ctTakes').innerHTML=tk.map(([h,p,s])=>`<div class="story"><h4>${esc(h)}</h4><p>${esc(p)}</p>${srcBtn(s,'SOURCE · QUOTE')}</div>`).join('');
+  const cad=[['Daily (published monthly)','DTC Consumer Confidence Index','dtcci.co: 5,000 shoppers a day via KnoCommerce. Monthly reading captured here.'],['Weekly · email','DTC Index newsletter','Last-28-day YoY/MoM for Meta, Google, MER across ~200–300 brands. Email only, no public archive.'],['Weekly · Friday','The Thread','Industry roundup; public archive stops in Feb 2026.'],['Quarterly-ish','Research pages','Channel Mix Benchmark (Q1 2026), CPMr vs iROAS. Interactive pages on commonthreadco.com/pages and research.commonthreadco.com.'],['Half-yearly','DTC Index reports','Q1 and H1 data reports by Steve Rekuc, via podcast and blog.'],['Daily','Coach\'s Corner blog and Ecommerce Playbook podcast','Platform-change explainers several times a day; data episodes a few times a month.']];
+  document.getElementById('tCtCad').innerHTML='<thead><tr><th>Cadence</th><th>Series</th><th>Notes</th></tr></thead><tbody>'+cad.map(r=>`<tr><td>${r[0]}</td><td><b>${r[1]}</b></td><td>${esc(r[2])}</td></tr>`).join('')+'</tbody>';
+  document.getElementById('ctLib').innerHTML=libCards(LIB.filter(x=>x.pub==='CTC'));
+}
+SEGBIND('ctView',b=>{ctView=b.dataset.v;renderCTC()});
+document.getElementById('ctMajors').addEventListener('change',renderCTC);
+
 SEGBIND('bfSeg',b=>{bfMetric=b.dataset.m;renderBfcm()});
 SEGBIND('moDim',b=>{moDim=b.dataset.d;renderMoBench()});
 SEGBIND('moView',b=>{moView=b.dataset.v;renderMoBench()});
@@ -1475,7 +1565,7 @@ SEGBIND('hsMeasure',b=>{hsMeasure=b.dataset.m;renderHaus()});
 ['twMetric','twChan','twSnap','twInd'].forEach(id=>document.getElementById(id).addEventListener('change',renderTW));
 
 /* ---------- routing ---------- */
-const VIEWS={front:renderFront,'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:renderBfcm,mkt:renderMkt,'mo-bench':renderMoBench,'mo-trend':renderMoTrend,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,wire:renderWire};
+const VIEWS={front:renderFront,'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:renderBfcm,mkt:renderMkt,'mo-bench':renderMoBench,'mo-trend':renderMoTrend,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,wire:renderWire};
 function show(){let v=(location.hash||'#front').slice(1);if(!(v in VIEWS))v='front';
   Object.keys(VIEWS).forEach(x=>document.getElementById('v-'+x).hidden=x!==v);
   const desk=/^(nb|mo)-/.test(v)?v.split('-')[0]:v;

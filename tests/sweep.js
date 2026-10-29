@@ -2,7 +2,7 @@
 // Fails if any page error fires or any visible chart canvas ends up blank.
 // usage: node tests/sweep.js [normal|dead]
 const {chromium}=require('playwright');const fs=require('fs');
-const VIEWS=['front','bfcm','nb-channels','nb-share','nb-bench','nb-creative','nb-q4','nb-meta','nb-library','mkt','mo-bench','mo-trend','mo-research','haus','triplewhale','wire'];
+const VIEWS=['front','ctc','bfcm','nb-channels','nb-share','nb-bench','nb-creative','nb-q4','nb-meta','nb-library','mkt','mo-bench','mo-trend','mo-research','haus','triplewhale','wire'];
 (async()=>{
  const mode=process.argv[2]||'normal';
  const b=await chromium.launch();const p=await b.newPage({viewport:{width:1280,height:900},colorScheme:'dark'});

@@ -70,6 +70,16 @@ REG=[
  ("haus_cw","Cyber Week 2025 delayed lift (Haus)","haus_cyberweek2025.csv","Haus report, 11 Dec 2025",None),
  ("haus_app","AppLovin beat rate by quarter (Haus)","haus_applovin.csv","Haus report, 18 Jun 2026",None),
  ("haus_sow","Spend share for brands live on AppLovin, Q4 2025 (Haus)","haus_sow_q4_2025.csv","Haus, X, 14 Jan 2026",None),
+ ("ctc_mix","CTC Q1 2026 channel mix: platform ROAS vs incremental ROAS","ctc_channel_mix_q1_2026.csv","CTC, Apr 2026",None),
+ ("ctc_tier","CTC Q1 2026 channel share by spend tier","ctc_tier_mix_q1_2026.csv","CTC, Apr 2026",None),
+ ("ctc_mer","CTC Q1 2026 MER buckets vs contribution margin","ctc_mer_buckets_q1_2026.csv","CTC, Apr 2026",None),
+ ("ctc_qoq","CTC channel share Q4 2025 vs Q1 2026","ctc_qoq.csv","CTC, Apr 2026",None),
+ ("ctc_dtcci","DTC Consumer Confidence Index, monthly","ctc_dtcci.csv","dtcci.co (CTC x KnoCommerce)",None),
+ ("ctc_cpm","CTC portfolio Meta CPM by month","ctc_meta_cpm.csv","CTC, May 2026",None),
+ ("ctc_idx","CTC DTC Index headline figures","ctc_index_summary.csv","CTC, 2026",None),
+ ("ctc_bfcm","CTC BFCM 2025 results","ctc_bfcm2025.csv","CTC, Dec 2025",None),
+ ("ctc_hits","CTC creative hit rates","ctc_creative_hits.csv","CTC, Jul 2026",None),
+ ("ctc_cpmr","CTC iROAS by within-brand CPMr quartile","ctc_cpmr.csv","CTC research, Apr 2026",None),
 ]
 DATA={}
 for k,t,fn,src,extra in REG:

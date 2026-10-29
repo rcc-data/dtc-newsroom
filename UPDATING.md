@@ -45,3 +45,10 @@ This file is the procedure scheduled runs follow. The page is built from `templa
 ## Quarterly — Meta earnings (next: Q4 2026, late Jan 2027)
 1. From Meta's release: ad revenue ($bn), ad impressions YoY %, average price per ad YoY %, next-quarter revenue guidance. Regional price per ad (US & Canada, Asia-Pacific) from the earnings slides / coverage.
 2. Append a row to `data/meta_earnings.csv`, add a `meta-qN-YY` library entry, and update the `#v-mkt` headline, `mkRead` text and KPI strip in `renderMkt`.
+
+## Common Thread Collective (weekly check, monthly data)
+- DTCCI: open dtcci.co in the built-in browser, read `window.infographicData` (entities[*].props.chartData.data[0]) and append any new month to data/ctc_dtcci.csv. New reading lands early each month.
+- Research pages: check commonthreadco.com/sitemap.xml lastmod for /pages/*benchmark* and research.commonthreadco.com. New quarter = new ctc_mix/ctc_tier/ctc_mer rows plus a library entry.
+- Blog and podcast: scan /blogs/ecommerce-playbook and /blogs/coachs-corner for posts since last run that publish portfolio data (DTC Index, CPM, BFCM, incrementality). Add figures with a library entry per figure; never estimate.
+- Meta CPM: if CTC publishes a new portfolio CPM month, append to data/ctc_meta_cpm.csv.
+- The weekly DTC Index email has no public archive. Skip unless a Gmail source is set up.

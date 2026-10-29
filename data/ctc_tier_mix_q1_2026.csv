@@ -1,0 +1,7 @@
+# CTC Q1 2026 Channel Mix Benchmark: each channel's share of total spend within quarterly spend tier (%).
+tier,brands,meta_acq,meta_ret,google_nb,google_br,tiktok,applovin,youtube,snap,pinterest
+Under $50K,31,49.8,0.1,40.1,10.0,0.0,0.0,0.0,0.0,0.0
+$50K to $150K,62,54.9,1.0,35.5,7.9,0.2,0.0,0.1,0.2,0.2
+$150K to $500K,93,67.0,1.4,24.5,5.8,0.5,0.3,0.1,0.1,0.3
+$500K to $1.5M,77,55.4,3.5,29.0,6.6,2.6,1.1,1.0,0.2,0.4
+Over $1.5M,35,59.0,2.5,23.4,8.6,2.6,1.8,1.0,0.6,0.3

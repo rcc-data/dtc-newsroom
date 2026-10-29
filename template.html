@@ -757,6 +757,13 @@ table.q tbody tr.link{cursor:pointer}
 <div class="scrim" id="scrim" hidden></div>
 <aside class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="drawerTitle"><div class="dh"><span id="drawerTitle">Sources</span><button type="button" class="x" id="drawerClose">Close ✕</button></div><div id="drawerBody" style="display:flex;flex-direction:column;gap:12px"></div></aside>
 
+<script>
+/* Some embedded viewers pause requestAnimationFrame, which leaves Chart.js canvases blank.
+   Wrap it so every frame callback also runs from a timer if the browser never delivers the frame. */
+(function(){var raf=window.requestAnimationFrame&&window.requestAnimationFrame.bind(window);
+window.requestAnimationFrame=function(cb){var done=false;function run(t){if(done)return;done=true;cb(typeof t==='number'?t:performance.now())}
+var id=raf?raf(run):0;setTimeout(run,60);return id};})();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
 <script>
 const D=/*__DATA__*/null;

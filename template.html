@@ -1011,8 +1011,26 @@ table.q tbody tr.link{cursor:pointer}
 
 <!-- WIRE -->
 <section class="view" id="v-wire" hidden>
-  <div><div class="kicker">Wire sources</div><h2>Other feeds worth bringing into the newsroom</h2><p class="dek">Sources that publish data on a regular cadence, grouped by what they would add.</p></div>
-  <div class="term"><div class="th"><span class="t">This week on the wire</span><span class="m">latest headlines from the news and operator sources · refreshed weekly</span></div><div class="tw"><table class="q cad-t" id="tWireHeads"></table></div></div>
+  <div><div class="kicker">The Wire</div><h2>Every article from every source, since January</h2><p class="dek" id="wvDek">Newsletter issues, blog posts, reports, podcasts and posts from the publishers the newsroom follows, pulled from their sites and inboxes each weekday at noon.</p></div>
+  <div class="strip" id="wvKpis"></div>
+  <div class="takes" id="wvTakes"></div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">Output by month</span><span class="m">articles published per month, by source</span></div><div class="ctl" style="padding:8px 12px 0"><label><input type="checkbox" id="wvMR"> Include Modern Retail</label></div><div class="chart"><canvas id="cWireVol"></canvas></div></div>
+    <div class="term"><div class="th"><span class="t">What the sources are writing about</span><span class="m">share of operator articles tagged with each topic, by month</span></div><div class="chart"><canvas id="cWireTopic"></canvas></div></div>
+  </div>
+  <div class="term"><div class="th"><span class="t">Article inventory</span><span class="m" id="wvCount"></span></div>
+    <div class="ctl" style="padding:10px 12px">
+      <input type="search" id="wvQ" placeholder="Search titles" aria-label="Search titles" style="font:500 12.5px var(--mono);background:var(--t-bg);color:var(--t-text);border:1px solid var(--t-line);border-radius:3px;padding:6px 9px;min-width:min(100%,220px);flex:1">
+      <span style="display:inline-flex;gap:6px;align-items:center"><label for="wvPub">Source</label><select id="wvPub"></select></span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><label for="wvType">Type</label><select id="wvType"></select></span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><label for="wvTopic">Topic</label><select id="wvTopic"></select></span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><label for="wvMonth">Month</label><select id="wvMonth"></select></span>
+      <label><input type="checkbox" id="wvData"> In the data library</label>
+    </div>
+    <div class="tw" style="max-height:640px"><table class="q cad-t" id="tWireInv"></table></div>
+    <div class="ctl" style="padding:10px 12px"><button type="button" class="ddbtn" id="wvMore" style="border:1px solid var(--t-line);padding:6px 12px">Show more</button></div>
+  </div>
+  <div><div class="kicker">Wire sources</div><h3 style="margin:4px 0 0">What each feed adds</h3></div>
   <div class="wire" id="wireList"></div>
 </section>
 
@@ -1404,7 +1422,46 @@ const WIRE=[
  {k:'Podcasts',n:'9 Operators, MarketingOperators, Scalability School',c:'Weekly',p:'Where Northbeam and others share charts first. Worth logging episodes with data in them alongside the written posts.'},
  {k:'Your own desk',n:'Client data: Lifetimely, Klaviyo, Meta, Google Sheets',c:'Weekly',p:'Your clients\' weekly numbers sat beside the market benchmarks, so each client can be checked against the median for their spend band.'},
 ];
-function renderWire(){const WH=rowsOf('wire_heads');document.getElementById('tWireHeads').innerHTML='<thead><tr><th>Date</th><th>Source</th><th>Headline</th></tr></thead><tbody>'+WH.map(r=>`<tr><td>${dfmt(r.date,true)}</td><td>${esc(r.pub)}</td><td><a href="${r.url}" target="_blank" rel="noopener">${esc(r.title)}</a></td></tr>`).join('')+'</tbody>';document.getElementById('wireList').innerHTML=WIRE.map(w=>`<div class="story"><span class="tag">${w.k}</span><h4>${esc(w.n)}</h4><span class="cad">${esc(w.c)}</span><p>${esc(w.p)}</p></div>`).join('')}
+/* Wire inventory: data/wire_articles.csv, matched to the library by URL */
+const wvNorm=u=>String(u||'').split('#')[0].split('?')[0].replace(/\/+$/,'').toLowerCase().replace(/^https?:\/\/(www\.)?/,'');
+let wvShow=60;const WVOPS=r=>r.pub!=='Modern Retail';
+function wvRows(){const L={};LIB.forEach(e=>{L[wvNorm(e.url)]=e});return rowsOf('wire_arts').map(r=>({...r,lib:L[wvNorm(r.url)]||null,tp:(r.topics||'').split(';').filter(Boolean),m:r.date.slice(0,7)}))}
+const MLAB=m=>new Date(m+'-15T12:00').toLocaleDateString('en-GB',{month:'short',year:'2-digit'});
+function renderWire(){const R=wvRows();const pubs=[...new Set(R.map(r=>r.pub))];const cnt=k=>{const o={};R.forEach(r=>{(Array.isArray(r[k])?r[k]:[r[k]]).forEach(v=>o[v]=(o[v]||0)+1)});return Object.entries(o).sort((a,b)=>b[1]-a[1])};
+  const fill=(id,arr,all)=>{const el=document.getElementById(id);const cur=el.value;el.innerHTML=`<option value="">${all}</option>`+arr.map(([v,n])=>`<option value="${esc(v)}">${esc(v)} (${n})</option>`).join('');if(cur)el.value=cur};
+  fill('wvPub',cnt('pub'),'All sources');fill('wvType',cnt('type'),'All types');fill('wvTopic',cnt('tp'),'All topics');fill('wvMonth',cnt('m').sort((a,b)=>a[0]<b[0]?1:-1).map(([m,n])=>[m,n]),'All months');
+  [...document.getElementById('wvMonth').options].forEach(o=>{if(o.value)o.textContent=MLAB(o.value)+' ('+o.textContent.split('(')[1]});
+  const last=R.reduce((a,r)=>r.date>a?r.date:a,'');const d7=new Date(new Date(last+'T12:00')-6*864e5).toISOString().slice(0,10);
+  const wk=R.filter(r=>r.date>=d7);const ops=R.filter(WVOPS);
+  kpiStrip('wvKpis',[['Articles since Jan',R.length.toLocaleString(),`${ops.length} from operator sources`],['Last 7 days',wk.length,`to ${dfmt(last,true)}`,T.amber],['Sources',pubs.length,'publishers tracked'],['In the data library',R.filter(r=>r.lib).length,'figures pulled into charts',T.up]]);
+  document.getElementById('wvDek').textContent=`${R.length.toLocaleString()} newsletter issues, blog posts, reports, podcasts and posts from ${pubs.length} publishers since 1 January 2026, pulled from their sites and inboxes each weekday at noon. Rows marked DATA have figures in the newsroom's charts.`;
+  renderWireCharts(R);renderWireTakes(R);renderWireInv();
+  document.getElementById('wireList').innerHTML=WIRE.map(w=>`<div class="story"><span class="tag">${w.k}</span><h4>${esc(w.n)}</h4><span class="cad">${esc(w.c)}</span><p>${esc(w.p)}</p></div>`).join('')}
+const WVCOL={'Northbeam':'#ffb020','CTC':'#5aa9ff','Foxwell':'#a98bff','Haus':'#2ec4d6','Triple Whale':'#ff7a59','Motion':'#ff4f9a','Meta':'#5b8cff','2PM':'#f5e44a','Modern Retail':'#5f6b66','Varos':'#44d19a'};
+function renderWireCharts(R){const inc=document.getElementById('wvMR').checked;const S=R.filter(r=>inc||WVOPS(r));const ms=[...new Set(R.map(r=>r.m))].sort();const pubs=[...new Set(S.map(r=>r.pub))].sort((a,b)=>S.filter(r=>r.pub===b).length-S.filter(r=>r.pub===a).length);
+  mk('cWireVol',{type:'bar',data:{labels:ms.map(MLAB),datasets:pubs.map(p=>({label:p,data:ms.map(m=>S.filter(r=>r.pub===p&&r.m===m).length),backgroundColor:WVCOL[p]||T.dim,stack:'a'}))},options:{scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,grid,ticks:{precision:0}}},plugins:{tooltip:{callbacks:{footer:it=>'Total '+it.reduce((a,b)=>a+b.parsed.y,0)}}}}});
+  const O=R.filter(WVOPS);const TOP=['AI','Measurement','Meta','BFCM / Q4','Benchmarks','Creative'];const TC=['#a98bff','#2ec4d6','#5b8cff','#ff7a59','#ffb020','#ff4f9a'];
+  mk('cWireTopic',{type:'line',data:{labels:ms.map(MLAB),datasets:TOP.map((t,i)=>({label:t,data:ms.map(m=>{const a=O.filter(r=>r.m===m);return a.length?+(100*a.filter(r=>r.tp.includes(t)).length/a.length).toFixed(1):null}),borderColor:TC[i],backgroundColor:TC[i],tension:.3,borderWidth:2}))},options:{scales:{y:{grid,ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}},plugins:{tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y}% of articles`}}}}})}
+function renderWireTakes(R){const O=R.filter(WVOPS);const ms=[...new Set(O.map(r=>r.m))].sort();if(ms.length<4){document.getElementById('wvTakes').innerHTML='';return}
+  const rec=ms.slice(-3),pri=ms.slice(0,-3);const sh=(t,set)=>{const a=O.filter(r=>set.includes(r.m));return a.length?a.filter(r=>r.tp.includes(t)).length/a.length:0};
+  const tps=[...new Set(O.flatMap(r=>r.tp))].filter(t=>O.filter(r=>r.tp.includes(t)).length>=8);const mv=tps.map(t=>[t,sh(t,rec)-sh(t,pri),sh(t,rec),sh(t,pri)]).sort((a,b)=>b[1]-a[1]);
+  const up=mv[0],dn=mv[mv.length-1];const last=R.reduce((a,r)=>r.date>a?r.date:a,'');const d30=new Date(new Date(last+'T12:00')-29*864e5).toISOString().slice(0,10);
+  const p30={};O.filter(r=>r.date>=d30).forEach(r=>p30[r.pub]=(p30[r.pub]||0)+1);const bp=Object.entries(p30).sort((a,b)=>b[1]-a[1])[0]||['–',0];
+  const lib=R.filter(r=>r.lib).sort((a,b)=>a.date<b.date?1:-1)[0];const pc=x=>Math.round(100*x)+'%';const rl=`${MLAB(rec[0])}–${MLAB(rec[rec.length-1])}`;
+  const tk=[[`${up[0]} is the rising topic`,`${pc(up[2])} of operator articles in ${rl} were tagged ${up[0]}, up from ${pc(up[3])} earlier in the year.`],
+   [`${dn[0]} is getting less airtime`,`${pc(dn[2])} of operator articles in ${rl}, down from ${pc(dn[3])} before.`],
+   [`${bp[0]} is the busiest operator source`,`${bp[1]} pieces in the 30 days to ${dfmt(last,true)}, out of ${Object.values(p30).reduce((a,b)=>a+b,0)} from operator sources.`]];
+  if(lib)tk.push([`Latest figures in: ${lib.pub}`,`“${lib.title}” (${dfmt(lib.date,true)}) feeds the newsroom's charts.`]);
+  document.getElementById('wvTakes').innerHTML=tk.map(([h,p])=>`<div class="story"><h4>${esc(h)}</h4><p>${esc(p)}</p></div>`).join('')}
+function renderWireInv(){const R=wvRows();const g=id=>document.getElementById(id).value;const q=document.getElementById('wvQ').value.trim().toLowerCase();const dOnly=document.getElementById('wvData').checked;
+  const F=R.filter(r=>(!g('wvPub')||r.pub===g('wvPub'))&&(!g('wvType')||r.type===g('wvType'))&&(!g('wvTopic')||r.tp.includes(g('wvTopic')))&&(!g('wvMonth')||r.m===g('wvMonth'))&&(!dOnly||r.lib)&&(!q||(r.title+' '+r.pub).toLowerCase().includes(q)));
+  document.getElementById('wvCount').textContent=`${F.length.toLocaleString()} of ${R.length.toLocaleString()} articles`+(F.length>wvShow?` · showing ${wvShow}`:'');
+  document.getElementById('tWireInv').innerHTML='<thead><tr><th>Date</th><th>Source</th><th>Type</th><th>Title</th><th>Topics</th></tr></thead><tbody>'+(F.length?F.slice(0,wvShow).map(r=>`<tr><td>${dfmt(r.date,true)}</td><td><span style="color:${WVCOL[r.pub]||T.dim}">●</span> ${esc(r.pub)}</td><td>${esc(r.type)}</td><td><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a>${r.lib?` <span class="tag" title="${esc((r.lib.stats||[]).slice(0,2).join(' · '))}" style="color:${T.up};border:1px solid ${T.up}66;padding:0 4px;border-radius:2px;font:600 10px var(--mono)">DATA</span>`:''}</td><td style="color:var(--t-dim)">${esc(r.tp.join(', '))}</td></tr>`).join(''):'<tr><td colspan="5" style="color:var(--t-dim)">No articles match these filters.</td></tr>')+'</tbody>';
+  const mb=document.getElementById('wvMore');mb.hidden=F.length<=wvShow}
+['wvPub','wvType','wvTopic','wvMonth','wvData'].forEach(id=>document.getElementById(id).addEventListener('change',()=>{wvShow=60;renderWireInv()}));
+document.getElementById('wvQ').addEventListener('input',()=>{wvShow=60;renderWireInv()});
+document.getElementById('wvMore').addEventListener('click',()=>{wvShow+=100;renderWireInv()});
+document.getElementById('wvMR').addEventListener('change',()=>renderWireCharts(wvRows()));
 
 /* ---------- compare channels ---------- */
 let cmpSel=new Set(["Meta","Google","TikTok","AppLovin","YouTube","Snapchat"]),cmpMode='cum';

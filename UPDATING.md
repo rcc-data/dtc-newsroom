@@ -16,7 +16,19 @@ This file is the procedure scheduled runs follow. The page is built from `templa
 - Publish: Artifact publish with `url` = the live page above and `file_path` = a copy of `dtc-newsroom.html`. Then commit and push to `main`, and copy `dtc-newsroom.html` + changed CSVs to the local folder.
 - Finish with a 3–5 line summary for Ryan: what was added, the biggest moves, anything skipped.
 
-## Weekly (Thursday evening UK) — Northbeam Media Buyer Index
+## Daily (weekdays, 12:00 Vancouver) — the one scheduled run
+This replaces the old weekly run. Every weekday do steps 1–4; on the days in step 5 also do that desk's capture from its section below.
+
+1. **Inbox.** Gmail (connected inbox ryan.clarke@jdcanada.ca; newsletters arrive addressed to the ryanclarke@jdcanada.ca alias) since the previous run: `newer_than:4d (from:northbeam OR from:beehiiv OR from:commonthreadco.com OR from:foxwelldigital OR from:triplewhale OR from:haus.io OR from:motionapp OR from:runneth OR from:modernretail.co OR from:2pml OR subject:(thumbstop OR "media buyer" OR "whale mail" OR "dtc index" OR "digital download"))`. Read each newsletter in full (get_thread). Emails with no web archive (CTC DTC Index, Foxwell Digital Download, Whale Mail) are sources in their own right: log them in the inventory with the email's "view in browser" link if it has one, otherwise skip the row but still extract figures (library entry url = the brand's newsletter page, src="Newsletter").
+   If a newsletter that should be arriving (Northbeam The Media Buyer, 2PM) has never arrived, say so in the summary: the subscription may not have confirmed.
+2. **Sites.** Run the collectors in tools/collect.md for every source (SINCE = that publisher's newest date in data/wire_articles.csv), save each result to tools/inbox/<CODE>.txt, then `python3 tools/wire_inventory.py --clear-inbox`. CTC sits behind a Cloudflare check: if the page shows "Just a moment…", skip CTC today and say so. Never try to get round it.
+3. **Figures.** Open every new item that looks data-bearing (titles with numbers, "data", "benchmark", "survey", "report", "index", CPM/ROAS/CAC/CVR, BFCM, earnings; any Northbeam newsletter; Haus research reports). Add only figures stated in the source: append to the matching CSV (Northbeam weekly index → mbi_new.csv; Meta weekly charts → meta_cpm_weekly_approx.csv / meta_weekly_h1.csv; CTC → ctc_*.csv; Foxwell → fox_*.csv; Haus → haus_*.csv; Triple Whale → tw_*.csv; Motion → motion_*.csv; X posts → nb_x_posts.csv), and add a library.py entry (id, pub, date, src, title, url, stats, data, q) for each. The inventory marks the article DATA automatically once its URL is in the library. A new kind of figure that fits no CSV gets a new CSV + REG entry in build.py + a chart or table on the publisher's desk.
+4. **Insights.** The Wire page computes its own takeaways. If the new figures change the story, rewrite the front-page lead (`#v-front` h2 + dek), the relevant desk headline/dek, the `STORIES` items and the ticker; check the Trends desk still reads correctly. Say what changed in the summary.
+5. **Heavy captures on their days:** Thursday (or the first run after a new issue): Northbeam Media Buyer Index; Monday: Motion / Runneth top ads (32 lists) and Triple Whale benchmarks snapshot; first weekday of the month: CTC DTCCI; Haus and Northbeam on X every run if X is signed in. 24 Nov – 2 Dec also do BFCM Live (its own scheduled runs cover it; don't duplicate rows).
+6. Build, test (all three: both sweeps and tests/nav.js), publish, commit and push (`git pull --rebase` first), copy to the local folder, as in Rules. If nothing new was found anywhere, change nothing and say so.
+7. Summary (push notification, no em dashes): new articles by source, figures added, story changes, anything skipped.
+
+## Weekly (Thursday) — Northbeam Media Buyer Index
 1. Open https://themediabuyer.northbeam.io/archive and find issues published since the newest `week_end` in `data/mbi_new.csv`.
 2. Each issue has the weekly platform table (image): CPM, CTR, CPC, CAC, CVR, ROAS week-over-week %, budget share % and share Δ (pp) for Meta, All other, Google, TikTok, YouTube, AppLovin, Microsoft, Snapchat, Pinterest, Vibe. Transcribe to new rows at the **top** of `data/mbi_new.csv` (newest first) with `week_start,week_end` as printed. Zoom screenshots to read every digit; re-check sums of share ≈ 100.
 3. Also check https://x.com/northbeam for posts with charts since the last run; add any data to a CSV + library entry.
@@ -63,8 +75,8 @@ This file is the procedure scheduled runs follow. The page is built from `templa
 - Dated member reports with figures: append to data/fox_field_reports.csv.
 - The Foxwell Digital Download email has no archive. Skip.
 
-## Wire headlines (weekly)
-- Replace data/wire_headlines.csv with the latest ~12 items: Modern Retail (https://www.modernretail.co/feed/, strip utm params), 2PM (https://2pml.com/feed/), Foxwell blog, CTC Coach's Corner (sitemap lastmod). Real article URLs only.
+## Wire headlines
+- data/wire_headlines.csv is no longer maintained by hand: the Wire inventory (below) supersedes it. Leave it as is.
 
 ## Varos
 - Stopped publishing ecommerce benchmarks in 2025 (varos.com is now an AI business-analyst product). Nothing to capture. data/varos_meta_cpm_archive.csv is a fixed archive.
@@ -72,6 +84,11 @@ This file is the procedure scheduled runs follow. The page is built from `templa
 ## Front page and nav
 - Front page lead is cross-source (Northbeam, Meta, CTC, Foxwell). Refresh its headline/dek when the story changes; the chart, KPI strip and "From the desks" tiles compute from the data automatically (tiles show each publisher's newest library entry, excluding cadence entries).
 - New publisher desks go in the Desks dropdown (`#deskMenu`) and in `PUBDESKS`. Run `node tests/nav.js` after nav changes.
+
+## Wire inventory
+- data/wire_articles.csv: `date,pub,title,url,type,topics`, one row per article since 1 Jan 2026, newest first. Built by tools/wire_inventory.py (collectors in tools/collect.md). Library entries dated 2026+ are added automatically. Topics are keyword tags from the TOPICS list in the script: add a topic there, not by hand.
+- The Wire page (`renderWire`) shows KPIs, computed takeaways, output by month, topic share by month and the searchable table. Modern Retail is off the volume chart by default (it outnumbers the operator sources).
+- Runneth's blog has no publish dates and is not listed; Motion research enters via the library.
 
 ## Northbeam Meta desk (weekly)
 - Log every Northbeam / Bryan Bumgardner post with Meta or market data in data/nb_x_posts.csv (date, account, headline, figure, feeds, url).

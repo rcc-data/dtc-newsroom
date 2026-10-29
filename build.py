@@ -11,6 +11,7 @@ def load(fn):
 REG=[
  ("mbi","Media Buyer Index — weekly channel deltas","mbi_new.csv","Newsletter + X, weekly, Dec 2025–Oct 2026","Week-over-week % change by platform. Budget share is absolute %. Before the week of 05/03/2026 shares exclude 'All other platforms' and share Δ is a relative % change; from 05/03 share Δ is percentage points."),
  ("meta_cpm","Meta weekly CPM and YoY, Jan 2025 – Sep 2026 (digitised from chart)","meta_cpm_weekly_approx.csv","Newsletter 2026-10-22 / X 2026-10-20",None),
+ ("wire_arts","Wire inventory: every article since January 2026","wire_articles.csv","Publisher sites + newsletter inboxes, each weekday",None),
  ("nb_x","Northbeam Meta and market posts on X","nb_x_posts.csv","x.com/northbeam, x.com/BryanBumgardner",None),
  ("meta_wk","Meta weekly CPM, CPC, CTR, CVR, CAC, ROAS, Jan 2025 - May 2026 (digitised)","meta_weekly_h1.csv","X thread 2026-06-24 / Newsletter 2026-06-01",None),
  ("meta_roas_cac","Meta blended ROAS & first-time CAC (read from charts)","meta_roas_cac_weekly_approx.csv","X 2026-10-23 / 2026-10-28",None),

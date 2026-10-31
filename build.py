@@ -1,3 +1,4 @@
+import re
 import csv, json, io
 from library import LIB
 def load(fn):
@@ -99,4 +100,14 @@ out=tpl.replace('/*__DATA__*/null',json.dumps(DATA,separators=(',',':'))).replac
 open('dtc-newsroom.html','w').write(out)
 print(len(out))
 # GitHub Pages: full document at index.html (site root)
-open('index.html','w').write('<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n'+out+'\n</body></html>' if False else '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n</head>\n<body>\n'+out+'\n</body>\n</html>\n')
+SITE_TITLE='DTC Newsroom: ecommerce marketing news and ad benchmarks'
+SITE_DESC='Daily news and benchmarks on direct-to-consumer (DTC) ecommerce marketing: Meta and TikTok ads, CPM, ROAS and CAC trends, BFCM, and research from Northbeam, Common Thread Collective, Haus, Triple Whale, Foxwell and Motion.'
+SITE_LD=json.dumps({"@context":"https://schema.org","@graph":[{"@type":"NewsMediaOrganization","name":"DTC Newsroom","url":"https://dtcnewsroom.com/","description":SITE_DESC},{"@type":"WebSite","name":"DTC Newsroom","url":"https://dtcnewsroom.com/","inLanguage":"en","about":"Ecommerce marketing and advertising news"}]})
+SITE_HEAD=('<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n'
+  f'<title>{SITE_TITLE}</title>\n<meta name="description" content="{SITE_DESC}">\n'
+  '<meta name="keywords" content="DTC, ecommerce, marketing news, Meta ads, CPM, ROAS, CAC, BFCM, media buying, benchmarks">\n'
+  '<link rel="canonical" href="https://dtcnewsroom.com/">\n<meta property="og:type" content="website">\n<meta property="og:site_name" content="DTC Newsroom">\n'
+  f'<meta property="og:title" content="{SITE_TITLE}">\n<meta property="og:description" content="{SITE_DESC}">\n<meta property="og:url" content="https://dtcnewsroom.com/">\n'
+  f'<meta name="twitter:card" content="summary">\n<script type="application/ld+json">{SITE_LD}</script>\n')
+body=re.sub(r'^\s*<title>[^<]*</title>\s*\n','',out,count=1)
+open('index.html','w').write('<!doctype html>\n<html lang="en">\n<head>\n'+SITE_HEAD+'</head>\n<body>\n'+body+'\n</body>\n</html>\n')

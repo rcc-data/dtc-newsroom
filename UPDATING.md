@@ -10,6 +10,7 @@ This file is the procedure scheduled runs follow. The page is built from `templa
 - Only add figures read from the source. Never estimate a missing figure; leave the cell blank and note it.
 - Every new figure needs a `library.py` entry (id, date, src, title, url, stats, data, q quotes, pub) so the source drawer can show it.
 - Read pages with the built-in browser on Ryan's computer (the weekly index is an image table; X needs his signed-in session). Do not type passwords; if X is signed out, skip X and say so in the summary.
+- The page opens behind a passcode wall (code 1738, remembered per browser; for fun, not security). Tests skip it with `window.__NOGATE=1`; `node tests/gate.js` checks the wall itself.
 - After editing: `python3 build.py`, then `node tests/shot.js` (needs Chart.js locally: `npm pack chart.js@4.4.1` and extract to /tmp/cj) and confirm `errors []` and no overflow.
 - Then `node tests/sweep.js normal` and `node tests/sweep.js dead`. Both must print `errors none blank none`. Never publish if either fails. (The sweep clicks every toggle, dropdown and chart on every page; `dead` simulates a viewer that pauses animation frames.)
 - Never replace Chart.js default objects wholesale (e.g. `Chart.defaults.animation = {...}`); set individual properties. Colour animations stay off (`Chart.defaults.animations.colors=false`).
@@ -62,6 +63,10 @@ This replaces the old weekly run. Every weekday do steps 1–4; on the days in s
 3. Log each to `data/li_howland_posts.csv` (`date,type,headline,figure,url`, type ∈ chart/video/insight) and add a library.py entry (pub="Curtis Howland", src="LinkedIn", exact short quote, figures only as stated; chart readings labelled approx). Video posts: record the stated takeaway, not a transcript.
 4. The first capture also creates the desk: REG entry in build.py, `PUBDESKS` + `#deskMenu` item, a table of the posts; then `node tests/nav.js`.
 5. Done 2 Nov 2026: first capture (124 posts, 1 Jan to 2 Nov 2026) and the `#howland` desk. Posts are read from `/recent-activity/shares/` by scrolling and reading each post's `data-urn` (activity id >> 22 = ms timestamp). `figure` = first stated figure line, verbatim.
+
+## Curtis Howland Meta Ads charts (desk #howland)
+- The desk leads with his Meta Ads charts, redrawn in Chart.js and grouped in chapters: `data/howland_meta_charts.json`, built by `python3 tools/howland_meta.py notes/howland_meta_transcriptions.json data/howland_meta_charts.json` (chapter list and per-chart options live in the script).
+- `notes/howland_meta_transcriptions.json` holds one transcription per image (kind, data, his message, approx flag, notes). When a new Meta post or issue has a data chart: get the image (LinkedIn: fetch `/feed/update/<urn>/` in the signed-in built-in browser and take the `feedshare-shrink_1280` URL; Substack: `body_html` image src), read it, append a transcription in the same schema, add it to a chapter in the script and rebuild. Printed numbers exact; anything read off bars or lines gets approx=true. Never invent values.
 
 ## Every run — Curtis Howland newsletter (Substack, added 2 Nov 2026)
 1. https://newsletter.curtishowland.com (curtishowland.substack.com). In the built-in browser on that origin: `fetch('/api/v1/archive?sort=new&limit=50')`; new issues since the newest date in `data/howland_substack.csv`. Body text: `/api/v1/posts/<slug>` → `body_html`.

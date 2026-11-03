@@ -290,6 +290,18 @@ table.q tbody tr.link{cursor:pointer}
 .ta-btn.g{background:var(--t-bg);color:var(--t-text);border:1px solid var(--t-line)}
 .ta-warn{font:500 12px var(--mono);color:var(--t-dim);border-left:3px solid var(--t-amber);padding:6px 10px;background:var(--t-bg)}
 @media (max-width:760px){.ta-lbb{grid-template-columns:minmax(0,1fr)}.ta-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.ta-q{margin-left:0;width:100%}.ta-wk{width:100%}.ta-wk select{flex:1;min-width:0}.ta-lbi .ta-ib{padding:6px}}
+
+.hm-ch{display:flex;flex-direction:column;gap:12px;margin-bottom:8px}
+.hm-ch h3{font-family:var(--head);font-size:26px;margin:10px 0 0;line-height:1.15}
+.hm-ch>p{margin:0;color:var(--ink-2);max-width:72ch}
+.hm-msg{margin:0;font-size:13.5px;line-height:1.45;color:var(--t-text)}
+.hm-foot{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;font:500 11px var(--mono);color:var(--t-dim)}
+.hm-foot a{color:var(--t-amber)}
+.hm-tag{border:1px solid var(--t-line);border-radius:3px;padding:1px 6px}
+.hm-tag.ap{border-color:#7a5a12;color:var(--t-amber)}
+.hm-term details{font:500 11.5px var(--mono);color:var(--t-dim)}
+.hm-term summary{cursor:pointer}
+.hm-tbl td.n{text-align:right;font-variant-numeric:tabular-nums}
 </style>
 
 <!-- Passcode wall (for fun, not security) -->
@@ -1077,8 +1089,11 @@ table.q tbody tr.link{cursor:pointer}
 
 <!-- Curtis Howland -->
 <section class="view" id="v-howland" hidden>
-  <div><div class="kicker">Curtis Howland · LinkedIn and newsletter</div><h2>What a $5M-a-month Meta buyer is seeing</h2><p class="dek">Curtis Howland is VP of Marketing at Misfit and runs more than $5M a month on Meta across nine DTC brands. He posts most days on LinkedIn, usually with a chart, table or video from the accounts he manages, and writes a free weekly newsletter on Substack. This desk logs the posts that carry data or a framework and every newsletter issue. Figures are quoted as he states them; chart images are not transcribed.</p></div>
+  <div><div class="kicker">Curtis Howland · Meta Ads, in his own charts</div><h2>How a $5M-a-month Meta buyer reads an account</h2><p class="dek">Curtis Howland is VP of Marketing at Misfit and runs more than $5M a month on Meta across nine DTC brands. Most of his LinkedIn posts and newsletter issues carry a chart. Here are 31 of his Meta Ads charts, redrawn from the data in each image and grouped by the argument he keeps making. Printed numbers are exact; anything read off a bar or a line is marked approximate, and every chart links to the post it came from.</p></div>
   <div class="strip" id="hwKpis"></div>
+  <div class="ctl" style="padding:0;flex-wrap:wrap;gap:8px"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase">Meta Ads chapters</span><div class="seg" role="group" aria-label="Chapter" id="hwCh"></div></div>
+  <div id="hwMeta"></div>
+  <div class="section-head" style="margin-top:6px"><span class="label">Everything he publishes</span></div>
   <div class="grid2">
     <div class="term"><div class="th"><span class="t">Black Friday 2025: what led the ad</span><span class="m">% of 68,245 Meta ads naming BF or CM</span></div><div class="chart"><canvas id="cHwOffer"></canvas></div><p class="note">Two-thirds of ads led with percent off. A free gift led about 1 in 100. From his 2 Nov 2026 issue.</p></div>
     <div class="term"><div class="th"><span class="t">Posting rhythm</span><span class="m">LinkedIn posts logged per month, by format</span></div><div class="chart"><canvas id="cHwMonth"></canvas></div></div>
@@ -1187,6 +1202,7 @@ var id=raf?raf(run):0;setTimeout(run,60);return id};})();
 <script>
 const D=/*__DATA__*/null;
 const LIB=/*__LIB__*/null;
+const HWM=/*__HWM__*/null;
 const SRC=Object.fromEntries(LIB.map(x=>[x.id,x]));
 const srcBtn=(ids,label)=>`<button type="button" class="src-btn" data-src="${ids}" aria-label="Show sources and quotes">${label||'SRC ↗'}</button>`;
 let lastFocus=null;
@@ -2103,9 +2119,56 @@ function renderFoxwell(){
 }
 SEGBIND('fxYear',b=>{fxYear=b.dataset.v;renderFoxwell()});
 
+/* ---------- Curtis Howland · Meta Ads charts (redrawn) ---------- */
+let hwCh='all';
+const HMPAL=[T.amber,T.blue,'#a98bff',T.up,'#2ec4d6','#ff7a59',T.down,'#9fd36a'];
+const hmShort=s=>{s=String(s);return s.length>30?s.slice(0,29)+'…':s};
+const hmWrap=s=>{s=String(s);if(s.length<=26)return s;const w=s.split(' ');const out=[''];w.forEach(x=>{if((out[out.length-1]+' '+x).trim().length>26&&out.length<3)out.push(x);else out[out.length-1]=(out[out.length-1]+' '+x).trim()});if(out.length===3&&out[2].length>26)out[2]=out[2].slice(0,25)+'…';return out};
+function hmCfg(c){
+  const o=c.opt||{},pts=c.datasets.some(d=>d.data.some(v=>v&&typeof v==='object'));
+  const thr=(c.type==='stacked-bar'||o.stack)?null:c.datasets.find((d,k)=>d.role==='threshold'&&!pts&&/break/i.test(d.label)&&!(o.y2||[]).includes(k));
+  const yl=c.y?{display:true,text:c.y,color:T.dim,font:{size:10}}:{display:false},xl=c.x?{display:true,text:c.x,color:T.dim,font:{size:10}}:{display:false};
+  if(pts){
+    const ds=c.datasets.map((d,k)=>{const L=d.label;const col=d.role==='threshold'?(/cut|kill|red/i.test(L)?T.down:/scale|green/i.test(L)?T.up:T.dim):/highlighted green|keep\b|winner/i.test(L)?T.up:/grey|test or kill|other ads|target|median|summary/i.test(L)?(d.role==='threshold'?T.dim:'#7f8c87'):/scale these/i.test(L)?T.blue:/\btest\b/i.test(L)?T.blue:/cut|kill|red/i.test(L)?T.down:/scale|green/i.test(L)?T.up:HMPAL[k%HMPAL.length];
+      const data=d.data.filter(v=>v&&typeof v==='object'&&v.x!=null&&v.y!=null).map(v=>({...v}));
+      if(d.role==='threshold')return {type:'line',label:d.label,data:data.sort((a,b)=>a.x-b.x),borderColor:col,borderDash:[5,4],borderWidth:2,pointRadius:0,showLine:true,fill:false};
+      return {type:c.type==='bubble'?'bubble':'scatter',label:d.label,data:c.type==='bubble'?data.map(v=>({...v,r:Math.max(4,Math.min(22,v.r||6))})):data,backgroundColor:col+'cc',borderColor:col,pointRadius:4.5,pointHoverRadius:7}});
+    return {type:'scatter',data:{datasets:ds},options:{interaction:{mode:'nearest',intersect:true},scales:{x:{type:o.logx?'logarithmic':'linear',grid,title:xl,ticks:{maxTicksLimit:7}},y:{grid,title:yl}},plugins:{legend:{position:'bottom',labels:{font:{size:10},boxWidth:10}},tooltip:{callbacks:{label:t=>{const r=t.raw||{};return ' '+(r.label?r.label:`${t.dataset.label}: ${r.x}, ${r.y}`)}}}}}};
+  }
+  const hz=c.type==='hbar'||o.float;
+  if(o.float){const lo=c.datasets[0].data,hi=c.datasets[1].data;
+    return {type:'bar',data:{labels:c.labels,datasets:[{label:'CPM range ($)',data:c.labels.map((_,i)=>[lo[i],hi[i]===lo[i]?hi[i]*1.06:hi[i]]),backgroundColor:c.labels.map(l=>/social|digital/i.test(l)?T.amber:T.blue),borderRadius:3}]},options:{indexAxis:'y',scales:{x:{type:'logarithmic',grid,title:xl,ticks:{callback:v=>[1,2,5,10,20,50,100,200,500,1000].includes(v)?'$'+v:''}},y:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:t=>` $${lo[t.dataIndex]} to $${hi[t.dataIndex]}`}}}}};}
+  const stack=c.type==='stacked-bar'||o.stack;const y2=new Set(o.y2||[]);let bi=0;
+  const ds=c.datasets.map((d,k)=>{const base={label:d.label,data:d.data};const ax=y2.has(k)?{yAxisID:'y2'}:{};
+    if(d.role==='threshold')return {...base,...ax,type:'line',borderColor:T.dim,borderDash:[5,4],borderWidth:1.5,pointRadius:0,fill:false,order:0};
+    if(d.role==='line'||c.type==='line'||c.type==='area'){const col=HMPAL[(k)%HMPAL.length];return {...base,...ax,type:'line',borderColor:col,backgroundColor:col+'33',fill:c.type==='area',tension:.25,pointRadius:2.5,spanGaps:true,order:0}}
+    if(d.role==='points')return {...base,...ax,type:'line',showLine:false,pointRadius:5,borderColor:T.text,backgroundColor:T.text};
+    const col=HMPAL[(bi++)%HMPAL.length];const bg=thr?d.data.map((v,i)=>v==null?col:(v>=(thr.data[i]??thr.data[0])?T.up:T.down)):col;
+    return {...base,...ax,type:'bar',backgroundColor:bg,borderRadius:2,order:1}});
+  const sc={x:{stacked:stack,grid:hz?grid:{display:false},title:hz?yl:xl,ticks:{callback:function(v){const l=this.getLabelForValue?this.getLabelForValue(v):v;return hz?l:hmShort(l)},maxRotation:40,autoSkip:true}},y:{stacked:stack,grid:hz?{display:false}:grid,title:hz?xl:yl,beginAtZero:true}};
+  if(hz){sc.x={stacked:stack,grid,title:xl,beginAtZero:true};sc.y={stacked:stack,grid:{display:false},ticks:{callback:function(v){return hmWrap(this.getLabelForValue(v))},font:{size:10}}};if(o.logx){sc.x={type:'logarithmic',grid,title:xl,ticks:{callback:v=>[0.01,0.1,1,10,100].includes(+v)?v+(/%/.test(c.units||'')?'%':''):''}}}}
+  if(y2.size)sc.y2={position:'right',grid:{display:false},beginAtZero:true};
+  return {type:'bar',data:{labels:c.labels,datasets:ds},options:{indexAxis:hz?'y':'x',interaction:{mode:'index',intersect:false},scales:sc,plugins:{legend:{display:ds.length>1,position:'bottom',labels:{font:{size:10},boxWidth:10}}}}};
+}
+function hmTable(c){const pct=/%/.test(c.units||'');const heat=v=>pct&&v!=null?`background:rgba(255,176,32,${Math.min(.55,v/100*.9).toFixed(2)})`:'';
+  return '<div class="tw"><table class="q hm-tbl"><thead><tr><th></th>'+c.labels.map(l=>`<th>${esc(l)}</th>`).join('')+'</tr></thead><tbody>'+c.datasets.map(d=>`<tr><td><b>${esc(d.label)}</b></td>${c.labels.map((_,i)=>{const v=d.data[i];return `<td class="n" style="${heat(v)}">${v==null?'·':v}</td>`}).join('')}</tr>`).join('')+'</tbody></table></div>'}
+function renderHwMeta(){
+  if(!HWM)return;const chs=document.getElementById('hwCh');
+  if(!chs.children.length)chs.innerHTML=`<button type="button" data-v="all" aria-pressed="true">All ${HWM.reduce((s,c)=>s+c.charts.length,0)}</button>`+HWM.map(c=>`<button type="button" data-v="${c.id}" aria-pressed="false">${esc(c.h)}</button>`).join('');
+  const box=document.getElementById('hwMeta');
+  box.innerHTML=HWM.filter(c=>hwCh==='all'||c.id===hwCh).map(ch=>`<div class="hm-ch"><h3>${esc(ch.h)}</h3><p>${esc(ch.dek)}</p><div class="grid2">${ch.charts.map(c=>`<div class="term hm-term"><div class="th"><span class="t">${esc(c.title)}</span><span class="m">${c.src} · ${dfmt(c.date,true)}</span></div>
+    ${c.type==='table'?hmTable(c):`<div class="chart${c.type==='scatter'||c.type==='bubble'||(c.opt&&c.opt.logx)?' tall':''}"><canvas id="${c.id}"></canvas></div>`}
+    <p class="hm-msg">${esc(c.message)}</p>
+    <div class="hm-foot"><span class="hm-tag${c.approx?' ap':''}">${c.approx?'Values read from his chart (approx)':'Printed values'}</span><a href="${c.url}" target="_blank" rel="noopener">${c.src==='LinkedIn'?'LinkedIn post':'Newsletter issue'} ↗</a></div>
+    ${c.notes||c.annotations.length?`<details><summary>How this was redrawn</summary><p style="margin:6px 0 0">${esc(c.annotations.join(' · '))}${c.annotations.length&&c.notes?' · ':''}${esc(c.notes)}</p></details>`:''}</div>`).join('')}</div></div>`).join('');
+  HWM.forEach(ch=>ch.charts.forEach(c=>{if(c.type!=='table'&&document.getElementById(c.id))mk(c.id,hmCfg(c))}));
+}
+SEGBIND('hwCh',b=>{hwCh=b.dataset.v;renderHwMeta()});
+
 /* ---------- Curtis Howland ---------- */
 let hwType='all';
 function renderHowland(){
+  renderHwMeta();
   const P=rowsOf('li_howland'),S=rowsOf('howland_ss'),B=rowsOf('howland_bf');const bv=m=>(B.find(r=>r.metric===m)||{}).value;
   const cnt=t=>P.filter(r=>r.type===t).length;
   kpiStrip('hwKpis',[['LinkedIn posts logged',P.length,'since 1 Jan 2026 · '+cnt('chart')+' charts, '+cnt('video')+' videos',T.text,P[0]?'li-howland-'+P[0].date.replace(/-/g,''):''],['Newsletter issues',S.length,'weekly since '+dfmt(S[S.length-1].date,true),T.text,''],['BF 2025 ads analysed',Number(bv('Black Friday / Cyber Monday ads analysed')).toLocaleString('en-US'),Number(bv('Brands')).toLocaleString('en-US')+' brands, Meta Ad Library',T.amber,'howland-ss-68245-black-friday-ads-taken-apart'],['Median BF discount',bv('Median discount named')+'%','64% of brands never changed it',T.down,'howland-ss-68245-black-friday-ads-taken-apart'],['Median first BF ad',bv('Median first Black Friday ad')+' days out','15 Nov 2025; 7 in 8 had nothing live by 1 Nov',T.blue,'howland-ss-68245-black-friday-ads-taken-apart']]);

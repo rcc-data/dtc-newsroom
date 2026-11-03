@@ -5,7 +5,7 @@ for(const [w,h,touch] of [[1280,800,false],[400,800,true]]){
  const p=await b.newPage({viewport:{width:w,height:h},hasTouch:touch,isMobile:touch});p.on('pageerror',e=>errs.push(e.message));
  await p.route('**/chart.umd.js',r=>r.fulfill({body:fs.readFileSync('/tmp/cj/package/dist/chart.umd.js','utf8'),contentType:'application/javascript'}));
  await p.route('**/fonts.googleapis.com/**',r=>r.fulfill({body:'',contentType:'text/css'}));
- await p.route('http://local.test/',r=>r.fulfill({body:fs.readFileSync(__dirname+'/../index.html','utf8'),contentType:'text/html'}));
+ await p.route('http://local.test/',r=>r.fulfill({body:fs.readFileSync(__dirname+'/../index.html','utf8').replace('<head>','<head><script>window.__NOGATE=1</script>'),contentType:'text/html'}));
  await p.goto('http://local.test/');await p.waitForTimeout(800);
  const vis=()=>p.evaluate(()=>!document.getElementById('deskMenu').hidden);
  if(!touch){await p.hover('#deskBtn');await p.waitForTimeout(200);out.push('hover '+await vis());await p.screenshot({path:'/tmp/nav_open.png'});

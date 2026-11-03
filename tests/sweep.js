@@ -10,6 +10,7 @@ const VIEWS=['front','trends','ctc','foxwell','howland','bfcm','nb-channels','nb
  await p.route('**/fonts.googleapis.com/**',r=>r.fulfill({body:'',contentType:'text/css'}));
  const pre=mode==='dead'?'<script>window.requestAnimationFrame=()=>0;</script>':'';
  const html=fs.readFileSync(__dirname+'/../index.html','utf8').replace('<head>','<head>'+pre);
+ await p.route('http://local.test/rn/**',r=>{const f=__dirname+'/../'+decodeURIComponent(new URL(r.request().url()).pathname);fs.existsSync(f)?r.fulfill({body:fs.readFileSync(f),contentType:'image/webp'}):r.fulfill({status:404,body:''})});
  await p.route('http://local.test/',r=>r.fulfill({body:html,contentType:'text/html'}));
  const errs=[];p.on('pageerror',e=>errs.push(e.message));
  const blanks=async tag=>p.evaluate(tag=>[...document.querySelectorAll('section.view:not([hidden]) canvas')].filter(c=>c.offsetParent).map(c=>{const d=c.getContext('2d').getImageData(0,0,c.width,c.height).data;let k=0;for(let i=3;i<d.length;i+=4*61)if(d[i])k++;return k<3?tag+':'+c.id:null}).filter(Boolean),tag);

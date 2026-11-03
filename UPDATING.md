@@ -35,6 +35,13 @@ This replaces the old weekly run. Every weekday do steps 1–4; on the days in s
 4. Rewrite the front-page lead (`<h2>` + dek in `#v-front`) and the `STORIES` array Channels / Share items to reflect the new week. Update the ticker `extra` list if a headline number changed.
 5. Update the `mb-weekly` library entry stats (weeks transcribed count, latest issue date).
 
+## Weekly (Monday) — Runneth Weekly Trending Ads (desk "Runneth", tab #mo-trend)
+1. Source: Ryan's Supabase project jd-bfcm-swipe-file (cymkcvdsxoneojfisjgk), table `tr_ads` (week, category, rank, brand, age, kind, video_s, poster_s, images_s, logo_s), filled every Monday from Runneth's apparel, sports-fitness, retail and accessories lists; media in the public `trending` bucket.
+2. For each new `week` not yet in `data/runneth_trending_ads.csv`: query the rows with the Supabase connector. This cloud session can't reach supabase.co directly, so pull the media in the built-in browser: fetch each poster/first image (and second carousel image) and logo, re-encode on a canvas to webp (420px wide, q 0.74; logos 64px), return ≤200KB per call, and write them to `rn/<week>/<category>-<rank>-<poster|img1|img2|logo>.webp`.
+3. Enrich from the same week's Runneth pages (`/trending/<category>/`, `self.__next_f` payload): aspectRatio, activeForDays, brand followerCount, and the Meta Ad Library id (the number after `swipe-file-source-link/` in thumbnailUrl/videoUrl). Check brand names match rank by rank.
+4. Append rows to `data/runneth_trending_ads.csv`; `video_url` stays the Supabase mp4 (plays on dtcnewsroom.com; the artifact may block it, so the lightbox links to the Meta Ad Library).
+5. Publish with every new `rn/<week>/*.webp` in the Artifact `files` map (same published path), and commit `rn/` with the page.
+
 ## Weekly — Motion / Runneth "Top ads this week" (32 lists)
 1. Lists come from https://motionapp.com/trending/sitemap.xml (main page + 31 industry slugs). In the built-in browser on motionapp.com, fetch each `/trending/<slug>/` and parse `brandName`, `aspectRatio`, `activeForDays` from the page's `self.__next_f` payload (first 30 per list).
 2. Append rows to `data/motion_trending.csv`: `snapshot,list,rank,brand,aspect,active_days` (snapshot = today, list = `all` or the slug). Keep older snapshots. Fix escapes (`\u0026` → `&`).

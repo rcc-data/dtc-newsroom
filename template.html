@@ -238,6 +238,58 @@ table.q tbody tr.link{cursor:pointer}
 .cad-t td,.cad-t th{text-align:left!important;white-space:normal!important;min-width:90px}.cad-t td:first-child{white-space:nowrap}
 .empty{font-family:var(--mono);font-size:12.5px;color:var(--t-dim);padding:18px;text-align:center;border:1px dashed var(--t-line);border-radius:4px}
 .bar-in{display:inline-block;height:8px;border-radius:2px;background:var(--t-amber);vertical-align:middle;margin-right:6px}
+
+/* Runneth · Weekly Trending Ads (ported from the JD Ad Briefing Room trending tab) */
+.ta{display:flex;flex-direction:column;gap:14px}
+.ta-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:14px}
+.ta-wk{display:flex;gap:6px;align-items:center}
+.ta-wk select{font:600 13px var(--mono);padding:8px 10px;border:1px solid var(--rule);background:var(--paper-2);color:var(--ink);border-radius:4px}
+.ta-ib{background:var(--t-panel);border:1px solid var(--t-line);color:var(--t-text);border-radius:4px;padding:7px 10px;cursor:pointer;font:700 12px var(--mono)}
+.ta-ib:hover:not([disabled]){border-color:var(--t-amber)}.ta-ib[disabled]{opacity:.35;cursor:default}
+.ta-f{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.ta-f .lbl{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--t-dim);margin-right:2px}
+.ta-pill{font:600 12px var(--mono);background:var(--t-bg);color:var(--t-text);border:1px solid var(--t-line);border-radius:999px;padding:6px 11px;cursor:pointer;white-space:nowrap}
+.ta-pill[aria-pressed="true"]{background:var(--t-amber);color:#000;border-color:var(--t-amber)}
+.ta-pill .c{opacity:.65;margin-left:4px;font-size:11px}
+.ta-q{font:500 13px var(--mono);background:var(--t-bg);color:var(--t-text);border:1px solid var(--t-line);border-radius:999px;padding:7px 12px;width:min(240px,100%);margin-left:auto}
+.ta-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.ta-card{background:var(--t-bg);border:1px solid var(--t-line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.ta-card:hover{border-color:var(--t-amber);box-shadow:0 10px 30px -12px rgba(255,176,32,.45)}
+.ta-media{position:relative;background:#000;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:zoom-in}
+.ta-media:focus-visible{outline:2px solid var(--t-amber);outline-offset:-2px}
+.ta-media img,.ta-media video{width:100%;height:100%;object-fit:contain;display:block;background:#000}
+.ta-media video{position:absolute;inset:0;opacity:0;transition:opacity .2s;pointer-events:none}
+.ta-media.playing video{opacity:1}.ta-media.playing .ta-play{opacity:0}
+.ta-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;padding-left:3px;pointer-events:none;border:1px solid rgba(255,255,255,.35);transition:opacity .2s}
+.ta-rank{position:absolute;top:8px;left:8px;background:var(--t-amber);color:#000;font:800 12px var(--mono);padding:3px 8px;border-radius:999px}
+.ta-new{position:absolute;top:8px;right:8px;background:var(--t-up);color:#000;font:800 10px var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:999px}
+.ta-asp{position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,.7);color:#fff;font:700 10px var(--mono);padding:3px 6px;border-radius:4px}
+.ta-dots{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:6px;background:rgba(0,0,0,.72);color:#fff;border-radius:999px;padding:2px 6px;font:700 11px var(--mono)}
+.ta-nav{background:none;border:0;color:#fff;font:700 17px var(--mono);cursor:pointer;padding:0 6px;line-height:1}
+.ta-meta{display:flex;gap:10px;align-items:center;padding:9px 11px;color:var(--t-text)}
+.ta-meta b{display:block;font:700 13.5px var(--body);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ta-meta .s{display:block;font:500 11px var(--mono);color:var(--t-dim)}
+.ta-logo{width:30px;height:30px;border-radius:50%;object-fit:cover;flex:0 0 30px;background:var(--t-line)}
+.ta-ini{display:flex;align-items:center;justify-content:center;font:800 13px var(--mono);color:var(--t-amber)}
+.ta-empty{border:1px dashed var(--t-line);border-radius:8px;padding:28px;text-align:center;color:var(--t-dim)}
+.ta-lb{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center;padding:max(12px,env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) max(12px,env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.ta-lbc{background:var(--t-panel);color:var(--t-text);border:1px solid var(--t-line);border-radius:10px;width:min(980px,100%);max-height:100%;display:flex;flex-direction:column;overflow:hidden;color-scheme:dark}
+.ta-lbh{display:flex;gap:10px;align-items:center;padding:11px 14px;border-bottom:1px solid var(--t-line)}
+.ta-lbh .ta-rank{position:static}
+.ta-lbh b{display:block;font:700 15px var(--body)}.ta-lbh .s{font:500 11.5px var(--mono);color:var(--t-dim)}
+.ta-lbb{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:14px;padding:12px;min-height:0;overflow:auto}
+.ta-lbi{display:flex;align-items:center;gap:6px;min-width:0}
+.ta-lbi figure{margin:0;flex:1;min-width:0;position:relative;display:flex;justify-content:center;align-items:center;background:#000;border-radius:6px;overflow:hidden}
+.ta-lbi video,.ta-lbi img{display:block;max-width:100%;max-height:calc(100vh - 180px);max-height:calc(100dvh - 180px);width:auto;height:auto;object-fit:contain}
+.ta-det{display:flex;flex-direction:column;gap:10px;min-width:0}
+.ta-kv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.ta-kv div{border:1px solid var(--t-line);border-radius:6px;padding:8px 10px;min-width:0}
+.ta-kv span{display:block;font:600 10px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--t-dim)}
+.ta-kv b{display:block;font:700 14px var(--mono);margin-top:3px;word-break:break-word}
+.ta-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.04em;padding:9px 12px;border-radius:999px;background:var(--t-amber);color:#000;text-decoration:none;border:0;cursor:pointer}
+.ta-btn.g{background:var(--t-bg);color:var(--t-text);border:1px solid var(--t-line)}
+.ta-warn{font:500 12px var(--mono);color:var(--t-dim);border-left:3px solid var(--t-amber);padding:6px 10px;background:var(--t-bg)}
+@media (max-width:760px){.ta-lbb{grid-template-columns:minmax(0,1fr)}.ta-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.ta-q{margin-left:0;width:100%}.ta-wk{width:100%}.ta-wk select{flex:1;min-width:0}.ta-lbi .ta-ib{padding:6px}}
 </style>
 
 <header class="mast">
@@ -263,7 +315,7 @@ table.q tbody tr.link{cursor:pointer}
     <div class="ddmenu" id="deskMenu" hidden>
       <div class="ddgrid">
         <div class="ddcol"><a class="ddh" href="#nb-channels" data-desk="nb">Northbeam</a><span class="ddd">Attribution · weekly index</span><a href="#nb-channels">Channel tracker</a><a href="#nb-share">Share of spend</a><a href="#nb-bench">Benchmarks</a><a href="#nb-creative">Creative</a><a href="#nb-q4">Q4 playbook</a><a href="#nb-meta">Meta trends</a><a href="#nb-library">Library</a></div>
-        <div class="ddcol"><a class="ddh" href="#mo-bench" data-desk="mo">Motion</a><span class="ddd">Creative analytics · weekly</span><a href="#mo-bench">Creative benchmarks</a><a href="#mo-trend">Trending this week</a><a href="#mo-research">Research &amp; cadence</a></div>
+        <div class="ddcol"><a class="ddh" href="#mo-bench" data-desk="mo">Runneth</a><span class="ddd">Creative analytics · weekly</span><a href="#mo-bench">Creative benchmarks</a><a href="#mo-trend">Weekly Trending Ads</a><a href="#mo-research">Research &amp; cadence</a></div>
         <div class="ddcol"><a class="ddh" href="#ctc" data-desk="ctc">Common Thread</a><span class="ddd">Agency portfolio · monthly</span><a href="#ctc">Channel mix, iROAS &amp; confidence</a></div>
         <div class="ddcol"><a class="ddh" href="#haus" data-desk="haus">Haus</a><span class="ddd">Incrementality · research</span><a href="#haus">Channel lift scorecard</a></div>
         <div class="ddcol"><a class="ddh" href="#triplewhale" data-desk="triplewhale">Triple Whale</a><span class="ddd">Benchmarks · weekly snapshot</span><a href="#triplewhale">Industry benchmarks</a></div>
@@ -283,7 +335,7 @@ table.q tbody tr.link{cursor:pointer}
     </div>
     <div class="subrow" id="subrow-mo" data-for="mo" hidden>
       <a href="#mo-bench">Creative benchmarks</a>
-      <a href="#mo-trend">Trending this week</a>
+      <a href="#mo-trend">Weekly Trending Ads</a>
       <a href="#mo-research">Research &amp; cadence</a>
     </div>
   </div>
@@ -695,7 +747,7 @@ table.q tbody tr.link{cursor:pointer}
 <!-- MOTION · BENCHMARKS -->
 <section class="view" id="v-mo-bench" hidden>
   <div>
-    <div class="kicker">Motion (now Runneth) · Creative Benchmarks 2026</div>
+    <div class="kicker">Runneth (formerly Motion) · Creative Benchmarks 2026</div>
     <h2>Roughly one ad in twenty becomes a winner. Volume is how you find it</h2>
     <p class="dek">Motion analysed 550,000 Meta ads from 6,000 advertisers ($1.3 billion of spend, September 2025 to early January 2026). A winner is an ad that spends at least ten times its account's median ad. Motion rebranded as Runneth in 2026; the Thumbstop newsletter and reports carry on under the new name.</p>
   </div>
@@ -740,11 +792,20 @@ table.q tbody tr.link{cursor:pointer}
 
 <!-- MOTION · TRENDING -->
 <section class="view" id="v-mo-trend" hidden>
-  <div>
-    <div class="kicker">Motion (now Runneth) · Weekly</div>
-    <h2>The most-saved ads, overall and in 31 industries</h2>
-    <p class="dek">Runneth ranks the top 30 Meta, TikTok and Instagram ads by how often its users save them, on a main list plus 31 industry lists (found through a hidden sitemap, all marked "weekly"). Past weeks come from the Internet Archive; from 28 October the Thursday update captures all 32 lists.</p>
+  <div class="ta-head">
+    <div><div class="kicker">Runneth (formerly Motion) · Weekly Trending Ads</div>
+    <h2>Weekly Trending Ads</h2>
+    <p class="dek">The top 30 ads each week in the categories closest to JD (apparel, sports &amp; fitness, retail and accessories), ranked by Runneth community saves. Each ad is copied when it's captured, so past weeks stay here after Runneth moves on. Hover a video to preview it; click any ad for the full-size view and its details.</p></div>
+    <div class="ta-wk"><button type="button" class="ta-ib" id="taPrev" aria-label="Previous week">←</button><select id="taWeek" aria-label="Week"></select><button type="button" class="ta-ib" id="taNext" aria-label="Next week">→</button></div>
   </div>
+  <div class="strip" id="taKpis"></div>
+  <div class="term ta">
+    <div class="ta-f" id="taCat"></div>
+    <div class="ta-f"><span class="lbl">Format</span><span id="taKind"></span><span class="lbl" style="margin-left:10px">Aspect</span><span id="taAsp"></span><input class="ta-q" id="taQ" type="search" placeholder="Search brand…" aria-label="Search brand"></div>
+    <div class="ta-grid" id="taGrid"></div>
+    <p class="note" style="margin:0">Source: <a href="https://motionapp.com/trending/" target="_blank" rel="noopener">Runneth trending ads ↗</a>, captured into Supabase every Monday. "Running" is how long Runneth shows the ad has been live; aspect ratio, follower count and the Meta Ad Library link come from the same Runneth page.</p>
+  </div>
+  <div class="section-head" style="margin-top:8px"><span class="label">All 32 Runneth lists over time</span></div>
   <div class="strip" id="trKpis"></div>
   <div class="ctl" style="padding:0;flex-wrap:wrap;gap:10px"><label for="trList">List</label><select id="trList"></select><label for="trSnap">Week</label><select id="trSnap"></select></div>
   <div class="callout" id="trFresh"></div>
@@ -777,7 +838,7 @@ table.q tbody tr.link{cursor:pointer}
 <!-- MOTION · RESEARCH -->
 <section class="view" id="v-mo-research" hidden>
   <div>
-    <div class="kicker">Motion (now Runneth) · Research &amp; cadence</div>
+    <div class="kicker">Runneth (formerly Motion) · Research &amp; cadence</div>
     <h2>What Motion publishes, and how often</h2>
     <p class="dek">Motion's sitemaps (runneth.com and motionapp.com) list 300+ pages but no newsletter archive. Thumbstop goes out every Sunday by email only; its long-form pieces reappear as "Thumbstop" posts on the blog, and its data lands in quarterly "Thumbstop Pulse" reports.</p>
   </div>
@@ -795,7 +856,7 @@ table.q tbody tr.link{cursor:pointer}
       <div class="strip" id="socsKpis" style="grid-template-columns:repeat(2,1fr)"></div>
     </div>
   </div>
-  <div class="section-head"><span class="label">Motion library</span></div>
+  <div class="section-head"><span class="label">Runneth library</span></div>
   <div class="lib" id="moLib"></div>
 </section>
 
@@ -1188,7 +1249,7 @@ function renderDeskTiles(X){
   const fox=rowsOf('fox_q4').find(r=>r.answer==='Rising CPMs and auction costs');const me=X.me[X.me.length-1];
   const D=[
     {pub:'Northbeam',to:'#nb-channels',cad:'Weekly index · daily posts',num:fmtP(nbM.cpm,1),lab:`Meta CPM week over week · w/e ${dfmt(WE[LAST])}`,col:goodCol(nbM.cpm,true),sub:`Meta ROAS ${fmtP(nbM.roas,1)}, CAC ${fmtP(nbM.cac,1)} the same week`},
-    {pub:'Motion',to:'#mo-trend',cad:'Weekly top-ads lists',num:v916+'%',lab:`of this week's top ads are vertical 9:16`,col:T.amber,sub:topB?`Most repeated brand: ${topB[0]} (${topB[1]} ads) · ${dfmt(moS[moS.length-1],true)}`:''},
+    {pub:'Runneth',to:'#mo-trend',cad:'Weekly top-ads lists',num:v916+'%',lab:`of this week's top ads are vertical 9:16`,col:T.amber,sub:topB?`Most repeated brand: ${topB[0]} (${topB[1]} ads) · ${dfmt(moS[moS.length-1],true)}`:''},
     {pub:'CTC',name:'Common Thread',to:'#ctc',cad:'Monthly confidence · weekly email',num:cci.y.toFixed(1),lab:`shopper confidence, ${tsLab(cci.x)}${lyC?' · '+fPct((cci.y/lyC.y-1)*100)+' YoY':''}`,col:T.up,sub:'Branded search keeps only 0.30× of its reported ROAS once incrementality is applied'},
     {pub:'Haus',to:'#haus',cad:'Research posts · X snapshots',num:'1.18×',lab:'Meta incremental attribution vs standard, Oct 2026',col:T.up,sub:'YouTube geo tests find 2.3× what Google Ads reports'},
     {pub:'Triple Whale',to:'#triplewhale',cad:'Weekly benchmark snapshot',num:tw?'$'+tw.y.toFixed(2):'–',lab:`median Meta CPM across industries${tw?' · '+tsLab(tw.x,true):''}`,col:'#2ec4d6',sub:twr?`Median Meta ROAS ${twr.y.toFixed(2)}× (trailing 30 days)`:''},
@@ -1458,7 +1519,7 @@ function renderWire(){const R=wvRows();const pubs=[...new Set(R.map(r=>r.pub))];
   document.getElementById('wvDek').textContent=`${R.length.toLocaleString()} newsletter issues, blog posts, reports, podcasts and posts from ${pubs.length} publishers since 1 January 2026, pulled from their sites and inboxes each weekday at noon. Rows marked DATA have figures in the newsroom's charts.`;
   renderWireCharts(R);renderWireTakes(R);renderWireInv();
   document.getElementById('wireList').innerHTML=WIRE.map(w=>`<div class="story"><span class="tag">${w.k}</span><h4>${esc(w.n)}</h4><span class="cad">${esc(w.c)}</span><p>${esc(w.p)}</p></div>`).join('')}
-const WVCOL={'Northbeam':'#ffb020','CTC':'#5aa9ff','Foxwell':'#a98bff','Haus':'#2ec4d6','Triple Whale':'#ff7a59','Motion':'#ff4f9a','Meta':'#5b8cff','2PM':'#f5e44a','Modern Retail':'#5f6b66','Varos':'#44d19a','Graphite':'#9fd36a','Curtis Howland':'#e07bff'};
+const WVCOL={'Northbeam':'#ffb020','CTC':'#5aa9ff','Foxwell':'#a98bff','Haus':'#2ec4d6','Triple Whale':'#ff7a59','Runneth':'#ff4f9a','Meta':'#5b8cff','2PM':'#f5e44a','Modern Retail':'#5f6b66','Varos':'#44d19a','Graphite':'#9fd36a','Curtis Howland':'#e07bff'};
 function renderWireCharts(R){const inc=document.getElementById('wvMR').checked;const S=R.filter(r=>inc||WVOPS(r));const ms=[...new Set(R.map(r=>r.m))].sort();const pubs=[...new Set(S.map(r=>r.pub))].sort((a,b)=>S.filter(r=>r.pub===b).length-S.filter(r=>r.pub===a).length);
   mk('cWireVol',{type:'bar',data:{labels:ms.map(MLAB),datasets:pubs.map(p=>({label:p,data:ms.map(m=>S.filter(r=>r.pub===p&&r.m===m).length),backgroundColor:WVCOL[p]||T.dim,stack:'a'}))},options:{scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,grid,ticks:{precision:0}}},plugins:{tooltip:{callbacks:{footer:it=>'Total '+it.reduce((a,b)=>a+b.parsed.y,0)}}}}});
   const O=R.filter(WVOPS);const TOP=['AI','Measurement','Meta','BFCM / Q4','Benchmarks','Creative'];const TC=['#a98bff','#2ec4d6','#5b8cff','#ff7a59','#ffb020','#ff4f9a'];
@@ -1703,10 +1764,71 @@ function renderMoResearch(){
   const AI=rowsOf('mo_ai');
   mk('cMoAI',{type:'bar',data:{labels:AI.map(r=>r.stage),datasets:[{label:'Using AI',data:AI.map(r=>n(r.usage_pct)),backgroundColor:AI.map((r,i)=>i<3?T.amber:'rgba(255,176,32,.4)')}]},options:{scales:{y:{grid,max:100,ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.y}% of creative teams`}}}}});
   kpiStrip('socsKpis',[['Feel underpaid','58%','vs 23% well paid',T.down,'mo-socs'],['Use AI','~90%','heavy users most satisfied',T.text,'mo-socs'],['Job posts naming AI','45%','up from 21%',T.amber,'mo-socs'],['Work solo or in 2–3','~80%','of practitioners',T.text,'mo-socs']]);
-  document.getElementById('moLib').innerHTML=libCards(LIB.filter(x=>x.pub==='Motion'));
+  document.getElementById('moLib').innerHTML=libCards(LIB.filter(x=>x.pub==='Runneth'));
 }
 const refLine=(v,axis='y',label)=>({id:'ref'+axis+v,afterDatasetsDraw(c){const sc=c.scales[axis];if(!sc)return;const p=sc.getPixelForValue(v);const ar=c.chartArea;if(axis==='y'&&(p<ar.top||p>ar.bottom))return;if(axis==='x'&&(p<ar.left||p>ar.right))return;const ctx=c.ctx;ctx.save();ctx.strokeStyle='rgba(217,225,221,.55)';ctx.setLineDash([4,4]);ctx.lineWidth=1;ctx.beginPath();if(axis==='y'){ctx.moveTo(ar.left,p);ctx.lineTo(ar.right,p)}else{ctx.moveTo(p,ar.top);ctx.lineTo(p,ar.bottom)}ctx.stroke();if(label){ctx.setLineDash([]);ctx.fillStyle='rgba(217,225,221,.7)';ctx.font='10px "IBM Plex Mono",monospace';axis==='y'?ctx.fillText(label,ar.right-ctx.measureText(label).width-4,p-4):ctx.fillText(label,p+4,ar.top+10)}ctx.restore()}});
 const IND_NAME=s=>s.replace(/_and_/g,' & ').replace(/_/g,' ').replace(/-/g,' ').replace(/\b\w/g,m=>m.toUpperCase());
+
+/* ---------- Runneth · Weekly Trending Ads ---------- */
+const TA={week:null,cat:'all',kind:'all',asp:'all',q:'',slide:{}};
+const TACAT=[['apparel','Apparel'],['sports-fitness','Sports & Fitness'],['retail','Retail'],['accessories','Accessories']];const TACN=Object.fromEntries(TACAT);
+const taFol=n=>!n?'':n>=1e6?(n/1e6).toFixed(1).replace(/\.0$/,'')+'M':Math.round(n/1e3)+'K';
+const taKind=a=>a.kind==='video'?'▶ Video':a.kind==='carousel'?'▣ Carousel':'▣ Image';
+const taRun=a=>a.active_days?a.active_days+'d':(a.age||'');
+function taRows(){const o=TACAT.map(c=>c[0]);return rowsOf('rn_ads').map(r=>({...r,rank:+r.rank,imgs:[r.thumb,r.thumb2].filter(Boolean)})).sort((x,y)=>(o.indexOf(x.category)-o.indexOf(y.category))||x.rank-y.rank)}
+function renderTA(){
+  const R=taRows();const weeks=[...new Set(R.map(r=>r.week))].sort().reverse();if(!TA.week||!weeks.includes(TA.week))TA.week=weeks[0];
+  const wi=weeks.indexOf(TA.week);const ws=document.getElementById('taWeek');
+  ws.innerHTML=weeks.map(w=>`<option value="${w}"${w===TA.week?' selected':''}>Week of ${dfmt(w,true)}</option>`).join('');
+  document.getElementById('taPrev').disabled=wi>=weeks.length-1;document.getElementById('taNext').disabled=wi<=0;
+  const W=R.filter(r=>r.week===TA.week);
+  // previous week: an earlier capture here, else the stored Runneth list snapshot before this week
+  let prevB=null,prevLbl='';if(weeks[wi+1]){prevB=new Set(R.filter(r=>r.week===weeks[wi+1]).map(r=>r.category+'|'+r.brand));prevLbl=dfmt(weeks[wi+1],true)}else{const M=rowsOf('mo_trending');const ps=[...new Set(M.map(r=>r.snapshot))].filter(x=>x<TA.week).sort().pop();if(ps){prevB=new Set(M.filter(r=>r.snapshot===ps).map(r=>r.list+'|'+r.brand));prevLbl=dfmt(ps,true)}}
+  const isNew=a=>prevB&&!prevB.has(a.category+'|'+a.brand);
+  const vids=W.filter(r=>r.kind==='video').length;const nNew=prevB?W.filter(isNew).length:null;
+  const bc={};W.forEach(r=>bc[r.brand]=(bc[r.brand]||0)+1);const top=Object.entries(bc).sort((a,b)=>b[1]-a[1]).slice(0,3);
+  const v916=W.filter(r=>r.aspect==='9:16').length;
+  kpiStrip('taKpis',[['Ads this week',W.length,TACAT.filter(c=>W.some(r=>r.category===c[0])).length+' categories · week of '+dfmt(TA.week,true),T.text,'rn-trending'],['▶ Video',vids,Math.round(vids/Math.max(1,W.length)*100)+'% of ads',T.amber,'rn-trending'],['Vertical 9:16',Math.round(v916/Math.max(1,W.length)*100)+'%','of ads, by Runneth aspect ratio',T.blue,'rn-trending'],['New vs last week',nNew==null?'–':nNew,nNew==null?'first week tracked':'brands not in the '+prevLbl+' lists',nNew?T.up:T.text,'rn-trending'],['Most featured',esc(top[0]?top[0][0]:'–'),top.map(t=>esc(t[0])+' ×'+t[1]).join(' · '),T.text,'rn-trending']]);
+  const inCat=W.filter(r=>TA.cat==='all'||r.category===TA.cat);
+  document.getElementById('taCat').innerHTML='<span class="lbl">Category</span>'+[['all','All'],...TACAT].map(([id,nm])=>`<button type="button" class="ta-pill" data-tc="${id}" aria-pressed="${TA.cat===id}">${esc(nm)}<span class="c">${id==='all'?W.length:W.filter(r=>r.category===id).length}</span></button>`).join('');
+  document.getElementById('taKind').innerHTML=[['all','All'],['video','Video'],['static','Image']].map(([id,nm])=>`<button type="button" class="ta-pill" data-tk="${id}" aria-pressed="${TA.kind===id}">${nm}<span class="c">${id==='all'?inCat.length:inCat.filter(r=>id==='video'?r.kind==='video':r.kind!=='video').length}</span></button>`).join(' ');
+  const asps=[...new Set(W.map(r=>r.aspect).filter(Boolean))].sort((a,b)=>W.filter(r=>r.aspect===b).length-W.filter(r=>r.aspect===a).length).slice(0,4);
+  document.getElementById('taAsp').innerHTML=[['all','All'],...asps.map(a=>[a,a])].map(([id,nm])=>`<button type="button" class="ta-pill" data-ta="${id}" aria-pressed="${TA.asp===id}">${nm}</button>`).join(' ');
+  const q=TA.q.toLowerCase();
+  const L=inCat.filter(r=>(TA.kind==='all'||(TA.kind==='video'?r.kind==='video':r.kind!=='video'))&&(TA.asp==='all'||r.aspect===TA.asp)&&(!q||r.brand.toLowerCase().includes(q)));
+  TA.list=L;TA.isNew=isNew;
+  const card=(a,i)=>{const k=a.category+'|'+a.rank;const sl=TA.slide[k]||0;
+    const media=a.kind==='video'?`<img loading="lazy" src="${a.thumb}" alt="${esc(a.brand)} video ad"><video data-src="${esc(a.video_url)}" muted playsinline loop preload="none"></video><span class="ta-play" aria-hidden="true">▶</span>`
+      :`<img loading="lazy" src="${a.imgs[sl]||a.thumb}" alt="${esc(a.brand)} ad">${a.imgs.length>1?`<div class="ta-dots"><button type="button" class="ta-nav" data-sl="${k}" data-d="-1" aria-label="Previous image">‹</button><span>${sl+1}/${a.imgs.length}</span><button type="button" class="ta-nav" data-sl="${k}" data-d="1" aria-label="Next image">›</button></div>`:''}`;
+    return `<article class="ta-card"><div class="ta-media ${a.kind}" data-open="${i}" role="button" tabindex="0" aria-label="Open ${esc(a.brand)} ad">${media}<span class="ta-rank">#${a.rank}</span>${isNew(a)?'<span class="ta-new">New</span>':''}${a.aspect?`<span class="ta-asp">${a.aspect}</span>`:''}</div>
+    <div class="ta-meta">${a.logo?`<img class="ta-logo" src="${a.logo}" alt="" loading="lazy">`:`<span class="ta-logo ta-ini">${esc((a.brand||'?')[0])}</span>`}<div style="min-width:0"><b>${esc(a.brand)}</b><span class="s">${esc(TACN[a.category]||a.category)} · ${taKind(a)}${taRun(a)?' · Running '+esc(taRun(a)):''}</span></div></div></article>`};
+  const g=document.getElementById('taGrid');g.innerHTML=L.length?L.map(card).join(''):'<div class="ta-empty">No ads match these filters.</div>';
+  if(matchMedia('(hover:hover)').matches)g.querySelectorAll('.ta-media.video').forEach(m=>{const v=m.querySelector('video');
+    m.addEventListener('mouseenter',()=>{if(!v.dataset.src||m.dataset.nov)return;if(!v.src){v.onerror=()=>{m.dataset.nov=1};v.src=v.dataset.src}try{v.currentTime=0}catch(e){}const p=v.play();if(p&&p.then)p.then(()=>m.classList.add('playing')).catch(()=>{})});
+    m.addEventListener('mouseleave',()=>{v.pause();m.classList.remove('playing')})});
+}
+function taLightbox(i){const L=TA.list;let s=0;const w=document.createElement('div');w.className='ta-lb';w.setAttribute('role','dialog');w.setAttribute('aria-modal','true');
+  const draw=()=>{const a=L[i];s=Math.min(s,Math.max(0,a.imgs.length-1));const lib=a.ad_library_id?'https://www.facebook.com/ads/library/?id='+a.ad_library_id:'';
+    const fig=a.kind==='video'?`<video src="${esc(a.video_url)}" poster="${a.thumb}" controls autoplay playsinline></video>`:`<img src="${a.imgs[s]||a.thumb}" alt="${esc(a.brand)} ad">${a.imgs.length>1?`<div class="ta-dots"><button type="button" class="ta-nav" data-ss="-1" aria-label="Previous image">‹</button><span>${s+1}/${a.imgs.length}</span><button type="button" class="ta-nav" data-ss="1" aria-label="Next image">›</button></div>`:''}`;
+    w.innerHTML=`<div class="ta-lbc"><div class="ta-lbh"><span class="ta-rank">#${a.rank}</span>${a.logo?`<img class="ta-logo" src="${a.logo}" alt="">`:''}<div style="min-width:0;flex:1"><b>${esc(a.brand)}</b><span class="s">${esc(TACN[a.category]||a.category)} · ${taKind(a)} · week of ${dfmt(a.week,true)}</span></div><button type="button" class="ta-btn g" data-x>Close</button></div>
+    <div class="ta-lbb"><div class="ta-lbi"><button type="button" class="ta-ib" data-p aria-label="Previous ad">←</button><figure>${fig}</figure><button type="button" class="ta-ib" data-n aria-label="Next ad">→</button></div>
+    <div class="ta-det"><div class="ta-kv"><div><span>Rank</span><b>#${a.rank} of 30</b></div><div><span>Category</span><b>${esc(TACN[a.category]||a.category)}</b></div><div><span>Format</span><b>${taKind(a)}</b></div><div><span>Aspect ratio</span><b>${esc(a.aspect||'n/a')}</b></div><div><span>Running</span><b>${a.active_days?a.active_days+' days':esc(a.age||'Not shown')}</b></div><div><span>Page followers</span><b>${a.followers?taFol(+a.followers):'Not shown'}</b></div><div><span>Captured</span><b>${dfmt(a.week,true)}</b></div><div><span>New this week</span><b>${TA.isNew(a)?'Yes':'No'}</b></div></div>
+    ${a.kind==='video'?'<div class="ta-warn">The video streams from the capture store. If it doesn\'t play here, open it in the Meta Ad Library.</div>':''}
+    <div style="display:flex;gap:8px;flex-wrap:wrap">${lib?`<a class="ta-btn" href="${lib}" target="_blank" rel="noopener">Meta Ad Library ↗</a>`:''}<a class="ta-btn g" href="https://motionapp.com/trending/${a.category}/" target="_blank" rel="noopener">Runneth list ↗</a></div></div></div>
+    <div class="note" style="text-align:center;padding:0 14px 10px;margin:0;color:var(--t-dim)">Ad ${i+1} of ${L.length} · ← → to move between ads · Esc to close</div></div>`};
+  const move=d=>{i=(i+d+L.length)%L.length;s=0;draw()};
+  const key=e=>{if(e.key==='Escape')close();else if(e.key==='ArrowRight'&&e.target.tagName!=='VIDEO')move(1);else if(e.key==='ArrowLeft'&&e.target.tagName!=='VIDEO')move(-1)};
+  const close=()=>{const v=w.querySelector('video');if(v)v.pause();w.remove();document.removeEventListener('keydown',key);document.body.style.overflow=''};
+  draw();document.body.appendChild(w);document.body.style.overflow='hidden';document.addEventListener('keydown',key);
+  w.onclick=e=>{if(e.target===w||e.target.closest('[data-x]'))close();else if(e.target.closest('[data-n]'))move(1);else if(e.target.closest('[data-p]'))move(-1);else if(e.target.closest('[data-ss]')){const n=L[i].imgs.length;s=(s+(+e.target.closest('[data-ss]').dataset.ss)+n)%n;draw()}}}
+document.getElementById('taGrid').addEventListener('click',e=>{const sl=e.target.closest('[data-sl]');if(sl){e.stopPropagation();const k=sl.dataset.sl,a=TA.list.find(r=>r.category+'|'+r.rank===k);const n=a.imgs.length;TA.slide[k]=((TA.slide[k]||0)+(+sl.dataset.d)+n)%n;renderTA();return}const m=e.target.closest('[data-open]');if(m){const v=m.querySelector('video');if(v)v.pause();taLightbox(+m.dataset.open)}});
+document.getElementById('taGrid').addEventListener('keydown',e=>{if(e.key!=='Enter'&&e.key!==' ')return;const m=e.target.closest('[data-open]');if(m){e.preventDefault();taLightbox(+m.dataset.open)}});
+document.getElementById('taCat').addEventListener('click',e=>{const b=e.target.closest('[data-tc]');if(b){TA.cat=b.dataset.tc;renderTA()}});
+document.getElementById('taKind').addEventListener('click',e=>{const b=e.target.closest('[data-tk]');if(b){TA.kind=b.dataset.tk;renderTA()}});
+document.getElementById('taAsp').addEventListener('click',e=>{const b=e.target.closest('[data-ta]');if(b){TA.asp=b.dataset.ta;renderTA()}});
+document.getElementById('taQ').addEventListener('input',e=>{TA.q=e.target.value.trim();renderTA()});
+document.getElementById('taWeek').addEventListener('change',e=>{TA.week=e.target.value;renderTA()});
+['taPrev','taNext'].forEach((id,j)=>document.getElementById(id).addEventListener('click',()=>{const W=[...new Set(taRows().map(r=>r.week))].sort().reverse();const i=W.indexOf(TA.week)+(j?-1:1);if(W[i]){TA.week=W[i];renderTA()}}));
 
 /* ---------- Motion trending (lists + history) ---------- */
 function renderMoTrend(){
@@ -1989,7 +2111,7 @@ SEGBIND('hsMeasure',b=>{hsMeasure=b.dataset.m;renderHaus()});
 ['twMetric','twChan','twSnap','twInd'].forEach(id=>document.getElementById(id).addEventListener('change',renderTW));
 
 /* ---------- routing ---------- */
-const VIEWS={front:renderFront,'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:renderBfcm,mkt:renderMkt,'mo-bench':renderMoBench,'mo-trend':renderMoTrend,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,wire:renderWire};
+const VIEWS={front:renderFront,'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:renderBfcm,mkt:renderMkt,'mo-bench':renderMoBench,'mo-trend':()=>{renderTA();renderMoTrend()},'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,wire:renderWire};
 SEGBIND('mtView',b=>{mtView=b.dataset.v;renderMeta()});
 document.getElementById('mtEvents').addEventListener('change',renderMeta);
 const PUBDESKS=['nb','mo','ctc','haus','triplewhale','foxwell','howland'];

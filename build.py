@@ -58,6 +58,7 @@ REG=[
  ("mo_assets","Motion: asset types by hit rate","motion_assets.csv","Motion / Runneth Creative Benchmarks 2026",None),
  ("mo_bfcm_hw","Motion: Health & Wellness BFCM 2025 over-index","motion_bfcm_hw.csv","Runneth BFCM 2026 planner",None),
  ("mo_ai","Motion: AI use by creative-strategy stage","motion_ai.csv","Thumbstop Pulse, Nov 2025",None),
+ ("rn_ads","Runneth Weekly Trending Ads (apparel, sports & fitness, retail, accessories)","runneth_trending_ads.csv","Runneth trending pages via Supabase tr_ads, weekly from 2 Nov 2026",None),
  ("mo_trending","Motion: top 30 ads this week (weekly snapshots)","motion_trending.csv","motionapp.com/trending, weekly",None),
  ("tw_bfcm","Triple Whale BFCM 2025 weekend totals","tw_bfcm2025.csv","Triple Whale, Dec 2025",None),
  ("bfcm_live","BFCM 2026 live log","bfcm2026_live.csv","Scheduled update, 24 Nov – 2 Dec 2026",None),

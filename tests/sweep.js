@@ -9,7 +9,7 @@ const VIEWS=['front','trends','ctc','foxwell','howland','bfcm','nb-channels','nb
  await p.route('**/chart.umd.js',r=>r.fulfill({body:fs.readFileSync('/tmp/cj/package/dist/chart.umd.js','utf8'),contentType:'application/javascript'}));
  await p.route('**/fonts.googleapis.com/**',r=>r.fulfill({body:'',contentType:'text/css'}));
  const pre=mode==='dead'?'<script>window.requestAnimationFrame=()=>0;</script>':'';
- const html=fs.readFileSync(__dirname+'/../index.html','utf8').replace('<head>','<head>'+pre);
+ const html=fs.readFileSync(__dirname+'/../index.html','utf8').replace('<head>','<head><script>window.__NOGATE=1</script>'+pre);
  await p.route('http://local.test/rn/**',r=>{const f=__dirname+'/../'+decodeURIComponent(new URL(r.request().url()).pathname);fs.existsSync(f)?r.fulfill({body:fs.readFileSync(f),contentType:'image/webp'}):r.fulfill({status:404,body:''})});
  await p.route('http://local.test/',r=>r.fulfill({body:html,contentType:'text/html'}));
  const errs=[];p.on('pageerror',e=>errs.push(e.message));

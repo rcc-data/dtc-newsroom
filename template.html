@@ -292,6 +292,63 @@ table.q tbody tr.link{cursor:pointer}
 @media (max-width:760px){.ta-lbb{grid-template-columns:minmax(0,1fr)}.ta-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.ta-q{margin-left:0;width:100%}.ta-wk{width:100%}.ta-wk select{flex:1;min-width:0}.ta-lbi .ta-ib{padding:6px}}
 </style>
 
+<!-- Passcode wall (for fun, not security) -->
+<style>
+#gate{position:fixed;inset:0;z-index:1000;background:#050807;color:#d9e1dd;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:max(16px,env(safe-area-inset-top,0px)) 16px max(16px,env(safe-area-inset-bottom,0px));color-scheme:dark}
+#gate::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(255,176,32,.08),transparent 60%),repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 3px);pointer-events:none}
+#gate canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.gbox{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;transition:opacity .5s,transform .5s}
+.gbox h1{font-family:var(--head);font-weight:700;font-size:clamp(34px,7vw,64px);letter-spacing:-.01em;margin:0;line-height:1.05}
+.gslots{display:flex;gap:12px;cursor:text}
+.gslots span{width:46px;height:58px;border:1px solid #2c3833;border-radius:6px;display:flex;align-items:center;justify-content:center;font:600 26px var(--mono);color:#7f8c87;background:#0c1110;transition:border-color .15s,color .15s}
+.gslots span.f{color:#ffb020;border-color:#ffb020;box-shadow:0 0 18px -6px #ffb020}
+.gslots.err span{border-color:#ff5a4f;color:#ff5a4f}
+.gslots.err{animation:gshake .4s}
+@keyframes gshake{20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+#gin{position:absolute;opacity:0;width:1px;height:1px;border:0;padding:0}
+.ghint{font:500 11px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:#4f5c57;min-height:1em}
+#gate.open .gbox{opacity:0;transform:scale(.96)}
+#gate.gone{opacity:0;transition:opacity .6s}
+@media (prefers-reduced-motion:reduce){.gslots.err{animation:none}}
+</style>
+<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gTitle">
+  <canvas id="gRain" aria-hidden="true"></canvas>
+  <div class="gbox">
+    <h1 id="gTitle">Enter the Newsroom</h1>
+    <label class="gslots" id="gSlots" for="gin"><span>*</span><span>*</span><span>*</span><span>*</span></label>
+    <input id="gin" type="password" inputmode="numeric" autocomplete="off" maxlength="4" aria-label="Passcode">
+    <div class="ghint" id="gHint">&nbsp;</div>
+  </div>
+</div>
+<script>
+(function(){
+  var G=document.getElementById('gate');var ok=false;
+  try{ok=localStorage.getItem('dtcn-pass')==='1'}catch(e){}
+  if(ok||window.__NOGATE){G.remove();return}
+  document.documentElement.style.overflow='hidden';
+  var inp=document.getElementById('gin'),slots=document.getElementById('gSlots'),sp=slots.querySelectorAll('span'),hint=document.getElementById('gHint');
+  var focus=function(){try{inp.focus({preventScroll:true})}catch(e){}};focus();G.addEventListener('click',focus);
+  var draw=function(){var v=inp.value;sp.forEach(function(s,i){s.textContent=i<v.length?'\u2022':'*';s.classList.toggle('f',i<v.length)})};
+  inp.addEventListener('input',function(){inp.value=inp.value.replace(/\D/g,'').slice(0,4);slots.classList.remove('err');hint.innerHTML='&nbsp;';draw();if(inp.value.length===4)check()});
+  function check(){if(inp.value==='1738'){inp.blur();unlock()}else{slots.classList.add('err');hint.textContent='Access denied';setTimeout(function(){inp.value='';draw()},450)}}
+  function unlock(){try{localStorage.setItem('dtcn-pass','1')}catch(e){}
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;G.classList.add('open');
+    var done=function(){G.classList.add('gone');document.documentElement.style.overflow='';setTimeout(function(){G.remove()},650)};
+    if(reduce){done();return}
+    var c=document.getElementById('gRain'),x=c.getContext('2d'),dpr=Math.min(2,window.devicePixelRatio||1);
+    var W=c.width=innerWidth*dpr,H=c.height=innerHeight*dpr;var fs=15*dpr,cols=Math.ceil(W/(fs*4.2));
+    var tick=['META','CPM','ROAS','CAC','CTR','CVR','AOV','MER','BFCM','TTK','GOOG','AMZN'];
+    var drops=[];for(var i=0;i<cols;i++)drops.push({x:i*fs*4.2+fs,y:-Math.random()*H*.9,v:(4+Math.random()*7)*dpr,t:[]});
+    var gen=function(){var r=Math.random();if(r<.18)return tick[Math.floor(Math.random()*tick.length)];if(r<.55){var p=(Math.random()*9.9).toFixed(1);return (Math.random()<.5?'\u25B2+':'\u25BC-')+p+'%'}return (Math.random()*999).toFixed(2)};
+    var t0=performance.now();x.font='600 '+fs+'px "IBM Plex Mono",monospace';
+    (function frame(now){var el=now-t0;x.fillStyle='rgba(5,8,7,.22)';x.fillRect(0,0,W,H);
+      drops.forEach(function(d){var s=gen();x.fillStyle=s[0]==='\u25B2'?'#2fd27a':s[0]==='\u25BC'?'#ff5a4f':(/[A-Z]/.test(s)?'#ffb020':'#9fb8ad');x.fillText(s,d.x,d.y);d.y+=d.v*2.2;if(d.y>H+40)d.y=-Math.random()*200});
+      if(el<2300)requestAnimationFrame(frame);else done()})(t0);
+    setTimeout(function(){if(document.getElementById('gate')&&!G.classList.contains('gone'))done()},3200);
+  }
+})();
+</script>
+
 <header class="mast">
   <div class="wrap">
     <div class="l" id="dateline">Wednesday, 28 October 2026<br>Market pulse for DTC performance marketers</div>

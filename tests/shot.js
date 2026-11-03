@@ -7,7 +7,7 @@ for(const [w,h,scheme,tag] of [[1280,900,'light','d'],[400,860,'dark','m']]){
  await p.route('**/fonts.googleapis.com/**',r=>r.fulfill({body:'',contentType:'text/css'}));
  const errs=[];p.on('console',m=>{if(m.type()==='error')errs.push(m.text())});p.on('pageerror',e=>errs.push(e.message+' @ '+(e.stack||'').split('\n').slice(0,14).join(' | ')));
  const html=fs.readFileSync(__dirname+'/../dtc-newsroom.html','utf8');
- fs.writeFileSync('/tmp/t.html','<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body>'+html+'</body></html>');
+ fs.writeFileSync('/tmp/t.html','<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script>window.__NOGATE=1</script></head><body>'+html+'</body></html>');
 
  await p.route('http://local.test/rn/**',r=>{const f=__dirname+'/../'+decodeURIComponent(new URL(r.request().url()).pathname);fs.existsSync(f)?r.fulfill({body:fs.readFileSync(f),contentType:'image/webp'}):r.fulfill({status:404,body:''})});
  await p.route('http://local.test/',r=>r.fulfill({body:fs.readFileSync('/tmp/t.html','utf8'),contentType:'text/html'}));

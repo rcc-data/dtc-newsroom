@@ -1,0 +1,34 @@
+# Curtis Howland, "68,245 Black Friday Ads, Taken Apart" (newsletter, 2 Nov 2026): every Meta Ad Library ad naming Black Friday or Cyber Monday launched 15 Oct to 7 Dec 2025, from 6,281 brands. Figures as stated in the issue; 7 in 8 and 1 in 5 converted to %.
+section,metric,value,unit,note
+Sample,Black Friday / Cyber Monday ads analysed,68245,ads,From Meta Ad Library; launched 15 Oct to 7 Dec 2025
+Sample,Brands,6281,brands,
+Timing,Median first Black Friday ad,13,days before Black Friday,Live 15 Nov 2025
+Timing,Brands with no Black Friday ad live by 1 Nov,87.5,% (7 in 8),"Stated as ""7 in 8 brands"""
+Timing,Biggest launch day: Fri 21 Nov,3726,new ads,Friday before Black Friday
+Timing,Thanksgiving launches,3555,new ads,
+Timing,Black Friday launches,3213,new ads,
+Timing,Brands running early access (English ads),20,% (1 in 5),Median 17 days out
+Timing,"Median days out, pages with 1M+ followers",11,days,
+Timing,"Median days out, pages under 100K followers",13-14,days,
+Timing,Early-access ads using a Sign Up button,22,%,
+Offer,Median discount named,50,%,Also the most common; median 50% in every follower band
+Offer,"Median flat discount (no ""up to"")",40,%,"""Up to"" sat on half of percent-off ads"
+Offer,Brands keeping the same discount into BF week,64,%,"Of 882 brands; 26% went deeper, 10% shallower"
+Lead offer,Percent off,66.2,% of ads,
+Lead offer,"Buy one, get one",9.6,% of ads,
+Lead offer,"Sale, no number",9.5,% of ads,
+Lead offer,Dollars off,3.0,% of ads,
+Lead offer,Early access,2.3,% of ads,
+Lead offer,Free shipping,1.1,% of ads,
+Lead offer,Free gift,1.1,% of ads,
+Lead offer,Bundles,1.1,% of ads,
+Category,Beauty: free gift / bundle in ad,15.5 / 13.2,% of ads,
+Category,Supplements: free gift / bundle in ad,16.0 / 14.6,% of ads,
+Category,Apparel: free gift / bundle in ad,3.0 / 3.8,% of ads,
+Category,"Jewelry: buy one, get one",17.1,% of ads,
+Category,"Pets: buy one, get one",15.0,% of ads,
+Cyber Monday,Brands with a separate Cyber Monday ad,810,brands,"About 1 in 8 of 6,281; median CM ad launched on Cyber Monday"
+Cyber Monday,Same discount on BF and CM,61,%,Brands with percent-off ads on both days; 28% went deeper
+After,Brands launching new ads the week after,12.2,%,"27% of those ads used gifting copy, 3% said ""extended"""
+After,Brands running all four acts,0.5,%,"Early access, BF, CM and after; two-thirds ran BF alone"
+After,Median run of a Black Friday ad,10,days,"Longest: 369 days (live 16 Oct 2025, still running 20 Oct 2026)"

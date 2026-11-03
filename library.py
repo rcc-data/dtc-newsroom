@@ -160,3 +160,3338 @@ LIB.extend([
  dict(pub="Foxwell",id="fox-cadence",date="2026-10-28",src="Site",title="What Foxwell Digital publishes",url="https://www.foxwelldigital.com/blog",tags=["cadence"],stats=["Blog: about 2-3 posts a week (120 posts since mid-2025), mostly Meta tactics, AI and agency operations","Surveys: annual agency benchmark (Jun 2025, Mar 2026) and a Q4 outlook survey with Northbeam (Sep 2026)","The Foxwell Digital Download email newsletter has no public archive"],data=[],q=[]),
  dict(id="x-metaweekly",date="2026-06-24",src="X",title="Data: why is everybody's Meta performance tanking? (weekly Meta charts thread)",url="https://x.com/BryanBumgardner/status/2069788379445604594",tags=["meta","weekly","cpm","cpc","ctr","cvr","cac","roas"],stats=["Weekly Meta CPM, CPC, CTR, CVR, new-customer CAC and 1-day ROAS, Jan 2025 - May 2026, all Northbeam accounts","CPM peak $23.47 and ROAS peak 0.55 in the week of 30 Nov 2025 (BFCM)","CPC low $1.33 and CAC low $190 in the week of 1 Feb 2026","CTR doubled while CVR roughly halved: CVR peak 1.35% (w/c 26 Jan 2025), CTR peak 1.23% (w/c 12 Apr 2026)"],data=["meta_weekly_h1.csv"],q=["Over the last year, click-through rate doubled while conversion rate roughly halved. — Northbeam chart, 24 Jun 2026"]),
 ])
+
+# Curtis Howland: LinkedIn posts (2026) and Substack newsletter, first captured 2 Nov 2026
+LIB.extend([
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20261102",
+"date": "2026-11-02",
+"src": "LinkedIn",
+"title": "Easy AI way to find out why your Meta CPA spiked",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7523028703514103808/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative",
+"measurement",
+"ai"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"Easy AI way to find out why your Meta CPA spiked"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20261030",
+"date": "2026-10-30",
+"src": "LinkedIn",
+"title": "I spend $5M/mo+ on Meta.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7521941686420344832/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative"
+],
+"stats": [
+"Above the red curve, we're 90% sure the ad won't reach target CPA, so it's a kill"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I spend $5M/mo+ on Meta."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20261029",
+"date": "2026-10-29",
+"src": "LinkedIn",
+"title": "Don't cut the wrong ads.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7521564082693496833/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative",
+"bfcm",
+"measurement"
+],
+"stats": [
+"Same ads, same spend, $50 target"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Don't cut the wrong ads."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20261028",
+"date": "2026-10-28",
+"src": "LinkedIn",
+"title": "I've spent $20M during BFCMs",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7521216849037037568/",
+"tags": [
+"linkedin",
+"chart",
+"creative",
+"bfcm"
+],
+"stats": [
+"Conservatively project a 20% lift in conversion rate during the sale."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've spent $20M during BFCMs"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20261027",
+"date": "2026-10-27",
+"src": "LinkedIn",
+"title": "Want to scale your Meta account to $10M+?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7520886226938187777/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"ai",
+"tiktok"
+],
+"stats": [
+"Under that, the leading metrics: hook rate above 35%, CTR above 1.2%, CPA within 20% of target."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Want to scale your Meta account to $10M+?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20261011",
+"date": "2026-10-11",
+"src": "LinkedIn",
+"title": "Easy AI way to run Meta creative analysis",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7515041029218205696/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"measurement",
+"ai"
+],
+"stats": [
+"Monthly churn normally runs 20-30% across the accounts we manage"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Easy AI way to run Meta creative analysis"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20261010",
+"date": "2026-10-10",
+"src": "LinkedIn",
+"title": "I spent 150 million on Meta.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7514678697321283585/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative"
+],
+"stats": [
+"Phone-shot creator ads beat studio about 80-90% of the time."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I spent 150 million on Meta."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20261009",
+"date": "2026-10-09",
+"src": "LinkedIn",
+"title": "Can you scale on Meta ads?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7514316347326128128/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative"
+],
+"stats": [
+"E.g. 1.6 bMER vs 0.9 aMER, nCAC $238, below the loss line"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Can you scale on Meta ads?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20261008",
+"date": "2026-10-08",
+"src": "LinkedIn",
+"title": "Which ads should you over scale?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7513954128469938177/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative",
+"measurement",
+"ai"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"Which ads should you over scale?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20261007",
+"date": "2026-10-07",
+"src": "LinkedIn",
+"title": "I run a Meta/Google ads agency exclusively for (high) 8 & 9-figure brands. I'll be the first to say AEO is IMPORTANT. A quick 101 guide in case you haven't made any changes",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7513591667610865664/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"ai"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"I run a Meta/Google ads agency exclusively for (high) 8 & 9-figure brands. I'll be the first to say AEO is IMPORTANT. A quick 101 guide in case you haven't"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20261006",
+"date": "2026-10-06",
+"src": "LinkedIn",
+"title": "I've helped 5 DTC brands sell for $500M+",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7513229146039328768/",
+"tags": [
+"linkedin",
+"insight"
+],
+"stats": [
+"$9.7M enterprise value."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've helped 5 DTC brands sell for $500M+"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20261005",
+"date": "2026-10-05",
+"src": "LinkedIn",
+"title": "Most brands running Meta traffic to Amazon are optimizing for the wrong person.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7512866819699789824/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative",
+"measurement",
+"ai",
+"amazon"
+],
+"stats": [
+"CPA down ~19%"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Most brands running Meta traffic to Amazon are optimizing for the wrong person."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20261004",
+"date": "2026-10-04",
+"src": "LinkedIn",
+"title": "I've run 20,000 ads and spent $150M on Meta.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7512504330227347456/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative"
+],
+"stats": [
+"1 new creative concept per $10k in monthly spend. At $500k/month that's 50 concepts (~3 ads per concept, more for static-heavy)."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've run 20,000 ads and spent $150M on Meta."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20261002",
+"date": "2026-10-02",
+"src": "LinkedIn",
+"title": "Fairing tracked AI sales at 158 DTC brands",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7511779582031798274/",
+"tags": [
+"linkedin",
+"chart",
+"measurement",
+"ai"
+],
+"stats": [
+"Brands spending $10M to $2B a year"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Fairing tracked AI sales at 158 DTC brands"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260920",
+"date": "2026-09-20",
+"src": "LinkedIn",
+"title": "Easy way to lower CPAs without touching a single ad",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7507430883482800128/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"Easy way to lower CPAs without touching a single ad"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260919",
+"date": "2026-09-19",
+"src": "LinkedIn",
+"title": "Should you increase spend or new creatives?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7507068491972218880/",
+"tags": [
+"linkedin",
+"insight",
+"creative"
+],
+"stats": [
+"You increase 5-15% at a time (optimize for smaller, more frequent changes)"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Should you increase spend or new creatives?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260918",
+"date": "2026-09-18",
+"src": "LinkedIn",
+"title": "This Claude skill finds you new ad angles",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7506706308377534464/",
+"tags": [
+"linkedin",
+"insight",
+"creative",
+"ai"
+],
+"stats": [
+"The competitor weakness has to have 3x your complaint rate (so it finds specific weaknesses vs category problems)"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"This Claude skill finds you new ad angles"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260917",
+"date": "2026-09-17",
+"src": "LinkedIn",
+"title": "I've spent $150M+ on Meta",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7506343880213082112/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative"
+],
+"stats": [
+"50% iterations. Take a proven winner and tweak one thing."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've spent $150M+ on Meta"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260916",
+"date": "2026-09-16",
+"src": "LinkedIn",
+"title": "Danone launched a Huel competitor",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7505981574551633921/",
+"tags": [
+"linkedin",
+"insight",
+"creative",
+"measurement",
+"ai"
+],
+"stats": [
+"£250M in revenue"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Danone launched a Huel competitor"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260914",
+"date": "2026-09-14",
+"src": "LinkedIn",
+"title": "Most performance marketers spend more time formatting the report than running the analysis.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7505241580702818304/",
+"tags": [
+"linkedin",
+"chart",
+"creative"
+],
+"stats": [
+"Write every takeaway as one plain line of text first. Spend up 22% and CPA held. New customer rate fell in week three. Here's the one thing changing next month."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Most performance marketers spend more time formatting the report than running the analysis."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260913",
+"date": "2026-09-13",
+"src": "LinkedIn",
+"title": "I've spent $150M on Meta",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7504894152573153281/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [
+"You're spending $500K-1M a month. Below that, the operational cost isn't worth it. Above it, run one quarterly on your biggest budget questions."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've spent $150M on Meta"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260912",
+"date": "2026-09-12",
+"src": "LinkedIn",
+"title": "Are you underpricing your DTC product?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7504531814619865088/",
+"tags": [
+"linkedin",
+"insight",
+"creative"
+],
+"stats": [
+"Impulse. $5 to $30."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Are you underpricing your DTC product?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260829",
+"date": "2026-08-29",
+"src": "LinkedIn",
+"title": "Running influencers/podcasts for your DTC?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7499458343191633920/",
+"tags": [
+"linkedin",
+"chart",
+"measurement"
+],
+"stats": [
+"CPA hit over 10x target on some placements based on coupon codes."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Running influencers/podcasts for your DTC?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260828",
+"date": "2026-08-28",
+"src": "LinkedIn",
+"title": "I've run 10,000+ static ads on Meta",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7499095992634437632/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"ai"
+],
+"stats": [
+"Image-to-video ratio at brands spending $50K-500K+/month"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've run 10,000+ static ads on Meta"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260827",
+"date": "2026-08-27",
+"src": "LinkedIn",
+"title": "Got lots of negative comments for your DTC?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7498733590789263361/",
+"tags": [
+"linkedin",
+"insight",
+"creative",
+"measurement"
+],
+"stats": [
+"Example: \"Results reveal 90% of users saw BENEFIT\""
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Got lots of negative comments for your DTC?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260826",
+"date": "2026-08-26",
+"src": "LinkedIn",
+"title": "Solo Brands, $DTC, was delisted off NYSE",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7498371197760339969/",
+"tags": [
+"linkedin",
+"chart"
+],
+"stats": [
+"NYSE suspended the stock in April for falling under a $15M market cap."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Solo Brands, $DTC, was delisted off NYSE"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260825",
+"date": "2026-08-25",
+"src": "LinkedIn",
+"title": "I analyzed 266 DTC landing pages behind 11,999 live ads from 20 brands.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7498008815611658240/",
+"tags": [
+"linkedin",
+"chart",
+"creative",
+"amazon"
+],
+"stats": [
+"46% of all ads land on a collection page (5,560 ads)."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I analyzed 266 DTC landing pages behind 11,999 live ads from 20 brands."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260824",
+"date": "2026-08-24",
+"src": "LinkedIn",
+"title": "Are you spending your next marketing dollar efficiently?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7497646437460021248/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative",
+"measurement",
+"tiktok"
+],
+"stats": [
+"Example: Meta underreports 20-40%. Google overreports 30-50%. TikTok underreports 30-50%. (Changes by brand and sales channel mix)"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Are you spending your next marketing dollar efficiently?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260823",
+"date": "2026-08-23",
+"src": "LinkedIn",
+"title": "NEVER analyze a losing ad",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7497284013481693184/",
+"tags": [
+"linkedin",
+"chart",
+"creative"
+],
+"stats": [
+"Spend 100% of creative energy branching the winners and testing new ideas from the ground up."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"NEVER analyze a losing ad"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260822",
+"date": "2026-08-22",
+"src": "LinkedIn",
+"title": "VIP features Meta gives you at $Millions/mo+ in ad spend",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7496921629009100800/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [
+"From $5M/mo+ (can be higher or lower depending on market) you can get a rep that juggles 50-60 accounts. Meta has been cutting this further in the last…"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"VIP features Meta gives you at $Millions/mo+ in ad spend"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260821",
+"date": "2026-08-21",
+"src": "LinkedIn",
+"title": "Easy way to shift dead stock",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7496559293647929344/",
+"tags": [
+"linkedin",
+"chart",
+"creative"
+],
+"stats": [
+"If your AOV is $80, gate the gift at $100+"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Easy way to shift dead stock"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260809",
+"date": "2026-08-09",
+"src": "LinkedIn",
+"title": "Does Meta's quality, engagement or conversion rankings predict your ROAS? I analyzed $30M in ad spend to find out",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7492210595812016128/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [
+"Below average (bottom 35%, 20%, or 10%)."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Does Meta's quality, engagement or conversion rankings predict your ROAS? I analyzed $30M in ad spend to find out"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260806",
+"date": "2026-08-06",
+"src": "LinkedIn",
+"title": "I've launched 30+ SKUs for 9-figure DTCs",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7491123482668306433/",
+"tags": [
+"linkedin",
+"insight",
+"creative"
+],
+"stats": [
+"Back the budget out of inventory: (Units x AOV) / MER gives you the number to spend. A 2,000-unit run at a $50 AOV is $100k of inventory. At a 2.0 MER…"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've launched 30+ SKUs for 9-figure DTCs"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260805",
+"date": "2026-08-05",
+"src": "LinkedIn",
+"title": "Are your new creatives actually diverse?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7490789647913123841/",
+"tags": [
+"linkedin",
+"video",
+"creative",
+"ai"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"Are your new creatives actually diverse?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260804",
+"date": "2026-08-04",
+"src": "LinkedIn",
+"title": "touchland sold hand sanitizer for $880M",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7490415448208027650/",
+"tags": [
+"linkedin",
+"insight",
+"tiktok"
+],
+"stats": [
+"2018: Kickstarter that raised $67K from 1,300 backers"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"touchland sold hand sanitizer for $880M"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260803",
+"date": "2026-08-03",
+"src": "LinkedIn",
+"title": "Did the customer come from Google or Meta?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7490036276771852288/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative",
+"tiktok"
+],
+"stats": [
+"Make sure you have 30%+ response rate before you analyze"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Did the customer come from Google or Meta?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260802",
+"date": "2026-08-02",
+"src": "LinkedIn",
+"title": "How to manage cost/bid cap Meta campaigns",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7489673868799029248/",
+"tags": [
+"linkedin",
+"chart",
+"meta"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"How to manage cost/bid cap Meta campaigns"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260801",
+"date": "2026-08-01",
+"src": "LinkedIn",
+"title": "I've sold $500M with DTC Meta Ads",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7489311489518977024/",
+"tags": [
+"linkedin",
+"chart",
+"meta"
+],
+"stats": [
+"Example: $5 Toothpaste"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've sold $500M with DTC Meta Ads"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260731",
+"date": "2026-07-31",
+"src": "LinkedIn",
+"title": "You should spend past your marginal break-even ROAS",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7488949132984913922/",
+"tags": [
+"linkedin",
+"chart",
+"creative",
+"measurement"
+],
+"stats": [
+"Take a 60% contribution margin account."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"You should spend past your marginal break-even ROAS"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260730",
+"date": "2026-07-30",
+"src": "LinkedIn",
+"title": "Are your ads lumpy?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7488586702425444352/",
+"tags": [
+"linkedin",
+"chart",
+"creative"
+],
+"stats": [
+"40 ads, $200k/month, 1 concept"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Are your ads lumpy?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260728",
+"date": "2026-07-28",
+"src": "LinkedIn",
+"title": "I was wrong.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7487861966233911297/",
+"tags": [
+"linkedin",
+"video",
+"meta",
+"creative"
+],
+"stats": [
+"Got a lot of pushback so I reran it across 10x the spend. (@taylor Holiday - thanks for always keeping me honest)"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I was wrong."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260716",
+"date": "2026-07-16",
+"src": "LinkedIn",
+"title": "I’ve spent $150M on ads",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7483513294826213377/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [
+"E.g. \"Get 50% Off Now - \"Claim Your One-Time Bundle.\""
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I’ve spent $150M on ads"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260715",
+"date": "2026-07-15",
+"src": "LinkedIn",
+"title": "Oddity's revenue dropped ~$70M in a quarter",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7483150889051033600/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative"
+],
+"stats": [
+"FY25 revenue: $809.8M (+25% YoY)"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Oddity's revenue dropped ~$70M in a quarter"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260714",
+"date": "2026-07-14",
+"src": "LinkedIn",
+"title": "Server-side tracking used to mean a developer, GTM, and two weeks of back and forth. You can set it up from Claude Code in about 20 minutes.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7482773420804456449/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"measurement",
+"ai",
+"tiktok"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"Server-side tracking used to mean a developer, GTM, and two weeks of back and forth. You can set it up from Claude Code in about 20 minutes."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260713",
+"date": "2026-07-13",
+"src": "LinkedIn",
+"title": "I've run 20,000+ ads on Meta",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7482426109133926401/",
+"tags": [
+"linkedin",
+"video",
+"meta",
+"creative"
+],
+"stats": [
+"For a brand targeting $50 CPA:"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've run 20,000+ ads on Meta"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260712",
+"date": "2026-07-12",
+"src": "LinkedIn",
+"title": "How to prove top funnel ads drive new customers",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7482063723306754048/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative",
+"measurement",
+"amazon"
+],
+"stats": [
+"Make significant changes in spend and wait (i.e. 20k/day and 40k/day) (plan them independently of other changes)"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"How to prove top funnel ads drive new customers"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260711",
+"date": "2026-07-11",
+"src": "LinkedIn",
+"title": "I'm addicted to Claude Code.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7481701338444288000/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative",
+"ai"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"I'm addicted to Claude Code."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260710",
+"date": "2026-07-10",
+"src": "LinkedIn",
+"title": "Everything I know about DTC",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7481338979938832384/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative",
+"measurement",
+"ai"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"Everything I know about DTC"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260709",
+"date": "2026-07-09",
+"src": "LinkedIn",
+"title": "Are you testing too many ads for Meta?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7480976576814338049/",
+"tags": [
+"linkedin",
+"video",
+"meta",
+"creative"
+],
+"stats": [
+"Brief 1 concept per $10k of monthly spend, 3 ads per concept. At $365k/month that's ~37 concepts and ~110 ads."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Are you testing too many ads for Meta?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260708",
+"date": "2026-07-08",
+"src": "LinkedIn",
+"title": "IM8 Health , $60M Rev, 2x'd AOV from $110 to $233 in 60 days",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7480614202563411968/",
+"tags": [
+"linkedin",
+"insight",
+"creative"
+],
+"stats": [
+"FY25 revenue: $60.1M, $120M ARR by December ($10M/month)"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"IM8 Health , $60M Rev, 2x'd AOV from $110 to $233 in 60 days"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260626",
+"date": "2026-06-26",
+"src": "LinkedIn",
+"title": "BE CAREFUL. If you pay variable whitelisting fees",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7476265575992770560/",
+"tags": [
+"linkedin",
+"chart",
+"creative"
+],
+"stats": [
+"More creators and performance partners now charge a % of ad spend instead of a flat fee. Usually 5-15%."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"BE CAREFUL. If you pay variable whitelisting fees"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260625",
+"date": "2026-06-25",
+"src": "LinkedIn",
+"title": "Google and Meta don’t optimize on what they can’t see.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7475909184044072960/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [
+"95K/month on Google and Meta. ROAS stuck at 1.8."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Google and Meta don’t optimize on what they can’t see."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260624",
+"date": "2026-06-24",
+"src": "LinkedIn",
+"title": "DTC brands, this is how to squeeze your agency",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7475540770301812737/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [
+"Make at least part of their fee performance-based. I.e. 20-30%"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"DTC brands, this is how to squeeze your agency"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260623",
+"date": "2026-06-23",
+"src": "LinkedIn",
+"title": "How to scale a winning ad",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7475178416988819456/",
+"tags": [
+"linkedin",
+"chart",
+"creative"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"How to scale a winning ad"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260622",
+"date": "2026-06-22",
+"src": "LinkedIn",
+"title": "Unicorn DTC brands have a 1st time customer P&L",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7474815992670482432/",
+"tags": [
+"linkedin",
+"chart",
+"creative"
+],
+"stats": [
+"E.g. $200k of $500k total = 40% from new customers"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Unicorn DTC brands have a 1st time customer P&L"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260621",
+"date": "2026-06-21",
+"src": "LinkedIn",
+"title": "16 Meta propaganda I'm pushing hard",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7474453583929851904/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"measurement",
+"ai"
+],
+"stats": [
+"After selling $450M DTC products:"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"16 Meta propaganda I'm pushing hard"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260620",
+"date": "2026-06-20",
+"src": "LinkedIn",
+"title": "It's taken me years of Google Sheets & $50k+ in build fees to finally build a complete DTC brand data warehouse that helps me predict winning ads.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7474091187948367873/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"ai"
+],
+"stats": [
+"If you're spending $200k/mo+ you need a version of this, and if you're at $1M/mo you definitely need the full schema"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"It's taken me years of Google Sheets & $50k+ in build fees to finally build a complete DTC brand data warehouse that helps me predict winning ads."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260619",
+"date": "2026-06-19",
+"src": "LinkedIn",
+"title": "I love getting called out on LinkedIn",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7473728820169310208/",
+"tags": [
+"linkedin",
+"chart",
+"creative"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"I love getting called out on LinkedIn"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260618",
+"date": "2026-06-18",
+"src": "LinkedIn",
+"title": "I've spent $150M on Meta",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7473366428054851584/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"I've spent $150M on Meta"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260606",
+"date": "2026-06-06",
+"src": "LinkedIn",
+"title": "How to fix Meta when your CAC spikes",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7469017765677301760/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [
+"Compare year over year. Q4 CPMs run 30-50% higher than Q3, so month-over-month comparisons overstate the problem. Is there any seasonality at play that you…"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"How to fix Meta when your CAC spikes"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260603",
+"date": "2026-06-03",
+"src": "LinkedIn",
+"title": "Is media buying or creative your problem?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7467930601590018050/",
+"tags": [
+"linkedin",
+"insight",
+"creative"
+],
+"stats": [
+"Are your top 10% of ads generating 50%+ of revenue?"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Is media buying or creative your problem?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260602",
+"date": "2026-06-02",
+"src": "LinkedIn",
+"title": "I've helped manage $150M+ in DTC ad spend.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7467549342728511489/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative"
+],
+"stats": [
+"Brands doing affiliate right pull 15-40% of total revenue from it."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've helped manage $150M+ in DTC ad spend."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260601",
+"date": "2026-06-01",
+"src": "LinkedIn",
+"title": "Can your ad scale to $10k/day",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7467205838978338817/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [
+"If your overall is 90%+, your desktop is probably 95%+ and mobile is sitting at 85-88%."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Can your ad scale to $10k/day"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260531",
+"date": "2026-05-31",
+"src": "LinkedIn",
+"title": "Don't optimize for high ad hook rates",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7466843464534736896/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative"
+],
+"stats": [
+"Above 30%, hook rate stops correlating with actual revenue."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Don't optimize for high ad hook rates"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260529",
+"date": "2026-05-29",
+"src": "LinkedIn",
+"title": "I tested Meta's engaged view vs 7dc over 5000+ orders",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7466118712727584768/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"measurement"
+],
+"stats": [
+"7-day click: ~82% correlation with post-purchase response"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I tested Meta's engaged view vs 7dc over 5000+ orders"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260528",
+"date": "2026-05-28",
+"src": "LinkedIn",
+"title": "We day traded this Meta ads account from $5M to $40M/yr",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7465756321888370688/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [
+"Account scaled from $400k to $3.5M/mo in 18 months"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"We day traded this Meta ads account from $5M to $40M/yr"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260516",
+"date": "2026-05-16",
+"src": "LinkedIn",
+"title": "This Meta tactic scales winners really fast",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7461407613780525056/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative"
+],
+"stats": [
+"Increased spend on the winning ad by without ‘increasing budget’. Example: In its existing adset it was spending $200/day. Now duplicated into a new ad-set…"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"This Meta tactic scales winners really fast"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260515",
+"date": "2026-05-15",
+"src": "LinkedIn",
+"title": "How FIGS 12x'd profit on a scrubs brand.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7461045228955938816/",
+"tags": [
+"linkedin",
+"insight",
+"creative"
+],
+"stats": [
+"FY25 revenue: $631M (+14% YoY)"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"How FIGS 12x'd profit on a scrubs brand."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260514",
+"date": "2026-05-14",
+"src": "LinkedIn",
+"title": "Alternative Meta campaign structure",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7460682861445296128/",
+"tags": [
+"linkedin",
+"insight",
+"meta"
+],
+"stats": [
+"$45 AOV, ~40% contribution margin, $18 gross profit per unit"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Alternative Meta campaign structure"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260513",
+"date": "2026-05-13",
+"src": "LinkedIn",
+"title": "I've spent $3M with my best UGC creator",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7460320504235687936/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative"
+],
+"stats": [
+"UGC marketplace that charges ~$150 per video"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've spent $3M with my best UGC creator"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260512",
+"date": "2026-05-12",
+"src": "LinkedIn",
+"title": "Turn static ads into videos with AI",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7459958113303957504/",
+"tags": [
+"linkedin",
+"video",
+"creative",
+"ai"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"Turn static ads into videos with AI"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260511",
+"date": "2026-05-11",
+"src": "LinkedIn",
+"title": "You SHOULD turn off individual ads",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7459595714415951872/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [
+"To which I am still, unable to prove with verifiable data across all my monthly spend AND having audited 20+ 10M+ eCom brands in the last 60 days that this…"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"You SHOULD turn off individual ads"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260510",
+"date": "2026-05-10",
+"src": "LinkedIn",
+"title": "DTC growth follows the Pareto Principle",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7459233300512092161/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative"
+],
+"stats": [
+"Top 1-2% of ads drive ~50% of total spend and revenue."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"DTC growth follows the Pareto Principle"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260509",
+"date": "2026-05-09",
+"src": "LinkedIn",
+"title": "How I use AI to spend $3M/mo on Meta",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7458870909269929984/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"ai"
+],
+"stats": [
+"Can draw conclusions like: \"UGC about pain point in kitchen outperforms founder ads in office about features by 40%.\""
+],
+"data": [
+"li_howland"
+],
+"q": [
+"How I use AI to spend $3M/mo on Meta"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260508",
+"date": "2026-05-08",
+"src": "LinkedIn",
+"title": "Quince launched 24,000 ads in one month",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7458508516551507968/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative"
+],
+"stats": [
+"Just hit $10B valuation"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Quince launched 24,000 ads in one month"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260426",
+"date": "2026-04-26",
+"src": "LinkedIn",
+"title": "Every DTC brand needs to see this.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7454159856220975104/",
+"tags": [
+"linkedin",
+"insight",
+"creative",
+"ai",
+"amazon"
+],
+"stats": [
+"Move a product from the bottom-right slot to top-row middle = 5x more purchases (Claude Sonnet 4)"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Every DTC brand needs to see this."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260425",
+"date": "2026-04-25",
+"src": "LinkedIn",
+"title": "Should your DTC expand to retail & Amazon",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7453797477360730112/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"amazon"
+],
+"stats": [
+"Sustainable means you've tested scaling budget 20-30% and CPA held"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Should your DTC expand to retail & Amazon"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260424",
+"date": "2026-04-24",
+"src": "LinkedIn",
+"title": "Meta's NEW ad engaged view attribution is greedy",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7453435118767079424/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"Meta's NEW ad engaged view attribution is greedy"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260423",
+"date": "2026-04-23",
+"src": "LinkedIn",
+"title": "I've spent $150M+ on Meta ads",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7453072701931401216/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"tiktok"
+],
+"stats": [
+"10-20% bumps, as often as twice daily"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've spent $150M+ on Meta ads"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260422",
+"date": "2026-04-22",
+"src": "LinkedIn",
+"title": "I've spent $30M since Andromeda dropped",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7452710317249298432/",
+"tags": [
+"linkedin",
+"insight",
+"creative"
+],
+"stats": [
+"Give it to 10x creators."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've spent $30M since Andromeda dropped"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260421",
+"date": "2026-04-21",
+"src": "LinkedIn",
+"title": "How to find winning ads",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7452347929178300416/",
+"tags": [
+"linkedin",
+"chart",
+"creative"
+],
+"stats": [
+"Sometimes you find a winning ad. This is your 10-25% hit rate."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"How to find winning ads"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260420",
+"date": "2026-04-20",
+"src": "LinkedIn",
+"title": "Are you overspending on new customers?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7451985544168812544/",
+"tags": [
+"linkedin",
+"chart"
+],
+"stats": [
+"E.g. 5,263 customers at $38 CPA, $200K spend, 65% gross margin."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Are you overspending on new customers?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260419",
+"date": "2026-04-19",
+"src": "LinkedIn",
+"title": "Comfrt is a $1B+ TikTok native brand.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7451623143133200384/",
+"tags": [
+"linkedin",
+"insight",
+"creative",
+"measurement",
+"tiktok",
+"amazon"
+],
+"stats": [
+"But 68% of revenue was from Shopify. How?"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Comfrt is a $1B+ TikTok native brand."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260406",
+"date": "2026-04-06",
+"src": "LinkedIn",
+"title": "There are 8 ways to attribute Meta ads",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7446912120169840640/",
+"tags": [
+"linkedin",
+"video",
+"meta",
+"creative",
+"measurement",
+"tiktok"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"There are 8 ways to attribute Meta ads"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260405",
+"date": "2026-04-05",
+"src": "LinkedIn",
+"title": "I've run 20,000 ads and spent $150M on Meta.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7446549710774923264/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative"
+],
+"stats": [
+"1 new creative concept per $10k in monthly spend. At $500k/month that's 50 concepts (~3 ads per concept, more for static-heavy)."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've run 20,000 ads and spent $150M on Meta."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260403",
+"date": "2026-04-03",
+"src": "LinkedIn",
+"title": "We're testing Meta's new ad budget feature.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7445824939254947840/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"measurement",
+"tiktok"
+],
+"stats": [
+"Testing this across 8 ad accounts spending $3M/mo+"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"We're testing Meta's new ad budget feature."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260402",
+"date": "2026-04-02",
+"src": "LinkedIn",
+"title": "BREAKING: Allbirds sold for ~1% of their $4Bn valuation.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7445477641605779457/",
+"tags": [
+"linkedin",
+"chart",
+"creative"
+],
+"stats": [
+"They raised $200M from VCs. $348M in an IPO."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"BREAKING: Allbirds sold for ~1% of their $4Bn valuation."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260401",
+"date": "2026-04-01",
+"src": "LinkedIn",
+"title": "New secret Meta tactic 🤫",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7445100158444392448/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative",
+"bfcm",
+"measurement",
+"ai"
+],
+"stats": [
+"How to get 10x ROAS fast:"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"New secret Meta tactic 🤫"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260331",
+"date": "2026-03-31",
+"src": "LinkedIn",
+"title": "Don't let Meta pick your winning ads",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7444737818465259522/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative",
+"measurement",
+"amazon"
+],
+"stats": [
+"Check the predicted LTV and AOV by ad. An ad with a higher CPA but 2x the AOV or stronger rebill rate might be your most profitable ad."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Don't let Meta pick your winning ads"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260330",
+"date": "2026-03-30",
+"src": "LinkedIn",
+"title": "How to check if your media buyer is any good in 4 graphs",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7444375397087100929/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [
+"90% of media buying happening on Monday/Thurs or Tues/Friday"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"How to check if your media buyer is any good in 4 graphs"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260317",
+"date": "2026-03-17",
+"src": "LinkedIn",
+"title": "Are you missing winning ads?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7439679501862756353/",
+"tags": [
+"linkedin",
+"chart",
+"creative"
+],
+"stats": [
+"This is going to be the majority of your ads, probably 65% plus."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Are you missing winning ads?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260316",
+"date": "2026-03-16",
+"src": "LinkedIn",
+"title": "I analyzed $40M worth of ads in 9 minutes",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7439317050575052800/",
+"tags": [
+"linkedin",
+"video",
+"meta",
+"creative"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"I analyzed $40M worth of ads in 9 minutes"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260315",
+"date": "2026-03-15",
+"src": "LinkedIn",
+"title": "Can your Meta ads scale?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7438954664659865600/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"Can your Meta ads scale?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260313",
+"date": "2026-03-13",
+"src": "LinkedIn",
+"title": "Are you testing faster than Meta can learn?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7438229924945035264/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [
+"They had launched a new ad for every $1,000 spent"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Are you testing faster than Meta can learn?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260312",
+"date": "2026-03-12",
+"src": "LinkedIn",
+"title": "This TikTok product sells $2.6M/mo.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7437867515533451264/",
+"tags": [
+"linkedin",
+"video",
+"creative",
+"measurement",
+"tiktok"
+],
+"stats": [
+"Price anchors at $228. Make $80 bundle offer compelling"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"This TikTok product sells $2.6M/mo."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260311",
+"date": "2026-03-11",
+"src": "LinkedIn",
+"title": "I’ve helped 5 eCom brands exit for ~$500m.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7437505136513581057/",
+"tags": [
+"linkedin",
+"video",
+"meta",
+"creative",
+"tiktok"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"I’ve helped 5 eCom brands exit for ~$500m."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260310",
+"date": "2026-03-10",
+"src": "LinkedIn",
+"title": "I've run 15,000+ ads on Meta",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7437142747892928512/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative"
+],
+"stats": [
+"For a brand targeting $50 CPA:"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've run 15,000+ ads on Meta"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260309",
+"date": "2026-03-09",
+"src": "LinkedIn",
+"title": "Is creative or media buying your problem?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7436780345653428224/",
+"tags": [
+"linkedin",
+"insight",
+"creative"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"Is creative or media buying your problem?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260225",
+"date": "2026-02-25",
+"src": "LinkedIn",
+"title": "He ran the BIGGEST Meta ad account.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7432431693996851202/",
+"tags": [
+"linkedin",
+"video",
+"meta",
+"creative"
+],
+"stats": [
+"Sponsored Mayweather vs McGregor at 91% discount"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"He ran the BIGGEST Meta ad account."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260224",
+"date": "2026-02-24",
+"src": "LinkedIn",
+"title": "I've launched over 20k ads on Meta",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7432069331020271617/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative"
+],
+"stats": [
+"Spend 100% of creative energy branching the winners and testing new ideas from the ground up."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've launched over 20k ads on Meta"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260222",
+"date": "2026-02-22",
+"src": "LinkedIn",
+"title": "Never seen a DTC brand run this tactic so well",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7431344520727793664/",
+"tags": [
+"linkedin",
+"insight",
+"creative"
+],
+"stats": [
+"(Scaled to $40m in 18 months)"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Never seen a DTC brand run this tactic so well"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260221",
+"date": "2026-02-21",
+"src": "LinkedIn",
+"title": "I've spent $30M since Andromeda dropped",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7430982131851505664/",
+"tags": [
+"linkedin",
+"insight",
+"creative"
+],
+"stats": [
+"3x Angles:"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've spent $30M since Andromeda dropped"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260220",
+"date": "2026-02-20",
+"src": "LinkedIn",
+"title": "Every DTC brand needs a 1st customer P&L",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7430619748792672256/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative"
+],
+"stats": [
+"E.g. $400k gross minus 30% off sitewide & 12% refund rate = $232k net"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Every DTC brand needs a 1st customer P&L"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260219",
+"date": "2026-02-19",
+"src": "LinkedIn",
+"title": "STOP trying to make profit with TikTok Shop.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7430257369428959232/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative",
+"tiktok"
+],
+"stats": [
+"Some top creators are averaging $200K/month in commissions"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"STOP trying to make profit with TikTok Shop."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260218",
+"date": "2026-02-18",
+"src": "LinkedIn",
+"title": "Is more ads or better ads, better?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7429895005823168512/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative"
+],
+"stats": [
+"Makes most sense when spending >$100k/mo+ on Meta"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Is more ads or better ads, better?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260217",
+"date": "2026-02-17",
+"src": "LinkedIn",
+"title": "I've spent $150M on Meta",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7429610686411952129/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [
+"Why Your Best Ads Die at $10K (And How to Build One That Hits $1M)"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've spent $150M on Meta"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260206",
+"date": "2026-02-06",
+"src": "LinkedIn",
+"title": "Comfrt went from $16M to $700M in 24 months.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7425546584857427968/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"bfcm",
+"tiktok"
+],
+"stats": [
+"10 videos with 10M+ views each"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Comfrt went from $16M to $700M in 24 months."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260205",
+"date": "2026-02-05",
+"src": "LinkedIn",
+"title": "I've spent $150M for DTC brands",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7425183952769814528/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative"
+],
+"stats": [
+"High AOV ($100-200+ routines are normal)."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I've spent $150M for DTC brands"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260204",
+"date": "2026-02-04",
+"src": "LinkedIn",
+"title": "How to grow a $100M DTC brand",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7424821555181998081/",
+"tags": [
+"linkedin",
+"insight",
+"creative"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"How to grow a $100M DTC brand"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260202",
+"date": "2026-02-02",
+"src": "LinkedIn",
+"title": "Everyone's hating on lululemon.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7424096774321074177/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative"
+],
+"stats": [
+"2025 revenue: $10.6B (up 10%)"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Everyone's hating on lululemon."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260201",
+"date": "2026-02-01",
+"src": "LinkedIn",
+"title": "$100m+ D2C brand is hiring a $300k/y VP Growth",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7423734504214892544/",
+"tags": [
+"linkedin",
+"video",
+"meta",
+"creative"
+],
+"stats": [
+"Here’s how I’d grow them to $250m/y"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"$100m+ D2C brand is hiring a $300k/y VP Growth"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260131",
+"date": "2026-01-31",
+"src": "LinkedIn",
+"title": "I spend $3M/mo on Meta for 8 DTC brands.",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7423372043481444353/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative"
+],
+"stats": [
+"30% of budget"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I spend $3M/mo on Meta for 8 DTC brands."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260130",
+"date": "2026-01-30",
+"src": "LinkedIn",
+"title": "I’ve spent $100M on ads",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7423009624120823809/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [
+"E.g. \"Get 50% Off Now - \"Claim Your One-Time Bundle.\""
+],
+"data": [
+"li_howland"
+],
+"q": [
+"I’ve spent $100M on ads"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260129",
+"date": "2026-01-29",
+"src": "LinkedIn",
+"title": "Are you testing enough ads?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7422647501075402752/",
+"tags": [
+"linkedin",
+"chart",
+"creative",
+"measurement"
+],
+"stats": [
+"Benchmarks for $60M DTC brand:"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Are you testing enough ads?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260116",
+"date": "2026-01-16",
+"src": "LinkedIn",
+"title": "If I ran a $50m/y DTC brand",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7417936168694116352/",
+"tags": [
+"linkedin",
+"insight",
+"creative"
+],
+"stats": [
+"SCALING ADS: I’d identify all the ads that could have scaled but didn’t. I’d restart them or push more ad spend behind them. The top 1-2% of your ads should…"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"If I ran a $50m/y DTC brand"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260115",
+"date": "2026-01-15",
+"src": "LinkedIn",
+"title": "I've spent $100m on Meta ads in the DTC space",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7417573805969276928/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"I've spent $100m on Meta ads in the DTC space"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260114",
+"date": "2026-01-14",
+"src": "LinkedIn",
+"title": "Is media buying or creative your problem?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7417211432313880576/",
+"tags": [
+"linkedin",
+"insight",
+"creative"
+],
+"stats": [
+"Are your top 10% of ads generating 50%+ of revenue?"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Is media buying or creative your problem?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260113",
+"date": "2026-01-13",
+"src": "LinkedIn",
+"title": "High MERs might be a bad thing",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7416849073191804928/",
+"tags": [
+"linkedin",
+"insight",
+"creative"
+],
+"stats": [
+"$20M revenue"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"High MERs might be a bad thing"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260112",
+"date": "2026-01-12",
+"src": "LinkedIn",
+"title": "Noom launched 400% more Meta ads",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7416486617445478400/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative"
+],
+"stats": [
+"Microdosed GLP-1 (25% of typical starting dose)"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Noom launched 400% more Meta ads"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260111",
+"date": "2026-01-11",
+"src": "LinkedIn",
+"title": "This is what a mature DTC brand looks like",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7416109240324501504/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [
+"3-4x+ ROAS with clear incrementality models. You can forecast revenue from spend with 80% accuracy."
+],
+"data": [
+"li_howland"
+],
+"q": [
+"This is what a mature DTC brand looks like"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260110",
+"date": "2026-01-10",
+"src": "LinkedIn",
+"title": "Is new ad quality or old ad fatigue the problem?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7415746764424630272/",
+"tags": [
+"linkedin",
+"video",
+"creative"
+],
+"stats": [],
+"data": [
+"li_howland"
+],
+"q": [
+"Is new ad quality or old ad fatigue the problem?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260109",
+"date": "2026-01-09",
+"src": "LinkedIn",
+"title": "Is your media buyer any good?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7415384780386627584/",
+"tags": [
+"linkedin",
+"chart",
+"meta",
+"creative",
+"measurement"
+],
+"stats": [
+"90% of media buying happening on Monday/Thurs or Tues/Friday"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Is your media buyer any good?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260108",
+"date": "2026-01-08",
+"src": "LinkedIn",
+"title": "Should you run video or static ads on Meta?",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7415022141378859008/",
+"tags": [
+"linkedin",
+"insight",
+"meta",
+"creative"
+],
+"stats": [
+"70% static (1291 ads)"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Should you run video or static ads on Meta?"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "li-howland-20260107",
+"date": "2026-01-07",
+"src": "LinkedIn",
+"title": "Comfrt made $11.5M on TikTok Shop",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7414659607240822784/",
+"tags": [
+"linkedin",
+"video",
+"creative",
+"tiktok"
+],
+"stats": [
+"$11.5M in revenue"
+],
+"data": [
+"li_howland"
+],
+"q": [
+"Comfrt made $11.5M on TikTok Shop"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-68245-black-friday-ads-taken-apart",
+"date": "2026-11-02",
+"src": "Newsletter",
+"title": "68,245 Black Friday Ads, Taken Apart",
+"url": "https://newsletter.curtishowland.com/p/68245-black-friday-ads-taken-apart",
+"tags": [
+"substack",
+"bfcm"
+],
+"stats": [
+"68,245 Black Friday and Cyber Monday ads from 6,281 brands (Meta Ad Library, 15 Oct to 7 Dec 2025)",
+"Median brand's first Black Friday ad: 15 Nov, 13 days out; biggest launch day 21 Nov (3,726 new ads)",
+"50% was the median and most common discount; 64% of 882 brands kept the same number into Black Friday week",
+"Percent off led 66.2% of ads; a free gift or bundle led 1.1% each",
+"810 brands (about 1 in 8) made a separate Cyber Monday ad"
+],
+"data": [
+"howland_ss",
+"howland_bf"
+],
+"q": [
+"The median brand launched 13 days out"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-openers-and-closers-your-ads-do-two",
+"date": "2026-10-30",
+"src": "Newsletter",
+"title": "Openers and Closers: Your Ads Do Two Different Jobs",
+"url": "https://newsletter.curtishowland.com/p/openers-and-closers-your-ads-do-two",
+"tags": [
+"substack",
+"creative"
+],
+"stats": [
+"One video ad opens ~70% of the customer journeys it's in and closes 3%; offer ads closed ~35%",
+"30% of the journeys Meta opened closed somewhere else"
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"One video ad I manage opens ~70% of the customer journeys it’s in and closes 3%."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-dont-cut-the-wrong-ads-our-pre-bfcm",
+"date": "2026-10-23",
+"src": "Newsletter",
+"title": "Don’t Cut the Wrong Ads (Our Pre-BFCM Cut List)",
+"url": "https://newsletter.curtishowland.com/p/dont-cut-the-wrong-ads-our-pre-bfcm",
+"tags": [
+"substack",
+"creative",
+"bfcm"
+],
+"stats": [
+"The cut and scale lines for a $50 target"
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"The cut and scale lines for a $50 target"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-six-things-your-meta-funnel-is-telling",
+"date": "2026-10-16",
+"src": "Newsletter",
+"title": "Six Things Your Meta Funnel Is Telling You",
+"url": "https://newsletter.curtishowland.com/p/six-things-your-meta-funnel-is-telling",
+"tags": [
+"substack",
+"meta"
+],
+"stats": [
+"I have reviewed roughly half a billion dollars in Meta spend across accounts in the last 18 months. Here are 6 of the non-traditional places I look."
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"I have reviewed roughly half a billion dollars in Meta spend across accounts in the last 18 months"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-how-many-ads-should-you-launch-to",
+"date": "2026-10-09",
+"src": "Newsletter",
+"title": "How Many Ads Should You Launch To Profitably Scale Meta?",
+"url": "https://newsletter.curtishowland.com/p/how-many-ads-should-you-launch-to",
+"tags": [
+"substack",
+"meta",
+"creative"
+],
+"stats": [
+"His rule: one new ad per $3,000 of monthly spend (333 a month at $1M)",
+"Motion 2026 benchmarks, $1M+/mo tier: average account ships 18.85 new creatives a week, top quartile 54.64",
+"In one account the top 15 ads (0.8%) carried 53.9% of spend"
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"I’ve been telling people one new ad per $3,000 of monthly spend"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-8-types-of-attribution-every-dtc-ca9",
+"date": "2026-10-02",
+"src": "Newsletter",
+"title": "8 Types of Attribution Every DTC Brand Should Know (And the 3 I Actually Use)",
+"url": "https://newsletter.curtishowland.com/p/8-types-of-attribution-every-dtc-ca9",
+"tags": [
+"substack",
+"measurement"
+],
+"stats": [
+"A complete framework for understanding where your customers come from, from blended metrics to geo-lift testing (Updated)"
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"A complete framework for understanding where your customers come from, from blended metrics to geo-lift testing (Updated)"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-your-best-customer-keeps-changing",
+"date": "2026-09-25",
+"src": "Newsletter",
+"title": "Your Best Customer Keeps Changing",
+"url": "https://newsletter.curtishowland.com/p/your-best-customer-keeps-changing",
+"tags": [
+"substack"
+],
+"stats": [
+"Heavy buyers regress, LTV falls as you scale, and both are supposed to happen. The fix is changing what you aim at."
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"Heavy buyers regress, LTV falls as you scale, and both are supposed to happen"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-aeo-geo-aieo",
+"date": "2026-09-18",
+"src": "Newsletter",
+"title": "AEO / GEO / AIEO",
+"url": "https://newsletter.curtishowland.com/p/aeo-geo-aieo",
+"tags": [
+"substack",
+"creative"
+],
+"stats": [
+"Ten answer-engine moves DTC brands can run this quarter, from an SEO who does this full time, plus my read on why a paid media operator is paying attention."
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"Ten answer-engine moves DTC brands can run this quarter, from an SEO who does this full time, plus my read on why a paid media operator is paying attention."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-the-first-customer-p-and-l",
+"date": "2026-09-11",
+"src": "Newsletter",
+"title": "The First Customer P&L",
+"url": "https://newsletter.curtishowland.com/p/the-first-customer-p-and-l",
+"tags": [
+"substack"
+],
+"stats": [
+"Your blended numbers can look great while every new customer loses money. Here is the P&L that shows you which one you are, and when it flipped."
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"Your blended numbers can look great while every new customer loses money"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-how-to-actually-get-more-new-customers-7",
+"date": "2026-09-04",
+"src": "Newsletter",
+"title": "How to Actually Get More New Customers from Facebook",
+"url": "https://newsletter.curtishowland.com/p/how-to-actually-get-more-new-customers-794",
+"tags": [
+"substack",
+"meta",
+"creative"
+],
+"stats": [
+"3 steps + a creative strategy shift"
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"3 steps + a creative strategy shift"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-the-most-boring-email-youll-get-today",
+"date": "2026-08-28",
+"src": "Newsletter",
+"title": "The most boring email you'll get today (concept vs. angle, settled)",
+"url": "https://newsletter.curtishowland.com/p/the-most-boring-email-youll-get-today",
+"tags": [
+"substack",
+"meta",
+"creative"
+],
+"stats": [
+"The five-layer taxonomy I use to keep creative teams aligned, the four IDs Meta assigns your ads, and why “net new concept” now has a technical definition."
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"The five-layer taxonomy I use to keep creative teams aligned, the four IDs Meta assigns your ads, and why “net new concept” now has a technical definition."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-what-it-actually-costs-to-reach-1000",
+"date": "2026-08-22",
+"src": "Newsletter",
+"title": "What It Actually Costs to Reach 1,000 People",
+"url": "https://newsletter.curtishowland.com/p/what-it-actually-costs-to-reach-1000",
+"tags": [
+"substack"
+],
+"stats": [
+"The cost to reach 1,000 people runs from about $2 to about $1,000, depending on where you buy it."
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"The cost to reach 1,000 people runs from about $2 to about $1,000, depending on where you buy it."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-a-winner-is-not-a-variable",
+"date": "2026-08-14",
+"src": "Newsletter",
+"title": "A winner is not a variable",
+"url": "https://newsletter.curtishowland.com/p/a-winner-is-not-a-variable",
+"tags": [
+"substack",
+"creative"
+],
+"stats": [
+"Your hit rate is a function of how many unproven things you’re holding at once. Most “this doesn’t work” verdicts are just bad variable accounting."
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"Your hit rate is a function of how many unproven things you’re holding at once"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-the-5-marketing-quotes-worth-keeping",
+"date": "2026-08-07",
+"src": "Newsletter",
+"title": "The 5 Marketing Quotes Worth Keeping",
+"url": "https://newsletter.curtishowland.com/p/the-5-marketing-quotes-worth-keeping",
+"tags": [
+"substack"
+],
+"stats": [
+"(The Most Famous One Might Just Be A Saying?)"
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"(The Most Famous One Might Just Be A Saying?)"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-struggling-to-scale-on-meta-start",
+"date": "2026-07-31",
+"src": "Newsletter",
+"title": "Struggling to Scale on Meta? Start With These 3 Charts",
+"url": "https://newsletter.curtishowland.com/p/struggling-to-scale-on-meta-start",
+"tags": [
+"substack",
+"meta",
+"creative"
+],
+"stats": [
+"A creative health check for operators: concentration, hit rate, and creative half-life, and how to find the gap when growth stalls."
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"A creative health check for operators: concentration, hit rate, and creative half-life, and how to find the gap when growth stalls."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-i-built-a-skill-that-one-shots-animated",
+"date": "2026-07-23",
+"src": "Newsletter",
+"title": "I Built a Skill That One-Shots Animated Ads, Inside Claude. It’s Free.",
+"url": "https://newsletter.curtishowland.com/p/i-built-a-skill-that-one-shots-animated",
+"tags": [
+"substack",
+"ai"
+],
+"stats": [
+"Point it at a brand and a direction. It does the research, makes the ad, and hands it back in one shot. Not perfect, but a new format you can test in 15 minutes."
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"Point it at a brand and a direction"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-100-things-to-check-before-you-launch",
+"date": "2026-07-17",
+"src": "Newsletter",
+"title": "100 Things to Check Before You Launch Your Next Ad",
+"url": "https://newsletter.curtishowland.com/p/100-things-to-check-before-you-launch",
+"tags": [
+"substack",
+"creative"
+],
+"stats": [
+"Steal it, run it, send it to your team."
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"Steal it, run it, send it to your team."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-stop-pasting-ad-reports-into-chatgpt",
+"date": "2026-07-10",
+"src": "Newsletter",
+"title": "Stop Pasting Ad Reports Into ChatGPT",
+"url": "https://newsletter.curtishowland.com/p/stop-pasting-ad-reports-into-chatgpt",
+"tags": [
+"substack",
+"creative",
+"ai"
+],
+"stats": [
+"Here’s the 2 mode model I use to analyze data quicker and more effectively now and a quick run down on how I built it."
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"Here’s the 2 mode model I use to analyze data quicker and more effectively now and a quick run down on how I built it."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-13-ideas-from-the-people-i-actually",
+"date": "2026-07-03",
+"src": "Newsletter",
+"title": "13 Ideas From the People I Actually Learn From in DTC",
+"url": "https://newsletter.curtishowland.com/p/13-ideas-from-the-people-i-actually",
+"tags": [
+"substack"
+],
+"stats": [
+"All these people are worth following / links to full posts below!"
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"All these people are worth following / links to full posts below!"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-the-offer-is-the-cheapest-growth",
+"date": "2026-06-26",
+"src": "Newsletter",
+"title": "The Offer Is the Cheapest Growth Lever You’re Not Pulling (A Framework)",
+"url": "https://newsletter.curtishowland.com/p/the-offer-is-the-cheapest-growth",
+"tags": [
+"substack"
+],
+"stats": [
+"Why offer changes move accounts like nothing else, how to pick the right construct for your brand, and the four ways promos go wrong."
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"Why offer changes move accounts like nothing else, how to pick the right construct for your brand, and the four ways promos go wrong."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-you-forgot-about-prime-day-heres",
+"date": "2026-06-19",
+"src": "Newsletter",
+"title": "You Forgot About Prime Day (Here’s the 96-Hour Triage Plan)",
+"url": "https://newsletter.curtishowland.com/p/you-forgot-about-prime-day-heres",
+"tags": [
+"substack"
+],
+"stats": [
+"Prime Day starts Tuesday, June 23. If your prep so far consists of reading this post, this is exactly what I’d do between now and then."
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"Prime Day starts Tuesday, June 23"
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-the-dtc-static-ad-system-what-67852",
+"date": "2026-06-12",
+"src": "Newsletter",
+"title": "The DTC static ad system: what 67,852 ads across 106 brands actually look like.",
+"url": "https://newsletter.curtishowland.com/p/the-dtc-static-ad-system-what-67852",
+"tags": [
+"substack",
+"creative"
+],
+"stats": [
+"67,852 active ads from 106 brands, classified by format",
+"Image-heavy accounts: SHEIN 96.6%, Calvin Klein 93.4%, On Running 85.1%, Fabletics 82.5%, Obvi 82.1%",
+"Glossier runs 57% video; Honeylove 84% video"
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"12 Format to copy today and why."
+]
+},
+{
+"pub": "Curtis Howland",
+"id": "howland-ss-the-dtc-meta-ads-tier-list",
+"date": "2026-06-05",
+"src": "Newsletter",
+"title": "The DTC Meta Ads Tier List",
+"url": "https://newsletter.curtishowland.com/p/the-dtc-meta-ads-tier-list",
+"tags": [
+"substack",
+"meta",
+"creative"
+],
+"stats": [
+"After working with many 8 and 9 figure brands - here are my thoughts."
+],
+"data": [
+"howland_ss"
+],
+"q": [
+"After working with many 8 and 9 figure brands - here are my thoughts."
+]
+}
+])

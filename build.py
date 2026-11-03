@@ -88,6 +88,9 @@ REG=[
  ("fox_q4","Foxwell Founders x Northbeam Q4 2026 survey","fox_q4_2026_survey.csv","foxwelldigital.com, 29 Sep 2026",None),
  ("fox_agency","Foxwell Founders agency surveys 2025 and 2026","fox_agency_survey.csv","foxwelldigital.com / GlobeNewswire",None),
  ("fox_field","Foxwell member field reports","fox_field_reports.csv","foxwelldigital.com blog",None),
+ ("li_howland","Curtis Howland LinkedIn posts with data, charts or video (2026)","li_howland_posts.csv","linkedin.com/in/curtishowland, from 2 Nov 2026",None),
+ ("howland_ss","Curtis Howland on DTC Marketing: newsletter issues","howland_substack.csv","newsletter.curtishowland.com",None),
+ ("howland_bf","68,245 Black Friday 2025 Meta ads, taken apart (Curtis Howland)","howland_bf_ads_2025.csv","Curtis Howland newsletter, 2 Nov 2026",None),
  ("wire_heads","Latest headlines on the wire","wire_headlines.csv","RSS / blog listings, weekly",None),
 ]
 DATA={}

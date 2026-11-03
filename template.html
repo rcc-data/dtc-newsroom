@@ -268,6 +268,7 @@ table.q tbody tr.link{cursor:pointer}
         <div class="ddcol"><a class="ddh" href="#haus" data-desk="haus">Haus</a><span class="ddd">Incrementality · research</span><a href="#haus">Channel lift scorecard</a></div>
         <div class="ddcol"><a class="ddh" href="#triplewhale" data-desk="triplewhale">Triple Whale</a><span class="ddd">Benchmarks · weekly snapshot</span><a href="#triplewhale">Industry benchmarks</a></div>
         <div class="ddcol"><a class="ddh" href="#foxwell" data-desk="foxwell">Foxwell</a><span class="ddd">Practitioner surveys</span><a href="#foxwell">Q4 survey &amp; field reports</a></div>
+        <div class="ddcol"><a class="ddh" href="#howland" data-desk="howland">Curtis Howland</a><span class="ddd">Operator · LinkedIn &amp; newsletter</span><a href="#howland">Posts, issues &amp; BF ad study</a></div>
       </div>
     </div>
     </div>
@@ -956,6 +957,25 @@ table.q tbody tr.link{cursor:pointer}
   <div class="lib" id="fxLib"></div>
 </section>
 
+<!-- Curtis Howland -->
+<section class="view" id="v-howland" hidden>
+  <div><div class="kicker">Curtis Howland · LinkedIn and newsletter</div><h2>What a $5M-a-month Meta buyer is seeing</h2><p class="dek">Curtis Howland is VP of Marketing at Misfit and runs more than $5M a month on Meta across nine DTC brands. He posts most days on LinkedIn, usually with a chart, table or video from the accounts he manages, and writes a free weekly newsletter on Substack. This desk logs the posts that carry data or a framework and every newsletter issue. Figures are quoted as he states them; chart images are not transcribed.</p></div>
+  <div class="strip" id="hwKpis"></div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">Black Friday 2025: what led the ad</span><span class="m">% of 68,245 Meta ads naming BF or CM</span></div><div class="chart"><canvas id="cHwOffer"></canvas></div><p class="note">Two-thirds of ads led with percent off. A free gift led about 1 in 100. From his 2 Nov 2026 issue.</p></div>
+    <div class="term"><div class="th"><span class="t">Posting rhythm</span><span class="m">LinkedIn posts logged per month, by format</span></div><div class="chart"><canvas id="cHwMonth"></canvas></div></div>
+  </div>
+  <div class="term"><div class="th"><span class="t">68,245 Black Friday ads, taken apart</span><span class="m">timing, discount and Cyber Monday · 2025 season</span></div><div class="tw"><table class="q cad-t" id="tHwBf"></table></div></div>
+  <div class="term">
+    <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">LinkedIn posts</span><div class="seg" role="group" aria-label="Format" id="hwType" style="margin-left:auto"><button type="button" data-v="all" aria-pressed="true">All</button><button type="button" data-v="chart" aria-pressed="false">Charts</button><button type="button" data-v="video" aria-pressed="false">Video</button><button type="button" data-v="insight" aria-pressed="false">Other images</button></div></div>
+    <div class="tw" style="max-height:520px;overflow:auto"><table class="q cad-t" id="tHwPosts"></table></div>
+    <p class="note">The figure column is the first number he states in the post, word for word; blank when the post has none.</p>
+  </div>
+  <div class="term"><div class="th"><span class="t">Newsletter issues</span><span class="m">Curtis Howland on DTC Marketing · weekly</span></div><div class="tw"><table class="q cad-t" id="tHwSS"></table></div></div>
+  <div class="section-head"><span class="label">Newsletter library</span></div>
+  <div class="lib" id="hwLib"></div>
+</section>
+
 <!-- CTC -->
 <section class="view" id="v-ctc" hidden>
   <div><div class="kicker">Common Thread Collective · Portfolio data</div><h2>What 299 brands spend, and what each channel is really worth</h2><p class="dek">Common Thread Collective runs growth for hundreds of DTC brands and publishes their pooled data: the DTC Index (200–300 stores with two or more years of history), interactive research pages, and a daily consumer confidence survey with KnoCommerce. Their weekly DTC Index email has no public archive, so this section is built from the published benchmarks, podcasts and blog.</p></div>
@@ -1438,7 +1458,7 @@ function renderWire(){const R=wvRows();const pubs=[...new Set(R.map(r=>r.pub))];
   document.getElementById('wvDek').textContent=`${R.length.toLocaleString()} newsletter issues, blog posts, reports, podcasts and posts from ${pubs.length} publishers since 1 January 2026, pulled from their sites and inboxes each weekday at noon. Rows marked DATA have figures in the newsroom's charts.`;
   renderWireCharts(R);renderWireTakes(R);renderWireInv();
   document.getElementById('wireList').innerHTML=WIRE.map(w=>`<div class="story"><span class="tag">${w.k}</span><h4>${esc(w.n)}</h4><span class="cad">${esc(w.c)}</span><p>${esc(w.p)}</p></div>`).join('')}
-const WVCOL={'Northbeam':'#ffb020','CTC':'#5aa9ff','Foxwell':'#a98bff','Haus':'#2ec4d6','Triple Whale':'#ff7a59','Motion':'#ff4f9a','Meta':'#5b8cff','2PM':'#f5e44a','Modern Retail':'#5f6b66','Varos':'#44d19a','Graphite':'#9fd36a'};
+const WVCOL={'Northbeam':'#ffb020','CTC':'#5aa9ff','Foxwell':'#a98bff','Haus':'#2ec4d6','Triple Whale':'#ff7a59','Motion':'#ff4f9a','Meta':'#5b8cff','2PM':'#f5e44a','Modern Retail':'#5f6b66','Varos':'#44d19a','Graphite':'#9fd36a','Curtis Howland':'#e07bff'};
 function renderWireCharts(R){const inc=document.getElementById('wvMR').checked;const S=R.filter(r=>inc||WVOPS(r));const ms=[...new Set(R.map(r=>r.m))].sort();const pubs=[...new Set(S.map(r=>r.pub))].sort((a,b)=>S.filter(r=>r.pub===b).length-S.filter(r=>r.pub===a).length);
   mk('cWireVol',{type:'bar',data:{labels:ms.map(MLAB),datasets:pubs.map(p=>({label:p,data:ms.map(m=>S.filter(r=>r.pub===p&&r.m===m).length),backgroundColor:WVCOL[p]||T.dim,stack:'a'}))},options:{scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,grid,ticks:{precision:0}}},plugins:{tooltip:{callbacks:{footer:it=>'Total '+it.reduce((a,b)=>a+b.parsed.y,0)}}}}});
   const O=R.filter(WVOPS);const TOP=['AI','Measurement','Meta','BFCM / Q4','Benchmarks','Creative'];const TC=['#a98bff','#2ec4d6','#5b8cff','#ff7a59','#ffb020','#ff4f9a'];
@@ -1904,6 +1924,25 @@ function renderFoxwell(){
 }
 SEGBIND('fxYear',b=>{fxYear=b.dataset.v;renderFoxwell()});
 
+/* ---------- Curtis Howland ---------- */
+let hwType='all';
+function renderHowland(){
+  const P=rowsOf('li_howland'),S=rowsOf('howland_ss'),B=rowsOf('howland_bf');const bv=m=>(B.find(r=>r.metric===m)||{}).value;
+  const cnt=t=>P.filter(r=>r.type===t).length;
+  kpiStrip('hwKpis',[['LinkedIn posts logged',P.length,'since 1 Jan 2026 · '+cnt('chart')+' charts, '+cnt('video')+' videos',T.text,P[0]?'li-howland-'+P[0].date.replace(/-/g,''):''],['Newsletter issues',S.length,'weekly since '+dfmt(S[S.length-1].date,true),T.text,''],['BF 2025 ads analysed',Number(bv('Black Friday / Cyber Monday ads analysed')).toLocaleString('en-US'),Number(bv('Brands')).toLocaleString('en-US')+' brands, Meta Ad Library',T.amber,'howland-ss-68245-black-friday-ads-taken-apart'],['Median BF discount',bv('Median discount named')+'%','64% of brands never changed it',T.down,'howland-ss-68245-black-friday-ads-taken-apart'],['Median first BF ad',bv('Median first Black Friday ad')+' days out','15 Nov 2025; 7 in 8 had nothing live by 1 Nov',T.blue,'howland-ss-68245-black-friday-ads-taken-apart']]);
+  const L=B.filter(r=>r.section==='Lead offer');
+  mk('cHwOffer',{type:'bar',data:{labels:L.map(r=>r.metric),datasets:[{label:'% of ads',data:L.map(r=>n(r.value)),backgroundColor:L.map(r=>/Free gift|Bundles/.test(r.metric)?T.up:(r.metric==='Percent off'?T.down:T.amber))}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x}% of ads`}}}}});
+  const months=[...new Set(P.map(r=>r.date.slice(0,7)))].sort();const TY=[['chart','Chart or table',T.amber],['insight','Other image',T.blue],['video','Video','#ff4f9a']];
+  mk('cHwMonth',{type:'bar',data:{labels:months.map(m=>new Date(m+'-15T12:00').toLocaleDateString('en-GB',{month:'short'})),datasets:TY.map(([k,l,c])=>({label:l,data:months.map(m=>P.filter(r=>r.type===k&&r.date.startsWith(m)).length),backgroundColor:c,stack:'s'}))},options:{scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,grid,ticks:{precision:0}}},plugins:{legend:{position:'bottom',labels:{font:{size:10}}}}}});
+  const BT=B.filter(r=>r.section!=='Lead offer'&&r.section!=='Sample');
+  document.getElementById('tHwBf').innerHTML='<thead><tr><th>Section</th><th>Metric</th><th>Value</th><th>Note</th></tr></thead><tbody>'+BT.map(r=>`<tr><td>${esc(r.section)}</td><td><b>${esc(r.metric)}</b></td><td>${esc(r.value)} <span style="color:${T.dim}">${esc(r.unit)}</span></td><td style="color:${T.dim}">${esc(r.note)}</td></tr>`).join('')+'</tbody>';
+  const TL={chart:'Chart',video:'Video',insight:'Image'};const PF=P.filter(r=>hwType==='all'||r.type===hwType);
+  document.getElementById('tHwPosts').innerHTML='<thead><tr><th>Date</th><th>Format</th><th>Post</th><th>Figure stated</th></tr></thead><tbody>'+PF.map(r=>`<tr><td>${dfmt(r.date,true)}</td><td>${TL[r.type]||r.type}</td><td><b>${esc(r.headline)}</b> <a href="${r.url}" target="_blank" rel="noopener">↗</a></td><td style="color:${T.dim}">${esc(r.figure)}</td></tr>`).join('')+'</tbody>';
+  document.getElementById('tHwSS').innerHTML='<thead><tr><th>Date</th><th>Issue</th><th>Subtitle</th></tr></thead><tbody>'+S.map(r=>`<tr><td>${dfmt(r.date,true)}</td><td><b><a href="${r.url}" target="_blank" rel="noopener">${esc(r.title)}</a></b></td><td style="color:${T.dim}">${esc(r.subtitle)}</td></tr>`).join('')+'</tbody>';
+  document.getElementById('hwLib').innerHTML=libCards(LIB.filter(x=>x.pub==='Curtis Howland'&&x.src==='Newsletter'));
+}
+SEGBIND('hwType',b=>{hwType=b.dataset.v;renderHowland()});
+
 /* ---------- CTC ---------- */
 let ctView='roas';
 function renderCTC(){
@@ -1950,10 +1989,10 @@ SEGBIND('hsMeasure',b=>{hsMeasure=b.dataset.m;renderHaus()});
 ['twMetric','twChan','twSnap','twInd'].forEach(id=>document.getElementById(id).addEventListener('change',renderTW));
 
 /* ---------- routing ---------- */
-const VIEWS={front:renderFront,'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:renderBfcm,mkt:renderMkt,'mo-bench':renderMoBench,'mo-trend':renderMoTrend,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,wire:renderWire};
+const VIEWS={front:renderFront,'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:renderBfcm,mkt:renderMkt,'mo-bench':renderMoBench,'mo-trend':renderMoTrend,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,wire:renderWire};
 SEGBIND('mtView',b=>{mtView=b.dataset.v;renderMeta()});
 document.getElementById('mtEvents').addEventListener('change',renderMeta);
-const PUBDESKS=['nb','mo','ctc','haus','triplewhale','foxwell'];
+const PUBDESKS=['nb','mo','ctc','haus','triplewhale','foxwell','howland'];
 const ddBtn=document.getElementById('deskBtn'),ddMenu=document.getElementById('deskMenu');let ddT=null;
 function ddOpen(){clearTimeout(ddT);ddMenu.hidden=false;ddBtn.setAttribute('aria-expanded','true')}
 function ddClose(focus){clearTimeout(ddT);if(ddMenu.hidden)return;ddMenu.hidden=true;ddBtn.setAttribute('aria-expanded','false');if(focus)ddBtn.focus()}

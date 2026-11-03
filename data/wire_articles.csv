@@ -1,6 +1,11 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
+2026-11-03,Modern Retail,What DoorDash’s Instacart acquisition says about the modern delivery platform pitch,https://www.modernretail.co/operations/doordash-instacart-acquisition-delivery-platform/,News,
+2026-11-03,Modern Retail,Brands Briefing: Bag charms are the hot new trend in branded CPG merch,https://www.modernretail.co/marketing/brands-briefing-bag-charms-are-the-hot-new-trend-in-branded-cpg-merch/,News,Retail
+2026-11-03,Modern Retail,Baked by Melissa launches at-home baking kits at Target in time for the holidays,https://www.modernretail.co/operations/baked-by-melissa-launches-at-home-baking-kits-at-target-in-time-for-the-holidays/,News,BFCM / Q4;Retail
+2026-11-03,Direct to Consumer,"DTC Newsletter: daily news, Pilothouse teardowns and podcast notes (2026 issues)",https://www.directtoconsumer.co/newsletters,Newsletter,
 2026-11-03,Direct to Consumer,"BFCM Audiences, Shopify AI Shopping & Meta Scaling",https://www.directtoconsumer.co/newsletter/bfcm-audiences-shopify-ai-meta-scaling,Newsletter,Meta;AI;BFCM / Q4
+2026-11-03,Curtis Howland,"I analyzed 68,245 Black Friday ads",https://www.linkedin.com/feed/update/urn:li:activity:7523391184480710658/,LinkedIn,Meta;Creative;BFCM / Q4
 2026-11-02,Modern Retail,"What DoorDash’s proposed acquisition of Instacart means for Uber, Amazon and the rest of the quick commerce space",https://www.modernretail.co/operations/what-doordashs-proposed-acquisition-of-instacart-means-for-uber-amazon-and-the-rest-of-the-quick-commerce-space/,News,Amazon
 2026-11-02,Modern Retail,More than half of online supplement shoppers say they’re worried about counterfeit products,https://www.modernretail.co/operations/online-supplement-counterfeit-products/,News,
 2026-11-02,Modern Retail,Modern Retail+ Research: Brands’ holiday marketing tactics shift in 2026,https://www.modernretail.co/marketing/modern-retail-research-brands-holiday-marketing-tactics-shift-in-2026/,News,BFCM / Q4;Retail
@@ -54,6 +59,7 @@ date,pub,title,url,type,topics
 2026-10-26,Modern Retail,Retailers take a targeted approach to seasonal hiring in preparation for historic holiday sales year,https://www.modernretail.co/operations/retailers-take-a-targeted-approach-to-seasonal-hiring-in-preparation-for-historic-holiday-sales-year/,News,BFCM / Q4;Retail
 2026-10-26,Modern Retail,How QVC is building a flywheel across TikTok and TV ahead of the holidays,https://www.modernretail.co/marketing/how-qvc-is-building-a-flywheel-across-tiktok-and-tv-ahead-of-the-holidays/,News,TikTok;BFCM / Q4
 2026-10-26,Foxwell,How to Run a Winning Black Friday Meta Ads Campaign,https://www.foxwelldigital.com/blog/how-to-run-a-winning-black-friday-meta-ads-campaign,Blog,Meta;BFCM / Q4
+2026-10-26,Direct to Consumer,The Invisible Shelf: the 2026 DTC report on AI shopping and product discovery,https://www.directtoconsumer.co/theinvisibleshelf,Report,AI;Benchmarks
 2026-10-26,Direct to Consumer,"AI Shopping, Meta Creative & BFCM Product Feeds",https://www.directtoconsumer.co/newsletter/ai-shopping-meta-creative-bfcm-product-feeds,Newsletter,Meta;AI;Creative;BFCM / Q4
 2026-10-26,CTC,Why we built the Prophit Engine (CTC's forecasting and growth system),https://commonthreadco.com/blogs/coachs-corner/why-we-built-the-prophit-engine,Blog,
 2026-10-26,CTC,Shopify's Knowledge Base Is Now in Your Admin: What Every Ecommerce Brand …,https://commonthreadco.com/blogs/coachs-corner/shopifys-knowledge-base-is-now-in-your-admin-what-every-ecommerce-brand-must-publish-before-bfcm,Blog,
@@ -89,6 +95,7 @@ date,pub,title,url,type,topics
 2026-10-22,CTC,Google Ads Expanded Customer Lifecycle Controls to Shopping: What Every Ec…,https://commonthreadco.com/blogs/coachs-corner/google-ads-expanded-customer-lifecycle-controls-to-shopping-what-every-ecommerce-brand-must-enable-before-bfcm,Blog,Google
 2026-10-21,Modern Retail,"Target’s holiday push stresses affordability, exclusives and an AI assistant",https://www.modernretail.co/marketing/targets-holiday-push-stresses-affordability-exclusives-and-an-ai-assistant/,News,AI;BFCM / Q4;Retail
 2026-10-21,Modern Retail,"Kohl’s leans into clearer pricing, gift bundles and Uber Eats for the holidays",https://www.modernretail.co/marketing/kohls-leans-into-clearer-pricing-gift-bundles-and-uber-eats-for-the-holidays/,News,BFCM / Q4
+2026-10-21,Meta,Peak Season 2026: You Don't Beat the Auction. You Brief It.,https://www.facebook.com/business/news/you-dont-beat-the-auction-you-brief-it,Guide,Meta;Measurement;BFCM / Q4
 2026-10-21,Graphite,AI Tells: Gemini 4 Argon,https://graphite.io/research/ai-tells-gemini-4-argon-update,Report,AI
 2026-10-21,Foxwell,How Meta’s Health & Wellness Categorization Impacts Accounts,https://www.foxwelldigital.com/blog/how-metas-health-amp-wellness-categorization-impacts-accounts,Blog,Meta
 2026-10-21,Direct to Consumer,"BFCM Creative, TikTok Affiliates & Marketing Measurement",https://www.directtoconsumer.co/newsletter/bfcm-creative-tiktok-affiliates-marketing-measurement,Newsletter,TikTok;Measurement;Creative;BFCM / Q4
@@ -324,6 +331,7 @@ date,pub,title,url,type,topics
 2026-09-19,CTC,Meta Instagram Live Video Ads Launch September 29: What Ecommerce Brands N…,https://commonthreadco.com/blogs/coachs-corner/meta-instagram-live-video-ads-launch-september-29-what-ecommerce-brands-need-to-know-before-q4,Product,Meta;Creative
 2026-09-18,Modern Retail,How the role of creators has evolved in the fashion and beauty industries,https://www.modernretail.co/marketing/how-the-role-of-creators-has-evolved-in-the-fashion-and-beauty-industries/,News,
 2026-09-18,Foxwell,Client Reporting When Meta Is a Black Box: Frameworks From Foxwell Agencies,https://www.foxwelldigital.com/blog/client-reporting-when-meta-is-a-black-box-frameworks-from-foxwell-agencies,Report,Meta;Benchmarks
+2026-09-18,Direct to Consumer,"Beyond the Discount: Q4 discounting, acquisition and what brings customers back (with Smile.io)",https://www.directtoconsumer.co/beyondthediscount,Report,BFCM / Q4;Benchmarks
 2026-09-18,Direct to Consumer,"AI Shopping, TikTok Live & Little Spoon Creative Strategy",https://www.directtoconsumer.co/newsletter/ai-shopping-tiktok-live-little-spoon-creative,Newsletter,TikTok;AI;Creative
 2026-09-18,Curtis Howland,This Claude skill finds you new ad angles,https://www.linkedin.com/feed/update/urn:li:activity:7506706308377534464/,LinkedIn,AI;Creative
 2026-09-18,Curtis Howland,AEO / GEO / AIEO,https://newsletter.curtishowland.com/p/aeo-geo-aieo,Newsletter,AI;Measurement;Creative
@@ -1092,6 +1100,7 @@ date,pub,title,url,type,topics
 2026-05-04,Modern Retail,"Why Aldi, Walmart and more are redesigning their private-label packaging",https://www.modernretail.co/operations/why-many-retailers-are-redesigning-their-private-label-packaging/,News,Retail
 2026-05-04,Modern Retail,Legacy retailers like Party City and Staples are increasingly teaming up on shop-in-shops in a bid for relevance,https://www.modernretail.co/operations/legacy-retailers-like-party-city-and-staples-are-increasingly-teaming-up-on-shop-in-shops-in-a-bid-for-relevance/,News,Retail
 2026-05-04,Direct to Consumer,Tips on Using Meta Ads AI Connectors,https://www.directtoconsumer.co/newsletter/dtc1062-meta-ai-connectors-and-creator-content-styles,Newsletter,Meta;AI
+2026-05-04,Direct to Consumer,The Reactive Loop: how DTC marketing plans hold up once they go live (with Keen),https://www.directtoconsumer.co/thereactiveloopreport,Report,Benchmarks
 2026-05-04,CTC,Why the Founder of Wirecutter's #1 Alarm Clock Says Contribution Margin Changed Everything,https://commonthreadco.com/blogs/coachs-corner/loftie-founder-contribution-margin-changed-everything,Blog,
 2026-05-04,CTC,Meta CPMs at a 4-year high ahead of the World Cup,https://commonthreadco.com/blogs/coachs-corner/cpms-4-year-high-world-cup-2026,Blog,Meta;Benchmarks
 2026-05-04,2PM,Deep Dive: Is Chip Wilson Right?,https://2pml.com/2026/05/04/chip-wilson/,Memo,

@@ -165,6 +165,18 @@ LIB.extend([
 LIB.extend([
 {
 "pub": "Curtis Howland",
+"id": "li-howland-20261103",
+"date": "2026-11-03",
+"src": "LinkedIn",
+"title": "I analyzed 68,245 Black Friday ads",
+"url": "https://www.linkedin.com/feed/update/urn:li:activity:7523391184480710658/",
+"tags": ["linkedin","insight","meta","creative","bfcm"],
+"stats": ["Ten Black Friday ad types the top 1% of DTC brands run, in three groups: lead with price, lead with proof, don't look like an ad (from his 68,245-ad analysis)"],
+"data": ["li_howland"],
+"q": ["Every type of ad the top 1% DTC brands run"]
+},
+{
+"pub": "Curtis Howland",
 "id": "li-howland-20261102",
 "date": "2026-11-02",
 "src": "LinkedIn",

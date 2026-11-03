@@ -324,6 +324,39 @@ table.q tbody tr.link{cursor:pointer}
 .hh-row q{display:block;margin-top:4px;font-family:var(--head);font-style:italic;font-size:15px;color:#c9cfcb}
 .hh-row .hh-t{margin-top:4px;font-size:12.5px;color:var(--t-dim)}
 @media (max-width:640px){.hh-row{grid-template-columns:minmax(0,1fr);gap:2px}}
+
+.today{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:14px}
+@media (max-width:980px){.today{grid-template-columns:minmax(0,1fr)}}
+.an-card{background:var(--paper-2);border:1px solid var(--hair);border-top:3px solid var(--flag);padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.an-card .k{font:600 10.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--flag)}
+.an-card h4{font-family:var(--head);font-size:21px;line-height:1.15;margin:0}
+.an-card p{margin:0;font-size:14px;color:var(--ink-2)}
+.an-card details summary{cursor:pointer;font:600 12px var(--mono);color:var(--ink)}
+.an-card details p{margin:8px 0 0;color:var(--ink)}
+.an-src{font:500 11px var(--mono);color:var(--ink-2);margin-top:6px}
+.an-src a{color:var(--ink-2)}
+.tl-list{display:flex;flex-direction:column;border-top:1px solid var(--rule)}
+.tl-list a{display:grid;grid-template-columns:62px minmax(0,1fr);gap:8px;padding:8px 0;border-bottom:1px solid var(--hair);text-decoration:none;color:var(--ink)}
+.tl-list a:hover b{text-decoration:underline}
+.tl-list .d{font:500 10.5px var(--mono);color:var(--ink-2);padding-top:2px}
+.tl-list b{font:600 14px/1.3 var(--body)}
+.tl-list small{display:block;font:500 10.5px var(--mono);color:var(--flag);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
+.bf-brief{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px;counter-reset:bb}
+.bf-brief .bb{background:var(--t-panel);color:var(--t-text);border:1px solid var(--t-line);border-radius:4px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.bf-brief .bb b{font:700 15px/1.25 var(--body)}
+.bf-brief .bb b::before{counter-increment:bb;content:counter(bb,decimal-leading-zero) "  ";font:600 12px var(--mono);color:var(--t-amber)}
+.bf-brief .bb p{margin:0;font-size:13px;line-height:1.45;color:#b9c4bf}
+.bf-brief .bb .s{font:500 10.5px var(--mono);color:var(--t-dim)}
+.bf-brief .bb .s a{color:var(--t-dim)}
+.bf-dates{display:flex;flex-direction:column}
+.bf-dates div{display:grid;grid-template-columns:76px minmax(0,1fr);gap:10px;padding:7px 0;border-bottom:1px solid var(--t-line);font-size:13px}
+.bf-dates div span{font:600 12px var(--mono);color:var(--t-amber)}
+.bf-dates div.pk span{color:var(--t-down)}
+.cv-src{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.cv-src .c{background:var(--t-panel);color:var(--t-text);border:1px solid var(--t-line);border-radius:4px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;font-size:13px}
+.cv-src .c b{font:700 14px var(--body)}
+.cv-src .c ul{margin:0;padding-left:16px;color:#b9c4bf}
+.cv-src .c q{font-family:var(--head);font-style:italic;color:#e7e3d8}
 </style>
 
 <!-- Passcode wall (for fun, not security) -->
@@ -456,6 +489,13 @@ table.q tbody tr.link{cursor:pointer}
       </figure>
     </div>
     <div class="side" id="frontSide"></div>
+  </div>
+
+  <div class="section-head"><span class="label">Today in the newsroom</span><a href="#wire">Every article on the wire →</a></div>
+  <div class="today">
+    <div><div class="tl-h" style="font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">Newsroom analysis · across sources</div><div id="fAnalysis" style="display:flex;flex-direction:column;gap:10px"></div></div>
+    <div><div style="font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">Latest headlines</div><div class="tl-list" id="fHeads"></div></div>
+    <div><div style="font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">New charts and data</div><div class="tl-list" id="fNew"></div></div>
   </div>
 
   <div class="section-head"><span class="label">From the desks</span><a href="#trends">Every source on one timeline →</a></div>
@@ -778,6 +818,26 @@ table.q tbody tr.link{cursor:pointer}
     <h2 id="bfH">The Cyber Week desk</h2>
     <p class="dek" id="bfDek">Last year's day-by-day results are set as the baseline. From Tuesday 24 November the scheduled update logs each new figure from Northbeam, Triple Whale and the daily trackers here, day by day against 2025.</p>
   </div>
+  <div class="section-head"><span class="label">BFCM 2026: what we need to know</span><span style="font:500 11px var(--mono);color:var(--ink-2)">161 sourced figures · updated 3 Nov 2026</span></div>
+  <div class="strip" id="bf26Kpis"></div>
+  <div class="bf-brief" id="bf26Brief"></div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">US online spend by day</span><span class="m">Adobe · 2025 actual vs 2026 forecast, $bn</span></div><div class="chart"><canvas id="cBf26Day"></canvas></div><p class="note">Cyber Week (five days): $44.2B in 2025, $47.5B forecast for 2026. The season: $257.8B, forecast $275.1B.</p></div>
+    <div class="term"><div class="th"><span class="t">How far Meta CPMs rose on Black Friday 2025</span><span class="m">Lebesgue · median CPM vs each brand's September level</span></div><div class="chart"><canvas id="cBf26Cpm"></canvas></div><p class="note">Cost per purchase still fell 20% over Black Friday week because conversion rose 48%.</p></div>
+  </div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">Discount depth</span><span class="m">% off · Adobe peak by category, Salesforce average, Canada</span></div><div class="chart"><canvas id="cBf26Disc"></canvas></div><p class="note">Ad copy shouts louder than checkout: in Curtis Howland's pull of 68,245 Black Friday ads, 50% was the most-named discount, while Salesforce measured the average Black Friday discount at 28%.</p></div>
+    <div class="term"><div class="th"><span class="t">BFCM 2025 by ad platform</span><span class="m">Triple Whale (33,000+ shops) and Power Digital</span></div><div class="tw"><table class="q" id="tBf26Plat"></table></div></div>
+  </div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">Key dates</span><span class="m">2026 calendar for DTC advertisers</span></div><div class="bf-dates" id="bf26Dates"></div></div>
+    <div class="term"><div class="th"><span class="t">Canada</span><span class="m">2026 surveys and 2025 results</span></div><div class="strip" id="bf26Ca" style="grid-template-columns:repeat(2,minmax(0,1fr))"></div></div>
+  </div>
+  <div class="term">
+    <div class="ctl" style="flex-wrap:wrap"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Every figure, sourced</span><div class="seg" role="group" aria-label="Set" id="bf26Set" style="margin-left:auto"><button type="button" data-v="o" aria-pressed="true">2026 outlook</button><button type="button" data-v="r" aria-pressed="false">2025 results</button></div><label for="bf26Theme">Theme</label><select id="bf26Theme"></select></div>
+    <div class="tw" style="max-height:520px;overflow:auto"><table class="q cad-t" id="tBf26Facts"></table></div>
+  </div>
+  <div class="section-head" style="margin-top:6px"><span class="label">Live tracker from Tuesday 24 November</span></div>
   <div class="strip" id="bfKpis"></div>
   <div class="term">
     <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Day by day · 2025 vs 2026</span>
@@ -882,6 +942,14 @@ table.q tbody tr.link{cursor:pointer}
     <div class="th"><span class="t" id="moTblT">Visual formats</span><span class="m">click a column to sort</span></div>
     <div class="tw" style="max-height:520px"><table class="q" id="tMoFmt"></table></div>
   </div>
+  <div class="section-head" style="margin-top:6px"><span class="label">How many ads should you launch? Six sources compared</span><span style="font:500 11px var(--mono);color:var(--ink-2)">Sicard · MHI · Billo · Foxwell · Curtis Howland · Motion</span></div>
+  <div class="strip" id="cvKpis"></div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">Recommended new ads a month at $100K spend</span><span class="m">each source's own number or range</span></div><div class="chart"><canvas id="cCvRec"></canvas></div><p class="note" id="cvRecNote"></p></div>
+    <div class="term"><div class="th"><span class="t">Weekly launch volume and hit rate by spend tier</span><span class="m">Taylor Sicard, Fig 2 (from Motion 2026 data)</span></div><div class="chart"><canvas id="cCvTier"></canvas></div><p class="note">Bars: new ads a week (range). Line: hit rate. Ads needed per winner fall from about 26 under $10K to about 12 above $1M.</p></div>
+  </div>
+  <div class="cv-src" id="cvSrc"></div>
+  <div class="term"><div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Every figure</span><label for="cvPub" style="margin-left:auto">Source</label><select id="cvPub"></select></div><div class="tw" style="max-height:460px;overflow:auto"><table class="q cad-t" id="tCv"></table></div></div>
 </section>
 
 <!-- MOTION · TRENDING -->
@@ -1230,6 +1298,8 @@ const D=/*__DATA__*/null;
 const LIB=/*__LIB__*/null;
 const HWM=/*__HWM__*/null;
 const HWH=/*__HWH__*/null;
+const ANL=/*__ANL__*/null;
+const BF26B=/*__BF26B__*/null;
 const SRC=Object.fromEntries(LIB.map(x=>[x.id,x]));
 const srcBtn=(ids,label)=>`<button type="button" class="src-btn" data-src="${ids}" aria-label="Show sources and quotes">${label||'SRC ↗'}</button>`;
 let lastFocus=null;
@@ -2146,6 +2216,63 @@ function renderFoxwell(){
 }
 SEGBIND('fxYear',b=>{fxYear=b.dataset.v;renderFoxwell()});
 
+/* ---------- Front: today ---------- */
+const DESKOF={'Northbeam':'#nb-library','CTC':'#ctc','Foxwell':'#foxwell','Haus':'#haus','Triple Whale':'#triplewhale','Runneth':'#mo-research','Meta':'#mkt','Curtis Howland':'#howland'};
+function renderToday(){
+  const A=ANL||[];document.getElementById('fAnalysis').innerHTML=A.map(a=>`<article class="an-card"><span class="k">${esc(a.kicker)} · ${dfmt(a.date,true)}</span><h4>${esc(a.title)}</h4><p>${esc(a.dek)}</p><details><summary>Read the analysis</summary>${a.body.map(x=>`<p>${esc(x)}</p>`).join('')}<div class="an-src">Sources: ${a.sources.map(([l,u])=>`<a href="${u}"${u[0]==='#'?'':' target="_blank" rel="noopener"'}>${esc(l)}</a>`).join(' · ')}</div></details><a class="more" href="${a.to}">${esc(a.toLabel)} →</a></article>`).join('');
+  const W=rowsOf('wire_arts');const last=W.map(r=>r.date).sort().pop();const cut=new Date(new Date(last+'T12:00')-4*864e5).toISOString().slice(0,10);
+  const rank=r=>(r.pub==='Modern Retail'?1:0);
+  const H=W.filter(r=>r.date>=cut).sort((a,b)=>rank(a)-rank(b)||(a.date<b.date?1:-1)).slice(0,9);
+  document.getElementById('fHeads').innerHTML=H.map(r=>`<a href="${r.url}" target="_blank" rel="noopener"><span class="d">${dfmt(r.date)}</span><span><b>${esc(r.title)}</b><small>${esc(r.pub)} · ${esc(r.type)}</small></span></a>`).join('');
+  const N=[...LIB].filter(x=>x.date&&x.date>=new Date(new Date(last+'T12:00')-10*864e5).toISOString().slice(0,10)&&(x.data||[]).length&&!/Weekly|Monthly|Tool|Site/.test(x.src||'')).sort((a,b)=>a.date<b.date?1:-1);
+  const extra=[{date:'2026-11-03',title:'BFCM 2026 briefing: 11 things the data says, 161 sourced figures',pub:'Newsroom',to:'#bfcm'},{date:'2026-11-03',title:'How many ads to launch: six sources compared',pub:'Runneth desk',to:'#mo-bench'},{date:'2026-11-03',title:'Curtis Howland: 31 Meta Ads charts redrawn',pub:'Curtis Howland desk',to:'#howland'},{date:'2026-11-02',title:'Runneth Weekly Trending Ads: 120 ads, 4 categories',pub:'Runneth desk',to:'#mo-trend'}];
+  const seenT=new Set();const items=[...extra,...N.map(x=>({date:x.date,title:x.title,pub:x.pub||'Northbeam',to:DESKOF[x.pub||'Northbeam']||'#wire'}))].filter(x=>!seenT.has(x.title)&&seenT.add(x.title)).slice(0,9);
+  document.getElementById('fNew').innerHTML=items.map(x=>`<a href="${x.to}"><span class="d">${dfmt(x.date)}</span><span><b>${esc(x.title)}</b><small>${esc(x.pub)}</small></span></a>`).join('');
+}
+
+/* ---------- BFCM 2026 briefing ---------- */
+let bf26Set='o';
+function renderBf26(){
+  const O=rowsOf('bfcm26o'),R=rowsOf('bfcm25f');const g=(A,m)=>(A.find(r=>r.metric===m)||{}).value;
+  kpiStrip('bf26Kpis',[['US online holiday 2026','$'+g(O,'US online holiday spend (forecast)')+'B','Adobe forecast · +6.7% vs $257.8B in 2025',T.amber,''],['Cyber Monday','$'+g(O,'Cyber Monday online spend (forecast)')+'B','still the biggest day (forecast)',T.text,''],['Black Friday','$'+g(O,'Black Friday online spend (forecast)')+'B','+9.2%, fastest-growing day (forecast)',T.up,''],['Shoppers buying before BF',g(O,'Shoppers planning to start buying before Black Friday')+'%','Attentive survey',T.blue,''],['Meta CPM, Black Friday 2025','+'+g(R,'Meta median CPM vs September baseline, Black Friday')+'%','vs September (Lebesgue)',T.down,'']]);
+  document.getElementById('bf26Brief').innerHTML=(BF26B||[]).map(x=>`<div class="bb"><b>${esc(x.h)}</b><p>${esc(x.b)}</p><span class="s">${x.src.map(s=>`<a href="${s.u}" target="_blank" rel="noopener">${esc(s.p)}${s.y===25?' 2025':''}</a>`).join(' · ')}</span></div>`).join('');
+  mk('cBf26Day',{type:'bar',data:{labels:['Thanksgiving','Black Friday','Sat + Sun','Cyber Monday'],datasets:[{label:'2025 actual',data:[6.4,11.8,11.8,14.25],backgroundColor:'#5f6b66'},{label:'2026 forecast',data:[6.9,12.9,null,15.1],backgroundColor:T.amber}]},options:{scales:{y:{grid,beginAtZero:true,ticks:{callback:v=>'$'+v+'B'}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom',labels:{font:{size:10}}},tooltip:{callbacks:{label:c=>c.parsed.y==null?' no 2026 forecast for the weekend':` ${c.dataset.label}: $${c.parsed.y}B`}}}}});
+  mk('cBf26Cpm',{type:'bar',data:{labels:['Home','All brands (Black Friday)','Electronics & sporting goods','Fashion & footwear','Beauty'],datasets:[{label:'CPM vs September',data:[116,84,76,66,42],backgroundColor:[T.down,T.amber,T.down,T.blue,T.down]}]},options:{indexAxis:'y',scales:{x:{grid,ticks:{callback:v=>'+'+v+'%'}},y:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` +${c.parsed.x}% vs September`}}}}});
+  mk('cBf26Disc',{type:'bar',data:{labels:['Electronics, peak (Adobe 2025)','Canada BF weekend avg (2025)','All online, Black Friday avg (Salesforce 2025)','Cyber Week peak (Adobe 2026 fcst)','Apparel, peak (Adobe 2025)','Apparel on BF (Adobe 2026 fcst)','Sporting goods, peak (Adobe 2025)'],datasets:[{label:'% off',data:[30.9,30,28,30,25.1,23,20.3],backgroundColor:[T.blue,T.down,T.dim,T.amber,T.blue,T.amber,T.blue]}]},options:{indexAxis:'y',scales:{x:{grid,beginAtZero:true,max:40,ticks:{callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{size:10}}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x}% off`}}}}});
+  const plat=[['Meta','$22.26 (+7.8%)','2.26 (+3%) · 67.6% of spend'],['Google','n/a','3.62 (-21%) · CPA +34% · Search 4.68 vs PMax 3.15'],['TikTok','$6.26 (-27.5%)','2.26 (+28%) · 3.66% of spend'],['Meta, Cyber 5 (Power Digital)','$22.90 (+3.1%)','n/a']];
+  document.getElementById('tBf26Plat').innerHTML='<thead><tr><th>Platform</th><th>CPM (YoY)</th><th>ROAS (YoY) and notes</th></tr></thead><tbody>'+plat.map(r=>`<tr><td><b>${esc(r[0])}</b></td><td>${esc(r[1])}</td><td style="white-space:normal">${esc(r[2])}</td></tr>`).join('')+'</tbody><caption style="caption-side:bottom;text-align:left;padding-top:8px;color:'+T.dim+';font-size:11px">Triple Whale BFCM 2025 vs 2024; Power Digital Cyber 5.</caption>';
+  const D=[['28 Oct','Meta turns product browsing on by default for existing ads',0],['11 Nov','TikTok Shop BFCM campaign opens (runs to 30 Nov); Common Thread\'s BNPL deadline',0],['16 Nov','Audit Meta placements, landing pages and tracking',0],['20 Nov','Meta\'s new Commercial Terms take effect',0],['26 Nov','Thanksgiving: $6.9B online (forecast)',1],['27 Nov','Black Friday: $12.9B (forecast)',1],['30 Nov','Cyber Monday: $15.1B (forecast)',1],['10 Dec','Canada Post Regular Parcel last ship date (national)',0]];
+  document.getElementById('bf26Dates').innerHTML=D.map(([d,t,pk])=>`<div class="${pk?'pk':''}"><span>${d}</span>${esc(t)}</div>`).join('');
+  kpiStrip('bf26Ca',[['Holiday budget (RCC/Leger)','$911','-6.5% YoY, CAD',T.down,''],['Holiday spend (Deloitte Canada)','$1,305','-14% YoY, CAD',T.down,''],['Rank Black Friday top 3','88%','of Canadians',T.amber,''],['Avoiding US brands','58%','of those affected by US trade tensions',T.text,''],['Cyber Week online 2025','+7%','30% avg discount, 63% mobile',T.up,''],['Black Friday card volume 2025','-4%','Moneris, all retail',T.down,'']]);
+  const ts=document.getElementById('bf26Theme');const A=bf26Set==='o'?O:R;const th=[...new Set(A.map(r=>r.theme))];
+  if(ts.dataset.set!==bf26Set){ts.innerHTML='<option value="">All themes</option>'+th.map(t=>`<option>${esc(t)}</option>`).join('');ts.dataset.set=bf26Set}
+  const L=A.filter(r=>!ts.value||r.theme===ts.value);
+  document.getElementById('tBf26Facts').innerHTML='<thead><tr><th>Theme</th><th>Metric</th><th>Value</th><th>Scope</th><th>Source</th></tr></thead><tbody>'+L.map(r=>`<tr><td>${esc(r.theme)}</td><td><b>${esc(r.metric)}</b><br><span style="color:${T.dim};font-size:11px">${esc(r.note)}</span></td><td>${esc(r.value)} <span style="color:${T.dim}">${esc(r.unit)}</span></td><td style="color:${T.dim}">${esc(r.scope)} · ${esc(r.period)}</td><td><a href="${r.url}" target="_blank" rel="noopener">${esc(r.publisher)} ↗</a></td></tr>`).join('')+'</tbody>';
+}
+SEGBIND('bf26Set',b=>{bf26Set=b.dataset.v;renderBf26()});
+document.getElementById('bf26Theme').addEventListener('change',renderBf26);
+
+/* ---------- Runneth: how many ads (six sources) ---------- */
+function renderCv(){
+  const C=rowsOf('cvol');
+  kpiStrip('cvKpis',[['Winners','~5%','of ads, Motion 2026 (cited by four sources)',T.amber,''],['Ads the budget settles on','~20','per account, whatever the volume (MHI)',T.text,''],['Median launches','353','new ads a month, 61 DTC brands (MHI)',T.blue,''],['Top 10 ads','39%','of spend at the median brand (MHI)',T.text,''],['At $1M/month','4x','the $3K rule vs Motion\'s measured average',T.down,'']]);
+  const rec=[['Curtis Howland / Sicard: 1 ad per $3K',33,33],['Billo: Scale tier ($50K-$150K+)',80,120],['Admetrics via Billo: 20-30/week per $100K',87,130],['MHI: $100K+ band',100,300],['MHI: measured median (all brands)',353,353]];
+  mk('cCvRec',{type:'bar',data:{labels:rec.map(r=>r[0]),datasets:[{label:'New ads a month',data:rec.map(r=>[r[1],r[2]===r[1]?r[2]+4:r[2]]),backgroundColor:[T.amber,T.blue,T.blue,T.blue,'#5f6b66'],borderRadius:3}]},options:{indexAxis:'y',scales:{x:{grid,beginAtZero:true,title:{display:true,text:'New ads a month',color:T.dim,font:{size:10}}},y:{grid:{display:false},ticks:{font:{size:10}}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>{const r=rec[c.dataIndex];return r[1]===r[2]?` ${r[1]} a month`:` ${r[1]} to ${r[2]}+ a month`}}}}}});
+  document.getElementById('cvRecNote').textContent='Admetrics range converted from 20 to 30 a week (x 4.33). MHI\'s measured median has no spend level attached. Motion\'s $1M+ tier averages 18.85 new creatives a week (top quartile 54.64).';
+  const tiers=['Under $10K','$10K-$50K','$50K-$250K','$250K-$1M','Over $1M'];const wk=[[2,3],[4,8],[8,15],[15,25],[18,30]];const hr=[3.8,4.5,6,7.5,8.2];
+  mk('cCvTier',{type:'bar',data:{labels:tiers,datasets:[{type:'bar',label:'New ads a week (range)',data:wk,backgroundColor:T.blue,borderRadius:3,yAxisID:'y'},{type:'line',label:'Hit rate % (midpoint of range)',data:hr,borderColor:T.amber,backgroundColor:T.amber,yAxisID:'y2',tension:.2}]},options:{scales:{y:{grid,beginAtZero:true,title:{display:true,text:'ads a week',color:T.dim,font:{size:10}}},y2:{position:'right',grid:{display:false},beginAtZero:true,ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom',labels:{font:{size:10}}}}}});
+  const SRC=[['Curtis Howland','https://newsletter.curtishowland.com/p/how-many-ads-should-you-launch-to',['Rule: new ads a month = target spend / $3,000 (launches, not active ads)','At $1M a month the rule asks ~1.4x Motion\'s top quartile and ~4x its average','Top 15 ads (0.8%) took 53.9% of spend in one account','10x more AI statics took ROAS down 40%'],'Volume buys you shots on goal. It doesn’t buy a better shot.'],
+   ['Taylor Sicard','https://taylorsicard.com/blog/meta-ads-creative-benchmarks-2026',['Hit rate rises from ~3.8% under $10K to ~8.2% over $1M','Kill a video under 25% hook rate; 40%+ is elite','Run 60-70% statics; refresh every 7-14 days','Monthly creative churn 20-35%'],'winners are an output of volume times hit rate, and volume is the lever you actually control.'],
+   ['MHI Growth Engine','https://mhigrowthengine.com/blog/how-many-creatives-to-test-meta-ads/',['Median DTC brand launched 353 new ads a month (middle half 94-924)','Only ~19 ads take 1%+ of spend; top 10 take 39%','58.9% of spend went to ads first seen in the last 90 days','Count a new concept as 1, a hook or format variant as 0.5'],'Whatever the output, the budget settles on about 20 ads, and volume is how you find them.'],
+   ['Billo','https://billo.app/blog/how-many-ad-creatives-do-you-need/',['Starter $5K-$15K: 3-5 new creatives a week','Growth $15K-$50K: 8-15 a week; Scale $50K-$150K+: 20-30+','Split budget 60-70% scaling, 20-30% tests, 5-10% retargeting','UGC averages $198 per deliverable'],'Only about 6% of ads capture the majority of spend in any account.'],
+   ['Foxwell Digital (Motion headlines)','https://www.foxwelldigital.com/blog/motion-creative-benchmarks-2026-8-key-takeaways',['550,000+ ads, $1.3B spend: about 5% become winners','A winner spends 10x the account\'s median ad','A high hit rate can mean you are under-testing','Simple formats (text-only, product + text, GIFs) do well'],'There’s no universal testing volume that’s ‘best’ for all advertisers.']];
+  document.getElementById('cvSrc').innerHTML=SRC.map(([n,u,b,q])=>`<div class="c"><b><a href="${u}" target="_blank" rel="noopener" style="color:inherit">${esc(n)} ↗</a></b><ul>${b.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><q>${esc(q)}</q></div>`).join('')+`<div class="c"><b>Motion's own talk</b><p style="margin:0;color:#b9c4bf">Motion's 2026 benchmarks talk now redirects to runneth.com and couldn't be read for this comparison; its figures appear above as cited by the other sources, which don't always agree (e.g. 18.85 a week vs "12-19+" for top spenders).</p></div>`;
+  const ps=document.getElementById('cvPub');if(!ps.options.length)ps.innerHTML='<option value="">All sources</option>'+[...new Set(C.map(r=>r.publisher))].map(p=>`<option>${esc(p)}</option>`).join('');
+  const L=C.filter(r=>!ps.value||r.publisher===ps.value);
+  document.getElementById('tCv').innerHTML='<thead><tr><th>Source</th><th>Table</th><th>Segment</th><th>Metric</th><th>Value</th><th>Note</th></tr></thead><tbody>'+L.map(r=>`<tr><td><a href="${r.url}" target="_blank" rel="noopener">${esc(r.publisher)}</a></td><td>${esc(r.table)}</td><td>${esc(r.segment)}</td><td>${esc(r.metric)}</td><td><b>${esc(r.value)}</b> ${esc(r.unit)}</td><td style="color:${T.dim}">${esc(r.note)}</td></tr>`).join('')+'</tbody>';
+}
+document.getElementById('cvPub').addEventListener('change',renderCv);
+
 /* ---------- Curtis Howland · headlines, quotes, hot takes ---------- */
 let hwHf='all';
 function renderHwHot(){if(!HWH)return;const el=document.getElementById('hwHot');
@@ -2273,7 +2400,7 @@ SEGBIND('hsMeasure',b=>{hsMeasure=b.dataset.m;renderHaus()});
 ['twMetric','twChan','twSnap','twInd'].forEach(id=>document.getElementById(id).addEventListener('change',renderTW));
 
 /* ---------- routing ---------- */
-const VIEWS={front:renderFront,'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:renderBfcm,mkt:renderMkt,'mo-bench':renderMoBench,'mo-trend':()=>{renderTA();renderMoTrend()},'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,wire:renderWire};
+const VIEWS={front:()=>{renderFront();renderToday()},'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:()=>{renderBf26();renderBfcm()},mkt:renderMkt,'mo-bench':()=>{renderMoBench();renderCv()},'mo-trend':()=>{renderTA();renderMoTrend()},'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,wire:renderWire};
 SEGBIND('mtView',b=>{mtView=b.dataset.v;renderMeta()});
 document.getElementById('mtEvents').addEventListener('change',renderMeta);
 const PUBDESKS=['nb','mo','ctc','haus','triplewhale','foxwell','howland'];

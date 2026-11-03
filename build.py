@@ -92,6 +92,9 @@ REG=[
  ("li_howland","Curtis Howland LinkedIn posts with data, charts or video (2026)","li_howland_posts.csv","linkedin.com/in/curtishowland, from 2 Nov 2026",None),
  ("howland_ss","Curtis Howland on DTC Marketing: newsletter issues","howland_substack.csv","newsletter.curtishowland.com",None),
  ("howland_bf","68,245 Black Friday 2025 Meta ads, taken apart (Curtis Howland)","howland_bf_ads_2025.csv","Curtis Howland newsletter, 2 Nov 2026",None),
+ ("bfcm25f","BFCM 2025 results from primary publishers","bfcm2025_facts.csv","Adobe, Salesforce, Shopify, NRF, Triple Whale, Lebesgue, Klaviyo, Attentive and others",None),
+ ("bfcm26o","BFCM 2026 outlook: forecasts, surveys, platform and calendar changes","bfcm2026_outlook.csv","Adobe, NRF, Bain, Deloitte, RCC, Common Thread and others, Sep to Nov 2026",None),
+ ("cvol","How many Meta creatives to launch: six sources","creative_volume_2026.csv","Sicard, MHI, Billo, Foxwell, Curtis Howland, Nov 2026",None),
  ("wire_heads","Latest headlines on the wire","wire_headlines.csv","RSS / blog listings, weekly",None),
 ]
 DATA={}
@@ -100,7 +103,7 @@ for k,t,fn,src,extra in REG:
     if extra: note=(extra+' '+note).strip()
     DATA[k]=dict(title=t,file=fn,source=src,note=note,cols=cols,rows=rows)
 tpl=open('template.html').read()
-out=tpl.replace('/*__DATA__*/null',json.dumps(DATA,separators=(',',':'))).replace('/*__LIB__*/null',json.dumps(LIB,separators=(',',':'))).replace('/*__HWM__*/null',open('data/howland_meta_charts.json').read()).replace('/*__HWH__*/null',open('data/howland_headlines.json').read())
+out=tpl.replace('/*__DATA__*/null',json.dumps(DATA,separators=(',',':'))).replace('/*__LIB__*/null',json.dumps(LIB,separators=(',',':'))).replace('/*__HWM__*/null',open('data/howland_meta_charts.json').read()).replace('/*__HWH__*/null',open('data/howland_headlines.json').read()).replace('/*__ANL__*/null',open('data/analysis.json').read()).replace('/*__BF26B__*/null',open('data/bfcm2026_briefing.json').read())
 open('dtc-newsroom.html','w').write(out)
 print(len(out))
 # GitHub Pages: full document at index.html (site root)

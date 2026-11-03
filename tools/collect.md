@@ -38,6 +38,9 @@ For Modern Retail, strip `https://www.modernretail.co/` from the link (the merge
 ## GRAPHITE: Graphite, https://graphite.io
 `/sitemap.xml` lists `/research/<slug>` pages. Fetch each new one (6 at a time) and read `datePublished` from the JSON-LD and the `h1`; extra = `research`. Skip `/case-studies/` (placeholder dates) and `/five-percent/` author and press pages. The State of ChatGPT Ads report page is a gated download with no date: skip it.
 
+## DTCNL: Direct to Consumer, https://www.directtoconsumer.co
+Webflow site. List issues from `/newsletters?0bf25935_page=N` (16 per page; date text "Month D, YYYY" on each card). Each `/newsletter/<slug>` page has the full issue in the raw HTML: `.newsletter_section.w-dyn-item .w-richtext`. Title = page title minus the emoji prefix and " - DTC Newsletter …". extra = `newsletter`. New surveys appear as landing pages (`/theinvisibleshelf`, `/beyondthediscount`, `/thereactiveloopreport`): figures from the public landing page only; the PDFs are gated.
+
 ## Not collected
 - Runneth (Motion) blog: pages carry no publish date. New Motion reports go in via the library.
 - X posts and Meta earnings: added through `library.py` entries, which the merge picks up automatically.

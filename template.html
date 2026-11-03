@@ -448,6 +448,7 @@ table.q tbody tr.link{cursor:pointer}
         <div class="ddcol"><a class="ddh" href="#triplewhale" data-desk="triplewhale">Triple Whale</a><span class="ddd">Benchmarks · weekly snapshot</span><a href="#triplewhale">Industry benchmarks</a></div>
         <div class="ddcol"><a class="ddh" href="#foxwell" data-desk="foxwell">Foxwell</a><span class="ddd">Practitioner surveys</span><a href="#foxwell">Q4 survey &amp; field reports</a></div>
         <div class="ddcol"><a class="ddh" href="#howland" data-desk="howland">Curtis Howland</a><span class="ddd">Operator · LinkedIn &amp; newsletter</span><a href="#howland">Posts, issues &amp; BF ad study</a></div>
+        <div class="ddcol"><a class="ddh" href="#dtcnl" data-desk="dtcnl">Direct to Consumer</a><span class="ddd">Daily newsletter · surveys</span><a href="#dtcnl">Research, hot takes &amp; teardowns</a></div>
       </div>
     </div>
     </div>
@@ -1223,6 +1224,33 @@ table.q tbody tr.link{cursor:pointer}
   <div class="lib" id="hwLib"></div>
 </section>
 
+<!-- DIRECT TO CONSUMER -->
+<section class="view" id="v-dtcnl" hidden>
+  <div><div class="kicker">Direct to Consumer · daily newsletter &amp; surveys</div><h2>Shoppers are buying from AI shortlists, and brands are discounting on autopilot</h2><p class="dek">Direct to Consumer (DTC Newsletter) reaches 155,000+ operators five times a week with news, Pilothouse brand teardowns and podcast notes. A few times a year it runs its own surveys of DTC operators and shoppers, usually with a partner. This desk leads with that research, then the sharpest news calls of 2026 and an index of every brand teardown. Sponsored blocks are left out; figures DTC repeats from elsewhere are credited to the original source.</p></div>
+  <div class="strip" id="dtKpis"></div>
+  <div class="section-head"><span class="label">Their own research</span></div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">The Invisible Shelf · AI shopping</span><span class="m">556 shoppers · 146 operators · Q3 2026</span></div><div class="chart"><canvas id="cDtIS"></canvas></div><p class="note">Shoppers (purple) say AI is already steering what they buy; brands (amber) feel ready but a quarter can't measure it. Published 26 Oct 2026.</p></div>
+    <div class="term"><div class="th"><span class="t">Beyond the Discount · Q4 offers</span><span class="m">575+ operators · 700+ shoppers · with Smile.io</span></div><div class="chart"><canvas id="cDtBD"></canvas></div><p class="note">Most brands are repeating last year's discount, and a third of discount-acquired shoppers only come back for the next one. Published 18 Sep 2026.</p></div>
+  </div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">The offer gap</span><span class="m">% off: what brands offer new customers vs what shoppers say it takes</span></div><div class="chart"><canvas id="cDtOffer"></canvas></div><p class="note" id="dtOfferNote"></p></div>
+    <div class="term"><div class="th"><span class="t">The Reactive Loop · planning</span><span class="m">540+ operators · with Keen · May 2026</span></div><div class="chart"><canvas id="cDtRL"></canvas></div><p class="note">Weekly reviews plus short forecast horizons mean plans get reshaped before they've had time to work.</p></div>
+  </div>
+  <div class="term"><div class="th"><span class="t">Last year's Q4 mood · Inside Q4 2025</span><span class="m">600+ operators · with Keen · July 2025 · % of respondents</span></div><div class="chart tall"><canvas id="cDtQ4"></canvas></div><p class="note">The baseline for this year: in July 2025 two-thirds of brands felt real margin pressure and fewer than 7% trusted their Q4 forecast. Where the source says "about 1 in 4", "1 in 5" or "less than 7%", that rounded figure is plotted.</p></div>
+  <div class="takes" id="dtTakes"></div>
+  <div class="section-head"><span class="label">Headlines and hot takes</span></div>
+  <div class="hh-wrap" id="dtHot"></div>
+  <div class="section-head"><span class="label">What a daily DTC newsletter talks about</span></div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">Topics by month</span><span class="m">% of issues whose news or teardown items mention each topic</span></div><div class="chart"><canvas id="cDtTopic"></canvas></div><p class="note">Keyword match on 2026 issues, sponsored blocks excluded. Issues got longer from June, so most lines rise then; compare topics with each other rather than month to month.</p></div>
+    <div class="term"><div class="th"><span class="t">Brand teardowns by focus</span><span class="m">58 teardowns in 2026, mostly by Pilothouse</span></div><div class="chart"><canvas id="cDtTd"></canvas></div></div>
+  </div>
+  <div class="term"><div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Teardown index</span><label for="dtTdF" style="margin-left:auto">Focus</label><select id="dtTdF"></select></div><div class="tw" style="max-height:480px;overflow:auto"><table class="q cad-t" id="tDtTd"></table></div></div>
+  <div class="section-head"><span class="label">Library</span></div>
+  <div class="lib" id="dtLib"></div>
+</section>
+
 <!-- CTC -->
 <section class="view" id="v-ctc" hidden>
   <div><div class="kicker">Common Thread Collective · Portfolio data</div><h2>What 299 brands spend, and what each channel is really worth</h2><p class="dek">Common Thread Collective runs growth for hundreds of DTC brands and publishes their pooled data: the DTC Index (200–300 stores with two or more years of history), interactive research pages, and a daily consumer confidence survey with KnoCommerce. Their weekly DTC Index email has no public archive, so this section is built from the published benchmarks, podcasts and blog.</p></div>
@@ -1318,6 +1346,7 @@ const D=/*__DATA__*/null;
 const LIB=/*__LIB__*/null;
 const HWM=/*__HWM__*/null;
 const HWH=/*__HWH__*/null;
+const DTCH=/*__DTCH__*/null;
 const ANL=/*__ANL__*/null;
 const BF26B=/*__BF26B__*/null;
 const CATK=/*__CATK__*/null;
@@ -1333,7 +1362,7 @@ function openSources(ids){
 function closeSources(){document.getElementById('drawer').hidden=true;document.getElementById('scrim').hidden=true;lastFocus&&lastFocus.focus&&lastFocus.focus()}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-src]');if(b){e.preventDefault();openSources(b.dataset.src)}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.getElementById('drawer').hidden)closeSources()});
-const SRC_MAP={cMtCpm:'mb-cpm25',tMtQ:'mb-cpm25',tMtWk:'mb-weekly',tMtHeat:'mb-cpm25',cFxMood:'fox-q4-26',cFxChan:'fox-q4-26',cFxDaily:'fox-q4-26',cFxAndro:'fox-q4-26',tFxField:'fox-andromeda,fox-hw,fox-pricing26,fox-bfcm25',cFxAgency:'fox-agency25,fox-agency26',tFxCad:'fox-cadence',cTdPrice:'mb-cpm25,meta-q3-26,ctc-cpm,tw-weekly,varos-archive',cTdEff:'x-roas,x-ncac,bl-planning,mb-h1,ctc-q1idx',cTdShare:'mb-weekly,mb-may,ctc-mix,haus-sow',cTdDemand:'ctc-dtcci,meta-q3-26,bl-planning,mb-h1',tTdQ:'mb-weekly',cBfLive:'mb-bfcm,bl-cyberweek',cEarn:'meta-q3-26,meta-q2-26,meta-q1-26,meta-q4-25',cEarnReg:'meta-apac,meta-q2-26',cEarnVsNb:'meta-q3-26,mb-cpm25,x-roas',cMoTier:'mo-cb26key',cMoPort:'mo-cb26key',cMoFmt:'mo-cb26',cMoHW:'mo-bfcm26',cTrBrand:'mo-trending',cTrAspect:'mo-trending',cTrInd:'mo-trending',cHsCh:'haus-yt26,haus-meta25,haus-tiktok,haus-applovin',cHsIA:'haus-ia-jul,haus-ia-oct',cHsRep:'haus-ia-oct',cHs7dc:'haus-ia-oct',cHsCat:'haus-catalog',cHsSearch:'haus-search',cHsTN:'haus-textnow',cHsCW:'haus-cw25',cHsApp:'haus-applovin',cTwInd:'tw-weekly',cTwHist:'tw-weekly',cCtMix:'ctc-mix',cCtCci:'ctc-dtcci',cCtCpm:'ctc-cpm',cCtTier:'ctc-mix',cCtMer:'ctc-mix',cCtHits:'ctc-hits',tCtIdx:'ctc-q1idx,ctc-h1,ctc-applovin',tCtBf:'ctc-bfcm25',tTwCh:'tw-weekly',cMoAI:'mo-ai',cCmp:'mb-weekly',cAdsLaunch:'bl-jan',cAdsWeek:'mb-hudson,mb-ugc1,bl-jan',cMis:'mb-ugc1',cVertAds:'x-verticals',cCap:'mb-ugc3,mb-ugc2,bl-jan',fCross:'mb-cpm25,meta-q3-26,ctc-cpm',fBoard:'mb-weekly',fShare:'mb-weekly',fMovers:'mb-weekly',trMulti:'mb-weekly',tHeat:'mb-weekly',cShare:'mb-weekly,mb-may',tTrend:'mb-weekly',tShare:'mb-weekly',tQ1:'mb-may',tEmerg:'x-emerging',cMonthly:'bl-planning,bl-jan,bl-feb,mb-april,mb-may,mb-h1,bl-cyberweek,bl-cost',cBand:'mb-h1,mb-cpm25',tH1rev:'mb-h1',tH1aov:'mb-h1',cSize:'bl-under5,bl-cost',tVert:'bl-power',tMix:'x-verticals',tAds:'bl-jan',cAI:'mb-ai',cOverlay:'mb-cpm25,x-roas,x-ncac',cArc:'mb-bfcm,bl-cyberweek',cPace:'bl-cyberfive',cLag:'mb-lag',tInd:'x-industry',cPost:'mb-weekly,bl-q5',cJan:'bl-jan',cM1:'x-metaweekly,mb-metatank',cM2:'x-metaweekly,mb-metatank',cM3:'x-metaweekly,x-roas,x-ncac'};
+const SRC_MAP={cDtIS:'dtc-invisible-shelf',cDtBD:'dtc-beyond-discount',cDtOffer:'dtc-beyond-discount',cDtRL:'dtc-reactive-loop',cDtQ4:'dtc-inside-q4-25',cDtTopic:'dtc-newsletter',cDtTd:'dtc-newsletter',tDtTd:'dtc-newsletter',cMtCpm:'mb-cpm25',tMtQ:'mb-cpm25',tMtWk:'mb-weekly',tMtHeat:'mb-cpm25',cFxMood:'fox-q4-26',cFxChan:'fox-q4-26',cFxDaily:'fox-q4-26',cFxAndro:'fox-q4-26',tFxField:'fox-andromeda,fox-hw,fox-pricing26,fox-bfcm25',cFxAgency:'fox-agency25,fox-agency26',tFxCad:'fox-cadence',cTdPrice:'mb-cpm25,meta-q3-26,ctc-cpm,tw-weekly,varos-archive',cTdEff:'x-roas,x-ncac,bl-planning,mb-h1,ctc-q1idx',cTdShare:'mb-weekly,mb-may,ctc-mix,haus-sow',cTdDemand:'ctc-dtcci,meta-q3-26,bl-planning,mb-h1',tTdQ:'mb-weekly',cBfLive:'mb-bfcm,bl-cyberweek',cEarn:'meta-q3-26,meta-q2-26,meta-q1-26,meta-q4-25',cEarnReg:'meta-apac,meta-q2-26',cEarnVsNb:'meta-q3-26,mb-cpm25,x-roas',cMoTier:'mo-cb26key',cMoPort:'mo-cb26key',cMoFmt:'mo-cb26',cMoHW:'mo-bfcm26',cTrBrand:'mo-trending',cTrAspect:'mo-trending',cTrInd:'mo-trending',cHsCh:'haus-yt26,haus-meta25,haus-tiktok,haus-applovin',cHsIA:'haus-ia-jul,haus-ia-oct',cHsRep:'haus-ia-oct',cHs7dc:'haus-ia-oct',cHsCat:'haus-catalog',cHsSearch:'haus-search',cHsTN:'haus-textnow',cHsCW:'haus-cw25',cHsApp:'haus-applovin',cTwInd:'tw-weekly',cTwHist:'tw-weekly',cCtMix:'ctc-mix',cCtCci:'ctc-dtcci',cCtCpm:'ctc-cpm',cCtTier:'ctc-mix',cCtMer:'ctc-mix',cCtHits:'ctc-hits',tCtIdx:'ctc-q1idx,ctc-h1,ctc-applovin',tCtBf:'ctc-bfcm25',tTwCh:'tw-weekly',cMoAI:'mo-ai',cCmp:'mb-weekly',cAdsLaunch:'bl-jan',cAdsWeek:'mb-hudson,mb-ugc1,bl-jan',cMis:'mb-ugc1',cVertAds:'x-verticals',cCap:'mb-ugc3,mb-ugc2,bl-jan',fCross:'mb-cpm25,meta-q3-26,ctc-cpm',fBoard:'mb-weekly',fShare:'mb-weekly',fMovers:'mb-weekly',trMulti:'mb-weekly',tHeat:'mb-weekly',cShare:'mb-weekly,mb-may',tTrend:'mb-weekly',tShare:'mb-weekly',tQ1:'mb-may',tEmerg:'x-emerging',cMonthly:'bl-planning,bl-jan,bl-feb,mb-april,mb-may,mb-h1,bl-cyberweek,bl-cost',cBand:'mb-h1,mb-cpm25',tH1rev:'mb-h1',tH1aov:'mb-h1',cSize:'bl-under5,bl-cost',tVert:'bl-power',tMix:'x-verticals',tAds:'bl-jan',cAI:'mb-ai',cOverlay:'mb-cpm25,x-roas,x-ncac',cArc:'mb-bfcm,bl-cyberweek',cPace:'bl-cyberfive',cLag:'mb-lag',tInd:'x-industry',cPost:'mb-weekly,bl-q5',cJan:'bl-jan',cM1:'x-metaweekly,mb-metatank',cM2:'x-metaweekly,mb-metatank',cM3:'x-metaweekly,x-roas,x-ncac'};
 function injectSources(){Object.entries(SRC_MAP).forEach(([id,ids])=>{const el=document.getElementById(id);if(!el)return;const term=el.closest('.term');if(!term||term.querySelector(':scope > .th .src-btn, :scope > .ctl .src-btn'))return;const host=term.querySelector(':scope > .th')||term.querySelector(':scope > .ctl');if(host){const n=ids.split(',').length;host.insertAdjacentHTML('beforeend',srcBtn(ids,n>1?`SRC ×${n} ↗`:'SRC ↗'))}})}
 const n=v=>{if(v===undefined||v===null)return null;const s=String(v).trim();if(s===''||s==='-')return null;const x=parseFloat(s.replace('~',''));return isNaN(x)?null:x};
 const rowsOf=k=>D[k].rows.map(r=>Object.fromEntries(D[k].cols.map((c,i)=>[c,r[i]])));
@@ -1445,6 +1474,7 @@ function renderDeskTiles(X){
     {pub:'Haus',to:'#haus',cad:'Research posts · X snapshots',num:'1.18×',lab:'Meta incremental attribution vs standard, Oct 2026',col:T.up,sub:'YouTube geo tests find 2.3× what Google Ads reports'},
     {pub:'Triple Whale',to:'#triplewhale',cad:'Weekly benchmark snapshot',num:tw?'$'+tw.y.toFixed(2):'–',lab:`median Meta CPM across industries${tw?' · '+tsLab(tw.x,true):''}`,col:'#2ec4d6',sub:twr?`Median Meta ROAS ${twr.y.toFixed(2)}× (trailing 30 days)`:''},
     {pub:'Foxwell',to:'#foxwell',cad:'Surveys · field reports',num:(fox?fox.pct:'76')+'%',lab:'of 600 buyers say rising CPMs are their top Q4 worry',col:T.down,sub:'Members saw some accounts\' CPMs drop ~30% from 17 Sep, with weaker CTR and purchases'},
+    {pub:'Direct to Consumer',to:'#dtcnl',cad:'Daily newsletter · surveys',num:'53%',lab:'of AI-assisted shoppers bought a brand an AI introduced them to',col:'#a98bff',sub:'72.5% of brands are running the same Q4 discount as last year (Beyond the Discount)'},
     {pub:'Meta',name:'Meta earnings',to:'#mkt',cad:'Quarterly',num:fPct(me.price),lab:`price per ad vs last year · ${me.q}`,col:T.down,sub:`Ad impressions ${fPct(me.impr)}; next report late January`}
   ];
   document.getElementById('fDesks').innerHTML=D.map(d=>{const L=latest(d.pub);return `<div class="desktile"><div class="dt-h"><a class="dt-pub" href="${d.to}">${esc(d.name||d.pub)}</a><span class="dt-cad">${esc(d.cad)}</span></div><div class="dt-num" style="color:${d.col}">${d.num}</div><div class="dt-lab">${esc(d.lab)}</div>${d.sub?`<p>${esc(d.sub)}</p>`:''}${L?`<h4>${esc(L.title)}</h4><div class="dt-lab">Latest · ${dfmt(L.date,true)}</div>`:''}<div class="dt-f"><a class="more" href="${d.to}">Open desk →</a>${L?srcBtn(L.id,'SOURCE'):''}</div></div>`}).join('');
@@ -1678,6 +1708,7 @@ function renderDS(){
 
 /* ---------- Wire ---------- */
 const WIRE=[
+ {k:'Operator newsletters',n:'Direct to Consumer',c:'Daily newsletter · surveys a few times a year',p:'155,000+ readers. Daily news, Pilothouse brand teardowns and podcast notes, plus its own surveys of operators and shoppers (Invisible Shelf, Beyond the Discount, Reactive Loop). Has its own desk.'},
  {k:'AI search',n:'Graphite',c:'Research posts · 1–3 a month',p:'Research-led SEO/AEO agency (with Similarweb data). Measures how big AI search is next to Google, how much AI traffic GA4 misses, and early ChatGPT Ads benchmarks. Listed on the Wire; figures not yet in the charts.'},
  {k:'Measurement peers',n:'Triple Whale',c:'Weekly benchmarks · live BFCM tracker',p:'Shopify-wide ROAS, CPM and AOV benchmarks by vertical, plus an hourly GMV and spend tracker through Cyber Week. Closest like-for-like to Northbeam.'},
  {k:'Measurement peers',n:'Haus',c:'Monthly research posts',p:'Published incrementality and geo-lift results by channel: the best public source on how far platform ROAS overstates true lift.'},
@@ -2437,6 +2468,51 @@ function renderHowland(){
 }
 SEGBIND('hwType',b=>{hwType=b.dataset.v;renderHowland()});
 
+/* ---------- Direct to Consumer ---------- */
+let dtHf='all';
+function renderDtHot(){if(!DTCH)return;const el=document.getElementById('dtHot');
+  const heat=n=>`<span class="hh-heat" title="Heat ${n} of 3">${'▲'.repeat(n)}<i>${'▲'.repeat(3-n)}</i></span>`;
+  const hot=DTCH.filter(x=>x.heat===3);const lead=hot[0]||DTCH[0];
+  const F=[['all','All '+DTCH.length],['Meta','Meta'],['ai','AI & search'],['money','BFCM, tariffs & costs'],['Measurement','Measurement']];
+  const L=DTCH.filter(x=>dtHf==='all'||(dtHf==='ai'?x.topic==='AI shopping & search':dtHf==='money'?/BFCM|Tariffs/.test(x.topic):x.topic===dtHf));
+  el.innerHTML=`<div class="hh-lead"><span class="hh-k">Sharpest call · ${dfmt(lead.date,true)}</span><blockquote>“${esc(lead.quote)}”</blockquote><div class="hh-meta"><span>${esc(lead.source)} · via DTC</span><a href="${lead.url}" target="_blank" rel="noopener">${esc(lead.headline)} ↗</a></div></div>
+  <div class="hh-hot">${hot.map(x=>`<a class="hh-card" href="${x.url}" target="_blank" rel="noopener"><span class="hh-meta">${heat(x.heat)}<span>${esc(x.topic)}</span><span>${dfmt(x.date,true)}</span></span><b>${esc(x.headline)}</b><span class="hh-t">${esc(x.take)}</span><span class="hh-meta">${esc(x.source)}</span></a>`).join('')}</div>
+  <div class="term"><div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">News calls worth keeping</span><div class="seg" role="group" aria-label="Filter" id="dtHf" style="margin-left:auto">${F.map(([v,n])=>`<button type="button" data-v="${v}" aria-pressed="${dtHf===v}">${n}</button>`).join('')}</div></div>
+  <div class="hh-list">${L.map(x=>`<div class="hh-row"><span class="d">${dfmt(x.date,true)}<br>${heat(x.heat)}</span><div><a href="${x.url}" target="_blank" rel="noopener">${esc(x.headline)} ↗</a><q>${esc(x.quote)}</q><div class="hh-t">${esc(x.topic)} · ${esc(x.take)} <span style="opacity:.7">Source: ${esc(x.source)}.</span></div></div></div>`).join('')}</div></div>`;
+  document.getElementById('dtHf').onclick=e=>{const b=e.target.closest('button');if(b){dtHf=b.dataset.v;renderDtHot()}};
+}
+const DTPUR='#a98bff';
+function dtBars(id,rows,colorFn,max){const wrap=t=>{const w=t.split(' ');const o=[];let c='';w.forEach(x=>{if((c+' '+x).trim().length>34){o.push(c.trim());c=x}else c+=' '+x});o.push(c.trim());return o};
+  mk(id,{type:'bar',data:{labels:rows.map(r=>wrap(r.label)),datasets:[{label:'%',data:rows.map(r=>n(r.value)),backgroundColor:rows.map(colorFn)}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,min:0,max:max||100,ticks:{callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{size:10.5}}}},plugins:{legend:{display:false},tooltip:{callbacks:{title:it=>rows[it[0].dataIndex].label,label:c=>{const r=rows[c.dataIndex];return ` ${r.value}% ${r.note||''}`}}}}}})}
+function renderDtc(){
+  renderDtHot();
+  const R=rowsOf('dtc_research'),TD=rowsOf('dtc_teardowns'),TP=rowsOf('dtc_topics');const by=(rep)=>R.filter(r=>r.report===rep);
+  const issues=rowsOf('wire_arts').filter(r=>r.pub==='Direct to Consumer').length;
+  const g=(rep,lab)=>(R.find(r=>r.report===rep&&r.label.startsWith(lab))||{}).value;
+  kpiStrip('dtKpis',[['Bought an unknown brand on AI advice',g('The Invisible Shelf','Bought')+'%','of AI-assisted shoppers · Invisible Shelf',DTPUR,'dtc-invisible-shelf'],['Same discount as last year',g('Beyond the Discount','Same discount')+'%','of brands going into Q4 2026',T.down,'dtc-beyond-discount'],['Trust forecasts 3 months out at most',g('The Reactive Loop','Can forecast')+'%','of operators · Reactive Loop',T.amber,'dtc-reactive-loop'],['Issues in 2026',issues,TD.length+' brand teardowns logged',T.text,'dtc-newsletter']]);
+  dtBars('cDtIS',by('The Invisible Shelf'),r=>r.section==='Shoppers'?DTPUR:T.amber);
+  dtBars('cDtBD',by('Beyond the Discount').filter(r=>r.unit==='%'&&r.section!=='Loyalty (Smile.io)'),r=>r.section==='Shoppers'?DTPUR:T.amber);
+  const og=by('Beyond the Discount').filter(r=>r.section==='Offer gap');const rng=v=>String(v).split('–').map(Number);
+  mk('cDtOffer',{type:'bar',data:{labels:['Brands offer new customers','Shoppers say it takes'],datasets:[{label:'% off',data:og.map(r=>rng(r.value)),backgroundColor:[T.amber,DTPUR],borderSkipped:false,barThickness:34}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,min:0,max:40,ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>{const r=og[c.dataIndex];return ` ${r.value}% off · ${r.note}`}}}}}});
+  const sm=by('Beyond the Discount').filter(r=>r.section==='Loyalty (Smile.io)');
+  document.getElementById('dtOfferNote').textContent=`The most common brand offer (11–20% off) sits just below the 20–25% the largest group of shoppers asks for. Keeping them is the bigger lever: in Smile.io's data, BFCM first-time buyers who joined a loyalty programme had a ${sm[0]?sm[0].value:60}% higher 90-day repeat rate.`;
+  dtBars('cDtRL',by('The Reactive Loop'),()=>T.amber);
+  const Q=by('Inside Q4 (2025)');const secs=['Q4 plan status','Q4 targets','Margin pressure','Forecast confidence','Primary Q4 goal'];const PAL=['#5aa9ff','#ffb020','#ff7a59','#a98bff','#2ec4d6'];
+  const ds=[];secs.forEach((sc,si)=>Q.filter(r=>r.section===sc).forEach((r,j)=>ds.push({label:r.label,data:secs.map((x,k)=>k===si?n(r.value):null),backgroundColor:PAL[j%5],stack:'s',_sec:sc})));
+  mk('cDtQ4',{type:'bar',data:{labels:secs,datasets:ds},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:true},scales:{x:{stacked:true,grid,min:0,max:110,ticks:{callback:v=>v<=100?v+'%':''}},y:{stacked:true,grid:{display:false}}},plugins:{legend:{display:false},tooltip:{filter:i=>i.raw!=null,callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.x}%`}}}},plugins:[{id:'dtq4lab',afterDatasetsDraw(ch){const ctx=ch.ctx;ctx.save();ctx.font='600 10px "IBM Plex Mono",monospace';ctx.fillStyle='#0a0d0c';ctx.textBaseline='middle';ch.data.datasets.forEach((d,i)=>{ch.getDatasetMeta(i).data.forEach((b,k)=>{if(d.data[k]==null)return;const w=b.width||Math.abs(b.x-b.base);if(w<40)return;let t=d.label;while(t.length>3&&ctx.measureText(t).width>w-10)t=t.slice(0,-2);if(t!==d.label)t=t.replace(/\s+$/,'')+'…';ctx.fillText(t,Math.min(b.x,b.base)+5,b.y)})});ctx.restore()}}]});
+  const tk=[["AI is changing discovery more than it's changing traffic",`${g('The Invisible Shelf','Bought')}% of AI-assisted shoppers have bought a brand an AI introduced them to. Yet in Marie Haynes' 100-site study, quoted by DTC, Google organic still drove 27× the conversions of every LLM combined. AI shapes the choice; the visit often still arrives through search or direct.`,'dtc-invisible-shelf'],['The discount everyone is copying',`${g('Beyond the Discount','Same discount')}% of brands are repeating last year's depth. Curtis Howland's study of 68,245 Black Friday 2025 Meta ads found a median 50% off, so matching the default won't stand out.`,'dtc-beyond-discount,howland-ss-68245-black-friday-ads-taken-apart'],['Plans break in execution, not on paper',`${g('The Reactive Loop','Say execution')}% of operators say execution is where plans break, and ${g('The Reactive Loop','Review performance')}%+ review weekly. Pair that with Meta's own rule that ad sets under ~50 conversions a week pay about 28% more, and BFCM is a bad time to keep restructuring.`,'dtc-reactive-loop']];
+  document.getElementById('dtTakes').innerHTML=tk.map(([h,p,s])=>`<div class="story"><h4>${esc(h)}</h4><p>${esc(p)}</p>${srcBtn(s,'SOURCE · QUOTE')}</div>`).join('');
+  const TPs=TP.filter(r=>r.month<'2026-11');const keys=['Meta','Google & YouTube','AI shopping & search','BFCM & Q4','Email & SMS','Tariffs & costs'];const TC=['#5b8cff','#f2b632',DTPUR,'#ff7a59','#2ec4d6','#9fb3ab'];
+  mk('cDtTopic',{type:'line',data:{labels:TPs.map(r=>new Date(r.month+'-15T12:00').toLocaleDateString('en-GB',{month:'short'})),datasets:keys.map((k,i)=>({label:k,data:TPs.map(r=>n(r[k])),borderColor:TC[i],backgroundColor:TC[i],borderWidth:k==='AI shopping & search'?4:2,tension:.3}))},options:{scales:{y:{grid,min:0,max:100,ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom',labels:{font:{size:10}}},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y}% of ${TPs[c.dataIndex].issues} issues`}}}}});
+  const fc={};TD.forEach(r=>fc[r.focus]=(fc[r.focus]||0)+1);const FE=Object.entries(fc).sort((a,b)=>b[1]-a[1]);
+  mk('cDtTd',{type:'bar',data:{labels:FE.map(x=>x[0]),datasets:[{label:'Teardowns',data:FE.map(x=>x[1]),backgroundColor:FE.map((x,i)=>i?'rgba(255,176,32,.55)':T.amber)}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,ticks:{precision:0}},y:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x} teardowns`}}}}});
+  const sel=document.getElementById('dtTdF');const cur=sel.value;sel.innerHTML='<option value="">All ('+TD.length+')</option>'+FE.map(([k,v])=>`<option value="${esc(k)}">${esc(k)} (${v})</option>`).join('');sel.value=cur;
+  const TF=[...TD].reverse().filter(r=>!sel.value||r.focus===sel.value);
+  document.getElementById('tDtTd').innerHTML='<thead><tr><th>Date</th><th>Brand</th><th>Focus</th><th>Issue</th></tr></thead><tbody>'+TF.map(r=>`<tr><td>${dfmt(r.date,true)}</td><td><b>${esc(r.brand)}</b></td><td>${esc(r.focus)}</td><td><a href="${r.url}" target="_blank" rel="noopener">Read ↗</a></td></tr>`).join('')+'</tbody>';
+  document.getElementById('dtLib').innerHTML=libCards(LIB.filter(x=>x.pub==='Direct to Consumer'));
+}
+document.getElementById('dtTdF').addEventListener('change',renderDtc);
+
 /* ---------- CTC ---------- */
 let ctView='roas';
 function renderCTC(){
@@ -2483,10 +2559,10 @@ SEGBIND('hsMeasure',b=>{hsMeasure=b.dataset.m;renderHaus()});
 ['twMetric','twChan','twSnap','twInd'].forEach(id=>document.getElementById(id).addEventListener('change',renderTW));
 
 /* ---------- routing ---------- */
-const VIEWS={front:()=>{renderFront();renderToday()},'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:()=>{renderBf26();renderCa();renderProj();renderBfcm()},mkt:renderMkt,'mo-bench':()=>{renderMoBench();renderCv()},'mo-trend':()=>{renderTA();renderMoTrend()},'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,wire:renderWire};
+const VIEWS={front:()=>{renderFront();renderToday()},'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:()=>{renderBf26();renderCa();renderProj();renderBfcm()},mkt:renderMkt,'mo-bench':()=>{renderMoBench();renderCv()},'mo-trend':()=>{renderTA();renderMoTrend()},'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,dtcnl:renderDtc,wire:renderWire};
 SEGBIND('mtView',b=>{mtView=b.dataset.v;renderMeta()});
 document.getElementById('mtEvents').addEventListener('change',renderMeta);
-const PUBDESKS=['nb','mo','ctc','haus','triplewhale','foxwell','howland'];
+const PUBDESKS=['nb','mo','ctc','haus','triplewhale','foxwell','howland','dtcnl'];
 const ddBtn=document.getElementById('deskBtn'),ddMenu=document.getElementById('deskMenu');let ddT=null;
 function ddOpen(){clearTimeout(ddT);ddMenu.hidden=false;ddBtn.setAttribute('aria-expanded','true')}
 function ddClose(focus){clearTimeout(ddT);if(ddMenu.hidden)return;ddMenu.hidden=true;ddBtn.setAttribute('aria-expanded','false');if(focus)ddBtn.focus()}

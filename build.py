@@ -12,6 +12,9 @@ def load(fn):
 REG=[
  ("mbi","Media Buyer Index — weekly channel deltas","mbi_new.csv","Newsletter + X, weekly, Dec 2025–Oct 2026","Week-over-week % change by platform. Budget share is absolute %. Before the week of 05/03/2026 shares exclude 'All other platforms' and share Δ is a relative % change; from 05/03 share Δ is percentage points."),
  ("meta_cpm","Meta weekly CPM and YoY, Jan 2025 – Sep 2026 (digitised from chart)","meta_cpm_weekly_approx.csv","Newsletter 2026-10-22 / X 2026-10-20",None),
+ ("dtc_research","Direct to Consumer survey research: Invisible Shelf, Beyond the Discount, Reactive Loop, Inside Q4 2025","dtc_research.csv","directtoconsumer.co report pages and newsletter",None),
+ ("dtc_teardowns","Direct to Consumer brand teardowns, 2026","dtc_teardowns.csv","DTC Newsletter (Pilothouse)",None),
+ ("dtc_topics","Direct to Consumer newsletter topics by month","dtc_topics.csv","DTC Newsletter, 2026 issues",None),
  ("wire_arts","Wire inventory: every article since January 2026","wire_articles.csv","Publisher sites + newsletter inboxes, each weekday",None),
  ("nb_x","Northbeam Meta and market posts on X","nb_x_posts.csv","x.com/northbeam, x.com/BryanBumgardner",None),
  ("meta_wk","Meta weekly CPM, CPC, CTR, CVR, CAC, ROAS, Jan 2025 - May 2026 (digitised)","meta_weekly_h1.csv","X thread 2026-06-24 / Newsletter 2026-06-01",None),
@@ -106,7 +109,7 @@ for k,t,fn,src,extra in REG:
     if extra: note=(extra+' '+note).strip()
     DATA[k]=dict(title=t,file=fn,source=src,note=note,cols=cols,rows=rows)
 tpl=open('template.html').read()
-out=tpl.replace('/*__DATA__*/null',json.dumps(DATA,separators=(',',':'))).replace('/*__LIB__*/null',json.dumps(LIB,separators=(',',':'))).replace('/*__HWM__*/null',open('data/howland_meta_charts.json').read()).replace('/*__HWH__*/null',open('data/howland_headlines.json').read()).replace('/*__ANL__*/null',open('data/analysis.json').read()).replace('/*__BF26B__*/null',open('data/bfcm2026_briefing.json').read()).replace('/*__CATK__*/null',open('data/canada_takeaways.json').read())
+out=tpl.replace('/*__DATA__*/null',json.dumps(DATA,separators=(',',':'))).replace('/*__LIB__*/null',json.dumps(LIB,separators=(',',':'))).replace('/*__HWM__*/null',open('data/howland_meta_charts.json').read()).replace('/*__HWH__*/null',open('data/howland_headlines.json').read()).replace('/*__ANL__*/null',open('data/analysis.json').read()).replace('/*__BF26B__*/null',open('data/bfcm2026_briefing.json').read()).replace('/*__CATK__*/null',open('data/canada_takeaways.json').read()).replace('/*__DTCH__*/null',open('data/dtcnl_headlines.json').read())
 open('dtc-newsroom.html','w').write(out)
 print(len(out))
 # GitHub Pages: full document at index.html (site root)

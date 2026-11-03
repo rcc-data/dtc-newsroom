@@ -833,6 +833,26 @@ table.q tbody tr.link{cursor:pointer}
     <div class="term"><div class="th"><span class="t">Key dates</span><span class="m">2026 calendar for DTC advertisers</span></div><div class="bf-dates" id="bf26Dates"></div></div>
     <div class="term"><div class="th"><span class="t">Canada</span><span class="m">2026 surveys and 2025 results</span></div><div class="strip" id="bf26Ca" style="grid-template-columns:repeat(2,minmax(0,1fr))"></div></div>
   </div>
+  <div class="section-head" style="margin-top:6px"><span class="label">Canada: BFCM 2026</span><span style="font:500 11px var(--mono);color:var(--ink-2)">80 sourced figures · RCC, Deloitte, PwC, Accenture, StatCan, Salesforce, Moneris</span></div>
+  <div class="strip" id="caKpis"></div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">Headlines</span><span class="m">the Canadian numbers to know, linked</span></div><div class="bf-dates" id="caHeads"></div></div>
+    <div class="term"><div class="th"><span class="t">Holiday budgets, by survey</span><span class="m">CAD per person · change vs 2025</span></div><div class="chart"><canvas id="cCaBud"></canvas></div><p class="note">Each survey measures something different (all holiday spend, gifts only, BFCM only), so compare the direction, not the dollar levels.</p></div>
+  </div>
+  <div class="term"><div class="th"><span class="t">What's shifting</span><span class="m">same question, last year vs this year</span></div><div class="chart"><canvas id="cCaShift"></canvas></div><p class="note">Cross-border is 2024 vs 2026 (PwC). The rest compare 2025 and 2026 releases from the same publisher.</p></div>
+  <div class="bf-brief" id="caBrief"></div>
+
+  <div class="section-head" style="margin-top:6px"><span class="label">BFCM by day: 2024, 2025 and our 2026 projection</span><span style="font:500 11px var(--mono);color:var(--ink-2)">Northbeam · Triple Whale · Adobe</span></div>
+  <div class="grid2">
+    <div class="term"><div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">YoY by day</span><div class="seg" role="group" aria-label="Metric" id="prM" style="margin-left:auto"><button type="button" data-v="spend" aria-pressed="true">Spend</button><button type="button" data-v="revenue" aria-pressed="false">Revenue</button><button type="button" data-v="mer" aria-pressed="false">MER</button><button type="button" data-v="cac" aria-pressed="false">New-customer CAC</button></div></div><div class="chart tall"><canvas id="cPrDay"></canvas></div><p class="note" id="prDayNote"></p></div>
+    <div class="term"><div class="th"><span class="t">Daily ad spend shape</span><span class="m">index, Tue-Thu 2024 = 100 (derived from Northbeam pacing and YoY)</span></div><div class="chart tall"><canvas id="cPrShape"></canvas></div><p class="note">2024 shape from Northbeam's median pacing (Black Friday +34.9% on Thanksgiving, the weekend -17.7% on Black Friday, Cyber Monday +5.0% on the weekend); 2025 applies Northbeam's YoY by day; the 2026 band applies the two projection scenarios.</p></div>
+  </div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">Meta CPM by week into BFCM</span><span class="m">Northbeam weekly (read from chart) · 2026 projected band</span></div><div class="chart tall"><canvas id="cPrCpm"></canvas></div><p class="note" id="prCpmNote"></p></div>
+    <div class="term"><div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">By platform at BFCM</span><div class="seg" role="group" aria-label="Metric" id="prP" style="margin-left:auto"><button type="button" data-v="cpm" aria-pressed="true">CPM</button><button type="button" data-v="cpa" aria-pressed="false">CPA</button><button type="button" data-v="roas" aria-pressed="false">ROAS</button></div></div><div class="chart"><canvas id="cPrPlat"></canvas></div><div class="tw"><table class="q" id="tPrPlat"></table></div><p class="note">Triple Whale BFCM weekend, 33,000+ shops. 2024 is implied from 2025 and Triple Whale's stated YoY change. 2026 is our projection (method below).</p></div>
+  </div>
+  <div class="term"><div class="th"><span class="t">How the 2026 projection works</span><span class="m">newsroom method · not a vendor forecast</span></div><div id="prMethod" style="font-size:13px;line-height:1.5;color:#b9c4bf"></div></div>
+
   <div class="term">
     <div class="ctl" style="flex-wrap:wrap"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Every figure, sourced</span><div class="seg" role="group" aria-label="Set" id="bf26Set" style="margin-left:auto"><button type="button" data-v="o" aria-pressed="true">2026 outlook</button><button type="button" data-v="r" aria-pressed="false">2025 results</button></div><label for="bf26Theme">Theme</label><select id="bf26Theme"></select></div>
     <div class="tw" style="max-height:520px;overflow:auto"><table class="q cad-t" id="tBf26Facts"></table></div>
@@ -1300,6 +1320,7 @@ const HWM=/*__HWM__*/null;
 const HWH=/*__HWH__*/null;
 const ANL=/*__ANL__*/null;
 const BF26B=/*__BF26B__*/null;
+const CATK=/*__CATK__*/null;
 const SRC=Object.fromEntries(LIB.map(x=>[x.id,x]));
 const srcBtn=(ids,label)=>`<button type="button" class="src-btn" data-src="${ids}" aria-label="Show sources and quotes">${label||'SRC ↗'}</button>`;
 let lastFocus=null;
@@ -2225,10 +2246,72 @@ function renderToday(){
   const H=W.filter(r=>r.date>=cut).sort((a,b)=>rank(a)-rank(b)||(a.date<b.date?1:-1)).slice(0,9);
   document.getElementById('fHeads').innerHTML=H.map(r=>`<a href="${r.url}" target="_blank" rel="noopener"><span class="d">${dfmt(r.date)}</span><span><b>${esc(r.title)}</b><small>${esc(r.pub)} · ${esc(r.type)}</small></span></a>`).join('');
   const N=[...LIB].filter(x=>x.date&&x.date>=new Date(new Date(last+'T12:00')-10*864e5).toISOString().slice(0,10)&&(x.data||[]).length&&!/Weekly|Monthly|Tool|Site/.test(x.src||'')).sort((a,b)=>a.date<b.date?1:-1);
-  const extra=[{date:'2026-11-03',title:'BFCM 2026 briefing: 11 things the data says, 161 sourced figures',pub:'Newsroom',to:'#bfcm'},{date:'2026-11-03',title:'How many ads to launch: six sources compared',pub:'Runneth desk',to:'#mo-bench'},{date:'2026-11-03',title:'Curtis Howland: 31 Meta Ads charts redrawn',pub:'Curtis Howland desk',to:'#howland'},{date:'2026-11-02',title:'Runneth Weekly Trending Ads: 120 ads, 4 categories',pub:'Runneth desk',to:'#mo-trend'}];
+  const extra=[{date:'2026-11-03',title:'Canada BFCM 2026: budgets, intent, Buy Canadian and 12 takeaways',pub:'BFCM desk',to:'#bfcm'},{date:'2026-11-03',title:'BFCM by day: 2024, 2025 and a 2026 projection (spend, MER, CAC, CPM, ROAS)',pub:'BFCM desk',to:'#bfcm'},{date:'2026-11-03',title:'BFCM 2026 briefing: 11 things the data says, 161 sourced figures',pub:'Newsroom',to:'#bfcm'},{date:'2026-11-03',title:'How many ads to launch: six sources compared',pub:'Runneth desk',to:'#mo-bench'},{date:'2026-11-03',title:'Curtis Howland: 31 Meta Ads charts redrawn',pub:'Curtis Howland desk',to:'#howland'},{date:'2026-11-02',title:'Runneth Weekly Trending Ads: 120 ads, 4 categories',pub:'Runneth desk',to:'#mo-trend'}];
   const seenT=new Set();const items=[...extra,...N.map(x=>({date:x.date,title:x.title,pub:x.pub||'Northbeam',to:DESKOF[x.pub||'Northbeam']||'#wire'}))].filter(x=>!seenT.has(x.title)&&seenT.add(x.title)).slice(0,9);
   document.getElementById('fNew').innerHTML=items.map(x=>`<a href="${x.to}"><span class="d">${dfmt(x.date)}</span><span><b>${esc(x.title)}</b><small>${esc(x.pub)}</small></span></a>`).join('');
 }
+
+/* ---------- BFCM: Canada + projection ---------- */
+let prM='spend',prP='cpm';
+function renderCa(){
+  const C=rowsOf('ca26');const g=i=>C[i];
+  kpiStrip('caKpis',[['Holiday budget','$911','RCC x Leger, -6.5% vs $975',T.down,''],['Deloitte Canada','-14%','to $1,305, a record low',T.down,''],['Black Friday top-3 day','88%','52% rank it first',T.amber,''],['Cyber Monday top-3 day','72%','up from 64%',T.up,''],['Start before Black Friday','81%','up from 47% (Accenture)',T.blue,''],['Clothing share of budget','19%','up from 17%',T.up,'']]);
+  const H=[0,3,5,13,14,20,27,28,34,35,38,55,47];
+  document.getElementById('caHeads').innerHTML=H.map(i=>{const r=g(i);return r?`<div><span>${esc((r.published||'').slice(5)||'')}</span><a href="${r.url}" target="_blank" rel="noopener" style="color:inherit">${esc(r.headline)} <span style="color:${T.dim}">· ${esc(r.publisher)} ↗</span></a></div>`:''}).join('');
+  const bud=[['RCC x Leger: all holiday',911,-6.5],['Deloitte Canada: holiday spend',1305,-14],['PwC Canada: holiday budget',1487,-11],['Accenture: gifts',717,-4],['Omnisend: BFCM only',325,-29]];
+  mk('cCaBud',{type:'bar',data:{labels:bud.map(b=>b[0]),datasets:[{label:'CAD per person',data:bud.map(b=>b[1]),backgroundColor:T.blue}]},options:{indexAxis:'y',scales:{x:{grid,beginAtZero:true,ticks:{callback:v=>'$'+v}},y:{grid:{display:false},ticks:{font:{size:10}}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>{const b=bud[c.dataIndex];return ` $${b[1]} · ${b[2]>0?'+':''}${b[2]}% vs 2025${b[0].startsWith('Accenture')?' (nearly)':''}${b[0].startsWith('Omnisend')?' (vs $458 reported for 2025)':''}`}}}}}});
+  const sh=[['Cyber Monday a top-3 day',64,72],['Start before Black Friday',47,81],['Shop in store to see and touch',58,62],['Online share of budget',39,42],['Clothing share of budget',17,19],['Plan to cross-border shop',20,13]];
+  mk('cCaShift',{type:'bar',data:{labels:sh.map(x=>x[0]),datasets:[{label:'Last year',data:sh.map(x=>x[1]),backgroundColor:'#5f6b66'},{label:'2026',data:sh.map(x=>x[2]),backgroundColor:sh.map(x=>x[2]>=x[1]?T.amber:T.down)}]},options:{scales:{y:{grid,beginAtZero:true,ticks:{callback:v=>v+'%'}},x:{grid:{display:false},ticks:{font:{size:10},callback:function(v){return hmWrap(this.getLabelForValue(v))}}}},plugins:{legend:{position:'bottom',labels:{font:{size:10}}},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y}%`}}}}});
+  document.getElementById('caBrief').innerHTML=(CATK||[]).map(x=>`<div class="bb"><b>${esc(x.h)}</b><p>${esc(x.b)}</p></div>`).join('');
+}
+function prInputs(){const I={};rowsOf('pr26').forEach(r=>I[r.input]=n(r.value));return I}
+function renderProj(){
+  const I=prInputs();const D=rowsOf('bfcm_daily');const days=D.map(r=>r.day);
+  const run={spend:I.nb_run_spend,revenue:I.nb_run_revenue,mer:I.nb_run_mer,cac:I.nb_run_cac};
+  const y25=m=>D.map(r=>n(r[m]));const avg=a=>a.reduce((s,v)=>s+v,0)/a.length;
+  const scen=m=>{const a=y25(m),sh=run[m]-avg(a);return {mom:a,run:a.map(v=>+(v+sh).toFixed(2)),shift:sh}};
+  const S=scen(prM);
+  const ds=[{type:'bar',label:'2025 vs 2024 (Northbeam)',data:y25(prM),backgroundColor:'#5f6b66',order:2},{type:'bar',label:'2026 projection range',data:S.mom.map((v,i)=>[Math.min(v,S.run[i]),Math.max(v,S.run[i])+(Math.abs(v-S.run[i])<0.3?0.3:0)]),backgroundColor:T.amber+'aa',borderColor:T.amber,borderWidth:1,order:1}];
+  if(prM==='revenue'){const ad=[(I.adobe26_thanksgiving/I.adobe25_thanksgiving-1)*100,(I.adobe26_bf/I.adobe25_bf-1)*100,null,null,(I.adobe26_cm/I.adobe25_cm-1)*100].map(v=>v==null?null:+v.toFixed(1));ds.push({type:'line',label:'Adobe US online market, 2026 forecast vs 2025',data:ad,borderColor:T.blue,backgroundColor:T.blue,showLine:false,pointRadius:6,pointStyle:'rectRot',order:0})}
+  mk('cPrDay',{type:'bar',data:{labels:days,datasets:ds},options:{scales:{y:{grid,ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom',labels:{font:{size:10}}},tooltip:{callbacks:{label:c=>{const v=c.raw;return Array.isArray(v)?` 2026: ${(+S.mom[c.dataIndex]).toFixed(1)}% (same as 2025) to ${S.run[c.dataIndex].toFixed(1)}% (2026 run-rate)`:` ${c.dataset.label}: ${v}%`}}}}}});
+  const nm={spend:'spend',revenue:'revenue',mer:'MER',cac:'new-customer CAC'}[prM];
+  document.getElementById('prDayNote').textContent=`Grey: Northbeam's BFCM 2025 ${nm} vs 2024 by day. Amber range: 2026 vs 2025, from "same as last year" to "Northbeam's H1 2026 run-rate" (${run[prM]>0?'+':''}${run[prM]}% median, which moves every day by ${S.shift>0?'+':''}${S.shift.toFixed(1)} points).`;
+  // shape
+  const base24=[100,134.9,111.0,111.0,116.6];
+  const sp=scen('spend');const g25=y25('spend');
+  const i25=base24.map((v,i)=>v*(1+g25[i]/100)/(1+g25[0]/100));
+  const iA=i25.map((v,i)=>v*(1+sp.mom[i]/100)/(1+sp.mom[0]/100)),iB=i25.map((v,i)=>v*(1+sp.run[i]/100)/(1+sp.run[0]/100));
+  const r1=a=>a.map(v=>+v.toFixed(1));
+  mk('cPrShape',{type:'line',data:{labels:days,datasets:[{label:'2024',data:base24,borderColor:'#5f6b66',backgroundColor:'#5f6b66',tension:.25},{label:'2025',data:r1(i25),borderColor:T.blue,backgroundColor:T.blue,tension:.25},{label:'2026 low',data:r1(iA.map((v,i)=>Math.min(v,iB[i]))),borderColor:T.amber,borderDash:[4,3],pointRadius:0,tension:.25,fill:false},{label:'2026 projected range',data:r1(iA.map((v,i)=>Math.max(v,iB[i]))),borderColor:T.amber,backgroundColor:T.amber+'33',borderDash:[4,3],pointRadius:0,tension:.25,fill:'-1'}]},options:{scales:{y:{grid,title:{display:true,text:'index',color:T.dim,font:{size:10}}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom',labels:{font:{size:10},filter:i=>i.text!=='2026 low'}}}}});
+  // CPM weekly
+  const W=rowsOf('meta_cpm').map(r=>({d:r.period,c:n(r.cpm_usd),y:n(r.yoy_pct)}));
+  const y26=W.filter(w=>w.d>='2026-01-01'&&w.y!=null);const lo=avg(y26.map(w=>w.y))/100;const hi=avg(y26.slice(-4).map(w=>w.y))/100;
+  const w25=W.filter(w=>w.d>='2025-09-01'&&w.d<'2026-01-01');
+  const wk=d=>{const x=new Date(d+'T12:00');return x.toLocaleDateString('en-GB',{day:'numeric',month:'short'})};
+  const act26=w25.map(w=>{const t=new Date(new Date(w.d+'T12:00').getTime()+364*864e5).toISOString().slice(0,10);const f=W.find(x=>x.d===t);return f?f.c:null});
+  const futIdx=act26.map(v=>v==null);
+  mk('cPrCpm',{type:'line',data:{labels:w25.map(w=>'w/c '+wk(w.d)),datasets:[{label:'2025',data:w25.map(w=>w.c),borderColor:'#7f8c87',backgroundColor:'#7f8c87',tension:.25,pointRadius:2},{label:'2026 actual',data:act26,borderColor:T.blue,backgroundColor:T.blue,tension:.25,pointRadius:3},{label:'proj low',data:w25.map((w,i)=>futIdx[i]?+(w.c*(1+lo)).toFixed(2):null),borderColor:T.amber,borderDash:[4,3],pointRadius:0,tension:.25,fill:false},{label:'2026 projected range',data:w25.map((w,i)=>futIdx[i]?+(w.c*(1+hi)).toFixed(2):null),borderColor:T.amber,backgroundColor:T.amber+'33',borderDash:[4,3],pointRadius:0,tension:.25,fill:'-1'}]},options:{interaction:{mode:'index',intersect:false},scales:{y:{grid,ticks:{callback:v=>'$'+v}},x:{grid:{display:false},ticks:{maxRotation:50,font:{size:9}}}},plugins:{legend:{position:'bottom',labels:{font:{size:10},filter:i=>i.text!=='proj low'}},tooltip:{callbacks:{label:c=>c.parsed.y==null?null:` ${c.dataset.label==='proj low'?'2026 projected (low)':c.dataset.label==='2026 projected range'?'2026 projected (high)':c.dataset.label}: $${c.parsed.y.toFixed(2)}`}}}}});
+  const pk=w25.reduce((a,b)=>b.c>a.c?b:a);
+  document.getElementById('prCpmNote').textContent=`Projection = the same week of 2025 x (1 + YoY). Low uses the 2026 year-to-date average YoY (+${(lo*100).toFixed(1)}%), high the latest four weeks (+${(hi*100).toFixed(1)}%). The 2025 peak, week of ${wk(pk.d)} at $${pk.c.toFixed(2)}, projects to $${(pk.c*(1+lo)).toFixed(2)} to $${(pk.c*(1+hi)).toFixed(2)}.`;
+  // platform
+  const T25={meta:{cpm:[22.26,7.6],cpa:[34.06,2.19],roas:[2.26,3.18]},google:{cpm:[20.58,10.57],cpa:[26.31,34.18],roas:[3.62,-21.09]},tiktok:{cpm:[6.26,-27.5],cpa:[17.35,-29.01],roas:[2.26,28.42]}};
+  const proj=(p,m,v)=>m==='cpm'?(p==='meta'?[v*(1+lo),v*(1+hi)]:null):m==='cpa'?[v*(1+I.nb_run_cac/100),v*(1+I.nb_run_cac/100)]:[v*(1+I.nb_run_mer/100),v*(1+I.nb_run_mer/100)];
+  const P=['meta','google','tiktok'],PN={meta:'Meta',google:'Google',tiktok:'TikTok'};
+  const v24=P.map(p=>{const [v,y]=T25[p][prP];return +(v/(1+y/100)).toFixed(2)}),v25=P.map(p=>T25[p][prP][0]),v26=P.map(p=>{const r=proj(p,prP,T25[p][prP][0]);return r?+((r[0]+r[1])/2).toFixed(2):null});
+  const fmt=v=>v==null?'n/a':(prP==='roas'?v.toFixed(2)+'x':'$'+v.toFixed(2));
+  mk('cPrPlat',{type:'bar',data:{labels:P.map(p=>PN[p]),datasets:[{label:'2024 (implied)',data:v24,backgroundColor:'#5f6b66'},{label:'2025',data:v25,backgroundColor:T.blue},{label:'2026 projection',data:v26,backgroundColor:T.amber}]},options:{scales:{y:{grid,beginAtZero:true},x:{grid:{display:false}}},plugins:{legend:{position:'bottom',labels:{font:{size:10}}},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${fmt(c.parsed.y)}`}}}}});
+  document.getElementById('tPrPlat').innerHTML='<thead><tr><th>Platform</th><th>2024 (implied)</th><th>2025</th><th>YoY</th><th>2026 projection</th></tr></thead><tbody>'+P.map((p,i)=>{const r=proj(p,prP,v25[i]);return `<tr><td><b>${PN[p]}</b></td><td>${fmt(v24[i])}</td><td>${fmt(v25[i])}</td><td>${T25[p][prP][1]>0?'+':''}${T25[p][prP][1]}%</td><td>${r?(Math.abs(r[0]-r[1])<.005?fmt(r[0]):fmt(r[0])+' to '+fmt(r[1])):'n/a'}</td></tr>`}).join('')+'</tbody>';
+  document.getElementById('prMethod').innerHTML=`<p style="margin:0 0 6px"><b>What this is:</b> a simple, transparent projection built only from published numbers, to frame expectations. Neither Northbeam nor Triple Whale has published a numeric BFCM 2026 forecast, and neither publishes absolute daily series, so the day charts work in year-on-year changes and an index.</p>
+  <ul style="margin:0;padding-left:18px">
+  <li><b>Day-by-day YoY:</b> two scenarios bound the 2026 range. "Same as last year" repeats each day's 2025 YoY. "2026 run-rate" shifts every day so the five periods average Northbeam's H1 2026 median (spend +${I.nb_run_spend}%, revenue +${I.nb_run_revenue}%, MER ${I.nb_run_mer}%, CAC +${I.nb_run_cac}%), keeping 2025's shape. Adobe's market forecast is shown for revenue as a cross-check.</li>
+  <li><b>Daily spend shape:</b> Northbeam's 2024 median pacing turned into an index, carried forward with each year's YoY by day.</li>
+  <li><b>Meta CPM:</b> each 2025 week scaled by the 2026 YoY seen so far in Northbeam's weekly chart (year-to-date average for the low end, last four weeks for the high end).</li>
+  <li><b>Platforms:</b> Triple Whale's BFCM 2025 values; 2026 CPM uses the Meta CPM range above (no current YoY for Google or TikTok), CPA moves with Northbeam's CAC run-rate and ROAS with its MER run-rate.</li>
+  <li><b>Watch for:</b> Northbeam measured Black Friday as the one BFCM day where efficiency fell in 2025, and longer conversion lag into BFCM (36 to 37% for one brand), so early-November results will read low on 1-day attribution.</li></ul>
+  <p style="margin:8px 0 0">Sources: <a href="https://themediabuyer.northbeam.io/p/h1-2026-meta-cvrs-are-tanking-as-cacs-skyrocket" target="_blank" rel="noopener">Northbeam H1 2026</a> · <a href="https://themediabuyer.northbeam.io/p/meta-cpms-are-up-25-and-it-s-only-october" target="_blank" rel="noopener">Northbeam Meta CPM</a> · <a href="https://www.prnewswire.com/news-releases/triple-whale-reports-record-bfcm-engagement-as-brands-turn-to-ai-to-drive-smarter-growth-302633148.html" target="_blank" rel="noopener">Triple Whale BFCM 2025</a> · <a href="https://news.adobe.com/news/2026/09/adobe-us-holiday-shopping-season-to-hit-record" target="_blank" rel="noopener">Adobe 2026 forecast</a></p>`;
+}
+SEGBIND('prM',b=>{prM=b.dataset.v;renderProj()});
+SEGBIND('prP',b=>{prP=b.dataset.v;renderProj()});
 
 /* ---------- BFCM 2026 briefing ---------- */
 let bf26Set='o';
@@ -2400,7 +2483,7 @@ SEGBIND('hsMeasure',b=>{hsMeasure=b.dataset.m;renderHaus()});
 ['twMetric','twChan','twSnap','twInd'].forEach(id=>document.getElementById(id).addEventListener('change',renderTW));
 
 /* ---------- routing ---------- */
-const VIEWS={front:()=>{renderFront();renderToday()},'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:()=>{renderBf26();renderBfcm()},mkt:renderMkt,'mo-bench':()=>{renderMoBench();renderCv()},'mo-trend':()=>{renderTA();renderMoTrend()},'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,wire:renderWire};
+const VIEWS={front:()=>{renderFront();renderToday()},'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:()=>{renderBf26();renderCa();renderProj();renderBfcm()},mkt:renderMkt,'mo-bench':()=>{renderMoBench();renderCv()},'mo-trend':()=>{renderTA();renderMoTrend()},'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,wire:renderWire};
 SEGBIND('mtView',b=>{mtView=b.dataset.v;renderMeta()});
 document.getElementById('mtEvents').addEventListener('change',renderMeta);
 const PUBDESKS=['nb','mo','ctc','haus','triplewhale','foxwell','howland'];

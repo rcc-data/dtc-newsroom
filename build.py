@@ -95,6 +95,9 @@ REG=[
  ("bfcm25f","BFCM 2025 results from primary publishers","bfcm2025_facts.csv","Adobe, Salesforce, Shopify, NRF, Triple Whale, Lebesgue, Klaviyo, Attentive and others",None),
  ("bfcm26o","BFCM 2026 outlook: forecasts, surveys, platform and calendar changes","bfcm2026_outlook.csv","Adobe, NRF, Bain, Deloitte, RCC, Common Thread and others, Sep to Nov 2026",None),
  ("cvol","How many Meta creatives to launch: six sources","creative_volume_2026.csv","Sicard, MHI, Billo, Foxwell, Curtis Howland, Nov 2026",None),
+ ("ca26","Canada BFCM 2026: surveys, forecasts and 2025 baselines","canada_bfcm2026.csv","RCC, Deloitte, PwC, Accenture, StatCan, Salesforce and others, Oct to Nov 2026",None),
+ ("nbtw","Northbeam and Triple Whale BFCM 2024 and 2025 by day or period","bfcm_nb_tw_days.csv","Northbeam, Triple Whale public releases",None),
+ ("pr26","Inputs for the BFCM 2026 projection","bfcm2026_projection_inputs.csv","Northbeam H1 2026, Adobe",None),
  ("wire_heads","Latest headlines on the wire","wire_headlines.csv","RSS / blog listings, weekly",None),
 ]
 DATA={}
@@ -103,7 +106,7 @@ for k,t,fn,src,extra in REG:
     if extra: note=(extra+' '+note).strip()
     DATA[k]=dict(title=t,file=fn,source=src,note=note,cols=cols,rows=rows)
 tpl=open('template.html').read()
-out=tpl.replace('/*__DATA__*/null',json.dumps(DATA,separators=(',',':'))).replace('/*__LIB__*/null',json.dumps(LIB,separators=(',',':'))).replace('/*__HWM__*/null',open('data/howland_meta_charts.json').read()).replace('/*__HWH__*/null',open('data/howland_headlines.json').read()).replace('/*__ANL__*/null',open('data/analysis.json').read()).replace('/*__BF26B__*/null',open('data/bfcm2026_briefing.json').read())
+out=tpl.replace('/*__DATA__*/null',json.dumps(DATA,separators=(',',':'))).replace('/*__LIB__*/null',json.dumps(LIB,separators=(',',':'))).replace('/*__HWM__*/null',open('data/howland_meta_charts.json').read()).replace('/*__HWH__*/null',open('data/howland_headlines.json').read()).replace('/*__ANL__*/null',open('data/analysis.json').read()).replace('/*__BF26B__*/null',open('data/bfcm2026_briefing.json').read()).replace('/*__CATK__*/null',open('data/canada_takeaways.json').read())
 open('dtc-newsroom.html','w').write(out)
 print(len(out))
 # GitHub Pages: full document at index.html (site root)

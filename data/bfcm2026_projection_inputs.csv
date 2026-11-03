@@ -1,0 +1,12 @@
+# Inputs for the newsroom BFCM 2026 projection (see method note on the BFCM desk). Run-rates are Northbeam H1 2026 medians; Adobe day totals are 2025 actuals and 2026 forecasts.
+input,value,unit,what,url
+nb_run_spend,12.38,% YoY,"Northbeam H1 2026 vs H1 2025, median spend",https://themediabuyer.northbeam.io/p/h1-2026-meta-cvrs-are-tanking-as-cacs-skyrocket
+nb_run_revenue,3.32,% YoY,"Northbeam H1 2026 vs H1 2025, median revenue",https://themediabuyer.northbeam.io/p/h1-2026-meta-cvrs-are-tanking-as-cacs-skyrocket
+nb_run_mer,-1.11,% YoY,"Northbeam H1 2026 vs H1 2025, median MER",https://themediabuyer.northbeam.io/p/h1-2026-meta-cvrs-are-tanking-as-cacs-skyrocket
+nb_run_cac,10.34,% YoY,"Northbeam H1 2026 vs H1 2025, median CAC",https://themediabuyer.northbeam.io/p/h1-2026-meta-cvrs-are-tanking-as-cacs-skyrocket
+adobe25_thanksgiving,6.4,USD bn,Adobe 2025 actual,https://news.adobe.com/news/2025/12/adobe-cyber-monday-hits-record
+adobe25_bf,11.8,USD bn,Adobe 2025 actual,
+adobe25_cm,14.25,USD bn,Adobe 2025 actual,
+adobe26_thanksgiving,6.9,USD bn,Adobe 2026 forecast,https://news.adobe.com/news/2026/09/adobe-us-holiday-shopping-season-to-hit-record
+adobe26_bf,12.9,USD bn,Adobe 2026 forecast,
+adobe26_cm,15.1,USD bn,Adobe 2026 forecast,

@@ -1,0 +1,91 @@
+# Northbeam and Triple Whale public BFCM 2024 and 2025 figures by day or period, collected 3 Nov 2026. Neither publishes absolute daily series: Northbeam gives YoY and pacing percentages, Triple Whale gives weekend totals and a few single days.
+source,year,date,day,metric,value,unit,scope,url,note
+Triple Whale,2024,2024-11-29,Black Friday,revenue,717624347,USD,All Triple Whale brands,https://www.triplewhale.com/blog/black-friday-statistics,"'$717,624,347 in revenue was captured in one day'"
+Triple Whale,2024,2024-11-29,Black Friday,revenue_shopify,669587214,USD,Shopify brands (as stated),https://www.triplewhale.com/blog/black-friday-statistics,"'The total revenue across all brands on Shopify was $669,587,214'"
+Triple Whale,2024,2024-11-29,Black Friday,ad_spend,90618550,USD,All Triple Whale brands,https://www.triplewhale.com/blog/black-friday-statistics,"'$90,618,550 was spent on ads'"
+Triple Whale,2024,2024-11-29,Black Friday,orders,22542085,count,All Triple Whale brands,https://www.triplewhale.com/blog/black-friday-statistics,"Stated as Black Friday 'Total orders increased to 22,542,085' but near-identical to BFCM weekend total 22,542,805 on bfcm-2024-trends; likely a weekend figure mislabelled; treat with caution"
+Triple Whale,2024,2024-11-29,Black Friday,aov,97.52,USD,All Triple Whale brands,https://www.triplewhale.com/blog/black-friday-statistics,Also stated on bfcm-2024-trends as Friday AOV
+Triple Whale,2024,2024-11-29,Black Friday,aov_yoy_pct,-3.03,pct,All Triple Whale brands,https://www.triplewhale.com/blog/black-friday-statistics,vs Black Friday 2023 AOV $100.18
+Triple Whale,2024,2024-11-29,Black Friday,new_customer_revenue,391327012,USD,All Triple Whale brands,https://www.triplewhale.com/blog/black-friday-statistics,'comprising over 57% of total revenue'
+Triple Whale,2024,2024-11-29,Black Friday,new_customer_revenue_share_pct,57,pct,All Triple Whale brands,https://www.triplewhale.com/blog/black-friday-statistics,stated as 'over 57%'
+Triple Whale,2024,2024-11-29,Black Friday,meta_spend_share_pct,68.77,pct,All Triple Whale brands,https://www.triplewhale.com/blog/black-friday-statistics,Meta (Facebook and Instagram) share of ad dollars
+Triple Whale,2024,2024-11-29,Black Friday,pixel_events_peak_per_sec,12600,events/s,Triple Whale pixel,https://www.triplewhale.com/blog/black-friday-statistics,"peak 12,600 events per second; >1.5bn pixel events on the day"
+Triple Whale,2024,2024-11-29,Black Friday,brands_tracked,29745,count,Triple Whale,https://www.triplewhale.com/blog/black-friday-statistics,
+Triple Whale,2024,2024-11-28,Thanksgiving,revenue_us_online_market,6000000000,USD,"US online market (third-party, cited by TW)",https://www.triplewhale.com/blog/black-friday-statistics,'consumers spent over $6 billion online on Thanksgiving Day'; not Triple Whale data
+Triple Whale,2024,2024-12-02,Cyber Monday,aov,84.52,USD,All Triple Whale brands,https://www.triplewhale.com/blog/bfcm-2024-trends,
+Triple Whale,2024,,Weekend total,revenue,2028792952,USD,All Triple Whale brands,https://www.triplewhale.com/blog/bfcm-2024-trends,'for the entire weekend'
+Triple Whale,2024,,Weekend total,revenue_shopify,1910000000,USD,Shopify brands on Triple Whale,https://www.triplewhale.com/blog/bfcm-2024-trends,'$1.91 billion'; BFCM 2023 about $1 billion
+Triple Whale,2024,,Weekend total,orders,22542805,count,All Triple Whale brands,https://www.triplewhale.com/blog/bfcm-2024-trends,
+Triple Whale,2024,,Weekend total,ad_spend,313822256,USD,All Triple Whale brands,https://www.triplewhale.com/blog/bfcm-2024-trends,"also printed as '$313,822,077 million' elsewhere on the page"
+Triple Whale,2024,,Weekend total,aov,90,USD,All Triple Whale brands,https://www.triplewhale.com/blog/bfcm-2024-trends,
+Triple Whale,2024,,Weekend total,roas,6.46,x,"All ad platforms, platform-reported",https://www.triplewhale.com/blog/bfcm-2024-trends,conversion value $1.19bn; note this ROAS does not equal revenue/ad_spend
+Triple Whale,2024,,Weekend total,conversion_value,1190000000,USD,All ad platforms,https://www.triplewhale.com/blog/bfcm-2024-trends,
+Triple Whale,2024,,Weekend total,clicks,273000000,count,All ad platforms,https://www.triplewhale.com/blog/bfcm-2024-trends,
+Triple Whale,2024,,Weekend total,impressions,19000000000,count,All ad platforms,https://www.triplewhale.com/blog/bfcm-2024-trends,'over 19 billion'
+Triple Whale,2024,,Weekend total,new_customer_revenue,1152238409,USD,All Triple Whale brands,https://www.triplewhale.com/blog/bfcm-2024-trends,
+Triple Whale,2024,,Weekend total,new_customer_revenue_share_pct,59.71,pct,All Triple Whale brands,https://www.triplewhale.com/blog/bfcm-2024-trends,
+Triple Whale,2024,,Weekend total,returning_customer_revenue,777394154,USD,All Triple Whale brands,https://www.triplewhale.com/blog/bfcm-2024-trends,also misprinted as $7.9 million
+Triple Whale,2024,,Weekend total,returning_customer_revenue_share_pct,40.29,pct,All Triple Whale brands,https://www.triplewhale.com/blog/bfcm-2024-trends,
+Triple Whale,2024,,Weekend total,sessions,392000000,count,Triple Whale pixel,https://www.triplewhale.com/blog/bfcm-2024-trends,
+Triple Whale,2024,,Weekend total,add_to_carts,138000000,count,Triple Whale pixel,https://www.triplewhale.com/blog/bfcm-2024-trends,
+Triple Whale,2024,,Weekend total,meta_spend_share_pct,67.81,pct,Triple Whale same-shop,https://www.triplewhale.com/blog/facebook-ads-bfcm,"BFCM 2024 Meta share, cited as comparison in 2025 article"
+Triple Whale,2025,,Weekend total,revenue,2880000000,USD,"Triple Whale brands (33,000+ shops)",https://www.prnewswire.com/news-releases/triple-whale-reports-record-bfcm-engagement-as-brands-turn-to-ai-to-drive-smarter-growth-302633148.html,press release 4 Dec 2025; webinar says 2.9B; ad guide calls it a four-day event
+Triple Whale,2025,,Weekend total,orders,26000000,count,Triple Whale brands,https://www.prnewswire.com/news-releases/triple-whale-reports-record-bfcm-engagement-as-brands-turn-to-ai-to-drive-smarter-growth-302633148.html,
+Triple Whale,2025,,Weekend total,ad_spend,606000000,USD,Triple Whale brands,https://www.prnewswire.com/news-releases/triple-whale-reports-record-bfcm-engagement-as-brands-turn-to-ai-to-drive-smarter-growth-302633148.html,$606M in press release; $607M in advertising guide table; 606.6M in TW webinar
+Triple Whale,2025,,Weekend total,aov,79.18,USD,Triple Whale brands,https://www.triplewhale.com/blog/bfcm-advertising-guide,also in TW webinar
+Triple Whale,2025,,Weekend total,new_customer_revenue,1400000000,USD,Triple Whale brands,https://www.prnewswire.com/news-releases/triple-whale-reports-record-bfcm-engagement-as-brands-turn-to-ai-to-drive-smarter-growth-302633148.html,
+Triple Whale,2025,,Weekend total,new_customer_revenue_share_pct,48,pct,Triple Whale brands,https://www.triplewhale.com/blog/bfcm-advertising-guide,'down from 59.71% in BFCM 2024'
+Triple Whale,2025,,Weekend total,shopify_sales_share_pct,19.7,pct,Share of all Shopify merchant sales,https://www.prnewswire.com/news-releases/triple-whale-reports-record-bfcm-engagement-as-brands-turn-to-ai-to-drive-smarter-growth-302633148.html,
+Triple Whale,2025,,Weekend total,meta_roas,2.26,x,"Meta, platform-reported",https://www.prnewswire.com/news-releases/triple-whale-reports-record-bfcm-engagement-as-brands-turn-to-ai-to-drive-smarter-growth-302633148.html,
+Triple Whale,2025,,Weekend total,meta_roas_yoy_pct,3.18,pct,Meta,https://www.triplewhale.com/blog/facebook-ads-bfcm,vs BFCM 2024
+Triple Whale,2025,,Weekend total,meta_cpm,22.26,USD,Meta,https://www.prnewswire.com/news-releases/triple-whale-reports-record-bfcm-engagement-as-brands-turn-to-ai-to-drive-smarter-growth-302633148.html,
+Triple Whale,2025,,Weekend total,meta_cpm_yoy_pct,7.6,pct,Meta,https://www.prnewswire.com/news-releases/triple-whale-reports-record-bfcm-engagement-as-brands-turn-to-ai-to-drive-smarter-growth-302633148.html,facebook-ads-bfcm blog says 'about 7.8%'
+Triple Whale,2025,,Weekend total,meta_cpa,34.06,USD,Meta,https://www.triplewhale.com/blog/facebook-ads-bfcm,
+Triple Whale,2025,,Weekend total,meta_cpa_yoy_pct,2.19,pct,Meta,https://www.triplewhale.com/blog/facebook-ads-bfcm,"text says 'higher than in BFCM 2025', apparently a typo for 2024; tiktok article also says Meta CPA rose 2.19%"
+Triple Whale,2025,,Weekend total,meta_aov,77.79,USD,Meta (median),https://www.triplewhale.com/blog/facebook-ads-bfcm,
+Triple Whale,2025,,Weekend total,meta_aov_yoy_pct,4.44,pct,Meta,https://www.triplewhale.com/blog/facebook-ads-bfcm,
+Triple Whale,2025,,Weekend total,meta_spend_share_pct,67.6,pct,Triple Whale same-shop,https://www.prnewswire.com/news-releases/triple-whale-reports-record-bfcm-engagement-as-brands-turn-to-ai-to-drive-smarter-growth-302633148.html,
+Triple Whale,2025,,Weekend total,google_roas,3.62,x,Google,https://www.triplewhale.com/blog/google-ads-black-friday,
+Triple Whale,2025,,Weekend total,google_roas_yoy_pct,-21.09,pct,Google,https://www.triplewhale.com/blog/google-ads-black-friday,
+Triple Whale,2025,,Weekend total,google_cpa,26.31,USD,Google,https://www.triplewhale.com/blog/google-ads-black-friday,
+Triple Whale,2025,,Weekend total,google_cpa_yoy_pct,34.18,pct,Google,https://www.triplewhale.com/blog/google-ads-black-friday,
+Triple Whale,2025,,Weekend total,google_cpm,20.58,USD,Google,https://www.triplewhale.com/blog/google-ads-black-friday,
+Triple Whale,2025,,Weekend total,google_cpm_yoy_pct,10.57,pct,Google,https://www.triplewhale.com/blog/google-ads-black-friday,
+Triple Whale,2025,,Weekend total,google_aov,88.78,USD,Google,https://www.triplewhale.com/blog/google-ads-black-friday,
+Triple Whale,2025,,Weekend total,google_aov_yoy_pct,4.04,pct,Google,https://www.triplewhale.com/blog/google-ads-black-friday,
+Triple Whale,2025,,Weekend total,google_spend_share_pct,22.65,pct,Triple Whale,https://www.triplewhale.com/blog/google-ads-black-friday,share fell 2.12% YoY
+Triple Whale,2025,,Weekend total,tiktok_roas,2.26,x,TikTok,https://www.triplewhale.com/blog/tiktok-black-friday,
+Triple Whale,2025,,Weekend total,tiktok_roas_yoy_pct,28.42,pct,TikTok,https://www.triplewhale.com/blog/tiktok-black-friday,
+Triple Whale,2025,,Weekend total,tiktok_cpm,6.26,USD,TikTok,https://www.triplewhale.com/blog/tiktok-black-friday,
+Triple Whale,2025,,Weekend total,tiktok_cpm_yoy_pct,-27.5,pct,TikTok,https://www.triplewhale.com/blog/tiktok-black-friday,
+Triple Whale,2025,,Weekend total,tiktok_cpa,17.35,USD,TikTok,https://www.triplewhale.com/blog/tiktok-black-friday,
+Triple Whale,2025,,Weekend total,tiktok_cpa_yoy_pct,-29.01,pct,TikTok,https://www.triplewhale.com/blog/tiktok-black-friday,
+Triple Whale,2025,,Weekend total,tiktok_aov,59.43,USD,TikTok,https://www.triplewhale.com/blog/tiktok-black-friday,
+Triple Whale,2025,,Weekend total,tiktok_aov_yoy_pct,12.15,pct,TikTok,https://www.triplewhale.com/blog/tiktok-black-friday,
+Triple Whale,2025,,Weekend total,tiktok_spend_share_pct,3.66,pct,TikTok,https://www.triplewhale.com/blog/tiktok-black-friday,share up 23.65% YoY
+Triple Whale,2025,,Weekend total,amazon_spend_share_pct,2.82,pct,Amazon Ads,https://goldcast.ondemand.goldcast.io/on-demand/257b0cd1-ad23-4384-b58c-9d6607cd4bdf,TW EMEA webinar transcript
+Triple Whale,2025,,Weekend total,applovin_spend_share_pct,2.03,pct,AppLovin,https://goldcast.ondemand.goldcast.io/on-demand/257b0cd1-ad23-4384-b58c-9d6607cd4bdf,share grew 36.24% per press release
+Triple Whale,2025,,Weekend total,pinterest_spend_share_pct,0.31,pct,Pinterest,https://goldcast.ondemand.goldcast.io/on-demand/257b0cd1-ad23-4384-b58c-9d6607cd4bdf,
+Triple Whale,2025,,Weekend total,snap_spend_share_pct,0.3,pct,Snap,https://goldcast.ondemand.goldcast.io/on-demand/257b0cd1-ad23-4384-b58c-9d6607cd4bdf,
+Triple Whale,2025,,Weekend total,meta_feed_spend,154000000,USD,Facebook Feed placement,https://www.triplewhale.com/blog/facebook-ads-bfcm,"conversion value $500M, ROAS 2.51"
+Triple Whale,2025,,Pre-week,revenue,1770000000,USD,Triple Whale brands,https://www.prnewswire.com/news-releases/triple-whale-reports-record-bfcm-engagement-as-brands-turn-to-ai-to-drive-smarter-growth-302633148.html,'Pre-BFCM'; facebook-ads-bfcm gives window Nov 24 to Nov 27 2025 for spend; ad guide says 'week before BFCM'
+Triple Whale,2025,,Pre-week,orders,16600000,count,Triple Whale brands,https://www.prnewswire.com/news-releases/triple-whale-reports-record-bfcm-engagement-as-brands-turn-to-ai-to-drive-smarter-growth-302633148.html,
+Triple Whale,2025,,Pre-week,ad_spend,396600000,USD,Triple Whale brands,https://www.prnewswire.com/news-releases/triple-whale-reports-record-bfcm-engagement-as-brands-turn-to-ai-to-drive-smarter-growth-302633148.html,Nov 24 to Nov 27 2025 per facebook-ads-bfcm
+Triple Whale,2025,,Pre-week,ad_spend_pct_of_weekend,65,pct,Triple Whale brands,https://www.prnewswire.com/news-releases/triple-whale-reports-record-bfcm-engagement-as-brands-turn-to-ai-to-drive-smarter-growth-302633148.html,'roughly 65%'
+Triple Whale,2025,,Other,forecast_ad_spend_low,400000000,USD,Forecast made 21 Aug 2025,https://www.prnewswire.com/news-releases/holiday-headwinds-triple-whale-forecasts-smaller-baskets-rising-ad-costs-and-a-retention-first-playbook-for-bfcm-2025-302536120.html,$400-450M projected BFCM 2025 ad spend (+28-35% YoY); actual reported $606M
+Triple Whale,2025,,Other,forecast_ad_spend_high,450000000,USD,Forecast made 21 Aug 2025,https://www.prnewswire.com/news-releases/holiday-headwinds-triple-whale-forecasts-smaller-baskets-rising-ad-costs-and-a-retention-first-playbook-for-bfcm-2025-302536120.html,
+Triple Whale,2025,,Other,forecast_ad_spend_yoy_pct_low,28,pct,Forecast made 21 Aug 2025,https://www.prnewswire.com/news-releases/holiday-headwinds-triple-whale-forecasts-smaller-baskets-rising-ad-costs-and-a-retention-first-playbook-for-bfcm-2025-302536120.html,
+Triple Whale,2025,,Other,forecast_ad_spend_yoy_pct_high,35,pct,Forecast made 21 Aug 2025,https://www.prnewswire.com/news-releases/holiday-headwinds-triple-whale-forecasts-smaller-baskets-rising-ad-costs-and-a-retention-first-playbook-for-bfcm-2025-302536120.html,
+Triple Whale,2025,,Other,forecast_new_customer_revenue_share_pct,52,pct,Forecast made 21 Aug 2025,https://www.prnewswire.com/news-releases/holiday-headwinds-triple-whale-forecasts-smaller-baskets-rising-ad-costs-and-a-retention-first-playbook-for-bfcm-2025-302536120.html,'from ~57% to ~52%'; actual reported 48%
+Northbeam,2024,2024-11-29,Black Friday,spend_vs_thanksgiving_pct,34.9,pct,Median Northbeam brand,https://www.northbeam.io/blog/the-cyber-five-pattern-what-to-expect-heading-into-bfcm,'~+34.9%'; caller has 34.92 from another source
+Northbeam,2024,,Weekend total,spend_vs_black_friday_pct,-17.7,pct,Median Northbeam brand,https://www.northbeam.io/blog/the-cyber-five-pattern-what-to-expect-heading-into-bfcm,'~-17.7% across the weekend'; caller has -17.66
+Northbeam,2024,2024-12-02,Cyber Monday,spend_vs_weekend_pct,5.0,pct,Median Northbeam brand,https://www.northbeam.io/blog/the-cyber-five-pattern-what-to-expect-heading-into-bfcm,'~+5.0%'; caller has 5.03
+Northbeam,2024,2024-11-29,Black Friday,mer_vs_thanksgiving_pct,38.1,pct,Median Northbeam brand,https://www.northbeam.io/blog/the-cyber-five-pattern-what-to-expect-heading-into-bfcm,'Median MER climbed ~+38.1% from Thanksgiving to Black Friday'
+Northbeam,2024,2024-12-02,Cyber Monday,mer_vs_weekend_pct,19.5,pct,Median Northbeam brand,https://www.northbeam.io/blog/the-cyber-five-pattern-what-to-expect-heading-into-bfcm,'rebounded ~+19.5% on Monday versus the weekend'
+Northbeam,2024,,Cyber 5 total,first_time_revenue_same_day_share_pct,73,pct,Median Northbeam brand,https://www.northbeam.io/blog/the-cyber-five-pattern-what-to-expect-heading-into-bfcm,'median ~73%' same-day; blended on-day impact 'just under 60%'
+Northbeam,2024,,Cyber 5 total,revenue,1000000000,USD,All Northbeam clients,https://www.northbeam.io/blog/bfcm-2024-predictions-how-did-we-do,"'Nearly $1 billion'; five BFCM days, cash-based, 1-day click"
+Northbeam,2024,,Cyber 5 total,ad_spend,200000000,USD,All Northbeam clients,https://www.northbeam.io/blog/bfcm-2024-predictions-how-did-we-do,'$200 million'; five BFCM days
+Northbeam,2025,,Cyber 5 total,ad_spend_yoy_pct,9,pct,Northbeam same-advertiser,https://www.northbeam.io/blog/cyber-week-2025-a-data-driven-look-at-performance-and-strategy,blog: 'just over 9%'; caller has 9.23 from whitepaper
+Northbeam,2025,,Cyber 5 total,revenue_yoy_pct,13,pct,Northbeam same-advertiser,https://www.northbeam.io/blog/cyber-week-2025-a-data-driven-look-at-performance-and-strategy,blog: 'more than 13%'; caller has 13.35
+Northbeam,2025,,Cyber 5 total,cac_yoy_pct,8,pct,Northbeam first-time CAC,https://www.northbeam.io/blog/cyber-week-2025-a-data-driven-look-at-performance-and-strategy,blog: 'about 8%'; caller has 8.03
+Northbeam,2025,,Cyber 5 total,meta_google_spend_share_pct,80,pct,Northbeam,https://www.northbeam.io/blog/cyber-week-2025-a-data-driven-look-at-performance-and-strategy,'roughly 80% of Cyber Week digital ad spend' (approximate)

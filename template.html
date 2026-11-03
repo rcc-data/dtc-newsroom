@@ -302,6 +302,28 @@ table.q tbody tr.link{cursor:pointer}
 .hm-term details{font:500 11.5px var(--mono);color:var(--t-dim)}
 .hm-term summary{cursor:pointer}
 .hm-tbl td.n{text-align:right;font-variant-numeric:tabular-nums}
+
+.hh-wrap{display:flex;flex-direction:column;gap:12px}
+.hh-lead{background:var(--t-panel);color:var(--t-text);border:1px solid var(--t-line);border-left:3px solid var(--t-amber);border-radius:4px;padding:18px 20px;display:flex;flex-direction:column;gap:8px}
+.hh-lead blockquote{margin:0;font-family:var(--head);font-size:clamp(22px,3.2vw,34px);line-height:1.18;color:#f2efe6}
+.hh-lead .hh-k{font:600 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--t-amber)}
+.hh-lead a{color:var(--t-text)}
+.hh-hot{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.hh-card{background:var(--t-panel);color:var(--t-text);border:1px solid var(--t-line);border-radius:4px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;text-decoration:none}
+.hh-card:hover{border-color:var(--t-amber)}
+.hh-card b{font:700 15px/1.25 var(--body)}
+.hh-card .hh-t{font-size:13px;line-height:1.4;color:#b9c4bf}
+.hh-meta{font:500 10.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--t-dim);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.hh-heat{color:var(--t-down);letter-spacing:1px}.hh-heat i{font-style:normal;color:#3a4440}
+.hh-list{display:flex;flex-direction:column}
+.hh-row{display:grid;grid-template-columns:86px minmax(0,1fr);gap:12px;padding:10px 0;border-top:1px solid var(--t-line)}
+.hh-row:first-child{border-top:0}
+.hh-row .d{font:500 11px var(--mono);color:var(--t-dim);padding-top:3px}
+.hh-row a{font:700 15px/1.3 var(--body);color:var(--t-text);text-decoration:none}
+.hh-row a:hover{color:var(--t-amber)}
+.hh-row q{display:block;margin-top:4px;font-family:var(--head);font-style:italic;font-size:15px;color:#c9cfcb}
+.hh-row .hh-t{margin-top:4px;font-size:12.5px;color:var(--t-dim)}
+@media (max-width:640px){.hh-row{grid-template-columns:minmax(0,1fr);gap:2px}}
 </style>
 
 <!-- Passcode wall (for fun, not security) -->
@@ -1094,6 +1116,7 @@ table.q tbody tr.link{cursor:pointer}
 <section class="view" id="v-howland" hidden>
   <div><div class="kicker">Curtis Howland · Meta Ads, in his own charts</div><h2>How a $5M-a-month Meta buyer reads an account</h2><p class="dek">Curtis Howland is VP of Marketing at Misfit and runs more than $5M a month on Meta across nine DTC brands. Most of his LinkedIn posts and newsletter issues carry a chart. Here are 31 of his Meta Ads charts, redrawn from the data in each image and grouped by the argument he keeps making. Printed numbers are exact; anything read off a bar or a line is marked approximate, and every chart links to the post it came from.</p></div>
   <div class="strip" id="hwKpis"></div>
+  <div class="hh-wrap" id="hwHot"></div>
   <div class="ctl" style="padding:0;flex-wrap:wrap;gap:8px"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase">Meta Ads chapters</span><div class="seg" role="group" aria-label="Chapter" id="hwCh"></div></div>
   <div id="hwMeta"></div>
   <div class="section-head" style="margin-top:6px"><span class="label">Everything he publishes</span></div>
@@ -1206,6 +1229,7 @@ var id=raf?raf(run):0;setTimeout(run,60);return id};})();
 const D=/*__DATA__*/null;
 const LIB=/*__LIB__*/null;
 const HWM=/*__HWM__*/null;
+const HWH=/*__HWH__*/null;
 const SRC=Object.fromEntries(LIB.map(x=>[x.id,x]));
 const srcBtn=(ids,label)=>`<button type="button" class="src-btn" data-src="${ids}" aria-label="Show sources and quotes">${label||'SRC ↗'}</button>`;
 let lastFocus=null;
@@ -2122,6 +2146,21 @@ function renderFoxwell(){
 }
 SEGBIND('fxYear',b=>{fxYear=b.dataset.v;renderFoxwell()});
 
+/* ---------- Curtis Howland · headlines, quotes, hot takes ---------- */
+let hwHf='all';
+function renderHwHot(){if(!HWH)return;const el=document.getElementById('hwHot');
+  const heat=n=>`<span class="hh-heat" title="Heat ${n} of 3">${'▲'.repeat(n)}<i>${'▲'.repeat(3-n)}</i></span>`;
+  const lead=HWH.find(x=>x.heat===3)||HWH[0];
+  const hot=HWH.filter(x=>x.heat===3);
+  const L=HWH.filter(x=>hwHf==='all'||(hwHf==='hot'?x.heat===3:hwHf==='meta'?x.meta:true));
+  el.innerHTML=`<div class="hh-lead"><span class="hh-k">Hottest take · ${dfmt(lead.date,true)}</span><blockquote>“${esc(lead.quote)}”</blockquote><div class="hh-meta"><span>Curtis Howland</span><a href="${lead.url}" target="_blank" rel="noopener">${esc(lead.title)} ↗</a></div></div>
+  <div class="section-head"><span class="label">Hot takes</span><span class="hh-meta" style="color:var(--ink-2)">${hot.length} issues where he argues against common practice</span></div>
+  <div class="hh-hot">${hot.map(x=>`<a class="hh-card" href="${x.url}" target="_blank" rel="noopener"><span class="hh-meta">${heat(x.heat)}<span>${esc(x.topic)}</span><span>${dfmt(x.date,true)}</span></span><b>${esc(x.headline)}</b><span class="hh-t">${esc(x.take)}</span></a>`).join('')}</div>
+  <div class="term"><div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Headlines and big quotes · every issue</span><div class="seg" role="group" aria-label="Filter" id="hwHf" style="margin-left:auto">${[['all','All '+HWH.length],['hot','Hottest'],['meta','Meta ads']].map(([v,n])=>`<button type="button" data-v="${v}" aria-pressed="${hwHf===v}">${n}</button>`).join('')}</div></div>
+  <div class="hh-list">${L.map(x=>`<div class="hh-row"><span class="d">${dfmt(x.date,true)}<br>${heat(x.heat)}</span><div><a href="${x.url}" target="_blank" rel="noopener">${esc(x.headline)} ↗</a><q>${esc(x.quote)}</q><div class="hh-t">${esc(x.topic)} · ${esc(x.take)}</div></div></div>`).join('')}</div></div>`;
+  document.getElementById('hwHf').onclick=e=>{const b=e.target.closest('button');if(b){hwHf=b.dataset.v;renderHwHot()}};
+}
+
 /* ---------- Curtis Howland · Meta Ads charts (redrawn) ---------- */
 let hwCh='all';
 const HMPAL=[T.amber,T.blue,'#a98bff',T.up,'#2ec4d6','#ff7a59',T.down,'#9fd36a'];
@@ -2171,7 +2210,7 @@ SEGBIND('hwCh',b=>{hwCh=b.dataset.v;renderHwMeta()});
 /* ---------- Curtis Howland ---------- */
 let hwType='all';
 function renderHowland(){
-  renderHwMeta();
+  renderHwHot();renderHwMeta();
   const P=rowsOf('li_howland'),S=rowsOf('howland_ss'),B=rowsOf('howland_bf');const bv=m=>(B.find(r=>r.metric===m)||{}).value;
   const cnt=t=>P.filter(r=>r.type===t).length;
   kpiStrip('hwKpis',[['LinkedIn posts logged',P.length,'since 1 Jan 2026 · '+cnt('chart')+' charts, '+cnt('video')+' videos',T.text,P[0]?'li-howland-'+P[0].date.replace(/-/g,''):''],['Newsletter issues',S.length,'weekly since '+dfmt(S[S.length-1].date,true),T.text,''],['BF 2025 ads analysed',Number(bv('Black Friday / Cyber Monday ads analysed')).toLocaleString('en-US'),Number(bv('Brands')).toLocaleString('en-US')+' brands, Meta Ad Library',T.amber,'howland-ss-68245-black-friday-ads-taken-apart'],['Median BF discount',bv('Median discount named')+'%','64% of brands never changed it',T.down,'howland-ss-68245-black-friday-ads-taken-apart'],['Median first BF ad',bv('Median first Black Friday ad')+' days out','15 Nov 2025; 7 in 8 had nothing live by 1 Nov',T.blue,'howland-ss-68245-black-friday-ads-taken-apart']]);

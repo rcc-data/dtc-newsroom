@@ -100,7 +100,7 @@ for k,t,fn,src,extra in REG:
     if extra: note=(extra+' '+note).strip()
     DATA[k]=dict(title=t,file=fn,source=src,note=note,cols=cols,rows=rows)
 tpl=open('template.html').read()
-out=tpl.replace('/*__DATA__*/null',json.dumps(DATA,separators=(',',':'))).replace('/*__LIB__*/null',json.dumps(LIB,separators=(',',':'))).replace('/*__HWM__*/null',open('data/howland_meta_charts.json').read())
+out=tpl.replace('/*__DATA__*/null',json.dumps(DATA,separators=(',',':'))).replace('/*__LIB__*/null',json.dumps(LIB,separators=(',',':'))).replace('/*__HWM__*/null',open('data/howland_meta_charts.json').read()).replace('/*__HWH__*/null',open('data/howland_headlines.json').read())
 open('dtc-newsroom.html','w').write(out)
 print(len(out))
 # GitHub Pages: full document at index.html (site root)

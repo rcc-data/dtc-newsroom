@@ -68,6 +68,8 @@ This replaces the old weekly run. Every weekday do steps 1–4; on the days in s
 - The desk leads with his Meta Ads charts, redrawn in Chart.js and grouped in chapters: `data/howland_meta_charts.json`, built by `python3 tools/howland_meta.py notes/howland_meta_transcriptions.json data/howland_meta_charts.json` (chapter list and per-chart options live in the script).
 - `notes/howland_meta_transcriptions.json` holds one transcription per image (kind, data, his message, approx flag, notes). When a new Meta post or issue has a data chart: get the image (LinkedIn: fetch `/feed/update/<urn>/` in the signed-in built-in browser and take the `feedshare-shrink_1280` URL; Substack: `body_html` image src), read it, append a transcription in the same schema, add it to a chapter in the script and rebuild. Printed numbers exact; anything read off bars or lines gets approx=true. Never invent values.
 
+- Headlines, big quotes and hot takes: `data/howland_headlines.json`, one object per newsletter issue (date, url, title, headline max 12 words, take, exact verbatim quote max 25 words, heat 1-3, topic, meta). Add one for each new issue; check the quote is verbatim.
+
 ## Every run — Curtis Howland newsletter (Substack, added 2 Nov 2026)
 1. https://newsletter.curtishowland.com (curtishowland.substack.com). In the built-in browser on that origin: `fetch('/api/v1/archive?sort=new&limit=50')`; new issues since the newest date in `data/howland_substack.csv`. Body text: `/api/v1/posts/<slug>` → `body_html`.
 2. Append each issue to `data/howland_substack.csv` (`date,title,subtitle,url`) and add a library entry (pub="Curtis Howland", src="Newsletter", id `howland-ss-<slug>`, exact short quote).

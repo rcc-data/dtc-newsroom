@@ -300,6 +300,16 @@ table.q tbody tr.link{cursor:pointer}
 .hm-tag{border:1px solid var(--t-line);border-radius:3px;padding:1px 6px}
 .hm-tag.ap{border-color:#7a5a12;color:var(--t-amber)}
 .hm-term details{font:500 11.5px var(--mono);color:var(--t-dim)}
+.hp-nav{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;font:500 12px var(--mono)}
+.hp-nav a{color:var(--ink-2)}.hp-nav .sp{flex:1}
+.hp-credit{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;border-left:3px solid var(--t-amber);padding:10px 12px;font-size:13.5px;line-height:1.45}
+.hp-credit a{color:var(--t-amber);font-weight:600}
+.hp-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);gap:16px;align-items:start}
+@media (max-width:900px){.hp-grid{grid-template-columns:1fr}}
+.hp-embed{width:100%;min-height:640px;border:0;border-radius:4px;background:#fff}
+.hp-q{margin:0;font-family:var(--head);font-size:22px;line-height:1.3}
+.hp-stats{margin:0;padding-left:18px;line-height:1.5;font-size:14px}
+.hp-more{display:flex;flex-direction:column;gap:4px;font-size:13px}
 .hm-term summary{cursor:pointer}
 .hm-tbl td.n{text-align:right;font-variant-numeric:tabular-nums}
 
@@ -820,7 +830,7 @@ table.q tbody tr.link{cursor:pointer}
     <h2 id="bfH">The Cyber Week desk</h2>
     <p class="dek" id="bfDek">Last year's day-by-day results are set as the baseline. From Tuesday 24 November the scheduled update logs each new figure from Northbeam, Triple Whale and the daily trackers here, day by day against 2025.</p>
   </div>
-  <div class="section-head"><span class="label">BFCM 2026: what we need to know</span><span style="font:500 11px var(--mono);color:var(--ink-2)">166 sourced figures · updated 4 Nov 2026</span></div>
+  <div class="section-head"><span class="label">BFCM 2026: what we need to know</span><span style="font:500 11px var(--mono);color:var(--ink-2)">182 sourced figures · updated 4 Nov 2026</span></div>
   <div class="strip" id="bf26Kpis"></div>
   <div class="bf-brief" id="bf26Brief"></div>
   <div class="grid2">
@@ -1233,6 +1243,9 @@ table.q tbody tr.link{cursor:pointer}
   <div class="section-head"><span class="label">Newsletter library</span></div>
   <div class="lib" id="hwLib"></div>
 </section>
+
+<!-- Curtis Howland · one post as an article -->
+<section class="view" id="v-hw-post" hidden><div id="hwPost"></div></section>
 
 <!-- DIRECT TO CONSUMER -->
 <section class="view" id="v-dtcnl" hidden>
@@ -1991,7 +2004,7 @@ function renderMoPlan(){
   <div style="color:${T.dim}">Rule of thumb from the report: don't expect more than 1 in 10–13 creatives to win. ${srcBtn('mo-cb26key')}</div>`;
 }
 function renderMoResearch(){
-  const cad=[['Weekly · Sunday','Thumbstop newsletter','Email only, 50k+ readers. Long pieces reappear on the blog as "Thumbstop" posts.','mo-thumbstop'],['Weekly','Top ads this week (trending)','Top 30 ads by community saves, 31 industry cuts. Snapshotted every Thursday into this desk.','mo-trending'],['Quarterly','Thumbstop Pulse reports','Survey and data reports: AI Divide (Nov 2025), Creative Benchmarks 2026.','mo-ai,mo-cb26'],['Annual','Creative Benchmarks','550k ads, hit rates by format, hook and asset type. Next edition likely early 2027, after BFCM 2026.','mo-cb26'],['Annual','State of Creative Strategy','Salary, sentiment and job-market survey (2027 edition out now).','mo-socs'],['Seasonal','BFCM planner and webinars','BFCM 2026 planner built on 25,499 BFCM 2025 Health & Wellness ads.','mo-bfcm26']];
+  const cad=[['Weekly · Sunday','Thumbstop newsletter','Email only, 50k+ readers. Long pieces reappear on the blog as "Thumbstop" posts.','mo-thumbstop'],['Weekly','Top ads this week (trending)','Top 30 ads by community saves, 31 industry cuts. Runneth refreshes weekly; captured every Monday into this desk.','mo-trending'],['Quarterly','Thumbstop Pulse reports','Survey and data reports: AI Divide (Nov 2025), Creative Benchmarks 2026.','mo-ai,mo-cb26'],['Annual','Creative Benchmarks','550k ads, hit rates by format, hook and asset type. Next edition likely early 2027, after BFCM 2026.','mo-cb26'],['Annual','State of Creative Strategy','Salary, sentiment and job-market survey (2027 edition out now).','mo-socs'],['Seasonal','BFCM planner and webinars','BFCM 2026 planner built on 25,499 BFCM 2025 Health & Wellness ads.','mo-bfcm26']];
   document.getElementById('tMoCad').innerHTML='<thead><tr><th>Cadence</th><th>Series</th><th>What it gives the newsroom</th><th></th></tr></thead><tbody>'+cad.map(r=>`<tr><td>${r[0]}</td><td><b>${r[1]}</b></td><td>${esc(r[2])}</td><td>${srcBtn(r[3])}</td></tr>`).join('')+'</tbody>';
   const AI=rowsOf('mo_ai');
   mk('cMoAI',{type:'bar',data:{labels:AI.map(r=>r.stage),datasets:[{label:'Using AI',data:AI.map(r=>n(r.usage_pct)),backgroundColor:AI.map((r,i)=>i<3?T.amber:'rgba(255,176,32,.4)')}]},options:{scales:{y:{grid,max:100,ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.y}% of creative teams`}}}}});
@@ -2287,7 +2300,7 @@ function renderToday(){
   const H=W.filter(r=>r.date>=cut).sort((a,b)=>rank(a)-rank(b)||(a.date<b.date?1:-1)).slice(0,9);
   document.getElementById('fHeads').innerHTML=H.map(r=>`<a href="${r.url}" target="_blank" rel="noopener"><span class="d">${dfmt(r.date)}</span><span><b>${esc(r.title)}</b><small>${esc(r.pub)} · ${esc(r.type)}</small></span></a>`).join('');
   const N=[...LIB].filter(x=>x.date&&x.date>=new Date(new Date(last+'T12:00')-10*864e5).toISOString().slice(0,10)&&(x.data||[]).length&&!/Weekly|Monthly|Tool|Site/.test(x.src||'')).sort((a,b)=>a.date<b.date?1:-1);
-  const extra=[{date:'2026-11-03',title:'Canada BFCM 2026: budgets, intent, Buy Canadian and 12 takeaways',pub:'BFCM desk',to:'#bfcm'},{date:'2026-11-03',title:'BFCM by day: 2024, 2025 and a 2026 projection (spend, MER, CAC, CPM, ROAS)',pub:'BFCM desk',to:'#bfcm'},{date:'2026-11-03',title:'BFCM 2026 briefing: 11 things the data says, 161 sourced figures',pub:'Newsroom',to:'#bfcm'},{date:'2026-11-03',title:'How many ads to launch: six sources compared',pub:'Runneth desk',to:'#mo-bench'},{date:'2026-11-03',title:'Curtis Howland: 31 Meta Ads charts redrawn',pub:'Curtis Howland desk',to:'#howland'},{date:'2026-11-02',title:'Runneth Weekly Trending Ads: 120 ads, 4 categories',pub:'Runneth desk',to:'#mo-trend'}];
+  const extra=[{date:'2026-11-04',title:'Every Curtis Howland LinkedIn post now opens as an article, with the original embedded and credited',pub:'Curtis Howland',to:'#howland'},{date:'2026-11-04',title:'BFCM desk: 16 new platform changes and tips (Meta, Google, Amazon, EU fees, Foxwell offer rules)',pub:'BFCM desk',to:'#bfcm'},{date:'2026-11-03',title:'Canada BFCM 2026: budgets, intent, Buy Canadian and 12 takeaways',pub:'BFCM desk',to:'#bfcm'},{date:'2026-11-03',title:'BFCM by day: 2024, 2025 and a 2026 projection (spend, MER, CAC, CPM, ROAS)',pub:'BFCM desk',to:'#bfcm'},{date:'2026-11-03',title:'BFCM 2026 briefing: 11 things the data says, 161 sourced figures',pub:'Newsroom',to:'#bfcm'},{date:'2026-11-03',title:'How many ads to launch: six sources compared',pub:'Runneth desk',to:'#mo-bench'},{date:'2026-11-03',title:'Curtis Howland: 31 Meta Ads charts redrawn',pub:'Curtis Howland desk',to:'#howland'},{date:'2026-11-02',title:'Runneth Weekly Trending Ads: 120 ads, 4 categories',pub:'Runneth desk',to:'#mo-trend'}];
   const seenT=new Set();const items=[...extra,...N.map(x=>({date:x.date,title:x.title,pub:x.pub||'Northbeam',to:DESKOF[x.pub||'Northbeam']||'#wire'}))].filter(x=>!seenT.has(x.title)&&seenT.add(x.title)).slice(0,9);
   document.getElementById('fNew').innerHTML=items.map(x=>`<a href="${x.to}"><span class="d">${dfmt(x.date)}</span><span><b>${esc(x.title)}</b><small>${esc(x.pub)}</small></span></a>`).join('');
 }
@@ -2373,7 +2386,7 @@ function renderBf26(){
   mk('cBf26Disc',{type:'bar',data:{labels:['Electronics, peak (Adobe 2025)','Canada BF weekend avg (2025)','All online, Black Friday avg (Salesforce 2025)','Cyber Week peak (Adobe 2026 fcst)','Apparel, peak (Adobe 2025)','Apparel on BF (Adobe 2026 fcst)','Sporting goods, peak (Adobe 2025)'],datasets:[{label:'% off',data:[30.9,30,28,30,25.1,23,20.3],backgroundColor:[T.blue,T.down,T.dim,T.amber,T.blue,T.amber,T.blue]}]},options:{indexAxis:'y',scales:{x:{grid,beginAtZero:true,max:40,ticks:{callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{size:10}}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x}% off`}}}}});
   const plat=[['Meta','$22.26 (+7.8%)','2.26 (+3%) · 67.6% of spend'],['Google','n/a','3.62 (-21%) · CPA +34% · Search 4.68 vs PMax 3.15'],['TikTok','$6.26 (-27.5%)','2.26 (+28%) · 3.66% of spend'],['Meta, Cyber 5 (Power Digital)','$22.90 (+3.1%)','n/a']];
   document.getElementById('tBf26Plat').innerHTML='<thead><tr><th>Platform</th><th>CPM (YoY)</th><th>ROAS (YoY) and notes</th></tr></thead><tbody>'+plat.map(r=>`<tr><td><b>${esc(r[0])}</b></td><td>${esc(r[1])}</td><td style="white-space:normal">${esc(r[2])}</td></tr>`).join('')+'</tbody><caption style="caption-side:bottom;text-align:left;padding-top:8px;color:'+T.dim+';font-size:11px">Triple Whale BFCM 2025 vs 2024; Power Digital Cyber 5.</caption>';
-  const D=[['28 Oct','Meta turns product browsing on by default for existing ads',0],['12 Nov','Meta Pixel starts recovering conversions measured on device (on by default; opt out in Events Manager)',0],['11 Nov','TikTok Shop BFCM campaign opens (runs to 30 Nov); Common Thread\'s BNPL deadline',0],['16 Nov','Audit Meta placements, landing pages and tracking',0],['20 Nov','No longer a deadline: Meta\'s new ad terms delayed indefinitely on 3 Nov (March 2024 terms stay in force)',0],['26 Nov','Thanksgiving: $6.9B online (forecast)',1],['27 Nov','Black Friday: $12.9B (forecast)',1],['30 Nov','Cyber Monday: $15.1B (forecast)',1],['10 Dec','Canada Post Regular Parcel last ship date (national)',0]];
+  const D=[['28 Oct','Meta turns product browsing on by default for existing ads',0],['29 Oct','Amazon merges Ads Console and DSP into Ads Agent; Google Merchant Center needs a passkey for admin changes',0],['2 Nov','Amazon Review Requests ads open beta; Google PMax adds income exclusions; Meta Image Animation on by default',0],['3 Nov','Google Attributed Branded Searches live (Demand Gen, YouTube)',0],['12 Nov','Meta Pixel starts recovering conversions measured on device (on by default; opt out in Events Manager)',0],['11 Nov','TikTok Shop BFCM campaign opens (runs to 30 Nov); Common Thread\'s BNPL deadline',0],['16 Nov','Audit Meta placements, landing pages and tracking',0],['20 Nov','No longer a deadline: Meta\'s new ad terms delayed indefinitely on 3 Nov (March 2024 terms stay in force)',0],['26 Nov','Thanksgiving: $6.9B online (forecast)',1],['27 Nov','Black Friday: $12.9B (forecast)',1],['30 Nov','Cyber Monday: $15.1B (forecast)',1],['10 Dec','Canada Post Regular Parcel last ship date (national)',0]];
   document.getElementById('bf26Dates').innerHTML=D.map(([d,t,pk])=>`<div class="${pk?'pk':''}"><span>${d}</span>${esc(t)}</div>`).join('');
   kpiStrip('bf26Ca',[['Holiday budget (RCC/Leger)','$911','-6.5% YoY, CAD',T.down,''],['Holiday spend (Deloitte Canada)','$1,305','-14% YoY, CAD',T.down,''],['Rank Black Friday top 3','88%','of Canadians',T.amber,''],['Avoiding US brands','58%','of those affected by US trade tensions',T.text,''],['Cyber Week online 2025','+7%','30% avg discount, 63% mobile',T.up,''],['Black Friday card volume 2025','-4%','Moneris, all retail',T.down,'']]);
   const ts=document.getElementById('bf26Theme');const A=bf26Set==='o'?O:R;const th=[...new Set(A.map(r=>r.theme))];
@@ -2460,7 +2473,7 @@ function renderHwMeta(){
   box.innerHTML=HWM.filter(c=>hwCh==='all'||c.id===hwCh).map(ch=>`<div class="hm-ch"><h3>${esc(ch.h)}</h3><p>${esc(ch.dek)}</p><div class="grid2">${ch.charts.map(c=>`<div class="term hm-term"><div class="th"><span class="t">${esc(c.title)}</span><span class="m">${c.src} · ${dfmt(c.date,true)}</span></div>
     ${c.type==='table'?hmTable(c):`<div class="chart${c.type==='scatter'||c.type==='bubble'||(c.opt&&c.opt.logx)?' tall':''}"><canvas id="${c.id}"></canvas></div>`}
     <p class="hm-msg">${esc(c.message)}</p>
-    <div class="hm-foot"><span class="hm-tag${c.approx?' ap':''}">${c.approx?'Values read from his chart (approx)':'Printed values'}</span><a href="${c.url}" target="_blank" rel="noopener">${c.src==='LinkedIn'?'LinkedIn post':'Newsletter issue'} ↗</a></div>
+    <div class="hm-foot"><span class="hm-tag${c.approx?' ap':''}">${c.approx?'Values read from his chart (approx)':'Printed values'}</span>${c.src==='LinkedIn'?(()=>{const pr=rowsOf('li_howland').find(r=>r.url===c.url);return pr?`<a href="#hw-post/${hwPostId(pr)}">Read the post here</a>`:''})():''}<a href="${c.url}" target="_blank" rel="noopener">${c.src==='LinkedIn'?'LinkedIn post':'Newsletter issue'} ↗</a></div>
     ${c.notes||c.annotations.length?`<details><summary>How this was redrawn</summary><p style="margin:6px 0 0">${esc(c.annotations.join(' · '))}${c.annotations.length&&c.notes?' · ':''}${esc(c.notes)}</p></details>`:''}</div>`).join('')}</div></div>`).join('');
   HWM.forEach(ch=>ch.charts.forEach(c=>{if(c.type!=='table'&&document.getElementById(c.id))mk(c.id,hmCfg(c))}));
 }
@@ -2480,11 +2493,41 @@ function renderHowland(){
   const BT=B.filter(r=>r.section!=='Lead offer'&&r.section!=='Sample');
   document.getElementById('tHwBf').innerHTML='<thead><tr><th>Section</th><th>Metric</th><th>Value</th><th>Note</th></tr></thead><tbody>'+BT.map(r=>`<tr><td>${esc(r.section)}</td><td><b>${esc(r.metric)}</b></td><td>${esc(r.value)} <span style="color:${T.dim}">${esc(r.unit)}</span></td><td style="color:${T.dim}">${esc(r.note)}</td></tr>`).join('')+'</tbody>';
   const TL={chart:'Chart',video:'Video',insight:'Image'};const PF=P.filter(r=>hwType==='all'||r.type===hwType);
-  document.getElementById('tHwPosts').innerHTML='<thead><tr><th>Date</th><th>Format</th><th>Post</th><th>Figure stated</th></tr></thead><tbody>'+PF.map(r=>`<tr><td>${dfmt(r.date,true)}</td><td>${TL[r.type]||r.type}</td><td><b>${esc(r.headline)}</b> <a href="${r.url}" target="_blank" rel="noopener">↗</a></td><td style="color:${T.dim}">${esc(r.figure)}</td></tr>`).join('')+'</tbody>';
+  document.getElementById('tHwPosts').innerHTML='<thead><tr><th>Date</th><th>Format</th><th>Post (opens the article)</th><th>Figure stated</th></tr></thead><tbody>'+PF.map(r=>`<tr><td>${dfmt(r.date,true)}</td><td>${TL[r.type]||r.type}</td><td><b><a href="#hw-post/${hwPostId(r)}">${esc(r.headline)}</a></b> <a href="${r.url}" target="_blank" rel="noopener" title="Original on LinkedIn">↗</a></td><td style="color:${T.dim}">${esc(r.figure)}</td></tr>`).join('')+'</tbody>';
   document.getElementById('tHwSS').innerHTML='<thead><tr><th>Date</th><th>Issue</th><th>Subtitle</th></tr></thead><tbody>'+S.map(r=>`<tr><td>${dfmt(r.date,true)}</td><td><b><a href="${r.url}" target="_blank" rel="noopener">${esc(r.title)}</a></b></td><td style="color:${T.dim}">${esc(r.subtitle)}</td></tr>`).join('')+'</tbody>';
   document.getElementById('hwLib').innerHTML=libCards(LIB.filter(x=>x.pub==='Curtis Howland'&&x.src==='Newsletter'));
 }
 SEGBIND('hwType',b=>{hwType=b.dataset.v;renderHowland()});
+/* ---------- Curtis Howland · one LinkedIn post as an article ---------- */
+let HWARG='';
+const hwPostId=r=>'li-howland-'+r.date.replace(/-/g,'');
+const hwUrn=u=>(String(u).match(/urn:li:(?:activity|ugcPost|share):\d+/)||[''])[0];
+function renderHwPost(){
+  const P=rowsOf('li_howland');if(!P.length)return;
+  let i=P.findIndex(r=>hwPostId(r)===HWARG);if(i<0)i=0;
+  const r=P[i],id=hwPostId(r),E=LIB.find(x=>x.id===id)||{},urn=hwUrn(r.url);
+  const TL={chart:'Chart',video:'Video',insight:'Image'};
+  const charts=(HWM||[]).flatMap(ch=>ch.charts.map(c=>({...c,ch:ch.h}))).filter(c=>c.url===r.url||(urn&&String(c.url).includes(urn)));
+  const nx=P[i-1],pv=P[i+1];
+  const more=P.filter((x,k)=>k!==i&&x.type===r.type).slice(0,5);
+  document.getElementById('hwPost').innerHTML=`
+  <div class="hp-nav"><a href="#howland">← Curtis Howland desk</a><span class="sp"></span>${pv?`<a href="#hw-post/${hwPostId(pv)}">‹ Older: ${esc(pv.headline.slice(0,48))}</a>`:''}${nx?`<a href="#hw-post/${hwPostId(nx)}">Newer: ${esc(nx.headline.slice(0,48))} ›</a>`:''}</div>
+  <div><div class="kicker">Curtis Howland · LinkedIn · ${TL[r.type]||r.type} · ${dfmt(r.date,true)}</div><h2>${esc(r.headline)}</h2></div>
+  <div class="hp-credit"><span>Original post, ${r.type==='video'?'video':'images'} and words by <b>Curtis Howland</b> (VP of Marketing, Misfit), published on LinkedIn on ${dfmt(r.date,true)}.</span><a href="${r.url}" target="_blank" rel="noopener">View the original post on LinkedIn ↗</a><a href="https://www.linkedin.com/in/curtishowland/" target="_blank" rel="noopener">His profile ↗</a></div>
+  <div class="hp-grid">
+    <div style="display:flex;flex-direction:column;gap:16px;min-width:0">
+      ${E.q&&E.q[0]&&E.q[0].trim()!==r.headline.trim()?`<blockquote class="hp-q">“${esc(E.q[0])}”<div class="hm-foot" style="margin-top:6px">Curtis Howland, LinkedIn</div></blockquote>`:''}
+      ${E.stats&&E.stats.length?`<div class="term"><div class="th"><span class="t">What the post says</span><span class="m">figures as he states them</span></div><ul class="hp-stats">${E.stats.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>${r.figure?`<p class="note" style="margin:0">First figure stated: ${esc(r.figure)}</p>`:''}</div>`:''}
+      ${charts.map(c=>`<div class="term hm-term"><div class="th"><span class="t">${esc(c.title)}</span><span class="m">redrawn · ${esc(c.ch)}</span></div>${c.type==='table'?hmTable(c):`<div class="chart${c.type==='scatter'||c.type==='bubble'||(c.opt&&c.opt.logx)?' tall':''}"><canvas id="hp-${c.id}"></canvas></div>`}<p class="hm-msg">${esc(c.message)}</p><div class="hm-foot"><span class="hm-tag${c.approx?' ap':''}">${c.approx?'Values read from his chart (approx)':'Printed values'}</span></div></div>`).join('')}
+      ${more.length?`<div class="term"><div class="th"><span class="t">More ${(TL[r.type]||'').toLowerCase()} posts</span></div><div class="hp-more">${more.map(x=>`<a href="#hw-post/${hwPostId(x)}">${dfmt(x.date,true)} · ${esc(x.headline)}</a>`).join('')}</div></div>`:''}
+    </div>
+    <div class="term" style="padding:10px"><div class="th"><span class="t">The original post</span><span class="m">embedded from LinkedIn</span></div>
+      ${urn?`<iframe class="hp-embed" src="https://www.linkedin.com/embed/feed/update/${urn}" title="Curtis Howland's LinkedIn post: ${esc(r.headline)}" loading="lazy" allowfullscreen></iframe>`:''}
+      <p class="note" style="margin:0">If the post doesn't show here, <a href="${r.url}" target="_blank" rel="noopener">open it on LinkedIn ↗</a>. Images and video stay on LinkedIn and belong to Curtis Howland.</p></div>
+  </div>`;
+  charts.forEach(c=>{if(c.type!=='table')mk('hp-'+c.id,hmCfg(c))});
+  window.scrollTo(0,0);
+}
 
 /* ---------- Direct to Consumer ---------- */
 let dtHf='all';
@@ -2577,7 +2620,7 @@ SEGBIND('hsMeasure',b=>{hsMeasure=b.dataset.m;renderHaus()});
 ['twMetric','twChan','twSnap','twInd'].forEach(id=>document.getElementById(id).addEventListener('change',renderTW));
 
 /* ---------- routing ---------- */
-const VIEWS={front:()=>{renderFront();renderToday()},'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:()=>{renderBf26();renderBfMeta();renderCa();renderProj();renderBfcm()},mkt:renderMkt,'mo-bench':()=>{renderMoBench();renderCv()},'mo-trend':()=>{renderTA();renderMoTrend()},'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,dtcnl:renderDtc,wire:renderWire};
+const VIEWS={front:()=>{renderFront();renderToday()},'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:()=>{renderBf26();renderBfMeta();renderCa();renderProj();renderBfcm()},mkt:renderMkt,'mo-bench':()=>{renderMoBench();renderCv()},'mo-trend':()=>{renderTA();renderMoTrend()},'hw-post':renderHwPost,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,dtcnl:renderDtc,wire:renderWire};
 SEGBIND('mtView',b=>{mtView=b.dataset.v;renderMeta()});
 document.getElementById('mtEvents').addEventListener('change',renderMeta);
 const PUBDESKS=['nb','mo','ctc','haus','triplewhale','foxwell','howland','dtcnl'];
@@ -2589,9 +2632,9 @@ if(matchMedia('(hover:hover)').matches){[ddBtn,ddMenu].forEach(el=>{el.addEventL
 document.addEventListener('click',e=>{if(!ddMenu.hidden&&!ddMenu.contains(e.target)&&e.target!==ddBtn)ddClose(false)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!ddMenu.hidden)ddClose(true)});
 ddMenu.addEventListener('keydown',e=>{if(e.key==='Tab'){const f=[...ddMenu.querySelectorAll('a')];if(!e.shiftKey&&document.activeElement===f[f.length-1])ddClose(false)}});
-function show(){let v=(location.hash||'#front').slice(1);if(!(v in VIEWS))v='front';
+function show(){let v=(location.hash||'#front').slice(1);const sl=v.indexOf('/');HWARG='';if(sl>0){HWARG=decodeURIComponent(v.slice(sl+1));v=v.slice(0,sl)}if(!(v in VIEWS))v='front';
   Object.keys(VIEWS).forEach(x=>document.getElementById('v-'+x).hidden=x!==v);
-  const desk=/^(nb|mo)-/.test(v)?v.split('-')[0]:v;
+  const desk=v==='hw-post'?'howland':/^(nb|mo)-/.test(v)?v.split('-')[0]:v;
   document.querySelectorAll('#deskrow a').forEach(a=>a.setAttribute('aria-current',a.dataset.desk===desk?'true':'false'));
   document.getElementById('deskBtn').setAttribute('aria-current',PUBDESKS.includes(desk)?'true':'false');
   document.querySelectorAll('#deskMenu a').forEach(a=>a.getAttribute('href')==='#'+v&&!a.classList.contains('ddh')?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));

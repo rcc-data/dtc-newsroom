@@ -1,5 +1,41 @@
 [
  {
+  "date": "2026-11-03",
+  "url": "https://www.directtoconsumer.co/newsletter/bfcm-audiences-shopify-ai-meta-scaling",
+  "title": "📈 Study this strategy before blaming Meta",
+  "headline": "Spend up 21% from September to October while CPA fell 3%",
+  "take": "Proof CPMs aren't the whole story: start scaling early, check cost caps daily, holdout-test retention, and build landing pages that match the winning ads.",
+  "quote": "Some of his biggest accounts increased spend by 21% from September to October",
+  "source": "@PhilKiel",
+  "heat": 2,
+  "topic": "Meta",
+  "meta": true
+ },
+ {
+  "date": "2026-11-03",
+  "url": "https://www.directtoconsumer.co/newsletter/bfcm-audiences-shopify-ai-meta-scaling",
+  "title": "🤖 Shopify is testing commissions for AI shopping referrals",
+  "headline": "Shopify will pay AI assistants 0.3% of the sales they refer",
+  "take": "Invite-only for now, but brands on Shop Campaigns can fund a bigger cut. Shopify hasn't said whether paying more moves you up the recommendations.",
+  "quote": "pays participating AI developers 0.3% on eligible purchases they refer",
+  "source": "Shopify Fall '26 Edition",
+  "heat": 1,
+  "topic": "AI shopping & search",
+  "meta": false
+ },
+ {
+  "date": "2026-11-02",
+  "url": "https://www.directtoconsumer.co/newsletter/eu-shipping-fees-meta-audiences-ai-creative",
+  "title": "📦 Shipping small orders into the EU? Your costs just went up.",
+  "headline": "The EU now adds a €2 fee per item on cheap parcels from outside",
+  "take": "Lands on top of the €3 customs duty from July, right as holiday orders ship. Check who collects it and whether landed-cost numbers include it.",
+  "quote": "the EU charges a €2 handling fee per item on low-value parcels",
+  "source": "European Union",
+  "heat": 2,
+  "topic": "Tariffs & costs",
+  "meta": false
+ },
+ {
   "date": "2026-10-30",
   "url": "https://www.directtoconsumer.co/newsletter/meta-budget-creative-autopsies-instagram-carousels",
   "title": "📊 Is your Meta budget spread too thin?",

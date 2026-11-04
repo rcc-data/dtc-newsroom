@@ -17,7 +17,7 @@ This file is the procedure scheduled runs follow. The page is built from `templa
 - Publish: Artifact publish with `url` = the live page above and `file_path` = a copy of `dtc-newsroom.html`. Then commit and push to `main`, and copy `dtc-newsroom.html` + changed CSVs to the local folder.
 - Finish with a 3–5 line summary for Ryan: what was added, the biggest moves, anything skipped.
 
-## Daily (weekdays, 12:00 Vancouver) — the one scheduled run
+## Daily (every day, 8:17 Vancouver) — the one scheduled run, then the Slack digest
 This replaces the old weekly run. Every weekday do steps 1–4; on the days in step 5 also do that desk's capture from its section below.
 
 1. **Inbox.** Gmail (connected inbox ryan.clarke@jdcanada.ca; newsletters arrive addressed to the ryanclarke@jdcanada.ca alias) since the previous run: `newer_than:4d (from:northbeam OR from:beehiiv OR from:commonthreadco.com OR from:foxwelldigital OR from:triplewhale OR from:haus.io OR from:motionapp OR from:runneth OR from:modernretail.co OR from:2pml OR from:graphite.io OR from:directtoconsumer.co OR from:dtcnewsletter OR subject:(thumbstop OR "media buyer" OR "whale mail" OR "dtc index" OR "digital download" OR "dtc newsletter"))`. Read each newsletter in full (get_thread). Emails with no web archive (CTC DTC Index, Foxwell Digital Download, Whale Mail) are sources in their own right: log them in the inventory with the email's "view in browser" link if it has one, otherwise skip the row but still extract figures (library entry url = the brand's newsletter page, src="Newsletter").
@@ -30,6 +30,13 @@ This replaces the old weekly run. Every weekday do steps 1–4; on the days in s
 7. **Heavy captures on their days:** Thursday (or the first run after a new issue): Northbeam Media Buyer Index; Monday: Motion / Runneth top ads (32 lists) and Triple Whale benchmarks snapshot; first weekday of the month: CTC DTCCI; Haus, Northbeam and Bryan Bumgardner on X, and Curtis Howland on LinkedIn, every run if signed in; Curtis Howland newsletter every run. 24 Nov – 2 Dec also do BFCM Live (its own scheduled runs cover it; don't duplicate rows).
 8. Build, test (both sweeps, tests/nav.js and tests/gate.js), publish, commit and push (`git pull --rebase` first), copy to the local folder, as in Rules. If nothing new was found anywhere, change nothing and say so.
 9. Summary (push notification, no em dashes): new articles by source, figures added, story changes, anything skipped.
+10. Morning Slack digest (every run, after publishing; aim to send by 9:15 Vancouver). See "Morning Slack digest" below.
+
+## Morning Slack digest
+- One Slack DM to Ryan (user U0ADD8B569Z, slack_send_message), sent at the end of the daily run so it includes everything the run just found. A separate 9:15 fallback task sends it from the published data if the daily run hasn't by then; before sending, read the DM and never send twice in a day (if the fallback already sent, post only items it missed, as a short "Also this morning" follow-up).
+- Pick 5 to 8 items new since the previous digest (read the DM history to avoid repeats): newsroom analysis pieces first, then data-bearing items (figures, benchmarks, platform changes, earnings, BFCM), then the strongest operator takes. Modern Retail only for big news. Fewer than 3 new items: say "Quiet night" and add the 2 to 3 most important current stories, labelled still current.
+- Format: first line `*DTC Newsroom · <weekday d Mon>*`, then one bullet per item: `• *Headline* (Source): hot take in one or two short sentences, our words, why it matters to a DTC buyer on Meta and Google, only figures the source states. <url|Read it>`; last line `Full newsroom: https://dtcnewsroom.com/`. Quotes under 15 words. No em dashes.
+- Time zone: America/Vancouver. B.C. has been on permanent daylight time (UTC-7) since 8 Mar 2026; clocks no longer change.
 
 ## Weekly (Thursday) — Northbeam Media Buyer Index
 1. Open https://themediabuyer.northbeam.io/archive and find issues published since the newest `week_end` in `data/mbi_new.csv`.

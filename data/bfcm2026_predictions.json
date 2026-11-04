@@ -1,0 +1,380 @@
+{
+ "updated": "2026-11-04",
+ "verdict": {
+  "h": "A bigger season in dollars, flat in orders, and dearer to advertise",
+  "b": "We expect US online holiday spend up about 7% and Cyber Week up about 7%, but orders up only 1 to 3%: the growth is price, mix and a busier five days, not more shoppers. Meta will cost roughly 18% more than last BFCM and spike about 60% from early November to Black Friday, while Google clicks get only about 4% dearer. The median brand will launch around Nov 12 and apparel around Nov 14, with the biggest launch day on Friday Nov 20. Canada stays soft. Overall: a strong November and December for revenue, an average one for margin.",
+  "score": [
+   [
+    "Revenue",
+    "Up",
+    7
+   ],
+   [
+    "Orders",
+    "Flat",
+    2
+   ],
+   [
+    "Meta costs",
+    "Up sharply",
+    18
+   ],
+   [
+    "Google costs",
+    "Up a little",
+    4
+   ],
+   [
+    "Canada",
+    "Soft",
+    -1
+   ]
+  ]
+ },
+ "items": [
+  {
+   "g": "Demand",
+   "m": "US online holiday spend, Nov to Dec",
+   "last": "$257.8B",
+   "call": "+7%",
+   "range": "+5% to +9%",
+   "conf": "Medium",
+   "dir": "up",
+   "basis": "Adobe forecasts +6.7% ($275.1B), Bain sees non-store +9% and Mastercard online +11%. Shoppers are gloomy (sentiment 48.0, 35% trading down), so we sit near Adobe rather than the top of the range.",
+   "src": [
+    {
+     "p": "Adobe",
+     "u": "https://news.adobe.com/news/2026/09/adobe-us-holiday-shopping-season-to-hit-record"
+    },
+    {
+     "p": "Bain",
+     "u": "https://www.bain.com/about/media-center/press-releases/2026/black-friday-through-cyber-monday-weekend-sales-to-surpass-$85-billion-bain-company/"
+    },
+    {
+     "p": "Mastercard SpendingPulse",
+     "u": "https://www.mastercard.com/us/en/news-and-trends/stories/2026/2026-holiday-shopping-forecast.html"
+    },
+    {
+     "p": "University of Michigan",
+     "u": "https://tradingeconomics.com/united-states/consumer-confidence/news/594700"
+    },
+    {
+     "p": "Salesforce",
+     "u": "https://www.salesforce.com/blog/holiday-retail-predictions-2026/"
+    }
+   ]
+  },
+  {
+   "g": "Demand",
+   "m": "US Cyber Week online spend (Thanksgiving to Cyber Monday)",
+   "last": "$44.2B",
+   "call": "about $47.5B (+7%)",
+   "range": "+5% to +9%",
+   "conf": "Medium",
+   "dir": "up",
+   "basis": "Adobe $47.5B (+7.4%); Bain expects the BFCM weekend to grow +8.75%, nearly twice the season. More of the season's growth lands on the five days.",
+   "src": [
+    {
+     "p": "Adobe",
+     "u": "https://news.adobe.com/news/2026/09/adobe-us-holiday-shopping-season-to-hit-record"
+    },
+    {
+     "p": "Bain",
+     "u": "https://www.bain.com/about/media-center/press-releases/2026/black-friday-through-cyber-monday-weekend-sales-to-surpass-$85-billion-bain-company/"
+    },
+    {
+     "p": "Adobe 2025",
+     "u": "https://news.adobe.com/news/2025/12/adobe-cyber-monday-hits-record"
+    }
+   ]
+  },
+  {
+   "g": "Demand",
+   "m": "Orders vs revenue",
+   "last": "US Cyber Week orders +1%",
+   "call": "Orders +1% to +3%; revenue up mainly on price and AOV",
+   "range": "orders 0% to +4%",
+   "conf": "Medium",
+   "dir": "flat",
+   "basis": "Last year US orders grew 1% while spend grew on price. Bain and Mastercard both say about half of this year's growth is inflation, and 35% of shoppers are trading down.",
+   "src": [
+    {
+     "p": "Salesforce",
+     "u": "https://investor.salesforce.com/news/news-details/2025/Salesforce-Data-AI-and-Agents-Propel-Cyber-Week-to-Record-336-6B-in-Global-Spend/default.aspx"
+    },
+    {
+     "p": "Bain",
+     "u": "https://www.bain.com/about/media-center/press-releases/2026/black-friday-through-cyber-monday-weekend-sales-to-surpass-$85-billion-bain-company/"
+    },
+    {
+     "p": "Mastercard SpendingPulse",
+     "u": "https://www.mastercard.com/us/en/news-and-trends/stories/2026/2026-holiday-shopping-forecast.html"
+    },
+    {
+     "p": "Salesforce",
+     "u": "https://www.salesforce.com/blog/holiday-retail-predictions-2026/"
+    }
+   ]
+  },
+  {
+   "g": "Demand",
+   "m": "Apparel online spend, holiday season",
+   "last": "Not in our data",
+   "call": "+4% to +5%, below the season",
+   "range": "+3% to +6%",
+   "conf": "Medium",
+   "dir": "up",
+   "basis": "Adobe forecasts apparel +4.7% against +6.7% overall, and apparel peaks at 23% off on Black Friday, no deeper than 2025. Expect apparel to lean on volume and Black Friday itself.",
+   "src": [
+    {
+     "p": "Adobe",
+     "u": "https://ppc.land/adobes-275-1bn-holiday-forecast-gets-a-correction-not-new-numbers/"
+    },
+    {
+     "p": "Adobe",
+     "u": "https://news.adobe.com/news/2026/09/adobe-us-holiday-shopping-season-to-hit-record"
+    }
+   ]
+  },
+  {
+   "g": "Ad costs",
+   "m": "Meta CPM during BFCM vs BFCM 2025",
+   "last": "Triple Whale BFCM avg $22.26",
+   "call": "+18% YoY",
+   "range": "+12% to +25%",
+   "conf": "Medium",
+   "dir": "up",
+   "basis": "Northbeam's weekly Meta CPM is running about 25% above last year in October; Meta's own price per ad rose 14% worldwide and 23% in the US and Canada in Q3. We shade it below the October gap because last year's BFCM already carried a large peak premium.",
+   "src": [
+    {
+     "p": "Northbeam",
+     "u": "https://themediabuyer.northbeam.io/p/meta-cpms-are-up-25-and-it-s-only-october"
+    },
+    {
+     "p": "Meta Q3 2026",
+     "u": "https://www.sec.gov/Archives/edgar/data/0001326801/000162828026066700/meta-09302026xexhibit991.htm"
+    },
+    {
+     "p": "Relevant Audience",
+     "u": "https://www.relevantaudience.com/meta/meta-q3-2026-ad-price-impressions-asia-pacific/"
+    }
+   ]
+  },
+  {
+   "g": "Ad costs",
+   "m": "Meta CPM spike: Black Friday vs early November",
+   "last": "+45% vs prior week (Howland); +84% vs Sept (Lebesgue)",
+   "call": "about +60% vs the first week of November",
+   "range": "+45% to +85%",
+   "conf": "Medium",
+   "dir": "up",
+   "basis": "Howland's accounts saw Black Friday day-one CPMs 45% above the week before; Lebesgue saw +84% against September; Common Thread's brands paid 26% more in November than October.",
+   "src": [
+    {
+     "p": "Curtis Howland",
+     "u": "https://www.linkedin.com/feed/update/urn:li:activity:7523753426166542336/"
+    },
+    {
+     "p": "Lebesgue",
+     "u": "https://lebesgue.io/?p=15192"
+    },
+    {
+     "p": "Common Thread",
+     "u": "https://commonthreadco.com/blogs/coachs-corner/cpms-4-year-high-world-cup-2026"
+    }
+   ]
+  },
+  {
+   "g": "Ad costs",
+   "m": "Google Search cost per click, Q4 YoY",
+   "last": "+4% (Q3 2026)",
+   "call": "+4%",
+   "range": "+2% to +6%",
+   "conf": "High",
+   "dir": "up",
+   "basis": "Alphabet's cost per click rose 5%, 3% and 4% in the first three quarters of 2026 while paid clicks grew 8 to 13%. Search stays far cheaper to scale than Meta this peak.",
+   "src": [
+    {
+     "p": "Alphabet Q3 2026",
+     "u": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/GOOG-10-Q-Q3-2026.pdf"
+    }
+   ]
+  },
+  {
+   "g": "Calendar",
+   "m": "Median brand's first Black Friday ad",
+   "last": "Nov 15 (13 days out)",
+   "call": "Thu Nov 12",
+   "range": "Nov 10 to Nov 14",
+   "conf": "Medium",
+   "dir": "earlier",
+   "basis": "Same 13 days out lands on Nov 14. Demand is pulling forward (71% plan to buy before Black Friday, Adobe October +8%, 22% starting earlier) and Amazon is expected to start around Nov 19, so we expect brands a couple of days earlier.",
+   "src": [
+    {
+     "p": "Curtis Howland field study",
+     "u": "https://www.curtishowland.com/black-friday/breakdown"
+    },
+    {
+     "p": "Attentive",
+     "u": "https://www.attentive.com/black-friday-cyber-monday-2026/articles/consumer-pulse-shopper-expectations"
+    },
+    {
+     "p": "Adobe",
+     "u": "https://news.adobe.com/news/2026/09/adobe-us-holiday-shopping-season-to-hit-record"
+    },
+    {
+     "p": "Deloitte",
+     "u": "https://www.deloitte.com/us/en/about/press-room/deloitte-holiday-spending-set-to-increase.html"
+    },
+    {
+     "p": "9to5Toys",
+     "u": "https://9to5toys.com/2026/10/30/amazon-black-friday-2026-start-time/"
+    }
+   ]
+  },
+  {
+   "g": "Calendar",
+   "m": "Apparel & footwear: median brand's first Black Friday ad",
+   "last": "Nov 17 (11 days out)",
+   "call": "Sat Nov 14",
+   "range": "Nov 12 to Nov 16",
+   "conf": "Medium",
+   "dir": "earlier",
+   "basis": "Apparel launched two days later than all brands last year; same gap on our all-brand call. 9% of apparel brands were live by Nov 1 against 12.5% overall.",
+   "src": [
+    {
+     "p": "Curtis Howland field study",
+     "u": "https://www.curtishowland.com/black-friday/breakdown"
+    }
+   ]
+  },
+  {
+   "g": "Calendar",
+   "m": "Median early-access start",
+   "last": "17 days out (Nov 10 equivalent)",
+   "call": "Mon Nov 9",
+   "range": "Nov 6 to Nov 10",
+   "conf": "Low",
+   "dir": "earlier",
+   "basis": "1 in 5 brands ran early access a median 17 days out; 26.5% of apparel brands did. We expect slightly more early access this year (about 22% of brands, 28% in apparel) given the early-demand signals.",
+   "src": [
+    {
+     "p": "Curtis Howland field study",
+     "u": "https://www.curtishowland.com/black-friday/breakdown"
+    },
+    {
+     "p": "Attentive",
+     "u": "https://www.attentive.com/black-friday-cyber-monday-2026/articles/consumer-pulse-shopper-expectations"
+    }
+   ]
+  },
+  {
+   "g": "Calendar",
+   "m": "Biggest launch day for full Black Friday sales",
+   "last": "Fri Nov 21 (3,726 new ads)",
+   "call": "Fri Nov 20",
+   "range": "Nov 19 to Nov 20",
+   "conf": "High",
+   "dir": "same",
+   "basis": "Last year's peak was the Friday before Black Friday, followed by Thanksgiving and Black Friday itself. The calendar repeats one day earlier.",
+   "src": [
+    {
+     "p": "Curtis Howland field study",
+     "u": "https://www.curtishowland.com/black-friday/breakdown"
+    },
+    {
+     "p": "9to5Toys",
+     "u": "https://9to5toys.com/2026/10/30/amazon-black-friday-2026-start-time/"
+    }
+   ]
+  },
+  {
+   "g": "Calendar",
+   "m": "Brands making separate Cyber Monday creative",
+   "last": "12.9% (1 in 8)",
+   "call": "about 14%",
+   "range": "12% to 17%",
+   "conf": "Low",
+   "dir": "up",
+   "basis": "Cyber Monday intent is up (Bain 44% from 41% in the US; RCC 72% from 64% in Canada). About 60% of those will keep their Black Friday number, as 61% did.",
+   "src": [
+    {
+     "p": "Curtis Howland field study",
+     "u": "https://www.curtishowland.com/black-friday/breakdown"
+    },
+    {
+     "p": "Bain",
+     "u": "https://www.bain.com/about/media-center/press-releases/2026/black-friday-through-cyber-monday-weekend-sales-to-surpass-$85-billion-bain-company/"
+    },
+    {
+     "p": "RCC x Leger",
+     "u": "https://retail-insider.com/?p=209689"
+    }
+   ]
+  },
+  {
+   "g": "Calendar",
+   "m": "Median days a Black Friday ad stays live",
+   "last": "6 days (apparel 5)",
+   "call": "6 days (apparel 5)",
+   "range": "5 to 7",
+   "conf": "Medium",
+   "dir": "same",
+   "basis": "Run length barely moves by brand size or offer. The median brand's campaign runs about 18 days from first ad (Nov 12) to Cyber Monday (Nov 30); about 12% will add new ads Dec 1 to 6, mostly gifting copy.",
+   "src": [
+    {
+     "p": "Curtis Howland field study",
+     "u": "https://www.curtishowland.com/black-friday/breakdown"
+    }
+   ]
+  },
+  {
+   "g": "Offers",
+   "m": "Median discount named in Black Friday ads",
+   "last": "50% (apparel 50%)",
+   "call": "50%",
+   "range": "40% to 50%",
+   "conf": "High",
+   "dir": "same",
+   "basis": "50% was the median in every follower band and in most categories (sports and outdoor 40%); 60% of marketers say they'll hold discount depth. Adobe's actual price cuts peak at about 30% in Cyber Week.",
+   "src": [
+    {
+     "p": "Curtis Howland field study",
+     "u": "https://www.curtishowland.com/black-friday/breakdown"
+    },
+    {
+     "p": "Attentive",
+     "u": "https://www.attentive.com/black-friday-cyber-monday-2026/articles/marketer-pulse-bfcm-lessons"
+    },
+    {
+     "p": "Adobe",
+     "u": "https://news.adobe.com/news/2026/09/adobe-us-holiday-shopping-season-to-hit-record"
+    }
+   ]
+  },
+  {
+   "g": "Canada",
+   "m": "Canadian holiday spending",
+   "last": "BF card volume -4% (Moneris)",
+   "call": "Flat to slightly down overall; Black Friday holds",
+   "range": "-4% to +2%",
+   "conf": "Low",
+   "dir": "down",
+   "basis": "Budgets are down (RCC -6.5% to $911; Deloitte -14% to $1,305), but 88% rank Black Friday in their top three days and 42% of budgets go online.",
+   "src": [
+    {
+     "p": "RCC x Leger",
+     "u": "https://retail-insider.com/?p=209689"
+    },
+    {
+     "p": "Deloitte Canada",
+     "u": "https://www.deloitte.com/ca/en/about/press-room/holiday-retail-outlook-reveals-spending-on-gifts-is-expected-to-drop-5-percent.html"
+    },
+    {
+     "p": "RCC x Leger",
+     "u": "https://retail-insider.com/?p=209689"
+    }
+   ]
+  }
+ ]
+}

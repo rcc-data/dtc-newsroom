@@ -380,6 +380,27 @@ table.q tbody tr.link{cursor:pointer}
 .bf-brief .bb .s{font:500 10.5px var(--mono);color:var(--t-dim)}
 .bf-brief .bb .s a{color:var(--t-dim)}
 .bf-dates{display:flex;flex-direction:column}
+.pr-verdict{border-left-color:var(--flag)}
+.pr-verdict h3{margin:0 0 6px;font:700 22px/1.2 var(--head);color:var(--t-text)}
+.pr-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.pr-card{border:1px solid var(--t-line);border-radius:4px;padding:12px 14px;background:var(--t-bg);display:flex;flex-direction:column;gap:6px;min-width:0}
+.pr-card .pr-h{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.pr-card>b{font:700 15px/1.3 var(--body)}
+.pr-nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;font-size:13px;line-height:1.3}
+.pr-nums span{display:block;font:500 10px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--t-dim);margin-bottom:2px}
+.pr-nums em{font-style:normal;font-weight:700;color:var(--t-amber)}
+.pr-card p{margin:0;font-size:13px;line-height:1.45;color:#b9c4bf}
+.pr-act{font:700 12px var(--mono);color:var(--t-up)}
+.pr-conf{font:600 10px var(--mono);padding:1px 6px;border-radius:3px;border:1px solid var(--t-line);text-transform:uppercase;letter-spacing:.06em}
+.pr-conf.High{color:var(--t-up);border-color:var(--t-up)}.pr-conf.Medium{color:var(--t-amber);border-color:#7a5a12}.pr-conf.Low{color:var(--t-dim)}
+.pr-src{font:500 10.5px var(--mono);color:var(--t-dim)}.pr-src a{color:var(--t-dim)}
+.bfs-ex{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.bfs-ex a{display:flex;flex-direction:column;gap:4px;border:1px solid var(--t-line);border-radius:4px;padding:10px 12px;text-decoration:none;color:var(--t-text);background:var(--t-bg)}
+.bfs-ex a b{font:700 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)}
+.bfs-ex a q{font-size:14px;line-height:1.35}
+.bfs-ex a span{font:500 11px var(--mono);color:var(--t-dim)}
+.bfs-do{margin:0;padding-left:18px;line-height:1.5;font-size:14px}
+.bfs-do li{margin-bottom:6px}
 .bf-dates div{display:grid;grid-template-columns:76px minmax(0,1fr);gap:10px;padding:7px 0;border-bottom:1px solid var(--t-line);font-size:13px}
 .bf-dates div span{font:600 12px var(--mono);color:var(--t-amber)}
 .bf-dates div.pk span{color:var(--t-down)}
@@ -861,7 +882,17 @@ table.q tbody tr.link{cursor:pointer}
     <h2 id="bfH">The Cyber Week desk</h2>
     <p class="dek" id="bfDek">Last year's day-by-day results are set as the baseline. From Tuesday 24 November the scheduled update logs each new figure from Northbeam, Triple Whale and the daily trackers here, day by day against 2025.</p>
   </div>
-  <div class="section-head"><span class="label">BFCM 2026: what we need to know</span><span style="font:500 11px var(--mono);color:var(--ink-2)">182 sourced figures · updated 4 Nov 2026</span></div>
+  <div class="section-head"><span class="label">Live prediction · BFCM 2026</span><span style="font:500 11px var(--mono);color:var(--ink-2)" id="prUpd"></span></div>
+  <div class="callout pr-verdict" id="prVerdict"></div>
+  <div class="strip" id="prKpis"></div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">Our predicted calendar</span><span class="m">median brand, 2026 · Black Friday is Fri 27 Nov</span></div><div class="bf-dates" id="prDates"></div></div>
+    <div class="term"><div class="th"><span class="t">Spend vs cost: 2026 calls against 2025</span><span class="m">YoY %, our central call and range</span></div><div class="chart"><canvas id="cPrRange"></canvas></div><p class="note">Shaded bars are our ranges; the solid tick is the central call. Revenue grows a little faster than last year, Meta costs grow far faster.</p></div>
+  </div>
+  <div class="term"><div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Every call, with its basis</span><div class="seg" role="group" aria-label="Group" id="prGrp" style="margin-left:auto"><button type="button" data-v="all" aria-pressed="true">All</button><button type="button" data-v="Demand" aria-pressed="false">Demand</button><button type="button" data-v="Ad costs" aria-pressed="false">Ad costs</button><button type="button" data-v="Calendar" aria-pressed="false">Calendar</button><button type="button" data-v="Offers" aria-pressed="false">Offers</button><button type="button" data-v="Canada" aria-pressed="false">Canada</button></div></div>
+    <div class="pr-cards" id="tPr"></div>
+    <p class="note">These are the newsroom's own predictions, built only from sourced figures on this page and the desks. Each will be scored against the actual results after Cyber Monday.</p></div>
+  <div class="section-head"><span class="label">BFCM 2026: what we need to know</span><span style="font:500 11px var(--mono);color:var(--ink-2)">183 sourced figures · updated 4 Nov 2026</span></div>
   <div class="strip" id="bf26Kpis"></div>
   <div class="bf-brief" id="bf26Brief"></div>
   <div class="grid2">
@@ -885,6 +916,27 @@ table.q tbody tr.link{cursor:pointer}
     <div class="term"><div class="th"><span class="t">Key dates</span><span class="m">2026 calendar for DTC advertisers</span></div><div class="bf-dates" id="bf26Dates"></div></div>
     <div class="term"><div class="th"><span class="t">Canada</span><span class="m">2026 surveys and 2025 results</span></div><div class="strip" id="bf26Ca" style="grid-template-columns:repeat(2,minmax(0,1fr))"></div></div>
   </div>
+  <div class="section-head" style="margin-top:6px"><span class="label">Black Friday ad study · 68,245 Meta ads from 2025</span><span style="font:500 11px var(--mono);color:var(--ink-2)">Curtis Howland field study · <a href="https://www.curtishowland.com/black-friday/breakdown" target="_blank" rel="noopener">original ↗</a></span></div>
+  <p class="dek" style="margin:-6px 0 0">Every Meta ad naming Black Friday or Cyber Monday launched 15 Oct to 7 Dec 2025, from 6,281 brands: when they launched, what they offered and how long the ads ran. Set to apparel and footwear first; pick any category to compare it with all brands.</p>
+  <div class="ctl" style="padding:0;gap:10px;flex-wrap:wrap"><label for="bfsCat" style="font:600 12px var(--mono);text-transform:uppercase;letter-spacing:.06em">Category</label><select id="bfsCat"></select><span class="note" id="bfsN" style="margin:0"></span></div>
+  <div class="strip" id="bfsKpis"></div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">When brands went live</span><span class="m">share of brands with a Black Friday ad, by day · 2025</span></div><div class="chart"><canvas id="cBfsCurve"></canvas></div><p class="note" id="bfsCurveNote"></p></div>
+    <div class="term"><div class="th"><span class="t">The number they named</span><span class="m">share of English ads naming each % off</span></div><div class="chart"><canvas id="cBfsDisc"></canvas></div><p class="note">Half off was the default; "up to" sat on half of percent-off ads. 64% of brands kept the same number into Black Friday week.</p></div>
+  </div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">The extras</span><span class="m">share of English ads mentioning each offer</span></div><div class="chart"><canvas id="cBfsExtras"></canvas></div><p class="note" id="bfsExtrasNote"></p></div>
+    <div class="term"><div class="th"><span class="t">New Black Friday ads per day</span><span class="m">all brands · the three biggest days in amber</span></div><div class="chart"><canvas id="cBfsDaily"></canvas></div><p class="note">Fri Nov 21 (3,726), Thanksgiving (3,555) and Black Friday (3,213). 37% of launches fell on a Thursday or Friday.</p></div>
+  </div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">Lead offer</span><span class="m">all brands · 47,013 English ads</span></div><div class="tw"><table class="q" id="tBfsOffers"></table></div></div>
+    <div class="term"><div class="th"><span class="t">How long Black Friday ads kept running</span><span class="m">ads still live after each date</span></div><div class="chart"><canvas id="cBfsTail"></canvas></div><p class="note">The median ad ran 6 days and two-thirds had stopped by Cyber Monday. Inside the same brands, 45% of ads that ran 30+ days were static against 28% of those cut within a week. Only 1 in 8 brands made a separate Cyber Monday ad.</p></div>
+  </div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t" id="bfsDoT">What apparel and footwear should take from it</span><span class="m">newsroom read of the study</span></div><ul class="bfs-do" id="bfsDo"></ul></div>
+    <div class="term"><div class="th"><span class="t">Ten categories side by side</span><span class="m">first ad = days before Black Friday</span></div><div class="tw"><table class="q" id="tBfsCats"></table></div></div>
+  </div>
+  <div class="term"><div class="th"><span class="t" id="bfsExT">Six of its Black Friday ads</span><span class="m">each opens in Meta's Ad Library</span></div><div class="bfs-ex" id="bfsEx"></div></div>
   <div class="section-head" style="margin-top:6px"><span class="label">Canada: BFCM 2026</span><span style="font:500 11px var(--mono);color:var(--ink-2)">80 sourced figures · RCC, Deloitte, PwC, Accenture, StatCan, Salesforce, Moneris</span></div>
   <div class="strip" id="caKpis"></div>
   <div class="grid2">
@@ -1446,6 +1498,8 @@ const HWX=/*__HWX__*/null;
 const DTCH=/*__DTCH__*/null;
 const ANL=/*__ANL__*/null;
 const BF26B=/*__BF26B__*/null;
+const BFPRED=/*__BFPRED__*/null;
+const HWBF=/*__HWBF__*/null;
 const CATK=/*__CATK__*/null;
 const SRC=Object.fromEntries(LIB.map(x=>[x.id,x]));
 const srcBtn=(ids,label)=>`<button type="button" class="src-btn" data-src="${ids}" aria-label="Show sources and quotes">${label||'SRC ↗'}</button>`;
@@ -2060,6 +2114,56 @@ function renderMktG(){
   document.getElementById('tGEarn').innerHTML='<thead><tr><th>Quarter</th><th>Total ads</th><th>Search &amp; other</th><th>YouTube ads</th><th>Network</th><th>Paid clicks YoY</th><th>Cost per click YoY</th><th>Network impr. YoY</th><th>Cost per impr. YoY</th></tr></thead><tbody>'+[...G].reverse().map(x=>`<tr><td><a href="${x.url}" target="_blank" rel="noopener">${x.q}</a></td><td>$${x.tot.toFixed(2)}bn</td><td>$${x.s.toFixed(2)}bn${x.sy!=null?` <span style="color:${T.dim}">${fmtP(x.sy,0)}</span>`:''}</td><td>$${x.y.toFixed(2)}bn${x.yy!=null?` <span style="color:${T.dim}">${fmtP(x.yy,0)}</span>`:''}</td><td>$${x.nw.toFixed(2)}bn</td><td>${x.pc==null?'·':fmtP(x.pc,0)}</td><td style="color:${T.down}">${x.cpc==null?'·':fmtP(x.cpc,0)}</td><td>${x.im==null?'·':fmtP(x.im,0)}</td><td>${x.cpi==null?'·':fmtP(x.cpi,0)}</td></tr>`).join('')+'</tbody><caption style="caption-side:bottom;text-align:left;padding-top:8px;color:'+T.dim+';font-size:11px">Growth % in grey is as Alphabet states it; · = not disclosed for that quarter.</caption>';
 }
 document.getElementById('gkRev').addEventListener('change',renderMktG);
+
+
+/* ---------- BFCM: live prediction ---------- */
+let prGrp='all';
+function renderPred(){
+  if(!BFPRED)return;const V=BFPRED.verdict;
+  document.getElementById('prUpd').textContent='updated '+dfmt(BFPRED.updated,true);
+  document.getElementById('prVerdict').innerHTML=`<b>Our call for November and December</b><h3>${esc(V.h)}</h3>${esc(V.b)}`;
+  const col=s=>/Up sharply/.test(s)?T.down:/Soft|down/i.test(s)?T.down:/Flat/.test(s)?T.text:T.up;
+  kpiStrip('prKpis',V.score.map(([k,s,v])=>[k,s,(v>0?'+':'')+v+'% central call',col(s),'']));
+  const D=[['Mon 9 Nov','Median early-access start (about 22% of brands; 28% in apparel)',0],['Thu 12 Nov','Median brand launches its first Black Friday ad',0],['Sat 14 Nov','Apparel and footwear median first Black Friday ad',0],['Fri 20 Nov','Biggest launch day: the Friday before Black Friday',1],['Thu 26 Nov','Thanksgiving: second-biggest launch day',0],['Fri 27 Nov','Black Friday: Meta CPMs about 60% above early November',1],['Mon 30 Nov','Cyber Monday: about 14% of brands with separate creative',1],['Tue 1 Dec','About 12% of brands add new ads, mostly gifting copy',0]];
+  document.getElementById('prDates').innerHTML=D.map(([d,t,pk])=>`<div class="${pk?'pk':''}"><span>${d}</span>${esc(t)}</div>`).join('');
+  const R=[['US online spend',7,5,9,T.up],['Cyber Week spend',7,5,9,T.up],['Apparel online',4.5,3,6,T.blue],['Orders',2,0,4,T.text],['Google CPC',4,2,6,'#34a853'],['Meta CPM (BFCM YoY)',18,12,25,T.down]];
+  mk('cPrRange',{type:'bar',data:{labels:R.map(r=>[r[0],'call +'+r[1]+'%']),datasets:[{label:'Range',data:R.map(r=>[r[2],r[3]]),backgroundColor:R.map(r=>r[4]+'55'),borderColor:R.map(r=>r[4]),borderWidth:1,borderRadius:3,borderSkipped:false},{label:'Central call',data:R.map(r=>[r[1]-0.25,r[1]+0.25]),backgroundColor:R.map(r=>r[4]),borderRadius:2,grouped:false}]},options:{indexAxis:'y',interaction:{mode:'index',axis:'y',intersect:false},scales:{x:{grid,beginAtZero:true,ticks:{callback:v=>'+'+v+'%'}},y:{grid:{display:false},ticks:{font:{size:10.5}}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>{const r=R[c.dataIndex];return c.datasetIndex?` Central call: +${r[1]}%`:` Range: +${r[2]}% to +${r[3]}%`}}}}}});
+  const I=BFPRED.items.filter(x=>prGrp==='all'||x.g===prGrp);
+  document.getElementById('tPr').innerHTML=I.map(x=>`<div class="pr-card"><div class="pr-h"><span class="pr-src">${esc(x.g)}</span><span class="pr-conf ${x.conf}">${x.conf} confidence</span></div><b>${esc(x.m)}</b><div class="pr-nums"><div><span>2025</span>${esc(x.last)}</div><div><span>Our 2026 call</span><em>${esc(x.call)}</em></div><div><span>Range</span>${esc(x.range)}</div></div><p>${esc(x.basis)}</p><span class="pr-src">${x.src.map(s=>`<a href="${s.u}" target="_blank" rel="noopener">${esc(s.p)}</a>`).join(' · ')}</span>${x.actual?`<div class="pr-act">Actual: ${esc(x.actual)}</div>`:''}</div>`).join('');
+}
+SEGBIND('prGrp',b=>{prGrp=b.dataset.v;renderPred()});
+
+/* ---------- BFCM: Curtis Howland Black Friday ad study ---------- */
+function renderBfStudy(){
+  if(!HWBF)return;const sel=document.getElementById('bfsCat');
+  if(!sel.options.length){sel.innerHTML=HWBF.profiles.map(p=>`<option${p.key==='Apparel & shoes'?' selected':''}>${esc(p.key)}</option>`).join('')}
+  const A=HWBF.profiles[0],C=HWBF.profiles.find(p=>p.key===sel.value)||A,same=C===A;
+  const bf=new Date('2026-11-27T12:00:00'),dOut=n=>{const d=new Date(bf);d.setDate(d.getDate()-Math.round(n));return d.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'})};
+  document.getElementById('bfsN').textContent=`${C.brands.toLocaleString('en-US')} brands`+(same?'':` · against all ${A.brands.toLocaleString('en-US')}`);
+  const cmp=(a,b,u,lower)=>same?'all brands':(a===b?'same as all brands':`${Math.abs(+(a-b).toFixed(1))}${u} ${(a>b)!==!!lower?'above':'below'} all brands`);
+  kpiStrip('bfsKpis',[['First Black Friday ad',C.firstOut+' days out','2026 equivalent: '+dOut(C.firstOut)+' · '+cmp(C.firstOut,A.firstOut,' days'),T.amber,'howland-bf-study'],['Median discount named',C.discMedian+'%',cmp(C.discMedian,A.discMedian,' pts'),T.down,'howland-bf-study'],['Ran early access',C.early+'%','of brands · '+cmp(C.early,A.early,' pts'),T.blue,'howland-bf-study'],['Median days an ad ran',C.runDays,cmp(C.runDays,A.runDays,' days'),T.text,'howland-bf-study'],['Video share of ads',C.video+'%',cmp(C.video,A.video,' pts'),T.text,'howland-bf-study']]);
+  const L=HWBF.labels;const ds=[{label:same?'All brands':C.key,data:C.curve,borderColor:T.amber,backgroundColor:T.amber,borderWidth:3,pointRadius:0,tension:.2}];if(!same)ds.push({label:'All brands',data:A.curve,borderColor:T.dim,borderDash:[5,4],borderWidth:2,pointRadius:0,tension:.2});
+  mk('cBfsCurve',{type:'line',data:{labels:L,datasets:ds},options:{interaction:{mode:'index',intersect:false},scales:{y:{grid,min:0,max:100,ticks:{callback:v=>v+'%'}},x:{grid:{display:false},ticks:{maxTicksLimit:8}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y}% had launched`}}}}});
+  const i1=L.indexOf('Nov 1');document.getElementById('bfsCurveNote').textContent=`By Nov 1, ${C.curve[i1]}% of ${same?'brands':C.key.toLowerCase()+' brands'} had a Black Friday ad live${same?'':` against ${A.curve[i1]}% of all brands`}. Black Friday 2025 was Nov 28; this year it is Nov 27, so each date moves one day earlier.`;
+  const dsd=[{label:same?'All brands':C.key,data:C.disc,backgroundColor:T.amber}];if(!same)dsd.push({label:'All brands',data:A.disc,backgroundColor:'rgba(127,140,135,.45)'});
+  mk('cBfsDisc',{type:'bar',data:{labels:HWBF.levels.map(v=>v+'%'),datasets:dsd},options:{interaction:{mode:'index',intersect:false},scales:{y:{grid,ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y}% of ads`}}}}});
+  const dse=[{label:same?'All brands':C.key,data:C.extras,backgroundColor:T.amber}];if(!same)dse.push({label:'All brands',data:A.extras,backgroundColor:'rgba(127,140,135,.45)'});
+  mk('cBfsExtras',{type:'bar',data:{labels:HWBF.extras,datasets:dse},options:{indexAxis:'y',interaction:{mode:'index',axis:'y',intersect:false},scales:{x:{grid,beginAtZero:true,ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.x}% of ads`}}}}});
+  const lo=C.extras.map((v,i)=>[HWBF.extras[i],v,A.extras[i]]).filter(x=>x[1]<x[2]).map(x=>x[0].toLowerCase());
+  document.getElementById('bfsExtrasNote').textContent=same?'Beauty and supplements stacked gifts and bundles; jewelry and pets leaned on buy one get one; apparel ran on percent off alone.':(lo.length?`${C.key} used ${lo.join(', ')} less than brands overall: open lanes to stand out in.`:`${C.key} used every extra at least as often as brands overall.`);
+  const top=[...HWBF.daily].sort((a,b)=>b-a).slice(0,3);
+  mk('cBfsDaily',{type:'bar',data:{labels:L,datasets:[{label:'New ads',data:HWBF.daily,backgroundColor:HWBF.daily.map(v=>top.includes(v)?T.amber:'rgba(90,169,255,.55)')}]},options:{scales:{y:{grid,ticks:{callback:v=>v>=1000?(v/1000)+'K':v}},x:{grid:{display:false},ticks:{maxTicksLimit:8}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.y.toLocaleString('en-US')} new ads`}}}}});
+  document.getElementById('tBfsOffers').innerHTML='<thead><tr><th>Lead offer</th><th>Share of ads</th><th>Brands leading with it</th><th>In the copy at all</th><th>Median days live</th></tr></thead><tbody>'+HWBF.offers.map(r=>`<tr>${r.map((c,i)=>i?`<td>${esc(c)}</td>`:`<td><b>${esc(c)}</b></td>`).join('')}</tr>`).join('')+'</tbody>';
+  mk('cBfsTail',{type:'bar',data:{labels:HWBF.stillRunning.map(r=>r[0]),datasets:[{label:'Ads still running',data:HWBF.stillRunning.map(r=>r[1]),backgroundColor:T.blue}]},options:{scales:{y:{grid,ticks:{callback:v=>v>=1000?(v/1000)+'K':v}},x:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.y.toLocaleString('en-US')} ads`}}}}});
+  const app=C.key==='Apparel & shoes';
+  document.getElementById('bfsDoT').textContent=app?'What apparel and footwear should take from it':same?'What any brand should take from it':`What ${C.key.toLowerCase()} should take from it`;
+  const tips=app?[`Have the first Black Friday ad live by about Sat 14 Nov. Apparel brands launched a median 11 days out last year, two days later than brands overall, and only 9% were live by 1 Nov.`,`If you run early access, do it: 26.5% of apparel brands did, the highest of any category. Get it live around Mon 9 Nov and use Sign Up or a VIP list, as 22% of early-access ads did.`,`Percent off is the whole market. Apparel used free gifts (3.0%), bundles (3.8%) and gifting copy (8.5%) far less than brands overall (9.6%, 8.5%, 20.3%): a gift with purchase or an outfit bundle stands out immediately.`,`Apparel ads ran a median 5 days, a day shorter than overall. Plan a fresh batch for Thanksgiving to Cyber Monday rather than one launch, and lean on statics that can run all season (45% of long-running ads were static).`,`50% off is the default in apparel too (22.4% of ads named exactly half off). If yours is 50%, put the product or the reason next to the number, not just "Black Friday Sale".`,`Make a separate Cyber Monday ad: only 1 in 8 brands did, so it is cheap attention. Switch copy to gifting from 1 Dec.`]:[`Plan backwards from the median: ${C.firstOut} days out puts the first ad on ${dOut(C.firstOut)} this year.`,`The median discount named was ${C.discMedian}%. Pick your number early and keep it, as 64% of brands did; put the product or reason beside it.`,`Gifts, bundles and free shipping each led about 1 in 100 Black Friday ads: the side-dish offers are open lanes.`,`Ads ran a median ${C.runDays} days. Build statics that can run all season and give every Black Friday ad an end date: 1,232 were still running the next September.`,`Only 1 in 8 brands made a separate Cyber Monday ad. Brief it now, then turn copy to gifting from 1 Dec.`];
+  document.getElementById('bfsDo').innerHTML=tips.map(x=>`<li>${esc(x)}</li>`).join('');
+  document.getElementById('tBfsCats').innerHTML='<thead><tr><th>Category</th><th>Brands</th><th>Median % off</th><th>Free gift</th><th>Gifting copy</th><th>First ad</th></tr></thead><tbody>'+HWBF.catTable.map(r=>`<tr${r[0]===C.key?' style="background:rgba(255,176,32,.12)"':''}><td><b>${esc(r[0])}</b></td><td>${r[1]}</td><td>${r[2]}</td><td>${r[4]}</td><td>${r[7]}</td><td>${r[8]}</td></tr>`).join('')+'</tbody>';
+  const E=HWBF.cards[C.key]||[];document.getElementById('bfsExT').textContent=(same?'Six':`Six ${C.key.toLowerCase()}`)+' Black Friday ads from the study';
+  document.getElementById('bfsEx').innerHTML=E.map(x=>`<a href="${x.url}" target="_blank" rel="noopener"><b>${esc(x.brand)} ↗</b><q>${esc(x.line)}</q><span>${esc(x.fmt)}${x.offer?' · '+esc(x.offer):''} · ${esc(x.on)}${x.ran?', ran '+x.ran+' days':''}</span></a>`).join('');
+}
+document.getElementById('bfsCat').addEventListener('change',renderBfStudy);
 
 /* ---------- Motion ---------- */
 let moDim='formats',moView='map';
@@ -2730,7 +2834,7 @@ SEGBIND('hsMeasure',b=>{hsMeasure=b.dataset.m;renderHaus()});
 ['twMetric','twChan','twSnap','twInd'].forEach(id=>document.getElementById(id).addEventListener('change',renderTW));
 
 /* ---------- routing ---------- */
-const VIEWS={front:()=>{renderFront();renderToday()},'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:()=>{renderBf26();renderBfMeta();renderCa();renderProj();renderBfcm()},mkt:renderMkt,'mkt-google':renderMktG,'mo-bench':()=>{renderMoBench();renderCv()},'mo-trend':()=>{renderTA();renderMoTrend()},'hw-post':renderHwPost,'hw-charts':renderHwMeta,'hw-posts':renderHwPosts,'hw-news':renderHwNews,'hw-bf':renderHwBf,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,dtcnl:renderDtc,wire:renderWire};
+const VIEWS={front:()=>{renderFront();renderToday()},'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:()=>{renderPred();renderBfStudy();renderBf26();renderBfMeta();renderCa();renderProj();renderBfcm()},mkt:renderMkt,'mkt-google':renderMktG,'mo-bench':()=>{renderMoBench();renderCv()},'mo-trend':()=>{renderTA();renderMoTrend()},'hw-post':renderHwPost,'hw-charts':renderHwMeta,'hw-posts':renderHwPosts,'hw-news':renderHwNews,'hw-bf':renderHwBf,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,dtcnl:renderDtc,wire:renderWire};
 SEGBIND('mtView',b=>{mtView=b.dataset.v;renderMeta()});
 document.getElementById('mtEvents').addEventListener('change',renderMeta);
 const PUBDESKS=['nb','mo','ctc','haus','triplewhale','foxwell','howland','dtcnl'];

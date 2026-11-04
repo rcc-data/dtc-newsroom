@@ -94,6 +94,10 @@ Runneth says only "Updated weekly" and gives no day; on Wed 4 Nov 2026 its lists
 2. Append each issue to `data/howland_substack.csv` (`date,title,subtitle,url`) and add a library entry (pub="Curtis Howland", src="Newsletter", id `howland-ss-<slug>`, exact short quote).
 3. Issues with his own data (ad-library pulls, account analyses) get their figures, as stated, in a CSV on the desk, e.g. `data/howland_bf_ads_2025.csv` from "68,245 Black Friday Ads, Taken Apart" (2 Nov 2026). Third-party figures he cites stay out.
 
+## BFCM Live prediction and Howland ad study (added 4 Nov 2026)
+- `data/bfcm2026_predictions.json` holds the newsroom's own calls (verdict, score tiles, 15 items: metric, 2025 value, call, range, confidence, basis, sources). Refresh a call only when a sourced input moves (e.g. a new Adobe forecast or Northbeam CPM read); keep the old call in the basis text ("was +7%"). From 24 Nov, fill each item's `actual` field as results land and say in the summary which calls were right.
+- `data/howland_bf_study.json` is Curtis Howland's Field study Nº03 (curtishowland.com/black-friday/breakdown, read from the page's `__NEXT_DATA__`): category profiles (launch curve, discount mix, extras, early access, run days), daily launches, lead offers, example ads (Meta Ad Library links). Static: it describes BFCM 2025.
+
 ## Daily 24 Nov – 2 Dec 2026 — BFCM Live
 1. Look for new BFCM 2026 figures: Northbeam (X, blog, newsletter), Triple Whale live BFCM page / report, Adobe Digital Insights and Shopify press releases, Haus.
 2. Append rows to `data/bfcm2026_live.csv`: `date,day,source,metric,value,note,url`. For Northbeam-style YoY by day use `day` ∈ {Tue-Thu (pre-BF), Black Friday, Saturday, Sunday, Cyber Monday} and `metric` ∈ {spend, revenue, mer, cac} with a numeric YoY %. Other headlines: `day` = Cyber Week, `metric` = short label, `value` = text.

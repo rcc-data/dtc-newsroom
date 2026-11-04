@@ -1,0 +1,3926 @@
+{
+ "cal0": {
+  "kind": "columns",
+  "title": "Share of brands that had launched a Black Friday ad, by day",
+  "bars": [
+   {
+    "label": "Oct 15",
+    "value": 0.8,
+    "shown": "0.8%",
+    "hot": false
+   },
+   {
+    "label": "Oct 16",
+    "value": 1.4,
+    "shown": "1.4%",
+    "hot": false
+   },
+   {
+    "label": "Oct 17",
+    "value": 1.8,
+    "shown": "1.8%",
+    "hot": false
+   },
+   {
+    "label": "Oct 18",
+    "value": 1.9,
+    "shown": "1.9%",
+    "hot": false
+   },
+   {
+    "label": "Oct 19",
+    "value": 2.3,
+    "shown": "2.3%",
+    "hot": false
+   },
+   {
+    "label": "Oct 20",
+    "value": 2.7,
+    "shown": "2.7%",
+    "hot": false
+   },
+   {
+    "label": "Oct 21",
+    "value": 3.1,
+    "shown": "3.1%",
+    "hot": false
+   },
+   {
+    "label": "Oct 22",
+    "value": 3.5,
+    "shown": "3.5%",
+    "hot": false
+   },
+   {
+    "label": "Oct 23",
+    "value": 3.9,
+    "shown": "3.9%",
+    "hot": false
+   },
+   {
+    "label": "Oct 24",
+    "value": 4.5,
+    "shown": "4.5%",
+    "hot": false
+   },
+   {
+    "label": "Oct 25",
+    "value": 4.7,
+    "shown": "4.7%",
+    "hot": false
+   },
+   {
+    "label": "Oct 26",
+    "value": 5,
+    "shown": "5%",
+    "hot": false
+   },
+   {
+    "label": "Oct 27",
+    "value": 5.6,
+    "shown": "5.6%",
+    "hot": false
+   },
+   {
+    "label": "Oct 28",
+    "value": 6.5,
+    "shown": "6.5%",
+    "hot": false
+   },
+   {
+    "label": "Oct 29",
+    "value": 7.2,
+    "shown": "7.2%",
+    "hot": false
+   },
+   {
+    "label": "Oct 30",
+    "value": 8.4,
+    "shown": "8.4%",
+    "hot": false
+   },
+   {
+    "label": "Oct 31",
+    "value": 10.8,
+    "shown": "10.8%",
+    "hot": false
+   },
+   {
+    "label": "Nov 1",
+    "value": 12.5,
+    "shown": "12.5%",
+    "hot": true
+   },
+   {
+    "label": "Nov 2",
+    "value": 13.7,
+    "shown": "13.7%",
+    "hot": false
+   },
+   {
+    "label": "Nov 3",
+    "value": 16.9,
+    "shown": "16.9%",
+    "hot": false
+   },
+   {
+    "label": "Nov 4",
+    "value": 19.3,
+    "shown": "19.3%",
+    "hot": false
+   },
+   {
+    "label": "Nov 5",
+    "value": 21.8,
+    "shown": "21.8%",
+    "hot": false
+   },
+   {
+    "label": "Nov 6",
+    "value": 25.1,
+    "shown": "25.1%",
+    "hot": false
+   },
+   {
+    "label": "Nov 7",
+    "value": 28.6,
+    "shown": "28.6%",
+    "hot": false
+   },
+   {
+    "label": "Nov 8",
+    "value": 30.1,
+    "shown": "30.1%",
+    "hot": false
+   },
+   {
+    "label": "Nov 9",
+    "value": 31.6,
+    "shown": "31.6%",
+    "hot": false
+   },
+   {
+    "label": "Nov 10",
+    "value": 34.7,
+    "shown": "34.7%",
+    "hot": false
+   },
+   {
+    "label": "Nov 11",
+    "value": 38.2,
+    "shown": "38.2%",
+    "hot": false
+   },
+   {
+    "label": "Nov 12",
+    "value": 41.2,
+    "shown": "41.2%",
+    "hot": false
+   },
+   {
+    "label": "Nov 13",
+    "value": 45.1,
+    "shown": "45.1%",
+    "hot": false
+   },
+   {
+    "label": "Nov 14",
+    "value": 48.9,
+    "shown": "48.9%",
+    "hot": false
+   },
+   {
+    "label": "Nov 15",
+    "value": 50.3,
+    "shown": "50.3%",
+    "hot": false
+   },
+   {
+    "label": "Nov 16",
+    "value": 51.9,
+    "shown": "51.9%",
+    "hot": false
+   },
+   {
+    "label": "Nov 17",
+    "value": 55.2,
+    "shown": "55.2%",
+    "hot": false
+   },
+   {
+    "label": "Nov 18",
+    "value": 58.1,
+    "shown": "58.1%",
+    "hot": false
+   },
+   {
+    "label": "Nov 19",
+    "value": 61.5,
+    "shown": "61.5%",
+    "hot": false
+   },
+   {
+    "label": "Nov 20",
+    "value": 66.5,
+    "shown": "66.5%",
+    "hot": false
+   },
+   {
+    "label": "Nov 21",
+    "value": 72,
+    "shown": "72%",
+    "hot": false
+   },
+   {
+    "label": "Nov 22",
+    "value": 74.1,
+    "shown": "74.1%",
+    "hot": false
+   },
+   {
+    "label": "Nov 23",
+    "value": 76.6,
+    "shown": "76.6%",
+    "hot": false
+   },
+   {
+    "label": "Nov 24",
+    "value": 81.8,
+    "shown": "81.8%",
+    "hot": false
+   },
+   {
+    "label": "Nov 25",
+    "value": 85.6,
+    "shown": "85.6%",
+    "hot": false
+   },
+   {
+    "label": "Nov 26",
+    "value": 89.4,
+    "shown": "89.4%",
+    "hot": false
+   },
+   {
+    "label": "Nov 27",
+    "value": 93,
+    "shown": "93%",
+    "hot": false
+   },
+   {
+    "label": "Nov 28",
+    "value": 96.3,
+    "shown": "96.3%",
+    "hot": false
+   },
+   {
+    "label": "Nov 29",
+    "value": 97,
+    "shown": "97%",
+    "hot": false
+   },
+   {
+    "label": "Nov 30",
+    "value": 97.6,
+    "shown": "97.6%",
+    "hot": false
+   },
+   {
+    "label": "Dec 1",
+    "value": 98.9,
+    "shown": "98.9%",
+    "hot": false
+   },
+   {
+    "label": "Dec 2",
+    "value": 99.3,
+    "shown": "99.3%",
+    "hot": false
+   },
+   {
+    "label": "Dec 3",
+    "value": 99.6,
+    "shown": "99.6%",
+    "hot": false
+   },
+   {
+    "label": "Dec 4",
+    "value": 99.7,
+    "shown": "99.7%",
+    "hot": false
+   },
+   {
+    "label": "Dec 5",
+    "value": 99.8,
+    "shown": "99.8%",
+    "hot": false
+   },
+   {
+    "label": "Dec 6",
+    "value": 99.9,
+    "shown": "99.9%",
+    "hot": false
+   },
+   {
+    "label": "Dec 7",
+    "value": 100,
+    "shown": "100%",
+    "hot": false
+   }
+  ],
+  "ticks": [
+   {
+    "at": 0,
+    "label": "Oct 15"
+   },
+   {
+    "at": 17,
+    "label": "Nov 1"
+   },
+   {
+    "at": 31,
+    "label": "Nov 15"
+   },
+   {
+    "at": 47,
+    "label": "Dec 1"
+   }
+  ],
+  "marks": [
+   {
+    "at": 17,
+    "label": "Nov 1: 12.5%"
+   },
+   {
+    "at": 44,
+    "label": "Black Friday: 96.3%"
+   }
+  ]
+ },
+ "cal1days": [
+  [
+   "Oct 15",
+   null
+  ],
+  [
+   "Oct 16",
+   null
+  ],
+  [
+   "Oct 17",
+   null
+  ],
+  [
+   "Oct 18",
+   null
+  ],
+  [
+   "Oct 19",
+   null
+  ],
+  [
+   "Oct 20",
+   null
+  ],
+  [
+   "Oct 21",
+   null
+  ],
+  [
+   "Oct 22",
+   null
+  ],
+  [
+   "Oct 23",
+   null
+  ],
+  [
+   "Oct 24",
+   null
+  ],
+  [
+   "Oct 25",
+   null
+  ],
+  [
+   "Oct 26",
+   null
+  ],
+  [
+   "Oct 27",
+   null
+  ],
+  [
+   "Oct 28",
+   null
+  ],
+  [
+   "Oct 29",
+   null
+  ],
+  [
+   "Oct 30",
+   null
+  ],
+  [
+   "Oct 31",
+   null
+  ],
+  [
+   "Nov 1",
+   null
+  ],
+  [
+   "Nov 2",
+   null
+  ],
+  [
+   "Nov 3",
+   null
+  ],
+  [
+   "Nov 4",
+   null
+  ],
+  [
+   "Nov 5",
+   null
+  ],
+  [
+   "Nov 6",
+   null
+  ],
+  [
+   "Nov 7",
+   null
+  ],
+  [
+   "Nov 8",
+   null
+  ],
+  [
+   "Nov 9",
+   null
+  ],
+  [
+   "Nov 10",
+   null
+  ],
+  [
+   "Nov 11",
+   null
+  ],
+  [
+   "Nov 12",
+   null
+  ],
+  [
+   "Nov 13",
+   null
+  ],
+  [
+   "Nov 14",
+   null
+  ],
+  [
+   "Nov 15",
+   null
+  ],
+  [
+   "Nov 16",
+   null
+  ],
+  [
+   "Nov 17",
+   null
+  ],
+  [
+   "Nov 18",
+   null
+  ],
+  [
+   "Nov 19",
+   null
+  ],
+  [
+   "Nov 20",
+   null
+  ],
+  [
+   "Nov 21",
+   null
+  ],
+  [
+   "Nov 22",
+   null
+  ],
+  [
+   "Nov 23",
+   null
+  ],
+  [
+   "Nov 24",
+   null
+  ],
+  [
+   "Nov 25",
+   null
+  ],
+  [
+   "Nov 26",
+   null
+  ],
+  [
+   "Nov 27",
+   null
+  ],
+  [
+   "Nov 28",
+   null
+  ],
+  [
+   "Nov 29",
+   null
+  ],
+  [
+   "Nov 30",
+   null
+  ],
+  [
+   "Dec 1",
+   null
+  ],
+  [
+   "Dec 2",
+   null
+  ],
+  [
+   "Dec 3",
+   null
+  ],
+  [
+   "Dec 4",
+   null
+  ],
+  [
+   "Dec 5",
+   null
+  ],
+  [
+   "Dec 6",
+   null
+  ],
+  [
+   "Dec 7",
+   null
+  ]
+ ],
+ "cal1keys": [
+  "label",
+  "value",
+  "shown",
+  "hot",
+  "drill"
+ ],
+ "figs": [
+  [
+   {
+    "f": "Nov 15",
+    "l": "the median brand's first Black Friday ad"
+   },
+   {
+    "f": "3,726",
+    "l": "ads launched on Nov 21, the biggest day"
+   },
+   {
+    "f": "37%",
+    "l": "of launches fell on a Thursday or Friday"
+   },
+   {
+    "f": "1 in 5",
+    "l": "brands ran early-access ads, a median 17 days out"
+   }
+  ],
+  [
+   {
+    "f": "50%",
+    "l": "the median discount named in an ad"
+   },
+   {
+    "f": "40%",
+    "l": "the typical brand's own number"
+   },
+   {
+    "f": "64%",
+    "l": "of brands kept the same number into Black Friday week"
+   },
+   {
+    "f": "6%",
+    "l": "of ads carried a promo code"
+   }
+  ],
+  [],
+  [
+   {
+    "f": "25 sec",
+    "l": "the median video length"
+   },
+   {
+    "f": "45%",
+    "l": "ran as flexible ads with more than one asset"
+   },
+   {
+    "f": "70%",
+    "l": "of ads used emoji"
+   },
+   {
+    "f": "17%",
+    "l": "claimed the biggest sale or the lowest prices"
+   }
+  ],
+  [],
+  [
+   {
+    "f": "12.9%",
+    "l": "of brands made separate Cyber Monday creative"
+   },
+   {
+    "f": "61%",
+    "l": "of those kept the same discount"
+   },
+   {
+    "f": "12.2%",
+    "l": "of brands launched new ads Dec 2 to 7"
+   },
+   {
+    "f": "27%",
+    "l": "of ads launched after Cyber Monday used gifting copy"
+   }
+  ],
+  []
+ ],
+ "points": [
+  [
+   "The median ad went live Nov 19, 9 days out. After Nov 21, the biggest days were Thanksgiving (3,555 ads) and Black Friday itself (3,213).",
+   "Size didn't buy a head start: pages with 1M+ followers launched their first a median 11 days out; pages under 100K, 13 to 14.",
+   "Home and furniture started earliest (17 days out). Food and drink, and pets, started latest (9).",
+   "22% of early-access ads used a Sign Up button instead of Shop Now."
+  ],
+  [
+   "32,551 English ads named a percentage. The middle half ran 30% to 60%; 57% went to 50% or deeper, and 17% to 70% or deeper.",
+   "\"Up to\" was on half of percent-off ads, and lifted the median from 40% (flat discounts) to 50%.",
+   "Of 882 brands with percent-off ads both two weeks out and in Black Friday week, 64% kept the same number, 26% went deeper and 10% went shallower.",
+   "Brand size didn't move it: the median was 50% in every follower band, from under 10K to 1M+."
+  ],
+  [
+   "Inside the same brand the run-length gaps shrink to a day or three: dollars off ran 9 days against percent off's 6, across 64 brands. Free shipping and gifts showed no edge."
+  ],
+  [
+   "29% of videos ran 15 seconds or less, and 14% ran over a minute.",
+   "30% of ads announced the sale was live or here, and 12% said limited time.",
+   "Shop Now was on 71% of ads, Learn More 15%, Sign Up 3%. 26% sent people to a product page, 25% to a sale page, 12% to the homepage.",
+   "Where a brand ran both formats in the EU, its highest-reach ad was a video 54% of the time, against video's 47% share of its ads (1,031 brands)."
+  ],
+  [
+   "Measured across 398 brands that ran both kinds of ad. In the full pull the gap is smaller, 47% against 42%, and points the same way.",
+   "Across all brands the long-runners also carried twice the social proof, but inside the same brand that gap disappears: it was the kind of brand, not the ad.",
+   "The median ad ran 6 days, and two-thirds had stopped by Cyber Monday.",
+   "The record: a \"Pre Black Friday Sale: 35% off\" ad that ran 369 days, from Oct 16, 2025 to Oct 20, 2026."
+  ],
+  [
+   "The median Cyber Monday ad launched on Cyber Monday itself; 83% went live on or after Black Friday.",
+   "Of 357 brands with percent-off ads for both days, 28% went deeper on Cyber Monday and 11% went shallower.",
+   "Only 3% of the ads launched Dec 2 to 7 said \"extended\".",
+   "0.5% of brands ran all four acts: early access, Black Friday, Cyber Monday and after. Two-thirds ran the Black Friday act alone."
+  ],
+  []
+ ],
+ "todo": [
+  "Plan backwards from Nov 14 this year: 13 days out, where the median brand's first ad landed last year. Get early access live around Nov 10, and anything you ship before that is ahead of most of the feed.",
+  "Pick the number early and say it the same way everywhere, as most brands did. If yours is 50%, the number alone won't stand out: put the product or the reason right beside it.",
+  "If anything you sell is giftable, the gift and bundle lanes were close to empty: a gift with purchase led about 1 in 100 Black Friday ads.",
+  "Write the headline nobody else can: the product, the offer and the reason in one line. \"Black Friday Sale\" ran on 1,425 ads on its own.",
+  "Build statics you can run all season, not just a launch-day video. And give every Black Friday ad an end date: 1,232 were still running in September.",
+  "Brief the Cyber Monday ad now, while it's cheap to make: 7 in 8 brands won't have one. Then turn the copy to gifting from Dec 2.",
+  ""
+ ],
+ "disc0": [
+  {
+   "label": "10%",
+   "value": 1,
+   "shown": "1.0%",
+   "hot": false,
+   "drill": [
+    {
+     "id": "1583276299498169",
+     "brand": "MISBHV",
+     "fmt": "Flexible, static",
+     "on": "Dec 1",
+     "line": "GET EXTRA 10% OFF",
+     "offer": "10% off",
+     "ran": 2
+    },
+    {
+     "id": "883068897737710",
+     "brand": "Sandqvist",
+     "fmt": "Flexible, static",
+     "on": "Nov 20",
+     "line": "Extra 10% Off for Newsletter Members",
+     "offer": "10% off",
+     "ran": 11
+    },
+    {
+     "id": "3764020237239805",
+     "brand": "Angara",
+     "fmt": "Static",
+     "on": "Dec 1",
+     "line": "BFCM Exclusive: 10% Off",
+     "offer": "10% off",
+     "ran": 8
+    },
+    {
+     "id": "681485238131240",
+     "live": true,
+     "brand": "Olvys",
+     "fmt": "Video 0:10",
+     "on": "Nov 19",
+     "line": "Get an extra 10% off now!",
+     "offer": "10% off",
+     "ran": 334
+    },
+    {
+     "id": "2270182756833223",
+     "brand": "Onecompress",
+     "fmt": "Static",
+     "on": "Nov 29",
+     "line": "Use code: 'EASY10\" for an extra 10% OFF Sitewide",
+     "offer": "10% off",
+     "ran": 99
+    },
+    {
+     "id": "1827568698124532",
+     "brand": "Vice Golf",
+     "fmt": "Video 0:48",
+     "on": "Nov 12",
+     "line": "10% Kickback on all clubs",
+     "offer": "10% off",
+     "ran": 24
+    }
+   ]
+  },
+  {
+   "label": "15%",
+   "value": 1.2,
+   "shown": "1.2%",
+   "hot": false,
+   "drill": [
+    {
+     "id": "2360210284410829",
+     "brand": "Noobru",
+     "fmt": "Static",
+     "on": "Oct 22",
+     "line": "VIPs Get 15% Off Now + The Biggest Black Friday Deals Ever",
+     "offer": "15% off",
+     "ran": 27
+    },
+    {
+     "id": "1189347389741015",
+     "brand": "The Black Stuff",
+     "fmt": "Flexible, static",
+     "on": "Nov 5",
+     "line": "Use code BLACK to get 15% OFF",
+     "offer": "15% off",
+     "ran": 27
+    },
+    {
+     "id": "1539590586959995",
+     "brand": "momcozy",
+     "fmt": "Flexible, static",
+     "on": "Nov 11",
+     "line": "15% OFF, code: BDBFFS15",
+     "offer": "15% off",
+     "ran": 3
+    },
+    {
+     "id": "1100169365379909",
+     "brand": "Thera Hair",
+     "fmt": "Video 0:22",
+     "on": "Nov 29",
+     "line": "Save 15% + Free Gifts With Purchase using code: BFCM",
+     "offer": "15% off",
+     "ran": 102
+    },
+    {
+     "id": "1147743050876101",
+     "brand": "Treestuff",
+     "fmt": "Flexible, static",
+     "on": "Nov 18",
+     "line": "15% off all Petzl plus double discounts on markdowns",
+     "offer": "15% off",
+     "ran": 43
+    },
+    {
+     "id": "746893538424969",
+     "brand": "NutriPaw",
+     "fmt": "Video 0:37",
+     "on": "Nov 26",
+     "line": "Dog Approved \u2013 15% Black Friday Treat!",
+     "offer": "15% off",
+     "ran": 59
+    }
+   ]
+  },
+  {
+   "label": "20%",
+   "value": 5.8,
+   "shown": "5.8%",
+   "hot": false,
+   "drill": [
+    {
+     "id": "3711599389136478",
+     "brand": "vetsak",
+     "fmt": "Flexible, static",
+     "on": "Nov 18",
+     "line": "20% off: the black friday sale",
+     "offer": "20% off",
+     "ran": 14
+    },
+    {
+     "id": "1355829002918567",
+     "brand": "FITJEANS",
+     "fmt": "Static",
+     "on": "Nov 4",
+     "line": "The biggest sale of the year 20 % OFF",
+     "offer": "20% off",
+     "ran": 14
+    },
+    {
+     "id": "1542005737017535",
+     "brand": "bareMinerals",
+     "fmt": "Flexible, static",
+     "on": "Nov 19",
+     "line": "Save 20% On Your Faves",
+     "offer": "20% off",
+     "ran": 9
+    },
+    {
+     "id": "4314936568735817",
+     "brand": "NYDJ",
+     "fmt": "Video 0:06",
+     "on": "Nov 3",
+     "line": "Plus, Take 20% Off Today",
+     "offer": "20% off",
+     "ran": 53
+    },
+    {
+     "id": "1157335523200660",
+     "brand": "GTHIC",
+     "fmt": "Video 0:32",
+     "on": "Nov 6",
+     "line": "20% Off Code: 20BF",
+     "offer": "20% off",
+     "ran": 185
+    },
+    {
+     "id": "1770914920285679",
+     "brand": "Kemimoto",
+     "fmt": "Catalog",
+     "on": "Nov 26",
+     "line": "Black Friday Deal: 20% OFF Sitewide",
+     "offer": "20% off",
+     "ran": 75
+    }
+   ]
+  },
+  {
+   "label": "25%",
+   "value": 6.2,
+   "shown": "6.2%",
+   "hot": false,
+   "drill": [
+    {
+     "id": "1960420324520321",
+     "brand": "Charlotte Tilbury",
+     "fmt": "Flexible, static",
+     "on": "Nov 25",
+     "line": "25% OFF EVERYTHING",
+     "offer": "25% off",
+     "ran": 7
+    },
+    {
+     "id": "1517995025913460",
+     "brand": "BURGA",
+     "fmt": "Flexible, static",
+     "on": "Nov 14",
+     "line": "Black Friday Sale: 25% OFF & More",
+     "offer": "25% off",
+     "ran": 16
+    },
+    {
+     "id": "1973631573206064",
+     "brand": "Gisou",
+     "fmt": "Flexible, static",
+     "on": "Nov 17",
+     "line": "25% OFF Sitewide",
+     "offer": "25% off",
+     "ran": 15
+    },
+    {
+     "id": "855021113846685",
+     "brand": "HEYDUDE",
+     "fmt": "Video 0:21",
+     "on": "Nov 20",
+     "line": "\u2026on at HEYDUDE Take 25% off almost everything with code CYBER.",
+     "offer": "25% off",
+     "ran": 30
+    },
+    {
+     "id": "1310311740578245",
+     "brand": "Strike Gently",
+     "fmt": "Video 0:12",
+     "on": "Nov 15",
+     "line": "25% off EVERYTHING.",
+     "offer": "25% off",
+     "ran": 30
+    },
+    {
+     "id": "805113216025735",
+     "brand": "Arctic Cool",
+     "fmt": "Static",
+     "on": "Oct 31",
+     "line": "25% Off Site-Wide. Use code: CYBERSAVINGS25",
+     "offer": "25% off",
+     "ran": 30
+    }
+   ]
+  },
+  {
+   "label": "30%",
+   "value": 10.4,
+   "shown": "10.4%",
+   "hot": false,
+   "drill": [
+    {
+     "id": "1174393630874226",
+     "brand": "Happy Socks",
+     "fmt": "Flexible, static",
+     "on": "Nov 27",
+     "line": "Black Friday: 30% Off + Extra 10%!",
+     "offer": "30% off",
+     "ran": 5
+    },
+    {
+     "id": "24835022066200663",
+     "brand": "IM8",
+     "fmt": "Static",
+     "on": "Nov 28",
+     "line": "BFCM Starts Now: 30% Off Essentials",
+     "offer": "30% off",
+     "ran": 8
+    },
+    {
+     "id": "1198320002194475",
+     "brand": "PROMIXX",
+     "fmt": "Flexible, static",
+     "on": "Nov 11",
+     "line": "Early Black Friday starts now. Up to 30% off sitewide.",
+     "offer": "Up to 30% off",
+     "ran": 10
+    },
+    {
+     "id": "1860131684599467",
+     "brand": "Sistaco",
+     "fmt": "Static",
+     "on": "Nov 4",
+     "line": "\u2026BLOW YOUR MIND! GET 30% OFF EVERYTHING!",
+     "offer": "30% off",
+     "ran": 33
+    },
+    {
+     "id": "2424334464631234",
+     "brand": "Mermade Hair",
+     "fmt": "Flexible, video 0:17",
+     "on": "Nov 2",
+     "line": "Our viral wavers are up to 30% Off - shop now",
+     "offer": "Up to 30% off",
+     "ran": 31
+    },
+    {
+     "id": "25385883611028968",
+     "brand": "Mack Weldon",
+     "fmt": "Flexible, video 0:27",
+     "on": "Nov 26",
+     "line": "Up to 30% off this Cyber Monday Week!",
+     "offer": "Up to 30% off",
+     "ran": 47
+    }
+   ]
+  },
+  {
+   "label": "35%",
+   "value": 3,
+   "shown": "3.0%",
+   "hot": false,
+   "drill": [
+    {
+     "id": "1769261677153358",
+     "brand": "en route",
+     "fmt": "Flexible, static",
+     "on": "Nov 7",
+     "line": "en route jewelry | 35% OFF SITEWIDE",
+     "offer": "35% off",
+     "ran": 28
+    },
+    {
+     "id": "869210208998349",
+     "brand": "Transformer Table",
+     "fmt": "Flexible, static",
+     "on": "Nov 22",
+     "line": "BLACK FRIDAY! 35% OFF SITEWIDE",
+     "offer": "35% off",
+     "ran": 20
+    },
+    {
+     "id": "1536002414255026",
+     "brand": "Chubbies",
+     "fmt": "Flexible, static",
+     "on": "Dec 1",
+     "line": "Everything's Up to 35% Off",
+     "offer": "Up to 35% off",
+     "ran": 6
+    },
+    {
+     "id": "1880550959512006",
+     "brand": "Clean-eez",
+     "fmt": "Video 0:47",
+     "on": "Oct 30",
+     "line": "Early Black Friday Deal! 35% Off + FREE Shipping",
+     "offer": "35% off",
+     "ran": 122
+    },
+    {
+     "id": "844971228461699",
+     "brand": "trueself",
+     "fmt": "Flexible, static",
+     "on": "Dec 2",
+     "line": "PRE BLACK FRIDAY SALE: Save 35% Off with code PBF35",
+     "offer": "35% off",
+     "ran": 53
+    },
+    {
+     "id": "1875716823328185",
+     "brand": "Northern Royal",
+     "fmt": "Video 0:07",
+     "on": "Nov 5",
+     "line": "35% OFF | Fishing Line Rings Only",
+     "offer": "35% off",
+     "ran": 71
+    }
+   ]
+  },
+  {
+   "label": "40%",
+   "value": 10.7,
+   "shown": "10.7%",
+   "hot": false,
+   "drill": [
+    {
+     "id": "1321323570008359",
+     "brand": "Tropicfeel",
+     "fmt": "Flexible, static",
+     "on": "Nov 11",
+     "line": "Black Friday: Up to 40% OFF",
+     "offer": "Up to 40% off",
+     "ran": 20
+    },
+    {
+     "id": "823403520657858",
+     "brand": "HOTO",
+     "fmt": "Static",
+     "on": "Nov 9",
+     "line": "Black Friday Deal: 40% Off HOTO Now!",
+     "offer": "40% off",
+     "ran": 64
+    },
+    {
+     "id": "4431062073779688",
+     "brand": "Muscle Nation",
+     "fmt": "Flexible, static",
+     "on": "Nov 13",
+     "line": "Black Staples Are Back | 40% OFF for BFCM",
+     "offer": "40% off",
+     "ran": 2
+    },
+    {
+     "id": "2238835889929637",
+     "brand": "Billfish Gear",
+     "fmt": "Flexible, static",
+     "on": "Nov 17",
+     "line": "UP TO 40% OFF",
+     "offer": "Up to 40% off",
+     "ran": 48
+    },
+    {
+     "id": "3685111834961711",
+     "brand": "Black Girl Vitamins",
+     "fmt": "Video 0:11",
+     "on": "Nov 28",
+     "line": "Black Friday just dropped Up to 40% off!",
+     "offer": "Up to 40% off",
+     "ran": 88
+    },
+    {
+     "id": "1374950367605794",
+     "brand": "Michael Todd Beauty",
+     "fmt": "Video 0:28",
+     "on": "Nov 11",
+     "line": "Black Friday Sale - SAVE 40% OFF + FREE SHIPPING",
+     "offer": "40% off",
+     "ran": 39
+    }
+   ]
+  },
+  {
+   "label": "45%",
+   "value": 1,
+   "shown": "1.0%",
+   "hot": false,
+   "drill": [
+    {
+     "id": "731547999962044",
+     "brand": "Dossier",
+     "fmt": "Flexible, static",
+     "on": "Nov 19",
+     "line": "Black Friday: Up to 45% Off",
+     "offer": "Up to 45% off",
+     "ran": 7
+    },
+    {
+     "id": "2080984229303280",
+     "brand": "Omorovicza",
+     "fmt": "Flexible, static",
+     "on": "Nov 28",
+     "line": "Black Friday 45% off Sets",
+     "offer": "Up to 45% off",
+     "ran": 3
+    },
+    {
+     "id": "2563875614013351",
+     "brand": "Ancestral Supplements",
+     "fmt": "Static",
+     "on": "Dec 3",
+     "line": "45% Off + FREE Gifts EXTENDED SALE",
+     "offer": "Up to 45% off",
+     "ran": 15
+    },
+    {
+     "id": "3827520597544409",
+     "brand": "The Cornish Seaweed Bath Co",
+     "fmt": "Flexible, static",
+     "on": "Nov 27",
+     "line": "\u2026up to 45% off",
+     "offer": "Up to 45% off",
+     "ran": 54
+    },
+    {
+     "id": "844331671574454",
+     "live": true,
+     "brand": "Olvys",
+     "fmt": "Video 0:42",
+     "on": "Nov 19",
+     "line": "Black Friday | Save 45%",
+     "offer": "45% off",
+     "ran": 334
+    },
+    {
+     "id": "1101137481884836",
+     "brand": "Resparked",
+     "fmt": "Video 0:50",
+     "on": "Nov 1",
+     "line": "Black Friday Sale! Up to 45% OFF",
+     "offer": "Up to 45% off",
+     "ran": 68
+    }
+   ]
+  },
+  {
+   "label": "50%",
+   "value": 22,
+   "shown": "22.0%",
+   "hot": true,
+   "drill": [
+    {
+     "id": "701103443056245",
+     "brand": "Worthy Always",
+     "fmt": "Flexible, static",
+     "on": "Nov 28",
+     "line": "BLACK FRIDAY SALE 50% OFF!",
+     "offer": "50% off",
+     "ran": 312
+    },
+    {
+     "id": "3891768767621978",
+     "brand": "Tory Burch",
+     "fmt": "Flexible, static",
+     "on": "Nov 27",
+     "line": "Black Friday: Up to 50% Off.",
+     "offer": "Up to 50% off",
+     "ran": 2
+    },
+    {
+     "id": "811622728147553",
+     "brand": "Venum",
+     "fmt": "Static",
+     "on": "Nov 7",
+     "line": "Black Friday: Up to 50% Off Venum Boxing Equipment.",
+     "offer": "Up to 50% off",
+     "ran": 26
+    },
+    {
+     "id": "1160236702286214",
+     "brand": "The Beachwaver Co",
+     "fmt": "Video 0:10",
+     "on": "Nov 6",
+     "line": "Get 50% OFF Glitter Beachwavers, while they last!",
+     "offer": "50% off",
+     "ran": 129
+    },
+    {
+     "id": "808481342004850",
+     "brand": "Skull Bliss",
+     "fmt": "Video 0:10",
+     "on": "Nov 13",
+     "line": "Up to 50% OFF EVERYTHING!!",
+     "offer": "Up to 50% off",
+     "ran": 31
+    },
+    {
+     "id": "2077491996389259",
+     "brand": "Mamas & Papas",
+     "fmt": "Flexible, static",
+     "on": "Oct 30",
+     "line": "Save up to 50% off* on your baby essentials.",
+     "offer": "Up to 50% off",
+     "ran": 32
+    }
+   ]
+  },
+  {
+   "label": "55%",
+   "value": 1.9,
+   "shown": "1.9%",
+   "hot": false,
+   "drill": [
+    {
+     "id": "1145906114324075",
+     "brand": "JOVS",
+     "fmt": "Static",
+     "on": "Nov 27",
+     "line": "55% OFF + $289 Free Gift",
+     "offer": "55% off",
+     "ran": 3
+    },
+    {
+     "id": "1793281624640226",
+     "brand": "Blissy",
+     "fmt": "Static",
+     "on": "Nov 12",
+     "line": "Get 55% OFF",
+     "offer": "55% off",
+     "ran": 25
+    },
+    {
+     "id": "740247622445138",
+     "brand": "Arctic Cool",
+     "fmt": "Static",
+     "on": "Dec 5",
+     "line": "Up to 55% Off on Closeout Items. Use code: BF25",
+     "offer": "Up to 55% off",
+     "ran": 24
+    },
+    {
+     "id": "1888128268785729",
+     "brand": "MAGIC JOHN",
+     "fmt": "Video 1:21",
+     "on": "Nov 19",
+     "line": "Up to 55% Off!",
+     "offer": "Up to 55% off",
+     "ran": 325
+    },
+    {
+     "id": "1335336307720794",
+     "brand": "JAXXON",
+     "fmt": "Static",
+     "on": "Nov 17",
+     "line": "Up to 55% OFF your favorite JAXXON chains, bracelets, and essentials.",
+     "offer": "Up to 55% off",
+     "ran": 58
+    },
+    {
+     "id": "802006379322237",
+     "brand": "ShowerEnvy",
+     "fmt": "Video 1:08",
+     "on": "Nov 11",
+     "line": "BUY NOW For 55% Off!",
+     "offer": "Up to 55% off",
+     "ran": 56
+    }
+   ]
+  },
+  {
+   "label": "60%",
+   "value": 9.8,
+   "shown": "9.8%",
+   "hot": false,
+   "drill": [
+    {
+     "id": "1174346911317902",
+     "brand": "AYBL",
+     "fmt": "Flexible, static",
+     "on": "Nov 11",
+     "line": "Shop up to 60% off",
+     "offer": "Up to 60% off",
+     "ran": 22
+    },
+    {
+     "id": "1498492077938728",
+     "brand": "Sailbrace",
+     "fmt": "Flexible, static",
+     "on": "Nov 10",
+     "line": "SAVE UP TO 60% OFF!",
+     "offer": "Up to 60% off",
+     "ran": 105
+    },
+    {
+     "id": "1144801367417791",
+     "brand": "Laura Geller Beauty",
+     "fmt": "Flexible, static",
+     "on": "Dec 5",
+     "line": "Up to 60% Off",
+     "offer": "Up to 60% off",
+     "ran": 3
+    },
+    {
+     "id": "1986482235533016",
+     "brand": "MVMT",
+     "fmt": "Video 0:12",
+     "on": "Oct 27",
+     "line": "Up to 60% off* sitewide is on for MVMT Black Friday Season Sale.",
+     "offer": "Up to 60% off",
+     "ran": 38
+    },
+    {
+     "id": "1187163623324820",
+     "brand": "SPARK PAWS",
+     "fmt": "Static",
+     "on": "Oct 31",
+     "line": "Treat Your Dog Like Family \u2013 Up to 60% Off Cozy Winter Essentials!",
+     "offer": "Up to 60% off",
+     "ran": 31
+    },
+    {
+     "id": "835375615752032",
+     "brand": "David Outwear",
+     "fmt": "Flexible, video 0:10",
+     "on": "Nov 26",
+     "line": "Premium Jackets - Up to 60% Off",
+     "offer": "Up to 60% off",
+     "ran": 34
+    }
+   ]
+  },
+  {
+   "label": "65%",
+   "value": 1.6,
+   "shown": "1.6%",
+   "hot": false,
+   "drill": [
+    {
+     "id": "1515275982897960",
+     "brand": "GTHIC",
+     "fmt": "Flexible, static",
+     "on": "Nov 13",
+     "line": "Black Friday Sale - Up to 65% Off",
+     "offer": "Up to 65% off",
+     "ran": 177
+    },
+    {
+     "id": "1789678731751133",
+     "brand": "Rippl",
+     "fmt": "Static",
+     "on": "Nov 30",
+     "line": "Last Chance 65% OFF",
+     "offer": "65% off",
+     "ran": 22
+    },
+    {
+     "id": "1092032396149150",
+     "brand": "Mr. Gugu & Miss Go",
+     "fmt": "Static",
+     "on": "Nov 5",
+     "line": "UP TO 65% OFF, code BF20",
+     "offer": "Up to 65% off",
+     "ran": 3
+    },
+    {
+     "id": "1905574847049174",
+     "brand": "ZWILLING J.A. HENCKELS",
+     "fmt": "Flexible, static",
+     "on": "Nov 11",
+     "line": "Shop Up to 65% Off",
+     "offer": "Up to 65% off",
+     "ran": 34
+    },
+    {
+     "id": "1497713004839509",
+     "brand": "blyss",
+     "fmt": "Video 0:40",
+     "on": "Nov 24",
+     "line": "Black Friday 65% Off Sale is Live!",
+     "offer": "65% off",
+     "ran": 93
+    },
+    {
+     "id": "1332481405328236",
+     "brand": "Regal Maison",
+     "fmt": "Video 0:15",
+     "on": "Nov 5",
+     "line": "Early Black Friday: 65% OFF Sitewide!",
+     "offer": "65% off",
+     "ran": 57
+    }
+   ]
+  },
+  {
+   "label": "70%",
+   "value": 9.1,
+   "shown": "9.1%",
+   "hot": false,
+   "drill": [
+    {
+     "id": "1559485035070305",
+     "brand": "CLUSE",
+     "fmt": "Flexible, static",
+     "on": "Nov 22",
+     "line": "BLACK FRIDAY SALE! Up to 70% off",
+     "offer": "Up to 70% off",
+     "ran": 10
+    },
+    {
+     "id": "1089632966407468",
+     "brand": "VOVIA",
+     "fmt": "Static",
+     "on": "Nov 7",
+     "line": "Up to 70% off",
+     "offer": "Up to 70% off",
+     "ran": 33
+    },
+    {
+     "id": "1094661219278786",
+     "brand": "Legendairy Milk",
+     "fmt": "Flexible, static",
+     "on": "Nov 30",
+     "line": "Black Friday | Up To 70% OFF",
+     "offer": "Up to 70% off",
+     "ran": 3
+    },
+    {
+     "id": "1962744160953355",
+     "brand": "HolStrength",
+     "fmt": "Video 0:11",
+     "on": "Nov 25",
+     "line": "Up to 70% OFF Sitewide",
+     "offer": "Up to 70% off",
+     "ran": 36
+    },
+    {
+     "id": "1934731024089973",
+     "brand": "Salty Crush",
+     "fmt": "Flexible, video 1:34",
+     "on": "Nov 6",
+     "line": "Black Friday is on Up to 70% Off Sitewide!",
+     "offer": "Up to 70% off",
+     "ran": 104
+    },
+    {
+     "id": "1402976104551166",
+     "brand": "Kemimoto",
+     "fmt": "Catalog",
+     "on": "Dec 7",
+     "line": "70% OFF, Code: BE70",
+     "offer": "70% off",
+     "ran": 88
+    }
+   ]
+  },
+  {
+   "label": "75%",
+   "value": 2.2,
+   "shown": "2.2%",
+   "hot": false,
+   "drill": [
+    {
+     "id": "4260301664220708",
+     "brand": "ICON. AMSTERDAM",
+     "fmt": "Flexible, static",
+     "on": "Nov 13",
+     "line": "Our Biggest Sale in History; Up to 75% Off",
+     "offer": "Up to 75% off",
+     "ran": 6
+    },
+    {
+     "id": "1371212097729197",
+     "brand": "Disturbia",
+     "fmt": "Flexible, static",
+     "on": "Nov 26",
+     "line": "Up To 75% Off",
+     "offer": "Up to 75% off",
+     "ran": 2
+    },
+    {
+     "id": "1858186968385113",
+     "brand": "Glowco",
+     "fmt": "Static",
+     "on": "Nov 17",
+     "line": "BF25 for up to 75% OFF",
+     "offer": "Up to 75% off",
+     "ran": 88
+    },
+    {
+     "id": "997297809271235",
+     "brand": "Rolife",
+     "fmt": "Static",
+     "on": "Nov 20",
+     "line": "\u2026Up to 75% Off! You can use discount codes BF6",
+     "offer": "Up to 75% off",
+     "ran": 67
+    },
+    {
+     "id": "2335781186835742",
+     "brand": "Stepprs",
+     "fmt": "Video 0:27",
+     "on": "Nov 24",
+     "line": "Black Friday 75% OFF",
+     "offer": "Up to 75% off",
+     "ran": 53
+    },
+    {
+     "id": "1103325278392220",
+     "brand": "Koprez",
+     "fmt": "Video 0:54",
+     "on": "Nov 28",
+     "line": "Black Friday Up To 75% OFF + 30-Day Money-Back Guarantee",
+     "offer": "Up to 75% off",
+     "ran": 108
+    }
+   ]
+  },
+  {
+   "label": "80%",
+   "value": 2.2,
+   "shown": "2.2%",
+   "hot": false,
+   "drill": [
+    {
+     "id": "1152795176966867",
+     "brand": "FabFitFun",
+     "fmt": "Flexible, static",
+     "on": "Nov 20",
+     "line": "Black Friday Deals Up to 80% Off",
+     "offer": "Up to 80% off",
+     "ran": 3
+    },
+    {
+     "id": "1960070761577071",
+     "brand": "Mia Belle Girls",
+     "fmt": "Flexible, static",
+     "on": "Nov 6",
+     "line": "Black Friday Sale: Up to 80% Off!",
+     "offer": "Up to 80% off",
+     "ran": 38
+    },
+    {
+     "id": "4128495754071014",
+     "brand": "Stealth Angel",
+     "fmt": "Static",
+     "on": "Nov 24",
+     "line": "Today Only Up to 80% Off",
+     "offer": "Up to 80% off",
+     "ran": 181
+    },
+    {
+     "id": "863135786245709",
+     "brand": "OTTASILVER",
+     "fmt": "Flexible, video 0:24",
+     "on": "Nov 30",
+     "line": "BETTER THAN BLACK FRIDAY SALE UP TO 80% OFF.",
+     "offer": "Up to 80% off",
+     "ran": 57
+    },
+    {
+     "id": "1355655229537074",
+     "brand": "Amelia Jewelry",
+     "fmt": "Video 0:42",
+     "on": "Nov 24",
+     "line": "Up to 80% OFF",
+     "offer": "Up to 80% off",
+     "ran": 92
+    },
+    {
+     "id": "1574175554000040",
+     "brand": "Supermade",
+     "fmt": "Catalog",
+     "on": "Dec 1",
+     "line": "Up to 80% OFF",
+     "offer": "Up to 80% off",
+     "ran": 106
+    }
+   ]
+  }
+ ],
+ "disc1": {
+  "kind": "split",
+  "title": "882 brands' own number, two weeks out against Black Friday week",
+  "parts": [
+   {
+    "label": "Kept the same",
+    "value": 64,
+    "shown": "64%",
+    "hot": true
+   },
+   {
+    "label": "Went deeper",
+    "value": 26,
+    "shown": "26%"
+   },
+   {
+    "label": "Went shallower",
+    "value": 10,
+    "shown": "10%"
+   }
+  ]
+ },
+ "creative": {
+  "kind": "split",
+  "title": "Format, share of all ads: pick one to see six",
+  "parts": [
+   {
+    "label": "Video",
+    "value": 51.8,
+    "shown": "52%",
+    "hot": true,
+    "drill": [
+     {
+      "id": "1884701338920618",
+      "brand": "HolStrength",
+      "fmt": "Video 0:10",
+      "on": "Nov 25",
+      "line": "Black Friday Sale",
+      "offer": "Up to 70% off",
+      "ran": 36
+     },
+     {
+      "id": "1806005883369585",
+      "brand": "Antler Rings",
+      "fmt": "Video 0:15",
+      "on": "Oct 22",
+      "line": "Black Friday EARLY ACCESS",
+      "offer": "Early access",
+      "ran": 32
+     },
+     {
+      "id": "1328362321932886",
+      "brand": "HEYDUDE",
+      "fmt": "Video 0:23",
+      "on": "Nov 20",
+      "line": "CYBER WEEK DEALS",
+      "offer": "25% off",
+      "ran": 39
+     },
+     {
+      "id": "2369150346837354",
+      "brand": "Blissy",
+      "fmt": "Video 0:10",
+      "on": "Nov 25",
+      "line": "Price Drop for 24 Hours!",
+      "offer": "55% off",
+      "ran": 66
+     },
+     {
+      "id": "1316554956913281",
+      "brand": "Velvet Caviar",
+      "fmt": "Flexible, video 0:17",
+      "on": "Dec 1",
+      "line": "Princess Polka Dot",
+      "ran": 65
+     },
+     {
+      "id": "1267905635050824",
+      "brand": "Skull Bliss",
+      "fmt": "Video 0:10",
+      "on": "Nov 13",
+      "line": "BLACK FRIDAY IS HERE",
+      "offer": "Up to 50% off",
+      "ran": 31
+     }
+    ]
+   },
+   {
+    "label": "Static",
+    "value": 46,
+    "shown": "46%",
+    "drill": [
+     {
+      "id": "1501399317800376",
+      "brand": "SmileSet",
+      "fmt": "Flexible, static",
+      "on": "Nov 23",
+      "line": "Shop Early & Save",
+      "ran": 44
+     },
+     {
+      "id": "835206525925523",
+      "brand": "Native",
+      "fmt": "Flexible, static",
+      "on": "Nov 20",
+      "line": "Up to 33% off",
+      "offer": "Up to 33% off",
+      "ran": 33
+     },
+     {
+      "id": "1363319558845969",
+      "brand": "Overtone Color",
+      "fmt": "Flexible, static",
+      "on": "Nov 13",
+      "line": "EARLY BLACK FRIDAY STARTS NOW",
+      "offer": "Early access",
+      "ran": 68
+     },
+     {
+      "id": "3170801276422961",
+      "brand": "The Beachwaver Co",
+      "fmt": "Flexible, static",
+      "on": "Nov 6",
+      "line": "BLACK FRIDAY IS LIVE!",
+      "offer": "50% off",
+      "ran": 130
+     },
+     {
+      "id": "1179004547065751",
+      "brand": "Hat Club",
+      "fmt": "Flexible, static",
+      "on": "Dec 1",
+      "line": "LIGHTCYCLE",
+      "ran": 49
+     },
+     {
+      "id": "1838700120105871",
+      "brand": "Fresh Clean Threads",
+      "fmt": "Static",
+      "on": "Oct 30",
+      "line": "Heather Cali Pullover",
+      "ran": 33
+     }
+    ]
+   },
+   {
+    "label": "Catalog",
+    "value": 2.3,
+    "shown": "2%",
+    "drill": [
+     {
+      "id": "1379016997050797",
+      "brand": "Manly Bands",
+      "fmt": "Catalog",
+      "on": "Nov 26",
+      "line": "The Doire",
+      "ran": 58
+     },
+     {
+      "id": "1384132653128299",
+      "brand": "Hat Club",
+      "fmt": "Catalog",
+      "on": "Nov 21",
+      "line": "UP TO 30% OFF ALL FITTEDS",
+      "offer": "Up to 30% off",
+      "ran": 44
+     },
+     {
+      "id": "1156498396663222",
+      "brand": "Greatbigcanvas",
+      "fmt": "Catalog",
+      "on": "Oct 17",
+      "line": "Great Big Canvas",
+      "offer": "Up to 50% off",
+      "ran": 32
+     },
+     {
+      "id": "1390116302492871",
+      "brand": "Ouidad",
+      "fmt": "Catalog",
+      "on": "Nov 26",
+      "line": "Advanced Climate Control\u00ae Restore + Revive Bi-Phase",
+      "offer": "40% off",
+      "ran": 40
+     },
+     {
+      "id": "1777123806323993",
+      "brand": "GuidingCross",
+      "fmt": "Catalog",
+      "on": "Oct 31",
+      "line": "Personalized Name Put On The Full Armor Of God Long Sleeve T-Shirt",
+      "offer": "Up to 30% off",
+      "ran": 268
+     },
+     {
+      "id": "817233010923448",
+      "brand": "Cernucci",
+      "fmt": "Catalog",
+      "on": "Nov 13",
+      "line": "Pink Enamel Motif Rolo Link Bracelet - 10mm",
+      "offer": "Sale, no number",
+      "ran": 62
+     }
+    ]
+   }
+  ]
+ },
+ "kept": [
+  {
+   "kind": "hbars",
+   "title": "Share of ads that were static, inside the same brands: pick one to see six brands' ads",
+   "bars": [
+    {
+     "label": "Ran 30+ days",
+     "value": 45,
+     "shown": "45%",
+     "hot": true,
+     "drill": [
+      {
+       "id": "2822798537907546",
+       "brand": "Overtone Color",
+       "fmt": "Flexible, video 0:10",
+       "on": "Nov 13",
+       "line": "EARLY BLACK FRIDAY STARTS NOW",
+       "offer": "Early access",
+       "ran": 42
+      },
+      {
+       "id": "832617986607356",
+       "brand": "Salty Crush",
+       "fmt": "Video 0:17",
+       "on": "Nov 7",
+       "line": "Don't Miss Out",
+       "offer": "Up to 70% off",
+       "ran": 70
+      },
+      {
+       "id": "1156411976584896",
+       "brand": "Strike Gently",
+       "fmt": "Video 0:12",
+       "on": "Nov 15",
+       "line": "25% off EVERYTHING.",
+       "offer": "25% off",
+       "ran": 30
+      },
+      {
+       "id": "1425220955605700",
+       "brand": "The Beachwaver Co",
+       "fmt": "Video 0:17",
+       "on": "Nov 6",
+       "line": "The perfect gift just dropped",
+       "ran": 184
+      },
+      {
+       "id": "796208673405794",
+       "brand": "Polar Haircare",
+       "fmt": "Static",
+       "on": "Nov 11",
+       "line": "Don\u2019t Miss Out On Black Friday Savings",
+       "offer": "Up to 71% off",
+       "ran": 36
+      },
+      {
+       "id": "839003335196205",
+       "brand": "Cape Diablo",
+       "fmt": "Video 0:40",
+       "on": "Nov 5",
+       "line": "Get Yours Today",
+       "offer": "Sale, no number",
+       "ran": 46
+      }
+     ]
+    },
+    {
+     "label": "Cut within a week",
+     "value": 28,
+     "shown": "28%",
+     "drill": [
+      {
+       "id": "4146238268988220",
+       "brand": "Overtone Color",
+       "fmt": "Video 0:16",
+       "on": "Nov 5",
+       "line": "EARLY ACCESS BLACK FRIDAY",
+       "offer": "Up to 35% off",
+       "ran": 5
+      },
+      {
+       "id": "845939797801416",
+       "brand": "Salty Crush",
+       "fmt": "Flexible, video 0:05",
+       "on": "Nov 26",
+       "line": "Your cart\u2019s happy hour!",
+       "offer": "Up to 70% off",
+       "ran": 7
+      },
+      {
+       "id": "2724930697848473",
+       "brand": "Strike Gently",
+       "fmt": "Video 0:09",
+       "on": "Nov 15",
+       "line": "25% off EVERYTHING.",
+       "offer": "25% off",
+       "ran": 2
+      },
+      {
+       "id": "2596395330741061",
+       "brand": "The Beachwaver Co",
+       "fmt": "Video 0:04",
+       "on": "Nov 25",
+       "line": "Use code EARLY20 at checkout.",
+       "offer": "Dollars off",
+       "ran": 5
+      },
+      {
+       "id": "797890809747177",
+       "brand": "Polar Haircare",
+       "fmt": "Video 1:01",
+       "on": "Nov 5",
+       "line": "Black Friday sale IS LIVE!",
+       "offer": "50% off",
+       "ran": 1
+      },
+      {
+       "id": "807275838968538",
+       "brand": "Cape Diablo",
+       "fmt": "Video 0:39",
+       "on": "Nov 25",
+       "line": "BUY 2 GET 2 FREE",
+       "offer": "Buy one, get one",
+       "ran": 5
+      }
+     ]
+    }
+   ],
+   "drillNote": "The same six brands in both, in the same order: what each kept running, and what it cut."
+  },
+  {
+   "kind": "hbars",
+   "title": "Black Friday ads still running",
+   "bars": [
+    {
+     "label": "After Dec 7",
+     "value": 20521,
+     "shown": "20,521"
+    },
+    {
+     "label": "On Jan 1, 2026",
+     "value": 12810,
+     "shown": "12,810"
+    },
+    {
+     "label": "On Mar 1",
+     "value": 5055,
+     "shown": "5,055"
+    },
+    {
+     "label": "On Jun 1",
+     "value": 2497,
+     "shown": "2,497"
+    },
+    {
+     "label": "On Sep 1",
+     "value": 1232,
+     "shown": "1,232"
+    },
+    {
+     "label": "On Oct 20",
+     "value": 506,
+     "shown": "506",
+     "hot": true
+    }
+   ]
+  }
+ ],
+ "cyber": {
+  "kind": "split",
+  "title": "357 brands' Cyber Monday number against their Black Friday one",
+  "parts": [
+   {
+    "label": "Kept the same",
+    "value": 61,
+    "shown": "61%",
+    "hot": true
+   },
+   {
+    "label": "Went deeper",
+    "value": 28,
+    "shown": "28%"
+   },
+   {
+    "label": "Went shallower",
+    "value": 11,
+    "shown": "11%"
+   }
+  ]
+ },
+ "tblOffers": {
+  "title": "Lead offer, English ads",
+  "columns": [
+   {
+    "label": "Lead offer"
+   },
+   {
+    "label": "Share of ads",
+    "num": true
+   },
+   {
+    "label": "Brands leading with it",
+    "num": true
+   },
+   {
+    "label": "In the copy at all",
+    "num": true
+   },
+   {
+    "label": "Median days live",
+    "num": true
+   }
+  ],
+  "rows": [
+   [
+    "Percent off",
+    "66.2%",
+    "74.4%",
+    "69.2%",
+    "6"
+   ],
+   [
+    "Buy one, get one",
+    "9.6%",
+    "9.3%",
+    "9.6%",
+    "9"
+   ],
+   [
+    "Sale, no number",
+    "9.5%",
+    "19.9%",
+    "\u2013",
+    "7"
+   ],
+   [
+    "No offer stated",
+    "5.9%",
+    "14.6%",
+    "\u2013",
+    "5"
+   ],
+   [
+    "Dollars off",
+    "3.0%",
+    "5.4%",
+    "5.2%",
+    "10"
+   ],
+   [
+    "Early access",
+    "2.3%",
+    "6.5%",
+    "10.1%",
+    "6"
+   ],
+   [
+    "Free shipping",
+    "1.1%",
+    "2.3%",
+    "12.9%",
+    "10"
+   ],
+   [
+    "Free gift",
+    "1.1%",
+    "2.5%",
+    "9.6%",
+    "5"
+   ],
+   [
+    "Bundle",
+    "1.1%",
+    "2.9%",
+    "8.5%",
+    "9"
+   ],
+   [
+    "Spend-and-save tiers",
+    "0.1%",
+    "0.4%",
+    "1.3%",
+    "2"
+   ]
+  ],
+  "hot": [
+   0
+  ],
+  "note": "47,013 English ads from 4,835 brands. \"In the copy at all\" counts the offer anywhere, not only as the lead; a dash where there's no offer to count. Days live come from the relevance-ranked searches; tiers had only 34 ads there."
+ },
+ "cat": {
+  "kind": "explorer",
+  "title": "Pick your category: its calendar, discount and extras against all brands",
+  "launch": "2026-11-27",
+  "levels": [
+   10,
+   15,
+   20,
+   25,
+   30,
+   35,
+   40,
+   45,
+   50,
+   55,
+   60,
+   65,
+   70,
+   75,
+   80
+  ],
+  "extras": [
+   "Buy one, get one",
+   "Free gift",
+   "Bundle",
+   "Free shipping",
+   "Gifting copy"
+  ],
+  "profiles": [
+   {
+    "key": "All brands",
+    "brands": 6281,
+    "curve": [
+     0.8,
+     1.4,
+     1.8,
+     1.9,
+     2.3,
+     2.7,
+     3.1,
+     3.5,
+     3.9,
+     4.5,
+     4.7,
+     5,
+     5.6,
+     6.5,
+     7.2,
+     8.4,
+     10.8,
+     12.5,
+     13.7,
+     16.9,
+     19.3,
+     21.8,
+     25.1,
+     28.6,
+     30.1,
+     31.6,
+     34.7,
+     38.2,
+     41.2,
+     45.1,
+     48.9,
+     50.3,
+     51.9,
+     55.2,
+     58.1,
+     61.5,
+     66.5,
+     72,
+     74.1,
+     76.6,
+     81.8,
+     85.6,
+     89.4,
+     93,
+     96.3,
+     97,
+     97.6,
+     98.9,
+     99.3,
+     99.6,
+     99.7,
+     99.8,
+     99.9,
+     100
+    ],
+    "firstOut": 13,
+    "disc": [
+     1,
+     1.2,
+     5.8,
+     6.2,
+     10.4,
+     3,
+     10.7,
+     1,
+     22,
+     1.9,
+     9.8,
+     1.6,
+     9.1,
+     2.2,
+     2.2
+    ],
+    "discAds": 32551,
+    "discMedian": 50,
+    "extras": [
+     9.6,
+     9.6,
+     8.5,
+     12.9,
+     20.3
+    ],
+    "video": 51.8,
+    "early": 19.7,
+    "runDays": 6
+   },
+   {
+    "key": "Beauty & personal care",
+    "brands": 1142,
+    "curve": [
+     0.9,
+     1.6,
+     1.8,
+     1.9,
+     2.4,
+     2.7,
+     3.2,
+     3.5,
+     3.7,
+     3.9,
+     4.4,
+     4.6,
+     5,
+     5.8,
+     6.4,
+     7.4,
+     9.1,
+     10.7,
+     11.8,
+     13.6,
+     15.9,
+     17.7,
+     21.1,
+     24.6,
+     26.1,
+     27.6,
+     30,
+     34,
+     37,
+     40.8,
+     45.6,
+     47.5,
+     49.5,
+     53.3,
+     56.1,
+     58.7,
+     64.8,
+     70.6,
+     73.4,
+     75.7,
+     79.9,
+     84.2,
+     88.2,
+     92.1,
+     96.2,
+     97,
+     97.6,
+     98.9,
+     99.3,
+     99.5,
+     99.6,
+     99.8,
+     99.9,
+     100
+    ],
+    "firstOut": 11,
+    "disc": [
+     0.5,
+     1,
+     4.9,
+     5.8,
+     13.3,
+     6,
+     11.8,
+     2,
+     19.5,
+     1.2,
+     14.4,
+     1.9,
+     4.5,
+     1.6,
+     1.3
+    ],
+    "discAds": 5573,
+    "discMedian": 50,
+    "extras": [
+     7.5,
+     15.5,
+     13.2,
+     13.9,
+     25.7
+    ],
+    "video": 54.1,
+    "early": 16.6,
+    "runDays": 5
+   },
+   {
+    "key": "Apparel & shoes",
+    "brands": 953,
+    "curve": [
+     0.4,
+     1,
+     1,
+     1.2,
+     1.4,
+     1.6,
+     1.9,
+     1.9,
+     2.1,
+     2.8,
+     3,
+     3.1,
+     3.8,
+     4.6,
+     4.9,
+     5.9,
+     7.8,
+     9,
+     10.5,
+     12.6,
+     14.4,
+     17.1,
+     19.4,
+     23.1,
+     24.3,
+     25.7,
+     28.6,
+     32.9,
+     36.2,
+     40,
+     44,
+     45.3,
+     47.3,
+     50.6,
+     54.5,
+     58.8,
+     64.8,
+     70.8,
+     72.9,
+     76.4,
+     80.8,
+     84.6,
+     88.9,
+     92.8,
+     96,
+     96.7,
+     97.8,
+     99.4,
+     99.6,
+     99.7,
+     99.8,
+     99.9,
+     99.9,
+     100
+    ],
+    "firstOut": 11,
+    "disc": [
+     0.8,
+     0.5,
+     6.1,
+     5.4,
+     14.2,
+     1.2,
+     11.4,
+     0.5,
+     22.4,
+     0,
+     11.7,
+     0.2,
+     14.5,
+     3.6,
+     4.2
+    ],
+    "discAds": 4539,
+    "discMedian": 50,
+    "extras": [
+     9.2,
+     3,
+     3.8,
+     10.1,
+     8.5
+    ],
+    "video": 47,
+    "early": 26.5,
+    "runDays": 5
+   },
+   {
+    "key": "Health & supplements",
+    "brands": 552,
+    "curve": [
+     0.7,
+     1.3,
+     1.3,
+     1.3,
+     1.4,
+     1.8,
+     2.2,
+     2.9,
+     3.4,
+     4,
+     4,
+     4.3,
+     5.1,
+     5.4,
+     6,
+     6.7,
+     10,
+     11.1,
+     12.5,
+     15,
+     17.2,
+     18.7,
+     21.6,
+     24.6,
+     25.7,
+     27.7,
+     31.7,
+     36.1,
+     39.5,
+     44.4,
+     47.8,
+     49.6,
+     52.7,
+     55.3,
+     57.8,
+     60.5,
+     63.4,
+     68.8,
+     71.6,
+     73.9,
+     79.3,
+     83,
+     88.8,
+     92.4,
+     96,
+     96.7,
+     97.3,
+     98.4,
+     98.9,
+     99.1,
+     99.3,
+     99.5,
+     99.8,
+     100
+    ],
+    "firstOut": 12,
+    "disc": [
+     0.2,
+     1,
+     3,
+     4.7,
+     6.7,
+     2.7,
+     7.6,
+     1.2,
+     18.6,
+     4.1,
+     8.9,
+     1,
+     11.7,
+     2.2,
+     0.1
+    ],
+    "discAds": 2771,
+    "discMedian": 50,
+    "extras": [
+     11.6,
+     16,
+     14.6,
+     22.7,
+     21.1
+    ],
+    "video": 49.2,
+    "early": 16.4,
+    "runDays": 6
+   },
+   {
+    "key": "Jewelry & accessories",
+    "brands": 396,
+    "curve": [
+     1,
+     1.5,
+     2.3,
+     2.8,
+     3,
+     3,
+     3,
+     3.8,
+     4.5,
+     4.8,
+     5.3,
+     5.8,
+     5.8,
+     7.1,
+     7.3,
+     8.1,
+     10.9,
+     13.6,
+     14.6,
+     18.2,
+     21,
+     23.7,
+     25.5,
+     30.3,
+     32.6,
+     35.4,
+     37.9,
+     40.2,
+     42.4,
+     44.9,
+     48.2,
+     49.7,
+     51.3,
+     55.6,
+     58.6,
+     61.4,
+     69.2,
+     77,
+     78,
+     80.6,
+     85.9,
+     88.6,
+     92.2,
+     94.9,
+     96.7,
+     97.2,
+     98.2,
+     99.2,
+     99.7,
+     99.7,
+     100,
+     100,
+     100,
+     100
+    ],
+    "firstOut": 12,
+    "disc": [
+     1,
+     1.3,
+     7.7,
+     4,
+     7.8,
+     2.8,
+     7.4,
+     0.8,
+     34,
+     2.7,
+     10.6,
+     0.4,
+     11.5,
+     2.5,
+     1.7
+    ],
+    "discAds": 2706,
+    "discMedian": 50,
+    "extras": [
+     17.1,
+     11.9,
+     2.8,
+     16.3,
+     30.2
+    ],
+    "video": 50,
+    "early": 18.5,
+    "runDays": 6
+   },
+   {
+    "key": "Sports & outdoor",
+    "brands": 220,
+    "curve": [
+     0.5,
+     1.4,
+     1.8,
+     1.8,
+     1.8,
+     2.3,
+     2.3,
+     3.2,
+     3.2,
+     3.6,
+     3.6,
+     4.1,
+     4.1,
+     5,
+     5.5,
+     6.4,
+     9.1,
+     10,
+     11.4,
+     15.5,
+     17.7,
+     20.5,
+     23.2,
+     26.4,
+     26.8,
+     27.7,
+     31.4,
+     34.5,
+     39.1,
+     45.9,
+     51.4,
+     52.3,
+     52.7,
+     55.9,
+     57.7,
+     59.5,
+     64.5,
+     70.9,
+     72.3,
+     74.5,
+     82.3,
+     88.2,
+     90,
+     93.6,
+     95.9,
+     96.8,
+     97.3,
+     98.6,
+     99.1,
+     99.1,
+     99.1,
+     99.5,
+     99.5,
+     100
+    ],
+    "firstOut": 14,
+    "disc": [
+     3.2,
+     0.2,
+     4.8,
+     8.8,
+     17.5,
+     1.4,
+     13.9,
+     0,
+     20.4,
+     0,
+     10.4,
+     3.9,
+     6.7,
+     1.1,
+     0.5
+    ],
+    "discAds": 661,
+    "discMedian": 40,
+    "extras": [
+     9.3,
+     8.1,
+     6.5,
+     11.9,
+     18.5
+    ],
+    "video": 46.1,
+    "early": 20.2,
+    "runDays": 6
+   },
+   {
+    "key": "Home & furniture",
+    "brands": 200,
+    "curve": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1.5,
+     1.5,
+     1.5,
+     1.5,
+     3,
+     3,
+     4.5,
+     6,
+     7.5,
+     9.5,
+     13.5,
+     17,
+     18,
+     23.5,
+     25,
+     30.5,
+     35.5,
+     41.5,
+     44.5,
+     45,
+     47.5,
+     52,
+     53,
+     56.5,
+     60.5,
+     62,
+     63,
+     66,
+     68,
+     70.5,
+     75,
+     77.5,
+     78.5,
+     81,
+     85.5,
+     86.5,
+     90,
+     94,
+     95.5,
+     96,
+     96,
+     98.5,
+     99.5,
+     99.5,
+     99.5,
+     100,
+     100,
+     100
+    ],
+    "firstOut": 17,
+    "disc": [
+     9,
+     1.7,
+     2.4,
+     3.1,
+     13.8,
+     1.4,
+     16.2,
+     4.1,
+     23.4,
+     1.4,
+     5.9,
+     3.6,
+     9.6,
+     0,
+     0.5
+    ],
+    "discAds": 1024,
+    "discMedian": 45,
+    "extras": [
+     5.4,
+     12.7,
+     7.4,
+     15.3,
+     13.3
+    ],
+    "video": 52,
+    "early": 14.2,
+    "runDays": 8
+   },
+   {
+    "key": "Food & drink",
+    "brands": 170,
+    "curve": [
+     0.6,
+     0.6,
+     0.6,
+     0.6,
+     0.6,
+     0.6,
+     0.6,
+     0.6,
+     1.2,
+     1.8,
+     1.8,
+     1.8,
+     2.4,
+     2.4,
+     2.9,
+     3.5,
+     4.1,
+     5.3,
+     6.5,
+     9.4,
+     10.6,
+     12.4,
+     14.7,
+     17.1,
+     19.4,
+     19.4,
+     23.5,
+     27.6,
+     32.4,
+     34.7,
+     40.6,
+     41.8,
+     41.8,
+     45.9,
+     48.2,
+     52.9,
+     61.8,
+     67.6,
+     70,
+     72.9,
+     78.2,
+     82.9,
+     88.8,
+     93.5,
+     97.6,
+     97.6,
+     98.8,
+     99.4,
+     99.4,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "firstOut": 9,
+    "disc": [
+     0,
+     1.7,
+     8.4,
+     5.2,
+     9.2,
+     3.4,
+     9.4,
+     0.3,
+     40.5,
+     1.9,
+     1.7,
+     0,
+     0.8,
+     0.7,
+     0.1
+    ],
+    "discAds": 726,
+    "discMedian": 46,
+    "extras": [
+     5.8,
+     12.6,
+     11.7,
+     12,
+     20.8
+    ],
+    "video": 52,
+    "early": 17.1,
+    "runDays": 6
+   },
+   {
+    "key": "Pets",
+    "brands": 141,
+    "curve": [
+     2.1,
+     2.1,
+     2.8,
+     2.8,
+     3.5,
+     3.5,
+     3.5,
+     3.5,
+     3.5,
+     5,
+     5,
+     5,
+     5,
+     5.7,
+     5.7,
+     6.4,
+     7.8,
+     9.9,
+     10.6,
+     11.3,
+     14.9,
+     16.3,
+     17.7,
+     20.6,
+     21.3,
+     22.7,
+     25.5,
+     29.8,
+     34,
+     39,
+     44,
+     45.4,
+     46.1,
+     48.2,
+     48.2,
+     50.4,
+     56.7,
+     62.4,
+     65.2,
+     71.6,
+     80.9,
+     84.4,
+     88.7,
+     92.9,
+     97.9,
+     98.6,
+     98.6,
+     99.3,
+     99.3,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "firstOut": 9,
+    "disc": [
+     0.4,
+     3.3,
+     8.4,
+     5.4,
+     12.8,
+     1.9,
+     7,
+     0.4,
+     7.9,
+     0.7,
+     5.1,
+     5.1,
+     20.4,
+     0.9,
+     1.9
+    ],
+    "discAds": 570,
+    "discMedian": 56,
+    "extras": [
+     15,
+     13.4,
+     10.1,
+     12.2,
+     19.6
+    ],
+    "video": 49.5,
+    "early": 19.4,
+    "runDays": 8.5
+   },
+   {
+    "key": "Electronics & tech",
+    "brands": 120,
+    "curve": [
+     0.8,
+     2.5,
+     2.5,
+     3.3,
+     3.3,
+     4.2,
+     5,
+     6.7,
+     6.7,
+     8.3,
+     9.2,
+     9.2,
+     9.2,
+     9.2,
+     9.2,
+     10,
+     17.5,
+     18.3,
+     20,
+     24.2,
+     27.5,
+     29.2,
+     33.3,
+     34.2,
+     35.8,
+     37.5,
+     40,
+     41.7,
+     44.2,
+     50,
+     55.8,
+     56.7,
+     60.8,
+     66.7,
+     68.3,
+     69.2,
+     72.5,
+     76.7,
+     77.5,
+     81.7,
+     88.3,
+     90.8,
+     93.3,
+     94.2,
+     95.8,
+     97.5,
+     97.5,
+     99.2,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "firstOut": 14.5,
+    "disc": [
+     0.4,
+     0,
+     3.1,
+     4.3,
+     7.6,
+     1.2,
+     4.9,
+     0,
+     7.5,
+     2.2,
+     7.1,
+     1.8,
+     19.8,
+     0.9,
+     0.3
+    ],
+    "discAds": 737,
+    "discMedian": 60,
+    "extras": [
+     6.1,
+     4.5,
+     5.4,
+     8.4,
+     12.6
+    ],
+    "video": 54.2,
+    "early": 18.5,
+    "runDays": 6
+   },
+   {
+    "key": "Baby, kids & toys",
+    "brands": 109,
+    "curve": [
+     0.9,
+     0.9,
+     0.9,
+     0.9,
+     1.8,
+     1.8,
+     1.8,
+     1.8,
+     3.7,
+     3.7,
+     3.7,
+     4.6,
+     4.6,
+     6.4,
+     7.3,
+     11,
+     11.9,
+     14.7,
+     14.7,
+     16.5,
+     22,
+     28.4,
+     33,
+     38.5,
+     39.4,
+     40.4,
+     42.2,
+     43.1,
+     45,
+     47.7,
+     51.4,
+     54.1,
+     54.1,
+     56,
+     58.7,
+     59.6,
+     64.2,
+     70.6,
+     72.5,
+     73.4,
+     77.1,
+     79.8,
+     83.5,
+     89,
+     95.4,
+     97.2,
+     97.2,
+     97.2,
+     98.2,
+     98.2,
+     99.1,
+     99.1,
+     99.1,
+     100
+    ],
+    "firstOut": 14,
+    "disc": [
+     0.5,
+     0.4,
+     6.4,
+     6.4,
+     6.7,
+     0.2,
+     28.5,
+     0,
+     25.1,
+     0,
+     2.4,
+     0.4,
+     7.3,
+     0,
+     0.2
+    ],
+    "discAds": 550,
+    "discMedian": 40,
+    "extras": [
+     6.4,
+     17.6,
+     9.4,
+     5.9,
+     36.5
+    ],
+    "video": 50.4,
+    "early": 18.5,
+    "runDays": 10
+   }
+  ],
+  "cards": [
+   [
+    {
+     "id": "1280132417291732",
+     "brand": "SmileSet",
+     "fmt": "Flexible, static",
+     "on": "Nov 23",
+     "line": "Shop Early & Save",
+     "ran": 44
+    },
+    {
+     "id": "1226745275990823",
+     "brand": "OOOMAY",
+     "fmt": "Static",
+     "on": "Nov 21",
+     "line": "The only bag you'll ever need",
+     "offer": "Up to 60% off",
+     "ran": 329
+    },
+    {
+     "id": "1859968157978038",
+     "brand": "Legion",
+     "fmt": "Flexible, static",
+     "on": "Nov 26",
+     "line": "Buy 1 Get 1 Up to 75% OFF",
+     "offer": "Buy one, get one",
+     "ran": 8
+    },
+    {
+     "id": "1379822883490439",
+     "brand": "Soufeel",
+     "fmt": "Static",
+     "on": "Nov 28",
+     "line": "Music fridge magnet -Best Gift",
+     "offer": "Sale, no number",
+     "ran": 32
+    },
+    {
+     "id": "1479125403188973",
+     "brand": "Fiido",
+     "fmt": "Flexible, static",
+     "on": "Nov 19",
+     "line": "M1 Pro: Free Rear Rack",
+     "offer": "Free gift",
+     "ran": 19
+    },
+    {
+     "id": "1376697377382771",
+     "brand": "Tylko",
+     "fmt": "Carousel",
+     "on": "Nov 30",
+     "line": "And yes, it\u2019s the final day of Black Friday.",
+     "ran": 1
+    }
+   ],
+   [
+    {
+     "id": "1280132417291732",
+     "brand": "SmileSet",
+     "fmt": "Flexible, static",
+     "on": "Nov 23",
+     "line": "Shop Early & Save",
+     "ran": 44
+    },
+    {
+     "id": "1302547188227221",
+     "brand": "LUX SKIN",
+     "fmt": "Static",
+     "on": "Nov 26",
+     "line": "The $500 LED Mask Scam",
+     "offer": "Dollars off",
+     "ran": 59
+    },
+    {
+     "id": "2140433613363518",
+     "brand": "Ogee",
+     "fmt": "Video 0:45",
+     "on": "Nov 20",
+     "line": "Our Largest Sale of the Year is HERE! Time to Glow Off.",
+     "offer": "32% off",
+     "ran": 71
+    },
+    {
+     "id": "1525896892051269",
+     "brand": "Qure Skincare",
+     "fmt": "Video 0:24",
+     "on": "Nov 2",
+     "line": "Save up to 57% on our Exclusive Black Friday Bundles",
+     "offer": "Up to 57% off",
+     "ran": 31
+    },
+    {
+     "id": "1904394616779103",
+     "brand": "Luxe Research",
+     "fmt": "Video 1:12",
+     "on": "Nov 25",
+     "line": "BF 2-in-1 Deal",
+     "offer": "Buy one, get one",
+     "ran": 45
+    },
+    {
+     "id": "1719091455713945",
+     "brand": "Michael Todd Beauty",
+     "fmt": "Static",
+     "on": "Dec 1",
+     "line": "Black Friday Sale - SAVE 40% OFF + FREE SHIPPING",
+     "offer": "40% off",
+     "ran": 86
+    }
+   ],
+   [
+    {
+     "id": "1226745275990823",
+     "brand": "OOOMAY",
+     "fmt": "Static",
+     "on": "Nov 21",
+     "line": "The only bag you'll ever need",
+     "offer": "Up to 60% off",
+     "ran": 329
+    },
+    {
+     "id": "2325985811214000",
+     "brand": "Bomre",
+     "fmt": "Video 0:39",
+     "on": "Nov 11",
+     "line": "Don't Miss Out On Black Friday Savings",
+     "offer": "Sale, no number",
+     "ran": 32
+    },
+    {
+     "id": "4255320938061315",
+     "brand": "GuidingCross",
+     "fmt": "Static",
+     "on": "Dec 1",
+     "line": "Up To 40% OFF SITEWIDE: CYBER MONDAYS SPECIAL",
+     "offer": "Up to 40% off",
+     "ran": 233
+    },
+    {
+     "id": "1389620166096514",
+     "brand": "David Outwear",
+     "fmt": "Catalog",
+     "on": "Nov 14",
+     "line": "Bonanza Leather Jacket",
+     "offer": "Up to 60% off",
+     "ran": 39
+    },
+    {
+     "id": "879634724395672",
+     "brand": "RIHOAS",
+     "fmt": "Catalog",
+     "on": "Nov 21",
+     "line": "Black Friday is hereGet Ready for the Biggest Shopping Event of the Year",
+     "offer": "Spend and save",
+     "ran": 52
+    },
+    {
+     "id": "4156145688034700",
+     "brand": "Mack Weldon",
+     "fmt": "Flexible, video 0:28",
+     "on": "Nov 30",
+     "line": "Up to 30% off this Cyber Monday Week!",
+     "offer": "Up to 30% off",
+     "ran": 44
+    }
+   ],
+   [
+    {
+     "id": "1859968157978038",
+     "brand": "Legion",
+     "fmt": "Flexible, static",
+     "on": "Nov 26",
+     "line": "Buy 1 Get 1 Up to 75% OFF",
+     "offer": "Buy one, get one",
+     "ran": 8
+    },
+    {
+     "id": "849334460832472",
+     "brand": "Pulsetto",
+     "fmt": "Static",
+     "on": "Nov 21",
+     "line": "Black Friday is LIVE Get Up To $400 OFF!",
+     "offer": "Dollars off",
+     "ran": 15
+    },
+    {
+     "id": "697648896734754",
+     "brand": "Black Girl Vitamins",
+     "fmt": "Video 0:49",
+     "on": "Nov 28",
+     "line": "BLACK FRIDAY ESSENTIALS",
+     "offer": "Up to 40% off",
+     "ran": 39
+    },
+    {
+     "id": "2039755990157747",
+     "brand": "NativePath",
+     "fmt": "Flexible, video 0:14",
+     "on": "Dec 5",
+     "line": "While Supplies Last",
+     "offer": "Sale, no number",
+     "ran": 43
+    },
+    {
+     "id": "3825417487589489",
+     "brand": "Qualia",
+     "fmt": "Flexible, static",
+     "on": "Nov 1",
+     "line": "9 Senolytics. 2 Days a Month. 1 Incredible Deal",
+     "offer": "Buy one, get one",
+     "ran": 31
+    },
+    {
+     "id": "2083128355773781",
+     "brand": "Everyday Dose",
+     "fmt": "Flexible, static",
+     "on": "Nov 26",
+     "line": "61% OFF + Free Starter Kit & Creamer + 100 Orders Fully Refunded!",
+     "offer": "61% off",
+     "ran": 38
+    }
+   ],
+   [
+    {
+     "id": "1379822883490439",
+     "brand": "Soufeel",
+     "fmt": "Static",
+     "on": "Nov 28",
+     "line": "Music fridge magnet -Best Gift",
+     "offer": "Sale, no number",
+     "ran": 32
+    },
+    {
+     "id": "3390718407746134",
+     "brand": "GTHIC",
+     "fmt": "Flexible, video",
+     "on": "Nov 4",
+     "line": "Don't Miss Out: 20BF Code Inside",
+     "offer": "Up to 65% off",
+     "ran": 203
+    },
+    {
+     "id": "731556322532186",
+     "brand": "BAGSMART",
+     "fmt": "Video 0:17",
+     "on": "Nov 6",
+     "line": "Black Friday Early Access",
+     "offer": "Buy one, get one",
+     "ran": 61
+    },
+    {
+     "id": "1171622698125868",
+     "brand": "Biaggi",
+     "fmt": "Video 0:21",
+     "on": "Nov 3",
+     "line": "Black Friday SALE! Genius Travel Products You Need",
+     "offer": "Up to 70% off",
+     "ran": 30
+    },
+    {
+     "id": "709661202217956",
+     "brand": "Beyond Love",
+     "fmt": "Video 0:17",
+     "on": "Nov 26",
+     "line": "The perfect gift",
+     "offer": "70% off",
+     "ran": 143
+    },
+    {
+     "id": "2268448613621593",
+     "brand": "JAXXON",
+     "fmt": "Flexible, static",
+     "on": "Nov 11",
+     "line": "Black Friday Starts Now",
+     "offer": "Up to 55% off",
+     "ran": 48
+    }
+   ],
+   [
+    {
+     "id": "1479125403188973",
+     "brand": "Fiido",
+     "fmt": "Flexible, static",
+     "on": "Nov 19",
+     "line": "M1 Pro: Free Rear Rack",
+     "offer": "Free gift",
+     "ran": 19
+    },
+    {
+     "id": "837827345667305",
+     "brand": "Db",
+     "fmt": "Flexible, static",
+     "on": "Nov 18",
+     "line": "\"25% off for Db Black members\"",
+     "offer": "25% off",
+     "ran": 10
+    },
+    {
+     "id": "804797218846846",
+     "brand": "ISLE Paddle Boards",
+     "fmt": "Flexible, video 0:09",
+     "on": "Nov 5",
+     "line": "20%-50% Off Sitewide",
+     "offer": "50% off",
+     "ran": 32
+    },
+    {
+     "id": "1424234046368826",
+     "brand": "Endura",
+     "fmt": "Flexible, video 0:25",
+     "on": "Dec 1",
+     "line": "Rain. Shine. Nae Matter.",
+     "offer": "Sale, no number",
+     "ran": 73
+    },
+    {
+     "id": "2061643081247663",
+     "brand": "RitFit",
+     "fmt": "Flexible, static",
+     "on": "Nov 21",
+     "line": "Fit for You, Fit for Home",
+     "offer": "Sale, no number",
+     "ran": 56
+    },
+    {
+     "id": "863694299453696",
+     "brand": "Baleaf Sports",
+     "fmt": "Static",
+     "on": "Nov 24",
+     "line": "Black Friday Deal Only $31",
+     "offer": "Sale, no number",
+     "ran": 150
+    }
+   ],
+   [
+    {
+     "id": "1376697377382771",
+     "brand": "Tylko",
+     "fmt": "Carousel",
+     "on": "Nov 30",
+     "line": "And yes, it\u2019s the final day of Black Friday.",
+     "ran": 1
+    },
+    {
+     "id": "802625472797432",
+     "brand": "OMHU",
+     "fmt": "Flexible, static",
+     "on": "Nov 23",
+     "line": "Black Week | Free Shipping",
+     "offer": "Free shipping",
+     "ran": 9
+    },
+    {
+     "id": "1348539996756687",
+     "brand": "Toolstoday",
+     "fmt": "Flexible, static",
+     "on": "Nov 26",
+     "line": "2 Exclusive Bundles For a Limited Time",
+     "offer": "Bundle",
+     "ran": 32
+    },
+    {
+     "id": "3779077379052630",
+     "brand": "Nectar",
+     "fmt": "Video 0:30",
+     "on": "Nov 7",
+     "line": "One Bundle. Total Bedroom Transformation",
+     "offer": "Up to 66% off",
+     "ran": 64
+    },
+    {
+     "id": "1205665521407215",
+     "brand": "Leesa",
+     "fmt": "Flexible, static",
+     "on": "Oct 28",
+     "line": "Black Friday Sale",
+     "offer": "25% off",
+     "ran": 48
+    },
+    {
+     "id": "2088003052008482",
+     "brand": "Transformer Table",
+     "fmt": "Flexible, video",
+     "on": "Nov 5",
+     "line": "BLACK FRIDAY! 35% OFF SITEWIDE",
+     "offer": "35% off",
+     "ran": 37
+    }
+   ],
+   [
+    {
+     "id": "1237471358271799",
+     "brand": "Blue Apron",
+     "fmt": "Flexible, static",
+     "on": "Dec 2",
+     "line": "\u2026sale of the year = $50 off your first two orders + free shipping.",
+     "offer": "Dollars off",
+     "ran": 0
+    },
+    {
+     "id": "2371445446619761",
+     "brand": "Home Chef",
+     "fmt": "Flexible, static",
+     "on": "Nov 18",
+     "line": "Kids Eat Free + Free Shipping!",
+     "offer": "Free shipping",
+     "ran": 99
+    },
+    {
+     "id": "1114172840790667",
+     "brand": "Macro Mike",
+     "fmt": "Flexible, static",
+     "on": "Nov 13",
+     "line": "The more you spend, the greater the chance to win",
+     "offer": "Spend and save",
+     "ran": 3
+    },
+    {
+     "id": "1170347057935216",
+     "brand": "makegoodfood.ca",
+     "fmt": "Flexible, video 0:10",
+     "on": "Nov 20",
+     "line": "Up to $225 OFF",
+     "offer": "Dollars off",
+     "ran": 38
+    },
+    {
+     "id": "725335740063660",
+     "brand": "Mingle",
+     "fmt": "Static",
+     "on": "Nov 11",
+     "line": "Up to 50% OFF + 14 NEW FLAVOURS NOW!",
+     "offer": "Up to 50% off",
+     "ran": 76
+    },
+    {
+     "id": "1100121382058914",
+     "brand": "Javvy Coffee",
+     "fmt": "Video 0:14",
+     "on": "Dec 2",
+     "line": "Exclusive VIP Access Unlocked",
+     "offer": "Up to 58% off",
+     "ran": 84
+    }
+   ],
+   [
+    {
+     "id": "1522243115714466",
+     "brand": "Farmina",
+     "fmt": "Catalog",
+     "on": "Nov 25",
+     "line": "Farmina Pet Foods - black friday 2025",
+     "ran": 66
+    },
+    {
+     "id": "1089711139667481",
+     "brand": "Open Farm",
+     "fmt": "Flexible, static",
+     "on": "Oct 15",
+     "line": "Get up to 20% off your next order. Auto-applied at checkout.",
+     "offer": "Up to 20% off",
+     "ran": 35
+    },
+    {
+     "id": "841436245056180",
+     "brand": "NutriPaw",
+     "fmt": "Video 0:10",
+     "on": "Nov 1",
+     "line": "Dog Approved \u2013 15% Black Friday Treat!",
+     "offer": "15% off",
+     "ran": 84
+    },
+    {
+     "id": "817166217615074",
+     "brand": "TheraPetMD",
+     "fmt": "Video 0:45",
+     "on": "Nov 24",
+     "line": "Ends Soon: 70% Off Black Friday Deal",
+     "offer": "Up to 70% off",
+     "ran": 49
+    },
+    {
+     "id": "2452451738482407",
+     "brand": "BullyBillows",
+     "fmt": "Flexible, static",
+     "on": "Nov 6",
+     "line": "Up to 70% Off Premium Dog Accessories",
+     "offer": "Up to 70% off",
+     "ran": 32
+    },
+    {
+     "id": "25168773782791213",
+     "brand": "Dog Friendly Co",
+     "fmt": "Video 0:12",
+     "on": "Nov 24",
+     "line": "Black Friday Sale | Save Up To 70% Off",
+     "offer": "Up to 70% off",
+     "ran": 67
+    }
+   ],
+   [
+    {
+     "id": "1812268542730160",
+     "brand": "Skullcandy",
+     "fmt": "Flexible, static",
+     "on": "Nov 28",
+     "line": "BLACK FRIDAY IS HERE",
+     "offer": "Sale, no number",
+     "ran": 39
+    },
+    {
+     "id": "1282402327238756",
+     "brand": "NETGEAR",
+     "fmt": "Flexible, static",
+     "on": "Nov 24",
+     "line": "Save $490 this BFCM",
+     "offer": "Dollars off",
+     "ran": 11
+    },
+    {
+     "id": "1358696851781254",
+     "brand": "Sonos",
+     "fmt": "Flexible, static",
+     "on": "Nov 20",
+     "line": "Free shipping and returns",
+     "offer": "Free shipping",
+     "ran": 10
+    },
+    {
+     "id": "1379613610359068",
+     "brand": "soundcore",
+     "fmt": "Video 0:37",
+     "on": "Nov 25",
+     "line": "soundcore Sleep A30",
+     "offer": "Dollars off",
+     "ran": 112
+    },
+    {
+     "id": "714876477833804",
+     "brand": "Fiordi",
+     "fmt": "Video 0:43",
+     "on": "Nov 22",
+     "line": "Compre 1 & Leve 2",
+     "ran": 58
+    },
+    {
+     "id": "861722152961177",
+     "brand": "Journey Official",
+     "fmt": "Video 0:14",
+     "on": "Nov 17",
+     "line": "30% OFF NEXA, Black Friday Sale!",
+     "offer": "30% off",
+     "ran": 48
+    }
+   ],
+   [
+    {
+     "id": "1701501283863454",
+     "brand": "Kyte Baby",
+     "fmt": "Static",
+     "on": "Nov 7",
+     "line": "Kyte Baby | The Original Bamboo Sleep Bag\u2122",
+     "ran": 40
+    },
+    {
+     "id": "1581779896601653",
+     "brand": "CYBEX",
+     "fmt": "Flexible, static",
+     "on": "Nov 7",
+     "line": "Save $150 when you buy our fan favorite Callisto G 360 Select.",
+     "offer": "Dollars off",
+     "ran": 24
+    },
+    {
+     "id": "1502961504154623",
+     "brand": "LIEWOOD",
+     "fmt": "Flexible, static",
+     "on": "Dec 1",
+     "line": "Today only \u2013 Free shipping",
+     "offer": "Free shipping",
+     "ran": 1
+    },
+    {
+     "id": "1524322932187121",
+     "brand": "ANAVRIN",
+     "fmt": "Static",
+     "on": "Nov 9",
+     "line": "Experience assembling our Kyoto Gion DIY Book Nook Kit",
+     "offer": "Bundle",
+     "ran": 194
+    },
+    {
+     "id": "1124576139744980",
+     "brand": "MiniLabbies",
+     "fmt": "Video 0:30",
+     "on": "Oct 26",
+     "line": "Your kids will never get bored of this",
+     "offer": "Sale, no number",
+     "ran": 136
+    },
+    {
+     "id": "1133547372184254",
+     "brand": "Moonkie",
+     "fmt": "Video 0:37",
+     "on": "Nov 12",
+     "line": "Lowest Price of the Year",
+     "offer": "Buy one, get one",
+     "ran": 82
+    }
+   ]
+  ],
+  "note": "Extras are shares of English ads that mention the offer anywhere; early access counts brands with English ads. This year's dates put the same number of days before Black Friday, Nov 27, 2026."
+ },
+ "catTbl": {
+  "title": "All ten side by side: sort by any column",
+  "sort": true,
+  "heat": true,
+  "columns": [
+   {
+    "label": "Category"
+   },
+   {
+    "label": "Brands",
+    "num": true
+   },
+   {
+    "label": "Median % off",
+    "num": true
+   },
+   {
+    "label": "BOGO",
+    "num": true
+   },
+   {
+    "label": "Free gift",
+    "num": true
+   },
+   {
+    "label": "Bundle",
+    "num": true
+   },
+   {
+    "label": "Free ship",
+    "num": true
+   },
+   {
+    "label": "Gifting copy",
+    "num": true
+   },
+   {
+    "label": "First ad (days out)",
+    "num": true
+   }
+  ],
+  "rows": [
+   [
+    "Beauty & personal care",
+    "1,142",
+    "50%",
+    "7.5%",
+    "15.5%",
+    "13.2%",
+    "13.9%",
+    "25.7%",
+    "11"
+   ],
+   [
+    "Apparel & shoes",
+    "953",
+    "50%",
+    "9.2%",
+    "3.0%",
+    "3.8%",
+    "10.1%",
+    "8.5%",
+    "11"
+   ],
+   [
+    "Health & supplements",
+    "552",
+    "50%",
+    "11.6%",
+    "16.0%",
+    "14.6%",
+    "22.7%",
+    "21.1%",
+    "12"
+   ],
+   [
+    "Jewelry & accessories",
+    "396",
+    "50%",
+    "17.1%",
+    "11.9%",
+    "2.8%",
+    "16.3%",
+    "30.2%",
+    "12"
+   ],
+   [
+    "Sports & outdoor",
+    "220",
+    "40%",
+    "9.3%",
+    "8.1%",
+    "6.5%",
+    "11.9%",
+    "18.5%",
+    "14"
+   ],
+   [
+    "Home & furniture",
+    "200",
+    "45%",
+    "5.4%",
+    "12.7%",
+    "7.4%",
+    "15.3%",
+    "13.3%",
+    "17"
+   ],
+   [
+    "Food & drink",
+    "170",
+    "46%",
+    "5.8%",
+    "12.6%",
+    "11.7%",
+    "12.0%",
+    "20.8%",
+    "9"
+   ],
+   [
+    "Pets",
+    "141",
+    "56%",
+    "15.0%",
+    "13.4%",
+    "10.1%",
+    "12.2%",
+    "19.6%",
+    "9"
+   ],
+   [
+    "Electronics & tech",
+    "120",
+    "60%",
+    "6.1%",
+    "4.5%",
+    "5.4%",
+    "8.4%",
+    "12.6%",
+    "14.5"
+   ],
+   [
+    "Baby, kids & toys",
+    "109",
+    "40%",
+    "6.4%",
+    "17.6%",
+    "9.4%",
+    "5.9%",
+    "36.5%",
+    "14"
+   ]
+  ],
+  "note": "Category is each brand's Facebook page category, grouped. 27% of ads sit on generic pages (\"brand\", \"website\", \"shopping\") and are left out, as are services, travel and media. Offer columns are shares of English ads that mention the offer anywhere; first ad is the median brand's first Black Friday ad, in days before Black Friday. Shading runs from faint (lowest) to strong yellow (highest) within each column."
+ }
+}

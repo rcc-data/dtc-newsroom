@@ -2,7 +2,7 @@
 // Fails if any page error fires or any visible chart canvas ends up blank.
 // usage: node tests/sweep.js [normal|dead]
 const {chromium}=require('playwright');const fs=require('fs');
-const VIEWS=['front','trends','ctc','foxwell','howland','hw-post','dtcnl','bfcm','nb-channels','nb-share','nb-bench','nb-creative','nb-q4','nb-meta','nb-library','mkt','mo-bench','mo-trend','mo-research','haus','triplewhale','wire'];
+const VIEWS=['front','trends','ctc','foxwell','howland','hw-charts','hw-posts','hw-news','hw-bf','hw-post','dtcnl','bfcm','nb-channels','nb-share','nb-bench','nb-creative','nb-q4','nb-meta','nb-library','mkt','mo-bench','mo-trend','mo-research','haus','triplewhale','wire'];
 (async()=>{
  const mode=process.argv[2]||'normal';
  const b=await chromium.launch();const p=await b.newPage({viewport:{width:1280,height:900},colorScheme:'dark'});
@@ -10,6 +10,7 @@ const VIEWS=['front','trends','ctc','foxwell','howland','hw-post','dtcnl','bfcm'
  await p.route('**/fonts.googleapis.com/**',r=>r.fulfill({body:'',contentType:'text/css'}));
  const pre=mode==='dead'?'<script>window.requestAnimationFrame=()=>0;</script>':'';
  const html=fs.readFileSync(__dirname+'/../index.html','utf8').replace('<head>','<head><script>window.__NOGATE=1</script>'+pre);
+ await p.route('http://local.test/hw/**',r=>{const f=__dirname+'/../'+decodeURIComponent(new URL(r.request().url()).pathname);fs.existsSync(f)?r.fulfill({body:fs.readFileSync(f),contentType:'image/webp'}):r.fulfill({status:404,body:''})});
  await p.route('http://local.test/rn/**',r=>{const f=__dirname+'/../'+decodeURIComponent(new URL(r.request().url()).pathname);fs.existsSync(f)?r.fulfill({body:fs.readFileSync(f),contentType:'image/webp'}):r.fulfill({status:404,body:''})});
  await p.route('http://local.test/',r=>r.fulfill({body:html,contentType:'text/html'}));
  const errs=[];p.on('pageerror',e=>errs.push(e.message));

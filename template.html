@@ -300,6 +300,26 @@ table.q tbody tr.link{cursor:pointer}
 .hm-tag{border:1px solid var(--t-line);border-radius:3px;padding:1px 6px}
 .hm-tag.ap{border-color:#7a5a12;color:var(--t-amber)}
 .hm-term details{font:500 11.5px var(--mono);color:var(--t-dim)}
+.hwgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.hwcard{display:flex;flex-direction:column;border:1px solid var(--rule);background:var(--paper);text-decoration:none;color:var(--ink);min-width:0}
+.hwcard .im{aspect-ratio:4/3;background:var(--paper-2);overflow:hidden;position:relative}
+.hwcard .im img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.hwcard .im .pl{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.7);color:#fff;font:600 11px var(--mono);padding:2px 6px;border-radius:3px}
+.hwcard .bd{padding:10px 12px;display:flex;flex-direction:column;gap:4px}
+.hwcard .bd span{font:500 10.5px var(--mono);color:var(--ink-2);text-transform:uppercase;letter-spacing:.06em}
+.hwcard .bd b{font-size:14.5px;line-height:1.3}
+.hwcard .bd i{font-style:normal;font-size:12.5px;color:var(--ink-2)}
+.hwcard:hover{border-color:var(--ink)}
+.hwtiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.hwtiles a{border:1px solid var(--rule);padding:12px 14px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:4px}
+.hwtiles a b{font-size:15px}.hwtiles a span{font-size:12.5px;color:var(--ink-2)}
+.hp-media{width:100%;display:block;border-radius:4px;background:#fff}
+.hp-text{white-space:pre-line;font-size:15px;line-height:1.55;max-width:70ch}
+.jump{position:sticky;top:var(--navh,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:8px 0;background:var(--paper);border-bottom:1px solid var(--hair);scrollbar-width:thin}
+.jump span{font:600 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);align-self:center;white-space:nowrap;padding-right:4px}
+.jump a{font:500 11.5px var(--mono);white-space:nowrap;text-decoration:none;color:var(--ink);border:1px solid var(--hair);border-radius:999px;padding:3px 10px}
+.jump a:hover{border-color:var(--ink)}
+[data-jump]{scroll-margin-top:calc(var(--navh,0px) + 52px)}
 .hp-nav{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;font:500 12px var(--mono)}
 .hp-nav a{color:var(--ink-2)}.hp-nav .sp{flex:1}
 .hp-credit{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;border-left:3px solid var(--t-amber);padding:10px 12px;font-size:13.5px;line-height:1.45}
@@ -458,7 +478,7 @@ table.q tbody tr.link{cursor:pointer}
         <div class="ddcol"><a class="ddh" href="#haus" data-desk="haus">Haus</a><span class="ddd">Incrementality · research</span><a href="#haus">Channel lift scorecard</a></div>
         <div class="ddcol"><a class="ddh" href="#triplewhale" data-desk="triplewhale">Triple Whale</a><span class="ddd">Benchmarks · weekly snapshot</span><a href="#triplewhale">Industry benchmarks</a></div>
         <div class="ddcol"><a class="ddh" href="#foxwell" data-desk="foxwell">Foxwell</a><span class="ddd">Practitioner surveys</span><a href="#foxwell">Q4 survey &amp; field reports</a></div>
-        <div class="ddcol"><a class="ddh" href="#howland" data-desk="howland">Curtis Howland</a><span class="ddd">Operator · LinkedIn &amp; newsletter</span><a href="#howland">Posts, issues &amp; BF ad study</a></div>
+        <div class="ddcol"><a class="ddh" href="#howland" data-desk="howland">Curtis Howland</a><span class="ddd">Operator · LinkedIn &amp; newsletter</span><a href="#howland">Overview</a><a href="#hw-charts">Meta Ads charts</a><a href="#hw-posts">LinkedIn posts</a><a href="#hw-news">Newsletter</a><a href="#hw-bf">Black Friday ad study</a></div>
         <div class="ddcol"><a class="ddh" href="#dtcnl" data-desk="dtcnl">Direct to Consumer</a><span class="ddd">Daily newsletter · surveys</span><a href="#dtcnl">Research, hot takes &amp; teardowns</a></div>
       </div>
     </div>
@@ -471,6 +491,13 @@ table.q tbody tr.link{cursor:pointer}
       <a href="#nb-q4">Q4 playbook</a>
       <a href="#nb-meta">Meta trends</a>
       <a href="#nb-library">Library</a>
+    </div>
+    <div class="subrow" id="subrow-hw" data-for="howland" hidden>
+      <a href="#howland">Overview</a>
+      <a href="#hw-charts">Meta Ads charts</a>
+      <a href="#hw-posts">LinkedIn posts</a>
+      <a href="#hw-news">Newsletter</a>
+      <a href="#hw-bf">Black Friday ad study</a>
     </div>
     <div class="subrow" id="subrow-mo" data-for="mo" hidden>
       <a href="#mo-bench">Creative benchmarks</a>
@@ -1223,25 +1250,38 @@ table.q tbody tr.link{cursor:pointer}
 
 <!-- Curtis Howland -->
 <section class="view" id="v-howland" hidden>
-  <div><div class="kicker">Curtis Howland · Meta Ads, in his own charts</div><h2>How a $5M-a-month Meta buyer reads an account</h2><p class="dek">Curtis Howland is VP of Marketing at Misfit and runs more than $5M a month on Meta across nine DTC brands. Most of his LinkedIn posts and newsletter issues carry a chart. Here are 31 of his Meta Ads charts, redrawn from the data in each image and grouped by the argument he keeps making. Printed numbers are exact; anything read off a bar or a line is marked approximate, and every chart links to the post it came from.</p></div>
+  <div><div class="kicker">Curtis Howland · operator desk</div><h2>How a $5M-a-month Meta buyer reads an account</h2><p class="dek">Curtis Howland is VP of Marketing at Misfit and runs more than $5M a month on Meta across nine DTC brands. He posts on LinkedIn most weekdays and writes a weekly newsletter. Start here for his sharpest calls and newest posts, then use the tabs above for his redrawn Meta charts, every LinkedIn post as an article, the newsletter and his Black Friday ad study.</p></div>
   <div class="strip" id="hwKpis"></div>
   <div class="hh-wrap" id="hwHot"></div>
-  <div class="ctl" style="padding:0;flex-wrap:wrap;gap:8px"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase">Meta Ads chapters</span><div class="seg" role="group" aria-label="Chapter" id="hwCh"></div></div>
+  <div class="section-head"><span class="label">Latest LinkedIn posts</span><a href="#hw-posts" style="font:500 12px var(--mono)">All posts →</a></div>
+  <div class="hwgrid" id="hwLatest"></div>
+  <div class="section-head"><span class="label">On this desk</span></div>
+  <div class="hwtiles" id="hwTiles"></div>
+</section>
+<section class="view" id="v-hw-charts" hidden>
+  <div><div class="kicker">Curtis Howland · Meta Ads, in his own charts</div><h2>His Meta Ads charts, redrawn</h2><p class="dek">Curtis Howland is VP of Marketing at Misfit and runs more than $5M a month on Meta across nine DTC brands. Most of his LinkedIn posts and newsletter issues carry a chart. Here are 31 of his Meta Ads charts, redrawn from the data in each image and grouped by the argument he keeps making. Printed numbers are exact; anything read off a bar or a line is marked approximate, and every chart links to the post it came from.</p></div>
+  <div class="ctl" style="padding:0;flex-wrap:wrap;gap:8px"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase">Chapters</span><div class="seg" role="group" aria-label="Chapter" id="hwCh"></div></div>
   <div id="hwMeta"></div>
-  <div class="section-head" style="margin-top:6px"><span class="label">Everything he publishes</span></div>
-  <div class="grid2">
-    <div class="term"><div class="th"><span class="t">Black Friday 2025: what led the ad</span><span class="m">% of 68,245 Meta ads naming BF or CM</span></div><div class="chart"><canvas id="cHwOffer"></canvas></div><p class="note">Two-thirds of ads led with percent off. A free gift led about 1 in 100. From his 2 Nov 2026 issue.</p></div>
-    <div class="term"><div class="th"><span class="t">Posting rhythm</span><span class="m">LinkedIn posts logged per month, by format</span></div><div class="chart"><canvas id="cHwMonth"></canvas></div></div>
-  </div>
-  <div class="term"><div class="th"><span class="t">68,245 Black Friday ads, taken apart</span><span class="m">timing, discount and Cyber Monday · 2025 season</span></div><div class="tw"><table class="q cad-t" id="tHwBf"></table></div></div>
-  <div class="term">
-    <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">LinkedIn posts</span><div class="seg" role="group" aria-label="Format" id="hwType" style="margin-left:auto"><button type="button" data-v="all" aria-pressed="true">All</button><button type="button" data-v="chart" aria-pressed="false">Charts</button><button type="button" data-v="video" aria-pressed="false">Video</button><button type="button" data-v="insight" aria-pressed="false">Other images</button></div></div>
-    <div class="tw" style="max-height:520px;overflow:auto"><table class="q cad-t" id="tHwPosts"></table></div>
-    <p class="note">The figure column is the first number he states in the post, word for word; blank when the post has none.</p>
-  </div>
-  <div class="term"><div class="th"><span class="t">Newsletter issues</span><span class="m">Curtis Howland on DTC Marketing · weekly</span></div><div class="tw"><table class="q cad-t" id="tHwSS"></table></div></div>
+</section>
+<section class="view" id="v-hw-posts" hidden>
+  <div><div class="kicker">Curtis Howland · LinkedIn</div><h2>Every post with a chart, image or video</h2><p class="dek">Each post opens as an article with his original image or video, the full post text and any chart we redrew from it. Published here with Curtis Howland's permission; every article links back to the original on LinkedIn.</p></div>
+  <div class="ctl" style="padding:0;flex-wrap:wrap;gap:8px"><div class="seg" role="group" aria-label="Format" id="hwType"><button type="button" data-v="all" aria-pressed="true">All</button><button type="button" data-v="chart" aria-pressed="false">Charts</button><button type="button" data-v="video" aria-pressed="false">Video</button><button type="button" data-v="insight" aria-pressed="false">Other images</button></div><input type="search" id="hwQ" placeholder="Search posts" aria-label="Search posts" style="margin-left:auto;min-width:200px"></div>
+  <div class="hwgrid" id="hwPosts"></div>
+  <div class="term"><div class="th"><span class="t">Posting rhythm</span><span class="m">LinkedIn posts logged per month, by format</span></div><div class="chart"><canvas id="cHwMonth"></canvas></div></div>
+</section>
+<section class="view" id="v-hw-news" hidden>
+  <div><div class="kicker">Curtis Howland on DTC Marketing · weekly newsletter</div><h2>The newsletter: headlines, big quotes and every issue</h2></div>
+  <div id="hwHl"></div>
+  <div class="term"><div class="th"><span class="t">Newsletter issues</span><span class="m">newsletter.curtishowland.com</span></div><div class="tw"><table class="q cad-t" id="tHwSS"></table></div></div>
   <div class="section-head"><span class="label">Newsletter library</span></div>
   <div class="lib" id="hwLib"></div>
+</section>
+<section class="view" id="v-hw-bf" hidden>
+  <div><div class="kicker">Curtis Howland · newsletter, 2 Nov 2026</div><h2>68,245 Black Friday ads, taken apart</h2><p class="dek">Every Meta ad naming Black Friday or Cyber Monday launched 15 Oct to 7 Dec 2025, from 6,281 brands: when they launched, what they offered and whether they changed it.</p></div>
+  <div class="grid2">
+    <div class="term"><div class="th"><span class="t">What led the ad</span><span class="m">% of 68,245 Meta ads naming BF or CM</span></div><div class="chart"><canvas id="cHwOffer"></canvas></div><p class="note">Two-thirds of ads led with percent off. A free gift led about 1 in 100.</p></div>
+    <div class="term"><div class="th"><span class="t">The study in numbers</span><span class="m">timing, discount and Cyber Monday · 2025 season</span></div><div class="tw" style="max-height:420px;overflow:auto"><table class="q cad-t" id="tHwBf"></table></div></div>
+  </div>
 </section>
 
 <!-- Curtis Howland · one post as an article -->
@@ -1369,6 +1409,7 @@ const D=/*__DATA__*/null;
 const LIB=/*__LIB__*/null;
 const HWM=/*__HWM__*/null;
 const HWH=/*__HWH__*/null;
+const HWX=/*__HWX__*/null;
 const DTCH=/*__DTCH__*/null;
 const ANL=/*__ANL__*/null;
 const BF26B=/*__BF26B__*/null;
@@ -2427,8 +2468,8 @@ function renderHwHot(){if(!HWH)return;const el=document.getElementById('hwHot');
   const L=HWH.filter(x=>hwHf==='all'||(hwHf==='hot'?x.heat===3:hwHf==='meta'?x.meta:true));
   el.innerHTML=`<div class="hh-lead"><span class="hh-k">Hottest take · ${dfmt(lead.date,true)}</span><blockquote>“${esc(lead.quote)}”</blockquote><div class="hh-meta"><span>Curtis Howland</span><a href="${lead.url}" target="_blank" rel="noopener">${esc(lead.title)} ↗</a></div></div>
   <div class="section-head"><span class="label">Hot takes</span><span class="hh-meta" style="color:var(--ink-2)">${hot.length} issues where he argues against common practice</span></div>
-  <div class="hh-hot">${hot.map(x=>`<a class="hh-card" href="${x.url}" target="_blank" rel="noopener"><span class="hh-meta">${heat(x.heat)}<span>${esc(x.topic)}</span><span>${dfmt(x.date,true)}</span></span><b>${esc(x.headline)}</b><span class="hh-t">${esc(x.take)}</span></a>`).join('')}</div>
-  <div class="term"><div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Headlines and big quotes · every issue</span><div class="seg" role="group" aria-label="Filter" id="hwHf" style="margin-left:auto">${[['all','All '+HWH.length],['hot','Hottest'],['meta','Meta ads']].map(([v,n])=>`<button type="button" data-v="${v}" aria-pressed="${hwHf===v}">${n}</button>`).join('')}</div></div>
+  <div class="hh-hot">${hot.map(x=>`<a class="hh-card" href="${x.url}" target="_blank" rel="noopener"><span class="hh-meta">${heat(x.heat)}<span>${esc(x.topic)}</span><span>${dfmt(x.date,true)}</span></span><b>${esc(x.headline)}</b><span class="hh-t">${esc(x.take)}</span></a>`).join('')}</div>`;
+  document.getElementById('hwHl').innerHTML=`<div class="term"><div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Headlines and big quotes · every issue</span><div class="seg" role="group" aria-label="Filter" id="hwHf" style="margin-left:auto">${[['all','All '+HWH.length],['hot','Hottest'],['meta','Meta ads']].map(([v,n])=>`<button type="button" data-v="${v}" aria-pressed="${hwHf===v}">${n}</button>`).join('')}</div></div>
   <div class="hh-list">${L.map(x=>`<div class="hh-row"><span class="d">${dfmt(x.date,true)}<br>${heat(x.heat)}</span><div><a href="${x.url}" target="_blank" rel="noopener">${esc(x.headline)} ↗</a><q>${esc(x.quote)}</q><div class="hh-t">${esc(x.topic)} · ${esc(x.take)}</div></div></div>`).join('')}</div></div>`;
   document.getElementById('hwHf').onclick=e=>{const b=e.target.closest('button');if(b){hwHf=b.dataset.v;renderHwHot()}};
 }
@@ -2481,23 +2522,39 @@ SEGBIND('hwCh',b=>{hwCh=b.dataset.v;renderHwMeta()});
 
 /* ---------- Curtis Howland ---------- */
 let hwType='all';
+const hwX=r=>(HWX&&HWX[r.date])||{};
+function hwCard(r){const x=hwX(r),TL={chart:'Chart',video:'Video',insight:'Image'};
+  return `<a class="hwcard" href="#hw-post/${hwPostId(r)}"><div class="im">${x.img?`<img src="${x.img}" alt="" loading="lazy" width="${x.w||800}" height="${x.h||600}">`:''}${x.video?'<span class="pl">▶ video</span>':''}</div><div class="bd"><span>${dfmt(r.date,true)} · ${TL[r.type]||r.type}</span><b>${esc(r.headline)}</b>${r.figure?`<i>${esc(r.figure.length>110?r.figure.slice(0,108)+'…':r.figure)}</i>`:''}</div></a>`}
 function renderHowland(){
-  renderHwHot();renderHwMeta();
+  renderHwHot();
   const P=rowsOf('li_howland'),S=rowsOf('howland_ss'),B=rowsOf('howland_bf');const bv=m=>(B.find(r=>r.metric===m)||{}).value;
   const cnt=t=>P.filter(r=>r.type===t).length;
   kpiStrip('hwKpis',[['LinkedIn posts logged',P.length,'since 1 Jan 2026 · '+cnt('chart')+' charts, '+cnt('video')+' videos',T.text,P[0]?'li-howland-'+P[0].date.replace(/-/g,''):''],['Newsletter issues',S.length,'weekly since '+dfmt(S[S.length-1].date,true),T.text,''],['BF 2025 ads analysed',Number(bv('Black Friday / Cyber Monday ads analysed')).toLocaleString('en-US'),Number(bv('Brands')).toLocaleString('en-US')+' brands, Meta Ad Library',T.amber,'howland-ss-68245-black-friday-ads-taken-apart'],['Median BF discount',bv('Median discount named')+'%','64% of brands never changed it',T.down,'howland-ss-68245-black-friday-ads-taken-apart'],['Median first BF ad',bv('Median first Black Friday ad')+' days out','15 Nov 2025; 7 in 8 had nothing live by 1 Nov',T.blue,'howland-ss-68245-black-friday-ads-taken-apart']]);
-  const L=B.filter(r=>r.section==='Lead offer');
-  mk('cHwOffer',{type:'bar',data:{labels:L.map(r=>r.metric),datasets:[{label:'% of ads',data:L.map(r=>n(r.value)),backgroundColor:L.map(r=>/Free gift|Bundles/.test(r.metric)?T.up:(r.metric==='Percent off'?T.down:T.amber))}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x}% of ads`}}}}});
+  document.getElementById('hwLatest').innerHTML=P.slice(0,8).map(hwCard).join('');
+  const nCh=HWM?HWM.reduce((s,c)=>s+c.charts.length,0):0;
+  document.getElementById('hwTiles').innerHTML=[['#hw-charts','Meta Ads charts',nCh+' of his charts redrawn, in '+(HWM||[]).length+' chapters'],['#hw-posts','LinkedIn posts',P.length+' posts as articles, with his images and video'],['#hw-news','Newsletter',S.length+' issues, headlines and big quotes'],['#hw-bf','Black Friday ad study','68,245 Meta ads from BFCM 2025, taken apart']].map(([h,b,s])=>`<a href="${h}"><b>${b} →</b><span>${s}</span></a>`).join('');
+}
+function renderHwPosts(){
+  const P=rowsOf('li_howland');const q=(document.getElementById('hwQ').value||'').toLowerCase();
+  const PF=P.filter(r=>(hwType==='all'||r.type===hwType)&&(!q||(r.headline+' '+r.figure+' '+((hwX(r).text)||'')).toLowerCase().includes(q)));
+  document.getElementById('hwPosts').innerHTML=PF.length?PF.map(hwCard).join(''):'<p class="note">No posts match.</p>';
   const months=[...new Set(P.map(r=>r.date.slice(0,7)))].sort();const TY=[['chart','Chart or table',T.amber],['insight','Other image',T.blue],['video','Video','#ff4f9a']];
   mk('cHwMonth',{type:'bar',data:{labels:months.map(m=>new Date(m+'-15T12:00').toLocaleDateString('en-GB',{month:'short'})),datasets:TY.map(([k,l,c])=>({label:l,data:months.map(m=>P.filter(r=>r.type===k&&r.date.startsWith(m)).length),backgroundColor:c,stack:'s'}))},options:{scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,grid,ticks:{precision:0}}},plugins:{legend:{position:'bottom',labels:{font:{size:10}}}}}});
-  const BT=B.filter(r=>r.section!=='Lead offer'&&r.section!=='Sample');
-  document.getElementById('tHwBf').innerHTML='<thead><tr><th>Section</th><th>Metric</th><th>Value</th><th>Note</th></tr></thead><tbody>'+BT.map(r=>`<tr><td>${esc(r.section)}</td><td><b>${esc(r.metric)}</b></td><td>${esc(r.value)} <span style="color:${T.dim}">${esc(r.unit)}</span></td><td style="color:${T.dim}">${esc(r.note)}</td></tr>`).join('')+'</tbody>';
-  const TL={chart:'Chart',video:'Video',insight:'Image'};const PF=P.filter(r=>hwType==='all'||r.type===hwType);
-  document.getElementById('tHwPosts').innerHTML='<thead><tr><th>Date</th><th>Format</th><th>Post (opens the article)</th><th>Figure stated</th></tr></thead><tbody>'+PF.map(r=>`<tr><td>${dfmt(r.date,true)}</td><td>${TL[r.type]||r.type}</td><td><b><a href="#hw-post/${hwPostId(r)}">${esc(r.headline)}</a></b> <a href="${r.url}" target="_blank" rel="noopener" title="Original on LinkedIn">↗</a></td><td style="color:${T.dim}">${esc(r.figure)}</td></tr>`).join('')+'</tbody>';
+}
+function renderHwNews(){
+  renderHwHot();
+  const S=rowsOf('howland_ss');
   document.getElementById('tHwSS').innerHTML='<thead><tr><th>Date</th><th>Issue</th><th>Subtitle</th></tr></thead><tbody>'+S.map(r=>`<tr><td>${dfmt(r.date,true)}</td><td><b><a href="${r.url}" target="_blank" rel="noopener">${esc(r.title)}</a></b></td><td style="color:${T.dim}">${esc(r.subtitle)}</td></tr>`).join('')+'</tbody>';
   document.getElementById('hwLib').innerHTML=libCards(LIB.filter(x=>x.pub==='Curtis Howland'&&x.src==='Newsletter'));
 }
-SEGBIND('hwType',b=>{hwType=b.dataset.v;renderHowland()});
+function renderHwBf(){
+  const B=rowsOf('howland_bf');const L=B.filter(r=>r.section==='Lead offer');
+  mk('cHwOffer',{type:'bar',data:{labels:L.map(r=>r.metric),datasets:[{label:'% of ads',data:L.map(r=>n(r.value)),backgroundColor:L.map(r=>/Free gift|Bundles/.test(r.metric)?T.up:(r.metric==='Percent off'?T.down:T.amber))}]},options:{indexAxis:'y',interaction:{mode:'nearest',axis:'y',intersect:false},scales:{x:{grid,ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x}% of ads`}}}}});
+  const BT=B.filter(r=>r.section!=='Lead offer'&&r.section!=='Sample');
+  document.getElementById('tHwBf').innerHTML='<thead><tr><th>Section</th><th>Metric</th><th>Value</th><th>Note</th></tr></thead><tbody>'+BT.map(r=>`<tr><td>${esc(r.section)}</td><td><b>${esc(r.metric)}</b></td><td>${esc(r.value)} <span style="color:${T.dim}">${esc(r.unit)}</span></td><td style="color:${T.dim}">${esc(r.note)}</td></tr>`).join('')+'</tbody>';
+}
+SEGBIND('hwType',b=>{hwType=b.dataset.v;renderHwPosts()});
+document.getElementById('hwQ').addEventListener('input',renderHwPosts);
 /* ---------- Curtis Howland · one LinkedIn post as an article ---------- */
 let HWARG='';
 const hwPostId=r=>'li-howland-'+r.date.replace(/-/g,'');
@@ -2505,25 +2562,26 @@ const hwUrn=u=>(String(u).match(/urn:li:(?:activity|ugcPost|share):\d+/)||[''])[
 function renderHwPost(){
   const P=rowsOf('li_howland');if(!P.length)return;
   let i=P.findIndex(r=>hwPostId(r)===HWARG);if(i<0)i=0;
-  const r=P[i],id=hwPostId(r),E=LIB.find(x=>x.id===id)||{},urn=hwUrn(r.url);
+  const r=P[i],id=hwPostId(r),E=LIB.find(x=>x.id===id)||{},urn=hwUrn(r.url),X=hwX(r);
   const TL={chart:'Chart',video:'Video',insight:'Image'};
   const charts=(HWM||[]).flatMap(ch=>ch.charts.map(c=>({...c,ch:ch.h}))).filter(c=>c.url===r.url||(urn&&String(c.url).includes(urn)));
   const nx=P[i-1],pv=P[i+1];
   const more=P.filter((x,k)=>k!==i&&x.type===r.type).slice(0,5);
   document.getElementById('hwPost').innerHTML=`
-  <div class="hp-nav"><a href="#howland">← Curtis Howland desk</a><span class="sp"></span>${pv?`<a href="#hw-post/${hwPostId(pv)}">‹ Older: ${esc(pv.headline.slice(0,48))}</a>`:''}${nx?`<a href="#hw-post/${hwPostId(nx)}">Newer: ${esc(nx.headline.slice(0,48))} ›</a>`:''}</div>
+  <div class="hp-nav"><a href="#hw-posts">← All LinkedIn posts</a><span class="sp"></span>${pv?`<a href="#hw-post/${hwPostId(pv)}">‹ Older: ${esc(pv.headline.slice(0,48))}</a>`:''}${nx?`<a href="#hw-post/${hwPostId(nx)}">Newer: ${esc(nx.headline.slice(0,48))} ›</a>`:''}</div>
   <div><div class="kicker">Curtis Howland · LinkedIn · ${TL[r.type]||r.type} · ${dfmt(r.date,true)}</div><h2>${esc(r.headline)}</h2></div>
-  <div class="hp-credit"><span>Original post, ${r.type==='video'?'video':'images'} and words by <b>Curtis Howland</b> (VP of Marketing, Misfit), published on LinkedIn on ${dfmt(r.date,true)}.</span><a href="${r.url}" target="_blank" rel="noopener">View the original post on LinkedIn ↗</a><a href="https://www.linkedin.com/in/curtishowland/" target="_blank" rel="noopener">His profile ↗</a></div>
+  <div class="hp-credit"><span>Post, ${r.type==='video'?'video':'image'} and words by <b>Curtis Howland</b> (VP of Marketing, Misfit), first published on LinkedIn on ${dfmt(r.date,true)} and republished here with his permission.</span><a href="${r.url}" target="_blank" rel="noopener">View the original post on LinkedIn ↗</a><a href="https://www.linkedin.com/in/curtishowland/" target="_blank" rel="noopener">His profile ↗</a></div>
   <div class="hp-grid">
     <div style="display:flex;flex-direction:column;gap:16px;min-width:0">
       ${E.q&&E.q[0]&&E.q[0].trim()!==r.headline.trim()?`<blockquote class="hp-q">“${esc(E.q[0])}”<div class="hm-foot" style="margin-top:6px">Curtis Howland, LinkedIn</div></blockquote>`:''}
       ${E.stats&&E.stats.length?`<div class="term"><div class="th"><span class="t">What the post says</span><span class="m">figures as he states them</span></div><ul class="hp-stats">${E.stats.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>${r.figure?`<p class="note" style="margin:0">First figure stated: ${esc(r.figure)}</p>`:''}</div>`:''}
+      ${X.text?`<div><div class="kicker" style="color:var(--ink-2)">The full post</div><div class="hp-text">${esc(X.text)}</div></div>`:''}
       ${charts.map(c=>`<div class="term hm-term"><div class="th"><span class="t">${esc(c.title)}</span><span class="m">redrawn · ${esc(c.ch)}</span></div>${c.type==='table'?hmTable(c):`<div class="chart${c.type==='scatter'||c.type==='bubble'||(c.opt&&c.opt.logx)?' tall':''}"><canvas id="hp-${c.id}"></canvas></div>`}<p class="hm-msg">${esc(c.message)}</p><div class="hm-foot"><span class="hm-tag${c.approx?' ap':''}">${c.approx?'Values read from his chart (approx)':'Printed values'}</span></div></div>`).join('')}
       ${more.length?`<div class="term"><div class="th"><span class="t">More ${(TL[r.type]||'').toLowerCase()} posts</span></div><div class="hp-more">${more.map(x=>`<a href="#hw-post/${hwPostId(x)}">${dfmt(x.date,true)} · ${esc(x.headline)}</a>`).join('')}</div></div>`:''}
     </div>
-    <div class="term" style="padding:10px"><div class="th"><span class="t">The original post</span><span class="m">embedded from LinkedIn</span></div>
-      ${urn?`<iframe class="hp-embed" src="https://www.linkedin.com/embed/feed/update/${urn}" title="Curtis Howland's LinkedIn post: ${esc(r.headline)}" loading="lazy" allowfullscreen></iframe>`:''}
-      <p class="note" style="margin:0">If the post doesn't show here, <a href="${r.url}" target="_blank" rel="noopener">open it on LinkedIn ↗</a>. Images and video stay on LinkedIn and belong to Curtis Howland.</p></div>
+    <div class="term" style="padding:10px"><div class="th"><span class="t">The original post</span><span class="m">${r.type==='video'?'video':'image'} · Curtis Howland</span></div>
+      ${X.video?`<video class="hp-media" controls preload="none" playsinline poster="${X.img||''}" src="${X.video}"></video><p class="note" style="margin:0">Video not playing here? <a href="${r.url}" target="_blank" rel="noopener">Watch it on LinkedIn ↗</a></p>`:X.img?`<a href="${X.img}" target="_blank" rel="noopener"><img class="hp-media" src="${X.img}" alt="${esc(r.headline)}, image from Curtis Howland's LinkedIn post" width="${X.w||800}" height="${X.h||600}"></a>`:''}
+      <p class="note" style="margin:0">© Curtis Howland. Republished with his permission from <a href="${r.url}" target="_blank" rel="noopener">his LinkedIn post ↗</a>.</p></div></div>
   </div>`;
   charts.forEach(c=>{if(c.type!=='table')mk('hp-'+c.id,hmCfg(c))});
   window.scrollTo(0,0);
@@ -2620,7 +2678,7 @@ SEGBIND('hsMeasure',b=>{hsMeasure=b.dataset.m;renderHaus()});
 ['twMetric','twChan','twSnap','twInd'].forEach(id=>document.getElementById(id).addEventListener('change',renderTW));
 
 /* ---------- routing ---------- */
-const VIEWS={front:()=>{renderFront();renderToday()},'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:()=>{renderBf26();renderBfMeta();renderCa();renderProj();renderBfcm()},mkt:renderMkt,'mo-bench':()=>{renderMoBench();renderCv()},'mo-trend':()=>{renderTA();renderMoTrend()},'hw-post':renderHwPost,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,dtcnl:renderDtc,wire:renderWire};
+const VIEWS={front:()=>{renderFront();renderToday()},'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:()=>{renderBf26();renderBfMeta();renderCa();renderProj();renderBfcm()},mkt:renderMkt,'mo-bench':()=>{renderMoBench();renderCv()},'mo-trend':()=>{renderTA();renderMoTrend()},'hw-post':renderHwPost,'hw-charts':renderHwMeta,'hw-posts':renderHwPosts,'hw-news':renderHwNews,'hw-bf':renderHwBf,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,dtcnl:renderDtc,wire:renderWire};
 SEGBIND('mtView',b=>{mtView=b.dataset.v;renderMeta()});
 document.getElementById('mtEvents').addEventListener('change',renderMeta);
 const PUBDESKS=['nb','mo','ctc','haus','triplewhale','foxwell','howland','dtcnl'];
@@ -2634,7 +2692,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!ddMenu.hidden)ddCl
 ddMenu.addEventListener('keydown',e=>{if(e.key==='Tab'){const f=[...ddMenu.querySelectorAll('a')];if(!e.shiftKey&&document.activeElement===f[f.length-1])ddClose(false)}});
 function show(){let v=(location.hash||'#front').slice(1);const sl=v.indexOf('/');HWARG='';if(sl>0){HWARG=decodeURIComponent(v.slice(sl+1));v=v.slice(0,sl)}if(!(v in VIEWS))v='front';
   Object.keys(VIEWS).forEach(x=>document.getElementById('v-'+x).hidden=x!==v);
-  const desk=v==='hw-post'?'howland':/^(nb|mo)-/.test(v)?v.split('-')[0]:v;
+  const desk=/^hw-/.test(v)?'howland':/^(nb|mo)-/.test(v)?v.split('-')[0]:v;
   document.querySelectorAll('#deskrow a').forEach(a=>a.setAttribute('aria-current',a.dataset.desk===desk?'true':'false'));
   document.getElementById('deskBtn').setAttribute('aria-current',PUBDESKS.includes(desk)?'true':'false');
   document.querySelectorAll('#deskMenu a').forEach(a=>a.getAttribute('href')==='#'+v&&!a.classList.contains('ddh')?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
@@ -2642,6 +2700,21 @@ function show(){let v=(location.hash||'#front').slice(1);const sl=v.indexOf('/')
   document.querySelectorAll('.subrow').forEach(r=>r.hidden=r.dataset.for!==desk);
   document.querySelectorAll('.subrow a').forEach(a=>a.getAttribute('href')==='#'+v?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
   try{VIEWS[v]()}catch(e){console.error(e)}
+  try{buildJump(v)}catch(e){console.error(e)}
+}
+function buildJump(v){
+  const sec=document.getElementById('v-'+v);if(!sec)return;
+  const old=sec.querySelector(':scope>.jump');if(old)old.remove();
+  document.documentElement.style.setProperty('--navh',document.querySelector('nav.desks').offsetHeight+'px');
+  const vis=e=>e.offsetParent!==null||e.getClientRects().length;
+  let H=[...sec.querySelectorAll('.section-head .label')].filter(vis).map(e=>[e.closest('.section-head'),e.textContent.trim()]);
+  if(H.length<3){H=[...sec.querySelectorAll(':scope .term .th .t, :scope .hm-ch>h3')].filter(vis).map(e=>[e.closest('.term')||e,e.textContent.trim()])}
+  const seen=new Set();H=H.filter(([el,l])=>l&&!seen.has(el)&&seen.add(el));
+  if(H.length<4)return;
+  const nav=document.createElement('nav');nav.className='jump';nav.setAttribute('aria-label','On this page');
+  nav.innerHTML='<span>On this page</span>'+H.slice(0,16).map(([el,l],i)=>{el.id=el.id||('j-'+v+'-'+i);el.dataset.jump='1';return `<a href="#${v}" data-to="${el.id}">${esc(l.length>34?l.slice(0,32)+'…':l)}</a>`}).join('');
+  nav.addEventListener('click',e=>{const a=e.target.closest('a[data-to]');if(!a)return;e.preventDefault();const el=document.getElementById(a.dataset.to);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})});
+  const first=sec.firstElementChild;first&&first.nextSibling?sec.insertBefore(nav,first.nextSibling):sec.appendChild(nav);
 }
 document.getElementById('trPlat').innerHTML=PLATS.map(p=>`<option>${p}</option>`).join('');
 document.getElementById('trMode').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;trMode=b.dataset.v;document.querySelectorAll('#trMode button').forEach(x=>x.setAttribute('aria-pressed',x===b));renderTracker()});

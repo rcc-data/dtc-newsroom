@@ -492,6 +492,10 @@ table.q tbody tr.link{cursor:pointer}
       <a href="#nb-meta">Meta trends</a>
       <a href="#nb-library">Library</a>
     </div>
+    <div class="subrow" id="subrow-mkt" data-for="mkt" hidden>
+      <a href="#mkt">Meta</a>
+      <a href="#mkt-google">Google</a>
+    </div>
     <div class="subrow" id="subrow-hw" data-for="howland" hidden>
       <a href="#howland">Overview</a>
       <a href="#hw-charts">Meta Ads charts</a>
@@ -938,7 +942,7 @@ table.q tbody tr.link{cursor:pointer}
 <!-- EARNINGS -->
 <section class="view" id="v-mkt" hidden>
   <div>
-    <div class="kicker">Earnings desk · Quarterly ad price check</div>
+    <div class="kicker">Earnings desk · Meta · quarterly ad price check</div>
     <h2>Meta's price per ad is rising fastest in the US, at +23% a year</h2>
     <p class="dek">Each quarter Meta reports how many ad impressions it served and how much the average ad cost, both year on year. It is a market-wide read on auction inflation, covering every advertiser on Meta, to set against Northbeam's DTC sample.</p>
   </div>
@@ -963,6 +967,35 @@ table.q tbody tr.link{cursor:pointer}
   <div class="term">
     <div class="th"><span class="t">Quarterly table</span><span class="m">Meta Family of Apps</span></div>
     <div class="tw"><table class="q" id="tEarn"></table></div>
+  </div>
+</section>
+<section class="view" id="v-mkt-google" hidden>
+  <div>
+    <div class="kicker">Earnings desk · Google · quarterly search check</div>
+    <h2>Google's search growth is coming from more clicks, not dearer ones</h2>
+    <p class="dek">Each quarter Alphabet reports how many paid clicks Google Search served and what the average click cost, both year on year, plus Google Network impressions and their price. It is the search-side twin of Meta's impressions and price per ad, covering every advertiser on Google.</p>
+  </div>
+  <div class="strip" id="gkKpis"></div>
+  <div class="term">
+    <div class="ctl"><span style="font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t-amber)">Volume vs price, quarter by quarter</span>
+      <label class="chk" style="margin-left:auto"><input type="checkbox" id="gkRev" checked> Ad revenue bars</label></div>
+    <div class="chart tall"><canvas id="cGEarn"></canvas></div>
+    <p class="note">Lines are the YoY % changes Alphabet reports for Google Search &amp; other (paid clicks, cost per click) and Google Network (cost per impression). Alphabet gives Q4 click metrics only for the full year, so Q4 points are gaps. Since 2024 Search has grown on volume: clicks up, price per click rising more slowly.</p>
+  </div>
+  <div class="grid2">
+    <div class="term">
+      <div class="th"><span class="t">Ad revenue by surface</span><span class="m">$bn · Search &amp; other, YouTube ads, Network</span></div>
+      <div class="chart"><canvas id="cGEarnMix"></canvas></div>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">Google vs Meta</span><span class="m">price per click vs price per ad, YoY %</span></div>
+      <div class="chart"><canvas id="cGEarnVsMeta"></canvas></div>
+    </div>
+  </div>
+  <div class="callout" id="gkRead"></div>
+  <div class="term">
+    <div class="th"><span class="t">Quarterly table</span><span class="m">Alphabet · Google advertising</span></div>
+    <div class="tw"><table class="q" id="tGEarn"></table></div>
   </div>
 </section>
 
@@ -1805,7 +1838,7 @@ function renderWire(){const R=wvRows();const pubs=[...new Set(R.map(r=>r.pub))];
   document.getElementById('wvDek').textContent=`${R.length.toLocaleString()} newsletter issues, blog posts, reports, podcasts and posts from ${pubs.length} publishers since 1 January 2026, pulled from their sites and inboxes each weekday at noon. Rows marked DATA have figures in the newsroom's charts.`;
   renderWireCharts(R);renderWireTakes(R);renderWireInv();
   document.getElementById('wireList').innerHTML=WIRE.map(w=>`<div class="story"><span class="tag">${w.k}</span><h4>${esc(w.n)}</h4><span class="cad">${esc(w.c)}</span><p>${esc(w.p)}</p></div>`).join('')}
-const WVCOL={'Northbeam':'#ffb020','CTC':'#5aa9ff','Foxwell':'#a98bff','Haus':'#2ec4d6','Triple Whale':'#ff7a59','Runneth':'#ff4f9a','Meta':'#5b8cff','2PM':'#f5e44a','Modern Retail':'#5f6b66','Varos':'#44d19a','Graphite':'#9fd36a','Curtis Howland':'#e07bff'};
+const WVCOL={'Google':'#34a853','Shopify':'#95bf47','Northbeam':'#ffb020','CTC':'#5aa9ff','Foxwell':'#a98bff','Haus':'#2ec4d6','Triple Whale':'#ff7a59','Runneth':'#ff4f9a','Meta':'#5b8cff','2PM':'#f5e44a','Modern Retail':'#5f6b66','Varos':'#44d19a','Graphite':'#9fd36a','Curtis Howland':'#e07bff'};
 function renderWireCharts(R){const inc=document.getElementById('wvMR').checked;const S=R.filter(r=>inc||WVOPS(r));const ms=[...new Set(R.map(r=>r.m))].sort();const pubs=[...new Set(S.map(r=>r.pub))].sort((a,b)=>S.filter(r=>r.pub===b).length-S.filter(r=>r.pub===a).length);
   mk('cWireVol',{type:'bar',data:{labels:ms.map(MLAB),datasets:pubs.map(p=>({label:p,data:ms.map(m=>S.filter(r=>r.pub===p&&r.m===m).length),backgroundColor:WVCOL[p]||T.dim,stack:'a'}))},options:{scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,grid,ticks:{precision:0}}},plugins:{tooltip:{callbacks:{footer:it=>'Total '+it.reduce((a,b)=>a+b.parsed.y,0)}}}}});
   const O=R.filter(WVOPS);const TOP=['AI','Measurement','Meta','BFCM / Q4','Benchmarks','Creative'];const TC=['#a98bff','#2ec4d6','#5b8cff','#ff7a59','#ffb020','#ff4f9a'];
@@ -2008,6 +2041,25 @@ function renderMkt(){
   document.getElementById('mkRead').innerHTML=`<b>The read</b>Two independent sources now agree. Meta says the average US &amp; Canada ad cost 23% more than a year ago; Northbeam's DTC accounts paid about 25% more per thousand Meta impressions in October. Worldwide price (+14%) looks gentler only because cheap Asia-Pacific impressions are growing fast (+14%) at flat prices. With impression growth slowing to 10% and Q4 guidance of $73–76bn, expect US CPM inflation to carry into BFCM rather than ease. Next check: Meta's Q4 2026 results, late January 2027. ${srcBtn('meta-q3-26,meta-apac,mb-cpm25,x-roas','SOURCES ×4 ↗')}`;
   document.getElementById('tEarn').innerHTML='<thead><tr><th>Quarter</th><th>Ad revenue</th><th>Impressions YoY</th><th>Price per ad YoY</th><th>US &amp; Canada price</th><th>Asia-Pacific price</th><th>Next-quarter guide</th></tr></thead><tbody>'+[...E].reverse().map(x=>`<tr><td>${x.q}</td><td>$${x.rev.toFixed(2)}bn</td><td>${fmtP(x.imp,0)}</td><td style="color:${T.down}">${fmtP(x.pr,0)}</td><td>${x.us==null?'·':fmtP(x.us,0)}</td><td>${x.ap==null?'·':fmtP(x.ap,0)}</td><td>${x.g?'$'+x.g+'bn':'·'}</td></tr>`).join('')+'</tbody>';
 }
+
+
+function renderMktG(){
+  const G=rowsOf('goog_earn').map(r=>({q:r.quarter,s:n(r.search_bn),y:n(r.youtube_bn),nw:n(r.network_bn),tot:n(r.total_ads_bn),sy:n(r.search_yoy),yy:n(r.youtube_yoy),pc:n(r.paid_clicks_yoy),cpc:n(r.cpc_yoy),im:n(r.impr_yoy),cpi:n(r.cpi_yoy),url:r.url}));
+  const prev=(i,k)=>{const q=G[i].q.split(' ');const p=G.find(x=>x.q===q[0]+' '+(+q[1]-1));return p&&p[k]?(G[i][k]/p[k]-1)*100:null};
+  G.forEach((x,i)=>{x.sc=prev(i,'s');x.yc=prev(i,'y');x.tc=prev(i,'tot')});
+  const L=G[G.length-1];const r1=v=>v==null?'·':fmtP(Math.round(v),0);
+  kpiStrip('gkKpis',[['Paid clicks · '+L.q.replace(' 20',' '),fmtP(L.pc,0),'Search & other, YoY',T.up,'goog-q3-26'],['Cost per click · '+L.q.replace(' 20',' '),fmtP(L.cpc,0),'YoY · vs Meta price per ad +14%',T.down,'goog-q3-26'],['Search & other',' $'+L.s.toFixed(1)+'bn',(L.sy!=null?fmtP(L.sy,0)+' YoY as stated':'')+'',T.text,'goog-q3-26'],['YouTube ads','$'+L.y.toFixed(1)+'bn',r1(L.yc)+' YoY (computed)',T.text,'goog-q3-26'],['Network price per impression',fmtP(L.cpi,0),'impressions '+fmtP(L.im,0),T.amber,'goog-q3-26']]);
+  const showRev=document.getElementById('gkRev').checked;
+  const ds=[{type:'line',label:'Paid clicks (YoY)',data:G.map(x=>x.pc),borderColor:T.blue,backgroundColor:T.blue,borderWidth:3,pointRadius:4,tension:.25,spanGaps:false,yAxisID:'y'},{type:'line',label:'Cost per click (YoY)',data:G.map(x=>x.cpc),borderColor:T.down,backgroundColor:T.down,borderWidth:3,pointRadius:4,tension:.25,spanGaps:false,yAxisID:'y'},{type:'line',label:'Network cost per impression',data:G.map(x=>x.cpi),borderColor:T.amber,backgroundColor:T.amber,borderDash:[5,4],borderWidth:2,pointRadius:4,tension:.25,spanGaps:false,yAxisID:'y'}];
+  if(showRev)ds.push({type:'bar',label:'Ad revenue ($bn)',data:G.map(x=>x.tot),backgroundColor:'rgba(127,140,135,.22)',borderColor:'rgba(127,140,135,.5)',borderWidth:1,yAxisID:'y1',order:5});
+  mk('cGEarn',{type:'bar',data:{labels:G.map(x=>x.q),datasets:ds},options:{scales:{y:pctAxis({min:-5,max:20}),y1:{display:showRev,position:'right',grid:{display:false},ticks:{callback:v=>'$'+v+'bn'}},x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.parsed.y==null?null:` ${c.dataset.label}: ${c.dataset.yAxisID==='y1'?'$'+c.parsed.y.toFixed(2)+'bn':fmtP(c.parsed.y,0)}`}}}},plugins:[zeroLine]});
+  mk('cGEarnMix',{type:'bar',data:{labels:G.map(x=>x.q),datasets:[{label:'Search & other',data:G.map(x=>x.s),backgroundColor:T.blue,stack:'a'},{label:'YouTube ads',data:G.map(x=>x.y),backgroundColor:T.down,stack:'a'},{label:'Network',data:G.map(x=>x.nw),backgroundColor:T.dim,stack:'a'}]},options:{interaction:{mode:'index',intersect:false},scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,grid,ticks:{callback:v=>'$'+v+'bn'}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: $${c.parsed.y.toFixed(2)}bn`}}}}});
+  const M=rowsOf('meta_earn');const mp=q=>{const r=M.find(x=>x.quarter===q);return r?n(r.price_yoy):null};
+  mk('cGEarnVsMeta',{type:'line',data:{labels:G.map(x=>x.q),datasets:[{label:'Google cost per click',data:G.map(x=>x.cpc),borderColor:T.blue,backgroundColor:T.blue,borderWidth:3,pointRadius:4,tension:.25,spanGaps:false},{label:'Meta price per ad',data:G.map(x=>mp(x.q)),borderColor:T.amber,backgroundColor:T.amber,borderDash:[5,4],borderWidth:2,pointRadius:4,tension:.25}]},options:{interaction:{mode:'index',intersect:false},scales:{y:pctAxis(),x:{grid:{display:false}}},plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.parsed.y==null?null:` ${c.dataset.label}: ${fmtP(c.parsed.y,0)}`}}}},plugins:[zeroLine]});
+  document.getElementById('gkRead').innerHTML=`<b>The read</b>Google and Meta are growing in opposite ways. Meta's growth is price: its average ad cost 14% more than a year ago in Q3, and 23% more in the US and Canada. Google's is volume: paid clicks rose 13% in each of the first two quarters of 2026 and 8% in Q3, while the average cost per click rose only 3 to 5%, down from 7 to 8% through 2024 and 2025. Search &amp; other grew 12% to $63.35bn in Q3, slower than the 17 to 19% of the first half, and Sundar Pichai credits AI with "driving overall Search query growth, including commercial queries." For a DTC buyer, a Google click has been getting dearer far more slowly than a Meta impression. Next check: Alphabet's Q4 2026 results, early February 2027 (Q4 click metrics come only in the annual 10-K). ${srcBtn('goog-q3-26,goog-q2-26,goog-q1-26,meta-q3-26','SOURCES ×4 ↗')}`;
+  document.getElementById('tGEarn').innerHTML='<thead><tr><th>Quarter</th><th>Total ads</th><th>Search &amp; other</th><th>YouTube ads</th><th>Network</th><th>Paid clicks YoY</th><th>Cost per click YoY</th><th>Network impr. YoY</th><th>Cost per impr. YoY</th></tr></thead><tbody>'+[...G].reverse().map(x=>`<tr><td><a href="${x.url}" target="_blank" rel="noopener">${x.q}</a></td><td>$${x.tot.toFixed(2)}bn</td><td>$${x.s.toFixed(2)}bn${x.sy!=null?` <span style="color:${T.dim}">${fmtP(x.sy,0)}</span>`:''}</td><td>$${x.y.toFixed(2)}bn${x.yy!=null?` <span style="color:${T.dim}">${fmtP(x.yy,0)}</span>`:''}</td><td>$${x.nw.toFixed(2)}bn</td><td>${x.pc==null?'·':fmtP(x.pc,0)}</td><td style="color:${T.down}">${x.cpc==null?'·':fmtP(x.cpc,0)}</td><td>${x.im==null?'·':fmtP(x.im,0)}</td><td>${x.cpi==null?'·':fmtP(x.cpi,0)}</td></tr>`).join('')+'</tbody><caption style="caption-side:bottom;text-align:left;padding-top:8px;color:'+T.dim+';font-size:11px">Growth % in grey is as Alphabet states it; · = not disclosed for that quarter.</caption>';
+}
+document.getElementById('gkRev').addEventListener('change',renderMktG);
 
 /* ---------- Motion ---------- */
 let moDim='formats',moView='map';
@@ -2333,7 +2385,7 @@ function renderFoxwell(){
 SEGBIND('fxYear',b=>{fxYear=b.dataset.v;renderFoxwell()});
 
 /* ---------- Front: today ---------- */
-const DESKOF={'Northbeam':'#nb-library','CTC':'#ctc','Foxwell':'#foxwell','Haus':'#haus','Triple Whale':'#triplewhale','Runneth':'#mo-research','Meta':'#mkt','Curtis Howland':'#howland'};
+const DESKOF={'Northbeam':'#nb-library','CTC':'#ctc','Foxwell':'#foxwell','Haus':'#haus','Triple Whale':'#triplewhale','Runneth':'#mo-research','Meta':'#mkt','Google':'#mkt-google','Curtis Howland':'#howland'};
 function renderToday(){
   const A=ANL||[];document.getElementById('fAnalysis').innerHTML=A.map(a=>`<article class="an-card"><span class="k">${esc(a.kicker)} · ${dfmt(a.date,true)}</span><h4>${esc(a.title)}</h4><p>${esc(a.dek)}</p><details><summary>Read the analysis</summary>${a.body.map(x=>`<p>${esc(x)}</p>`).join('')}<div class="an-src">Sources: ${a.sources.map(([l,u])=>`<a href="${u}"${u[0]==='#'?'':' target="_blank" rel="noopener"'}>${esc(l)}</a>`).join(' · ')}</div></details><a class="more" href="${a.to}">${esc(a.toLabel)} →</a></article>`).join('');
   const W=rowsOf('wire_arts');const last=W.map(r=>r.date).sort().pop();const cut=new Date(new Date(last+'T12:00')-4*864e5).toISOString().slice(0,10);
@@ -2678,7 +2730,7 @@ SEGBIND('hsMeasure',b=>{hsMeasure=b.dataset.m;renderHaus()});
 ['twMetric','twChan','twSnap','twInd'].forEach(id=>document.getElementById(id).addEventListener('change',renderTW));
 
 /* ---------- routing ---------- */
-const VIEWS={front:()=>{renderFront();renderToday()},'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:()=>{renderBf26();renderBfMeta();renderCa();renderProj();renderBfcm()},mkt:renderMkt,'mo-bench':()=>{renderMoBench();renderCv()},'mo-trend':()=>{renderTA();renderMoTrend()},'hw-post':renderHwPost,'hw-charts':renderHwMeta,'hw-posts':renderHwPosts,'hw-news':renderHwNews,'hw-bf':renderHwBf,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,dtcnl:renderDtc,wire:renderWire};
+const VIEWS={front:()=>{renderFront();renderToday()},'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:()=>{renderBf26();renderBfMeta();renderCa();renderProj();renderBfcm()},mkt:renderMkt,'mkt-google':renderMktG,'mo-bench':()=>{renderMoBench();renderCv()},'mo-trend':()=>{renderTA();renderMoTrend()},'hw-post':renderHwPost,'hw-charts':renderHwMeta,'hw-posts':renderHwPosts,'hw-news':renderHwNews,'hw-bf':renderHwBf,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,dtcnl:renderDtc,wire:renderWire};
 SEGBIND('mtView',b=>{mtView=b.dataset.v;renderMeta()});
 document.getElementById('mtEvents').addEventListener('change',renderMeta);
 const PUBDESKS=['nb','mo','ctc','haus','triplewhale','foxwell','howland','dtcnl'];
@@ -2692,7 +2744,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!ddMenu.hidden)ddCl
 ddMenu.addEventListener('keydown',e=>{if(e.key==='Tab'){const f=[...ddMenu.querySelectorAll('a')];if(!e.shiftKey&&document.activeElement===f[f.length-1])ddClose(false)}});
 function show(){let v=(location.hash||'#front').slice(1);const sl=v.indexOf('/');HWARG='';if(sl>0){HWARG=decodeURIComponent(v.slice(sl+1));v=v.slice(0,sl)}if(!(v in VIEWS))v='front';
   Object.keys(VIEWS).forEach(x=>document.getElementById('v-'+x).hidden=x!==v);
-  const desk=/^hw-/.test(v)?'howland':/^(nb|mo)-/.test(v)?v.split('-')[0]:v;
+  const desk=/^hw-/.test(v)?'howland':/^mkt/.test(v)?'mkt':/^(nb|mo)-/.test(v)?v.split('-')[0]:v;
   document.querySelectorAll('#deskrow a').forEach(a=>a.setAttribute('aria-current',a.dataset.desk===desk?'true':'false'));
   document.getElementById('deskBtn').setAttribute('aria-current',PUBDESKS.includes(desk)?'true':'false');
   document.querySelectorAll('#deskMenu a').forEach(a=>a.getAttribute('href')==='#'+v&&!a.classList.contains('ddh')?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));

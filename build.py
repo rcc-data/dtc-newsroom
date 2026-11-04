@@ -55,6 +55,7 @@ REG=[
  ("events","Calendar events used on weekly charts","events.csv","Retail calendar",None),
  ("tiktok_cvr","TikTok 1-day click CVR (read from chart)","tiktok_cvr_approx.csv","Newsletter 2026-05-21",None),
  ("meta_earn","Meta quarterly ad impressions & price per ad","meta_earnings.csv","Meta earnings releases, Q1 2024 – Q3 2026",None),
+ ("goog_earn","Alphabet quarterly ad revenue, paid clicks & cost per click","google_earnings.csv","Alphabet 10-Qs and earnings releases, Q1 2024 – Q3 2026",None),
  ("mo_tiers","Motion: creative volume & hit rate by spend tier","motion_tiers.csv","Motion / Runneth Creative Benchmarks 2026",None),
  ("mo_formats","Motion: visual formats by winners & hit rate","motion_visual_formats.csv","Motion / Runneth Creative Benchmarks 2026",None),
  ("mo_hooks","Motion: hooks & headlines by hit rate","motion_hooks.csv","Motion / Runneth Creative Benchmarks 2026",None),

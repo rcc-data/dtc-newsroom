@@ -1,0 +1,13 @@
+# Alphabet (Google) quarterly advertising results. Revenue in $bn as reported (Google Search & other, YouTube ads, Google Network). Paid clicks and cost-per-click YoY % are for Google Search & other properties; impressions and cost-per-impression YoY % are for Google Network; all from Alphabet's 10-Q "Monetization Metrics". Alphabet gives Q4 click metrics only for the full year in its 10-K, so Q4 rows are blank (FY2025 vs FY2024: paid clicks +6%, CPC +7%, impressions -7%, CPI +7%). search_yoy / youtube_yoy only where Alphabet states a %. Read from Alphabet's filings on its investor-relations host, 4 Nov 2026.
+quarter,q_end,search_bn,youtube_bn,network_bn,total_ads_bn,search_yoy,youtube_yoy,paid_clicks_yoy,cpc_yoy,impr_yoy,cpi_yoy,release_date,url
+Q1 2024,2024-03-31,46.156,8.090,7.413,61.659,,,5,8,-13,14,2024-04-25,https://s206.q4cdn.com/479360582/files/doc_financials/2024/q1/goog-10-q-q1-2024.pdf
+Q2 2024,2024-06-30,48.509,8.663,7.444,64.616,,,6,7,-17,13,2024-07-23,https://seekingalpha.com/filings/pdf/17697852
+Q3 2024,2024-09-30,49.385,8.921,7.548,65.854,,,4,8,-14,15,2024-10-29,https://abc.xyz/assets/94/93/52071fba4229a93331939f9bc31c/goog-10-q-q3-2024.pdf
+Q4 2024,2024-12-31,54.034,10.473,7.954,72.461,,,,,,,2025-02-04,https://capedge.com/filing/1652044/0001652044-25-000010/GOOG-8K/file/2
+Q1 2025,2025-03-31,50.702,8.927,7.256,66.885,,,2,7,-5,4,2025-04-24,https://s206.q4cdn.com/479360582/files/doc_financials/2025/q1/goog-10-q-q1-2025.pdf
+Q2 2025,2025-06-30,54.190,9.796,7.354,71.340,,,4,8,-6,6,2025-07-23,https://s206.q4cdn.com/479360582/files/doc_financials/2025/q2/goog-10-q-q2-2025.pdf
+Q3 2025,2025-09-30,56.567,10.261,7.354,74.182,,,7,7,-5,6,2025-10-29,https://s206.q4cdn.com/479360582/files/doc_financials/2025/q3/GOOG-10-Q-Q3-2025.pdf
+Q4 2025,2025-12-31,63.073,11.383,7.828,82.284,17,9,,,,,2026-02-04,https://s206.q4cdn.com/479360582/files/doc_financials/2025/q4/2025q4-alphabet-earnings-release.pdf
+Q1 2026,2026-03-31,60.399,9.883,6.971,77.253,19,11,13,5,-9,6,2026-04-29,https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/GOOG-10-Q-Q1-2026.pdf
+Q2 2026,2026-06-30,63.271,11.055,7.303,81.629,17,13,13,3,-12,13,2026-07-22,https://s206.q4cdn.com/479360582/files/doc_financials/2026/q2/GOOG-10-Q-Q2-2026.pdf
+Q3 2026,2026-09-30,63.350,11.207,7.455,82.012,12,,8,4,-14,14,2026-10-28,https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/GOOG-10-Q-Q3-2026.pdf

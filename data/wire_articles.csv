@@ -1,6 +1,7 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
 2026-11-04,Modern Retail,How Stitch Fix is using AI and customer feedback to build its private brands,https://www.modernretail.co/operations/how-stitch-fix-is-using-ai-and-customer-feedback-to-build-its-private-brands/,News,AI
+2026-11-04,Haus,ChatGPT ads don't pay yet: a working paper Olivia Kory flags (with a last-click caveat),https://x.com/oliviaakory/status/2117992986936041673,X,AI
 2026-11-04,Direct to Consumer,"Shopify AI Shopping, Vyper Conversion Optimization & BFCM Creative",https://www.directtoconsumer.co/newsletter/shopify-ai-shopping-vyper-cro-bfcm-creative,Newsletter,AI;Creative;BFCM / Q4
 2026-11-04,Curtis Howland,BFCM questions 8-9 figure DTC brands are asking,https://www.linkedin.com/feed/update/urn:li:activity:7523753426166542336/,LinkedIn,Meta;BFCM / Q4;Benchmarks
 2026-11-04,CTC,"Shopify Fall '26 Edition: Agentic Shopping, Shop Pay in AI Agents, and What Every Ecommerce Brand Must Do Now",https://commonthreadco.com/blogs/coachs-corner/shopify-fall-26-edition-agentic-shopping-shop-pay-in-ai-agents-and-what-every-ecommerce-brand-must-do-now,Blog,AI
@@ -8,6 +9,7 @@ date,pub,title,url,type,topics
 2026-11-03,Modern Retail,What DoorDash’s Instacart acquisition says about the modern delivery platform pitch,https://www.modernretail.co/operations/doordash-instacart-acquisition-delivery-platform/,News,
 2026-11-03,Modern Retail,Brands Briefing: Bag charms are the hot new trend in branded CPG merch,https://www.modernretail.co/marketing/brands-briefing-bag-charms-are-the-hot-new-trend-in-branded-cpg-merch/,News,Retail
 2026-11-03,Modern Retail,Baked by Melissa launches at-home baking kits at Target in time for the holidays,https://www.modernretail.co/operations/baked-by-melissa-launches-at-home-baking-kits-at-target-in-time-for-the-holidays/,News,BFCM / Q4;Retail
+2026-11-03,Haus,Shopify's CFO on pausing US spend to test incrementality (Olivia Kory),https://x.com/oliviaakory/status/2117642715777106092,X,AI;Measurement
 2026-11-03,Foxwell,Build the Creative Team You Need for 2027,https://www.foxwelldigital.com/blog/build-the-creative-team-you-need-for-2027,Blog,Creative
 2026-11-03,Direct to Consumer,"DTC Newsletter: daily news, Pilothouse teardowns and podcast notes (2026 issues)",https://www.directtoconsumer.co/newsletters,Newsletter,
 2026-11-03,Direct to Consumer,"BFCM Audiences, Shopify AI Shopping & Meta Scaling",https://www.directtoconsumer.co/newsletter/bfcm-audiences-shopify-ai-meta-scaling,Newsletter,Meta;AI;BFCM / Q4
@@ -53,6 +55,7 @@ date,pub,title,url,type,topics
 2026-10-28,Modern Retail,"Intake Breathing nabs $62M investment, joining the emerging nasal wellness trend",https://www.modernretail.co/operations/intake-breathing-62-million-funding-round/,News,
 2026-10-28,Meta,Meta Reports Third Quarter 2026 Results,https://www.sec.gov/Archives/edgar/data/0001326801/000162828026066700/meta-09302026xexhibit991.htm,Earnings,Meta;Benchmarks;Earnings
 2026-10-28,Haus,Meta catalog ads fall behind in Q4 (Olivia Kory),https://x.com/oliviaakory/status/2115583491882537063,X,Meta;BFCM / Q4
+2026-10-28,Google,"Alphabet Q3 2026: Search $63.35B, paid clicks +8%, cost per click +4%",https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/GOOG-10-Q-Q3-2026.pdf,Earnings,Google;Benchmarks;Earnings
 2026-10-28,Direct to Consumer,"Meta Conversions, Shopify Bot Traffic & BFCM Creative",https://www.directtoconsumer.co/newsletter/meta-conversions-shopify-bots-bfcm-creative,Newsletter,Meta;Creative;BFCM / Q4
 2026-10-28,Curtis Howland,I've spent $20M during BFCMs,https://www.linkedin.com/feed/update/urn:li:activity:7521216849037037568/,LinkedIn,Creative;BFCM / Q4
 2026-10-28,CTC,Shopify Just Added Native WhatsApp Automations: What Every Ecommerce Brand Must Set Up Before BFCM,https://commonthreadco.com/blogs/coachs-corner/shopify-just-added-native-whatsapp-automations-what-every-ecommerce-brand-must-set-up-before-bfcm,Blog,BFCM / Q4
@@ -675,6 +678,7 @@ date,pub,title,url,type,topics
 2026-07-23,Curtis Howland,"I Built a Skill That One-Shots Animated Ads, Inside Claude. It’s Free.",https://newsletter.curtishowland.com/p/i-built-a-skill-that-one-shots-animated,Newsletter,AI
 2026-07-22,Modern Retail,More brands are leaning on founders to drive social content,https://www.modernretail.co/marketing/more-brands-are-leaning-on-founders-to-drive-social-content/,News,
 2026-07-22,Modern Retail,Bookshop.org reinvented itself for post-pandemic survival. It worked,https://www.modernretail.co/operations/bookshop-org-reinvented-itself-for-post-pandemic-survival-it-worked/,News,
+2026-07-22,Google,"Alphabet Q2 2026: paid clicks +13%, cost per click +3%",https://s206.q4cdn.com/479360582/files/doc_financials/2026/q2/GOOG-10-Q-Q2-2026.pdf,Earnings,Google;Benchmarks;Earnings
 2026-07-22,Direct to Consumer,"Google Ads Missed Opportunity Report, Creator Partnership Ads & AI Shopping Strategy",https://www.directtoconsumer.co/newsletter/google-ads-missed-opportunity-creator-partnership-ads-ai-shopping,Report,Google;AI;Benchmarks
 2026-07-21,Modern Retail,Welch’s Fruit Snacks targets Gen Z with growing functional snacks offerings,https://www.modernretail.co/operations/welchs-fruit-snacks-targets-gen-z-with-growing-functional-snacks-offerings/,News,Retail
 2026-07-21,Modern Retail,Brands Briefing: Why employee-generated content is a priority for brands like Starbucks and Mephisto,https://www.modernretail.co/marketing/brands-briefing-why-employee-generated-content-is-a-priority-for-brands-like-starbucks-and-mephisto/,News,
@@ -1135,6 +1139,7 @@ date,pub,title,url,type,topics
 2026-04-29,Modern Retail,Moving on from ‘reach without resonance’: Modern Retail’s Marketing Summit defines new industry directives,https://www.modernretail.co/marketing/moving-on-from-reach-without-resonance-modern-retails-marketing-summit-defines-new-industry-directives/,News,Retail
 2026-04-29,Modern Retail,Live-shopping platform Whatnot taps Shopify to reach millions of merchants as it chases growth,https://www.modernretail.co/technology/live-shopping-platform-whatnot-taps-shopify-to-reach-millions-of-merchants-as-it-chases-growth/,News,
 2026-04-29,Meta,Meta Reports First Quarter 2026 Results,https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-First-Quarter-2026-Results/default.aspx,Earnings,Meta;Benchmarks;Earnings
+2026-04-29,Google,"Alphabet Q1 2026: paid clicks +13%, cost per click +5%",https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/GOOG-10-Q-Q1-2026.pdf,Earnings,Google;Benchmarks;Earnings
 2026-04-29,Direct to Consumer,Four Easy Ad Formats To Test Next,https://www.directtoconsumer.co/newsletter/easy-creative-ad-formats-to-test-next,Newsletter,
 2026-04-29,CTC,Northbeam + Common Thread Collective Turn Measurement Into Margin,https://commonthreadco.com/blogs/coachs-corner/ctc-northbeam-enterprise-attribution-dtc-brands,Blog,Measurement
 2026-04-28,Modern Retail,"Suri got shoppers on board with recycling toothbrush heads. Now, it is turning them into soap dishes",https://www.modernretail.co/operations/suri-got-shoppers-on-board-with-recycling-toothbrush-heads-now-it-is-turning-them-into-soap-dishes/,News,
@@ -1546,6 +1551,7 @@ date,pub,title,url,type,topics
 2026-02-04,Modern Retail,Goodwill plans 100 new stores for 2026 after hitting record revenue in 2025,https://www.modernretail.co/operations/goodwill-plans-100-new-stores-for-2026-after-hitting-record-revenue-in-2025/,News,Retail
 2026-02-04,Modern Retail,Fitigues is back after its founders reclaim the ‘90s casual brand,https://www.modernretail.co/operations/fitigues-is-back-after-its-founders-reclaim-the-90s-casual-brand/,News,
 2026-02-04,Haus,How to Tie a Super Bowl Ad to Business Outcomes,https://www.haus.io/blog/how-to-tie-a-super-bowl-ad-to-business-outcomes-the-haus-playbook-for-measuring-tentpole-brand-campaigns,Blog,
+2026-02-04,Google,Alphabet Q4 and full-year 2025,https://s206.q4cdn.com/479360582/files/doc_financials/2025/q4/2025q4-alphabet-earnings-release.pdf,Earnings,Google;BFCM / Q4;Earnings
 2026-02-04,Direct to Consumer,When To Launch A New Meta Campaign,https://www.directtoconsumer.co/newsletter/dtc999-launching-new-meta-campaigns-suri-toothbrush-and-ai-creatives,Product,Meta
 2026-02-04,Curtis Howland,How to grow a $100M DTC brand,https://www.linkedin.com/feed/update/urn:li:activity:7424821555181998081/,LinkedIn,Creative
 2026-02-03,Triple Whale,Ecommerce Benchmarks 2026: Key Metrics & Industry Data,https://www.triplewhale.com/blog/ecommerce-benchmarks,Report,Benchmarks

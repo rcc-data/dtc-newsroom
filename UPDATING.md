@@ -91,6 +91,10 @@ Runneth says only "Updated weekly" and gives no day; on Wed 4 Nov 2026 its lists
 1. From Meta's release: ad revenue ($bn), ad impressions YoY %, average price per ad YoY %, next-quarter revenue guidance. Regional price per ad (US & Canada, Asia-Pacific) from the earnings slides / coverage.
 2. Append a row to `data/meta_earnings.csv`, add a `meta-qN-YY` library entry, and update the `#v-mkt` headline, `mkRead` text and KPI strip in `renderMkt`.
 
+## Quarterly — Google (Alphabet) earnings (next: Q4 2026, early Feb 2027)
+1. From Alphabet's earnings release and 10-Q (abc.xyz investor pages or s206.q4cdn.com/479360582/files/doc_financials/<year>/<qN>/; sec.gov is blocked from the cloud): Google Search & other, YouTube ads, Google Network and total advertising revenue ($bn); Search and YouTube YoY % only where stated; paid clicks, cost per click, Network impressions and cost per impression YoY % from the 10-Q "Monetization Metrics". Q4 has no 10-Q: leave the click columns blank and note the 10-K full-year figures in the CSV header.
+2. Append a row to `data/google_earnings.csv`, add a `goog-qN-YY` library entry (pub "Google"), and update the `#v-mkt-google` headline, KPI strip and "The read" in `renderMktG`. The Earnings desk has two sub-pages: `#mkt` (Meta) and `#mkt-google`.
+
 ## Common Thread Collective (weekly check, monthly data)
 - DTCCI: open dtcci.co in the built-in browser, read `window.infographicData` (entities[*].props.chartData.data[0]) and append any new month to data/ctc_dtcci.csv. New reading lands early each month.
 - Research pages: check commonthreadco.com/sitemap.xml lastmod for /pages/*benchmark* and research.commonthreadco.com. New quarter = new ctc_mix/ctc_tier/ctc_mer rows plus a library entry.

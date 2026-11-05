@@ -1,0 +1,116 @@
+BFCM Audiences, Shopify AI Shopping & Meta Scaling
+https://www.directtoconsumer.co/newsletter/bfcm-audiences-shopify-ai-meta-scaling
+2026-11-03
+
+Good morning.
+Here’s what you’ll find in today’s newsletter:
+Why your customer lists need a refresh before BFCM (and when to do it)
+How one team scaled spend while CPMs climbed
+Shopify’s new AI referral commissions and Instagram’s $500K creator offers
+Why your BFCM offer alone won’t win over cold traffic
+And more.
+Let’s get going. ☕
+---
+👉 Your ad account doesn’t need content fast. It needs content every week.
+Most brands stall between batches, when
+the last round of creative is spent and the next one isn’t ready
+.
+Since Meta’s Andromeda update, the algorithm rewards new concepts and new faces. A batch of 16 videos exhausts in weeks, and then it’s another round of briefs, outreach, and chasing.
+Insense
+turns creator content into a monthly flow:
+Brief once, then rehire the creators whose ads performed
+Get 20+ raw clips per creator to cut into new hooks and angles
+Build a roster of vetted creators you can book every month
+Keep lifetime usage rights on everything
+Book a free strategy call and get $200 toward your first campaign
+.
+P.S. Q5 rewards brands that keep fresh creative coming after the Black Friday rush. Go in with a cadence, not a single shoot.
+---
+📊 PMax needs at least 15 conversions a month
+PMax performance all over the place? Check how many conversions it’s getting.
+Google’s
+troubleshooting page
+says campaigns need
+at least 15 conversions over 30 days
+for stable performance. Tracking problems and delays in reporting purchases can also make results look uneven.
+Before changing your campaign, check that purchases are being recorded correctly and give delayed conversions time to show up.
+Hitting 15 doesn’t guarantee profitable results. It’s a starting point for checking whether Google has enough data before you increase BFCM spend.
+📈 Study this strategy before blaming Meta
+@PhilKiel
+shares how it is possible to scale even when CPMs are up. Some of his biggest accounts increased spend by 21% from September to October, while CPA fell 3% and purchases rose 23%.
+His team started scaling early, checked cost caps daily, and tested retention with a holdout before adding budget. The brands built pages to match winning ads and shipped creator samples fast.
+Before BFCM, check whether your team can keep landing pages and fresh creative moving when a winner takes off.
+🤖 Shopify is testing commissions for AI shopping referrals
+This one was buried in last week’s Shopify Edition, but it’s worth pulling out. When an AI assistant helps someone buy a product, the company behind it could get paid.
+Shopify is testing a program
+that pays participating AI developers
+0.3% on eligible purchases they refer
+. Brands using Shop Campaigns can fund an extra commission on top.
+That extra payment comes with conditions. It applies to eligible US campaigns, and the shopper must complete the purchase in the Shop app or on shop.com.
+The program is still an invite-only developer preview. If you use Shop Campaigns, check your external-platform settings and what those commissions would cost you. Shopify hasn’t said whether paying a higher commission affects where your products appear in recommendations.
+📺 Instagram reportedly offers creators up to $500K for longer videos
+Remember Features, Instagram’s new long-video format? Turns out Meta’s paying some creators to use it.
+Select creators have
+received offers of $50,000 to $500,000 to post there
+.
+Meta confirmed it’s funding some creators, but didn’t confirm the amounts. There’s no payment program everyone can join yet.
+Work with creators who already make podcasts, interviews, or product demos? Ask whether they have access. Check the posting requirements before planning to reuse existing videos.
+---
+🔄 Your customer lists need a BFCM refresh
+A manually uploaded customer list won’t know who bought on Black Friday unless you refresh it.
+That can mean paying to promote something they already own, showing them a discount immediately after they bought it, or sending a “we miss you” message to someone who just returned.
+Before holiday traffic picks up, check whether your audiences reflect what customers are doing now.
+What to refresh:
+Purchaser exclusions:
+Add recent buyers to relevant exclusions. Choose the window around your product’s repurchase cycle, and keep useful cross-sell offers separate.
+Retargeting audiences:
+Remove converted shoppers from campaigns promoting the purchase they just completed.
+Lookalike seeds:
+Review customer quality alongside recency. Purchase value, repeat behavior, and other relevant signals can help you choose a useful seed.
+Lapsed customers:
+Remove shoppers who have returned so re-engagement campaigns stay relevant.
+Advertising permissions:
+Update audience membership when customers withdraw applicable permissions. An email unsubscribe and an advertising opt-out aren’t necessarily the same instruction.
+Put these refreshes on your calendar:
+Pilothouse
+recommends treating these as checkpoints. When orders spike, refresh manual lists more often.
+Automate the upkeep
+Where your tools support it, use customer-audience integrations to keep membership current. Rolling purchaser audiences can also help maintain exclusions, though tracking coverage and matching affect how complete they are.
+Check that syncs are running, audience sizes look plausible, and exclusions are actually applied to the intended campaigns.
+You don’t need to exclude every customer from every campaign. The goal is to match the next message to their latest purchase, whether that means giving them breathing room or showing them a relevant second product.
+---
+📊 Your next customer might be asking AI who to buy from
+Quick question. When was the last time you asked ChatGPT what to buy?
+If the answer’s “recently,” you’re not alone. We surveyed
+556 online shoppers and 146 DTC operators
+for The Invisible Shelf, our AI Discovery Report, and
+it turns out AI is already influencing what people buy
+.
+53% of AI-assisted shoppers told us they’d bought from a brand they’d never heard of because AI recommended it.
+That’s a lot of people meeting brands for the first time inside a chat window. The report gets into
+which assistants they’re using
+to research products,
+what makes them trust a recommendation
+, and
+where brands are putting money into AI visibility
+right now. Plus
+four actions to improve your AI visibility and measurement
+.
+If you’re wondering how your products show up when someone asks AI what to buy, start here.
+Download our free Invisible Shelf report
+---
+🎧 Your BFCM offer isn’t enough for cold traffic
+A 30% discount lands differently with someone who already knows your brand than with someone discovering it for the first time.
+On the latest DTC Rundown episode, Jacob and Abby from Pilothouse’s Meta team break down why brands should
+think differently about BFCM creative for cold and retargeting audiences
+.
+For someone who already knows your products, the offer can do most of the work. Clear, bold creative that puts the discount front and center may be exactly what gets them to finally buy.
+Cold traffic still needs more convincing.
+They’re seeing discounts everywhere, and 30% off doesn’t tell them why your cookware, skincare, or apparel deserves their attention. Your creative still needs strong hooks, product education, and enough variety to introduce the brand while making the BFCM offer impossible to miss.
+That means you probably shouldn’t be running the exact same BFCM ads to everyone.
+Jacob and Abby also get into how they’re using video to diversify creative, when brands should start their sales this year, and why Cyber Monday shouldn’t automatically signal the end of your holiday push.
+▶️
+Watch here
+|
+🎧
+Listen on Spotify

@@ -1,0 +1,97 @@
+EU Shipping Fees, Meta Creative Audiences & AI Creative
+https://www.directtoconsumer.co/newsletter/eu-shipping-fees-meta-audiences-ai-creative
+2026-11-02
+
+Good morning.
+The clocks went back and apparently so did the sun. Welcome to November.
+Here’s what you’ll find in today’s newsletter:
+EU shipping costs just got a little messier
+A post-purchase gift card offer to test for BFCM
+How to pair different Meta creative with different audiences in one ad set
+Why “good taste” might be the wrong AI creative standard
+And more.
+Let’s get into it. 🫡
+---
+📦 Shipping small orders into the EU? Your costs just went up.
+As of November 1, the
+EU charges a €2 handling fee per item
+on low-value parcels coming in from outside the bloc. That’s on top of the €3 customs duty that’s already been applied to each category of goods in parcels under €150 since July.
+And it’s not a flat €5 per package. Depending on what’s in the box, it could be a lot more.
+Before holiday orders start shipping, check in with your shipping or customs partner. Ask which fees apply, who’s collecting them, and whether your landed-cost numbers actually include them.
+🎁 Your next post-purchase offer could be a gift card
+@russell_kwokk
+has a BFCM idea for the thank-you page: offer a $100 gift card for $80.
+It works for two kinds of holiday shoppers at once. Deal hunters get $20 of free money, and gift givers get a present without having to guess someone’s size or favorite color.
+If you try it, put a clear end date on it. Make sure gifting and redemption actually work. And check what happens to your margin if people can stack the credit with other discounts. Watch redemption and repeat purchases, not just the upfront revenue bump.
+🔎 Google Search is doing great. Wall Street didn’t care.
+If you were worried AI was killing search… not yet. In
+Alphabet’s Q3 earnings
+, Google Search revenue grew 12% to $63.4 billion, and YouTube ads grew about 9% to $11.2 billion. Google also says search queries grew faster than they have in five years, including shopping-related ones.
+Investors still weren’t happy. Alphabet shares dropped sharply after the report, mostly over how much the company is spending on AI.
+📈 Reddit’s ad business is booming, and it wants you logged in
+Reddit pulled in
+$847 million in ad revenue last quarter
+, up 54% from last year.
+Global daily active uniques grew 12% to 130.3 million, but US daily users dropped 2%. And Reddit says Google search referrals fell by more than a million visits a week on average in October.
+So now it wants more people signed in. Reddit is
+testing a login requirement for most content
+in some markets outside the US this quarter. Logged-in users already drive more than 80% of its monetization, so it makes sense for them. For shoppers who click a Reddit thread from Google looking for product recs, though, it’s one more wall to get through.
+If Reddit reviews or recommendation threads send you customers, keep an eye on that traffic as the test rolls out, especially from international markets. And if Reddit ads are on your test list, start with a product that fits a specific community and judge it on your own acquisition costs. Big ad growth is a good reason to look. It doesn’t mean it’ll work for your brand.
+---
+📩 Your BFCM opt-in rate follows you all year
+Black Friday sends more buyers through your opt-in consent flows than any other week. The subscribers you capture that weekend
+become the list you market to all next year
+.
+Dataships
+optimizes forms, checkout, and confirmation pages, adapting every ask to the shopper’s location, language, and consent history. Brands on the platform average
+81% email
+,
+29% SMS
+,
+and 58% WhatsApp consent rates
+, with compliance built in.
+X-bionic went live ahead of Black Friday and
+captured 3,000+ subscribers last November
+. That’s more than their previous setup managed in an entire quarter.
+Setup takes 10 minutes
+, with no developer work.
+Get it tested and live before peak
+---
+🎯 Different creative, different audiences, one Meta ad set
+We mentioned this one a couple weeks ago, but Pilothouse has been digging into how you’d actually use it, so here’s the longer version.
+Meta’s
+Choose an audience for each ad creative
+feature lets you pair individual creatives with an age range and gender, all inside one ad set. It went live for Marketing API partners on October 19.
+So if you’ve been splitting ad sets just to match creative to different demographics, there’s another way to do it now. Think a winter coat ad aimed at one group and a lighter jacket at another, both running in the same ad set.
+Why Pilothouse thinks it’s worth a look
+Mostly, it could make your account a lot simpler. You’d be able to tailor messaging without splitting budget across a bunch of ad sets that only exist because of age or gender.
+And fewer ad sets could mean each one gets more conversion data to learn from. That said, Meta hasn’t shared any performance results yet, so better efficiency is still a theory you’ll want to test.
+How to try it
+Make sure your tools support it
+. If you run ads through a third-party platform or your own API setup, check that it has the new option before you plan around it.
+Look at how you’ve split things
+. Find ad sets that only exist because the creative targets a different age group or gender. Those are your best candidates for a consolidation test.
+Figure out which creative is actually for who
+. Some concepts are clearly made for one group. Others work for everyone, so leave those broad. Base the pairings on the product and what you know about your customers, not a hunch.
+Test one setup before moving everything
+. Run a consolidated version against how you do it now, using Meta’s testing tools if you can. Watch cost per purchase, conversion volume, reach, and order value, and keep in mind any audience setting differences when you compare.
+A few catches
+You need a broad demographic audience at the ad set level, and it can’t run alongside Advantage+ audience. So it’s a different setup altogether, and you can’t just switch it on in your current automation.
+It’s also not totally clear whether the creative-level settings are strict limits or more like suggestions. Don’t assume an ad will only show to the group you picked. Special Ad Category rules still apply too.
+With BFCM this close, start small. Run one contained test and see if pairing creative with audiences actually improves performance.
+---
+🎧 Good taste won’t save your brand from bad AI
+As AI makes creative easier to produce, everyone suddenly seems to be talking about the importance of having “good taste.”
+Aves thinks marketers should be focused on something else.
+In this episode of Ad-venturous, Aves argues that discernment may become one of the most important creative skills in an AI-heavy advertising world.
+Taste is personal. Discernment is your ability to look at an idea, tool, or piece of creative and judge whether it actually makes sense for your brand.
+Aves points to Liquid Death as a brand whose irreverent identity could give it more room to experiment with AI-generated creative.
+A brand built around artistry and craftsmanship has a very different calculation.
+Heavy AI usage could feel disconnected from the reason customers were attracted to it in the first place.
+That’s the question she thinks creative teams should be asking as AI becomes unavoidable in advertising.
+Does this actually make sense for our brand and the people we’re trying to reach?
+▶️
+Watch here
+|
+🎧
+Listen on Spotify

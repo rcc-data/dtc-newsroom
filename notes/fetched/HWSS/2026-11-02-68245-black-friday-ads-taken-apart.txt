@@ -1,0 +1,121 @@
+68,245 Black Friday Ads, Taken Apart
+https://newsletter.curtishowland.com/p/68245-black-friday-ads-taken-apart
+2026-11-02
+The median brand launched 13 days out. 50% off was the default, and 2 in 3 brands never changed their number. 
+
+Last year, 7 in 8 brands hadn’t launched a single Black Friday ad by Nov 1. That was yesterday. So if you feel you are behind, you probably aren’t
+I pulled 68,245 of last season’s Black Friday ads from 6,281 brands out of Meta’s Ad Library. Every one named Black Friday or Cyber Monday and launched between Oct 15 and Dec 7, 2025.
+Most Brands Launched in the Last Two Weeks
+The median brand’s first Black Friday ad went live Nov 15, 13 days out. The share of brands with a Black Friday ad live, by day:
+The biggest launch day was Nov 21, the Friday before Black Friday: 3,726 new ads. Then Thanksgiving (3,555) and Black Friday itself (3,213).
+1 in 5 brands with English ads ran early access, a median 17 days out.
+Size didn’t mean starting sooner. Pages with 1M+ followers launched a median 11 days out. Pages under 100K, 13 to 14.
+What the early ones ran:
+True Classic
+, live Oct 31, 28 days out: a handwritten sign, “Early Black Friday sale, 25% off sitewide.” (
+Ad Library
+)
+Dr. Squatch
+, live Nov 6, 22 days out: soap bundles under “Early Black Friday deals.” (
+Ad Library
+)
+Helly Hansen
+, live Nov 4: “Black Friday is coming, be the first to know,” with a Sign Up button instead of Shop Now. 22% of early-access ads did the same. (
+Ad Library
+)
+The median brand was still two weeks from its first ad.
+Going early also buys you ramp. The more ramp you have, the more you know which ads are working before the peak. When it hits, you scale the ones already working, fast.
+50% Off Was the Default
+50% was the most common discount named in an ad by far, and the median. Most brands picked their number once and left it there. Every discount named across the 32,551 English ads that named one:
+“Up to” sat on half of percent-off ads. Flat discounts alone had a median of 40%. “Up to” lifted it to 50%.
+2 in 3 brands kept the same number from two weeks out into Black Friday week (64% of 882). 26% went deeper. 10% went shallower.
+Size didn’t change it. The median was 50% in every follower band, from under 10K to 1M+.
+What I’m seeing in accounts this season: CPMs keep going up, offers get more competitive, percentages get higher. A lot of one-upping.
+Last season, 50% was already the default, so the number alone won’t stand out.
+Before you match it, net the discount out:
+A $100 order with $35 landed cost keeps you $65.
+Take 30% off and you collect $70, keep $35.
+Take 50% off and you collect $50, keep $15.
+Your first-time CAC is capped by what you keep, unless you’re buying on LTV.
+Two brands put the product right next to the number: Hobbii’s 50% off one named yarn, Cotton Cake (
+Ad Library
+), and MC2 Saint Barth’s up to 50% off on a single product (
+Ad Library
+).
+What I’d do:
+Pick the number early and say it the same way everywhere, like most brands did. If yours is 50%, put the product or the reason right beside it.
+The Gift and Bundle Lanes Were Nearly Empty
+Two-thirds of ads led with percent off. Everything else was a side dish.
+Percent off: 66.2% of ads
+Buy one, get one: 9.6%
+Sale, no number: 9.5%
+Dollars off: 3.0%
+Early access: 2.3%
+Free shipping, free gift and bundles: 1.1% each
+When an extra did show up, it rarely led the ad. How often each one appeared anywhere in the copy, against how often it led:
+The extras changed by category. The discount barely did:
+Beauty and supplements stacked them: a free gift in 15.5% and 16.0% of ads, bundles in 13.2% and 14.6%.
+Apparel ran on percent off alone: gifts in 3.0% of ads, bundles in 3.8%.
+Jewelry and pets leaned on buy one, get one: 17.1% and 15.0% of ads.
+And there are two people buying in that window, who need different messages:
+One is buying for themselves. They assume it’s the best sale and have some money they’re ready to spend.
+The other is closing out gifts for the year.
+Three that put a gift or a bundle in the ad:
+Dylan Oaks
+: “Initial Necklace + FREE EARRINGS,” the gift right in the headline. (
+Ad Library
+)
+Sleep Number
+: a mattress, base and free delivery as one bundle, $1,799. (
+Ad Library
+)
+OOOMAY
+: up to 60% off, plus a free bag charm with every order. (
+Ad Library
+)
+The gift is the headline.
+What I’d do:
+If you can add a gift with purchase, lead with it. A free gift led about 1 in 100 Black Friday ads.
+Only 1 in 8 Brands Made a Separate Cyber Monday Ad
+810 of the 6,281 brands ran Cyber Monday ads with no Black Friday wording.
+The median Cyber Monday ad launched on Cyber Monday itself.
+Of the brands with percent-off ads on both days, 61% kept the same number. 28% went deeper.
+12.2% of brands launched new ads in the week after. 27% of those ads used gifting copy, and only 3% said “extended.”
+0.5% of brands ran all four acts: early access, Black Friday, Cyber Monday and after. Two-thirds ran the Black Friday act alone.
+That Monday is the last big promo day that really works. The Tuesday after, it ramps down. People only have so much money they’re willing to spend.
+Made separately:
+MANSCAPED
+: its own Cyber Monday ad, live on Black Friday, 25% off sitewide. (
+Ad Library
+)
+Alo Yoga
+: its own Cyber Monday ad, live on Cyber Monday itself, 30% off sitewide. (
+Ad Library
+)
+KILLSTAR
+: up to 50% off, plus another 10% with code CYBER10. (
+Ad Library
+)
+What I’d do:
+Brief the Cyber Monday ad now, while it’s cheap to make. Last year, 7 in 8 brands didn’t make one. Then turn the copy to gifting the day after.
+When Does It End?
+The median brand’s Black Friday ads ran 10 days. Thousands ran into the new year. Last season’s Black Friday ads still running, by date:
+Tied for the longest run: a “Pre Black Friday Sale: Save 35% Off” ad that went live Oct 16, 2025 and was still running on Oct 20, 2026, 369 days later.
+The Calendar I’d Run This Year
+Black Friday is Nov 27. Cyber Monday is Nov 30.
+This week:
+If you haven’t yet, lock your number, net it out, and brief it all at once: the Black Friday ads, a gift or bundle angle, and the Cyber Monday ad.
+Nov 10:
+early access live, 17 days out. Anything you ship before that is ahead of most of the feed.
+Nov 14:
+sale ads live, 13 days out. Last year, that’s when the median brand was just getting started.
+Nov 30:
+Cyber Monday gets its own ad.
+Dec 1:
+the copy turns to gifting.
+The full breakdown has every chart, the category cheat sheet and the ads behind the numbers:
+68,245 Black Friday ads, taken apart
+.
+Friday ill be sharing the creative. 10 kinds of Black Friday ad, a real one of each taken apart, and how to make yours before early access opens Nov 10.
+Question? Hit reply!
+Curtis

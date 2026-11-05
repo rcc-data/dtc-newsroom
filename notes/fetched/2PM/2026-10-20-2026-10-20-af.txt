@@ -1,0 +1,107 @@
+Deep Dive: The Abercrombie Discount
+https://2pml.com/2026/10/20/af/
+2026-10-20
+
+Abercrombie & Fitch sells its polo for roughly 40 percent less than it did in 1998, in real dollars, and almost nobody noticed because the sticker barely moved. That discount was not an accident of inflation. It was engineered, one supply chain decision at a time, and the 2026 supplier list the company published in August shows exactly where the money came out.
+The Quarterly was the product
+If you want to understand what Abercrombie charged for in 1998, you have to start with the magazine, because the magazine was what they were charging for. The A&F Quarterly launched in the summer of 1997 under the former, infamous CEO, with Bruce Weber behind the camera, Sam Shahid directing the art, and a cover price of six dollars for a shrink-wrapped book that ran past 250 pages. It arrived four times a year, it was sold at the register, and in its best issues the clothing occupied perhaps a third of the pages. The rest was Weber’s black-and-white Americana, interviews, cocktail recipes, sex columns, and a sustained argument that the person holding the book belonged to a world of lake houses and lacrosse fields that most of its readers had only seen in movies.
+It is easy, with 25 years of distance, to treat the Quarterly as a scandal.
+It was one, eventually, and the company killed it in December 2003 after the Christmas issue drew boycotts from state attorneys general and a coalition of religious groups. But the scandal is the least interesting thing about it. What the Quarterly actually did, in commercial terms, was invert the relationship between media and merchandise in a way that the industry would spend the next two decades trying to reproduce. The catalog did not sell the clothes. The clothes were the receipt for having bought into the catalog. A customer paid $39.50 for a polo in 1998 not because the polo was worth $39.50 but because the polo was the cheapest available ticket into the pages of the book.
+That is the first thing any price comparison has to account for, because the 1998 price was a bundle. It contained a heavyweight cotton garment made to a specification that did not have to justify itself on cost, and it contained a cultural premium that the company manufactured in print and in its own stores, which were dark, loud, scented, and staffed by people hired for how they looked. Strip either half of the bundle away and the price has to fall, and over the following decade Abercrombie stripped away both.
+I have argued for years that publishing and commerce eventually converge into a single operation, and the Quarterly was an early case study in an otherwise stale, late-90s apparel industry. A&F’s leadership understood it before anyone had a name for it. The editorial product set the price of the physical product, and when the editorial product disappeared, the pricing power disappeared with it.
+The price that never moved
+The comparison below uses the catalog prices I remember from the 1998 and 1999 issues of the Quarterly, which I have marked as approximate, against current list prices on abercrombie.com. The inflation factor is the Bureau of Labor Statistics consumer price index, which has roughly doubled since 1998, so I have used 1.95 as the multiplier. The point of the table is the last column.
+Item
+1998 catalog price (approx.)
+1998 price in 2026 dollars
+2026 list price
+Real change
+Classic polo
+$39.50
+$77
+$45
+-42%
+Five-pocket jean
+$59.50
+$116
+$90
+-22%
+Graphic tee
+$24.50
+$48
+$30
+-38%
+Cargo short
+$39.50
+$77
+$60
+-22%
+Hooded sweatshirt
+$49.50
+$97
+$70
+-28%
+Rugby shirt
+$59.50
+$116
+$80
+-31%
+Every item on the list got cheaper in real terms, and the polo, which was the company’s signature garment and the one most tightly bound to the brand’s identity, got cheaper by the most. The nominal prices tell a story of modest increases over 28 years. The real prices tell a story of a company that quietly conceded somewhere between a fifth and two fifths of its pricing power and recovered the margin elsewhere.
+The table also understates the gap. In 1998 the list price was the price. Then-CEO Mike Jeffries ran the company on the principle that Abercrombie did not discount, and the stores were built to make the customer feel that paying full price was itself part of the experience. Today the list price is an anchor. The company runs on a promotional cadence in which 25 to 40 percent off is the normal clearing level for most of the assortment, which means the realized price of a polo is closer to $30 than $45. Put that against the $77 that the 1998 polo represents in today’s money and the real discount is not 42 percent. It is closer to 60.
+So the question is not whether Abercrombie got cheaper, since it plainly did, but how a company can take that much price out of a product and remain, by the measure of the last three years of earnings, one of the best-run specialty retailers in America. The answer is in the factories, and the company was kind enough to publish it.
+What the factory list says
+Abercrombie & Fitch Co. publishes an annual
+Active Supplier List
+, and the 2026 edition, updated on August 24, covers every Tier 1 factory the company uses along with 90 percent of its fabric mills and trim suppliers. I spent an afternoon with it to answer a narrow question: how much did the product itself change, as distinct from the price, and what in the supply chain explains the change? The list runs to 254 cut-and-sew factories, 86 fabric mills, 110 trim suppliers, and 12 personal care fillers, and it answers the question more directly than any earnings call has.
+The first finding is geographic. Vietnam hosts 66 of the 254 Tier 1 factories, India 50, Cambodia 49, and Indonesia 30, which together account for 77 percent of the base. China, which most people assume is where American apparel is made, accounts for 13 factories, or five percent. Sri Lanka adds another 13, Bangladesh and Egypt seven apiece, and the remainder is scattered across Turkey, Guatemala, the Philippines, Jordan, Mexico, and Spain. In 1998 a meaningful share of Abercrombie’s production still came out of Mexico, the Caribbean Basin under the 807 tariff provisions, and domestic converters in the Carolinas and Los Angeles. None of that survives. The company’s cut-and-sew footprint has migrated entirely to the lowest-cost English-speaking and Better Work geographies in Asia, and the Western Hemisphere exists in the list only as a rounding error.
+The second finding is upstream, and it is the one that matters for the tariff conversation. China is a bit player in sewing but it dominates materials. Of the 86 fabric mills on the list, 55 are Chinese. Of the 110 trim suppliers, 40 are Chinese. India is a distant second in both categories. So the garment that leaves Ho Chi Minh City or Phnom Penh with a Vietnamese or Cambodian label is, in the majority of cases, Chinese fabric sewn with Chinese thread and closed with Chinese zippers. This is how the company captured two arbitrages at once: Southeast Asian labor on the sewing floor and Chinese scale on the mill floor. It is also why the Section 301 and reciprocal tariff regimes of the last two years landed harder on Abercrombie’s cost structure than its Tier 1 country mix would suggest.
+The third finding is structural, and it is the one that explains how a company with 254 factories manages to run them at all, which is that Abercrombie does not manage factories so much as it manages the agents who do.
+Sourcing agent
+Tier 1 factories managed
+Share of base
+Asmara International Limited
+95
+37%
+Winner Business Limited
+45
+18%
+Broadway Industry and Commerce Dev. Co.
+29
+11%
+DSI Global Sourcing and Orient Trading (DSI Korea)
+44
+17%
+Direct, no agent
+41
+16%
+Four agent groups control 213 of the 254 Tier 1 sites, and Asmara alone touches more than a third of everything the company sells. An agent of that size aggregates volume across dozens of brands, negotiates fabric and capacity on a scale no single retailer can match, carries the compliance and audit burden, and takes a commission that is far smaller than the cost of an in-house sourcing organization capable of doing the same work. The 1998 company bought from vendors it knew. The 2026 company buys from intermediaries who know vendors, and the difference in overhead is a direct contribution to the margin that funds the lower real price.
+The vendor groups underneath the agents are the names you would expect. Vinatex, the Vietnamese state-linked textile conglomerate, operates ten of the factories. Sae-A, the Korean group, operates nine across Vietnam and Indonesia. Shahi Exports and Richaco in India operate seven each, Hansoll seven, Hirdaramani five in Sri Lanka, and Makalot, Gokaldas, and Crystal four apiece. These are the largest and most capable garment manufacturers in the world, and they are capable precisely because they run at a scale and a cost discipline that an American converter in 1998 could not have imagined. Most of the sites run between 500 and 1,500 workers, and only nine employ more than 5,000.
+The fourth finding is the one that connects the supply chain back to the garment, and it is the one the list does not state directly but makes impossible to miss. When a company moves from vendors it knows to agents who know vendors, it stops specifying the product and starts specifying the cost. The agent is handed a target landed price and a silhouette, and the agent’s job is to hit the price.
+Fabric weight comes down because a lighter cotton costs less per garment, construction simplifies because every operation on the line is a labor cost, and cotton gives way to cotton blends because polyester is cheaper per yard and the blend survives the wash test.
+These decisions are made in Hong Kong and Seoul by people whose compensation depends on the target rather than in New Albany by people whose compensation depends on the brand, and the cumulative effect over 25 years is a polo that weighs two-thirds of what it did and costs the company perhaps a third.
+The one category where the list shows the opposite pattern is instructive. Eleven of the twelve personal care fillers are in the United States, in New Jersey, Illinois, and New York, because fragrance is a category where the formulation is the product and the cost of the fill is trivial. Where the company could not take cost out of the product without destroying it, the supply chain stayed home.
+What the 1998 polo would cost today
+The honest way to answer that question is to find a garment that did not change and see what happened to its price, and last October I built the
+Polo Index
+around exactly that garment.
+The Ralph Lauren cotton polo is the same shirt it was in 1998, with the same pique, the same weight, the same two-button placket, and the same pony. The index tracked it from 2012 to 2025 against the average technical-fabric dress shirt from the performance brands, Mizzen+Main and Ministry of Supply among them, that spent that decade arguing that stretch would replace starch and that cotton was the past. The point of the index was to measure cultural inflation rather than economic inflation, and it turns out to be the right instrument for Abercrombie as well, because it isolates the one variable Abercrombie changed and Ralph Lauren did not.
+The Ralph Lauren polo went from roughly $60 in 2012 to roughly $125 in 2025, a 2.1-times increase over 13 years, while the technical shirt went from $98 to $133. The ratio between them collapsed from 1.63 to 1.06. Cotton did not get cheaper to make over that period; the fiber rose about 51 percent. What Ralph Lauren did was hold the specification, take the price, and let the culture catch up, and the culture did. A $125 cotton polo reads today as an investment in permanence while the performance shirt reads as the fast fashion of professionals. That is the Polo Index finding in one sentence: when a brand refuses to change the product, the price can rise at twice the rate of inflation, and the customer will thank it.
+Abercrombie is the mirror image of that control group, and putting the two polos side by side on the index’s own timeline makes the divergence stark.
+In 2012, the Abercrombie polo listed at roughly $40 and the Ralph Lauren polo at $60, a ratio of 1.5, while in 2025 the Abercrombie polo lists at $45 and the Ralph Lauren polo at $125, a ratio of 2.8.
+Over the same 13 years in which Ralph Lauren doubled its price by holding the garment constant, Abercrombie held its price nearly constant by changing the garment, and the market now prices two shirts that sat 100 feet apart in the same mall in 1998 as products from different categories.
+Apply the Ralph Lauren discipline to the 1998 Abercrombie polo and the answer falls out. The 1998 price of $39.50 scaled by the consumer price index gives $77, and that is the floor: the cost of the heavyweight cotton garment alone, with fiber and labor and freight marked to today. The Polo Index says the ceiling is higher, because Ralph Lauren’s price outran inflation by a wide margin once the market began paying for texture and permanence, and the 1998 Abercrombie polo was built from the same pique at the same weight. A company that had held that specification and held the no-discount posture the Quarterly was built to support would be sitting somewhere between $77 and the Ralph Lauren $125 today, which I would call $95 to $110. Against the $30 the company actually realizes on a promoted polo in 2026, the gap is three to three and a half times.
+The index also explains where the savings sat, because they were not in the fiber. Cotton rose 51 percent over 13 years, roughly in line with inflation, and the Cotlook A index in real terms is lower today than it was in 1998. What Abercrombie saved by leaving heavyweight cotton was the weight of the garment, the number of sewing operations, and the mill capacity needed to produce a 7-ounce pique rather than a 5-ounce blend. The savings were in the specification, and the specification is what an agent with a cost target is paid to erode. The Polo Index framed cotton and technical fabric as two worldviews, permanence and craft on one side and optimization and convenience on the other, and Abercrombie, in its sourcing decisions if not in its marketing, chose the second one in the years after the Quarterly closed and has never looked back.
+The same arithmetic applies down the assortment. The $59.50 jean becomes $116 in today’s money, which is roughly where a heavyweight selvedge jean from a mid-market brand sits now, and the $49.50 hooded sweatshirt becomes $97, the price of the heavyweight fleece that Reigning Champ and the better collegiate licensees still charge, brands that appear in the Polo Index as the cotton-heritage labels golf and tennis are now borrowing from. The 1998 Abercrombie price list, adjusted for inflation and nothing else, reads like the price list of a premium American cotton brand in 2026, which is what the company was before it became something else, and the factory list is the record of the transaction.
+What the discount bought
+It’s easy to read all of this as decline, but it isn’t. The company that charged $77 in today’s money for a polo in 1998 did about $800 million in revenue, served one customer in one register, and depended entirely on a cultural premium that a single editor and a single photographer manufactured four times a year. The company that charges $45 today does roughly $5 billion, sells through 889 stores and a digital channel that did not exist, and no longer needs anyone’s permission to be cool. Fran Horowitz’s Abercrombie is a better business than Mike Jeffries’ Abercrombie by every measure that matters to a shareholder, and the real-price cut is the mechanism by which it got there. Lower prices widened the customer base, the wider base justified the agent model, the agent model funded the lower prices, and the loop has run for a decade.
+What was lost is harder to put on a balance sheet. The Quarterly was a publication that happened to sell clothes, and for six years it was the most effective piece of commerce media in America. The company gave it up under pressure, then gave up the pricing posture it supported, then gave up the product specification that made the pricing posture defensible, and each concession was rational on its own terms. The factory list is simply the ledger of where those concessions were booked, in the 195 factories across Vietnam, India, Cambodia, and Indonesia, in the Chinese mills and trim houses that feed them, and in the four agents in Hong Kong and Seoul who hold 84 percent of the sewing.
+The lesson for anyone building a brand with pricing power is the Ralph Lauren one. Pricing power lives in the specification, and the specification lives wherever the sourcing decisions are made. The moment those decisions leave the building, the price follows them out, and the brand spends the next 25 years explaining to its customers why the shirt is cheaper and lighter than the one they remember. Abercrombie made that trade knowingly and has been rewarded for it. The customer who still has a 1999 polo in the back of a drawer knows what the trade cost.
+Research and Analysis by Web Smith
+Share this:
+Share on X (Opens in new window)
+X
+Share on Facebook (Opens in new window)
+Facebook
+Like this:
+Like
+Loading…

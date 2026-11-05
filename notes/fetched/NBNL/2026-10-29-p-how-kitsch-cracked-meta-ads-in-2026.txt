@@ -1,0 +1,98 @@
+How Kitsch cracked Meta Ads in 2026
+https://themediabuyer.northbeam.io/p/how-kitsch-cracked-meta-ads-in-2026
+2026-10-29
+
+Home
+Posts
+How Kitsch cracked Meta Ads in 2026
+How Kitsch cracked Meta Ads in 2026
+A case study on how to get upstream of the problem.
+Oct 29, 2026
+Bryan Bumgardner
+This week, in data
+Chaos erupts as we near midterms. Since around mid-summer, $2.1 billion in ad spend has flowed into these ad platforms, and this weekend is guaranteed to be the pinnacle.
+According to the New York Times
+, this spend isn’t widespread, however. It’s localized to battleground states and specific Senate competitions, like we’ve seen in Michigan, Texas and Ohio.
+According to local reporting,
+more than $560 million has been spent
+between parties in the battle for one Texas Senate seat.
+That’s the most expensive Senate election cycle in American history.
+The New York Times insights lay the previous weeks of this newsletter into clearer context: the ad spend has been shifting around wildly based on polling.
+For example, Republicans pulled back in Georgia and North Carolina, apparently conceding those elections. Funny, political spenders seem to be optimizing their ad spend quite similar to us.
+And you already know these political ads capture a lot of “mindshare.” These political ads are often intense and oppressive, which in my experience can make other ads around these less effective. Nobody can think or talk about anything except the election right now.
+Plus this is the first real election cycle where campaigns have embraced AI tools,
+resulting in hardcore ads like this one.
+The result is wildly variable performance across geos, categories, and demographics, throwing our weekly charts into a tailspin.
+Thankfully, Election Day is next week, and once Americans have voted we can get back into the business of buying stuff. Be prepared to see crazy shifting performance in your accounts after November 3rd. Adjust accordingly.
+Now, on to an interesting story of arbitrage.
+Kitsch: a story of innovation
+Those of you who follow real ecommerce winners know about
+Kitsch
+. The woman- and minority-owned brand is legendary for their satin pillowcases (I have four of them), heatless curlers and shampoo bars.
+Their team
+has relied on Northbeam
+for years as their source of truth. Now they rely on
+Northbeam Apex
+to help them squeeze even more performance out of Meta.
+The problem
+Kitsch relies on Northbeam as its source of truth across every channel, Meta included. It set up its attribution to measure growth, and for Kitsch, that means first-time buyers.
+This works, but eventually you reach a limit with Meta: although Kitsch was making ad experiment decisions based on Northbeam’s performance data, Meta’s ad algorithms were still optimizing based on Meta’s in-platform numbers.
+Meta was playing by different rules. With standard attribution settings, Meta decided for itself which purchases its ads deserved credit for, then optimized for conversions in general. A first-time buyer and someone coming back for a second purchase looked the same.
+Kitsch was making budget calls in Northbeam, while Meta chased a different definition of success.
+This resulted in a disconnect. The Kitsch team wanted more power and control over their Meta Ads algorithms, so they turned to Northbeam Apex.
+The solution
+Kitsch turned on Northbeam Apex, which feeds Northbeam's attribution data into Meta's delivery system with the click of a button. Using Meta's Custom Attribution setting, the algorithm could finally optimize toward what Kitsch cared about: new customers.
+Think of this like giving Meta the “context” that Northbeam has, which permits Meta to better optimize using the Northbeam numbers you’re using every day.
+To prove it worked, Kitsch ran a three-week A/B test of Apex-optimized delivery against Meta's standard attribution, and measured the results in Northbeam.
+The impact
+The A/B test showed that the Apex-empowered campaigns dramatically outperformed the baseline:
++8.2% New-Customer ROAS
+−8.7% Cost Per New-Customer Order
+This is a marked improvement in performance with just the press of a few buttons. Pretty great.
+And Kitsch aren’t the only ones. Across dozens of A/B tests, Northbeam Apex campaigns are dramatically outperforming baselines. Check out this chart:
+Northbeam Apex is available at no cost to all Northbeam users.
+Book a demo now.
+🎁
+Cramming for Black Friday Cyber Monday?
+Check out this podcast from Marketing Operators
+- this is the definitive guide on how to budget, measure and scale on the big weekend.
+Media Buyer Dinner · Luma
+Protecting Growth and Margin Through the BFCM Home Stretch
+luma.com/northbeam-o5iv
+🗽
+Are you in NYC? Let’s get dinner next week.
+We’re starting to organize “Media Buyer” themed IRL events and I’d love to see you there.
+👀
+Meta turned on Product Browsing today.
+Everyone is saying you should turn it off. Anybody gonna leave this on?
+💆
+Kitsch isn’t just on Meta: they like AppLovin too.
+Listen to Jeremy Thurswell explain how they’re getting nearly as much efficiency on AppLovin as Meta.
+🤑
+Meta Ads ROAS has increased 30% year over year.
+Reports of Meta’s Ads death are greatly exaggerated.
+📌
+Pinterest is now selling ad placements through Amazon’s DSP.
+If you know, you know.
+👻
+Snap is advertising their new glasses with a full-screen ad of Robert Downey Jr.
+Upon opening the app, Iron Man takes over.
+Love this newsletter? Please forward it to your friends, coworkers, or Kylian Mbappé.
+Subscribe here to get this data in your inbox every week.
+Reply
+Newest first
+Login
+or
+Subscribe
+to participate
+Recommended for you
+View all
+caret-right
+Quick Links
+Subscribe
+Archive
+Subscription
+Reset Password
+Update Password
+Search
+Socials

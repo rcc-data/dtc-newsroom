@@ -1,0 +1,108 @@
+Shopify AI Shopping, Vyper Conversion Optimization & BFCM Creative
+https://www.directtoconsumer.co/newsletter/shopify-ai-shopping-vyper-cro-bfcm-creative
+2026-11-04
+
+Good morning.
+Is lol or haha at the end of a message the new too many exclamation marks in emails??? LOL!
+Here’s what’s in today’s read:
+Shopify says AI agents have started completing purchases for shoppers
+Why you should screenshot your site before BFCM changes roll in
+How Vyper lifted mobile conversion 37% without adding more traffic
+Two sale creatives worth borrowing from before Black Friday
+And more.
+---
+🛍 Shopify says AI agents have started buying for shoppers
+Remember all that AI agent stuff in last week’s Shopify Edition? It’s already happening, at least a little.
+On yesterday’s earnings call, Harley Finkelstein said
+Shopify saw shoppers trying out delegated purchasing in Q3
+, where an AI agent completes the purchase for them. He called the volume small but growing (The Canadian Press has the coverage). Shopify also reported
+$119 billion in quarterly GMV and 32% revenue growth
+.
+Shopify hasn’t shared how much volume it actually is, so don’t rebuild your strategy around it yet. But it’s a good nudge to check your AI channel eligibility, product info, and checkout settings, especially if you’re thinking about paying for this kind of traffic.
+📸 Screenshot your site before BFCM
+@BingHott
+says a brand he worked with ran a sitewide sale without mentioning it in a single ad. The existing ads brought in more revenue per dollar spent, cost less per purchase, and the team scaled spend to
+4× its usual level
+.
+Ads Manager can show you that performance changed. It can’t tell you whether the new offer, homepage banner, or bundle helped move the needle.
+Before BFCM, take a baseline screenshot of your homepage, top product pages, and landing pages now. During BFCM, capture them daily and log when offers, banners, or bundles change.
+If performance jumps or dips, check what shoppers were seeing before you start tweaking campaigns.
+🔎 TikTok will suggest keywords in batches
+Building a TikTok Search campaign? Its keyword tool can now
+suggest ready-made lists of brand and category terms
+.
+TikTok also previewed reporting that shows how often your campaign appeared in searches it was eligible for, including how often it got the first sponsored spot. Availability can vary by account.
+If the keyword packs show up in your account, preview the terms before adding them. For BFCM, start with searches your product and offer actually answer.
+📅 Google makes weekend promos easier to schedule
+Google Ads added day grouping to asset schedules
+. You can now schedule an asset for weekdays or weekends in one step, without setting the same hours for each day.
+Running a weekend-only BFCM offer? Check the schedule on your promotion asset before it goes live so shoppers see the right deal on the right days.
+---
+🎧 Vyper’s mobile conversion rate rose by 37%
+Vyper Industrial rebuilt its ecommerce site and saw
+mobile conversion increase 37% and desktop conversion increase 67%
+, while sessions stayed basically flat.
+So what changed?
+On the latest DTC Podcast, Vyper co-founder Dayne Rusch explains that the team started by stripping away a lot of the content they assumed customers needed.
+Then they went looking for what customers actually cared about.
+They dug through reviews and forums, ran on-site questionnaires, and asked shoppers what almost stopped them from buying and what ultimately convinced them to make the purchase.
+Those answers became the foundation for the new site.
+Vyper simplified its homepage and product pages, then worked the language, objections, and purchase motivations they heard directly from customers throughout the experience.
+And Dayne still thinks there’s plenty left to improve. Vyper has since built out a dedicated CRO team with a senior ecommerce manager, web developer, and full-time UI/UX designer to keep testing the experience.
+▶️
+Watch here
+|
+🎧
+Listen on Spotify
+---
+🎉 Give your BFCM creative some personality
+BFCM is a few weeks away, and your customers are about to see A LOT of discount graphics.
+How do you make yours feel like something your brand would actually run?
+We’re revisiting two birthday-sale creatives from Beck’s Broth for inspiration.
+Both give the offer room to stand out while using product renders, photography, and playful details to make the promotion recognizable.
+Founder-led sale creative
+This clean layout gives the founder, products, and offer their own space.
+The logo sits at the top, the text hierarchy is easy to scan, and the contrasting badge calls attention to the sale without cluttering the design.
+Drink cutouts surrounding the founder show different ways to serve the broth, while the candles reinforce the birthday theme.
+How to use this for BFCM:
+Give the offer the strongest visual emphasis
+. Keep the discount and what it covers easy to spot. Seasonal decorations should support that message without crowding it.
+Use your founder with a purpose.
+Pair their image with a personal invitation to shop early, a favorite product, or a short message about the promotion.
+Make the deadline clear.
+Use the badge for a real end date or early-access window. Update it as the promotion moves from early access to Black Friday and Cyber Monday.
+Product-led sale creative
+The second execution builds around strong product photography.
+Sparkly cowboy boots connect directly to the cheeky headline, giving the promotion a detail shoppers can associate with Beck’s Broth.
+The packaging helps viewers recognize the product, while the ready-to-drink shot shows how they’d enjoy it.
+How to use this for BFCM:
+Start with your strongest product images.
+Build the layout around photography that makes the product appealing and recognizable. Leave enough space for a readable offer.
+Connect the headline to the visual.
+Borrow from your product, packaging, or brand voice to give the promotion a specific idea. Beck’s Broth’s boots and birthday copy work together; look for a similarly natural connection in your own assets.
+Spell out the deal.
+Show the discount, eligible products, and deadline. If you’re promoting a holiday bundle, make its contents and savings clear.
+Pilothouse
+recommends preparing the next version now. Create room to swap the headline, offer, and deadline as BFCM progresses. Check each version on mobile before it goes live.
+Before you approve your BFCM creative, ask: can someone quickly tell what you sell, what the offer is, and when it ends?
+---
+📈 When should you start investing in brand?
+This is the final episode of
+Harness the Halo
+, our six-part series on marketing measurement.
+If you want to build a brand, Greg Dolan thinks you should invest at the top of the funnel from the beginning.
+Greg, co-founder and CEO of Keen Decision Systems, says Keen’s data shows top-of-funnel investment can lift performance throughout the funnel while building brand equity over time.
+He also makes the case for diversifying beyond a single platform and focusing on where your next dollar can generate the strongest marginal return.
+Greg explains why marketers should look beyond CAC and speak the language of finance, including profit, marginal ROI, and long-term value.
+Learn why brands shouldn’t go dark when budgets tighten, how AI could reshape media planning, and what Keen has learned from 16 years of marketing measurement.
+▶️
+Watch here
+|
+🎧
+Listen on Spotify
+---
+‍
+💸 Customers you can market to are worth 2X those you can't
+. Are you capturing them? 900+ brands use Dataships to maximize email, SMS, and WhatsApp opt-ins, with compliance on autopilot.
+See how it works
+. *

@@ -1,0 +1,200 @@
+Product bundling strategy: How bundles increase AOV and conversion rate in 2026
+https://www.triplewhale.com/blog/product-bundling-strategy
+2026-09-24
+
+Ecommerce Strategies
+Product bundling strategy: How bundles increase AOV and conversion rate in 2026
+Learn how to pair products, price bundles for profit, and tell whether higher AOV comes at the cost of conversion.
+By
+Emily Kordys
+September 24, 2026
+|
+14
+min read
+How do you encourage customers to buy more without making shopping more complicated? If your store sells products that work well together, you can offer them as a bundle. Shoppers get a convenient way to buy what they need, and you have a chance to increase the value of each order. It’s a win-win.
+For example, suppose you own an online electronics store. A customer visits your website to buy a laptop. Alongside the laptop-only option, you offer two bundles: one with a mouse and a carrying case for working on the go, and another with a monitor and keyboard for a home office. Customers can choose the option that best fits how they’ll use their laptop.
+Those extras give shoppers a reason to spend more, but only if they’re useful enough to justify the price. A bundle that raises
+average order value
+(AOV) could still put off buyers who don’t need everything in the set.
+We’ll cover how to balance that tradeoff, with seven product bundling strategies to help you increase AOV and conversion rate.
+Key takeaways:
+Product bundling combines two or more products into one offer, making it easier for shoppers to buy related items together.
+Your order history is a useful starting point for building bundles. Look at products customers frequently buy together, then test offering them as a set.
+Bigger orders don’t always mean more revenue. Track revenue per session to see how it changes with AOV and conversion rate.
+What is product bundling?
+Product bundling occurs when you sell two or more products together as a set. For example, a coffee sampler lets someone try several blends with one purchase. It may cost less than buying each bag separately and saves shoppers from choosing every blend themselves.
+What goes in the bundle depends on who you’re selling to. A new customer might want a sampler, while a repeat buyer may want a three-pack of the same roast. Those choices shape what you include and how you price it.
+You can also use bundles for
+cross-selling or upselling
+. Suggesting coffee to someone buying a brewer is cross-selling. Put both in a starter kit, and you have a bundle, with the option to upsell a larger kit at a higher price.
+Benefits of having a product bundling strategy
+A ready-made bundle saves the buyer the work of choosing each item. For your store, it’s a chance to sell several products in one order. Other bundles serve different goals:
+Frequently paired
+: A shopper who came for a laptop may also buy a case when you offer them together, raising the order’s value.
+Easy checkout
+: Putting compatible items in one set can help someone finish a purchase without checking which parts work together.
+Refills
+: Refill packs give regular customers a reason to order again, especially when the amount fits how quickly they use the product.
+Slow stock
+: A slower-selling item may sell more as part of a set, as long as it has a clear use alongside the other products.
+Types of product bundling
+Picking the products is only part of building a bundle. You also decide what shoppers can buy separately, whether they get a discount, and how much choice they have. Here’s how the six bundle types compare.
+Type
+How It Works
+Example
+Pure Bundling
+Items are only available as a set
+A special-edition gift set whose items aren't sold on their own
+Mixed Bundling
+Shoppers can buy the set or its items separately
+A laptop and carrying case offered together and individually
+Price Bundling
+A discount applies when shoppers buy the specified items together
+Buy two bags of coffee and get a third free
+Cross-Sell Bundling
+Related products are offered together to meet a connected need
+A laptop paired with a compatible mouse
+Upsell Bundling
+Shoppers are offered a larger or more complete package than the one they first considered
+Upgrading from a laptop-and-mouse bundle to a desk setup with a monitor
+Mix-and-Match Bundling
+Shoppers build their own set by choosing from a selected range of products
+Choose any three coffee blends to create a sampler
+It’s possible to have crossover between the different types of bundles. For example, a laptop-and-mouse offer is cross-sell bundling, but it can also be mixed bundling if you sell both items separately. Gift sets, multipacks, and subscriptions are formats you can use within these approaches.
+How product bundling can increase AOV and conversion rate
+AOV tells you how much buyers spend per order.
+Conversion rate
+tells you how often visits lead to orders. Bundles can affect both, but the numbers don’t always rise together.
+How bundles increase AOV
+Say a shopper plans to buy a $40 item, then chooses a $55 set with a useful extra. In this example, the basket is worth $15 more because the added item meets a related need.
+To see whether that pattern holds across your store, track:
+AOV = order value ÷ number of orders
+Use the same revenue definition for each comparison. For example, don’t compare sales before discounts in one group with sales after discounts in another.
+How bundles can improve conversion rate
+Conversion rate
+tells you how often visits to your store result in an order. A bundle can improve that rate by removing a reason to hesitate before checkout.
+Take the laptop example. A shopper might put off buying while they check which monitor works with it. Offering a compatible monitor in the bundle saves them that research and may help them complete the purchase. A clear saving on the set can also help them decide.
+Conversion rate = orders ÷ sessions x 100
+The aim is to turn more visits into orders. A larger basket alone won’t improve conversion. Keep individual products available so shoppers who don’t need the full set can still buy within their budget.
+Why you need to watch both metrics
+Suppose a bundle raises AOV but fewer visitors place orders. These sample numbers show how that can play out:
+Metric
+Existing Offer
+Bundle Offer
+AOV
+$60.00
+$75.00
+Conversion Rate
+3%
+2%
+Revenue Per 100 Sessions
+$180.00
+$150.00
+The bundle earns less from the same number of visits, despite larger orders. You’d also need to compare costs to see which offer earns more profit.
+7 product bundling strategies to increase AOV and conversion
+These seven strategies use purchase patterns and customer value to guide bundle decisions. Start with one approach that fits how your customers shop, then test the offer before adding more bundles.
+1. Bundle products customers already buy together
+Start with combinations that already appear in your orders. If buyers regularly add the same accessory to a bestseller, test offering the two together instead of making shoppers find the extra themselves.
+But make sure the pairing is meaningful. An accessory that appears in almost every kind of order may simply be popular. Look for items bought together more often than their individual popularity suggests, then test the offer at a price point that leaves enough margin.
+‍
+YISE Beauty
+uses Triple Whale, an AI platform that brings ecommerce data together, to understand which products customers pair and how those choices affect pricing. Susan Keating, the Senior Vice President of Growth and Digital Commerce, explains:
+“We use it for pricing and bundle development to understand what products are paired together – where is that sweet spot in terms of conversion? We use it to inform: 'Why is our conversion rate down this week? Is it bot traffic? Is it subscription traffic?' Having a cohesive view of
+first-party data
+that has the context of our entire business is priceless."
+2. Use repeat purchases to find extras worth offering upfront
+Your customers’ second orders can reveal what’s missing from the first. If buyers keep coming back for the same accessory, try including it in a starter kit so they can get the full setup in one purchase.
+But leave room for shoppers who want to try the main product before buying extras. Keep it available on its own, and test when the accessory or product offer works best: alongside the first purchase or in a follow-up timed to when customers usually return.
+OhSnap
+had more than half of its customers return within 21 days, often for another phone-grip color or an accessory. Those purchases gave the team a reason to explore which items to offer together.
+Elijah Schneider, whose agency Modifly worked with OhSnap, describes the value of seeing that journey:
+“The pixel attribution plus the customer journey insights really allowed us to build out a great strategy for OhSnap. Compared to the three months previous to Triple Whale, new customer CPA is down 37.5% since using the platform. Sales have increased almost 147%. MER has decreased almost 23%. ROAS has increased 29.5%.”
+3. Build replenishment bundles around each SKU’s reorder cycle
+A customer who’s out of cleanser may still have half a jar of moisturizer. Bundling both as a refill could mean asking them to buy something they won’t need for weeks. For replenishment, look at how often customers reorder each product, then use those patterns to choose quantities and timing. Products that run out together are better candidates for a refill set.
+Once the bundle launches, look beyond the bigger first order. Customers who stock up may spend more today but take longer to return. Follow their purchases through the usual reorder cycle to see whether they’re buying more overall or simply buying their next order early.
+YISE Beauty
+looks at replenishment by SKU rather than treating the whole catalog as one purchase cycle:
+“We look very concretely using Triple Whale at, like, 30, 60, 90-day replenishment, 120 replenishment, and there's learnings by SKU that inform the strategy by SKU.”
+4. Price bundles to protect contribution margin
+A customer adds your bundle to their cart, but how much of that sale do you keep? A steep discount can leave you earning less per order. Before setting the price, add up product costs, packaging, payment fees, fulfillment, and any shipping you cover. And be sure to consider acquisition costs, too.
+Test whether products that work well together can win the sale without a deep discount. If you cut the price, check whether profit from extra orders outweighs the margin you give up. Watch for full-price buyers swinging to the discounted set: you could be earning less on purchases you’d have won anyway. Higher AOV alone doesn’t prove the bundle is working.
+5. Use product performance to decide what stays in a bundle
+Bundle sales tell you what shoppers were willing to try. Their next order tells you what they wanted again. Look at which products buyers come back for, alongside each item’s margin and return rate. A product that becomes a customer’s regular purchase may be worth more to your business than one that only makes the first basket bigger.
+Use those patterns to refine the set. If buyers return one item often but keep reordering another, test a version built around the stronger product. Compare customers over the same time period, and keep new and returning buyers separate. The patterns can point you toward a better selection, while tests will tell you whether changing the bundle helps.
+In our
+TALENTLESS case study
+, RSN8 Media’s Shayan Doosty explains why some products lead to more valuable customers:
+“It's been extremely helpful to understand and try to tell the full story as to why certain products actually drive better long-term value for each individual customer acquired. Just trying to dissect that and working backward to reverse engineer the buyer journey has been really effective for TALENTLESS.”
+6. Check why conversion fell before changing the bundle
+If a bundle’s conversion rate drops, check who’s visiting before cutting the price. More first-time shoppers or a spike in bot traffic can change the overall rate even when the offer stays the same. Compare new and returning visitors separately, and make sure tracking is working before drawing conclusions.
+If similar shoppers are still buying less often, take a closer look at the bundle. Is the upfront cost too high? Is a component sold out, or are the contents unclear? Use what you find to choose one change, then test it against the current offer.
+7. Use Moby to narrow down bundle ideas before testing
+Moby
+is Triple Whale’s AI teammate. You can ask it questions about your connected store data in plain language, such as which products customers buy together or what they order next.
+When a pairing catches your attention, ask Moby to investigate who buys it before building a promotion around it. With the relevant order history, you can compare new and returning buyers to see whether the combination is more popular with first-time shoppers or people who already know your products.
+Use the analysis to define a small test with a clear audience and product combination.
+LSKD uses Moby to dig into how customers buy products together. Locke Fitzpatrick, Digital Marketing Manager, explains why he turns to it daily:
+“At least once a day, there's something I’m like, oh, that's interesting, I wonder what Moby thinks. And I get immediate answers I can trust.”
+Common product bundling mistakes
+One unwanted product or surprise restriction at checkout can turn a good deal into an abandoned cart. Before you launch, check for these common bundle mistakes:
+A savings that asks shoppers to spend too much
+. A lower price per item won’t help someone who can’t afford the full set. Keep a smaller bundle or individual products available.
+An “extra” nobody wants
+. If shoppers need two of three items, they may see the third as something they’re being charged for. Give every product a reason to be there.
+Too many identical options
+. Buyers shouldn’t need a spreadsheet to compare your bundles. Make the differences in contents, prices, and purpose clear.
+A deal that changes at checkout.
+Put exclusions and discount restrictions beside the offer, not at the end of the purchase.
+One missing item that stops every sale
+. A sold-out component can take the entire bundle offline. Watch inventory across the set, especially when the same products also sell separately.
+Discounts on sales you would have made anyway
+. A popular bundle may simply give regular buyers a cheaper way to buy their usual products. Check whether it generates additional purchases, not just discounted ones.
+Returns also need a clear answer. If a shopper wants to keep two items and send one back, what happens? Explain whether partial returns are allowed and how you’ll calculate the refund before they buy.
+How to measure your product bundling strategy
+Decide what would make the bundle worth keeping before you launch. If the goal is more revenue from the same traffic, use revenue per session to assess AOV and conversion together. A bigger basket won’t help if too few shoppers buy, and extra revenue won’t mean much if discounts eat up the profit.
+Where possible, randomly show shoppers either the bundle or the usual offer without it. Run both at the same time, and keep each visitor in their assigned group. Set the test length around your traffic and the size of improvement you need to detect. A strong first day isn’t a reason to declare a winner.
+Be careful about comparing people who bought bundles with people who didn’t. Bundle buyers may have been ready to spend more anyway. That comparison can reveal buying habits, but it won’t tell you how much extra spending the offer caused.
+Look beyond the initial sale:
+Profit after variable costs
+: How much do you keep after paying for the order?
+Individual product sales
+: Is the bundle adding sales or replacing full-price purchases?
+Returns and refunds
+: Are shoppers keeping the products they bought?
+Repeat orders
+: Do customers spend more over their usual reorder cycle, or does stock up simply delay the next purchase?
+Benchmarks from similar brands can help put your results in perspective. But they can’t tell you whether your bundle caused an improvement. That’s what your test is for.
+Find AOV and bundling opportunities with Triple Whale and Moby
+Triple Whale’s
+Product Analytics
+lets you review contribution margin and return rate down to the variant or SKU. Use that detail to assess the products you’re considering for a bundle before setting a price.
+With Moby, you can explore purchase patterns in your connected order data and compare customer groups without writing queries yourself. Bring a bundle idea to your analysis, narrow it down to a specific audience, and use the findings to test your plan.
+The bottom line
+Start with one bundle that fits a clear customer need. Give each product a reason to be there, make the price easy to understand, and check whether more shoppers buy or simply spend more when they do.
+Want to see how you can increase AOV and conversion rate?
+Book a demo
+and see how your team can use its data to plan and better assess bundles.
+Rise to the top with ecommerce intelligence.
+Get a free demo
+Product bundling: FAQs
+How does product bundling increase AOV?
+A bundle can prompt shoppers to buy related items in one order. AOV rises when the extra spending outweighs any discount across those orders. Larger sets don’t always raise AOV for the store as a whole.
+Can product bundles improve conversion rate?
+They can when they make buying easier or offer clear value. A full kit may help shoppers who are unsure what to buy together. A costly set with unwanted items can reduce conversion instead.
+What is a good discount for a product bundle?
+Start with the profit you need after costs. Use that to set the range you can afford to test. Some bundles save buyers enough time and work that they don’t need a discount.
+Related articles
+Ecommerce Strategies
+6 advanced strategies to increase LTV and retention (without growing ad spend)
+Triple Whale experts give us tips on customer retention, LTV, product journeys, 30/60/90 day purchase flows, and more.
+Read more
+Ecommerce Strategies
+How to optimize ecommerce ads: Secrets told from experts at Google and Snapchat
+Stop obsessing over bids! We've got the solutions right here.
+Read more
+Ecommerce Strategies
+The Brand-Building Playbook Behind YISE Beauty with Molly Sims
+Molly Sims, founder of YISE Beauty (formerly YSE Beauty) and host of the Lipstick on the Rim podcast, joined us at Triple Whale's 2026 edition of The Whalies.
+Read more
+Ready to run your business on the AI operating system for ecommerce?
+I agree to the privacy policy including to Triple Whale using my contact details to contact me for marketing purposes.

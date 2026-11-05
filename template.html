@@ -540,7 +540,7 @@ table.q tbody tr.link{cursor:pointer}
     <div class="lead">
       <div class="kicker">Lead story · Northbeam, Meta, Common Thread, Foxwell</div>
       <h2>Every source agrees: Meta is getting dearer heading into Black Friday</h2>
-      <p class="dek">Northbeam's Meta CPM is running about 24% above last year, Meta's own price per ad rose 14% in Q3, and Common Thread's brands have seen Meta CPMs jump 17–43% from October to November in every year since 2022. Three in four of Foxwell's 600 buyers name rising CPMs as their top Q4 worry. The twist: Northbeam's Meta ROAS is up about 30% and new-customer CAC down a third, so efficiency is holding for now.</p>
+      <p class="dek">Northbeam's Meta CPM is running about 24% above last year, Meta's own price per ad rose 14% in Q3, and Common Thread's brands have seen Meta CPMs jump 17–43% from October to November in every year since 2022. Three in four of Foxwell's 600 buyers name rising CPMs as their top Q4 worry. The twist: Northbeam's Meta ROAS is up about 30% and new-customer CAC down a third, so efficiency is holding for now. Northbeam's new BFCM guide adds that CPMs spiked 20–35% over last year's big weekend.</p>
       <div class="byline">Sources: Northbeam, 22–28 Oct · Meta Q3 earnings · Common Thread · Foxwell × Northbeam survey, 29 Sep <button type="button" class="src-btn" data-src="mb-cpm25,meta-q3-26,ctc-cpm,fox-q4-26,x-roas,x-ncac">SOURCES · QUOTES</button></div>
       <div class="term" style="margin-top:14px">
         <div class="th"><span class="t">Meta prices vs last year, by source</span><a href="#trends" class="m" style="color:var(--t-amber);text-decoration:none">All trends →</a></div>
@@ -1575,8 +1575,8 @@ function buildTicker(){
   const wi=items.filter(t=>WATCH.some(p=>t.includes('<b>'+p.toUpperCase().replace(' ','')+' ')));const all=[...wi.map(t=>t.replace('<span class="it">','<span class="it">★ ')),...extra,...items.filter(t=>!wi.includes(t))].join('');document.getElementById('ticker').innerHTML=all+all;
 }
 const STORIES=[
- {k:'Channels',h:'Meta costs ease in the last week before the midterms',p:'In the week ending 25 Oct, Meta CPM fell 4.6%, CPC 6.9% and new-customer CAC 5.4%, with ROAS up 3.9%. AppLovin CAC fell 19.2%; Snapchat CPC jumped 27.4%. Northbeam warns of swings after the 3 Nov election.',to:'#nb-channels',src:'mb-weekly,mb-kitsch'},
- {k:'Share of spend',h:'Meta climbs to 56% of tracked spend as Amazon pulls back',p:'Meta at 56.0% and Google 17.3% of everything Northbeam tracks. "All other", mostly Amazon, fell back to 14.6% after the Big Deal Days bump.',to:'#nb-share',src:'mb-weekly'},
+ {k:'Channels',h:'Meta CPM flat, conversion rate down 5% as November opens',p:'In the week ending 1 Nov, Meta CPM moved −0.1% and CPC −4.9%, but CVR fell 5.1% and new-customer CAC rose 1.5%; ROAS still edged up 1.5%. TikTok CAC fell 9.2% on a 13.0% CVR jump; Pinterest CAC rose 12.0%. Northbeam says CPMs spiked 20–35% over last year\'s BFCM weekend.',to:'#nb-channels',src:'mb-weekly,mb-bfguide26'},
+ {k:'Share of spend',h:'Google takes share from Meta in the first week of November',p:'Meta slipped to 55.3% (−0.7 pts) of everything Northbeam tracks and Google rose to 18.0% (+0.7). "All other", mostly Amazon, held at 14.7%.',to:'#nb-share',src:'mb-weekly'},
  {k:'Amazon',h:'Amazon pulls $2B of holiday demand into October',p:'Prime Big Deal Days took about $2B in two days, against roughly $35B over Cyber Five 2025.',to:'#nb-q4',src:'mb-amazon,mb-cpm25'},
  {k:'Benchmarks',h:'Q3: spend up 30%, but the median account gained little',p:'Accounts spending $200k–$500k a month: top quartile revenue +43.5% YoY, median +8.1%. Sub-$50k accounts: median revenue −18.1%.',to:'#nb-bench',src:'mb-cpm25'},
  {k:'Earnings',h:'Meta confirms it: US ad prices up 23% a year',p:'Q3 2026 price per ad rose 14% worldwide and 23% in the US & Canada, while impression growth slowed to 10%. That matches Northbeam\'s +25% Meta CPM.',to:'#mkt',src:'meta-q3-26,meta-apac'},

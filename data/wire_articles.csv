@@ -1,8 +1,12 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
+2026-11-05,Northbeam,Northbeam's Black Friday Survival Guide: 2026 Edition,https://themediabuyer.northbeam.io/p/northbeam-s-black-friday-survival-guide-2026-edition,Newsletter,Meta;BFCM / Q4;Benchmarks
+2026-11-05,Northbeam,"Bryan Bumgardner: Meta conversion rates at record lows, ROAS better than ever",https://x.com/BryanBumgardner/status/2118318914426081553,X,Meta;Benchmarks
 2026-11-05,Modern Retail,Modern Retail+ Reseach: Brands’ focus on owned channels wavers for the 2026 holiday season,https://www.modernretail.co/marketing/modern-retail-reseach-brands-focus-on-owned-channels-wavers-for-the-2026-holiday-season/,News,BFCM / Q4;Retail
 2026-11-05,Modern Retail,High-protein holiday treats are here,https://www.modernretail.co/operations/high-protein-holiday-treats-are-here/,News,BFCM / Q4
 2026-11-05,Modern Retail,Big-Box Briefing: The themes that will dominate Jason Bonfig’s tenure as Best Buy’s new CEO,https://www.modernretail.co/operations/big-box-briefing-the-themes-that-will-dominate-jason-bonfigs-tenure-as-best-buys-new-ceo/,News,
+2026-11-05,Foxwell,Insights on Creative Testing Structure and Q4 Optimization,https://www.foxwelldigital.com/blog/insights-on-creative-testing-structure-and-q4-optimization,Blog,Creative;BFCM / Q4
+2026-11-05,Curtis Howland,Test whether day-3 revenue predicts day-90 LTV before buying a model,https://www.linkedin.com/feed/update/urn:li:activity:7524115882311073792/,LinkedIn,
 2026-11-04,Modern Retail,How Stitch Fix is using AI and customer feedback to build its private brands,https://www.modernretail.co/operations/how-stitch-fix-is-using-ai-and-customer-feedback-to-build-its-private-brands/,News,AI
 2026-11-04,Haus,ChatGPT ads don't pay yet: a working paper Olivia Kory flags (with a last-click caveat),https://x.com/oliviaakory/status/2117992986936041673,X,AI
 2026-11-04,Direct to Consumer,"Shopify AI Shopping, Vyper Conversion Optimization & BFCM Creative",https://www.directtoconsumer.co/newsletter/shopify-ai-shopping-vyper-cro-bfcm-creative,Newsletter,AI;Creative;BFCM / Q4

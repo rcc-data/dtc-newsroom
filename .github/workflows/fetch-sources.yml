@@ -1,0 +1,30 @@
+name: Fetch news sources
+# Runs on GitHub's servers every morning so the 8:17 Vancouver cloud pass has fresh listings
+# and article text without needing a browser, Ryan's laptop or any permission prompt.
+on:
+  schedule:
+    - cron: '23 14 * * *'   # 07:23 Vancouver (UTC-7, B.C. permanent daylight time)
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency: fetch-sources
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4 lxml
+      - run: python3 tools/fetch_sources.py
+      - name: Commit results
+        run: |
+          git config user.name "dtc-newsroom-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add tools/inbox notes/fetched
+          git diff --cached --quiet && echo "nothing new" && exit 0
+          git commit -m "Fetch sources $(TZ=America/Vancouver date +%F)"
+          git pull --rebase
+          git push

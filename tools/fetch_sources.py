@@ -1,0 +1,315 @@
+"""Fetch new items from the tracked news sources without a browser (runs in GitHub Actions).
+
+Writes tools/inbox/<CODE>.txt in the collect.md format ("@@SRC:<CODE>" then date|title|url|extra lines)
+and the readable text of every new item to notes/fetched/<CODE>/<slug>.txt, so the morning cloud pass can
+merge the Wire and pull figures without reaching the sites itself.
+SINCE for each publisher = its newest date in data/wire_articles.csv (overlap is harmless: the merge
+de-duplicates by URL). Respects robots.txt; skips a site that answers with a bot check.
+Usage: python3 tools/fetch_sources.py   (needs requests + beautifulsoup4)
+"""
+import csv, json, os, re, sys, time, urllib.robotparser
+from datetime import datetime, timedelta
+from urllib.parse import urljoin, urlparse
+
+import requests
+from bs4 import BeautifulSoup
+
+UA = 'Mozilla/5.0 (compatible; DTCNewsroomBot/1.0; +https://dtcnewsroom.com/)'
+S = requests.Session()
+S.headers.update({'User-Agent': UA, 'Accept-Language': 'en'})
+LOG = []
+ROBOTS = {}
+PUB = {'NBNL': 'Northbeam', 'NBBLOG': 'Northbeam', 'CTC': 'CTC', 'HAUS': 'Haus', 'TW': 'Triple Whale', 'MR': 'Modern Retail',
+       '2PM': '2PM', 'GRAPHITE': 'Graphite', 'DTCNL': 'Direct to Consumer', 'HWSS': 'Curtis Howland'}
+
+
+def since_for(pub, default='2026-10-01'):
+    best = ''
+    with open('data/wire_articles.csv') as f:
+        next(f)
+        for r in csv.DictReader(f):
+            if r['pub'] == pub and r['date'] > best:
+                best = r['date']
+    d = best or default
+    return (datetime.strptime(d, '%Y-%m-%d') - timedelta(days=2)).strftime('%Y-%m-%d')
+
+
+def allowed(url):
+    p = urlparse(url)
+    base = f'{p.scheme}://{p.netloc}'
+    if base not in ROBOTS:
+        rp = urllib.robotparser.RobotFileParser()
+        try:
+            r = S.get(base + '/robots.txt', timeout=20)
+            rp.parse(r.text.splitlines() if r.status_code == 200 else [])
+        except Exception:
+            rp.parse([])
+        ROBOTS[base] = rp
+    return ROBOTS[base].can_fetch(UA, url)
+
+
+def get(url, delay=0.6, as_json=False):
+    if not allowed(url):
+        raise RuntimeError('robots.txt disallows ' + url)
+    time.sleep(delay)
+    r = S.get(url, timeout=30)
+    if r.status_code != 200:
+        raise RuntimeError(f'HTTP {r.status_code} for {url}')
+    if 'Just a moment' in r.text[:3000] and not as_json:
+        raise RuntimeError('bot check at ' + url)
+    return r.json() if as_json else r.text
+
+
+def text_of(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    for t in soup(['script', 'style', 'nav', 'footer', 'header', 'form', 'noscript']):
+        t.decompose()
+    main = soup.find('article') or soup.find('main') or soup.body or soup
+    txt = re.sub(r'\n{3,}', '\n\n', main.get_text('\n', strip=True))
+    return txt[:30000]
+
+
+def pdate(s):
+    s = (s or '').strip()
+    for f in ('%Y-%m-%d', '%b %d, %Y', '%B %d, %Y', '%b. %d %Y', '%b %d %Y'):
+        try:
+            return datetime.strptime(s[:10] if f == '%Y-%m-%d' else s, f).strftime('%Y-%m-%d')
+        except ValueError:
+            pass
+    return ''
+
+
+def save(code, items, fetch_text=True):
+    """items: list of (date, title, url, extra); writes inbox + article text for each."""
+    os.makedirs('tools/inbox', exist_ok=True)
+    items = [i for i in items if i[0]]
+    seen, out = set(), []
+    for i in items:
+        if i[2] in seen:
+            continue
+        seen.add(i[2])
+        out.append(i)
+    if not out:
+        LOG.append(f'{code}: nothing new')
+        return
+    with open(f'tools/inbox/{code}.txt', 'w') as f:
+        f.write(f'@@SRC:{code}\n' + '\n'.join('|'.join([d, t.replace('|', '/'), u] + ([x] if x else [])) for d, t, u, x in out) + '\n')
+    n = 0
+    if fetch_text:
+        os.makedirs(f'notes/fetched/{code}', exist_ok=True)
+        for d, t, u, x in out:
+            slug = re.sub(r'[^a-z0-9]+', '-', urlparse(u).path.lower()).strip('-')[-90:] or 'index'
+            path = f'notes/fetched/{code}/{d}-{slug}.txt'
+            if os.path.exists(path):
+                continue
+            try:
+                body = x if (x and x.startswith('\n')) else text_of(get(u if u.startswith('http') else 'https://www.modernretail.co/' + u))
+                with open(path, 'w') as f:
+                    f.write(f'{t}\n{u}\n{d}\n\n{body.strip()}\n')
+                n += 1
+            except Exception as e:
+                LOG.append(f'{code}: text failed for {u}: {e}')
+    LOG.append(f'{code}: {len(out)} items, {n} texts saved')
+
+
+def run(code, fn):
+    try:
+        fn(since_for(PUB[code]))
+    except Exception as e:
+        LOG.append(f'{code}: SKIPPED ({e})')
+
+
+DATE_RE = re.compile(r'([A-Z][a-z]{2,8}\.? \d{1,2},? \d{4})')
+
+
+def nbnl(since):
+    soup = BeautifulSoup(get('https://themediabuyer.northbeam.io/archive'), 'html.parser')
+    items = []
+    for a in soup.select('a[href*="/p/"]'):
+        m = DATE_RE.search(a.get_text(' '))
+        h = a.find(['h2', 'h3'])
+        d = pdate(m.group(1).replace(',', ', ').replace(',  ', ', ')) if m else ''
+        if d >= since:
+            items.append((d, (h or a).get_text(' ', strip=True), urljoin('https://themediabuyer.northbeam.io', a['href'].split('?')[0]), ''))
+    save('NBNL', items)
+
+
+def nbblog(since):
+    soup = BeautifulSoup(get('https://www.northbeam.io/blog'), 'html.parser')
+    items = []
+    for a in soup.select('a[href*="/blog/"]'):
+        el, d = a, ''
+        for _ in range(6):
+            m = DATE_RE.search(el.get_text(' ')) if el else None
+            if m:
+                d = pdate(m.group(1))
+                break
+            el = el.parent
+        title = a.get_text(' ', strip=True)
+        title = re.sub(r'^.*?\b(BLOG|WHITEPAPER|REPORT|GUIDE|NEWS)\b\s*', '', title)[:160]
+        if d >= since and title:
+            items.append((d, title, urljoin('https://www.northbeam.io', a['href'].split('?')[0]), ''))
+    save('NBBLOG', items)
+
+
+def ctc(since):
+    items = []
+    for blog in ['coachs-corner', 'ecommerce-playbook', 'outliers', 'tactics', 'research', 'thread', 'dtc-hotline', 'taylor-reacts', 'bridges-live']:
+        soup = BeautifulSoup(get(f'https://commonthreadco.com/blogs/{blog}', delay=2.6), 'html.parser')
+        for a in soup.select('a.article__heading-link'):
+            el, d = a, ''
+            for _ in range(6):
+                t = el.find('time', attrs={'datetime': True}) if el else None
+                if t:
+                    d = t['datetime'][:10]
+                    break
+                el = el.parent
+            if d >= since:
+                items.append((d, a.get_text(' ', strip=True), urljoin('https://commonthreadco.com', a['href']), blog))
+    # listing titles are truncated: take the h1 from each article page while saving its text
+    full = []
+    for d, t, u, b in items:
+        try:
+            h = BeautifulSoup(get(u, delay=2.6), 'html.parser').find('h1')
+            full.append((d, h.get_text(' ', strip=True) if h else t, u, b))
+        except Exception:
+            full.append((d, t, u, b))
+    save('CTC', full)
+
+
+def haus(since):
+    soup = BeautifulSoup(get('https://www.haus.io/blog'), 'html.parser')
+    items = []
+    for el in soup.select('[fs-cmssort-field="date"]'):
+        d = pdate(el.get_text(strip=True))
+        p = el
+        for _ in range(6):
+            p = p.parent
+            a = p.select_one('a[href^="/blog/"]') if p else None
+            if a:
+                h = a.find('h3') or p.find('h3')
+                if d >= since:
+                    items.append((d, (h or a).get_text(' ', strip=True), urljoin('https://www.haus.io', a['href']), ''))
+                break
+    save('HAUS', items)
+
+
+def tw(since):
+    x = BeautifulSoup(get('https://www.triplewhale.com/sitemap.xml'), 'xml')
+    items = []
+    for u in x.find_all('url'):
+        loc, lm = u.find('loc').text, (u.find('lastmod').text if u.find('lastmod') else '')
+        if '/blog/' in loc and lm[:10] >= since:
+            soup = BeautifulSoup(get(loc), 'html.parser')
+            m = soup.find('meta', attrs={'property': 'article:published_time'})
+            d = m['content'][:10] if m else ''
+            h = soup.find('h1')
+            if d >= since:
+                items.append((d, h.get_text(' ', strip=True) if h else loc, loc, ''))
+    save('TW', items)
+
+
+def wp(code, base, since, drop=()):
+    items, cats = [], {}
+    for page in range(1, 6):
+        r = S.get(f'{base}/wp-json/wp/v2/posts', params={'after': since + 'T00:00:00', 'per_page': 100, 'page': page,
+                  '_fields': 'date,link,title,categories'}, timeout=30)
+        if r.status_code != 200:
+            break
+        j = r.json()
+        if not j:
+            break
+        for p in j:
+            for c in p['categories']:
+                if c not in cats:
+                    try:
+                        cats[c] = S.get(f'{base}/wp-json/wp/v2/categories/{c}', timeout=20).json().get('name', '')
+                    except Exception:
+                        cats[c] = ''
+            cn = ';'.join(cats[c] for c in p['categories'])
+            if any(x in cn for x in drop):
+                continue
+            title = BeautifulSoup(p['title']['rendered'], 'html.parser').get_text()
+            items.append((p['date'][:10], title, p['link'], cn))
+        time.sleep(0.6)
+    save(code, items, fetch_text=(code != 'MR'))
+
+
+def graphite(since):
+    x = BeautifulSoup(get('https://graphite.io/sitemap.xml'), 'xml')
+    known = open('data/wire_articles.csv').read()
+    items = []
+    for loc in [l.text for l in x.find_all('loc') if re.search(r'/research/[^/]+$', l.text)]:
+        if loc.split('graphite.io')[-1] in known or 'state-of-chatgpt-ads-report' in loc:
+            continue
+        html = get(loc)
+        m = re.search(r'"datePublished"\s*:\s*"([^"]+)"', html)
+        h = BeautifulSoup(html, 'html.parser').find('h1')
+        d = m.group(1)[:10] if m else ''
+        if d >= since:
+            items.append((d, h.get_text(' ', strip=True) if h else loc, loc, 'research'))
+    save('GRAPHITE', items)
+
+
+def dtcnl(since):
+    soup = BeautifulSoup(get('https://www.directtoconsumer.co/newsletters'), 'html.parser')
+    items = []
+    for a in soup.select('a[href*="/newsletter/"]'):
+        el, d = a, ''
+        for _ in range(5):
+            m = DATE_RE.search(el.get_text(' ')) if el else None
+            if m:
+                d = pdate(m.group(1))
+                break
+            el = el.parent
+        if d < since:
+            continue
+        u = urljoin('https://www.directtoconsumer.co', a['href'])
+        page = BeautifulSoup(get(u), 'html.parser')
+        title = re.sub(r'\s*[-–|]\s*DTC Newsletter.*$', '', page.title.get_text() if page.title else '')
+        title = re.sub(r'^[^\w]+\s*-\s*', '', title).strip()
+        body = '\n---\n'.join(e.get_text('\n', strip=True) for e in page.select('.newsletter_section.w-dyn-item .w-richtext'))
+        items.append((d, title, u, 'newsletter', body))
+    out = [(d, t, u, x) for d, t, u, x, b in items]
+    save('DTCNL', out, fetch_text=False)
+    os.makedirs('notes/fetched/DTCNL', exist_ok=True)
+    for d, t, u, x, b in items:
+        with open(f"notes/fetched/DTCNL/{d}-{u.rstrip('/').split('/')[-1]}.txt", 'w') as f:
+            f.write(f'{t}\n{u}\n{d}\n\n{b}\n')
+
+
+def hwss(since):
+    j = get('https://newsletter.curtishowland.com/api/v1/archive?sort=new&limit=20', as_json=True)
+    items = []
+    os.makedirs('notes/fetched/HWSS', exist_ok=True)
+    for p in j:
+        d = p['post_date'][:10]
+        if d < since:
+            continue
+        u = p.get('canonical_url') or f"https://newsletter.curtishowland.com/p/{p['slug']}"
+        items.append((d, p['title'], u, 'newsletter'))
+        try:
+            full = get(f"https://newsletter.curtishowland.com/api/v1/posts/{p['slug']}", as_json=True)
+            body = text_of(full.get('body_html') or '')
+            with open(f"notes/fetched/HWSS/{d}-{p['slug']}.txt", 'w') as f:
+                f.write(f"{p['title']}\n{u}\n{d}\n{p.get('subtitle') or ''}\n\n{body}\n")
+        except Exception as e:
+            LOG.append(f'HWSS: text failed for {u}: {e}')
+    save('HWSS', items, fetch_text=False)
+
+
+if __name__ == '__main__':
+    run('NBNL', nbnl)
+    run('NBBLOG', nbblog)
+    run('CTC', ctc)
+    run('HAUS', haus)
+    run('TW', tw)
+    run('MR', lambda s: wp('MR', 'https://www.modernretail.co', s, drop=('Sponsored', 'Awards', 'Partner')))
+    run('2PM', lambda s: wp('2PM', 'https://2pml.com', s))
+    run('GRAPHITE', graphite)
+    run('DTCNL', dtcnl)
+    run('HWSS', hwss)
+    os.makedirs('notes/fetched', exist_ok=True)
+    with open('notes/fetched/LAST_RUN.txt', 'w') as f:
+        f.write(datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC') + '\n' + '\n'.join(LOG) + '\n')
+    print('\n'.join(LOG))

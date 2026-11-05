@@ -26,7 +26,7 @@ SRC = {  # inbox source code -> (publisher, default type)
     'NBNL': ('Northbeam', 'Newsletter'), 'NBBLOG': ('Northbeam', 'Blog'), 'NBX': ('Northbeam', 'X'),
     'CTC': ('CTC', 'Blog'), 'FOX': ('Foxwell', 'Blog'), 'HAUS': ('Haus', 'Blog'), 'TW': ('Triple Whale', 'Blog'),
     'MO': ('Runneth', 'Newsletter'), 'MR': ('Modern Retail', 'News'), '2PM': ('2PM', 'Memo'), 'META': ('Meta', 'Earnings'),
-    'VAROS': ('Varos', 'Report'), 'GRAPHITE': ('Graphite', 'Report'), 'DTCNL': ('Direct to Consumer', 'Newsletter'),
+    'VAROS': ('Varos', 'Report'), 'GRAPHITE': ('Graphite', 'Report'), 'DTCNL': ('Direct to Consumer', 'Newsletter'), 'HWSS': ('Curtis Howland', 'Newsletter'),
 }
 
 TOPICS = [

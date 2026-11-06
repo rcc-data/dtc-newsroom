@@ -1,0 +1,593 @@
+The State of Gen AI
+https://graphite.io/research/the-state-of-genai
+2026-11-09
+
+Research
+//
+November 9, 2026
+The State of
+Gen AI
+Download Report
+AI Sessions by Product (Worldwide)
+Key Takeaways
+The top 6 LLMs (ChatGPT, Gemini, Claude, Grok, Perplexity, DeepSeek) now drive 76B sessions a month worldwide, and YoY growth has hit 37% worldwide and 45% in the US.
+Claude has the largest relative growth, with +1901% worldwide and +862% in the US. However, ChatGPT still has an 81.2% share worldwide and 80.7% in the US.
+ChatGPT recently announced 1.2B weekly active users.
+Despite the growth of Claude, ChatGPT has regained market share worldwide since June 2026, increasing it by +0.8 percentage points from June to September.
+AI hit a surprising and little-reported plateau between July and December 2025 worldwide, growing only 2.3%, while the US grew 10% over the same window.
+Growth has since rebounded, with a 19% increase since January 2026 worldwide and 20% in the US.
+86% of AI usage worldwide happens in-app, 74% in the US. Adding mobile web takes it to 89% worldwide and 78% in the US.
+Referral traffic from AI continues to climb, with 92% YoY growth worldwide. ChatGPT owns 60% of referral traffic, followed by Gemini at 14%, and Claude at 10%.
+Google Search continues to grow and converge with AI, with 64% of Google Searches showing AI Overviews.
+This is an updated version of our previous study, “
+AI Is Much Bigger Than You Think
+” published in March 2026. We share new data and compare it against our previous study.
+Report
+Download The State of Gen AI Report
+Download Report
+Contents
+01
+AI Usage Worldwide
+02
+Growth by Product
+03
+ChatGPT Market Share
+04
+AI Is Predominantly Mobile
+05
+The Unpredictable Adoption Curve of AI
+06
+The Messy & Unpredictable Growth of AI
+07
+Referral Traffic by AI Product
+08
+The AI Attribution Gap
+09
+AI Growth by Region
+10
+Company Public Disclosures
+11
+Comparison with Prior Research
+12
+Data & Methodology
+13
+Appendix
+AI Usage Reached 76B Sessions a Month Worldwide, Growing 37% YoY (Sep 2025 vs Sep 2026)
+In the US, it reached 6.6B sessions, up 45% year-over-year (YoY). Growth has slowed sharply. The year to September 2025 ran at 396% worldwide and 332% in the US. On a rolling three-month basis, comparing the last three months vs. the previous three months, on a day-normalized basis, the market is now adding 7% worldwide and 7.5% in the US.
+Total LLM Sessions (Web+App)
+Source:
+Total of Sessions (Web + App) Worldwide vs US for top 6 LLMs (ChatGPT, Gemini, Claude, Grok, Perplexity, DeepSeek). Similarweb.
+Claude Grew Fastest, but ChatGPT Still Absorbed More Than Half the Growth
+Year-over-year growth worldwide, fastest first: Claude +1901%, Gemini +182%, Grok +123%. In the US: Claude +862%, Gemini +151%, Grok +75%. For sessions added in the last 12 months, the order inverts: ChatGPT contributed 58.9% of total worldwide growth, Claude 26%, and Gemini 12%. In the US, AI growth contributions are ChatGPT 60%, Claude 26%, and Gemini 11%. Interestingly, Perplexity saw significant worldwide YoY contraction, dropping 27% (Sep 2025 vs Sep 2026).
+AI Sessions YoY (Web and App)
+Source:
+Total of Sessions (Web and App) for the Top LLMs (ChatGPT, Gemini, Claude, Grok, Perplexity, DeepSeek). Similarweb.
+ChatGPT holds 81.2% of traffic share worldwide
+Between January and June 2026, ChatGPT lost market share at 1.0pp per month, followed by a slight recovery of 0.27pp per month across July to September.
+LLM Market Share (Worldwide)
+Source:
+Total of Web and Mobile App Sessions (Android & iOS) Worldwide for Top 6 LLMs (ChatGPT, Gemini, Claude, Grok, Perplexity, DeepSeek). Worldwide. Similarweb
+AI Is Predominantly Mobile
+Worldwide, 89% of sessions happen on a mobile device (iOS, Android, and Web - Mobile), against 78% in the US. Desktop web is 11% worldwide and 22% in the US for Q3 2026. The US is roughly twice as desktop-weighted as the world.
+Sessions Distribution Across Devices (Q3 2026)
+Worldwide
+US
+Source:
+Total Sessions by Device for the Top 6 LLMs (ChatGPT, Gemini, Claude, Grok, DeepSeek, Perplexity) Worldwide and US for Q3 2026. Similarweb
+Monthly AI Sessions by Surface (Worldwide)
+Source:
+Total Sessions by Device (Web, iOs and Android) from ChatGPT, Gemini, Claude, Perplexity, Grok & DeepSeek. US. Similarweb
+Monthly AI Sessions by Surface (US)
+Source:
+Total Sessions by Device (Web, iOs and Android) from ChatGPT, Gemini, Claude, Perplexity, Grok & DeepSeek. US. Similarweb
+The Unpredictable Adoption Curve of AI
+2023: The Fastest Growing Consumer App in History
+When ChatGPT launched in November 2022, it caused dramatic changes in the landscape of AI, search, and marketing. After only 2 months, ChatGPT became the fastest-growing consumer app in history. As of October 2025, ChatGPT sees over
+800 million weekly active users
+(source: tech.eu) and
+2.5 billion daily prompts
+worldwide (source: Axios).
+Note: Threads
+reportedly
+grew to 100 million users in only 5 days; however, Threads is an app that was built on Instagram rather than being a net new technology product.
+Time To Reach 100M Users
+Product
+Time to reach 100M users
+Source
+ChatGPT
+2 months
+The Guardian
+Instagram
+2.4 years
+CNET
+Facebook
+4.5 years
+Dave Morin
+Google
+6 years
+SEC S-1
+(100M users estimated based on 200M monthly searches, real user numbers are unconfirmed)
+2024–2025: Unprecedented 13x Growth
+After ChatGPT's unprecedented growth in its first 2 months, monthly sessions of LLMs grew by another 13x over the 18 months between January 2024 and June 2025, from 3.97B to 50.5B.
+AI Sessions 2024 – 2025 (Web and App, Worldwide)
+Source:
+Total of Web and App Sessions for Top LLMs (ChatGPT, Gemini, Claude, Grok, Perplexity, DeepSeek). Similarweb
+The 2025 AI Plateau
+However, after unprecedented growth, worldwide AI usage abruptly plateaued in July 2025. Between July and December 2025, worldwide AI sessions on the web and in apps showed virtually no growth, with only 2.3% growth.
+Q3-Q4 2025 AI Sessions (Web+App, Worldwide)
+Source:
+Total of Web and App Sessions for Top 6 LLMs (ChatGPT, Gemini, Claude, Grok, Perplexity, DeepSeek).  Worldwide. Q3-Q4 2025. Similarweb
+The 2026 AI Resurgence
+Monthly AI sessions have grown dramatically since the 2025 plateau. Since January 2026, they have grown 19% from 64B to 76B.
+AI Sessions (Web + App)
+Source:
+Total of Web and App Sessions for Top 6 LLMs (ChatGPT, Gemini, Claude, Grok, Perplexity, DeepSeek).  Worldwide. Similarweb
+The Messy & Unpredictable Growth of AI
+Forecasts for new technologies often predict a conservative linear growth curve or a more ambitious exponential hockey stick growth curve. Most forecasts of AI favor the more ambitious hockey stick.
+AI grew exponentially between July 2023 and June 2025, plateaued from July to December 2025, and has grown steadily since January 2026. However, on a micro level, no one LLM has followed the forecasted clean, predictable growth curves. The reality is instead a series of unpredictable events, bursts, and ups and downs.
+AI Sessions by Product (Worldwide)
+Source:
+Total of Sessions by Product for the Top LLMs, excluding ChatGPT (Gemini, Claude, Perplexity, DeepSeek, Grok)  Similarweb
+ChatGPT is experiencing fierce competition in the AI race. Competing LLM companies have collectively raised nearly $200B. Claude has seen explosive growth starting in February 2026. Gemini has more than doubled its share of the market over the last 12 months and is now the third-largest LLM behind ChatGPT and Claude.
+LLM Market Share Worldwide (Excluding ChatGPT Line)
+Source:
+Total Sessions by Product of Top LLMS, excluding ChatGPT (Claude, Gemini, DeepSeek, Grok & Perplexity). Similarweb
+However, no competitor has reached even a 10% market share, and ChatGPT still maintains an 81.2% share of the market worldwide and 80.7%  in the US in September 2026.
+LLM Market Share by Product Worldwide (Aug 2023 – Sep 2026)
+Source:
+Total of Web and Mobile App Sessions by product Worldwide for Top 6 LLMs (ChatGPT, Gemini, Claude, Grok, Perplexity, DeepSeek). Similarweb
+Share of AI Sessions by Product (Q3 2026)
+Worldwide
+US
+Source:
+Total of Web and Mobile App Sessions by Product for the Top 6 LLMs (ChatGPT, Gemini, Claude, Grok, DeepSeek, Perplexity) Worldwide and US for Q3 2026. Similarweb
+ChatGPT’s Historic Growth, Plateau, & Steady Growth
+After growing 15x between January 2024 and July 2025, ChatGPT's sessions plateaued starting in July 2025 through June 2026.
+However, starting in July 2026, ChatGPT’s growth has returned and September 2026 is +24% YoY worldwide. The same month
+OpenAI reported 1.2B weekly users
+.
+Further, its market share has not only maintained but has increased recently.
+ChatGPT Sessions (Worldwide)
+Source:
+Total of Sessions for ChatGPT Worldwide (2023-2026). Similarweb
+Something Big Is Happening with Claude
+Starting in February 2026, Claude has seen one of the largest growth trajectories among LLMs.
+US sessions are up +252%, between January and March 2026, from 90M to 317M.
+Daily active users (DAU) grew by 345%, and app installs by 1192%, comparing the end of March 2026 to the beginning of January 2026.
+Worldwide, the numbers are even larger. Sessions increased 296%, from 459M to 1.82B, DAU by 443%, and app installs by 1495%.
+Claude's growth is not a temporary spike caused solely by controversy in the United States. Rather, the surge appears to be driven by a combination of three catalysts: the launch of Claude Cowork, the release of Opus and Sonnet 4.6, and a widely publicized standoff with the Pentagon, which introduced Claude to a much larger audience.
+Claude Sessions (Worldwide)
+Source:
+Total of Sessions for Claude Worldwide (2023-2026). Similarweb
+Claude’s Explosive Growth
+Claude Sessions (Worldwide)
+Source:
+Total of Sessions for Claude Worldwide (2023-2026). Similarweb
+Gemini’s Slow Start, Rapid Rise & Plateau
+After a slow start following its launch, Gemini has seen one of the most sustained, rapid growth trajectories among LLMs since August 2025.
+US sessions are up +33% and DAU by 70%, while app installs fell by 46%, comparing the end of May 2026 to the beginning of January 2026.
+Worldwide, the numbers mirror this scale. Sessions grew by 45% from January to May 2026 (and saw a massive 49% MoM spike earlier in September 2025), with DAU growing by 76% while app installs fell by 29%.
+Since May 2026, worldwide sessions have slipped 2.8% over four months.
+Gemini's growth is not a temporary spike caused by a single viral moment. Rather, the surge appears to be driven by a series of product launches that improved the Gemini experience.
+Gemini 2.5 Flash Image (Nano Banana)
+Gemini 3 Pro
+Gemini Sessions (Worldwide)
+Source:
+Total of Sessions for Gemini Worldwide (2023-2026). Similarweb
+AI Mode Is Now Bigger Than Gemini in the US
+In March 2025, Google
+launched
+Google AI Mode, which is a chat experience powered by Gemini and embedded within the Google search experience. In May 2026, Google
+announced
+that AI Mode received over 1B monthly users. Google also said that it would combine “AI Overviews and AI Mode into one, seamless AI Search experience.”
+Google AI Mode received 491M web visits in the US in August 2026, compared with 360M for Gemini, meaning 36% more.
+Google AI Mode vs Google Gemini (US)
+Source:
+Total of Visits for Google AI Mode vs Total of Sessions for Google Gemini (US). Similarweb
+Google AI Mode Visits (US)
+Source:
+Total of visits for Google AI Month (US Only) Similarweb
+AI Overviews, the Elephant in the Room
+Google AI Overviews expanded from appearing in 23% of US searches in September 2025 to 64% by August 2026. Approximately 2 out of every 3 US Google searches now trigger an AI Overviews response.
+Google Searches With AI Overviews (US)
+Source:
+Total of Google Searches with AI Overviews in the US. Similarweb
+DeepSeek's Sudden Burst & Extended Plateau
+US sessions are up +10,247%, comparing February 2025 to December 2024, and the app was averaging 410K DAU by the last week of February 2025, after reaching a peak of nearly 800K DAU on January 28.
+Worldwide, the numbers are staggering. Sessions grew by 15,346%, and the app went from zero to 14M DAU and 701K daily installs by the end of February, with a launch-week peak of 35M DAU and 1.7M installs in a single day on February 11.
+DeepSeek's growth curve is not a standard linear progression. Rather, the surge appears to be driven by
+The open-weight release of DeepSeek-V3
+DeepSeek-R1 reasoning model
+Together, these milestones fueled massive global adoption, despite significant geopolitical scrutiny and bans.
+DeepSeek Sessions (Worldwide)
+Source:
+Total of Sessions for DeepSeek Worldwide (2023-2026). Similarweb
+Grok's Rapid Rise & Pullback
+US sessions are up +412%, DAU by 1,232%, and app installs by 2,081%, comparing the end of May 2025 to the beginning of February 2025. The Android app launched in that window, so part of the DAU jump reflects that launch.
+Worldwide, the numbers are even larger. Sessions grew by 701%, DAU by 4,865%, and app installs by 3,570% over that same period.
+Since peaking at 1.82B in March 2026, worldwide sessions have fallen 24% to 1.38B in September 2026.
+Grok's growth is not a steady, slow-building climb. Rather, the surge appears to be driven by a combination of three major milestones.
+The scaling power of the Colossus supercomputer with Grok 3
+Free access to Grok 3 for all users (February 2025)
+Grok 4
+Grok Sessions (Worldwide)
+Source:
+Total of Sessions for Grok Worldwide (2023-2026). Similarweb
+Perplexity's Rise & Fall
+US sessions fell by 30%, DAU by 27%, and app installs by 91%, comparing the end of September 2026 to the peak in October 2025.
+Worldwide, the numbers reflect this contraction. After growing over 550% from September 2024 to its October 2025 peak, sessions have plummeted by 38%, with DAU falling by 33% and app installs by 93%.
+Perplexity's peak and subsequent drop are not due to natural market saturation. Instead, the crash appears driven by a series of negative events.
+The mass copyright infringement lawsuits led by The New York Times
+A pivot away from an ad-revenue sharing model
+The deployment of new native OS search integrations squeezed the platform's audience significantly.
+Perplexity Sessions (Worldwide)
+Source:
+Total of Sessions for Perplexity Worldwide (2023-2026). Similarweb
+The growth of Claude, Gemini, and other LLMs is an expansion of the AI market, and not a shift away from ChatGPT to others. Every major LLM but Perplexity grew in total sessions comparing Sep 2025 to Sep 2026, including ChatGPT, which increased by 24%.
+AI Sessions by Product (Worldwide)
+Source:
+Total Sessions by Product for Top LLMs (ChatGPT, Gemini, Claude, Grok, Perplexity, DeepSeek) Similarweb
+AI Sessions by Product (US)
+Source:
+Total Sessions by Product for Top LLMs (ChatGPT, Gemini, Claude, Grok, Perplexity, DeepSeek) Similarweb
+Want More Research Like This?
+Referral Traffic by AI Product
+To evaluate how AI referral traffic works, we analyzed domains with at least 100k monthly visits for six or more months between July 2023 and July 2026 from the US. From that pool, we selected the top 43k sites and pulled their monthly Gen AI referral traffic across each surface in the US and worldwide. We then added up referral traffic across all sites, broken down by surface and region.
+The charts below show how referral traffic splits across the major AI products, worldwide and in the US, along with each product’s share of the total.
+Referral traffic from AI grew 92% YoY worldwide and 75% YoY in the US
+Source:
+Referral Traffic per Top LLMs (ChatGPT, Claude, Gemini, Perplexity, DeepSeek, Copilot, Grok and Others), Worldwide and US. Similarweb
+Referral Traffic by Product (Worldwide)
+Source:
+Referral Traffic per Top LLMs (ChatGPT, Claude, Gemini, Perplexity, DeepSeek, Copilot, Grok and Others), Worldwide. Similarweb
+Referral Traffic by Product (US)
+Source:
+Referral Traffic per Top LLMs (ChatGPT, Claude, Gemini, Perplexity, DeepSeek, Copilot, Grok and Others) in the US. Similarweb
+GenAI Referral Traffic Share (US)
+Source:
+GenAI Referral Traffic Share (US). Similarweb.
+Referral Traffic Share by Product (Worldwide)
+Source:
+Referral Traffic per Top LLMs (ChatGPT, Claude, Gemini, Perplexity, DeepSeek, Copilot, Grok, and Others). Worldwide. Similarweb
+Referral Traffic Share by Product (US)
+Source:
+Referral Traffic per Top LLMs (ChatGPT, Claude, Gemini, Perplexity, DeepSeek, Copilot, Grok and Other) in the US. Similarweb
+As of July 2026, ChatGPT sends 60% of all AI referral traffic worldwide, followed by Gemini at 14% and Claude at 10%. In the US, ChatGPT has 66%, Claude 11% and Gemini 10%. Worldwide referral traffic grew 92% YoY, compared with 75% in the US.
+Top Sites by AI Referral Traffic (US)
+These are the top 10 sites getting the most referral traffic from Gen AI from May - July 2026.
+Top 10 Referral Destinations by AI Product, US
+ChatGPT
+Claude
+Gemini
+1
+google.com
+google.com
+youtube.com
+2
+youtube.com
+amazon.com
+reddit.com
+3
+amazon.com
+bing.com
+bing.com
+4
+facebook.com
+yahoo.com
+amazon.com
+5
+reddit.com
+youtube.com
+facebook.com
+6
+walmart.com
+github.com
+ebay.com
+7
+apple.com
+facebook.com
+temu.com
+8
+instagram.com
+x.com
+wikipedia.org
+9
+bing.com
+yoti.com
+walmart.com
+10
+yahoo.com
+skilljar.com
+github.com
+Source:
+Top 10 Domains by AI Referral Traffic in the US for ChatGPT, Claude and Gemini. May - July 2026 Similarweb
+Top Sites By AI Referral Traffic (May - July 2026. US)
+Source:
+Top 10 Domains by AI Referral Traffic in the US for ChatGPT, Claude and Gemini. May - July 2026 Similarweb
+The AI Attribution Gap
+Referral traffic from AI is a small channel relative to others. Our data suggest that AI accounts for less than 1% of traffic on average to websites.
+Relative Traffic Volume by Channel (US, Q2 2026)
+Source:
+Channel traffic: Total, Organic, Paid and GenAI. Similarweb.
+However, referral traffic does not tell the full story of the impact from AI.
+It is common for AI answers to have little to nothing to click on, even when products and brands are recommended. Anecdotally, many users who see a brand or product in AI will open a new tab and navigate directly to or search for the brand in search engines, then visit the website. This traffic is then misattributed to direct or branded search, respectively.
+Our June 2026
+case study with n8n
+evaluated the attribution gap between conversions from AI referral traffic and self-reported conversions. We found that conversions from AI referral visits accounted for only 10% of conversions.
+We do not have sufficient data to draw broader market conclusions, but this one case study suggests that referral traffic from AI undercounts its total impact.
+AI Growth by Region
+The United States is home to OpenAI, Anthropic, Google, xAI, and Perplexity. With the exception of DeepSeek, every major LLM company started in the United States. Despite this, only 8.8% of total AI usage is based in the US.
+US Market Share (Sep 2026)
+Source:
+Total of Web and App Sessions for the US vs. The Rest of the World (Sep 2026). Similarweb
+Unlike AI's non-linear worldwide growth, AI in the US has shown more consistent linear growth, with 45% YoY growth in September 2026.
+Company Public Disclosures
+Company / product
+Metric type
+Cadence
+Value
+Time period stated
+Geography
+Source snippet (verbatim / near-verbatim)
+Source
+Google Search / AI Overviews
+Active users
+Monthly
+2.5+ billion
+May 2026
+Global
+“AI Overviews now has over 2.5 billion monthly active users.”
+Google
+Google Search / AI Mode
+Active users
+Monthly
+1+ billion
+22 Jul 2026
+Global
+“Since expanding AI Mode globally last October, we’ve surpassed 1 billion monthly active users.”
+Alphabet
+Google Gemini (app)
+Users
+Monthly
+1+ billion
+11 Aug 2026
+Global
+“The Gemini app has officially surpassed 1 billion monthly users, making it the fastest-growing product in Google’s history.”
+Google
+Google Gemini (app)
+Active users on iOS
+Not stated
+100+ million
+11 Aug 2026
+Global
+“100 million+ active users on iOS”
+Google
+OpenAI / ChatGPT
+Active users
+Weekly
+900+ million
+31 Mar 2026
+Global
+“ChatGPT is the overwhelming leader in consumer AI with more than 900 million weekly active users, and over 50 million subscribers.”
+OpenAI
+Meta AI
+Users
+Monthly
+1+ billion
+1 Oct 2025
+Global
+“More than 1 billion people use Meta AI every month.”
+Meta
+Anthropic / Claude
+Active users
+n/a
+None disclosed
+n/a
+n/a
+As of Oct 2026, Anthropic has not published a Claude user count, message volume or token volume. It discloses run-rate revenue instead, and declines to comment on third-party user estimates. Closest company statements are growth multiples with no base: “daily active users have more than tripled since the beginning of 2026.”
+Anthropic
+Duck.ai
+Any usage metric
+n/a
+None disclosed
+n/a
+n/a
+DuckDuckGo has published no user or query figures for its AI chat product as of 17 Aug 2026.
+DuckDuckGo
+OpenAI / ChatGPT
+Active users
+Weekly
+1.2 billion
+29 Sept 2026
+Global
+“where developers can directly launch new native experiences to our collective 1.2B weekly users.” — OpenAI DevDay 2026 Recap. Sam Altman on stage: “1.2B people use ChatGPT every week.”
+OpenAI
+Source:
+Company statements as linked.
+Public Disclosures vs. Similarweb Data
+ChatGPT reported 900M+ weekly active users by the end of March 2026, and Similarweb reports an estimate of 476M weekly active users (WAU). The 900M figure is attainable if you consider users without de-duplication.
+Users logging in from multiple surfaces and devices are likely the reason for this difference.
+In Aug 2026, Google publicly announced that “Gemini app has officially surpassed 1 billion monthly users”. Data from Similarweb from that same period indicates that there are 648M monthly active users across surfaces without de-duplication.
+Product/surface
+Public Disclosure
+Scope and Date of PD
+Source Link
+Active Users without de-duplication (Sum across surfaces)
+OpenAI ChatGPT
+900M+ weekly active users; 50M+ subscribers
+Global, all surfaces, 31 Mar 2026 (OpenAI)
+OpenAI
+945M
+Google Gemini (app)
+1B+ monthly users
+Global, Gemini app, 11 Aug 2026 (Google)
+Google
+648M
+Google Gemini (app)
+100M+ active users on iOS (cadence not stated)
+Global, 11 Aug 2026 (Google)
+Google
+122M
+Microsoft Copilot
+150M+ monthly active users
+Global, all copilots (info work, coding, security, science, health, consumer), Q1 FY2026 / Oct 2025
+Microsoft
+233M
+Perplexity
+30 million monthly active users
+as of April 2025
+TechCrunch
+45M
+Source:
+Company disclosures as linked; estimates from Similarweb.
+Comparison with Prior Research
+This study builds on a similar study we published in March 2026, “
+AI Is Much Bigger Than You Think
+.” This study was one of the first to show the growth in AI usage on mobile apps. This study is mostly consistent with the previous study, yet we call out several differences.
+Shortcomings in our prior research are worth noting:
+AI vs. Search
+Our original study compared the size of search-related AI with search engines.
+The previous study included web visits for the top 6 search engines and both web and mobile app sessions for the top 5 LLMs.
+We did not include mobile app sessions for search engines. Most search engines receive little usage of their respective mobile apps.
+However, Google's Android app is heavily used, with an estimated 11.8B monthly sessions in the US.
+The Google Android app is used for a variety of non-search-related applications such as image recognition, translation, and Google Discover, as well as traditional Google search. We have no reliable data source for how many sessions are focused on search or not. For this reason, we can no longer reliably compare the relative size of AI for search vs. search engines.
+Our previous study likely undercounted Google search usage from Google's Android mobile app and, therefore, search-related AI usage relative to search engines.
+AI Visibility & Branded Search
+Many AI answers that suggest products or brands do not have a strong call to click. Oftentimes, when users see a product, they search for the brand in a search engine and visit the brand site.
+This can inflate the number of branded searches in search engines.
+Early analysis suggests that traffic from search engines via branded search queries is relatively flat YoY indicating that AI growth has not produced a net increase in branded search traffic. We will share the full analysis in an upcoming study.
+However, at a micro level, we have evidence suggesting that some search engine traffic is caused by AI visibility. As we showed in our
+study with n8n
+, 90% of conversions from AI were not accounted for via last-touch attribution.
+We do not have reliable data or studies evaluating how much of search engine usage is caused by AI visibility. However, we acknowledge that the usage of search engines may be overcounted as a result of this.
+Data & Methodology
+Definition of Metrics
+Visits
+— A “visit” to a website is counted when a visitor accesses one or more pages during a session. Subsequent pageviews are included in the same visit until the user is inactive for more than 30 minutes. If a user becomes active again after 30 minutes, that counts as a new visit. A new session will also start at midnight.
+Session (Apps)
+— A session is a period of time when a user interacts with an app. Session metrics are a primary measure of user engagement, as they capture how frequently and how long users interact with an app.
+Web Visits vs. App Sessions
+— Web “visits” are session counts with a 30-minute inactivity rule aggregated monthly, while app “sessions” reflect real app usage periods and are typically measured and analyzed on a daily engagement basis.
+Monthly Visits (Web)
+measure how many times users visit a website. A “visit” (or web session) begins when someone loads a page and ends after
+30 minutes of inactivity
+or at
+midnight
+. The metric simply sums all of these sessions over the course of a month.
+App Sessions
+measure how often users actively use a mobile app. A session represents a period of interaction while the app is open and in use. Instead of a fixed 30-minute timeout rule in the documentation, app sessions are based on actual app engagement and are typically reported as
+sessions per user per day
+, along with average and total session time.
+Gen AI Referral Traffic
+— A website visit that originated from a Gen AI product including ChatGPT, Gemini, Perplexity, DeepSeek, and others.
+Desktop Apps
+Since our previous study, both the
+Claude
+and
+OpenAI
+desktop apps have grown significantly. We do not have a reliable data source for desktop apps. Therefore, the size of AI usage and the % of AI that is used on desktop vs. mobile will both be undercounted.
+Appendix
+Desktop web share of AI sessions, September 2025 to September 2026, YoY
+Worldwide
+United States
+Source:
+Total Sessions by Product for Top LLMs (ChatGPT, Gemini, Claude, Perplexity, Deepseek, Grok). Worldwide and US. Similarweb
+Desktop sessions grew 43% worldwide, versus mobile's 36%, increasing desktop share from 10.1% to 10.6% worldwide and from 22.4% to 23.2% in the US. This may signal a return to desktop. However, if we remove Claude and Gemini, two of the fastest-growing and most web-oriented assistants, the growth disappears; worldwide desktop share falls from 8.9% to 7.7%, a decline. The same pattern holds for ChatGPT, which fell from 8.5% to 7.5%.
+LLM Investment History
+Company
+Amount Raised
+Source Link
+OpenAI
+$180 Billion
+Tracxn Funding Profile
+Anthropic
+$132 Billion
+Tracxn Funding Profile
+xAI
+$45 Billion
+Tracxn Funding Profile
+DeepSeek
+~$7.5 Billion
+PitchBook Profile
+Perplexity
+$1.72 Billion
+Tracxn Funding Profile
+Claude Milestones
+Event
+Date
+Impact
+Source URL
+Claude 3 Family Launch
+March 2024
+The release of the three-tier family (Opus, Sonnet, and Haiku) brought a rapid spike, pushing traffic from 14.6M to over 36M in its launch month.
+Objects WS: Claude Version History
+Claude 3.5 Sonnet & Artifacts
+June 2024
+The introduction of the Artifacts UI feature catalyzed steady summer growth, doubling sessions from 44M to 82M by August.
+Anthropic: Introducing Claude 3.5
+Claude 4.0 Era
+May 2025
+Launching Claude Opus 4 and Sonnet 4 with agentic workflows built robust momentum, establishing a new baseline of 160M sessions.
+Objects WS: Claude Version History
+Claude 4.6 (Opus & Sonnet)
+February 2026
+The 4.6 generation introduced stronger planning and a massive 1-million-token context window in beta, pushing traffic decisively over the 1 Billion mark (1.82B) for the following month.
+Objects WS: Claude Version History
+Pentagon & Anthropic Dispute Timeline
+Date
+Event
+February 16, 2026
+The Pentagon warns that Anthropic will "pay a price."
+Source
+February 25, 2026
+The Pentagon takes its first step toward blacklisting Anthropic.
+Source
+March 9, 2026
+Anthropic sues the government over labeling it a "supply chain risk."
+Source
+Gemini Milestones
+Event
+Date
+Impact
+Source URL
+Gemini 1.5 Pro Launch
+February 15, 2024
+Major context window upgrade (1M+ tokens)
+Google Blog: Next-generation model Gemini 1.5
+Gemini 2.0 Flash General Availability
+February 5, 2025
+High efficiency & multi-modal reasoning at scale
+Google Blog: Gemini Model Updates
+Gemini 2.5 Flash Image Release
+August 26, 2025
+Public release of native image generation (Nano Banana)
+Google Blog: Gemini 2.5 model family expands
+Gemini 3 Pro Release
+November 18, 2025
+Foundational model for the 3.x era, optimized for agentic AI
+Google Blog: A new era of intelligence with Gemini 3
+A
+Apple–Google Siri Partnership Announced
+Jan 2026
+Apple chose Gemini to power the next-generation Siri.
+Google Blog: Joint statement from Google and Apple
+DeepSeek Milestones
+Event
+Date
+Impact
+Source URL
+DeepSeek-V2 Launch
+May 2024
+Launch of highly efficient MoE architecture pushed sessions past 1 million for the first time.
+EitBiz: DeepSeek-V2 Launch
+DeepSeek-V3 Open Release
+Dec 26, 2024
+The open-weight release triggered the late December jump from 4.5M to over 11.7M sessions.
+Kingy AI: DeepSeek-V3 Launch Tracker
+DeepSeek-R1 Viral Launch
+Jan 20, 2025
+A historic breakthrough in reasoning models caused a massive explosion from 11.7M to about 689M sessions.
+Fireworks.ai: DeepSeek-R1 Deepdive
+U
+US Government Ban & Global Scrutiny
+Aug–Oct 20

@@ -1,11 +1,11 @@
-2026-11-05 16:26 UTC
+2026-11-06 15:20 UTC
 NBNL: 1 items, 1 texts saved
 NBBLOG: nothing new
-CTC: 8 items, 8 texts saved
+CTC: 8 items, 0 texts saved
 HAUS: nothing new
-TW: 1 items, 1 texts saved
+TW: 1 items, 0 texts saved
 MR: 8 items, 0 texts saved
-2PM: 2 items, 2 texts saved
-GRAPHITE: nothing new
-DTCNL: 3 items, 0 texts saved
-HWSS: 1 items, 0 texts saved
+2PM: 2 items, 0 texts saved
+GRAPHITE: 1 items, 1 texts saved
+DTCNL: 5 items, 0 texts saved
+HWSS: SKIPPED (string indices must be integers, not 'str')

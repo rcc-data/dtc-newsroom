@@ -1,0 +1,2 @@
+@@SRC:GRAPHITE
+2026-11-09|The State of Gen AI|https://graphite.io/research/the-state-of-genai|research

@@ -1,0 +1,133 @@
+Northbeam's Black Friday Survival Guide: 2026 Edition
+https://themediabuyer.northbeam.io/p/northbeam-s-black-friday-survival-guide-2026-edition
+2026-11-05
+
+Home
+Posts
+Northbeam's Black Friday Survival Guide: 2026 Edition
+Northbeam's Black Friday Survival Guide: 2026 Edition
+How to scale budgets, manage cost caps, and grow profitably on the big weekend
+Nov 5, 2026
+Bryan Bumgardner
+BFCM cometh
+Black Friday is almost here. It’s been a weird year, with
+Amazon cannibalizing sales
+,
+Meta CPMs through the roof,
+and midterm elections throwing everything into a tailspin.
+Luckily, if you’re a grounded media buyer, this doesn’t change much for you. Yes, macro issues can artificially deflate your performance over Black Friday Cyber Monday. But that’s not in your control.
+If you want to survive the Black Friday Cyber Monday paid media gauntlet, you need to focus on what you
+can
+control.
+In today’s issue, we present our survival guide for managing paid media over the big weekend.
+We’ll cover how to set performance targets, manage your daily rhythm, and troubleshoot common issues. This guide is derived from what we’ve learned working with thousands of the fastest-growing businesses in history — the strategies in this guide are used by high-scale brands you probably recognize. Let’s get into it.
+Setting the tone
+Let’s assume that you, dear reader, are some type of decision-maker on a marketing team running omni-channel paid media for some type of consumer brand.
+On a typical “business as usual” day, an ad account spending under $100k a day is probably checked two or three times. Perhaps you make one or two big changes a day, culling underperforming ads and scaling budgets on over-performing ads by 20% every few days.
+This is good. But BFCM demands more rigor. Motivated customers and volatile ad spend management from your competitors means you could be doing great at 9 am, but by noon, your CAC and ROAS are in shambles. I can’t afford that, can you?
+During the BFCM promo window (roughly November 25 to December 1), you need to have a firm grasp on your data, check your performance more often, and have a clear strategic playbook based on what you see in the data.
+This is going to help you maximize profitability and new customer revenue without destroying your budgets. It also removes a lot of the stress. Since you’ll know exactly what your performance is, and what actions to take based on that performance, the guesswork disappears.
+First, read this article.
+That’s our theory of how you should be managing your paid media in general. Then, come back here and read this article.
+Here’s our detailed recommendation on mastering paid media over BFCM.
+Step 1: build your cockpit
+For a high-intensity media buying strategy, you need a good dashboard. In Northbeam, set up one view per platform showing blended revenue and blended cost per order side by side, broken out by campaign, ad set and ad. Set up two time frames for these tiles: today only and another for trailing three to seven days.
+During BFCM, you’ll be measuring spend performance on an accrual basis. Basically, the money you’re spending today should be measured on how well it’s driving performance today. You’ll use cash accounting just for overall business health. When someone just wants to see the raw revenue number, that’s when you look at cash accounting.
+Step 2: set up four check-ins a day
+The volatility of BFCM requires this schedule all weekend long.
+9 am:
+this is the first read: look at today’s numbers against the trailing seven days. Possibly you’re looking at new customer acquisition cost. You should already have
+benchmarks set
+and
+conversion lag multipliers
+in place. At this first check-in, flag any ads that are below target or at risk.
+Do not panic. A slow morning isn’t a death sentence, my guy. If a campaign is under target after six to eight hours but above target over the last seven days, let it run to the next check-in.
+2 pm:
+now we make calls. Cut or scale anything you flagged from the prior check-in. Pump spend by 20% on ads you flagged as overperforming during the previous check-in. Side note: if you’re working with a team, make sure you have a doc or something where you’re discussing this collectively, so handing off between team members on different shifts is easy.
+7 pm:
+the evening push is here. Crank spend 20% again on ads that are performing at or above targets. You want to push your best performing ads right to that line of diminishing returns to maximize your ad spend.
+Before bed:
+same thing as the other check-ins: scale winners, cut losers. But this is where we introduce a new concept we like:
+the overnight budget reset.
+Step 3: reset your budgets overnight
+At each check-in, you’re cranking budgets on over-performing ads by 20% maximum. Now let’s say you have a campaign that’s soaring: perhaps you started that campaign at $10,000 a day, but by 8 pm it’s up to $20,000 a day.
+In our experience, it’s much easier to over-spend than under-spend during BFCM. So we want to put protections in place to prevent this wild runaway budget.
+To fix this, set your budgets to reset overnight. Consider our example campaign: instead of opening day two at $20,000, we create a 12:01 am rule that sets the budget at 30% above the previous day’s starting point. So our example campaign would open day two with $13,000 budget, not $20,000.
+There’s two reasons for this. One, it protects against overspending. You’re less likely to accidentally leave a campaign on when you shouldn’t. Two, mornings are quieter sales periods, naturally. Usually email and SMS are going out during those times, so we want to open budgets lower and build them up through the day.
+Step 4: small budget bumps over time
+But if an ad is over-performing and we want to scale it… Why are we increasing spend slowly over time instead of just letting ‘er rip?
+Because on Meta (and to some degree, other ad platforms) ad budgets are usually deployed in a front-loaded fashion. When you change budgets, spend spikes immediately then begins to taper off over time.
+We call this the “spend S-curve” and it’s something we’ve noticed over a decade of studying paid media. If you do a lot of smaller bumps in your budget instead of one big one, you create a more consistent pattern of hourly performance. You also hedge your bets because spend spikes are spread throughout the day.
+This is a very hands-on approach, obviously. We call it “scale and surf”: you manually intervene on budgets, bid strategies, and creative whenever performance drifts off target, but otherwise you let it ride.
+Step 5: but what if cost caps won’t spend?
+Ad auctions get more expensive as the weekend goes on, and this is shaping up to be the most expensive BFCM ever, in my opinion. Last November we saw CPMs spike 20% to 35% during the big weekend. This will stall out cost cap and bid cap campaigns who simply can’t operate at these prices.
+So what can you do? Three fixes:
+Duplicate into lowest cost.
+If your cost or bid cap campaign stalls out and can’t spend, copy the campaign into an identical one set on lowest cost, managed by hand or with automated rules.
+Switch strategies for runaway campaigns.
+If one cost cap campaign’s CPMs spike, move it to lowest cost and broaden targeting.
+Keep evergreen ads on alongside the offer ads.
+Their existing learnings help hold CPMs down.
+You also need to protect your evergreen cost caps. One business we work with learned this the hard way. They were scaling down product-level cost-cap campaigns after the big weekend, but making those huge changes killed the campaign and they had to rebuild performance from scratch.
+It’s safer to leave evergreen cost caps alone through the sale. Let separate max-conversion campaigns carry the extra spend, then turn the latter off when the sale ends. We do have to go back to business as usual in December, after all.
+Step 6: but what about creative?
+That’s a whole other conversation. Here’s our quick and dirty advice:
+Keep it punchy and short.
+You’re battling for attention, not just other ads, but football games, family events, tons of email and SMS, everything. It’s a holiday weekend.
+Say the offer in plain text.
+Write it in the caption so it’s easier to read. Call-to-actions should be in the content or video.
+Keep your discounts simple.
+Hammer it home all weekend. Don’t get cute with discount tiers, nobody has time for that, least of all you or your team.
+Lose the “up to 50% off.”
+Nobody cares, man. If you say “up to” it sounds like you’re cheating people. That’s what credit cards put on their direct mailers, and nobody likes it. We’re seeing that hurt click-through rates on ads. Just pick a number for your discount and stick with it.
+Creative during BFCM is a demand CAPTURE tool. You should have already been telling folks about your brand all year. This is the time you get them across the finish line. Keep it short and sweet.
+Bonus advice for Meta
+Meta’s Product Browsing AI Enhancement sits at the ad level and can turn statics and video into product ads. This has a tendency to drift your prospecting campaigns toward retargeting, which isn’t usually what you want. Make sure you check that this is either intentionally turned on or off for all your ads.
+The weekend checklist
+Here’s the short version:
+Build your dashboard: blended revenue, new customer revenue, CAC/CPO, today and the trailing seven days, visible at a glance for every campaign.
+Set up your 12:01 budget reset rules, so you don’t blow your whole budget on accident… again.
+Check in four times a day, all weekend. Real killer teams are checking every hour all weekend long. We’ve seen three-shift style rotations of media buyers operating all night, even.
+Leave your evergreen ads on, please.
+Prepare to duplicate any cost-caps that stall into lowest-cost duplicate campaigns at the drop of a hat. This matters especially in this really expensive year.
+Check and make sure the auto-DPA setting is set the way you want it, especially on prospecting ads.
+Good luck and god speed. Got questions on this?
+DM me
+or just reply to this email.
+🚨
+JOB: Head of Marketing // TUSHY // Brooklyn, NY:
+help the world have cleaner butts.
+🚨
+JOB: Growth Marketing Director // Pinned Golf // Boston, MA:
+better vibes, better golf!
+💰
+There are 30 million paid Snapchat subscribers.
+Is this the canary in the coal mine for advertising, or is this a model for the future?
+🧠
+Want more BFCM strategy? Watch our episode of Marketing Operators.
+The best of the best in one room sharing their secrets, great stuff.
+🤔
+Extreme profitability is mandatory?
+The full recording from our “Before the Rush” BFCM masterclass in LA.
+🗽
+The full recordings from our 2026 Northbeam Conference are now on YouTube.
+You’re seeing this first, being a subscriber and all. Learn from brands like Dr. Squatch, AG1, and Comfrt.
+Love this newsletter? Please forward it to your friends, coworkers, or Railroad Daddy.
+Subscribe here to get this data in your inbox every week.
+Reply
+Newest first
+Login
+or
+Subscribe
+to participate
+Recommended for you
+View all
+caret-right
+Quick Links
+Subscribe
+Archive
+Subscription
+Reset Password
+Update Password
+Search
+Socials

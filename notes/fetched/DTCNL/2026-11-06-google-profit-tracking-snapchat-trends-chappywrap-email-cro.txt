@@ -1,0 +1,132 @@
+Google Profit Tracking, Snapchat Trends & ChappyWrap Email CRO
+https://www.directtoconsumer.co/newsletter/google-profit-tracking-snapchat-trends-chappywrap-email-cro
+2026-11-06
+
+Good morning.
+ETA: lol?
+Here’s what you’re reading in today’s DTC:
+Why your best-ROAS product might not be your most profitable
+Snapchat’s latest North American numbers
+Five email-flow tests Pilothouse would run on ChappyWrap before the holidays
+What your second abandoned-cart email should do differently from the first
+And more.
+Happy Friday, and let’s get into it. 🫡
+---
+💰 Your best ROAS product might not be your most profitable
+@MenachemAni
+has a good reminder before you set Black Friday budgets. Revenue tells you what sold. It doesn’t tell you what you kept.
+Add
+cost_of_goods_sold
+to your Merchant Center feed
+and enable conversions with cart data
+to unlock estimated gross-profit reporting. Margin custom labels can then help you group products in PMax.
+Before you split up BFCM budget, check which products still make you money after discounts, shipping, and acquisition costs. Just know that adding the fields only gives you the data. It won’t switch PMax to profit-based bidding on its own.
+👻 Snapchat is shrinking in North America
+Snap’s revenue
+grew 14% to $1.72 billion last quarter, but ad revenue only grew 4%.
+Globally, Snapchat averaged 495 million daily users, up 4%. In North America, though, it dropped 6% to 92 million.
+So if you’re running Snapchat in the US or Canada, check your reach, frequency, and acquisition costs by market before bumping up holiday budgets. Growth somewhere else doesn’t mean there’s more room in your account.
+---
+⏰ Still prepping for Black Friday? You’re down to 22 days.
+We’re in countdown mode, with Black Friday just a tad more than three weeks out.
+Meta ad costs are about to climb, and without a plan (
+a real plan
+, not a
+"plan"
+), you’ll pay more to reach fewer customers.
+Before you turn up spend, get these three things in order:
+☑️ Clean up your tracking.
+☑️ Get campaigns live before costs rise.
+☑️ Point your budget at the customers most ready to buy.
+The
+✨free✨
+Shopify Peak Season Playbook: BFCM 2026
+walks you through that prep, with
+10 dated Meta Ads moves through January 2027
+to get campaigns ready, manage peak spend, and bring customers back after the weekend.
+Get the playbook
+.
+---
+🕯 How ChappyWrap can warm up conversions this holiday season
+ChappyWrap started with one blanket, a soft, oversized lamb-patterned throw that Beth Haller LaSala’s family had loved for generations. She couldn’t find anything like it, so she made her own in 2006.
+Twenty years later, her daughter Christina Livada runs the company as president and CEO, and it’s an
+eight-figure brand that more than doubled its revenue between 2024 and 2025
+, according to Entrepreneur.
+It’s also very much a
+gift brand
+, which makes this a pretty good time of year to look at its emails. 🎁 The
+Pilothouse
+email team went through
+three welcome emails
+and two abandoned cart emails to find where ChappyWrap could make the offer, the proof, and the next step a little easier to act on.
+👋 Welcome flow
+What’s working
+Email 1 does a lot right. The lifestyle photo is warm, the benefit icons cover the big questions fast (quality, weight, machine washable, giftable), and
+the founder letter is signed by Christina herself
+. That’s a really personal way to say hello. 💌
+What Pilothouse would test
+The 15% off code is the reason most people signed up, but you have to scroll to see it. Pilothouse would
+move the CTA above the fold
+so it’s the first thing subscribers see.
+The email could also
+borrow the “As Seen In” logos
+(People, Martha Stewart, Vogue) from Email 2 and drop them right under the CTA. It’s a quick credibility boost before the founder story.
+Email 2 is a great follow-up. It opens with a five-star review (
+“I’m never buying any other blanket again”
+), puts the CTA early, and has a comparison chart showing how ChappyWrap stacks up on things like machine washability, durability, and gift-ready packaging.
+The only thing Pilothouse would test here is
+moving the “Don’t forget, you’ve got 15% off” block a little higher,
+and maybe pairing it with two or three bestsellers people can tap straight into.
+Email 3 has a great headline (“Last Chance to Save”) and a review that’s basically a holiday ad on its own:
+“My go-to gift for the special people in my world.”
+🎄
+The thing to test here is
+making the offer as loud as the urgency
+. Right now the 15% and the code sit in smaller elements. A top banner with the discount, code, and expiration together (like Email 2) would make it hard to miss.
+Same goes for the subject line. “Final Hours to SAVE!” has urgency, but it doesn’t say what you’re saving. Pilothouse would test
+“15% Off Ends Tonight,”
+as long as it actually does.
+👉
+Try this on your brand
+Open your first welcome email on your phone.
+If you can’t see the discount code without scrolling, that’s your first test
+.
+🛒 Abandoned cart flow
+What’s working
+“Your cart is calling!”
+is a fun headline, and the email keeps the saved blanket and “Return to Cart” button front and center. The path back to checkout is clear. 📞
+What Pilothouse would test
+Adding a customer photo or product shot next to the review.
+It’d show the size and coziness of the blanket in a way text can’t, without pulling attention from the cart.
+“You have great taste.”
+is a fun follow-up line, and the email keeps the same clean layout as the first one. 😌 There’s room for it to do a different job, though. If someone didn’t come back after the first reminder, something was holding them back.
+Pilothouse would test
+swapping the New Arrivals and Bestsellers blocks for a review of the saved blanket and a quick proof section
+on machine washability and free returns. Two common worries, answered right there.
+And with gift season coming,
+a third cart email could be worth testing too
+. Give it its own job, like answering a common gifting question or testing a small incentive, and track recovered revenue, conversion rate, and unsubscribes.
+👉
+Try this on your brand
+Pull up your first two abandoned cart emails side by side.
+If the second one is basically a repeat, give it a new job
+.
+🧸 Where ChappyWrap goes from here
+ChappyWrap’s emails already have the hard stuff down: beautiful product photos, customers who love the brand, and a family story people actually want to read. Pilothouse’s five tests mostly come down to making the next step harder to miss:
+Move the welcome CTA and code above the fold
+Add the “As Seen In” logos to Welcome Email 1
+Make the 15% offer as loud as the urgency
+in the last-chance email
+Give the second cart email a different job
+from the first
+Test a third cart email built for gift shoppers
+---
+‍
+📅 Reddit already made your 2027 marketing calendar.
+It published a 35-page playbook on key US dates, seasonal trends, and how people use Reddit to research products.
+Bookmark it for after BFCM
+.
+📈 AppLovin’s revenue jumped 55%
+to $2.18 billion last quarter, mostly from mobile gaming. Non-gaming ad spend grew by double digits too.
+Read more
+.

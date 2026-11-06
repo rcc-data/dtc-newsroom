@@ -1,0 +1,101 @@
+Google Promotion Mode, AI Shopping & BFCM CRO
+https://www.directtoconsumer.co/newsletter/google-promotion-mode-ai-shopping-bfcm-cro
+2026-11-05
+
+Good morning.
+Huge if true.
+Here’s what you’ll find in today’s newsletter:
+Google has a new way to loosen ROAS targets during short sales
+Walmart is opening the door to Meta’s shopping assistant while Amazon keeps it shut
+A simple BFCM test to get more shoppers into your bundle builder
+What happened when one brand cut email volume by 75%
+And more.
+Let’s get going.
+---
+🛍️ Google’s Promotion Mode gives your sale more room to reach shoppers
+Google’s Promotion Mode
+is in open beta and lets eligible Search and Performance Max campaigns temporarily lower their target return on ad spend for sales lasting 3 to 14 days.
+That gives Google room to bid on searches it might pass up under your usual target, helping you reach more shoppers and potentially pick up more orders while the offer is live.
+You can also add a daily budget where supported, and Google restores your previous settings when the sale ends.
+Before switching it on for BFCM, work out the lowest return you can afford after discounts and shipping. If you already use Smart Bidding Exploration, check both settings, since Google adds the two allowances together.
+🤖 Walmart teams up with Muse. Amazon blocks it.
+Back in September, Amazon blocked Muse from accessing its platform.
+Walmart is going the opposite route
+. The ecommerce giant is partnering with Meta’s shopping assistant.
+Why should brands care? If a shopper asks Muse to pick a product, they may never see the sponsored listings you paid for. Amazon says it hasn’t seen a meaningful impact on its ad business from outside assistants so far.
+If you sell on Walmart, try asking Muse the questions shoppers ask about your category. See which products it recommends and whether it gets your price, sizes, and availability right.
+🍬 Sour Patch Kids’ maker sues Joyride
+Mondelēz filed a trademark lawsuit against Joyride
+, the candy brand backed by YouTuber Ryan Trahan. It alleges Joyride’s Sour Smacks look too much like Sour Patch Kids, pointing to the kid-shaped gummies and yellow-and-green packaging.
+@GivnerAriel
+spotted something interesting. Mondelēz cites Trahan’s own videos about trying to overtake Sour Patch Kids on Instagram. The posts were about social strategy, and Mondelēz is using them to support its case about the candy and packaging. Those claims are still allegations.
+If you’re building a challenger brand, look at your packaging next to the category leader’s before it goes to print. What would tell a shopper at a glance that it’s yours?
+🎬 Meta can help your creators turn ideas into a shot list
+Meta updated its Creator Assistant
+with alerts for trends in your niche, feedback on drafts, and suggested replies to comments.
+It can also turn an idea into a storyboard and shot list, and it’s now available on the web in Creator Dashboard.
+Working with a creator on a holiday demo? If they have Creator Assistant, give them the product, the offer, and the one thing shoppers need to see. They can use it to draft a shot list for your review.
+---
+🍴 DTC Dines: Vancouver, the debrief
+Last week we brought DTC Dines back to Vancouver for a second time, and it was our biggest dinner yet. Just under 40 founders and operators joined us at Acquafarina, a beautiful high-ceilinged Italian spot in downtown Van, across three tables that I bounced between all night. We opened with champagne, and things stayed bubbly all night.
+Guests I talked to were surprised and delighted that from the moment they arrived, the only objective was organic conversation with their contemporaries…no speeches or ads to slow things down.
+A highlight was watching founders in the same categories meet for the first time. Plenty of people who have been building in the same lane, in the same city, for years finally sat down and compared notes.
+Creative dominated the conversation, and performance UGC dominated creative. The model getting the most attention pays creators based on the Shopify GMV their content drives. Operators liked that it aligns incentives and lets them test far more content without paying for every miss, while others questioned how clean that attribution stays once the content runs through paid. That opened up a broader discussion on structuring the creative mix, keeping creative and media buying on the same briefs and numbers, and building creative that carries new customers through a long consideration cycle.
+Attribution came up at every table, especially for brands juggling retail, wholesale and Amazon alongside DTC. Rising Meta costs have pushed many people toward retention, with a lot of interest in email, SMS and subscriptions for consumable brands, and a few people traded notes on TikTok Shop.
+The room mixed OG founders with the growth operators running some of BC’s biggest brands today, with people from KITS, DUER, Native Shoes, Reigning Champ, John Fluevog, RUX, West Coast Seeds, Firebelly Tea, SophieGrace, and Laphont at the tables.
+A big thank you to
+Klaviyo
+and
+Dataships
+, our sponsors, who flew in to experience Vancouver in all its autumnal glory.
+In 2027 we’re heading back to cities like Los Angeles and Austin and adding new ones, including Colorado and Utah. A few winter dinners may land near the ski hills, and that is entirely intentional.
+Seats at DTC Dines are by invitation. When we release RSVPs for each new city, you’ll be able to apply for a seat, and we’d love to hear which city we should hit next.
+*In partnership with Klaviyo and Dataships
+---
+💡 3 weeks left to Black Friday: Surface your bundle builder
+Each week leading up to Black Friday, we’re sharing one relatively simple CRO test operators can launch before Q4 traffic peaks. These tests are designed to uncover quick conversion wins while there is still time to apply the results.
+Bachan’s already offers a Mix & Match builder that lets customers combine its barbecue sauces and dips. The problem is visibility.
+The builder is featured on its own product page, but customers browsing Bachan’s high-traffic collection pages may never discover it.
+Pilothouse
+recommends adding a sticky banner to the top of Bachan’s collection pages so more shoppers encounter the Mix & Match builder during product discovery.
+The current message, “The more you mix, the more you save,” communicates a general benefit. Pilothouse suggests using more direct language that explains the action and reward:
+“Build Your Custom 4-Pack. Free Shipping on $35+.”
+This could send more shoppers into the bundle flow, increase the number of products added per order, and help customers reach Bachan’s $35 free-shipping threshold.
+How to run this CRO test:
+Add the sticky banner to one high-traffic collection page. Link the banner directly to the Mix & Match builder.
+Keep the product assortment, prices, and sorting order unchanged.
+Split traffic on the same collection page between the current layout and the sticky banner. Use
+completed bundle purchases per collection-page visitor
+as the primary metric.
+Track bundle completion rate, units per order, AOV, and total conversion.
+Confirm the banner does not cover navigation or product content on mobile.
+This test uses an offer and shopping tool Bachan’s has already built. The change is simply giving more customers a chance to find it.
+Does your highest-AOV shopping experience appear on your busiest pages, or are customers expected to discover it themselves?
+Hit reply to the newsletter and let us know!
+---
+🎧 They sent 75% fewer emails. Revenue went up.
+Sending more emails should mean more chances to generate revenue. Right?
+One brand discovered the opposite was true.
+Before the Pilothouse email team stepped in, the brand was sending heavily while its
+click-through rate had fallen to roughly 0.2%
+.
+After a rewarm and a major reduction in send volume, September email sends were approximately 75% lower, yet the brand generated nearly its
+highest number of real clicks all year
+.
+Revenue increased too.
+Then came an interesting second test.
+In October, the brand roughly doubled its email volume again. Real clicks fell around 20%, and inbox placement started slipping.
+On the latest
+TWBERP
+, Pilothouse’s Jordan Gordon walks through the Klaviyo and GlockApps data and explains why he’s paying closer attention to who gets each send, especially in Gmail’s Promotions tab.
+▶️
+Watch here
+|
+🎧
+Listen on Spotify
+---
+‍
+🙀 Your biggest competitor might be a copycat of your brand.
+Podqi’s trusted-reporter status gets fakes off Amazon, Etsy, and hundreds more platforms for 150+ brands.
+Scan your brand for free
+. *

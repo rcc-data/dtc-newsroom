@@ -149,7 +149,7 @@ Runneth says only "Updated weekly" and gives no day; on Wed 4 Nov 2026 its lists
 
 ## Front page and nav
 - Long pages get an automatic sticky "On this page" bar (`buildJump`): section heads when a page has 3+, otherwise card titles when it has 4+. Curtis Howland's desk is split into sub-pages (`#howland`, `#hw-charts`, `#hw-posts`, `#hw-news`, `#hw-bf`, articles at `#hw-post/<id>`) with its own subrow.
-- Front page lead is cross-source (Northbeam, Meta, CTC, Foxwell). Refresh its headline/dek when the story changes; the chart, KPI strip and "From the desks" tiles compute from the data automatically (tiles show each publisher's newest library entry, excluding cadence entries).
+- Front page top half builds itself on every load (6 Nov 2026): the lead is the newest piece in `data/analysis.json`, or this week's top-ranked story in `data/headlines.json` if that is newer; the side column is the next six ranked stories; the pull quote is the newest exact quote among them; the chart and number strip come from the latest Northbeam index week. Never hand-edit the lead in template.html. To change the front page, add a story to the current week or write an analysis piece. The "From the desks" tiles show each publisher's newest library entry, excluding cadence entries.
 - New publisher desks go in the Desks dropdown (`#deskMenu`) and in `PUBDESKS`. Run `node tests/nav.js` after nav changes.
 
 ## Direct to Consumer desk (daily)

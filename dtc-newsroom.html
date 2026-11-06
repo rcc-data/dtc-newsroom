@@ -640,19 +640,17 @@ table.q tbody tr.link{cursor:pointer}
 <section class="view" id="v-front">
   <div class="front">
     <div class="lead">
-      <div class="kicker">Lead story · Northbeam, Meta, Common Thread, Foxwell</div>
-      <h2>Meta's Black Friday problem is conversion, not cost</h2>
-      <p class="dek">Meta CPM was flat in Northbeam's latest weekly index (-0.11%), but Meta conversion rate fell for a third straight week (-5.05%) while click-through kept rising. Northbeam's Bryan Bumgardner calls conversion rates a record low with ROAS better than ever. CPMs are still running about 24% above last year, and Northbeam's BFCM guide warns they spiked 20–35% over last year's big weekend. Google's budget share has climbed to 18%.</p>
-      <div class="byline">Sources: Northbeam, 22–28 Oct · Meta Q3 earnings · Common Thread · Foxwell × Northbeam survey, 29 Sep <button type="button" class="src-btn" data-src="mb-cpm25,meta-q3-26,ctc-cpm,fox-q4-26,x-roas,x-ncac">SOURCES · QUOTES</button></div>
+      <div class="kicker" id="fLeadK">Lead story</div>
+      <h2 id="fLeadH"></h2>
+      <p class="dek" id="fLeadD"></p>
+      <div class="byline" id="fLeadB"></div>
       <div class="term" style="margin-top:14px">
-        <div class="th"><span class="t">Meta prices vs last year, by source</span><a href="#trends" class="m" style="color:var(--t-amber);text-decoration:none">All trends →</a></div>
-        <div class="chart"><canvas id="fCross"></canvas></div>
+        <div class="th"><span class="t" id="fCrossT">Meta, week over week · Northbeam index</span><a href="#nb-channels" class="m" style="color:var(--t-amber);text-decoration:none">Channel tracker →</a></div>
+        <div class="chart"><canvas id="fCross" role="img" aria-label="Meta week-over-week changes in Northbeam's index"></canvas></div>
+        <p class="note" id="fCrossN"></p>
       </div>
       <div class="strip" id="fKpis" style="margin-top:14px"></div>
-      <figure class="pull" style="margin:16px 0 0">
-        <blockquote>“A generational Black Friday Cyber Monday, and not in a good way.”</blockquote>
-        <figcaption>Bryan Bumgardner, The Media Buyer by Northbeam, 22 Oct 2026 <button type="button" class="src-btn" data-src="mb-cpm25">SOURCE</button></figcaption>
-      </figure>
+      <figure class="pull" id="fPull" style="margin:16px 0 0"></figure>
     </div>
     <div class="side" id="frontSide"></div>
   </div>
@@ -2865,8 +2863,40 @@ const STORIES=[
  {k:'Creative · Motion',h:'One ad in twenty wins; enterprise accounts ship 19 a week',p:'Motion\'s 550,000-ad study: winners take ~55% of spend, and hit rates rise from 4% for micro accounts to 8.8% for enterprise.',to:'#mo-bench',src:'mo-cb26,mo-cb26key'},
  {k:'Search',h:'AI tools now drive 7% of DTC organic search revenue',p:'Up from almost nothing two years ago, with a step up after ChatGPT ads opened to self-serve in April.',to:'#nb-bench',src:'mb-ai'},
 ];
+function frontLead(){
+  /* Built from data every load: this week's ranked stories (data/headlines.json), the newest analysis piece (data/analysis.json) and the Northbeam weekly index. Nothing here is typed in by hand. */
+  const W=((WHL&&WHL.weeks)||[]).slice().sort((a,b)=>b.start.localeCompare(a.start)),wk=W[0];
+  const R=wk?wk.items.slice().sort(hlRank):[];const A=(ANL||[]).slice().sort((a,b)=>b.date.localeCompare(a.date));const an=A[0],top=R[0];
+  const useA=an&&(!top||an.date>=top.date);let used=null;
+  const K=document.getElementById('fLeadK'),H=document.getElementById('fLeadH'),Dk=document.getElementById('fLeadD'),B=document.getElementById('fLeadB');
+  if(useA){K.textContent=`Lead story · Newsroom analysis · ${dfmt(an.date)}`;H.textContent=an.title;Dk.textContent=an.dek;
+    B.innerHTML=`Sources: ${an.sources.map(([l,u])=>`<a href="${u}"${u[0]==='#'?'':' target="_blank" rel="noopener"'}>${esc(l)}</a>`).join(' · ')} <button type="button" class="src-btn" id="fLeadGo">READ THE ANALYSIS</button>`;
+    document.getElementById('fLeadGo').onclick=()=>{const c=document.getElementById('an-'+an.id);if(!c)return;const d=c.querySelector('details');if(d)d.open=true;c.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})}}
+  else if(top){used=top.id;K.textContent=`Lead story · ${top.pub} · ${dfmt(top.date)}`;H.textContent=top.headline;Dk.textContent=top.take+' '+top.why;
+    B.innerHTML=`<a href="#headlines">This week's headlines</a>${top.feature?` · <a href="#hl-deep/${encodeURIComponent(top.feature)}">Deep dive</a>`:''} ${srcBtn(top.lib,'SOURCES · QUOTES')}`}
+  // side: next ranked stories from this week
+  const side=R.filter(x=>x.id!==used).slice(0,6);
+  document.getElementById('frontSide').innerHTML=side.length?side.map(s=>`<div class="story"><span class="tag">${esc(s.label||s.pub)} · ${esc(s.pub)}</span><h4>${esc(s.headline)}</h4><p>${esc(s.take)}</p><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><a class="more" href="${s.feature?'#hl-deep/'+encodeURIComponent(s.feature):s.to||'#headlines'}">Read more →</a>${srcBtn(s.lib,'SOURCE · QUOTE')}</div></div>`).join('')
+    :STORIES.map(s=>`<div class="story"><span class="tag">${s.k}</span><h4>${esc(s.h)}</h4><p>${esc(s.p)}</p><a class="more" href="${s.to}">Read more →</a></div>`).join('');
+  // pull quote: newest exact quote among this week's ranked stories
+  const q=R.find(x=>x.quote);const pf=document.getElementById('fPull');
+  pf.innerHTML=q?`<blockquote>“${esc(q.quote)}”</blockquote><figcaption>${esc(q.pub)} · ${dfmt(q.date)} · ${esc(q.headline)} ${srcBtn(q.lib,'SOURCE')}</figcaption>`:'';pf.hidden=!q;
+  // chart: Meta week over week, last 12 index weeks
+  const ws=WEEKS.slice(-12),row=w=>MBI.find(x=>x.ws===w&&x.p==='Meta')||{};const lab=ws.map(w=>'w/e '+dfmt(WE[w]));
+  const cv=ws.map(w=>row(w).cvr??null),ct=ws.map(w=>row(w).ctr??null),cp=ws.map(w=>row(w).cpm??null),ro=ws.map(w=>row(w).roas??null);
+  let st=0;const sg=Math.sign(cv[cv.length-1]||0);for(let k=cv.length-1;k>=0&&sg&&Math.sign(cv[k]||0)===sg;k--)st++;
+  const lastCv=cv[cv.length-1];const ann=lastCv==null?[]:[{s:0,i:cv.length-1,text:`CVR ${lastCv>0?'+':''}${lastCv.toFixed(2)}%`+(st>=2?`: ${st} weeks ${sg<0?'down':'up'} in a row`:'')}];
+  mk('fCross',rpCfg({type:'line',unit:'%wow',labels:lab,series:[{name:'Conversion rate',data:cv,color:'down'},{name:'Click-through',data:ct,color:'blue',hidden:true},{name:'CPM',data:cp,color:'amber'},{name:'ROAS',data:ro,color:'up'}],annos:ann}));
+  document.getElementById('fCrossN').textContent=`Week-over-week % change for Meta in Northbeam's Media Buyer Index, latest week ending ${dfmt(WE[LAST],true)}. Tap a legend item to show or hide a line.`;
+  // number strip: latest index week
+  const m=row(LAST),g=MBI.find(x=>x.ws===LAST&&x.p==='Google')||{};const X=tdData();const lastC=X.cpm[X.cpm.length-1];
+  const k=[['Meta CVR · week',fmtP(m.cvr,2),'w/e '+dfmt(WE[LAST]),goodCol(m.cvr,false),'mb-weekly'],['Meta CPM · week',fmtP(m.cpm,2),'w/e '+dfmt(WE[LAST]),goodCol(m.cpm,true),'mb-weekly'],['Meta new-cust. CAC',fmtP(m.cac,2),'week over week',goodCol(m.cac,true),'mb-weekly'],['Meta ROAS · week',fmtP(m.roas,2),'week over week',goodCol(m.roas,false),'mb-weekly'],['Google share',g.share!=null?g.share.toFixed(2)+'%':'–',g.sd!=null?(g.sd>0?'+':'')+g.sd.toFixed(2)+' pts this week':'',T.amber,'mb-weekly']];
+  if(lastC&&lastC.yoy!=null)k.push(['Meta CPM vs last year','≈'+fPct(lastC.yoy),'Northbeam chart · '+tsLab(lastC.x,true),T.down,'mb-cpm25']);
+  document.getElementById('fKpis').innerHTML=k.map(([kk,v,d,c,sr])=>`<div class="s"><div class="k">${kk}</div><div class="v" style="color:${c};text-shadow:0 0 18px ${c}55">${v}</div><div class="d">${d}</div>${srcBtn(sr)}</div>`).join('');
+}
 function renderFront(){
-  document.getElementById('frontSide').innerHTML=STORIES.map(s=>`<div class="story"><span class="tag">${s.k}</span><h4>${esc(s.h)}</h4><p>${esc(s.p)}</p><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><a class="more" href="${s.to}">Read more →</a>${srcBtn(s.src,'SOURCE · QUOTE')}</div></div>`).join('');
+  frontLead();
+  if(0)document.getElementById('frontSide').innerHTML=STORIES.map(s=>`<div class="story"><span class="tag">${s.k}</span><h4>${esc(s.h)}</h4><p>${esc(s.p)}</p><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><a class="more" href="${s.to}">Read more →</a>${srcBtn(s.src,'SOURCE · QUOTE')}</div></div>`).join('');
   // board
   const cols=['cpm','ctr','cpc','cac','cvr','roas'];
   let h='<thead><tr><th>Platform</th>'+cols.map(c=>`<th>${MNAME[c]}</th>`).join('')+'<th>Share</th><th>Share Δ</th></tr></thead><tbody>';
@@ -2879,11 +2909,9 @@ function renderFront(){
   shareChart('fShare','core','lines',26,true,'log',false);
   const X=tdData();const lastC=X.cpm[X.cpm.length-1],lastM=X.me[X.me.length-1],lastR=X.rc[X.rc.length-1],lyR=X.rc.find(r=>r.m===(+lastR.m.slice(0,4)-1)+lastR.m.slice(4));
   const ctcY=X.ctc.map((p,i)=>({x:p.x,y:X.lyOf(X.ctc,'y',i)})).filter(p=>p.y!=null);
-  tdChart('fCross',[{label:'Northbeam Meta CPM ≈',pts:X.cpm.filter(p=>p.yoy!=null).map(p=>({x:p.x,y:p.yoy})),color:PCOL.Meta,approx:true,w:3},{label:'Meta price per ad (earnings)',pts:X.me.map(p=>({x:p.x,y:p.price,note:p.q+' · impressions '+fPct(p.impr)})),color:T.amber,win:50,ps:'rect',pr:5},{label:'Common Thread Meta CPM',pts:ctcY,color:'#a98bff',dots:true,ps:'rectRot'}],{fmt:fPct,zero:true,range:[Date.UTC(2025,0,1),Date.now()+12*DAY],noLY:true,events:true,y:{title:{display:true,text:'Change vs last year',color:T.dim}}});
   const fox=rowsOf('fox_q4').find(r=>r.answer==='Rising CPMs and auction costs');const cci=X.cci[X.cci.length-1],lyC=X.cci.find(r=>r.m===(+cci.m.slice(0,4)-1)+cci.m.slice(4));const tw=X.twMed('meta','cpm').slice(-1)[0];
   const fk=[['Meta CPM · Northbeam','≈'+fPct(lastC.yoy),'vs last year · '+tsLab(lastC.x,true),T.down,'mb-cpm25'],['Meta price per ad',fPct(lastM.price),lastM.q+' · Meta earnings',T.down,'meta-q3-26'],['Meta ROAS · Northbeam',lyR?'≈'+fPct((lastR.roas/lyR.roas-1)*100):'–','vs '+(lyR?tsLab(lyR.x):'last year'),T.up,'x-roas'],['Top Q4 worry',(fox?fox.pct:'76')+'%','say rising CPMs · Foxwell',T.down,'fox-q4-26'],['Shopper confidence',cci.y.toFixed(1),lyC?fPct((cci.y/lyC.y-1)*100)+' vs '+tsLab(lyC.x)+' · CTC':'CTC',T.up,'ctc-dtcci']];
   if(tw)fk.push(['Meta CPM · Triple Whale','$'+tw.y.toFixed(2),'median industry · '+tsLab(tw.x,true),'#2ec4d6','tw-weekly']);
-  document.getElementById('fKpis').innerHTML=fk.map(([k,v,d,c,sr])=>`<div class="s"><div class="k">${k}</div><div class="v" style="color:${c};text-shadow:0 0 18px ${c}55">${v}</div><div class="d">${d}</div>${srcBtn(sr)}</div>`).join('');
   renderDeskTiles(X);
   // bench stories
   const bs=[
@@ -3773,7 +3801,7 @@ SEGBIND('fxYear',b=>{fxYear=b.dataset.v;renderFoxwell()});
 /* ---------- Front: today ---------- */
 const DESKOF={'Northbeam':'#nb-library','CTC':'#ctc','Foxwell':'#foxwell','Haus':'#haus','Triple Whale':'#triplewhale','Runneth':'#mo-research','Meta':'#mkt','Google':'#mkt-google','Curtis Howland':'#howland'};
 function renderToday(){
-  const A=ANL||[];document.getElementById('fAnalysis').innerHTML=A.map(a=>`<article class="an-card"><span class="k">${esc(a.kicker)} · ${dfmt(a.date,true)}</span><h4>${esc(a.title)}</h4><p>${esc(a.dek)}</p><details><summary>Read the analysis</summary>${a.body.map(x=>`<p>${esc(x)}</p>`).join('')}<div class="an-src">Sources: ${a.sources.map(([l,u])=>`<a href="${u}"${u[0]==='#'?'':' target="_blank" rel="noopener"'}>${esc(l)}</a>`).join(' · ')}</div></details><a class="more" href="${a.to}">${esc(a.toLabel)} →</a></article>`).join('');
+  const A=ANL||[];document.getElementById('fAnalysis').innerHTML=A.map(a=>`<article class="an-card" id="an-${a.id}"><span class="k">${esc(a.kicker)} · ${dfmt(a.date,true)}</span><h4>${esc(a.title)}</h4><p>${esc(a.dek)}</p><details><summary>Read the analysis</summary>${a.body.map(x=>`<p>${esc(x)}</p>`).join('')}<div class="an-src">Sources: ${a.sources.map(([l,u])=>`<a href="${u}"${u[0]==='#'?'':' target="_blank" rel="noopener"'}>${esc(l)}</a>`).join(' · ')}</div></details><a class="more" href="${a.to}">${esc(a.toLabel)} →</a></article>`).join('');
   const W=rowsOf('wire_arts');const last=W.map(r=>r.date).sort().pop();const cut=new Date(new Date(last+'T12:00')-4*864e5).toISOString().slice(0,10);
   const rank=r=>(r.pub==='Modern Retail'?1:0);
   const H=W.filter(r=>r.date>=cut).sort((a,b)=>rank(a)-rank(b)||(a.date<b.date?1:-1)).slice(0,9);
@@ -4130,7 +4158,7 @@ const rpCol=c=>({meta:PCOL.Meta,google:PCOL.Google,amber:T.amber,up:T.up,down:T.
 const rpFmt=u=>u==='$'?(x=>'$'+(Number.isInteger(+x)?(+x).toLocaleString('en-US'):(+x).toFixed(2))):u==='%wow'?(x=>(x>0?'+':'')+(+x).toFixed(2).replace(/\.?0+$/,'')+'%'):u==='%'?(x=>(+x).toLocaleString('en-US',{maximumFractionDigits:2})+'%'):(x=>(+x).toLocaleString('en-US'));
 function rpCfg(v){const f=rpFmt(v.unit),line=v.type==='line',hb=v.type==='hbar';let ds;
   if(v.type==='float'){const s=v.series[0];ds=[{label:'Floor',data:s.data.map(d=>d[0]),backgroundColor:T.amber,borderRadius:2,stack:'a'},{label:'Up to',data:s.data.map(d=>d[1]-d[0]),backgroundColor:T.amber+'66',borderRadius:2,stack:'a'}]}
-  else ds=v.series.map(s=>{const c=rpCol(s.color);return line?{label:s.name,data:s.data,borderColor:c,backgroundColor:c,borderWidth:2.2,tension:0,cubicInterpolationMode:'monotone',pointRadius:s.data.length>20?0:3,fill:false}:{label:s.name,data:s.data,backgroundColor:s.color==='sign'?s.data.map(x=>x<0?T.down:T.up):c,borderRadius:2,maxBarThickness:64}});
+  else ds=v.series.map(s=>{const c=rpCol(s.color);return line?{label:s.name,data:s.data,hidden:!!s.hidden,borderColor:c,backgroundColor:c,borderWidth:2.2,tension:0,cubicInterpolationMode:'monotone',pointRadius:s.data.length>20?0:3,fill:false}:{label:s.name,data:s.data,backgroundColor:s.color==='sign'?s.data.map(x=>x<0?T.down:T.up):c,borderRadius:2,maxBarThickness:64}});
   const tip={callbacks:{label:x=>{const val=v.type==='float'?(x.datasetIndex?v.series[0].data[x.dataIndex].join(' to ')+'%':null):null;return ` ${x.dataset.label}: ${val||f(hb?x.parsed.x:x.parsed.y)}`}}};
   if(v.type==='float')tip.filter=x=>x.datasetIndex===1||v.series[0].data[x.dataIndex][0]===v.series[0].data[x.dataIndex][1];
   const vax={grid,ticks:{callback:f},beginAtZero:!line},cax={grid:{display:false},ticks:{autoSkip:true,maxRotation:0,maxTicksLimit:line?7:12}};

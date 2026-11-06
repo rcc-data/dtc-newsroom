@@ -4,6 +4,7 @@ name: Fetch news sources
 on:
   schedule:
     - cron: '23 14 * * *'   # 07:23 Vancouver (UTC-7, B.C. permanent daylight time)
+    - cron: '53 14 * * *'   # 07:53 backup: GitHub sometimes drops scheduled runs; skips itself if 07:23 already ran
   workflow_dispatch: {}
 permissions:
   contents: write
@@ -14,12 +15,26 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+      - name: Skip the backup run if today's fetch already happened
+        id: gate
+        run: |
+          today=$(date -u +%F)
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ github.event.schedule }}" = "53 14 * * *" ] \
+             && head -1 notes/fetched/LAST_RUN.txt 2>/dev/null | grep -q "^$today"; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"; echo "Already fetched today, backup run skipped"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/setup-python@v5
+        if: steps.gate.outputs.skip != 'true'
         with:
           python-version: '3.12'
       - run: pip install requests beautifulsoup4 lxml
+        if: steps.gate.outputs.skip != 'true'
       - run: python3 tools/fetch_sources.py
+        if: steps.gate.outputs.skip != 'true'
       - name: Commit results
+        if: steps.gate.outputs.skip != 'true'
         run: |
           git config user.name "dtc-newsroom-bot"
           git config user.email "actions@users.noreply.github.com"

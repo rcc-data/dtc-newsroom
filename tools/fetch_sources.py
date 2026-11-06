@@ -280,9 +280,14 @@ def dtcnl(since):
 
 def hwss(since):
     j = get('https://newsletter.curtishowland.com/api/v1/archive?sort=new&limit=20', as_json=True)
+    # Substack sometimes wraps the archive in an object ({"posts": [...]}) instead of a bare list.
+    if isinstance(j, dict):
+        j = j.get('posts') or j.get('items') or j.get('data') or []
     items = []
     os.makedirs('notes/fetched/HWSS', exist_ok=True)
     for p in j:
+        if not isinstance(p, dict) or not p.get('post_date') or not p.get('slug'):
+            continue
         d = p['post_date'][:10]
         if d < since:
             continue
@@ -298,6 +303,77 @@ def hwss(since):
     save('HWSS', items, fetch_text=False)
 
 
+RUNNETH_CATS = ['apparel', 'sports-fitness', 'retail', 'accessories']
+
+
+def runneth_brands(html):
+    """Ranked brand names from a Runneth trending page (Next.js payload; quotes may be escaped)."""
+    names = re.findall(r'\\?"brandName\\?"\s*:\s*\\?"((?:[^"\\]|\\.)*?)\\?"', html)
+    out = []
+    for n in names:
+        n = n.replace('\\u0026', '&').replace('\\', '').strip()
+        if n:
+            out.append(n)
+    return out[:30]
+
+
+def runneth_watch():
+    """Daily check of Runneth's four Weekly Trending lists. Flags the day they change (Ryan, 6 Nov 2026).
+    Baseline = the newest week captured in data/runneth_trending_ads.csv, then the last state seen here."""
+    os.makedirs('notes/fetched/RUNNETH', exist_ok=True)
+    sp = 'notes/fetched/RUNNETH/state.json'
+    state = json.load(open(sp)) if os.path.exists(sp) else {}
+    if not state:  # seed from the last Monday capture
+        cap = {}
+        with open('data/runneth_trending_ads.csv') as f:
+            rows = [r for r in csv.DictReader(l for l in f if not l.startswith('#'))]
+        wk = max(r['week'] for r in rows)
+        for r in sorted((r for r in rows if r['week'] == wk), key=lambda r: int(r['rank'])):
+            cap.setdefault(r['category'], []).append(r['brand'])
+        state = {c: {'brands': b[:30], 'since': wk, 'source': 'capture ' + wk} for c, b in cap.items()}
+    today = datetime.utcnow().strftime('%Y-%m-%d')
+    changed, unchanged, failed = [], [], []
+    for c in RUNNETH_CATS:
+        html, err = None, None
+        for base in ('https://runneth.com', 'https://motionapp.com'):
+            try:
+                html = get(f'{base}/trending/{c}/', delay=1.0)
+                break
+            except Exception as e:
+                err = e
+        brands = runneth_brands(html) if html else []
+        if len(brands) < 10:
+            failed.append(f'{c} ({err or "could not read the ranked list"})')
+            continue
+        old = state.get(c, {}).get('brands', [])
+        if old and brands[:10] == old[:10]:
+            unchanged.append(c)
+        else:
+            moved = sum(1 for i, b in enumerate(brands[:30]) if i >= len(old) or old[i] != b)
+            changed.append((c, moved, brands[:3]))
+            state[c] = {'brands': brands, 'since': today, 'source': 'watch'}
+    json.dump(state, open(sp, 'w'), ensure_ascii=False, indent=1)
+    lines = []
+    if changed:
+        lines.append('RUNNETH: UPDATED ' + '; '.join(f'{c} ({m} of 30 ranks changed, new top 3: {", ".join(t)})' for c, m, t in changed))
+    if unchanged:
+        lines.append('RUNNETH: unchanged ' + ', '.join(f'{c} (same since {state[c]["since"]})' for c in unchanged))
+    if failed:
+        lines.append('RUNNETH: could not check ' + ', '.join(failed) + '; the laptop pass checks it in the browser')
+    LOG.extend(lines)
+    hp = 'notes/fetched/RUNNETH/history.csv'
+    new = not os.path.exists(hp)
+    with open(hp, 'a') as f:
+        if new:
+            f.write('date,category,status,detail\n')
+        for c, m, t in changed:
+            f.write(f'{today},{c},updated,"{m} ranks changed; top 3 {" / ".join(t)}"\n')
+        for c in unchanged:
+            f.write(f'{today},{c},unchanged,since {state[c]["since"]}\n')
+        for c in failed:
+            f.write(f'{today},{c.split(" ")[0]},failed,\n')
+
+
 if __name__ == '__main__':
     run('NBNL', nbnl)
     run('NBBLOG', nbblog)
@@ -309,6 +385,10 @@ if __name__ == '__main__':
     run('GRAPHITE', graphite)
     run('DTCNL', dtcnl)
     run('HWSS', hwss)
+    try:
+        runneth_watch()
+    except Exception as e:
+        LOG.append(f'RUNNETH: SKIPPED ({e})')
     os.makedirs('notes/fetched', exist_ok=True)
     with open('notes/fetched/LAST_RUN.txt', 'w') as f:
         f.write(datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC') + '\n' + '\n'.join(LOG) + '\n')

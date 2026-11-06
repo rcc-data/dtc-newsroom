@@ -358,6 +358,107 @@ table.q tbody tr.link{cursor:pointer}
 
 .today{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:14px}
 @media (max-width:980px){.today{grid-template-columns:minmax(0,1fr)}}
+.hl-just{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:0;border:1px solid var(--rule);border-left:0;border-right:0}
+.hl-just .j{padding:12px 16px 12px 0;display:flex;flex-direction:column;gap:5px;border-right:1px solid var(--hair);padding-left:16px;text-decoration:none;color:inherit}
+.hl-just .j:first-child{padding-left:0}.hl-just .j:last-child{border-right:0}
+.hl-just .j h4{font-family:var(--head);font-size:17px;line-height:1.2;margin:0;text-wrap:balance}
+.hl-just .j:hover h4{text-decoration:underline;text-decoration-thickness:1px}
+.hl-meta{font:600 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.hl-new{background:var(--flag);color:#fff;padding:1px 6px;border-radius:2px;letter-spacing:.1em}
+.hl-nb{color:var(--flag)}
+.hl-feat{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:22px;border-top:3px solid var(--flag);border-bottom:1px solid var(--rule);padding:16px 0;text-decoration:none;color:inherit}
+.hl-feat h3{font-family:var(--head);font-size:clamp(26px,3.6vw,38px);line-height:1.05;margin:4px 0 8px;text-wrap:balance}
+.hl-feat p{margin:0 0 10px;color:var(--ink-2);font-size:15.5px}
+.hl-feat ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:14.5px}
+.hl-feat ol b{font-family:var(--head);font-size:16px}
+.hl-feat .go{font:600 12px var(--mono);color:var(--flag)}
+.hl-feat:hover h3{text-decoration:underline;text-decoration-thickness:2px}
+@media (max-width:760px){.hl-feat{grid-template-columns:1fr}}
+.hl-list{list-style:none;margin:0;padding:0;counter-reset:hl}
+.hl-item{display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 14px;padding:16px 0;border-bottom:1px solid var(--hair);counter-increment:hl}
+.hl-item::before{content:counter(hl,decimal-leading-zero);font:600 22px var(--mono);color:var(--hair);line-height:1}
+.hl-item.nb::before{color:var(--flag)}
+.hl-item h4{font-family:var(--head);font-size:21px;line-height:1.18;margin:4px 0 6px;text-wrap:balance}
+.hl-item p{margin:0 0 8px;font-size:14.5px;color:var(--ink-2);max-width:72ch}
+.hl-item .why{color:var(--ink);border-left:3px solid var(--flag);padding-left:10px}
+.hl-item .why b{font:600 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--flag);margin-right:6px}
+.hl-figs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+.hl-figs span{font:500 12px var(--mono);background:var(--t-bg);color:var(--t-amber);padding:3px 8px;border-radius:2px}
+.hl-heat{color:var(--flag);letter-spacing:1px}
+.hl-links{display:flex;gap:14px;flex-wrap:wrap;font:600 11.5px var(--mono)}
+.hl-links a{color:var(--flag);text-decoration:none}
+.hl-ctl{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:4px 0 2px}
+.dd-wrap{display:flex;flex-direction:column;gap:18px}
+.dd-wrap .tw{background:var(--t-panel)}
+.dd-wrap table.q{color:var(--t-text)}
+.dd-sec{max-width:780px}
+.dd-sec h3{font-family:var(--head);font-size:24px;margin:6px 0 10px}
+.dd-sec p{font-size:16px;line-height:1.6;margin:0 0 14px}
+.dd-hl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:0;border-top:1px solid var(--rule)}
+.dd-hl .h{padding:14px 18px 14px 0;border-bottom:1px solid var(--hair)}
+.dd-hl .h .n{font:600 11px var(--mono);color:var(--flag);letter-spacing:.1em}
+.dd-hl .h h4{font-family:var(--head);font-size:19px;line-height:1.2;margin:4px 0 6px}
+.dd-hl .h p{margin:0;font-size:14.5px;color:var(--ink-2)}
+.dd-quote{font-family:var(--head);font-size:clamp(22px,3vw,30px);line-height:1.2;border-left:4px solid var(--flag);padding:4px 0 4px 16px;margin:6px 0}
+.dd-quote cite{display:block;font:500 12px var(--mono);font-style:normal;color:var(--ink-2);margin-top:8px}
+.dd-day{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid var(--t-line);border-radius:4px;background:var(--t-panel);overflow:hidden}
+.dd-day .slot{padding:12px;border-right:1px solid var(--t-line);color:var(--t-text);min-width:0}
+.dd-day .slot:last-child{border-right:0}
+.dd-day .tm{font:600 18px var(--mono);color:var(--t-amber)}
+.dd-day .wh{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--t-dim);margin:2px 0 6px}
+.dd-day .tx{font-size:13px;line-height:1.4}
+@media (max-width:760px){.dd-day{grid-template-columns:1fr}.dd-day .slot{border-right:0;border-bottom:1px solid var(--t-line)}.dd-day .slot:last-child{border-bottom:0}}
+.dd-act{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.dd-act li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px;padding:11px 0;border-bottom:1px solid var(--hair);font-size:15px}
+.dd-act li b{font:600 12px var(--mono);color:var(--flag);text-transform:uppercase;letter-spacing:.06em;padding-top:2px}
+@media (max-width:560px){.dd-act li{grid-template-columns:1fr;gap:2px}}
+.dd-push{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.dd-push .p{background:var(--paper-2);border:1px solid var(--hair);padding:12px 14px}
+.dd-push .p h4{font-family:var(--head);font-size:17px;margin:0 0 6px}
+.dd-push .p p{margin:0;font-size:14px;color:var(--ink-2)}
+.dd-check{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.dd-check label{display:flex;gap:10px;align-items:flex-start;font-size:15px;cursor:pointer}
+.dd-check input{margin-top:3px;accent-color:var(--flag);width:16px;height:16px}
+.dd-check .done{text-decoration:line-through;color:var(--ink-2)}
+.rp-intro{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:3px solid var(--rule);padding-bottom:8px}
+.rp-intro h3{font-family:var(--head);font-size:clamp(24px,3vw,32px);margin:0;line-height:1.1}
+.rp-bar{position:sticky;top:calc(var(--navh,0px) + env(safe-area-inset-top,0px));z-index:5;display:flex;align-items:center;gap:12px;padding:8px 0;background:var(--paper);border-bottom:1px solid var(--hair)}
+.rp-ct{font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.rp-ct b{color:var(--flag);font-variant-numeric:tabular-nums}
+.rp-bar select{font:500 12.5px var(--mono);min-width:0;flex:0 1 420px;background:var(--paper-2);color:var(--ink);border:1px solid var(--hair);padding:4px 6px}
+.rp-prog{position:absolute;left:0;right:0;bottom:-1px;height:3px;background:transparent}
+.rp-prog i{display:block;height:100%;width:0;background:var(--flag);transition:width .3s ease}
+.rp{display:flex;flex-direction:column}
+.rp-sec{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:14px 32px;padding:30px 0;border-bottom:1px solid var(--hair);scroll-margin-top:calc(var(--navh,0px) + 56px)}
+.rp-txt{display:flex;flex-direction:column;gap:10px;min-width:0}
+.rp-top{display:flex;align-items:baseline;gap:12px}
+.rp-num{font:600 34px var(--mono);line-height:1;color:var(--hair);font-variant-numeric:tabular-nums}
+.rp-sec.nb .rp-num{color:var(--flag)}
+.rp-title{font-family:var(--body);font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.rp-head{font-family:var(--head);font-weight:700;font-size:clamp(23px,2.5vw,31px);line-height:1.12;margin:0;text-wrap:balance}
+.rp-take{margin:0;font-size:15px;line-height:1.55;color:var(--ink-2)}
+.rp-fig{margin:0;min-width:0;align-self:start}
+.rp-fig .ft{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.rp-fig .ft .t{font:600 12.5px var(--mono);letter-spacing:.04em;color:var(--t-amber);margin-right:auto}
+.rp-fig .chart{height:330px}
+.rp-fig figcaption{font:500 11.5px var(--mono);color:var(--t-dim);line-height:1.5}
+.rp-stat{display:flex;flex-direction:column;gap:6px;padding:10px 4px 6px}
+.rp-stat .v{font:600 clamp(54px,8vw,84px) var(--mono);line-height:1;color:var(--t-amber);font-variant-numeric:tabular-nums;text-shadow:0 0 28px rgba(255,176,32,.25)}
+.rp-stat .l{font:600 14px var(--mono);color:var(--t-text)}
+.rp-stat .s{font-size:14px;color:var(--t-dim);max-width:52ch;line-height:1.5}
+.rp-drill{justify-self:start;align-self:start;font:600 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:transparent;border:1px solid var(--rule);padding:8px 12px;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+.rp-drill:hover{background:var(--paper-2)}
+.rp-drill[aria-expanded="true"]{background:var(--ink);color:var(--paper)}
+.rp-drill .car{transition:transform .2s}.rp-drill[aria-expanded="true"] .car{transform:rotate(180deg)}
+.rp-drill:focus-visible,.rp-bar select:focus-visible{outline:2px solid var(--flag);outline-offset:2px}
+.rp-detail{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:18px 32px;background:var(--paper-2);border:1px solid var(--hair);border-top:3px solid var(--flag);padding:16px 18px}
+.rp-detail h5{font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--flag);margin:0 0 8px}
+.rp-detail ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14.5px}
+.rp-detail blockquote{margin:0 0 12px;font-family:var(--head);font-size:21px;line-height:1.25;border-left:3px solid var(--flag);padding-left:12px}
+.rp-detail blockquote cite{display:block;font:500 11.5px var(--mono);font-style:normal;color:var(--ink-2);margin-top:6px}
+.rp-detail .why{margin:0 0 12px;font-size:14.5px}
+@media (max-width:860px){.rp-sec{grid-template-columns:1fr}.rp-detail{grid-template-columns:1fr}.rp-fig .chart{height:280px}}
+@media (prefers-reduced-motion: reduce){.rp-prog i,.rp-drill .car{transition:none}}
 .an-card{background:var(--paper-2);border:1px solid var(--hair);border-top:3px solid var(--flag);padding:14px 16px;display:flex;flex-direction:column;gap:6px}
 .an-card .k{font:600 10.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--flag)}
 .an-card h4{font-family:var(--head);font-size:21px;line-height:1.15;margin:0}
@@ -485,6 +586,7 @@ table.q tbody tr.link{cursor:pointer}
     <div class="deskbar">
     <div class="deskrow" id="deskrow">
       <a href="#front" data-desk="front">Front page</a>
+      <a href="#headlines" data-desk="headlines">This week</a>
       <a href="#bfcm" data-desk="bfcm"><span class="live" aria-hidden="true"></span>BFCM Live</a>
       <a href="#trends" data-desk="trends">Trends</a>
       <button type="button" class="ddbtn" id="deskBtn" aria-expanded="false" aria-controls="deskMenu">Desks <span class="car" aria-hidden="true">▾</span></button>
@@ -539,8 +641,8 @@ table.q tbody tr.link{cursor:pointer}
   <div class="front">
     <div class="lead">
       <div class="kicker">Lead story · Northbeam, Meta, Common Thread, Foxwell</div>
-      <h2>Every source agrees: Meta is getting dearer heading into Black Friday</h2>
-      <p class="dek">Northbeam's Meta CPM is running about 24% above last year, Meta's own price per ad rose 14% in Q3, and Common Thread's brands have seen Meta CPMs jump 17–43% from October to November in every year since 2022. Three in four of Foxwell's 600 buyers name rising CPMs as their top Q4 worry. The twist: Northbeam's Meta ROAS is up about 30% and new-customer CAC down a third, so efficiency is holding for now. Northbeam's new BFCM guide adds that CPMs spiked 20–35% over last year's big weekend.</p>
+      <h2>Meta's Black Friday problem is conversion, not cost</h2>
+      <p class="dek">Meta CPM was flat in Northbeam's latest weekly index (-0.11%), but Meta conversion rate fell for a third straight week (-5.05%) while click-through kept rising. Northbeam's Bryan Bumgardner calls conversion rates a record low with ROAS better than ever. CPMs are still running about 24% above last year, and Northbeam's BFCM guide warns they spiked 20–35% over last year's big weekend. Google's budget share has climbed to 18%.</p>
       <div class="byline">Sources: Northbeam, 22–28 Oct · Meta Q3 earnings · Common Thread · Foxwell × Northbeam survey, 29 Sep <button type="button" class="src-btn" data-src="mb-cpm25,meta-q3-26,ctc-cpm,fox-q4-26,x-roas,x-ncac">SOURCES · QUOTES</button></div>
       <div class="term" style="margin-top:14px">
         <div class="th"><span class="t">Meta prices vs last year, by source</span><a href="#trends" class="m" style="color:var(--t-amber);text-decoration:none">All trends →</a></div>
@@ -1453,6 +1555,20 @@ table.q tbody tr.link{cursor:pointer}
 </section>
 
 <!-- WIRE -->
+<section class="view" id="v-headlines" hidden>
+  <div><div class="kicker" id="hlKick">This week's headlines</div><h2 id="hlTitle"></h2><p class="dek" id="hlDek"></p></div>
+  <div class="hl-ctl"><span class="hl-meta">Week</span><div class="seg" role="group" aria-label="Week" id="hlWeek"></div><span class="hl-meta" style="margin-left:auto">Show</span><div class="seg" role="group" aria-label="Topic" id="hlTopic"></div></div>
+  <div class="section-head"><span class="label">Just in</span><span class="hl-meta" id="hlJustNote"></span></div>
+  <div class="hl-just" id="hlJust"></div>
+  <div class="section-head"><span class="label">The deep dive</span></div>
+  <div id="hlFeat"></div>
+  <div class="rp-intro"><h3 id="rpHead">The week in stories</h3><span class="hl-meta">Northbeam first, then ranked by impact · open Drill down for key points and quotes</span></div>
+  <div class="rp-bar" id="rpBar"><span class="rp-ct">Contents <b id="rpNow">01</b> / <span id="rpTot">00</span></span><select id="rpSel" aria-label="Jump to a story"></select><div class="rp-prog" aria-hidden="true"><i id="rpProg"></i></div></div>
+  <div class="rp" id="hlList"></div>
+</section>
+
+<section class="view" id="v-hl-deep" hidden><div id="hlDeep" class="dd-wrap"></div></section>
+
 <section class="view" id="v-wire" hidden>
   <div><div class="kicker">The Wire</div><h2>Every article from every source, since January</h2><p class="dek" id="wvDek">Newsletter issues, blog posts, reports, podcasts and posts from the publishers the newsroom follows, pulled from their sites and inboxes each weekday at noon.</p></div>
   <div class="strip" id="wvKpis"></div>
@@ -1497,6 +1613,7 @@ const HWH=/*__HWH__*/null;
 const HWX=/*__HWX__*/null;
 const DTCH=/*__DTCH__*/null;
 const ANL=/*__ANL__*/null;
+const WHL=/*__WHL__*/null;
 const BF26B=/*__BF26B__*/null;
 const BFPRED=/*__BFPRED__*/null;
 const HWBF=/*__HWBF__*/null;
@@ -1571,7 +1688,7 @@ function toggleWatch(p){WATCH=WATCH.includes(p)?WATCH.filter(x=>x!==p):[...WATCH
 function buildTicker(){
   const items=[];
   PLATS.forEach(p=>['cpm','cac','roas','cvr'].forEach(m=>{const v=val(LAST,p,m);if(v==null)return;const c=goodCol(v,m in COST);items.push(`<span class="it"><b>${p.toUpperCase().replace(' ','')} ${MNAME[m]}</b><span style="color:${c}">${arrow(v)} ${fmtP(v,2)}</span></span>`)}));
-  const extra=['<span class="it"><b>META CPM YoY</b><span class="down">▲ +25%</span></span>','<span class="it"><b>META ROAS YoY</b><span class="up">▲ +30%</span></span>','<span class="it"><b>META nCAC YoY</b><span class="up">▼ −33%</span></span>','<span class="it"><b>AMAZON BIG DEAL DAYS</b><span class="flat">$2B pulled from BFCM</span></span>','<span class="it"><b>Q3 SPEND YoY</b><span class="flat">&gt;+30% avg</span></span>','<span class="it"><b>AI SEARCH REV SHARE</b><span class="flat">7.1% Jun 26</span></span>','<span class="it"><b>META PRICE/AD Q3</b><span class="down">▲ +14%</span></span>','<span class="it"><b>META US&amp;CA PRICE/AD</b><span class="down">▲ +23%</span></span>','<span class="it"><b>META IMPRESSIONS Q3</b><span class="flat">▲ +10%</span></span>','<span class="it"><b>MOTION HIT RATE</b><span class="flat">~5% of ads win</span></span>'];
+  const extra=['<span class="it"><b>META CVR WoW</b><span class="down">▼ −5.05%</span></span>','<span class="it"><b>META CPM YoY</b><span class="down">▲ +25%</span></span>','<span class="it"><b>META ROAS YoY</b><span class="up">▲ +30%</span></span>','<span class="it"><b>META nCAC YoY</b><span class="up">▼ −33%</span></span>','<span class="it"><b>AMAZON BIG DEAL DAYS</b><span class="flat">$2B pulled from BFCM</span></span>','<span class="it"><b>Q3 SPEND YoY</b><span class="flat">&gt;+30% avg</span></span>','<span class="it"><b>AI SEARCH REV SHARE</b><span class="flat">7.1% Jun 26</span></span>','<span class="it"><b>META PRICE/AD Q3</b><span class="down">▲ +14%</span></span>','<span class="it"><b>META US&amp;CA PRICE/AD</b><span class="down">▲ +23%</span></span>','<span class="it"><b>META IMPRESSIONS Q3</b><span class="flat">▲ +10%</span></span>','<span class="it"><b>MOTION HIT RATE</b><span class="flat">~5% of ads win</span></span>'];
   const wi=items.filter(t=>WATCH.some(p=>t.includes('<b>'+p.toUpperCase().replace(' ','')+' ')));const all=[...wi.map(t=>t.replace('<span class="it">','<span class="it">★ ')),...extra,...items.filter(t=>!wi.includes(t))].join('');document.getElementById('ticker').innerHTML=all+all;
 }
 const STORIES=[
@@ -2497,7 +2614,7 @@ function renderToday(){
   const H=W.filter(r=>r.date>=cut).sort((a,b)=>rank(a)-rank(b)||(a.date<b.date?1:-1)).slice(0,9);
   document.getElementById('fHeads').innerHTML=H.map(r=>`<a href="${r.url}" target="_blank" rel="noopener"><span class="d">${dfmt(r.date)}</span><span><b>${esc(r.title)}</b><small>${esc(r.pub)} · ${esc(r.type)}</small></span></a>`).join('');
   const N=[...LIB].filter(x=>x.date&&x.date>=new Date(new Date(last+'T12:00')-10*864e5).toISOString().slice(0,10)&&(x.data||[]).length&&!/Weekly|Monthly|Tool|Site/.test(x.src||'')).sort((a,b)=>a.date<b.date?1:-1);
-  const extra=[{date:'2026-11-04',title:'Every Curtis Howland LinkedIn post now opens as an article, with the original embedded and credited',pub:'Curtis Howland',to:'#howland'},{date:'2026-11-04',title:'BFCM desk: 16 new platform changes and tips (Meta, Google, Amazon, EU fees, Foxwell offer rules)',pub:'BFCM desk',to:'#bfcm'},{date:'2026-11-03',title:'Canada BFCM 2026: budgets, intent, Buy Canadian and 12 takeaways',pub:'BFCM desk',to:'#bfcm'},{date:'2026-11-03',title:'BFCM by day: 2024, 2025 and a 2026 projection (spend, MER, CAC, CPM, ROAS)',pub:'BFCM desk',to:'#bfcm'},{date:'2026-11-03',title:'BFCM 2026 briefing: 11 things the data says, 161 sourced figures',pub:'Newsroom',to:'#bfcm'},{date:'2026-11-03',title:'How many ads to launch: six sources compared',pub:'Runneth desk',to:'#mo-bench'},{date:'2026-11-03',title:'Curtis Howland: 31 Meta Ads charts redrawn',pub:'Curtis Howland desk',to:'#howland'},{date:'2026-11-02',title:'Runneth Weekly Trending Ads: 120 ads, 4 categories',pub:'Runneth desk',to:'#mo-trend'}];
+  const extra=[{date:'2026-11-06',title:'New tab: This week\'s headlines, led by a deep dive on Northbeam\'s Black Friday playbook',pub:'Newsroom',to:'#headlines'},{date:'2026-11-06',title:'Analysis: Meta\'s Black Friday problem is conversion, not cost',pub:'Newsroom',to:'#front'},{date:'2026-11-04',title:'Every Curtis Howland LinkedIn post now opens as an article, with the original embedded and credited',pub:'Curtis Howland',to:'#howland'},{date:'2026-11-04',title:'BFCM desk: 16 new platform changes and tips (Meta, Google, Amazon, EU fees, Foxwell offer rules)',pub:'BFCM desk',to:'#bfcm'},{date:'2026-11-03',title:'Canada BFCM 2026: budgets, intent, Buy Canadian and 12 takeaways',pub:'BFCM desk',to:'#bfcm'},{date:'2026-11-03',title:'BFCM by day: 2024, 2025 and a 2026 projection (spend, MER, CAC, CPM, ROAS)',pub:'BFCM desk',to:'#bfcm'},{date:'2026-11-03',title:'BFCM 2026 briefing: 11 things the data says, 161 sourced figures',pub:'Newsroom',to:'#bfcm'},{date:'2026-11-03',title:'How many ads to launch: six sources compared',pub:'Runneth desk',to:'#mo-bench'},{date:'2026-11-03',title:'Curtis Howland: 31 Meta Ads charts redrawn',pub:'Curtis Howland desk',to:'#howland'},{date:'2026-11-02',title:'Runneth Weekly Trending Ads: 120 ads, 4 categories',pub:'Runneth desk',to:'#mo-trend'}];
   const seenT=new Set();const items=[...extra,...N.map(x=>({date:x.date,title:x.title,pub:x.pub||'Northbeam',to:DESKOF[x.pub||'Northbeam']||'#wire'}))].filter(x=>!seenT.has(x.title)&&seenT.add(x.title)).slice(0,9);
   document.getElementById('fNew').innerHTML=items.map(x=>`<a href="${x.to}"><span class="d">${dfmt(x.date)}</span><span><b>${esc(x.title)}</b><small>${esc(x.pub)}</small></span></a>`).join('');
 }
@@ -2834,7 +2951,103 @@ SEGBIND('hsMeasure',b=>{hsMeasure=b.dataset.m;renderHaus()});
 ['twMetric','twChan','twSnap','twInd'].forEach(id=>document.getElementById(id).addEventListener('change',renderTW));
 
 /* ---------- routing ---------- */
-const VIEWS={front:()=>{renderFront();renderToday()},'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:()=>{renderPred();renderBfStudy();renderBf26();renderBfMeta();renderCa();renderProj();renderBfcm()},mkt:renderMkt,'mkt-google':renderMktG,'mo-bench':()=>{renderMoBench();renderCv()},'mo-trend':()=>{renderTA();renderMoTrend()},'hw-post':renderHwPost,'hw-charts':renderHwMeta,'hw-posts':renderHwPosts,'hw-news':renderHwNews,'hw-bf':renderHwBf,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,dtcnl:renderDtc,wire:renderWire};
+/* v2 report layout: one numbered section per story, annotated animated chart or stat, drill-down. */
+const rpAnno={id:'rpAnno',afterDatasetsDraw(c,a,o){const L=(o&&o.items)||[];if(!L.length)return;const ctx=c.ctx,ca=c.chartArea;ctx.save();ctx.font='600 11px "IBM Plex Mono",ui-monospace,monospace';
+  L.forEach(n=>{const m=c.getDatasetMeta(n.s||0);if(!m||m.hidden)return;const el=m.data[n.i];if(!el)return;const hb=c.options.indexAxis==='y';
+    let x=el.x,y=el.y;if(!isFinite(x)||!isFinite(y))return;ctx.strokeStyle=T.amber;ctx.fillStyle=T.amber;ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.arc(x,y,4,0,7);ctx.stroke();
+    const tw=ctx.measureText(n.text).width+14,th=20;let bx,by;
+    if(hb){bx=Math.min(x+12,ca.right-tw);by=y-th/2;if(bx<x+6)by=y-th-10}else{bx=Math.max(ca.left,Math.min(x-tw/2,ca.right-tw));by=Math.max(ca.top-24,y-th-18)}
+    ctx.beginPath();ctx.moveTo(x,y-(hb?0:5));ctx.lineTo(hb?bx:bx+tw/2,hb?by+th/2:by+th);ctx.stroke();
+    ctx.fillStyle=T.bg;ctx.fillRect(bx,by,tw,th);ctx.strokeRect(bx+.5,by+.5,tw-1,th-1);ctx.fillStyle=T.text;ctx.textBaseline='middle';ctx.fillText(n.text,bx+7,by+th/2+.5)});
+  ctx.restore()}};
+const rpCol=c=>({meta:PCOL.Meta,google:PCOL.Google,amber:T.amber,up:T.up,down:T.down,blue:T.blue}[c]||T.amber);
+const rpFmt=u=>u==='$'?(x=>'$'+(Number.isInteger(+x)?(+x).toLocaleString('en-US'):(+x).toFixed(2))):u==='%wow'?(x=>(x>0?'+':'')+(+x).toFixed(2).replace(/\.?0+$/,'')+'%'):u==='%'?(x=>(+x).toLocaleString('en-US',{maximumFractionDigits:2})+'%'):(x=>(+x).toLocaleString('en-US'));
+function rpCfg(v){const f=rpFmt(v.unit),line=v.type==='line',hb=v.type==='hbar';let ds;
+  if(v.type==='float'){const s=v.series[0];ds=[{label:'Floor',data:s.data.map(d=>d[0]),backgroundColor:T.amber,borderRadius:2,stack:'a'},{label:'Up to',data:s.data.map(d=>d[1]-d[0]),backgroundColor:T.amber+'66',borderRadius:2,stack:'a'}]}
+  else ds=v.series.map(s=>{const c=rpCol(s.color);return line?{label:s.name,data:s.data,borderColor:c,backgroundColor:c,borderWidth:2.2,tension:0,cubicInterpolationMode:'monotone',pointRadius:s.data.length>20?0:3,fill:false}:{label:s.name,data:s.data,backgroundColor:s.color==='sign'?s.data.map(x=>x<0?T.down:T.up):c,borderRadius:2,maxBarThickness:64}});
+  const tip={callbacks:{label:x=>{const val=v.type==='float'?(x.datasetIndex?v.series[0].data[x.dataIndex].join(' to ')+'%':null):null;return ` ${x.dataset.label}: ${val||f(hb?x.parsed.x:x.parsed.y)}`}}};
+  if(v.type==='float')tip.filter=x=>x.datasetIndex===1||v.series[0].data[x.dataIndex][0]===v.series[0].data[x.dataIndex][1];
+  const vax={grid,ticks:{callback:f},beginAtZero:!line},cax={grid:{display:false},ticks:{autoSkip:true,maxRotation:0,maxTicksLimit:line?7:12}};
+  const annos=(v.annos||[]).map(a=>v.type==='float'?{s:1,i:a.i,text:a.text}:a);
+  return{type:line?'line':'bar',data:{labels:v.labels,datasets:ds},plugins:[rpAnno,zeroLine],options:{indexAxis:hb?'y':'x',layout:{padding:{top:30,right:hb?16:8}},plugins:{legend:{display:ds.length>1&&v.type!=='float'},tooltip:tip,rpAnno:{items:annos}},scales:hb?{x:vax,y:cax}:{x:Object.assign(cax,v.type==='float'?{stacked:true}:{}),y:Object.assign(vax,v.type==='float'?{stacked:true}:{})}}}}
+let rpIO=null;const rpSeen=new Set();
+function rpCount(el){const raw=el.dataset.v||el.textContent;const m=raw.match(/^([^\d-]*)(-?[\d.,]+)(.*)$/);if(!m||raw.includes('-')&&!raw.startsWith('-')&&/\d-\d/.test(raw)||matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=raw;return}
+  const target=parseFloat(m[2].replace(/,/g,'')),dec=(m[2].split('.')[1]||'').length,t0=performance.now();el.dataset.v=raw;
+  const step=t=>{const p=Math.min(1,(t-t0)/700),e=1-Math.pow(1-p,3);el.textContent=m[1]+(target*e).toFixed(dec)+m[3];if(p<1)requestAnimationFrame(step);else el.textContent=raw};requestAnimationFrame(step);setTimeout(()=>{el.textContent=raw},1200)}
+function rpRender(R,cur){
+  const box=document.getElementById('hlList');
+  box.innerHTML=R.map((x,k)=>{const n=String(k+1).padStart(2,'0');const ch=x.chart;
+    const fig=ch?`<figure class="rp-fig term"><div class="ft"><span class="t">${esc(ch.title)}</span>${ch.views.length>1?`<div class="seg" role="group" aria-label="View" data-rpv="${x.id}">${ch.views.map((v,i)=>`<button type="button" data-v="${i}" aria-pressed="${!i}">${esc(v.label)}</button>`).join('')}</div>`:''}</div><div class="chart"><canvas id="rpc-${x.id}" role="img" aria-label="${esc(ch.title)}"></canvas></div><figcaption>Source: ${esc(x.src)}</figcaption></figure>`
+      :`<figure class="rp-fig term"><div class="rp-stat"><div class="v" data-v="${esc(x.stat.value)}">${esc(x.stat.value)}</div><div class="l">${esc(x.stat.label)}</div><div class="s">${esc(x.stat.sub)}</div></div><figcaption>Source: ${esc(x.src)}</figcaption></figure>`;
+    return `<article class="rp-sec${x.pub==='Northbeam'?' nb':''}" id="hl-item-${x.id}" data-k="${k}"><div class="rp-txt"><div class="rp-top"><span class="rp-num">${n}</span><span class="rp-title">${esc(x.label||x.pub)}</span></div><span class="hl-meta"><span class="${x.pub==='Northbeam'?'hl-nb':''}">${esc(x.pub)}</span><span>${dfmt(x.date)}</span>${hlHeat(x.impact||1)}${cur&&hlIsNew(x.date)?'<span class="hl-new">New</span>':''}</span><h4 class="rp-head">${esc(x.headline)}</h4><p class="rp-take">${esc(x.take)}</p><button type="button" class="rp-drill" aria-expanded="false" aria-controls="rpd-${x.id}">Drill down <span class="car" aria-hidden="true">▾</span></button></div>${fig}
+      <div class="rp-detail" id="rpd-${x.id}" hidden><div><h5>Key points</h5><ul>${(x.points||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div><div>${x.quote?`<h5>In their words</h5><blockquote>“${esc(x.quote)}”<cite>${esc(x.pub)}</cite></blockquote>`:''}<h5>Why it matters</h5><p class="why">${esc(x.why)}</p><div class="hl-links">${x.url?`<a href="${x.url}" target="_blank" rel="noopener">Read the source ↗</a>`:''}${x.feature?`<a href="#hl-deep/${encodeURIComponent(x.feature)}">Deep dive →</a>`:''}${x.to?`<a href="${x.to}">On the desk →</a>`:''}</div></div></div></article>`}).join('')||'<p class="note">Nothing on this topic this week.</p>';
+  R.forEach(x=>{if(x.chart)mk('rpc-'+x.id,rpCfg(x.chart.views[0]))});
+  box.onclick=e=>{const d=e.target.closest('.rp-drill');if(d){const open=d.getAttribute('aria-expanded')!=='true';d.setAttribute('aria-expanded',open);document.getElementById(d.getAttribute('aria-controls')).hidden=!open;return}
+    const b=e.target.closest('[data-rpv] button');if(b){const g=b.parentElement,x=R.find(r=>r.id===g.dataset.rpv);g.querySelectorAll('button').forEach(q=>q.setAttribute('aria-pressed',q===b));mk('rpc-'+x.id,rpCfg(x.chart.views[+b.dataset.v]))}};
+  const sel=document.getElementById('rpSel'),tot=R.length;document.getElementById('rpTot').textContent=String(tot).padStart(2,'0');
+  sel.innerHTML=R.map((x,k)=>`<option value="${x.id}">${String(k+1).padStart(2,'0')} · ${esc(x.label||x.headline)}</option>`).join('');
+  sel.onchange=()=>{const el=document.getElementById('hl-item-'+sel.value);if(el)el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})};
+  const setCur=k=>{document.getElementById('rpNow').textContent=String(k+1).padStart(2,'0');document.getElementById('rpProg').style.width=(tot?((k+1)/tot*100):0)+'%';if(R[k])sel.value=R[k].id};setCur(0);
+  if(rpIO)rpIO.disconnect();if(!('IntersectionObserver' in window))return;
+  rpIO=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;const k=+en.target.dataset.k;setCur(k);const x=R[k];if(!x||rpSeen.has(x.id))return;rpSeen.add(x.id);
+    if(x.chart){const c=charts['rpc-'+x.id];if(c&&!matchMedia('(prefers-reduced-motion: reduce)').matches){try{c.reset();c.update()}catch(e){}}}else{const v=en.target.querySelector('.rp-stat .v');if(v)rpCount(v)}}),{rootMargin:'-35% 0px -45% 0px'});
+  box.querySelectorAll('.rp-sec').forEach(s=>rpIO.observe(s));
+}
+/* ---- This week's headlines (#headlines) and deep dives (#hl-deep/<id>) ---- */
+let hlWk=null,hlTop='all';
+const HL_TOP=[['all','All'],['Meta','Meta'],['Google','Google'],['BFCM','BFCM'],['Measurement','Measurement'],['AI','AI']];
+const hlRange=w=>{const a=new Date(w.start+'T12:00:00'),b=new Date(w.end+'T12:00:00');const m=d=>d.toLocaleDateString('en-GB',{month:'short'});return a.getMonth()===b.getMonth()?`${a.getDate()} to ${b.getDate()} ${m(b)}`:`${a.getDate()} ${m(a)} to ${b.getDate()} ${m(b)}`};
+const hlRank=(a,b)=>{const na=a.pub==='Northbeam',nb=b.pub==='Northbeam';if(na!==nb)return na?-1:1;if((b.impact||0)!==(a.impact||0))return (b.impact||0)-(a.impact||0);return b.date.localeCompare(a.date)};
+const hlIsNew=d=>{const t=new Date(d+'T23:59:59');return (Date.now()-t.getTime())<36*3600e3};
+const hlHeat=n=>`<span class="hl-heat" title="Impact ${n} of 3" aria-label="Impact ${n} of 3">${'●'.repeat(n)}${'○'.repeat(3-n)}</span>`;
+function renderHeadlines(){
+  const W=((WHL&&WHL.weeks)||[]).slice().sort((a,b)=>b.start.localeCompare(a.start));if(!W.length)return;
+  if(!hlWk||!W.find(w=>w.id===hlWk))hlWk=W[0].id;
+  const wk=W.find(w=>w.id===hlWk),cur=wk===W[0];
+  document.getElementById('hlKick').textContent=`This week's headlines · ${hlRange(wk)}`+(cur?'':' (archive)');
+  document.getElementById('hlTitle').textContent=wk.title;document.getElementById('hlDek').textContent=wk.dek;
+  const wb=document.getElementById('hlWeek');wb.innerHTML=W.map((w,i)=>`<button type="button" data-v="${w.id}" aria-pressed="${w.id===hlWk}">${i?hlRange(w):'This week'}</button>`).join('');
+  wb.onclick=e=>{const b=e.target.closest('button');if(!b)return;hlWk=b.dataset.v;renderHeadlines()};
+  const tb=document.getElementById('hlTopic');tb.innerHTML=HL_TOP.map(([v,n])=>`<button type="button" data-v="${v}" aria-pressed="${v===hlTop}">${n}</button>`).join('');
+  tb.onclick=e=>{const b=e.target.closest('button');if(!b)return;hlTop=b.dataset.v;renderHeadlines()};
+  const I=wk.items.filter(x=>hlTop==='all'||(x.topics||[]).includes(hlTop));
+  const just=I.slice().sort((a,b)=>b.date.localeCompare(a.date)||hlRank(a,b)).slice(0,4);
+  document.getElementById('hlJustNote').textContent=cur?'newest first':'the last stories that week';
+  document.getElementById('hlJust').innerHTML=just.length?just.map(x=>`<a class="j" href="#hl-item-${x.id}" data-hl="${x.id}"><span class="hl-meta">${cur&&hlIsNew(x.date)?'<span class="hl-new">New</span>':''}<span class="${x.pub==='Northbeam'?'hl-nb':''}">${esc(x.pub)}</span><span>${dfmt(x.date)}</span></span><h4>${esc(x.headline)}</h4></a>`).join(''):'<p class="note">Nothing on this topic this week.</p>';
+  document.getElementById('hlJust').onclick=e=>{const a=e.target.closest('[data-hl]');if(!a)return;e.preventDefault();const el=document.getElementById('hl-item-'+a.dataset.hl);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})};
+  const F=((WHL&&WHL.features)||[]).filter(f=>wk.items.some(x=>x.feature===f.id));
+  document.getElementById('hlFeat').innerHTML=F.length?F.map(f=>`<a class="hl-feat" href="#hl-deep/${encodeURIComponent(f.id)}"><div><div class="kicker">${esc(f.kicker)} · ${dfmt(f.date)}</div><h3>${esc(f.title)}</h3><p>${esc(f.dek)}</p><span class="go">Read the deep dive →</span></div><ol>${f.headlines.map(h=>`<li><b>${esc(h[0])}</b></li>`).join('')}</ol></a>`).join(''):'<p class="note">No deep dive this week.</p>';
+  const R=I.slice().sort(hlRank);document.getElementById('rpHead').textContent=`The week in ${R.length} stories`;rpRender(R,cur);
+}
+function renderHlDeep(){
+  const F=(WHL&&WHL.features)||[];const f=F.find(x=>x.id===HWARG)||F[0];const box=document.getElementById('hlDeep');
+  if(!f){box.innerHTML='<p class="note">Deep dive not found. <a href="#headlines">Back to this week\'s headlines</a></p>';return}
+  const col={down:T.down,up:T.up,amber:T.amber,text:T.text};
+  const bad={CPM:1,CPC:1,nCAC:1},good={CTR:1,CVR:1,ROAS:1};
+  const cell=(c,v)=>{if(v===''||v==null)return '<td>·</td>';const n=+v;if(c==='Share')return `<td>${n.toFixed(2)}%</td>`;if(c==='Share Δ')return `<td>${n>0?'+':''}${n.toFixed(2)}</td>`;const s=bad[c]?(n>0?T.down:T.up):good[c]?(n>0?T.up:T.down):T.text;return `<td style="color:${s}">${n>0?'+':''}${n.toFixed(2)}%</td>`};
+  let ck={};try{ck=JSON.parse(localStorage.getItem('ddck-'+f.id)||'{}')}catch(e){ck={}}
+  box.innerHTML=`<div><div class="kicker">${esc(f.kicker)} · ${dfmt(f.date)}</div><h2>${esc(f.title)}</h2><p class="dek">${esc(f.dek)}</p><p class="note">${esc(f.byline)} <a href="${f.url}" target="_blank" rel="noopener">Read the original ↗</a> · <a href="#headlines">This week's headlines</a></p></div>
+  <div class="strip" id="ddKpis"></div>
+  ${f.quote?`<blockquote class="dd-quote">“${esc(f.quote[0])}”<cite>${esc(f.quote[1])}</cite></blockquote>`:''}
+  <div class="section-head"><span class="label">The ${f.headlines.length} headlines</span></div>
+  <div class="dd-hl">${f.headlines.map((h,i)=>`<div class="h"><span class="n">${String(i+1).padStart(2,'0')}</span><h4>${esc(h[0])}</h4><p>${esc(h[1])}</p></div>`).join('')}</div>
+  <div class="section-head"><span class="label">The BFCM day, by the clock</span></div>
+  <div class="dd-day">${[['9am','First read','Today against the trailing 7 days. Flag ads below target or at risk. Don\'t panic over a slow morning.'],['2pm','Make the calls','Cut or scale what you flagged at 9am. Raise winners by up to 20%. Log it in the handoff doc.'],['7pm','Evening push','Another 20% on ads at or above target, up to the point of diminishing returns.'],['Before bed','Last pass','Scale winners, cut losers, one more time.'],['12:01am','Reset','A rule reopens every budget at 30% above the previous day\'s opening budget.']].map(([a,b,c])=>`<div class="slot"><div class="tm">${a}</div><div class="wh">${b}</div><div class="tx">${c}</div></div>`).join('')}</div>
+  <div class="section-head"><span class="label">What it's really saying</span></div>
+  <div class="dd-sec">${f.analysis.map(p=>`<p>${esc(p)}</p>`).join('')}</div>
+  ${f.index?`<div class="section-head"><span class="label">The numbers in the same issue</span><span class="hl-meta">${esc(f.index.week)}</span></div><div class="tw"><table class="q"><thead><tr>${f.index.cols.map(c=>`<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${f.index.rows.map(r=>`<tr><td><span class="pf" style="background:${PCOL[r[0]]||T.dim}"></span>${esc(r[0])}</td>${r.slice(1).map((v,i)=>cell(f.index.cols[i+1],v)).join('')}</tr>`).join('')}</tbody></table></div><p class="note">${esc(f.index.note)} Green is good for the buyer, red is bad.</p>`:''}
+  <div class="section-head"><span class="label">What it means for you</span><span class="hl-meta">a DTC buyer on Meta and Google</span></div>
+  <ol class="dd-act">${f.actions.map(([w,a])=>`<li><b>${esc(w)}</b><span>${esc(a)}</span></li>`).join('')}</ol>
+  <div class="section-head"><span class="label">Where we'd push back</span></div>
+  <div class="dd-push">${f.pushback.map(([h,p])=>`<div class="p"><h4>${esc(h)}</h4><p>${esc(p)}</p></div>`).join('')}</div>
+  <div class="section-head"><span class="label">Your weekend checklist</span><span class="hl-meta">ticks are saved in this browser</span></div>
+  <ul class="dd-check" id="ddCheck">${f.checklist.map((c,i)=>`<li><label><input type="checkbox" data-i="${i}"${ck[i]?' checked':''}><span class="${ck[i]?'done':''}">${esc(c)}</span></label></li>`).join('')}</ul>
+  <p class="note" style="margin-top:14px">More: ${(f.related||[]).map(([h,l])=>`<a href="${h}">${esc(l)}</a>`).join(' · ')}</p>`;
+  kpiStrip('ddKpis',f.kpis.map(([k,v,d,c])=>[k,v,d,col[c]||T.text]));
+  document.getElementById('ddCheck').onchange=e=>{const i=e.target.dataset.i;if(i==null)return;ck[i]=e.target.checked;e.target.nextElementSibling.className=e.target.checked?'done':'';try{localStorage.setItem('ddck-'+f.id,JSON.stringify(ck))}catch(err){}};
+}
+const VIEWS={front:()=>{renderFront();renderToday()},headlines:renderHeadlines,'hl-deep':renderHlDeep,'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:()=>{renderPred();renderBfStudy();renderBf26();renderBfMeta();renderCa();renderProj();renderBfcm()},mkt:renderMkt,'mkt-google':renderMktG,'mo-bench':()=>{renderMoBench();renderCv()},'mo-trend':()=>{renderTA();renderMoTrend()},'hw-post':renderHwPost,'hw-charts':renderHwMeta,'hw-posts':renderHwPosts,'hw-news':renderHwNews,'hw-bf':renderHwBf,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,dtcnl:renderDtc,wire:renderWire};
 SEGBIND('mtView',b=>{mtView=b.dataset.v;renderMeta()});
 document.getElementById('mtEvents').addEventListener('change',renderMeta);
 const PUBDESKS=['nb','mo','ctc','haus','triplewhale','foxwell','howland','dtcnl'];
@@ -2848,7 +3061,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!ddMenu.hidden)ddCl
 ddMenu.addEventListener('keydown',e=>{if(e.key==='Tab'){const f=[...ddMenu.querySelectorAll('a')];if(!e.shiftKey&&document.activeElement===f[f.length-1])ddClose(false)}});
 function show(){let v=(location.hash||'#front').slice(1);const sl=v.indexOf('/');HWARG='';if(sl>0){HWARG=decodeURIComponent(v.slice(sl+1));v=v.slice(0,sl)}if(!(v in VIEWS))v='front';
   Object.keys(VIEWS).forEach(x=>document.getElementById('v-'+x).hidden=x!==v);
-  const desk=/^hw-/.test(v)?'howland':/^mkt/.test(v)?'mkt':/^(nb|mo)-/.test(v)?v.split('-')[0]:v;
+  const desk=/^hl-/.test(v)?'headlines':/^hw-/.test(v)?'howland':/^mkt/.test(v)?'mkt':/^(nb|mo)-/.test(v)?v.split('-')[0]:v;
   document.querySelectorAll('#deskrow a').forEach(a=>a.setAttribute('aria-current',a.dataset.desk===desk?'true':'false'));
   document.getElementById('deskBtn').setAttribute('aria-current',PUBDESKS.includes(desk)?'true':'false');
   document.querySelectorAll('#deskMenu a').forEach(a=>a.getAttribute('href')==='#'+v&&!a.classList.contains('ddh')?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));

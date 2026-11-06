@@ -56,6 +56,12 @@ Ryan's brief: a whole tab for the week's news that gives new insights room, Nort
 - `tools/fetch_sources.py` → `runneth_watch()` reads Runneth's four Weekly Trending lists (apparel, sports-fitness, retail, accessories) every morning from GitHub Actions and compares the ranked brands with the last state (`notes/fetched/RUNNETH/state.json`, seeded from the newest week in `data/runneth_trending_ads.csv`). It logs `RUNNETH: UPDATED ...`, `RUNNETH: unchanged ...` or `RUNNETH: could not check ...` to `notes/fetched/LAST_RUN.txt` and appends to `notes/fetched/RUNNETH/history.csv`.
 - Morning pass: if LAST_RUN says UPDATED, put it in the digest and tell Ryan the lists turned over (which lists, new top 3), then capture the new week per "Weekly (Monday) — Runneth" even if it isn't Monday. If it says "could not check", the weekday laptop pass checks the lists in the browser and records the result in history.csv.
 
+## Search, Compare and desk freshness (added 6 Nov 2026)
+- Search (nav button or "/") indexes this week's stories, deep dives, analysis, desk pages, the source library and the Wire at load time. Platform + metric queries ("meta cpm", "apparel roas") answer from the latest Northbeam index week and the latest Triple Whale snapshot; BFCM queries show the countdown. Nothing to maintain: new data and library entries are searchable on the next build.
+- Compare (#compare) puts the viewer's numbers against the latest Triple Whale snapshot (industry, channel) and the latest Northbeam index week. Inputs stay in the viewer's browser. It reads `tw_weekly` and `mbi`, so it updates itself.
+- Every publisher desk shows a freshness bar (newest library or Wire item, plus "data through" for Northbeam, Triple Whale and Runneth). A desk with nothing new in 14 days turns amber: check that desk's capture in the next pass.
+- The ticker's second half now comes from this week's stories (first figure of each, top 10 by rank). Do not hand-edit it.
+
 ## Weekly (Thursday) — Northbeam Media Buyer Index
 1. Open https://themediabuyer.northbeam.io/archive and find issues published since the newest `week_end` in `data/mbi_new.csv`.
 2. Each issue has the weekly platform table (image): CPM, CTR, CPC, CAC, CVR, ROAS week-over-week %, budget share % and share Δ (pp) for Meta, All other, Google, TikTok, YouTube, AppLovin, Microsoft, Snapchat, Pinterest, Vibe. Transcribe to new rows at the **top** of `data/mbi_new.csv` (newest first) with `week_start,week_end` as printed. Zoom screenshots to read every digit; re-check sums of share ≈ 100.

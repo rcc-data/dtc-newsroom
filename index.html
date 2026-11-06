@@ -476,6 +476,69 @@ table.q tbody tr.link{cursor:pointer}
 .rp-detail .why{margin:0 0 12px;font-size:14.5px}
 @media (max-width:860px){.rp-sec{grid-template-columns:1fr}.rp-detail{grid-template-columns:1fr}.rp-fig .chart{height:280px}}
 @media (prefers-reduced-motion: reduce){.rp-prog i,.rp-drill .car{transition:none}}
+.pulse{display:flex;flex-direction:column;gap:6px;border:1px solid var(--hair);border-left:3px solid var(--t-up);background:var(--paper-2);padding:9px 12px}
+.pulse.stale{border-left-color:var(--t-amber)}
+.pl-h{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font:500 11.5px var(--mono);color:var(--ink-2)}
+.pl-h b{font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:.06em}
+.pl-dot{width:8px;height:8px;border-radius:50%;background:var(--t-up)}
+.pulse.stale .pl-dot{background:var(--t-amber)}
+.pl-st{background:var(--t-amber);color:#111;padding:1px 6px;border-radius:2px;font-weight:600}
+.pl-l{display:flex;flex-direction:column;gap:2px}
+.pl-l a{display:grid;grid-template-columns:52px minmax(0,1fr);gap:8px;font-size:13.5px;color:var(--ink);text-decoration:none;line-height:1.35}
+.pl-l a span{font:500 11px var(--mono);color:var(--ink-2);padding-top:2px}
+.pl-l a:hover{text-decoration:underline}
+.srch-btn{margin-left:auto;font:600 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:var(--paper-2);border:1px solid var(--rule);padding:6px 10px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;align-self:center}
+.srch-btn kbd{font:500 10.5px var(--mono);border:1px solid var(--hair);padding:0 4px;border-radius:2px;color:var(--ink-2)}
+@media (max-width:620px){.srch-btn kbd{display:none}}
+#srch{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.5);display:flex;justify-content:center;align-items:flex-start;padding:calc(56px + env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) 12px max(12px,env(safe-area-inset-left,0px))}
+.sr-box{width:min(760px,100%);max-height:calc(100dvh - 80px);display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--rule);box-shadow:0 24px 60px -20px rgba(0,0,0,.6)}
+.sr-top{display:flex;gap:8px;align-items:center;padding:10px 12px;border-bottom:1px solid var(--rule)}
+.sr-top input{flex:1;min-width:0;font:500 17px var(--body);color:var(--ink);background:transparent;border:0;outline:0;padding:6px 2px}
+.sr-top button{font:600 12px var(--mono);background:transparent;color:var(--ink-2);border:1px solid var(--hair);padding:4px 8px;cursor:pointer}
+#srchRes{overflow:auto;padding:12px;display:flex;flex-direction:column;gap:12px}
+.sr-tips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font:600 11px var(--mono);text-transform:uppercase;color:var(--ink-2)}
+.sr-chip{font:500 12.5px var(--mono);text-transform:none;background:var(--paper-2);color:var(--ink);border:1px solid var(--hair);border-radius:999px;padding:4px 10px;cursor:pointer}
+.sr-ans{background:var(--t-panel);color:var(--t-text);border:1px solid var(--t-line);border-left:3px solid var(--t-amber);border-radius:4px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;color-scheme:dark}
+.sr-ans .k{font:600 10.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--t-amber)}
+.sr-ans h4{margin:0;font-family:var(--head);font-size:22px;color:#f2efe6;line-height:1.15}
+.sr-ans p{margin:0;font-size:14px;line-height:1.45}
+.sr-ans .sr-x{color:#b9c4bf;font-size:13px}
+.sr-lk{display:flex;flex-wrap:wrap;gap:14px;font:600 12px var(--mono)}
+.sr-lk a{color:var(--t-amber);text-decoration:none}
+.sr-spark{display:flex;gap:8px;align-items:flex-end;height:54px}
+.sr-spark span{display:flex;flex-direction:column;align-items:center;gap:3px;font:500 9.5px var(--mono);color:var(--t-dim)}
+.sr-spark i{display:block;width:18px;border-radius:2px}
+.sr-spark em{font-style:normal}
+.sr-g{display:flex;flex-direction:column}
+.sr-gh{font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--flag);border-bottom:1px solid var(--rule);padding-bottom:4px;margin-bottom:2px}
+.sr-gh span{color:var(--ink-2)}
+.sr-r{display:flex;flex-direction:column;gap:1px;padding:7px 4px;border-bottom:1px solid var(--hair);text-decoration:none;color:var(--ink)}
+.sr-r:hover,.sr-r:focus-visible{background:var(--paper-2)}
+.sr-r .m{font:500 10.5px var(--mono);color:var(--ink-2);text-transform:uppercase;letter-spacing:.05em}
+.sr-r b{font:600 14.5px/1.3 var(--body)}
+.sr-none{color:var(--ink-2);margin:0}
+.cm-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:980px){.cm-grid{grid-template-columns:1fr}}
+.cm-sum{font:600 14px var(--body);color:var(--t-text);margin:0}
+.cm-row{display:grid;grid-template-columns:150px 120px minmax(0,1fr);grid-template-areas:"l i t" "l i v";gap:4px 12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--t-line)}
+.cm-row label{grid-area:l;font:600 13px var(--mono);color:var(--t-text);display:flex;flex-direction:column}
+.cm-row label span,.cm-mk span{font:500 10.5px var(--mono);color:var(--t-dim);text-transform:none}
+.cm-row .cm-in{grid-area:i}.cm-track{grid-area:t}.cm-row .cm-v{grid-area:v}
+.cm-in{display:flex;align-items:center;gap:4px;font:500 13px var(--mono);color:var(--t-dim)}
+.cm-in input{width:100%;min-width:0;font:600 15px var(--mono);color:var(--t-text);background:var(--t-bg);border:1px solid var(--t-line);border-radius:3px;padding:6px 8px}
+.cm-in input:focus{border-color:var(--t-amber);outline:0}
+.cm-track{position:relative;height:14px;background:var(--t-bg);border-radius:7px}
+.cm-track .band{position:absolute;top:3px;bottom:3px;background:#2a3a33;border-radius:4px}
+.cm-track .med{position:absolute;top:0;bottom:0;width:2px;background:var(--t-dim);transform:translateX(-1px)}
+.cm-track .you{position:absolute;top:-2px;width:18px;height:18px;border-radius:50%;transform:translateX(-9px);border:2px solid var(--t-bg);transition:left .3s ease}
+.you.good{background:var(--t-up)}.you.ok{background:#9fd96b}.you.meh{background:var(--t-amber)}.you.bad{background:var(--t-down)}
+.cm-v{display:flex;flex-direction:column;font:500 11.5px var(--mono);color:var(--t-dim)}
+.cm-v b{font-weight:600;color:var(--t-text)}
+.cm-v.good b{color:var(--t-up)}.cm-v.ok b{color:#9fd96b}.cm-v.meh b{color:var(--t-amber)}.cm-v.bad b{color:var(--t-down)}
+.cm-wrow{display:grid;grid-template-columns:minmax(0,1fr) 92px 110px;grid-template-areas:"l m i" "v v v";gap:4px 12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--t-line)}
+.cm-wrow label{grid-area:l;font:600 13px var(--mono);color:var(--t-text)}.cm-wrow .cm-mk{grid-area:m;font:600 15px var(--mono);display:flex;flex-direction:column;text-align:right}.cm-wrow .cm-in{grid-area:i}.cm-wrow .cm-v{grid-area:v}
+@media (max-width:560px){.cm-row{grid-template-columns:minmax(0,1fr) 120px;grid-template-areas:"l i" "t t" "v v"}}
+@media (prefers-reduced-motion:reduce){.cm-track .you{transition:none}}
 .an-card{background:var(--paper-2);border:1px solid var(--hair);border-top:3px solid var(--flag);padding:14px 16px;display:flex;flex-direction:column;gap:6px}
 .an-card .k{font:600 10.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--flag)}
 .an-card h4{font-family:var(--head);font-size:21px;line-height:1.15;margin:0}
@@ -609,6 +672,8 @@ table.q tbody tr.link{cursor:pointer}
       <button type="button" class="ddbtn" id="deskBtn" aria-expanded="false" aria-controls="deskMenu">Desks <span class="car" aria-hidden="true">▾</span></button>
       <a href="#mkt" data-desk="mkt">Earnings</a>
       <a href="#wire" data-desk="wire">Wire</a>
+      <a href="#compare" data-desk="compare">Compare</a>
+      <button type="button" class="srch-btn" id="srchBtn" aria-haspopup="dialog">Search <kbd>/</kbd></button>
     </div>
     <div class="ddmenu" id="deskMenu" hidden>
       <div class="ddgrid">
@@ -1583,6 +1648,33 @@ table.q tbody tr.link{cursor:pointer}
 </section>
 
 <section class="view" id="v-hl-deep" hidden><div id="hlDeep" class="dd-wrap"></div></section>
+
+<section class="view" id="v-compare" hidden>
+  <div><div class="kicker">Tool · How do I compare?</div><h2>Put your numbers next to the market</h2><p class="dek">Two checks in one place. Where your account sits against Triple Whale's brands in your industry, and whether your last week moved better or worse than Meta, Google and the rest did in Northbeam's index. Your numbers stay in this browser.</p></div>
+  <div class="cm-grid">
+    <div class="term">
+      <div class="th"><span class="t">Your numbers vs your industry</span><span class="m" id="cmpTwMeta"></span></div>
+      <div class="ctl"><label for="cmpInd">Industry</label><select id="cmpInd"></select><label for="cmpCh">Channel</label><select id="cmpCh"></select><button type="button" class="ta-ib" id="cmpReset" style="margin-left:auto">Clear my numbers</button></div>
+      <p class="cm-sum" id="cmpLvSum"></p>
+      <div id="cmpLv"></div>
+      <p class="note">Grey band = the middle half of brands (25th to 75th percentile); the line is the median. CTR, conversion rate and new-customer share in %, money in US$.</p>
+    </div>
+    <div class="term">
+      <div class="th"><span class="t">Your week vs the market</span><span class="m" id="cmpWkMeta"></span></div>
+      <div class="ctl"><label for="cmpPlat">Platform</label><select id="cmpPlat"></select></div>
+      <p class="cm-sum" id="cmpWkSum"></p>
+      <div id="cmpWk"></div>
+      <p class="note">Market = the platform's week-over-week change across Northbeam's customers. For costs (CPM, CPC, CAC) a smaller rise than the market is better.</p>
+    </div>
+  </div>
+</section>
+
+<div id="srch" role="dialog" aria-modal="true" aria-label="Search the newsroom" hidden>
+  <div class="sr-box">
+    <div class="sr-top"><input id="srchQ" type="search" autocomplete="off" placeholder="Ask: meta cpm, apparel roas, black friday, haus youtube…" aria-label="Search"><button type="button" id="srchX">Esc</button></div>
+    <div id="srchRes" aria-live="polite"></div>
+  </div>
+</div>
 
 <section class="view" id="v-wire" hidden>
   <div><div class="kicker">The Wire</div><h2>Every article from every source, since January</h2><p class="dek" id="wvDek">Newsletter issues, blog posts, reports, podcasts and posts from the publishers the newsroom follows, pulled from their sites and inboxes each weekday at noon.</p></div>
@@ -2868,7 +2960,7 @@ function toggleWatch(p){WATCH=WATCH.includes(p)?WATCH.filter(x=>x!==p):[...WATCH
 function buildTicker(){
   const items=[];
   PLATS.forEach(p=>['cpm','cac','roas','cvr'].forEach(m=>{const v=val(LAST,p,m);if(v==null)return;const c=goodCol(v,m in COST);items.push(`<span class="it"><b>${p.toUpperCase().replace(' ','')} ${MNAME[m]}</b><span style="color:${c}">${arrow(v)} ${fmtP(v,2)}</span></span>`)}));
-  const extra=['<span class="it"><b>META CVR WoW</b><span class="down">▼ −5.05%</span></span>','<span class="it"><b>META CPM YoY</b><span class="down">▲ +25%</span></span>','<span class="it"><b>META ROAS YoY</b><span class="up">▲ +30%</span></span>','<span class="it"><b>META nCAC YoY</b><span class="up">▼ −33%</span></span>','<span class="it"><b>AMAZON BIG DEAL DAYS</b><span class="flat">$2B pulled from BFCM</span></span>','<span class="it"><b>Q3 SPEND YoY</b><span class="flat">&gt;+30% avg</span></span>','<span class="it"><b>AI SEARCH REV SHARE</b><span class="flat">7.1% Jun 26</span></span>','<span class="it"><b>META PRICE/AD Q3</b><span class="down">▲ +14%</span></span>','<span class="it"><b>META US&amp;CA PRICE/AD</b><span class="down">▲ +23%</span></span>','<span class="it"><b>META IMPRESSIONS Q3</b><span class="flat">▲ +10%</span></span>','<span class="it"><b>MOTION HIT RATE</b><span class="flat">~5% of ads win</span></span>'];
+  const W=((WHL&&WHL.weeks)||[]).slice().sort((a,b)=>b.start.localeCompare(a.start));const extra=W.length?W[0].items.slice().sort(hlRank).filter(x=>x.figs&&x.figs.length).slice(0,10).map(x=>`<span class="it"><b>${esc((x.label||x.pub).toUpperCase())}</b><span class="flat">${esc(x.figs[0])}</span></span>`):[];
   const wi=items.filter(t=>WATCH.some(p=>t.includes('<b>'+p.toUpperCase().replace(' ','')+' ')));const all=[...wi.map(t=>t.replace('<span class="it">','<span class="it">★ ')),...extra,...items.filter(t=>!wi.includes(t))].join('');document.getElementById('ticker').innerHTML=all+all;
 }
 const STORIES=[
@@ -4257,7 +4349,142 @@ function renderHlDeep(){
   kpiStrip('ddKpis',f.kpis.map(([k,v,d,c])=>[k,v,d,col[c]||T.text]));
   document.getElementById('ddCheck').onchange=e=>{const i=e.target.dataset.i;if(i==null)return;ck[i]=e.target.checked;e.target.nextElementSibling.className=e.target.checked?'done':'';try{localStorage.setItem('ddck-'+f.id,JSON.stringify(ck))}catch(err){}};
 }
-const VIEWS={front:()=>{renderFront();renderToday()},headlines:renderHeadlines,'hl-deep':renderHlDeep,'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:()=>{renderPred();renderBfStudy();renderBf26();renderBfMeta();renderCa();renderProj();renderBfcm()},mkt:renderMkt,'mkt-google':renderMktG,'mo-bench':()=>{renderMoBench();renderCv()},'mo-trend':()=>{renderTA();renderMoTrend()},'hw-post':renderHwPost,'hw-charts':renderHwMeta,'hw-posts':renderHwPosts,'hw-news':renderHwNews,'hw-bf':renderHwBf,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,dtcnl:renderDtc,wire:renderWire};
+/* ---------- Desk freshness bar: every desk shows when its publisher last published, flags stale desks and lists the newest items (6 Nov 2026) ---------- */
+const DESK_PUBS={nb:['Northbeam'],mo:['Runneth','Motion'],haus:['Haus'],triplewhale:['Triple Whale'],foxwell:['Foxwell'],howland:['Curtis Howland'],dtcnl:['Direct to Consumer'],ctc:['CTC','Common Thread'],mkt:['Meta'],'mkt-google':['Google']};
+const DESK_NAME={nb:'Northbeam',mo:'Runneth',haus:'Haus',triplewhale:'Triple Whale',foxwell:'Foxwell',howland:'Curtis Howland',dtcnl:'Direct to Consumer',ctc:'Common Thread',mkt:'Meta earnings','mkt-google':'Google earnings'};
+const deskOf=v=>v==='mkt-google'?'mkt-google':/^hw-/.test(v)||v==='howland'?'howland':/^mkt/.test(v)?'mkt':/^(nb|mo)-/.test(v)?v.split('-')[0]:v;
+const daysAgo=d=>Math.round((Date.now()-new Date(d+'T12:00:00').getTime())/864e5);
+function pubItems(pubs){
+  const seen=new Set(),out=[];
+  LIB.filter(e=>pubs.includes(e.pub||'Northbeam')&&e.date&&!(e.tags||[]).includes('cadence')).forEach(e=>{const u=(e.url||'').split('?')[0];if(seen.has(u))return;seen.add(u);out.push({date:e.date,title:e.title,url:e.url,src:e.id})});
+  rowsOf('wire_arts').filter(r=>pubs.includes(r.pub)).forEach(r=>{const u=(r.url||'').split('?')[0];if(seen.has(u))return;seen.add(u);out.push({date:r.date,title:r.title,url:r.url})});
+  const today=new Date().toISOString().slice(0,10);
+  return out.filter(x=>x.date<=today||daysAgo(x.date)>-4).sort((a,b)=>b.date.localeCompare(a.date));
+}
+function deskPulse(v){
+  const sec=document.getElementById('v-'+v);if(!sec)return;sec.querySelector(':scope>.pulse')?.remove();
+  const dk=deskOf(v),pubs=DESK_PUBS[dk];if(!pubs)return;
+  const it=pubItems(pubs);if(!it.length)return;
+  const dd={nb:WE[LAST],triplewhale:(()=>{try{return twLatest().s}catch(e){return null}})(),mo:(()=>{try{return rowsOf('rn_ads').map(r=>r.week).sort().pop()}catch(e){return null}})()}[dk];
+  const last=[it[0].date,dd].filter(Boolean).sort().pop(),ago=Math.max(0,daysAgo(last)),stale=ago>14;
+  const el=document.createElement('div');el.className='pulse'+(stale?' stale':'');
+  el.innerHTML=`<div class="pl-h"><span class="pl-dot" aria-hidden="true"></span><b>${esc(DESK_NAME[dk])} desk</b><span>updated ${dfmt(last)} · ${ago===0?'today':ago===1?'yesterday':ago+' days ago'}${dd?` · data through ${dfmt(dd)}`:''}</span>${stale?`<span class="pl-st">Nothing new in ${ago} days</span>`:''}</div><div class="pl-l">${it.slice(0,3).map(x=>`<a href="${x.url}" target="_blank" rel="noopener"><span>${dfmt(x.date)}</span>${esc(x.title)}</a>`).join('')}</div>`;
+  const head=sec.firstElementChild;head?head.after(el):sec.prepend(el);
+}
+
+/* ---------- Search with direct answers ---------- */
+const PLAT_SYN={meta:'Meta',facebook:'Meta',instagram:'Meta',fb:'Meta',google:'Google',pmax:'Google',tiktok:'TikTok',youtube:'YouTube',applovin:'AppLovin',microsoft:'Microsoft',bing:'Microsoft',snapchat:'Snapchat',snap:'Snapchat',pinterest:'Pinterest'};
+const MET_SYN={cpm:'cpm',cpms:'cpm',ctr:'ctr','click-through':'ctr',clickthrough:'ctr',cpc:'cpc',cac:'cac',cpa:'cac',acquisition:'cac',cvr:'cvr',conversion:'cvr',conversions:'cvr',roas:'roas',share:'share',budget:'share',wallet:'share'};
+const TWM={cpm:'cpm',ctr:'ctr',cpc:'cpc',cac:'cpa',cvr:'cvr',roas:'roas'};
+const STOP=new Set('the a an of to in on for and or is are was what whats how much does do did with vs versus my our this last week weeks latest current now right me show tell about at by from it its'.split(' '));
+const tok=s=>String(s||'').toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9%$.+-]+/g,' ').split(' ').filter(w=>w&&!STOP.has(w));
+let SIDX=null;
+function searchIndex(){
+  if(SIDX)return SIDX;const D2=[],seen=new Set();
+  const W=((WHL&&WHL.weeks)||[]).slice().sort((a,b)=>b.start.localeCompare(a.start));
+  W.forEach((w,wi)=>w.items.forEach(x=>D2.push({type:'This week',w:4-Math.min(wi,2),title:x.headline,text:[x.take,x.why,...(x.points||[]),...(x.figs||[]),x.label].join(' '),pub:x.pub,date:x.date,href:x.feature?'#hl-deep/'+encodeURIComponent(x.feature):'#headlines'})));
+  ((WHL&&WHL.features)||[]).forEach(f=>D2.push({type:'Deep dive',w:4,title:f.title,text:[f.dek,...f.headlines.map(h=>h.join(' ')),...f.analysis].join(' '),pub:f.pub,date:f.date,href:'#hl-deep/'+encodeURIComponent(f.id)}));
+  (ANL||[]).forEach(a=>D2.push({type:'Analysis',w:4,title:a.title,text:[a.dek,...a.body].join(' '),pub:'Newsroom',date:a.date,an:a.id}));
+  document.querySelectorAll('section.view').forEach(s=>{const k=s.querySelector('.kicker'),h=s.querySelector('h2');if(!h||!h.textContent.trim())return;D2.push({type:'Desk',w:2,title:h.textContent.trim(),text:(k?k.textContent:'')+' '+(s.querySelector('.dek')?.textContent||''),pub:k?k.textContent.split('·')[0].trim():'',href:'#'+s.id.slice(2)})});
+  LIB.forEach(e=>{const u=(e.url||'').split('?')[0];seen.add(u);D2.push({type:'Source',w:1,title:e.title,text:[...(e.stats||[]),...(e.q||[]),(e.tags||[]).join(' ')].join(' '),pub:e.pub||'Northbeam',date:e.date,url:e.url,src:e.id})});
+  rowsOf('wire_arts').forEach(r=>{const u=(r.url||'').split('?')[0];if(seen.has(u))return;D2.push({type:'Wire',w:0,title:r.title,text:r.topics||'',pub:r.pub,date:r.date,url:r.url})});
+  D2.forEach(d=>{d.tt=tok(d.title).join(' ');d.tx=tok(d.text).join(' ');d.tp=String(d.pub||'').toLowerCase()});
+  return SIDX=D2;
+}
+function searchRank(q){
+  const T=tok(q);if(!T.length)return[];
+  return searchIndex().map(d=>{let s=0,hit=0;T.forEach(t=>{const inT=d.tt.includes(t),inX=d.tx.includes(t),inP=d.tp.includes(t);if(inT||inX||inP)hit++;s+=(inT?6:0)+(inX?1.5:0)+(inP?3:0)});
+    if(!hit)return null;s*=hit/T.length;if(hit===T.length)s+=4;s+=d.w;if(d.date){const a=daysAgo(d.date);s+=a<=7?3:a<=30?1.5:0}return{d,s}}).filter(Boolean).sort((a,b)=>b.s-a.s).map(x=>x.d);
+}
+function twLatest(){const R=rowsOf('tw_weekly');const s=R.map(r=>r.snapshot).sort().pop();return{s,R:R.filter(r=>r.snapshot===s)}}
+const twFmt=(m,v)=>v==null||v===''?'–':['ctr','cvr','ncPercent','discountRate'].includes(m)?(+v*100).toFixed(2)+'%':m==='addToCartRate'?(+v).toFixed(2)+'%':m==='roas'?(+v).toFixed(2)+'x':'$'+(+v).toFixed(2);
+function searchAnswers(q){
+  const T=tok(q),A=[];let plat=null,met=null,ind=null;
+  T.forEach(t=>{if(PLAT_SYN[t])plat=PLAT_SYN[t];if(MET_SYN[t])met=MET_SYN[t]});
+  if(/click.?through/.test(q.toLowerCase()))met='ctr';
+  const inds=[...new Set(rowsOf('tw_weekly').map(r=>r.industry))];ind=inds.find(i=>T.some(t=>t.length>3&&i.includes(t)))||null;
+  if(met){const p=plat||'Meta';const ws=WEEKS.slice(-6);const rows=ws.map(w=>MBI.find(x=>x.ws===w&&x.p===p)).filter(Boolean);const k=met==='share'?'share':met;
+    if(rows.length){const L=rows[rows.length-1],v=L[k];const cost=k in COST;
+      const dir=Math.abs(v)<0.5?'roughly flat':(v>0?'up':'down'),gd=Math.abs(v)<0.5?'':((cost?v<0:v>0)?', good news for buyers':', bad news for buyers');let st=0;for(let j=rows.length-1;j>=0&&rows[j][k]!=null&&Math.sign(rows[j][k])===Math.sign(v);j--)st++;
+      let body=met==='share'?`${p} took ${v.toFixed(2)}% of budget in the week ending ${dfmt(L.we)} (${L.sd>0?'+':''}${(L.sd??0).toFixed(2)} pts).`:`${p} ${MNAME[k]} was ${dir} (${fmtP(v,2)}) week over week in the week ending ${dfmt(L.we)}${gd}.${st>=2?` That's ${st} weeks ${v>0?'up':'down'} in a row.`:''}`;
+      const tw=TWM[met]?twLatest():null;let twl='';
+      if(tw){const ch=p==='Microsoft'?'bing':p.toLowerCase();const rr=tw.R.filter(r=>r.metric===TWM[met]&&r.channel===(TWCH[ch]?ch:'all')&&(!ind||r.industry===ind));
+        if(rr.length){if(ind){const r=rr[0];twl=`Triple Whale, ${IND_NAME(ind)}, ${TWCH[r.channel]||r.channel}: median ${twFmt(TWM[met],r.median)} (middle half ${twFmt(TWM[met],r.p25)} to ${twFmt(TWM[met],r.p75)}), 30 days to ${dfmt(r.window_end)}.`}
+          else{const med=rr.map(r=>+r.median).sort((a,b)=>a-b);twl=`Triple Whale medians for ${TWCH[rr[0].channel]||rr[0].channel} run ${twFmt(TWM[met],med[0])} to ${twFmt(TWM[met],med[med.length-1])} across ${rr.length} industries (30 days to ${dfmt(rr[0].window_end)}). Add an industry to narrow it, e.g. "apparel".`}}}
+      A.push({k:`Answer · Northbeam index${tw?' + Triple Whale':''}`,h:met==='share'?`${p} budget share: ${v.toFixed(2)}%`:`${p} ${MNAME[k]}: ${fmtP(v,2)} week over week`,p:body,spark:rows.map(r=>r[k]),wk:rows.map(r=>dfmt(r.we)),extra:twl,links:[['#nb-channels','Channel tracker'],['#compare','Compare your numbers'],tw?['#triplewhale','Triple Whale desk']:null].filter(Boolean)})}}
+  if(/\b(black|bfcm|cyber|thanksgiving)\b/.test(T.join(' '))&&!met){const now=new Date(),bf=new Date(2026,10,27),cm=new Date(2026,10,30);const d=Math.ceil((bf-now)/864e5);
+    A.push({k:'Answer · BFCM 2026',h:d>0?`${d} days to Black Friday (Fri 27 Nov)`:'Cyber Week is live',p:`Cyber Monday is Mon 30 Nov. Northbeam puts the promo window at roughly 25 Nov to 1 Dec; the median brand launched its first Black Friday ad 13 days out last year (Curtis Howland).`,links:[['#bfcm','BFCM desk'],['#hl-deep/nb-bf-guide-26','Northbeam BFCM playbook']]})}
+  const dk=Object.keys(DESK_NAME).find(k=>T.some(t=>t.length>3&&DESK_NAME[k].toLowerCase().includes(t))&&!met);
+  if(dk&&!A.length){const it=pubItems(DESK_PUBS[dk]);const href={nb:'#nb-channels',mo:'#mo-bench'}[dk]||'#'+dk;
+    if(it.length)A.push({k:'Answer · desk',h:`${DESK_NAME[dk]}: latest ${dfmt(it[0].date)}`,p:it.slice(0,3).map(x=>`${dfmt(x.date)}: ${x.title}`).join(' · '),links:[[href,`${DESK_NAME[dk]} desk`]]})}
+  if(/compare|benchmark|how am i|am i doing|good|my numbers/.test(q.toLowerCase())&&!A.some(a=>a.links.some(l=>l[0]==='#compare')))A.push({k:'Tool',h:'Compare your numbers',p:'Put in your CPM, CPA, CVR, ROAS and more to see where you sit against Triple Whale brands in your industry, and how your week moved against Northbeam\'s index.',links:[['#compare','Open the calculator']]});
+  return A;
+}
+let srchOpen=false;
+function srchRender(){
+  const q=document.getElementById('srchQ').value.trim(),box=document.getElementById('srchRes');
+  if(!q){box.innerHTML=`<div class="sr-tips"><b>Try</b> ${['meta cpm','google share','apparel roas','tiktok cac','black friday','haus youtube','ai search','howland'].map(s=>`<button type="button" class="sr-chip" data-q="${s}">${s}</button>`).join('')}</div>`;return}
+  const A=searchAnswers(q),R=searchRank(q).slice(0,40);
+  const spark=a=>{if(!a.spark)return'';const v=a.spark,mx=Math.max(...v.map(Math.abs),.01);return `<div class="sr-spark" aria-label="last ${v.length} weeks">${v.map((x,i)=>`<span title="${a.wk[i]}: ${fmtP(x,2)}"><i style="height:${Math.max(4,Math.abs(x)/mx*34)}px;background:${x<0?T.down:T.up}"></i><em>${a.wk[i].split(' ')[0]}</em></span>`).join('')}</div>`};
+  const grp={};R.forEach(d=>(grp[d.type]=grp[d.type]||[]).push(d));
+  const order=[...new Set(R.map(d=>d.type))];
+  box.innerHTML=(A.map(a=>`<div class="sr-ans"><span class="k">${esc(a.k)}</span><h4>${esc(a.h)}</h4><p>${esc(a.p)}</p>${a.extra?`<p class="sr-x">${esc(a.extra)}</p>`:''}${spark(a)}<div class="sr-lk">${a.links.map(([h,l])=>`<a href="${h}">${esc(l)} →</a>`).join('')}</div></div>`).join(''))
+    +(R.length?order.filter(o=>grp[o]).map(o=>`<div class="sr-g"><div class="sr-gh">${o} <span>${grp[o].length}</span></div>${grp[o].slice(0,o==='Wire'?8:6).map(d=>`<a class="sr-r" ${d.url?`href="${d.url}" target="_blank" rel="noopener"`:d.an?`href="#front" data-an="${d.an}"`:`href="${d.href}"`}><span class="m">${esc(d.pub||'')}${d.date?' · '+dfmt(d.date):''}</span><b>${esc(d.title)}</b></a>`).join('')}</div>`).join(''):A.length?'':`<p class="sr-none">Nothing matches "${esc(q)}". Try a platform and a metric, like "meta cvr", or a publisher.</p>`);
+}
+function srchToggle(open){srchOpen=open;const o=document.getElementById('srch');o.hidden=!open;document.documentElement.style.overflow=open?'hidden':'';if(open){const i=document.getElementById('srchQ');srchRender();setTimeout(()=>{try{i.focus()}catch(e){}},0)}else document.getElementById('srchBtn').focus()}
+function srchInit(){
+  document.getElementById('srchBtn').onclick=()=>srchToggle(true);
+  document.getElementById('srchX').onclick=()=>srchToggle(false);
+  document.getElementById('srch').addEventListener('click',e=>{if(e.target.id==='srch'){srchToggle(false);return}
+    const c=e.target.closest('.sr-chip');if(c){document.getElementById('srchQ').value=c.dataset.q;srchRender();return}
+    const a=e.target.closest('a');if(!a)return;if(a.dataset.an){e.preventDefault();srchToggle(false);location.hash='front';setTimeout(()=>{const c=document.getElementById('an-'+a.dataset.an);if(c){const d=c.querySelector('details');if(d)d.open=true;c.scrollIntoView({block:'start'})}},250);return}
+    if(a.getAttribute('href')?.startsWith('#'))srchToggle(false)});
+  let tm;document.getElementById('srchQ').addEventListener('input',()=>{clearTimeout(tm);tm=setTimeout(srchRender,120)});
+  document.getElementById('srchQ').addEventListener('keydown',e=>{if(e.key==='Enter'){const f=document.querySelector('#srchRes .sr-ans a, #srchRes .sr-r');if(f)f.click()}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&srchOpen){srchToggle(false)}else if(e.key==='/'&&!srchOpen&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){e.preventDefault();srchToggle(true)}});
+}
+
+/* ---------- How do I compare? (#compare) ---------- */
+const CMP_M=[['roas','ROAS','x',false],['cpa','CPA','$',true],['cpm','CPM','$',true],['cpc','CPC','$',true],['ctr','CTR','%',false],['cvr','Conversion rate','%',false],['aov','AOV','$',false],['ncPercent','New-customer share','%',false]];
+const CMP_W=[['cpm','CPM',true],['ctr','CTR',false],['cpc','CPC',true],['cac','New-customer CAC',true],['cvr','Conversion rate',false],['roas','ROAS',false]];
+let cmpS={ind:'apparel_and_accessories',ch:'meta',plat:'Meta',lv:{},wk:{}};
+try{Object.assign(cmpS,JSON.parse(localStorage.getItem('dtcn-cmp')||'{}'))}catch(e){}
+const cmpSave=()=>{try{localStorage.setItem('dtcn-cmp',JSON.stringify(cmpS))}catch(e){}};
+const toUnit=(m,v,unit)=>unit==='%'?v*100:v,fromUnit=(m,v,unit)=>unit==='%'?v/100:v;
+function renderCmpTool(){
+  const tw=twLatest();const inds=[...new Set(tw.R.map(r=>r.industry))].sort();if(!inds.includes(cmpS.ind))cmpS.ind=inds[0];
+  const chans=[...new Set(tw.R.filter(r=>r.industry===cmpS.ind).map(r=>r.channel))];if(!chans.includes(cmpS.ch))cmpS.ch='all';
+  const iS=document.getElementById('cmpInd'),cS=document.getElementById('cmpCh'),pS=document.getElementById('cmpPlat');
+  iS.innerHTML=inds.map(i=>`<option value="${i}"${i===cmpS.ind?' selected':''}>${IND_NAME(i)}</option>`).join('');
+  cS.innerHTML=chans.map(c=>`<option value="${c}"${c===cmpS.ch?' selected':''}>${TWCH[c]||c}</option>`).join('');
+  pS.innerHTML=CORE.map(p=>`<option${p===cmpS.plat?' selected':''}>${p}</option>`).join('');
+  document.getElementById('cmpTwMeta').textContent=`Triple Whale · $1M–$10M brands · 30 days to ${dfmt(tw.R[0]?.window_end||tw.s,true)}`;
+  const row=m=>tw.R.find(r=>r.industry===cmpS.ind&&r.channel===cmpS.ch&&r.metric===m);
+  let good=0,n=0;
+  document.getElementById('cmpLv').innerHTML=CMP_M.map(([m,lab,unit,lowGood])=>{const r=row(m);if(!r)return'';
+    const p25=+r.p25,md=+r.median,p75=+r.p75;const raw=cmpS.lv[m];const has=raw!==undefined&&raw!==''&&!isNaN(raw);const yv=has?fromUnit(m,+raw,unit):null;
+    const lo=Math.min(p25,yv??p25)*0.85,hi=Math.max(p75,yv??p75)*1.1;const X=v=>Math.max(0,Math.min(100,(v-lo)/(hi-lo)*100));
+    let verdict='Type your number',cls='';if(has){n++;const q=yv<p25?0:yv<md?1:yv<p75?2:3;const rank=lowGood?3-q:q;if(rank>=2)good++;verdict=['Bottom quarter','Below median','Above median','Top quarter'][rank];cls=['bad','meh','ok','good'][rank]}
+    const ph=toUnit(m,md,unit);
+    return `<div class="cm-row"><label for="cmp-${m}">${lab}<span>${lowGood?'lower is better':'higher is better'}</span></label><div class="cm-in"><span>${unit==='$'?'$':''}</span><input id="cmp-${m}" type="number" inputmode="decimal" step="any" data-m="${m}" placeholder="${(+ph.toFixed(unit==='%'?2:2))}" value="${has?raw:''}"><span>${unit==='%'?'%':unit==='x'?'x':''}</span></div>
+      <div class="cm-track" aria-hidden="true"><i class="band" style="left:${X(p25)}%;width:${X(p75)-X(p25)}%"></i><i class="med" style="left:${X(md)}%"></i>${has?`<i class="you ${cls}" style="left:${X(yv)}%"></i>`:''}</div>
+      <div class="cm-v ${cls}"><b>${verdict}</b><span>median ${twFmt(m==='ncPercent'?'ncPercent':m,md)} · middle half ${twFmt(m,p25)} to ${twFmt(m,p75)}</span></div></div>`}).join('');
+  document.getElementById('cmpLvSum').textContent=n?`${good} of ${n} numbers you entered are in the better half for ${IND_NAME(cmpS.ind)} on ${TWCH[cmpS.ch]||cmpS.ch}.`:'Placeholders show the median brand. Type your own numbers to see where you sit.';
+  const L=MBI.find(x=>x.ws===LAST&&x.p===cmpS.plat)||{};let beat=0,wn=0;
+  document.getElementById('cmpWkMeta').textContent=`Northbeam index · ${cmpS.plat} · week ending ${dfmt(WE[LAST],true)}`;
+  document.getElementById('cmpWk').innerHTML=CMP_W.map(([m,lab,cost])=>{const mv=L[m];if(mv==null)return'';const raw=cmpS.wk[m];const has=raw!==undefined&&raw!==''&&!isNaN(raw);
+    let txt='Type your week-over-week change',cls='';if(has){wn++;const gap=+raw-mv;const better=cost?gap<0:gap>0;if(better)beat++;cls=Math.abs(gap)<0.5?'meh':better?'good':'bad';txt=Math.abs(gap)<0.5?'In line with the market':`${better?'Better':'Worse'} than the market by ${Math.abs(gap).toFixed(1)} pts`}
+    return `<div class="cm-wrow"><label for="cmpw-${m}">${lab}</label><div class="cm-mk" style="color:${goodCol(mv,cost)}">${fmtP(mv,2)}<span>market</span></div><div class="cm-in"><input id="cmpw-${m}" type="number" inputmode="decimal" step="any" data-w="${m}" placeholder="e.g. ${mv>0?'+':''}${(+mv).toFixed(1)}" value="${has?raw:''}"><span>%</span></div><div class="cm-v ${cls}"><b>${txt}</b></div></div>`}).join('');
+  document.getElementById('cmpWkSum').textContent=wn?`You beat the market on ${beat} of ${wn} measures this week.`:'Enter how your own numbers changed week over week (e.g. -3 for a 3% drop).';
+  cmpSave();
+}
+function cmpInit(){
+  const v=document.getElementById('v-compare');
+  v.addEventListener('change',e=>{const t=e.target;if(t.id==='cmpInd')cmpS.ind=t.value;else if(t.id==='cmpCh')cmpS.ch=t.value;else if(t.id==='cmpPlat')cmpS.plat=t.value;else return;renderCmpTool()});
+  v.addEventListener('input',e=>{const t=e.target;if(t.dataset.m){cmpS.lv[t.dataset.m]=t.value}else if(t.dataset.w){cmpS.wk[t.dataset.w]=t.value}else return;clearTimeout(cmpInit.t);cmpInit.t=setTimeout(()=>{const id=t.id,pos=t.selectionStart;renderCmpTool();const n=document.getElementById(id);if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(err){}}},350)});
+  document.getElementById('cmpReset').onclick=()=>{cmpS.lv={};cmpS.wk={};renderCmpTool()};
+}
+const VIEWS={front:()=>{renderFront();renderToday()},headlines:renderHeadlines,'hl-deep':renderHlDeep,compare:renderCmpTool,'nb-channels':()=>{renderCompare();renderTracker()},'nb-share':renderShare,'nb-bench':()=>{renderLens();renderBench()},'nb-creative':renderCreative,'nb-q4':renderQ4,'nb-meta':renderMeta,'nb-library':()=>{renderLib();renderDS()},bfcm:()=>{renderPred();renderBfStudy();renderBf26();renderBfMeta();renderCa();renderProj();renderBfcm()},mkt:renderMkt,'mkt-google':renderMktG,'mo-bench':()=>{renderMoBench();renderCv()},'mo-trend':()=>{renderTA();renderMoTrend()},'hw-post':renderHwPost,'hw-charts':renderHwMeta,'hw-posts':renderHwPosts,'hw-news':renderHwNews,'hw-bf':renderHwBf,'mo-research':renderMoResearch,haus:renderHaus,triplewhale:renderTW,ctc:renderCTC,trends:renderTrends,foxwell:renderFoxwell,howland:renderHowland,dtcnl:renderDtc,wire:renderWire};
 SEGBIND('mtView',b=>{mtView=b.dataset.v;renderMeta()});
 document.getElementById('mtEvents').addEventListener('change',renderMeta);
 const PUBDESKS=['nb','mo','ctc','haus','triplewhale','foxwell','howland','dtcnl'];
@@ -4279,6 +4506,7 @@ function show(){let v=(location.hash||'#front').slice(1);const sl=v.indexOf('/')
   document.querySelectorAll('.subrow').forEach(r=>r.hidden=r.dataset.for!==desk);
   document.querySelectorAll('.subrow a').forEach(a=>a.getAttribute('href')==='#'+v?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
   try{VIEWS[v]()}catch(e){console.error(e)}
+  try{deskPulse(v)}catch(e){console.error(e)}
   try{buildJump(v)}catch(e){console.error(e)}
 }
 function buildJump(v){
@@ -4318,6 +4546,7 @@ document.addEventListener('click',e=>{const st=e.target.closest('[data-star]');i
 document.getElementById('drawerClose').addEventListener('click',closeSources);document.getElementById('scrim').addEventListener('click',closeSources);
 injectSources();
 try{const tl=dfmt(WE[LAST],false)+' '+WE[LAST].slice(0,4);document.getElementById('thru').textContent=tl;document.querySelectorAll('.thru2').forEach(e=>e.textContent=tl);document.getElementById('nwk').textContent=String(WEEKS.length);document.getElementById('dateline').firstChild.textContent=new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}catch(e){}
+try{srchInit();cmpInit()}catch(e){console.error(e)}
 (function(){const now=new Date(),bf=new Date(2026,10,27),cm=new Date(2026,10,30,23,59);const d=Math.ceil((bf-now)/864e5);const el=document.getElementById('countdown');el.innerHTML=d>0?`<b>${d}</b> days to Black Friday · Cyber Monday 30 Nov`:(now<=cm?'<b>Cyber Week</b> is live':'<b>Q5</b> window: late Dec – mid Jan')})();
 buildTicker();show();
 </script>

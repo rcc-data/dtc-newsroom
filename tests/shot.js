@@ -1,6 +1,6 @@
 const {chromium}=require('playwright');const fs=require('fs');
 (async()=>{const b=await chromium.launch();
-const views=process.argv[2]?process.argv[2].split(','):['front','nb-channels','nb-share','nb-bench','nb-creative','nb-q4','nb-meta','nb-library','wire','dtcnl','headlines','hl-deep'];
+const views=process.argv[2]?process.argv[2].split(','):['front','nb-channels','nb-share','nb-bench','nb-creative','nb-q4','nb-meta','nb-library','wire','dtcnl','headlines','hl-deep','compare','haus','triplewhale'];
 for(const [w,h,scheme,tag] of [[1280,900,'light','d'],[400,860,'dark','m']]){
  const p=await b.newPage({viewport:{width:w,height:h},colorScheme:scheme});
  await p.route('**/chart.umd.js',r=>r.fulfill({body:fs.readFileSync('/tmp/cj/package/dist/chart.umd.js','utf8'),contentType:'application/javascript'}));

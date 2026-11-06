@@ -85,6 +85,11 @@ Runneth says only "Updated weekly" and gives no day; on Wed 4 Nov 2026 its lists
 2. Append rows to `data/motion_trending.csv`: `snapshot,list,rank,brand,aspect,active_days` (snapshot = today, list = `all` or the slug). Keep older snapshots. Fix escapes (`\u0026` → `&`).
 3. Check https://runneth.com/sitemap-index.xml for new `/thumbstop-pulse/` or `/research/` pages; add new reports as data + library entries (`pub="Motion"`).
 
+## Triple Whale: automatic capture (added 6 Nov 2026, Ryan asked for more Triple Whale data)
+- Next laptop pass (one-off): in the built-in browser on benchmark.triplewhalelabs.com, record the exact `/api/cohort` request the page makes and write `tools/tw_api.json` with `url_template` (absolute URL, with `{industry}`, `{band}`, `{start}`, `{end}` in place of those values), `industries` (the 12 slugs in data/tw_benchmarks_weekly.csv) and `bands` (every GMV band the page's revenue filter offers, not just 1m-10m). Commit it. Then capture this week for every band by hand as below.
+- From then on GitHub Actions (`tw_capture` in tools/fetch_sources.py) saves the raw JSON for every industry and band on Mondays and Thursdays to `notes/fetched/TW-API/<date>/`. The morning pass turns each new folder into rows in data/tw_benchmarks_weekly.csv (snapshot = that date, gmv_band = the band) using the same columns and metrics, and the Triple Whale desk, its read and Compare update themselves. If LAST_RUN says TWAPI failed, the laptop pass captures that week in the browser instead.
+- Add a band selector to the Triple Whale desk and Compare once a second band has data.
+
 ## Weekly — Triple Whale benchmarks snapshot
 1. Open https://benchmark.triplewhalelabs.com/benchmarks/health_and_wellness/ in the built-in browser and note the `/api/cohort?...&dateStart=…&dateEnd=…` request the page makes (trailing 30 days ending today).
 2. For the 12 industries already in `data/tw_benchmarks_weekly.csv`, request that same cohort view (gmvBand=1m-10m, aovBand=any, the page's own date window) and append rows: `snapshot,window_start,window_end,industry,gmv_band,channel,cohort_size,metric,p25,median,p75` for `total` (channel `all`) and each `byChannel` entry, metrics roas,cpa,cpm,cpc,ctr,cvr,aov,ncPercent,addToCartRate,discountRate.

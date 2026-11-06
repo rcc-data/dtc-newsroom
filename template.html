@@ -522,6 +522,16 @@ table.q tbody tr.link{cursor:pointer}
 .cm-wrow label{grid-area:l;font:600 13px var(--mono);color:var(--t-text)}.cm-wrow .cm-mk{grid-area:m;font:600 15px var(--mono);display:flex;flex-direction:column;text-align:right}.cm-wrow .cm-in{grid-area:i}.cm-wrow .cm-v{grid-area:v}
 @media (max-width:560px){.cm-row{grid-template-columns:minmax(0,1fr) 120px;grid-template-areas:"l i" "t t" "v v"}}
 @media (prefers-reduced-motion:reduce){.cm-track .you{transition:none}}
+.dread{border-top:3px solid var(--flag);border-bottom:1px solid var(--rule);padding:12px 0 14px;display:flex;flex-direction:column;gap:6px}
+.dread h3{font-family:var(--head);font-size:clamp(22px,2.6vw,30px);line-height:1.12;margin:2px 0 0;text-wrap:balance}
+.dread .dek{margin:0}
+.dread ol{margin:6px 0 0;padding:0;list-style:none;counter-reset:dr;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:0 22px}
+.dread li{counter-increment:dr;display:flex;flex-direction:column;gap:4px;padding:10px 0;border-top:1px solid var(--hair)}
+.dread li b{font-family:var(--head);font-size:18px;line-height:1.2}
+.dread li b::before{content:counter(dr,decimal-leading-zero) "  ";font:600 12px var(--mono);color:var(--flag)}
+.dread li span{font-size:14px;color:var(--ink-2);line-height:1.5}
+.dread .dr-l{display:flex;gap:12px;align-items:center;font:600 11.5px var(--mono)}
+.dread .dr-l a{color:var(--flag);text-decoration:none}
 .an-card{background:var(--paper-2);border:1px solid var(--hair);border-top:3px solid var(--flag);padding:14px 16px;display:flex;flex-direction:column;gap:6px}
 .an-card .k{font:600 10.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--flag)}
 .an-card h4{font-family:var(--head);font-size:21px;line-height:1.15;margin:0}
@@ -1704,6 +1714,7 @@ const HWX=/*__HWX__*/null;
 const DTCH=/*__DTCH__*/null;
 const ANL=/*__ANL__*/null;
 const WHL=/*__WHL__*/null;
+const RDS=/*__RDS__*/null;
 const BF26B=/*__BF26B__*/null;
 const BFPRED=/*__BFPRED__*/null;
 const HWBF=/*__HWBF__*/null;
@@ -3190,6 +3201,33 @@ function deskPulse(v){
   const head=sec.firstElementChild;head?head.after(el):sec.prepend(el);
 }
 
+/* ---------- Desk reads: editorial layer. Haus is written (data/desk_reads.json); Triple Whale writes itself from the two newest snapshots ---------- */
+function twAutoRead(){
+  const R=rowsOf('tw_weekly');const S=[...new Set(R.map(r=>r.snapshot))].sort();if(S.length<1)return null;const s1=S[S.length-1],s0=S.length>1?S[S.length-2]:null;
+  const g=(s,ind,ch,m)=>{const r=R.find(x=>x.snapshot===s&&x.industry===ind&&x.channel===ch&&x.metric===m);return r?+r.median:null};
+  const inds=[...new Set(R.filter(r=>r.snapshot===s1).map(r=>r.industry))];const pct=(a,b)=>a&&b?(a/b-1)*100:null;const med=a=>{const v=a.filter(x=>x!=null).sort((x,y)=>x-y);return v.length?v[Math.floor(v.length/2)]:null};
+  const pts=[];let title='',dek='';
+  if(s0){const ch=inds.map(i=>({i,c:pct(g(s1,i,'meta','cpm'),g(s0,i,'meta','cpm'))})).filter(x=>x.c!=null);const up=ch.filter(x=>x.c>0).length,dn=ch.length-up;const mc=med(ch.map(x=>x.c));
+    title=`Meta CPMs ${up>dn?'rose':'fell'} in ${Math.max(up,dn)} of ${ch.length} industries since ${dfmt(s0)}`;
+    dek=`Triple Whale's trailing-30-day benchmarks for $1M–$10M brands, ${dfmt(s0)} against ${dfmt(s1)}. Windows overlap, so small moves are real but smoothed. This read rewrites itself with every new snapshot.`;
+    const sorted=ch.slice().sort((a,b)=>b.c-a.c);
+    pts.push({h:Math.abs(mc)<0.05?'Median industry: Meta CPM flat':`Median industry: Meta CPM ${mc>0?'+':''}${mc.toFixed(1)}%`,p:`Biggest rise: ${IND_NAME(sorted[0].i)} (${sorted[0].c>0?'+':''}${sorted[0].c.toFixed(1)}%). Biggest fall: ${IND_NAME(sorted[sorted.length-1].i)} (${sorted[sorted.length-1].c.toFixed(1)}%).`,src:'tw-weekly'});
+    const rc=inds.map(i=>({i,c:pct(g(s1,i,'meta','roas'),g(s0,i,'meta','roas'))})).filter(x=>x.c!=null).sort((a,b)=>b.c-a.c);
+    if(rc.length)pts.push({h:`Meta ROAS: ${rc.filter(x=>x.c>0).length} of ${rc.length} industries improved`,p:`Best: ${IND_NAME(rc[0].i)} (${rc[0].c>0?'+':''}${rc[0].c.toFixed(1)}%). Worst: ${IND_NAME(rc[rc.length-1].i)} (${rc[rc.length-1].c.toFixed(1)}%).`,src:'tw-weekly'})}
+  else{title=`Where each industry stands, 30 days to ${dfmt(s1)}`;dek='Triple Whale trailing-30-day benchmarks for $1M–$10M brands.'}
+  const ro=inds.map(i=>({i,v:g(s1,i,'all','roas')})).filter(x=>x.v!=null).sort((a,b)=>b.v-a.v);
+  if(ro.length)pts.push({h:`Highest ROAS: ${IND_NAME(ro[0].i)} at ${ro[0].v.toFixed(2)}x`,p:`Lowest: ${IND_NAME(ro[ro.length-1].i)} at ${ro[ro.length-1].v.toFixed(2)}x (median brand, all channels). Use Compare to place your own account.`,src:'tw-weekly',to:'#compare'});
+  const nc=med(inds.map(i=>g(s1,i,'all','ncPercent')));if(nc!=null)pts.push({h:`New customers: ${(nc*100).toFixed(0)}% of orders for the median industry`,p:'Share of orders from first-time buyers, all channels. Expect it to dip as BFCM pulls in repeat buyers.',src:'tw-weekly'});
+  const nb=MBI.find(x=>x.ws===LAST&&x.p==='Meta');if(nb)pts.push({h:`Cross-check: Northbeam's index, Meta CPM ${fmtP(nb.cpm,2)} week over week`,p:`Northbeam's week ending ${dfmt(WE[LAST])} and Triple Whale's 30-day window measure different brand sets, so read direction, not size.`,src:'mb-weekly',to:'#nb-channels'});
+  return{kicker:'The read · writes itself from each snapshot',title,dek,date:s1,points:pts};
+}
+function deskRead(v){
+  const sec=document.getElementById('v-'+v);if(!sec)return;sec.querySelector(':scope>.dread')?.remove();
+  const r=v==='triplewhale'?twAutoRead():(RDS&&RDS[v]);if(!r||!r.points||!r.points.length)return;
+  const el=document.createElement('section');el.className='dread';el.setAttribute('aria-label','The read');
+  el.innerHTML=`<div class="kicker">${esc(r.kicker)} · ${dfmt(r.date)}</div><h3>${esc(r.title)}</h3><p class="dek">${esc(r.dek)}</p><ol>${r.points.map(p=>`<li><b>${esc(p.h)}</b><span>${esc(p.p)}</span><span class="dr-l">${p.src?srcBtn(p.src,'SOURCE'):''}${p.to&&p.to!=='#'+v?`<a href="${p.to}">More →</a>`:''}</span></li>`).join('')}</ol>`;
+  const pl=sec.querySelector(':scope>.pulse');(pl||sec.firstElementChild).after(el);
+}
 /* ---------- Search with direct answers ---------- */
 const PLAT_SYN={meta:'Meta',facebook:'Meta',instagram:'Meta',fb:'Meta',google:'Google',pmax:'Google',tiktok:'TikTok',youtube:'YouTube',applovin:'AppLovin',microsoft:'Microsoft',bing:'Microsoft',snapchat:'Snapchat',snap:'Snapchat',pinterest:'Pinterest'};
 const MET_SYN={cpm:'cpm',cpms:'cpm',ctr:'ctr','click-through':'ctr',clickthrough:'ctr',cpc:'cpc',cac:'cac',cpa:'cac',acquisition:'cac',cvr:'cvr',conversion:'cvr',conversions:'cvr',roas:'roas',share:'share',budget:'share',wallet:'share'};
@@ -3325,6 +3363,7 @@ function show(){let v=(location.hash||'#front').slice(1);const sl=v.indexOf('/')
   document.querySelectorAll('.subrow a').forEach(a=>a.getAttribute('href')==='#'+v?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
   try{VIEWS[v]()}catch(e){console.error(e)}
   try{deskPulse(v)}catch(e){console.error(e)}
+  try{deskRead(v)}catch(e){console.error(e)}
   try{buildJump(v)}catch(e){console.error(e)}
 }
 function buildJump(v){

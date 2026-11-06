@@ -346,16 +346,20 @@ def runneth_watch():
             failed.append(f'{c} ({err or "could not read the ranked list"})')
             continue
         old = state.get(c, {}).get('brands', [])
-        if old and brands[:10] == old[:10]:
+        moved = sum(1 for i, b in enumerate(brands[:30]) if i >= len(old) or old[i] != b)
+        new_brands = len(set(brands[:30]) - set(old[:30])) if old else 30
+        if old and new_brands < 5 and moved < 15:
+            # Same list with a few ranks swapped: a reshuffle, not Runneth's weekly turnover
             unchanged.append(c)
+            if moved:
+                LOG.append(f'RUNNETH: {c} reshuffled ({moved} ranks moved, {new_brands} new brands), not a weekly update')
         else:
-            moved = sum(1 for i, b in enumerate(brands[:30]) if i >= len(old) or old[i] != b)
-            changed.append((c, moved, brands[:3]))
+            changed.append((c, new_brands, brands[:3]))
             state[c] = {'brands': brands, 'since': today, 'source': 'watch'}
     json.dump(state, open(sp, 'w'), ensure_ascii=False, indent=1)
     lines = []
     if changed:
-        lines.append('RUNNETH: UPDATED ' + '; '.join(f'{c} ({m} of 30 ranks changed, new top 3: {", ".join(t)})' for c, m, t in changed))
+        lines.append('RUNNETH: UPDATED ' + '; '.join(f'{c} ({m} of 30 brands new, new top 3: {", ".join(t)})' for c, m, t in changed))
     if unchanged:
         lines.append('RUNNETH: unchanged ' + ', '.join(f'{c} (same since {state[c]["since"]})' for c in unchanged))
     if failed:
@@ -367,11 +371,41 @@ def runneth_watch():
         if new:
             f.write('date,category,status,detail\n')
         for c, m, t in changed:
-            f.write(f'{today},{c},updated,"{m} ranks changed; top 3 {" / ".join(t)}"\n')
+            f.write(f'{today},{c},updated,"{m} of 30 brands new; top 3 {" / ".join(t)}"\n')
         for c in unchanged:
             f.write(f'{today},{c},unchanged,since {state[c]["since"]}\n')
         for c in failed:
             f.write(f'{today},{c.split(" ")[0]},failed,\n')
+
+
+def tw_capture():
+    """Triple Whale benchmarks straight from GitHub's servers (added 6 Nov 2026). Runs only once the laptop pass
+    has written tools/tw_api.json: {"url_template": "...{industry}...{band}...{start}...{end}...",
+    "industries": [...], "bands": [...]}. Saves the raw JSON for the morning pass to turn into CSV rows.
+    Mondays and Thursdays only, trailing 30 days ending today (never past windows)."""
+    cfg_p = 'tools/tw_api.json'
+    if not os.path.exists(cfg_p):
+        LOG.append('TWAPI: waiting for tools/tw_api.json from the laptop pass')
+        return
+    if datetime.utcnow().weekday() not in (0, 3):
+        return
+    cfg = json.load(open(cfg_p))
+    end = datetime.utcnow().strftime('%Y-%m-%d')
+    start = (datetime.utcnow() - timedelta(days=30)).strftime('%Y-%m-%d')
+    out = f'notes/fetched/TW-API/{end}'
+    os.makedirs(out, exist_ok=True)
+    ok = bad = 0
+    for ind in cfg.get('industries', []):
+        for band in cfg.get('bands', ['1m-10m']):
+            url = cfg['url_template'].format(industry=ind, band=band, start=start, end=end)
+            try:
+                j = get(url, delay=1.0, as_json=True)
+                json.dump(j, open(f'{out}/{ind}__{band}.json', 'w'))
+                ok += 1
+            except Exception as e:
+                bad += 1
+                LOG.append(f'TWAPI: {ind} {band} failed: {e}')
+    LOG.append(f'TWAPI: {ok} cohorts saved for {start} to {end}' + (f', {bad} failed' if bad else ''))
 
 
 if __name__ == '__main__':
@@ -385,6 +419,10 @@ if __name__ == '__main__':
     run('GRAPHITE', graphite)
     run('DTCNL', dtcnl)
     run('HWSS', hwss)
+    try:
+        tw_capture()
+    except Exception as e:
+        LOG.append(f'TWAPI: SKIPPED ({e})')
     try:
         runneth_watch()
     except Exception as e:

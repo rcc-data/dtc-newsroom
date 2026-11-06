@@ -27,7 +27,8 @@
   --t-bg:#0a0d0c; --t-panel:#101513; --t-line:#232c28; --t-text:#d9e1dd; --t-dim:#7f8c87; --t-amber:#ffb020; --t-up:#2fd27a; --t-down:#ff5a4f; --t-blue:#5aa9ff;
   --head:"Newsreader",Georgia,"Times New Roman",serif;
   --body:"Public Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --mono:"Public Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --num:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#141413;--paper-2:#1b1b19;--ink:#ecebe5;--ink-2:#a9a8a0;--rule:#d9d8d0;--hair:#34342f;--flag:#ff4d5a;color-scheme:dark}}
 :root[data-theme="dark"]{--paper:#141413;--paper-2:#1b1b19;--ink:#ecebe5;--ink-2:#a9a8a0;--rule:#d9d8d0;--hair:#34342f;--flag:#ff4d5a;color-scheme:dark}
@@ -600,6 +601,72 @@ table.q tbody tr.link{cursor:pointer}
 .cv-src .c b{font:700 14px var(--body)}
 .cv-src .c ul{margin:0;padding-left:16px;color:#b9c4bf}
 .cv-src .c q{font-family:var(--head);font-style:italic;color:#e7e3d8}
+
+/* ---- Readability pass (6 Nov 2026): more room around text and charts; mono kept only for figures ---- */
+.strip .v,table.q,.rp-stat .v,.desktile .dt-num,.big,.countdown b,.cm-in input,.cm-mk,.bf-mb-out .big,.pr-nums em,.ta-kv b,.rp-num,.ticker .it span{font-family:var(--num)}
+main .wrap{gap:34px}
+section.view{gap:34px}
+.dek{line-height:1.6;margin-top:12px}
+.byline{margin-top:12px;line-height:1.7}
+.kicker{margin-bottom:4px}
+h2{margin-top:6px}
+.term{padding:20px;gap:16px}
+.term .th{padding-bottom:12px}
+.term p.note{line-height:1.6}
+.chart{margin-block:6px}
+.grid2,.grid3{gap:24px}
+.strip .s{padding:16px 18px}
+.strip .d{margin-top:4px;line-height:1.45}
+.story{padding:18px 0;gap:8px}
+.story p{line-height:1.6}
+.front .lead{padding-right:30px}.front .side{padding-left:30px}
+.section-head{padding-bottom:10px;margin-top:8px}
+.takes .story,.cols3>.story,.wire .story,.playbook .story{padding:18px 22px 18px 12px}
+.today{gap:24px}
+.an-card{padding:18px 20px;gap:10px}
+.an-card p{line-height:1.6}
+.tl-list a{padding:11px 0;gap:10px}
+.dread{gap:10px;padding:16px 0 18px}
+.dread li{padding:14px 0;gap:6px}
+.pulse{padding:12px 16px;gap:8px}
+.pl-l{gap:5px}
+.rp-sec{padding:40px 0;gap:20px 40px}
+.rp-txt{gap:14px}
+.rp-take{line-height:1.65}
+.rp-detail{padding:20px 22px;gap:22px 36px}
+.hl-just .j{padding:16px 18px 16px 0;padding-left:18px;gap:8px}
+.dd-wrap{gap:28px}
+.dd-hl .h{padding:18px 22px 18px 0}
+.dd-act li{padding:14px 0}
+.dd-push{gap:16px}.dd-push .p{padding:16px 18px}
+.lib article{padding:18px 0}
+.hm-ch{gap:16px}
+@media (max-width:860px){
+  .front .lead{padding-right:0}.front .side{padding-left:0}
+  .front>*{padding:22px 0}
+  section.view,main .wrap{gap:30px}
+  .term{padding:16px 16px 18px}
+  .strip .s{padding:14px 16px;border-right:0;border-bottom:1px solid var(--t-line)}
+  .strip .s:last-child{border-bottom:0}
+  .story{padding:20px 0}
+  .rp-sec{padding:34px 0}
+}
+.chunknav{position:sticky;top:var(--navh,0px);z-index:6;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;background:var(--paper);border-bottom:1px solid var(--rule);padding:8px 0}
+.chunknav::-webkit-scrollbar{display:none}
+.chunknav button{flex:0 0 auto;display:inline-flex;gap:8px;align-items:baseline;font:600 13px var(--body);color:var(--ink-2);background:transparent;border:0;border-bottom:3px solid transparent;padding:8px 12px;cursor:pointer;white-space:nowrap}
+.chunknav button span{font:600 11px var(--body);color:var(--ink-2);opacity:.7}
+.chunknav button[aria-current="true"]{color:var(--ink);border-bottom-color:var(--flag)}
+.chunknav button[aria-current="true"] span{color:var(--flag);opacity:1}
+.chunknav button:hover{color:var(--ink)}
+.chunk{display:flex;flex-direction:column;gap:34px}
+.chunkfoot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--hair);padding-top:16px}
+.chunkfoot button{font:600 14px var(--body);color:var(--ink);background:var(--paper-2);border:1px solid var(--hair);padding:12px 16px;cursor:pointer;text-align:left;max-width:100%}
+.chunkfoot button.next{margin-left:auto;border-color:var(--rule)}
+.chunkfoot button:hover{border-color:var(--ink)}
+.rp-pager{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:6px 0}
+.rp-pager button{font:600 13px var(--body);color:var(--ink-2);background:var(--paper-2);border:1px solid var(--hair);padding:9px 14px;cursor:pointer}
+.rp-pager button[aria-current="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+@media (max-width:860px){.chunk{gap:30px}.chunknav button{padding:8px 10px}}
 </style>
 
 <!-- Passcode wall (for fun, not security) -->
@@ -1427,6 +1494,7 @@ table.q tbody tr.link{cursor:pointer}
   <div><div class="kicker">Triple Whale · Weekly benchmarks</div><h2>Where each industry stands this month</h2><p class="dek">A weekly snapshot of Triple Whale's free benchmarks: brands with $1–10M annual revenue, trailing 30 days, 12 DTC industries, every channel. Only real snapshots are kept. Triple Whale's tool will return past date ranges, but those are a scaled seasonal index rather than weekly data, so history builds from 28 October 2026.</p></div>
   <div class="strip" id="twKpis"></div>
   <div class="term">
+    <div class="th"><span class="t">By industry</span><span class="m">25th to 75th percentile, median marked</span></div>
     <div class="ctl" style="flex-wrap:wrap">
       <label for="twMetric">Metric</label><select id="twMetric"><option value="roas">ROAS</option><option value="cpa">CPA</option><option value="cpm">CPM</option><option value="cpc">CPC</option><option value="ctr">CTR</option><option value="cvr">CVR</option><option value="aov">AOV</option><option value="ncPercent">New-customer %</option></select>
       <label for="twChan">Channel</label><select id="twChan"></select>
@@ -2927,12 +2995,12 @@ const MNAME={cpm:"CPM",ctr:"CTR",cpc:"CPC",cac:"CAC (new)",cvr:"CVR",roas:"ROAS"
 const COST={cpm:1,cpc:1,cac:1};
 const charts={};
 const HAS_CHART=typeof Chart!=='undefined';
-if(HAS_CHART){Chart.defaults.font.family='"IBM Plex Mono",ui-monospace,Menlo,monospace';Chart.defaults.font.size=11;Chart.defaults.color=T.dim;Chart.defaults.borderColor=T.line;Chart.defaults.maintainAspectRatio=false;Chart.defaults.plugins.legend.labels.boxWidth=9;Chart.defaults.plugins.legend.labels.boxHeight=9;Chart.defaults.plugins.legend.labels.color=T.text;Chart.defaults.plugins.tooltip.backgroundColor='#000';Chart.defaults.plugins.tooltip.borderColor=T.line;Chart.defaults.plugins.tooltip.borderWidth=1;if(matchMedia('(prefers-reduced-motion: reduce)').matches){Chart.defaults.animation.duration=0}else{Chart.defaults.animation.duration=450;Chart.defaults.animation.easing='easeOutQuart'}
+if(HAS_CHART){Chart.defaults.font.family='"Public Sans",ui-sans-serif,system-ui,sans-serif';Chart.defaults.font.size=11.5;Chart.defaults.layout.padding={top:10,right:10,bottom:4,left:4};Chart.defaults.color=T.dim;Chart.defaults.borderColor=T.line;Chart.defaults.maintainAspectRatio=false;Chart.defaults.plugins.legend.labels.boxWidth=9;Chart.defaults.plugins.legend.labels.boxHeight=9;Chart.defaults.plugins.legend.labels.color=T.text;Chart.defaults.plugins.tooltip.backgroundColor='#000';Chart.defaults.plugins.tooltip.borderColor=T.line;Chart.defaults.plugins.tooltip.borderWidth=1;if(matchMedia('(prefers-reduced-motion: reduce)').matches){Chart.defaults.animation.duration=0}else{Chart.defaults.animation.duration=450;Chart.defaults.animation.easing='easeOutQuart'}
   /* Colours are never animated: an un-typed colour animation throws inside Chart.js's shared animation loop and blanks every chart on the page. */
   Chart.defaults.animations.colors=false;
-  Chart.defaults.interaction.mode='index';Chart.defaults.interaction.intersect=false;Chart.defaults.interaction.axis='x';Chart.defaults.elements.point.radius=2;Chart.defaults.elements.point.hitRadius=16;Chart.defaults.plugins.tooltip.itemSort=(a,b)=>(b.parsed.y??b.parsed.x??0)-(a.parsed.y??a.parsed.x??0);Chart.defaults.plugins.tooltip.bodyFont={family:'"IBM Plex Mono",monospace',size:12};Chart.defaults.plugins.tooltip.boxPadding=4;Chart.defaults.plugins.legend.onHover=(e,item,leg)=>{leg.chart.canvas.style.cursor='pointer'};
+  Chart.defaults.interaction.mode='index';Chart.defaults.interaction.intersect=false;Chart.defaults.interaction.axis='x';Chart.defaults.elements.point.radius=2;Chart.defaults.elements.point.hitRadius=16;Chart.defaults.plugins.tooltip.itemSort=(a,b)=>(b.parsed.y??b.parsed.x??0)-(a.parsed.y??a.parsed.x??0);Chart.defaults.plugins.tooltip.bodyFont={family:'"Public Sans",sans-serif',size:12.5};Chart.defaults.plugins.tooltip.boxPadding=4;Chart.defaults.plugins.legend.onHover=(e,item,leg)=>{leg.chart.canvas.style.cursor='pointer'};
   Chart.defaults.elements.line.hoverBorderWidth=4;Chart.defaults.elements.point.hoverRadius=6;Chart.defaults.elements.point.hoverBorderWidth=2;Chart.defaults.elements.bar.hoverBorderWidth=1;Chart.defaults.elements.bar.hoverBorderColor='#ffd27a';
-  Chart.defaults.plugins.tooltip.padding=10;Chart.defaults.plugins.tooltip.titleFont={family:'"IBM Plex Mono",monospace',weight:'600',size:12};Chart.defaults.plugins.tooltip.titleColor=T.amber;
+  Chart.defaults.plugins.tooltip.padding=10;Chart.defaults.plugins.tooltip.titleFont={family:'"Public Sans",sans-serif',weight:'600',size:12.5};Chart.defaults.plugins.tooltip.titleColor=T.amber;
   Chart.register({id:'glow',beforeDatasetDraw(c,a){const ctx=c.ctx;ctx.save();const ds=c.data.datasets[a.index];const col=typeof ds.borderColor==='string'?ds.borderColor:(typeof ds.backgroundColor==='string'?ds.backgroundColor:null);const act=c.getActiveElements().some(e=>e.datasetIndex===a.index);if(col){ctx.shadowColor=col;ctx.shadowBlur=act?16:(c.config.type==='line'?7:0)}if(c.getActiveElements().length&&!act&&c.data.datasets.length>1)ctx.globalAlpha=.45},afterDatasetDraw(c){c.ctx.restore()}},
    {id:'events',afterDatasetsDraw(c){const ev=EVMAP[c.canvas.id];if(!ev||!ev.length)return;const x=c.scales.x,ar=c.chartArea,ctx=c.ctx;ctx.save();ev.forEach(raw=>{const k=String(raw).indexOf('|');const e={i:+String(raw).slice(0,k),label:String(raw).slice(k+1)};const px=x.getPixelForValue(e.i);if(px<ar.left||px>ar.right)return;ctx.strokeStyle='rgba(90,169,255,.45)';ctx.setLineDash([2,4]);ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(px,ar.top);ctx.lineTo(px,ar.bottom);ctx.stroke();ctx.setLineDash([]);ctx.save();ctx.translate(px+3,ar.top+4);ctx.rotate(Math.PI/2);ctx.fillStyle='rgba(150,195,255,.85)';ctx.font='10px "IBM Plex Mono",monospace';ctx.fillText(e.label,0,0);ctx.restore()});ctx.restore()}},
    {id:'crosshair',afterDatasetsDraw(c){const a=c.tooltip&&c.tooltip.getActiveElements&&c.tooltip.getActiveElements();if(!a||!a.length||c.options.indexAxis==='y')return;const x=a[0].element.x;const ctx=c.ctx,ar=c.chartArea;ctx.save();ctx.strokeStyle='rgba(255,176,32,.55)';ctx.setLineDash([3,3]);ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x,ar.top);ctx.lineTo(x,ar.bottom);ctx.stroke();ctx.restore()}});
@@ -4265,7 +4333,7 @@ SEGBIND('hsMeasure',b=>{hsMeasure=b.dataset.m;renderHaus()});
 
 /* ---------- routing ---------- */
 /* v2 report layout: one numbered section per story, annotated animated chart or stat, drill-down. */
-const rpAnno={id:'rpAnno',afterDatasetsDraw(c,a,o){const L=(o&&o.items)||[];if(!L.length)return;const ctx=c.ctx,ca=c.chartArea;ctx.save();ctx.font='600 11px "IBM Plex Mono",ui-monospace,monospace';
+const rpAnno={id:'rpAnno',afterDatasetsDraw(c,a,o){const L=(o&&o.items)||[];if(!L.length)return;const ctx=c.ctx,ca=c.chartArea;ctx.save();ctx.font='600 11.5px "Public Sans",ui-sans-serif,sans-serif';
   L.forEach(n=>{const m=c.getDatasetMeta(n.s||0);if(!m||m.hidden)return;const el=m.data[n.i];if(!el)return;const hb=c.options.indexAxis==='y';
     let x=el.x,y=el.y;if(!isFinite(x)||!isFinite(y))return;ctx.strokeStyle=T.amber;ctx.fillStyle=T.amber;ctx.lineWidth=1.5;
     ctx.beginPath();ctx.arc(x,y,4,0,7);ctx.stroke();
@@ -4288,20 +4356,28 @@ let rpIO=null;const rpSeen=new Set();
 function rpCount(el){const raw=el.dataset.v||el.textContent;const m=raw.match(/^([^\d-]*)(-?[\d.,]+)(.*)$/);if(!m||raw.includes('-')&&!raw.startsWith('-')&&/\d-\d/.test(raw)||matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=raw;return}
   const target=parseFloat(m[2].replace(/,/g,'')),dec=(m[2].split('.')[1]||'').length,t0=performance.now();el.dataset.v=raw;
   const step=t=>{const p=Math.min(1,(t-t0)/700),e=1-Math.pow(1-p,3);el.textContent=m[1]+(target*e).toFixed(dec)+m[3];if(p<1)requestAnimationFrame(step);else el.textContent=raw};requestAnimationFrame(step);setTimeout(()=>{el.textContent=raw},1200)}
-function rpRender(R,cur){
+let rpPage=0,rpLast=null;const RP_N=5;
+function rpGo(id){const L=rpLast;if(!L)return;const k=L.R.findIndex(x=>x.id===id);if(k<0)return;if(Math.floor(k/RP_N)!==rpPage)rpRender(L.R,L.cur,k);const el=document.getElementById('hl-item-'+id);if(el)el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})}
+function rpRender(R,cur,goto){
+  if(!rpLast||rpLast.R!==R){if(goto==null)rpPage=0}rpLast={R,cur};
+  const pages=Math.max(1,Math.ceil(R.length/RP_N));if(goto!=null)rpPage=Math.floor(goto/RP_N);rpPage=Math.max(0,Math.min(pages-1,rpPage));
+  const off=rpPage*RP_N,P=R.slice(off,off+RP_N);
   const box=document.getElementById('hlList');
-  box.innerHTML=R.map((x,k)=>{const n=String(k+1).padStart(2,'0');const ch=x.chart;
+  const pager=pages>1?`<nav class="rp-pager" aria-label="Pages of stories"><span class="note">Stories ${off+1} to ${off+P.length} of ${R.length}</span>${Array.from({length:pages},(_,i)=>`<button type="button" data-pg="${i}" aria-current="${i===rpPage}">${i*RP_N+1}–${Math.min(R.length,(i+1)*RP_N)}</button>`).join('')}</nav>`:'';
+  const nextBtn=rpPage<pages-1?`<div class="chunkfoot"><span></span><button type="button" class="next" data-pg="${rpPage+1}">Next ${Math.min(RP_N,R.length-(off+RP_N))} stories →</button></div>`:'';
+  box.innerHTML=pager+P.map((x,i)=>{const k=off+i;const n=String(k+1).padStart(2,'0');const ch=x.chart;
     const fig=ch?`<figure class="rp-fig term"><div class="ft"><span class="t">${esc(ch.title)}</span>${ch.views.length>1?`<div class="seg" role="group" aria-label="View" data-rpv="${x.id}">${ch.views.map((v,i)=>`<button type="button" data-v="${i}" aria-pressed="${!i}">${esc(v.label)}</button>`).join('')}</div>`:''}</div><div class="chart"><canvas id="rpc-${x.id}" role="img" aria-label="${esc(ch.title)}"></canvas></div><figcaption>Source: ${esc(x.src)}</figcaption></figure>`
       :`<figure class="rp-fig term"><div class="rp-stat"><div class="v" data-v="${esc(x.stat.value)}">${esc(x.stat.value)}</div><div class="l">${esc(x.stat.label)}</div><div class="s">${esc(x.stat.sub)}</div></div><figcaption>Source: ${esc(x.src)}</figcaption></figure>`;
     return `<article class="rp-sec${x.pub==='Northbeam'?' nb':''}" id="hl-item-${x.id}" data-k="${k}"><div class="rp-txt"><div class="rp-top"><span class="rp-num">${n}</span><span class="rp-title">${esc(x.label||x.pub)}</span></div><span class="hl-meta"><span class="${x.pub==='Northbeam'?'hl-nb':''}">${esc(x.pub)}</span><span>${dfmt(x.date)}</span>${hlHeat(x.impact||1)}${cur&&hlIsNew(x.date)?'<span class="hl-new">New</span>':''}</span><h4 class="rp-head">${esc(x.headline)}</h4><p class="rp-take">${esc(x.take)}</p><button type="button" class="rp-drill" aria-expanded="false" aria-controls="rpd-${x.id}">Drill down <span class="car" aria-hidden="true">▾</span></button></div>${fig}
-      <div class="rp-detail" id="rpd-${x.id}" hidden><div><h5>Key points</h5><ul>${(x.points||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div><div>${x.quote?`<h5>In their words</h5><blockquote>“${esc(x.quote)}”<cite>${esc(x.pub)}</cite></blockquote>`:''}<h5>Why it matters</h5><p class="why">${esc(x.why)}</p><div class="hl-links">${x.url?`<a href="${x.url}" target="_blank" rel="noopener">Read the source ↗</a>`:''}${x.feature?`<a href="#hl-deep/${encodeURIComponent(x.feature)}">Deep dive →</a>`:''}${x.to?`<a href="${x.to}">On the desk →</a>`:''}</div></div></div></article>`}).join('')||'<p class="note">Nothing on this topic this week.</p>';
-  R.forEach(x=>{if(x.chart)mk('rpc-'+x.id,rpCfg(x.chart.views[0]))});
-  box.onclick=e=>{const d=e.target.closest('.rp-drill');if(d){const open=d.getAttribute('aria-expanded')!=='true';d.setAttribute('aria-expanded',open);document.getElementById(d.getAttribute('aria-controls')).hidden=!open;return}
+      <div class="rp-detail" id="rpd-${x.id}" hidden><div><h5>Key points</h5><ul>${(x.points||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div><div>${x.quote?`<h5>In their words</h5><blockquote>“${esc(x.quote)}”<cite>${esc(x.pub)}</cite></blockquote>`:''}<h5>Why it matters</h5><p class="why">${esc(x.why)}</p><div class="hl-links">${x.url?`<a href="${x.url}" target="_blank" rel="noopener">Read the source ↗</a>`:''}${x.feature?`<a href="#hl-deep/${encodeURIComponent(x.feature)}">Deep dive →</a>`:''}${x.to?`<a href="${x.to}">On the desk →</a>`:''}</div></div></div></article>`}).join('')+(P.length?nextBtn+pager:'')||'<p class="note">Nothing on this topic this week.</p>';
+  Object.keys(charts).filter(id=>id.startsWith('rpc-')&&!document.getElementById(id)).forEach(id=>{try{charts[id].destroy()}catch(e){}delete charts[id]});
+  P.forEach(x=>{if(x.chart)mk('rpc-'+x.id,rpCfg(x.chart.views[0]))});
+  box.onclick=e=>{const pg=e.target.closest('[data-pg]');if(pg){rpRender(R,cur,+pg.dataset.pg*RP_N);const top=document.getElementById('rpBar')||box;top.scrollIntoView({behavior:'auto',block:'start'});return}const d=e.target.closest('.rp-drill');if(d){const open=d.getAttribute('aria-expanded')!=='true';d.setAttribute('aria-expanded',open);document.getElementById(d.getAttribute('aria-controls')).hidden=!open;return}
     const b=e.target.closest('[data-rpv] button');if(b){const g=b.parentElement,x=R.find(r=>r.id===g.dataset.rpv);g.querySelectorAll('button').forEach(q=>q.setAttribute('aria-pressed',q===b));mk('rpc-'+x.id,rpCfg(x.chart.views[+b.dataset.v]))}};
   const sel=document.getElementById('rpSel'),tot=R.length;document.getElementById('rpTot').textContent=String(tot).padStart(2,'0');
   sel.innerHTML=R.map((x,k)=>`<option value="${x.id}">${String(k+1).padStart(2,'0')} · ${esc(x.label||x.headline)}</option>`).join('');
-  sel.onchange=()=>{const el=document.getElementById('hl-item-'+sel.value);if(el)el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})};
-  const setCur=k=>{document.getElementById('rpNow').textContent=String(k+1).padStart(2,'0');document.getElementById('rpProg').style.width=(tot?((k+1)/tot*100):0)+'%';if(R[k])sel.value=R[k].id};setCur(0);
+  sel.onchange=()=>rpGo(sel.value);
+  const setCur=k=>{document.getElementById('rpNow').textContent=String(k+1).padStart(2,'0');document.getElementById('rpProg').style.width=(tot?((k+1)/tot*100):0)+'%';if(R[k])sel.value=R[k].id};setCur(off);
   if(rpIO)rpIO.disconnect();if(!('IntersectionObserver' in window))return;
   rpIO=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;const k=+en.target.dataset.k;setCur(k);const x=R[k];if(!x||rpSeen.has(x.id))return;rpSeen.add(x.id);
     if(x.chart){const c=charts['rpc-'+x.id];if(c&&!matchMedia('(prefers-reduced-motion: reduce)').matches){try{c.reset();c.update()}catch(e){}}}else{const v=en.target.querySelector('.rp-stat .v');if(v)rpCount(v)}}),{rootMargin:'-35% 0px -45% 0px'});
@@ -4328,7 +4404,7 @@ function renderHeadlines(){
   const just=I.slice().sort((a,b)=>b.date.localeCompare(a.date)||hlRank(a,b)).slice(0,4);
   document.getElementById('hlJustNote').textContent=cur?'newest first':'the last stories that week';
   document.getElementById('hlJust').innerHTML=just.length?just.map(x=>`<a class="j" href="#hl-item-${x.id}" data-hl="${x.id}"><span class="hl-meta">${cur&&hlIsNew(x.date)?'<span class="hl-new">New</span>':''}<span class="${x.pub==='Northbeam'?'hl-nb':''}">${esc(x.pub)}</span><span>${dfmt(x.date)}</span></span><h4>${esc(x.headline)}</h4></a>`).join(''):'<p class="note">Nothing on this topic this week.</p>';
-  document.getElementById('hlJust').onclick=e=>{const a=e.target.closest('[data-hl]');if(!a)return;e.preventDefault();const el=document.getElementById('hl-item-'+a.dataset.hl);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})};
+  document.getElementById('hlJust').onclick=e=>{const a=e.target.closest('[data-hl]');if(!a)return;e.preventDefault();rpGo(a.dataset.hl)};
   const F=((WHL&&WHL.features)||[]).filter(f=>wk.items.some(x=>x.feature===f.id));
   document.getElementById('hlFeat').innerHTML=F.length?F.map(f=>`<a class="hl-feat" href="#hl-deep/${encodeURIComponent(f.id)}"><div><div class="kicker">${esc(f.kicker)} · ${dfmt(f.date)}</div><h3>${esc(f.title)}</h3><p>${esc(f.dek)}</p><span class="go">Read the deep dive →</span></div><ol>${f.headlines.map(h=>`<li><b>${esc(h[0])}</b></li>`).join('')}</ol></a>`).join(''):'<p class="note">No deep dive this week.</p>';
   const R=I.slice().sort(hlRank);document.getElementById('rpHead').textContent=`The week in ${R.length} stories`;rpRender(R,cur);
@@ -4404,11 +4480,57 @@ function twAutoRead(){
   return{kicker:'The read · writes itself from each snapshot',title,dek,date:s1,points:pts};
 }
 function deskRead(v){
-  const sec=document.getElementById('v-'+v);if(!sec)return;sec.querySelector(':scope>.dread')?.remove();
-  const r=v==='triplewhale'?twAutoRead():(RDS&&RDS[v]);if(!r||!r.points||!r.points.length)return;
+  const sec=document.getElementById('v-'+v);if(!sec)return;const old=sec.querySelector('.dread');
+  const r=v==='triplewhale'?twAutoRead():(RDS&&RDS[v]);if(!r||!r.points||!r.points.length){if(old)old.remove();return}
   const el=document.createElement('section');el.className='dread';el.setAttribute('aria-label','The read');
   el.innerHTML=`<div class="kicker">${esc(r.kicker)} · ${dfmt(r.date)}</div><h3>${esc(r.title)}</h3><p class="dek">${esc(r.dek)}</p><ol>${r.points.map(p=>`<li><b>${esc(p.h)}</b><span>${esc(p.p)}</span><span class="dr-l">${p.src?srcBtn(p.src,'SOURCE'):''}${p.to&&p.to!=='#'+v?`<a href="${p.to}">More →</a>`:''}</span></li>`).join('')}</ol>`;
+  if(old){old.replaceWith(el);return}
   const pl=sec.querySelector(':scope>.pulse');(pl||sec.firstElementChild).after(el);
+}
+/* ---------- Chunked pages (6 Nov 2026): long pages split into sections with their own tabs and Next/Previous ---------- */
+const CHUNK_SKIP=new Set(['wire','compare','hw-post','headlines']);
+const chunkPos={};
+function chunkLabel(el){const h=el.matches('.section-head')?el.querySelector('.label'):el.querySelector('.th .t, .ctl>span:first-child, h3, h4');return h?h.textContent.trim().replace(/\s+/g,' '):''}
+function chunkView(v){
+  if(CHUNK_SKIP.has(v))return;const sec=document.getElementById('v-'+v);if(!sec)return;
+  const root=sec.querySelector(':scope>.dd-wrap')||sec;
+  if(!root.querySelector(':scope>.chunknav')){
+    const kids=[...root.children];const head=kids[0];const fixed=new Set([head]);
+    kids.forEach(k=>{if(k.matches('.pulse,.jump'))fixed.add(k)});
+    const body=kids.filter(k=>!fixed.has(k));
+    const useHeads=body.filter(k=>k.matches('.section-head')).length>=2;
+    const groups=[];let cur=null,seenHead=false;
+    body.forEach(k=>{
+      const isRead=k.matches('.dread'),isHead=k.matches('.section-head');if(isHead)seenHead=true;const titled=!isHead&&(!useHeads||!seenHead)&&!!chunkLabel(k)&&k.matches('.term,.grid2,.grid3,.lens-cards,.hm-ch,.takes,.playbook,.cols3,.deskgrid,.dd-hl,.dd-day,.dd-sec,.dd-act,.dd-push,.dd-check');
+      if(isRead){groups.push(cur={name:'The read',els:[k]});cur.done=true;return}
+      if(isHead||titled||!cur||cur.done){
+        if(cur&&!isHead&&!titled&&!cur.done){cur.els.push(k);return}
+        groups.push(cur={name:isHead||titled?chunkLabel(k):'',els:[k]});return}
+      cur.els.push(k)});
+    // fold untitled lead-ins (figure strips, notes) into the section that follows; name any other untitled group from its first titled block
+    for(let i=groups.length-2;i>=0;i--){const g=groups[i];if(!g.name&&g.els.every(e=>e.matches('.strip,.callout,p,.note,.ctl'))&&!groups[i+1].done){groups[i+1].els.unshift(...g.els);groups.splice(i,1)}}
+    groups.forEach((g,i)=>{if(g.name)return;let nm='';for(const e of g.els){const h=e.querySelector('.th .t');if(h){nm=h.textContent.trim().replace(/\s+/g,' ');break}}g.name=nm||(g.els.some(e=>e.querySelector('table'))?'The numbers':(i?'More':'Overview'))});
+    if(groups.length<3)return;
+    if(v==='front'&&groups[0])groups[0].name='Top stories';
+    const nav=document.createElement('nav');nav.className='chunknav';nav.setAttribute('aria-label','Sections of this page');
+    nav.innerHTML=groups.map((g,i)=>`<button type="button" data-ci="${i}"><span>${i+1}</span>${esc(g.name.length>34?g.name.slice(0,32)+'…':g.name)}</button>`).join('');
+    const anchorEl=[...fixed].pop();anchorEl.after(nav);let after=nav;
+    groups.forEach((g,i)=>{const w=document.createElement('div');w.className='chunk';w.dataset.ci=i;w.dataset.name=g.name;g.els.forEach(e=>w.appendChild(e));
+      const f=document.createElement('div');f.className='chunkfoot';
+      f.innerHTML=(i>0?`<button type="button" data-ci="${i-1}" class="prev">← ${esc(groups[i-1].name)}</button>`:'<span></span>')+(i<groups.length-1?`<button type="button" data-ci="${i+1}" class="next">Next: ${esc(groups[i+1].name)} →</button>`:'');
+      w.appendChild(f);after.after(w);after=w});
+    root.addEventListener('click',e=>{const b=e.target.closest('.chunknav button,.chunkfoot button');if(!b||!root.contains(b))return;chunkShow(v,root,+b.dataset.ci,true)});
+  }
+  let want=chunkPos[v]||0;if(/^\d+$/.test(HWARG||''))want=Math.max(0,(+HWARG)-1);
+  chunkShow(v,root,want,false);
+}
+function chunkShow(v,root,i,scroll){
+  const C=[...root.querySelectorAll(':scope>.chunk')];if(!C.length)return;i=Math.max(0,Math.min(C.length-1,i));chunkPos[v]=i;
+  C.forEach((c,k)=>c.hidden=k!==i);
+  root.querySelectorAll(':scope>.chunknav button').forEach(b=>b.setAttribute('aria-current',+b.dataset.ci===i?'true':'false'));
+  const act=root.querySelector(`:scope>.chunknav button[data-ci="${i}"]`);if(act)try{act.scrollIntoView({block:'nearest',inline:'center'})}catch(e){}
+  C[i].querySelectorAll('canvas').forEach(cv=>{const c=charts[cv.id];if(c)try{c.resize();c.update('none')}catch(e){}});
+  if(scroll){const n=root.querySelector(':scope>.chunknav');const y=n.getBoundingClientRect().top+scrollY-(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--navh'))||0)-8;scrollTo({top:Math.max(0,y),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}
 }
 /* ---------- Search with direct answers ---------- */
 const PLAT_SYN={meta:'Meta',facebook:'Meta',instagram:'Meta',fb:'Meta',google:'Google',pmax:'Google',tiktok:'TikTok',youtube:'YouTube',applovin:'AppLovin',microsoft:'Microsoft',bing:'Microsoft',snapchat:'Snapchat',snap:'Snapchat',pinterest:'Pinterest'};
@@ -4546,10 +4668,11 @@ function show(){let v=(location.hash||'#front').slice(1);const sl=v.indexOf('/')
   try{VIEWS[v]()}catch(e){console.error(e)}
   try{deskPulse(v)}catch(e){console.error(e)}
   try{deskRead(v)}catch(e){console.error(e)}
+  try{chunkView(v)}catch(e){console.error(e)}
   try{buildJump(v)}catch(e){console.error(e)}
 }
 function buildJump(v){
-  const sec=document.getElementById('v-'+v);if(!sec)return;
+  const sec=document.getElementById('v-'+v);if(!sec)return;if(sec.querySelector('.chunknav')){sec.querySelector(':scope>.jump')?.remove();return}
   const old=sec.querySelector(':scope>.jump');if(old)old.remove();
   document.documentElement.style.setProperty('--navh',document.querySelector('nav.desks').offsetHeight+'px');
   const vis=e=>e.offsetParent!==null||e.getClientRects().length;

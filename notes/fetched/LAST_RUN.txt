@@ -1,11 +1,13 @@
-2026-11-06 15:20 UTC
-NBNL: 1 items, 1 texts saved
+2026-11-06 20:30 UTC
+NBNL: 1 items, 0 texts saved
 NBBLOG: nothing new
 CTC: 8 items, 0 texts saved
 HAUS: nothing new
 TW: 1 items, 0 texts saved
-MR: 8 items, 0 texts saved
+MR: 5 items, 0 texts saved
 2PM: 2 items, 0 texts saved
-GRAPHITE: 1 items, 1 texts saved
-DTCNL: 5 items, 0 texts saved
-HWSS: SKIPPED (string indices must be integers, not 'str')
+GRAPHITE: nothing new
+DTCNL: 3 items, 0 texts saved
+HWSS: 1 items, 0 texts saved
+RUNNETH: UPDATED accessories (2 of 30 ranks changed, new top 3: Loop, Mous, Loop)
+RUNNETH: unchanged apparel (same since 2026-11-02), sports-fitness (same since 2026-11-02), retail (same since 2026-11-02)

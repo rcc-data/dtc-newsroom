@@ -187,5 +187,6 @@ Runneth says only "Updated weekly" and gives no day; on Wed 4 Nov 2026 its lists
 - Section tabs stick under the nav; each section ends with Previous/Next. Deep link to a section with `#view/N` (1-based), e.g. `#nb-bench/3`.
 - To get a new block its own tab, give it a `.th` with a `.t` title. Untitled strips fold into the next section.
 - Pages with fewer than 3 sections are left whole. wire, compare, hw-post and headlines are never split.
-- This week shows stories five at a time (`RP_N`); the contents menu and "Just in" links switch pages automatically.
+- This week is one continuous scroll (Ryan, 6 Nov: no "next five" button). Paging code is still there; `RP_N` is set high to switch it off.
+- Torch button in the nav switches light/dark and remembers it (localStorage `dtcn-theme`); with no choice saved the site follows the device.
 - Body type is Public Sans; IBM Plex Mono (`--num`) is kept only for figures.

@@ -650,6 +650,18 @@ h2{margin-top:6px}
 .rp-pager button{font:600 13px var(--body);color:var(--ink-2);background:var(--paper-2);border:1px solid var(--hair);padding:9px 14px;cursor:pointer}
 .rp-pager button[aria-current="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 @media (max-width:860px){.chunk{gap:30px}.chunknav button{padding:8px 10px}}
+
+/* Torch light/dark switch: beam on = light mode, off = dark mode */
+.navtools{position:sticky;right:0;margin-left:auto;display:flex;align-items:center;gap:8px;padding:0 0 0 14px;background:linear-gradient(90deg,transparent,var(--paper) 14px);z-index:2;flex:0 0 auto}
+.navtools .srch-btn{margin-left:0}
+.torch{align-self:center;background:transparent;border:1px solid var(--rule);padding:3px 8px;cursor:pointer;display:inline-flex;align-items:center;line-height:0}
+.torch svg .body,.torch svg .head{fill:var(--ink)}
+.torch svg .sw{fill:var(--paper)}
+.torch svg .beam{fill:#ffc23d;opacity:0;transform-origin:17px 12px;transform:scaleX(.2);transition:opacity .25s ease,transform .25s ease}
+.torch[aria-pressed="true"] svg .beam{opacity:.9;transform:scaleX(1)}
+.torch[aria-pressed="true"] svg .sw{fill:#ffc23d}
+.torch:hover{background:var(--paper-2)}
+@media (prefers-reduced-motion:reduce){.torch svg .beam{transition:none}}
 </style>
 
 <!-- Passcode wall (for fun, not security) -->
@@ -733,7 +745,7 @@ h2{margin-top:6px}
       <a href="#mkt" data-desk="mkt">Earnings</a>
       <a href="#wire" data-desk="wire">Wire</a>
       <a href="#compare" data-desk="compare">Compare</a>
-      <button type="button" class="srch-btn" id="srchBtn" aria-haspopup="dialog">Search <kbd>/</kbd></button>
+      <span class="navtools"><button type="button" class="torch" id="torchBtn" aria-pressed="false" aria-label="Light mode" title="Light or dark"><svg viewBox="0 0 40 24" width="40" height="24" aria-hidden="true"><path class="beam" d="M17 7 L38 0 L38 24 L17 17 Z"/><rect class="body" x="2" y="8" width="11" height="8" rx="1.5"/><path class="head" d="M13 6.5 L17 5 L17 19 L13 17.5 Z"/><rect class="sw" x="5.5" y="10.5" width="3.5" height="3" rx=".8"/></svg></button><button type="button" class="srch-btn" id="srchBtn" aria-haspopup="dialog">Search <kbd>/</kbd></button></span>
     </div>
     <div class="ddmenu" id="deskMenu" hidden>
       <div class="ddgrid">
@@ -3174,7 +3186,7 @@ let rpIO=null;const rpSeen=new Set();
 function rpCount(el){const raw=el.dataset.v||el.textContent;const m=raw.match(/^([^\d-]*)(-?[\d.,]+)(.*)$/);if(!m||raw.includes('-')&&!raw.startsWith('-')&&/\d-\d/.test(raw)||matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=raw;return}
   const target=parseFloat(m[2].replace(/,/g,'')),dec=(m[2].split('.')[1]||'').length,t0=performance.now();el.dataset.v=raw;
   const step=t=>{const p=Math.min(1,(t-t0)/700),e=1-Math.pow(1-p,3);el.textContent=m[1]+(target*e).toFixed(dec)+m[3];if(p<1)requestAnimationFrame(step);else el.textContent=raw};requestAnimationFrame(step);setTimeout(()=>{el.textContent=raw},1200)}
-let rpPage=0,rpLast=null;const RP_N=5;
+let rpPage=0,rpLast=null;const RP_N=1e4; /* one continuous scroll, as Ryan asked */
 function rpGo(id){const L=rpLast;if(!L)return;const k=L.R.findIndex(x=>x.id===id);if(k<0)return;if(Math.floor(k/RP_N)!==rpPage)rpRender(L.R,L.cur,k);const el=document.getElementById('hl-item-'+id);if(el)el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})}
 function rpRender(R,cur,goto){
   if(!rpLast||rpLast.R!==R){if(goto==null)rpPage=0}rpLast={R,cur};
@@ -3350,6 +3362,13 @@ function chunkShow(v,root,i,scroll){
   C[i].querySelectorAll('canvas').forEach(cv=>{const c=charts[cv.id];if(c)try{c.resize();c.update('none')}catch(e){}});
   if(scroll){const n=root.querySelector(':scope>.chunknav');const y=n.getBoundingClientRect().top+scrollY-(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--navh'))||0)-8;scrollTo({top:Math.max(0,y),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}
 }
+/* ---------- Torch light/dark switch (remembers the choice; otherwise follows the device) ---------- */
+(function(){const r=document.documentElement,mq=matchMedia('(prefers-color-scheme: dark)');let saved=null;try{saved=localStorage.getItem('dtcn-theme')}catch(e){}
+  const cur=()=>r.dataset.theme||(mq.matches?'dark':'light');
+  const paint=()=>{const b=document.getElementById('torchBtn');if(!b)return;const light=cur()==='light';b.setAttribute('aria-pressed',light);b.setAttribute('aria-label',light?'Light mode on. Switch to dark':'Dark mode on. Switch to light')};
+  if(saved==='light'||saved==='dark')r.dataset.theme=saved;
+  const go=()=>{const b=document.getElementById('torchBtn');if(!b)return;paint();b.addEventListener('click',()=>{const n=cur()==='light'?'dark':'light';r.dataset.theme=n;try{localStorage.setItem('dtcn-theme',n)}catch(e){}paint()});mq.addEventListener&&mq.addEventListener('change',paint)};
+  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',go):go()})();
 /* ---------- Search with direct answers ---------- */
 const PLAT_SYN={meta:'Meta',facebook:'Meta',instagram:'Meta',fb:'Meta',google:'Google',pmax:'Google',tiktok:'TikTok',youtube:'YouTube',applovin:'AppLovin',microsoft:'Microsoft',bing:'Microsoft',snapchat:'Snapchat',snap:'Snapchat',pinterest:'Pinterest'};
 const MET_SYN={cpm:'cpm',cpms:'cpm',ctr:'ctr','click-through':'ctr',clickthrough:'ctr',cpc:'cpc',cac:'cac',cpa:'cac',acquisition:'cac',cvr:'cvr',conversion:'cvr',conversions:'cvr',roas:'roas',share:'share',budget:'share',wallet:'share'};

@@ -1,13 +1,14 @@
-2026-11-06 20:30 UTC
+2026-11-07 15:20 UTC
 NBNL: 1 items, 0 texts saved
 NBBLOG: nothing new
 CTC: 8 items, 0 texts saved
 HAUS: nothing new
 TW: 1 items, 0 texts saved
-MR: 5 items, 0 texts saved
+MR: 6 items, 0 texts saved
 2PM: 2 items, 0 texts saved
 GRAPHITE: nothing new
 DTCNL: 3 items, 0 texts saved
 HWSS: 1 items, 0 texts saved
-RUNNETH: UPDATED accessories (2 of 30 ranks changed, new top 3: Loop, Mous, Loop)
-RUNNETH: unchanged apparel (same since 2026-11-02), sports-fitness (same since 2026-11-02), retail (same since 2026-11-02)
+TWAPI: waiting for tools/tw_api.json from the laptop pass
+RUNNETH: accessories reshuffled (1 ranks moved, 1 new brands), not a weekly update
+RUNNETH: unchanged apparel (same since 2026-11-02), sports-fitness (same since 2026-11-02), retail (same since 2026-11-02), accessories (same since 2026-11-06)

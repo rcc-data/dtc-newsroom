@@ -3015,6 +3015,33 @@ LIB.extend([
 },
 {
 "pub": "Curtis Howland",
+"id": "howland-ss-10-black-friday-ads-you-can-make",
+"date": "2026-11-06",
+"src": "Newsletter",
+"title": "10 Black Friday Ads You Can Make This Week",
+"url": "https://newsletter.curtishowland.com/p/10-black-friday-ads-you-can-make",
+"tags": [
+"substack",
+"bfcm",
+"creative"
+],
+"stats": [
+"Same 68,245-ad Meta Ad Library set (6,281 brands, BF/CM ads launched 15 Oct to 7 Dec 2025), sorted by what the ads look like",
+"Price-led ads were 12% of brands' ads; big brands put the price in the picture in 26% of ads vs 8.5% for small",
+"Proof-led ads 17%, almost all The Creator (15%, all video); Us vs. Them and Before / After each under 2%",
+"Ads that don't look like ads (screenshot, letter, sticky note, meme) 7%; the meme was 1 of 238 random ads",
+"Brand median run 16 days for proof ads vs 10 for all ads; go live with early access by 10 Nov and sale ads by 14 Nov"
+],
+"data": [
+"howland_ss",
+"howland_bf"
+],
+"q": [
+"don’t get cute with ads, show the number."
+]
+},
+{
+"pub": "Curtis Howland",
 "id": "howland-ss-68245-black-friday-ads-taken-apart",
 "date": "2026-11-02",
 "src": "Newsletter",
@@ -3567,6 +3594,8 @@ LIB.append(dict(pub="Curtis Howland",id="howland-bf-study",date="2026-11-01",src
 LIB.extend([
  dict(pub="Northbeam",id="mb-bfguide26",date="2026-11-05",src="Newsletter",title="Northbeam's Black Friday Survival Guide: 2026 Edition",url=MB+"northbeam-s-black-friday-survival-guide-2026-edition",tags=["bfcm","meta","weekly index","pacing","cpm"],stats=["Week of 10/25-11/01: Meta CPM -0.11%, CTR +4.86%, CPC -4.87%, new-customer CAC +1.50%, CVR -5.05%, ROAS +1.54%; budget share 55.25% (-0.74)","Google share 18.00% (+0.74), CPM +3.95%; TikTok CAC -9.24%, CVR +12.95%; Snapchat CVR -21.44%; Pinterest CAC +11.97%","Last November Meta-side CPMs spiked 20% to 35% over the big weekend, stalling cost-cap and bid-cap campaigns","Playbook: four check-ins a day, budget bumps of 20% at most, a 12:01 am rule resetting budgets to 30% above the prior day's start","BFCM promo window roughly 25 Nov to 1 Dec"],data=["mbi","bfcm26o"],q=["Last November we saw CPMs spike 20% to 35% during the big weekend."]),
  dict(pub="Northbeam",id="x-bb-cvr-lows",date="2026-11-05",src="X",title="Bryan Bumgardner: Meta conversion rates at record lows, ROAS better than ever",url=X+"BryanBumgardner/status/2118318914426081553",tags=["meta","cvr","roas","ctr"],stats=["Based on $6B of ad spend across 1,000 Northbeam customers (no figures given in the post)","His read: Meta now selects for click-through, so landing pages matter more and new-customer signals need to be sent to Meta"],data=["nb_x"],q=["ROAS is better than ever, but conversion rates are tanking."]),
+ dict(pub="Curtis Howland",id="li-howland-20261106",date="2026-11-06",src="LinkedIn",title="Plan one new BFCM ad for every $3K of budget",url="https://www.linkedin.com/feed/update/urn:li:activity:7524478240099377152/",tags=["linkedin","chart","bfcm","creative","meta"],stats=["Divide the BFCM budget by $3,000: one new ad per $3K of spend ($100k is about 33 ads)","His rough bands: $50k = 15-20 ads, $100k = 30-35, $250k = 80-85","Make every ad distinct (own angle, headline and structure); nine example formats from Big Number to Meme","Plus separate sale-day ads for Black Friday and Cyber Monday"],data=["li_howland","bfcm26o"],q=["Plan one new ad for every $3K of spend."]),
+ dict(pub="Northbeam",id="x-bb-bf-came-early",date="2026-11-06",src="X",title="Bryan Bumgardner: it feels like Black Friday came early this year",url=X+"BryanBumgardner/status/2118768258891592136",tags=["meta","cvr","ctr","tiktok","bfcm"],stats=["Commentary on the Media Buyer Index w/e 1 Nov (data from right before Election Day; no new figures in the post)","His read: Meta conversion rates dropping while CTR improves, as shoppers research and wait for BFCM discounts","Expects TikTok performance to keep improving through year end"],data=["nb_x"],q=["Nothing is moving like it's supposed to."]),
  dict(pub="Curtis Howland",id="li-howland-20261105",date="2026-11-05",src="LinkedIn",title="Test whether day-3 revenue predicts day-90 LTV before buying a model",url="https://www.linkedin.com/feed/update/urn:li:activity:7524115882311073792/",tags=["linkedin","chart","ltv","bidding"],stats=["Rank customers who first bought 90+ days ago by day-3 and day-90 revenue, then correlate the rankings","Around 70%: early revenue is not tracking LTV and you are probably overbidding on low-LTV customers","85% or higher: day-3 revenue is a good predictor; leave it alone","Chart is an illustrative rank comparison (customers A to T), not account data"],data=["li_howland"],q=["Day 3 revenue is a good predictor of your LTV"]),
 ])
 

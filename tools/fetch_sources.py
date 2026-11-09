@@ -9,7 +9,7 @@ Usage: python3 tools/fetch_sources.py   (needs requests + beautifulsoup4)
 """
 import csv, json, os, re, sys, time, urllib.robotparser
 from datetime import datetime, timedelta
-from urllib.parse import urljoin, urlparse
+from urllib.parse import quote, urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -390,14 +390,16 @@ def tw_capture():
     if datetime.utcnow().weekday() not in (0, 3):
         return
     cfg = json.load(open(cfg_p))
-    end = datetime.utcnow().strftime('%Y-%m-%d')
+    # Same window the page requests: 30 days ending yesterday (9 Nov 2026 page: 2026-10-10 to 2026-11-08)
+    today = datetime.utcnow().strftime('%Y-%m-%d')
+    end = (datetime.utcnow() - timedelta(days=1)).strftime('%Y-%m-%d')
     start = (datetime.utcnow() - timedelta(days=30)).strftime('%Y-%m-%d')
-    out = f'notes/fetched/TW-API/{end}'
+    out = f'notes/fetched/TW-API/{today}'
     os.makedirs(out, exist_ok=True)
     ok = bad = 0
     for ind in cfg.get('industries', []):
         for band in cfg.get('bands', ['1m-10m']):
-            url = cfg['url_template'].format(industry=ind, band=band, start=start, end=end)
+            url = cfg['url_template'].format(industry=ind, band=quote(band, safe=''), start=start, end=end)
             try:
                 j = get(url, delay=1.0, as_json=True)
                 json.dump(j, open(f'{out}/{ind}__{band}.json', 'w'))

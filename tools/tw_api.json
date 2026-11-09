@@ -1,0 +1,6 @@
+{
+  "note": "Recorded in the built-in browser on 9 Nov 2026 from benchmark.triplewhalelabs.com/benchmarks/health_and_wellness/. The page asks for the trailing 30 days ending yesterday (9 Nov 2026 request: dateStart=2026-10-10, dateEnd=2026-11-08). 50m-99m and 100m+ return 'No data' (rolledUp) for most industries; the band must be URL-encoded (100m%2B, a raw + returns 400).",
+  "url_template": "https://benchmark.triplewhalelabs.com/api/cohort?industry={industry}&gmvBand={band}&aovBand=any&dateStart={start}&dateEnd={end}",
+  "industries": ["apparel_and_accessories", "baby", "consumer_electronics", "food_and_beverage", "health_and_beauty", "health_and_wellness", "home_and_garden", "lifestyle_and_boutique", "pets_and_animals", "sports_and_outdoors", "toys_art_and_collectibles", "travel_accessories_and_luggage"],
+  "bands": ["lt1m", "1m-10m", "10m-50m", "50m-99m", "100m+"]
+}

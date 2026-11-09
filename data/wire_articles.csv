@@ -1,12 +1,18 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
+2026-11-09,Northbeam,Northbeam: AI will soon originate more than 15% of organic search traffic,https://x.com/northbeam/status/2119829035937112441,X,AI
+2026-11-09,Northbeam,Meta click-through rates up more than 40% year over year since January,https://x.com/northbeam/status/2119765195006550131,X,Meta;Benchmarks
 2026-11-09,Modern Retail,"Poppi founder Allison Ellsworth on launching Jetty, a new hydration brand",https://www.modernretail.co/operations/poppi-founder-allison-ellsworth-on-launching-jetty-a-new-hydration-brand/,News,
 2026-11-09,Modern Retail,How Azuna’s strong supply chain fuels its 9-figure sales,https://www.modernretail.co/operations/how-azunas-strong-supply-chain-fuels-its-9-figure-sales/,News,
 2026-11-09,Graphite,The State of Gen AI,https://graphite.io/research/the-state-of-genai,Report,AI
+2026-11-09,Curtis Howland,"A 58-point BFCM checklist, from email authentication to ad approvals",https://www.linkedin.com/feed/update/urn:li:activity:7525582963246297089/,LinkedIn,Meta;Google;BFCM / Q4
+2026-11-08,Curtis Howland,"Open on the problem, not the logo",https://www.linkedin.com/feed/update/urn:li:activity:7525203006372450304/,LinkedIn,Meta;Creative
 2026-11-07,Modern Retail,How delivery apps came to be ‘discovery platforms’,https://www.modernretail.co/podcasts/how-delivery-apps-came-to-be-discovery-platforms/,Podcast,
+2026-11-07,Curtis Howland,Creative is the last thing he checks each day,https://www.linkedin.com/feed/update/urn:li:activity:7524840643186257920/,LinkedIn,Meta;Creative
 2026-11-06,Northbeam,Bryan Bumgardner: it feels like Black Friday came early this year,https://x.com/BryanBumgardner/status/2118768258891592136,X,Meta;TikTok;BFCM / Q4;Benchmarks
 2026-11-06,Modern Retail,K-beauty brand Laneige bets on experiential retail with a mix-and-match lip mask station,https://www.modernretail.co/marketing/k-beauty-brand-laneige-bets-on-experiential-retail-with-a-mix-and-match-lip-mask-station/,News,Retail
 2026-11-06,Modern Retail,Foot Locker puts employees front and center in its holiday campaign,https://www.modernretail.co/marketing/foot-locker-puts-employees-front-and-center-in-its-holiday-campaign/,News,BFCM / Q4
+2026-11-06,Foxwell,Unlocking the Secrets of E-Commerce Finance,https://www.foxwelldigital.com/blog/unlocking-the-secrets-of-e-commerce-finance,Blog,
 2026-11-06,Direct to Consumer,"Google Profit Tracking, Snapchat Trends & ChappyWrap Email CRO",https://www.directtoconsumer.co/newsletter/google-profit-tracking-snapchat-trends-chappywrap-email-cro,Newsletter,Google
 2026-11-06,Curtis Howland,Plan one new BFCM ad for every $3K of budget,https://www.linkedin.com/feed/update/urn:li:activity:7524478240099377152/,LinkedIn,Meta;Creative;BFCM / Q4
 2026-11-06,Curtis Howland,10 Black Friday Ads You Can Make This Week,https://newsletter.curtishowland.com/p/10-black-friday-ads-you-can-make,Newsletter,BFCM / Q4

@@ -1,0 +1,113 @@
+Meta Attribution Testing, BFCM Psychology & Holiday Gift Guides
+https://www.directtoconsumer.co/newsletter/meta-attribution-bfcm-psychology-holiday-gift-guides
+2026-11-09
+
+Good morning.
+Marketers every November: wheeeee
+Here’s what you’ll find in today’s newsletter:
+Three Meta attribution tests to consider before BFCM
+Seven psychology checks for the pages getting your biggest traffic
+Why gift guides can create friction for paid traffic
+And more.
+Let’s get started. 👇
+---
+🤝 For the agency conversations you can’t have with your team
+Some decisions you
+can’t talk through with anyone on your payroll
+, like whether to fire your biggest client or whether the agency is worth what you think it is. Your team is part of the decision, and the founder you know from LinkedIn is in the market for your clients.
+Agency
+fixes that. Every month, you
+meet under NDA with 6 to 8 non-competing agency leaders
+and a trained facilitator. You bring the decision you’re stuck on and leave with a plan from people who’ve made it before.
+We built Agency after
+scaling Pilothouse to hundreds of employees
+and learning most of these lessons the hard way.
+Around your forum, members also get:
+Roundtables with members who’ve already done what you’re working on
+Warm introductions when you’re stuck on something specific
+A deal network for passing overflow work and referrals
+In-person meetups with members near you
+Agency is for leaders of 7- to 9-figure agencies, and
+spots are limited by design
+.
+Apply for a spot in Agency
+---
+🤖 Which Meta attribution setting should you test?
+Your attribution setting decides which purchases Meta gives your ads credit for, and which signals it uses to figure out who to show them to. So changing it can move your reported ROAS, your actual performance, or both.
+Before BFCM, the
+Pilothouse
+Meta team recommends testing whether a different setting actually performs better, as long as you measure both versions the same way.
+One heads-up first. Meta’s new on-device conversion measurement starts November 12. If your test runs across that date, results might shift for reasons that have nothing to do with your attribution setting. So keep an eye on the timing.
+Test 1: Click vs. click + view
+Run both settings at the same time as a split A/B test, with similar budgets. The only thing that changes is the attribution setting.
+Campaign A:
+7-day click, 1-day view
+Campaign B:
+7-day click only
+Look at how many purchases Meta credits to views. Just remember that number shows how much credit views got. It doesn’t tell you how many extra sales those views actually caused.
+To compare the two fairly, look at both through 7-day click ROAS. In Ads Manager, go to
+Columns → Compare attribution settings
+and pick 7-day click.
+Test 2: Shorten the click window
+Take whichever setup won and test it against a 1-day click window, keeping the view setting the same.
+Compare both using the same 7-day click column, and give late conversions a few days to come in before you pick a winner.
+Pilothouse says this one’s worth testing if your customers usually buy fast. If they tend to take their time, stick with 7-day click as your benchmark.
+Test 3: Try incremental attribution
+If incremental attribution shows up in your account, test it in a separate campaign next to your usual setup.
+Meta uses a model to estimate how many purchases your ads actually caused. Cross-check it against your store sales, and if you really want to know whether it drove extra purchases, run a proper lift test.
+Which one first?
+Start with the test that answers your biggest question. And if you don’t have the time or purchase volume to get a clear answer before BFCM, keep your current setup through the sale and pick this back up after.
+---
+🧠 7 psychology tricks to tighten up your BFCM pages
+Spotted this one out in the wild and had to share it before Black Friday.
+@CarlWeische posted a list of seven consumer psychology principles for presell pages and PDPs
+.
+A lot of brands are about to send their biggest traffic of the year to pages they haven’t touched since summer. So here’s the quick version.
+1️⃣ Hit the core emotions.
+People respond to things that feel
+new
+,
+easy
+,
+safe
+, and
+fast
+. He says your copy needs at least two of those, especially in headlines.
+2️⃣ Speak to who they want to be.
+People buy things that match how they see themselves. Don’t just dig into what customers want. Look at the identity they’re holding onto, like the parent who wants to keep up with their kids.
+3️⃣ Don’t make them think too hard.
+People buy on gut feeling and justify it later. Anything confusing, like a surprise cost at checkout, pulls them out of that mode. Guarantees and a pre-selected “most popular” bundle help keep it simple.
+4️⃣ Set the price they compare against.
+Nobody judges a price on its own. A strikethrough price, a pricier product nearby, or what the alternatives cost all shape whether yours feels like a deal.
+5️⃣ Get specific about the problem.
+Describe it so precisely that readers think “that’s exactly me,” while it still applies to most of your audience.
+6️⃣ Explain why they have the problem.
+Whoever explains the root cause best usually gets trusted to solve it. Walk through why other fixes haven’t worked, then show how yours does.
+7️⃣ Don’t rush past the pain.
+People live with a problem for years until it finally feels big enough to fix. He recommends coming back to your audience’s biggest pain points a few times on the page, not just once before the pitch.
+Want to see them in action?
+Carl’s original post
+has example lines for each one, from headlines to price anchors to how he’d describe a specific problem. It’s worth a look so you can see what these actually sound like before you write your own.
+Try this before BFCM
+👉 Open your top PDP and count how many of these it’s using. If the answer’s one or two, grab an example from Carl’s post, adapt it for your brand, and test it before traffic picks up.
+Just keep it honest. Big, fast results and specific numbers only work if you can actually back them up.
+---
+🎧 Should your holiday ads send shoppers to a gift guide?
+If you're sending paid traffic to a holiday gift guide,
+you might be making it harder for shoppers to buy
+.
+On this episode of
+Ad-venturous
+, Aves explains why
+one of the most common Q4 marketing tactics can create unnecessary friction
+, especially for people discovering your brand for the first time.
+Think about it. Someone clicks an ad looking for a gift, lands on a page with 20 different products, and suddenly has to figure out which one makes sense for the person they're shopping for.
+Aves recommends taking
+a more focused approach with paid traffic
+, building landing pages around individual products and explaining exactly why someone would want to give them as a gift.
+She also shares one of her favorite holiday conversion plays, combining a proven creative angle with a giftable bundle, a compelling offer, and a streamlined path to checkout.
+▶️
+Watch here
+|
+🎧
+Listen on Spotify

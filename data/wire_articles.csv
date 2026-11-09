@@ -1,5 +1,7 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
+2026-11-09,Modern Retail,"Poppi founder Allison Ellsworth on launching Jetty, a new hydration brand",https://www.modernretail.co/operations/poppi-founder-allison-ellsworth-on-launching-jetty-a-new-hydration-brand/,News,
+2026-11-09,Modern Retail,How Azuna’s strong supply chain fuels its 9-figure sales,https://www.modernretail.co/operations/how-azunas-strong-supply-chain-fuels-its-9-figure-sales/,News,
 2026-11-09,Graphite,The State of Gen AI,https://graphite.io/research/the-state-of-genai,Report,AI
 2026-11-07,Modern Retail,How delivery apps came to be ‘discovery platforms’,https://www.modernretail.co/podcasts/how-delivery-apps-came-to-be-discovery-platforms/,Podcast,
 2026-11-06,Northbeam,Bryan Bumgardner: it feels like Black Friday came early this year,https://x.com/BryanBumgardner/status/2118768258891592136,X,Meta;TikTok;BFCM / Q4;Benchmarks

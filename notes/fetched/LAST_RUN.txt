@@ -1,15 +1,14 @@
-2026-11-09 23:31 UTC
+2026-11-10 15:22 UTC
 NBNL: nothing new
 NBBLOG: nothing new
 CTC: 8 items, 0 texts saved
 HAUS: nothing new
 TW: 1 items, 0 texts saved
-MR: 3 items, 0 texts saved
+MR: 4 items, 0 texts saved
 2PM: 2 items, 0 texts saved
 GRAPHITE: nothing new
-DTCNL: 4 items, 0 texts saved
+DTCNL: 5 items, 0 texts saved
 HWSS: nothing new
-TWAPI: 60 cohorts saved for 2026-10-10 to 2026-11-08
 RUNNETH: apparel reshuffled (1 ranks moved, 1 new brands), not a weekly update
 RUNNETH: accessories reshuffled (1 ranks moved, 1 new brands), not a weekly update
 RUNNETH: unchanged apparel (same since 2026-11-02), sports-fitness (same since 2026-11-02), retail (same since 2026-11-02), accessories (same since 2026-11-06)

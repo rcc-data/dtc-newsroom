@@ -1,13 +1,17 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
+2026-11-10,Northbeam,Bryan Bumgardner: AI drives at least 10% of organic search visits to tracked brands,https://x.com/BryanBumgardner/status/2120206854227972232,X,AI
 2026-11-10,Modern Retail,Brands Briefing: Dr. Martens revamps stores to kickstart growth and ‘recontextualize the brand’,https://www.modernretail.co/operations/brands-briefing-dr-martens-revamps-stores-to-kickstart-growth-and-recontextualize-the-brand/,News,Retail
+2026-11-10,Haus,"Midterms lifted Meta CPMs about 10% everywhere, not just contested markets (Haus data)",https://x.com/oliviaakory/status/2120204902999765284,X,Meta;Google;Measurement;BFCM / Q4;Benchmarks
 2026-11-10,Direct to Consumer,"Meta Offer Settings, BFCM Tracking & AI Growth Strategy",https://www.directtoconsumer.co/newsletter/meta-offers-bfcm-tracking-ai-growth-strategy,Newsletter,Meta;AI;BFCM / Q4
+2026-11-10,Curtis Howland,"A free library of 15,000 Black Friday ads, sortable by offer and format",https://www.linkedin.com/feed/update/urn:li:activity:7525927923221086208/,LinkedIn,Meta;Creative;BFCM / Q4
 2026-11-09,Northbeam,Northbeam: AI will soon originate more than 15% of organic search traffic,https://x.com/northbeam/status/2119829035937112441,X,AI
 2026-11-09,Northbeam,Meta click-through rates up more than 40% year over year since January,https://x.com/northbeam/status/2119765195006550131,X,Meta;Benchmarks
 2026-11-09,Modern Retail,"Poppi founder Allison Ellsworth on launching Jetty, a new hydration brand",https://www.modernretail.co/operations/poppi-founder-allison-ellsworth-on-launching-jetty-a-new-hydration-brand/,News,
 2026-11-09,Modern Retail,How Azuna’s strong supply chain fuels its 9-figure sales,https://www.modernretail.co/operations/how-azunas-strong-supply-chain-fuels-its-9-figure-sales/,News,
 2026-11-09,Modern Retail,Exclusive: TikTok Shop launches a paid premium tier for 1M of its top US shoppers,https://www.modernretail.co/operations/exclusive-tiktok-shop-launches-a-paid-premium-tier-for-1m-of-its-top-us-shoppers/,News,TikTok
 2026-11-09,Graphite,The State of Gen AI,https://graphite.io/research/the-state-of-genai,Report,AI
+2026-11-09,Foxwell,How DTC Brands Can Crush BFCM with Meta Ads,https://www.foxwelldigital.com/blog/how-dtc-brands-can-crush-bfcm-with-meta-ads,Blog,Meta;BFCM / Q4
 2026-11-09,Direct to Consumer,"Meta Attribution Testing, BFCM Psychology & Holiday Gift Guides",https://www.directtoconsumer.co/newsletter/meta-attribution-bfcm-psychology-holiday-gift-guides,Newsletter,Meta;Measurement;BFCM / Q4
 2026-11-09,Curtis Howland,"A 58-point BFCM checklist, from email authentication to ad approvals",https://www.linkedin.com/feed/update/urn:li:activity:7525582963246297089/,LinkedIn,Meta;Google;BFCM / Q4
 2026-11-08,Curtis Howland,"Open on the problem, not the logo",https://www.linkedin.com/feed/update/urn:li:activity:7525203006372450304/,LinkedIn,Meta;Creative

@@ -1,5 +1,7 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
+2026-11-11,Modern Retail,"Mattel brings Barbie, Hot Wheels to TikTok Shop",https://www.modernretail.co/operations/mattel-brings-barbie-hot-wheels-to-tiktok-shop/,News,TikTok
+2026-11-10,Northbeam,What Makes One Incrementality Test Better Than Another?,https://www.northbeam.io/blog/incrementality-testing-what-makes-one-test-better-than-another,Blog,Measurement
 2026-11-10,Northbeam,Bryan Bumgardner: AI drives at least 10% of organic search visits to tracked brands,https://x.com/BryanBumgardner/status/2120206854227972232,X,AI
 2026-11-10,Modern Retail,Brands Briefing: Dr. Martens revamps stores to kickstart growth and ‘recontextualize the brand’,https://www.modernretail.co/operations/brands-briefing-dr-martens-revamps-stores-to-kickstart-growth-and-recontextualize-the-brand/,News,Retail
 2026-11-10,Haus,"Midterms lifted Meta CPMs about 10% everywhere, not just contested markets (Haus data)",https://x.com/oliviaakory/status/2120204902999765284,X,Meta;Google;Measurement;BFCM / Q4;Benchmarks

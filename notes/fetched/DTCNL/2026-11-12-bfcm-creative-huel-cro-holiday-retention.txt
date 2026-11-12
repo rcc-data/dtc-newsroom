@@ -1,0 +1,81 @@
+BFCM Creative, Huel Conversion Optimization & Holiday Retention
+https://www.directtoconsumer.co/newsletter/bfcm-creative-huel-cro-holiday-retention
+2026-11-12
+
+Good morning.
+Q4 check-in: how y’all doing? 😀
+Here’s what we’ve got for you in today’s newsletter:
+A Black Friday ad that still looks like the brand
+One tiny CRO test to make your guarantee harder to miss
+Why Black Friday buyers might be your next Cyber Monday customers
+And more.
+---
+🍽 A Black Friday ad that doesn’t look like a Black Friday ad
+Black Friday ads are officially everywhere, and you probably know the type. Huge red percentages, a countdown clock, maybe a lightning bolt or two.
+So when Fable’s dinnerware ad popped up looking calm, pink, and very on-brand, it made us stop scrolling. It’s a nice reminder that your sale ad can still feel like you.
+What’s working
+The color does the scroll-stopping.
+Fable pairs its Blush Pink dinnerware with a matching paint swatch, which makes the color the star of the ad. It feels more like a design mood board than a sale banner.
+The sale still feels premium.
+Soft type, lots of breathing room, and no bright starburst. Shoppers know it’s a deal without the brand feeling cheapened.
+The copy stacks up reasons to buy.
+Hand-finished in Portugal, free shipping on every order, and a clear end date (November 30). That’s quality, convenience, and urgency in two lines.
+Building your own sale creative? A few things to keep in mind
+Decide how loud your discount should be.
+Fable keeps “Save 27%” subtle, which fits a premium brand. If you’re testing a calmer look like this, try a version where the discount sits right under the headline too, and see which one wins.
+Keep the deadline near the button.
+An end date works hardest when it’s right next to “Shop Now.”
+Match the landing page to the ad.
+If someone clicks on a pink set, make sure it’s easy to find when they land.
+Give every option its own spotlight.
+If you sell multiple colors or variants, a carousel lets each one have its own card with what’s included and what it costs.
+---
+🪏 2 weeks left to Black Friday: Move your guarantee closer to the CTA
+Each week leading up to Black Friday, we’re sharing one relatively simple CRO test operators can launch before Q4 traffic peaks. These tests focus on changes that can be implemented quickly, measured clearly, and applied before holiday traffic reaches its highest point.
+Huel already gives customers a pretty great taste guarantee.
+“Love it or your money back.”
+The catch is
+where
+shoppers see it.
+On the Black Edition PDP, the guarantee sits way further down the page. Someone picking a flavor, choosing between subscribe and one-time, and deciding whether to add to bag might never scroll far enough to find it.
+Pilothouse
+recommends testing the guarantee right under the Add to Bag button. If that helps, test it at checkout as a separate experiment.
+For food and drink brands, taste is one of the biggest reasons first-time shoppers hesitate, especially when they’re buying a bunch of servings or signing up for a subscription. Putting the guarantee next to the button answers that worry right when they’re deciding.
+How to run this test:
+Keep the product, price, offer, and purchase options exactly the same.
+Add just the guarantee line under the main CTA.
+If the guarantee has conditions, link to the full terms. Something like “30-day taste guarantee on first orders. See terms.”
+Use add-to-cart rate as your main metric.
+Keep an eye on PDP conversion rate and checkout completion too.
+Track refund requests so you can see the full picture.
+The best part? You don’t need a new policy or promo. You’re just putting something you already offer where shoppers will see it.
+What reassurance does your brand offer that shoppers might never see before they buy?
+Hit reply and let us know!
+---
+📧 Plan your offer for Black Friday buyers now
+Here’s something to set up before the rush hits. Some of your best Cyber Monday customers might be the people who bought from you three days earlier, on Black Friday.
+Pilothouse’s email team has found that
+Black Friday buyers can be some of the strongest Cyber Monday customers
+. It makes sense when you think about it. Their order probably hasn’t even arrived yet, but they’ve already bought into your brand. They liked what they saw enough to check out, they know your checkout is easy, and they’re still in shopping mode.
+So instead of waiting until January to ask for a second purchase, Pilothouse suggests having
+an exclusive follow-up offer for Black Friday buyers
+ready to go.
+For example, if your Black Friday promo is 25% off, you could offer those customers 30% off their next order, good until the end of December.
+How to set it up before Black Friday:
+Build your segment now.
+Set up a segment in your email platform that will capture everyone who buys during your Black Friday promotion, new and returning customers.
+Schedule the follow-up offer.
+Plan to send those buyers an exclusive, slightly deeper discount on November 30, with a clear expiration date at the end of the year.
+Line up your reminders.
+Draft a few targeted reminders for December so the offer stays top of mind while they’re still engaged.
+Plan how you’ll measure it.
+Track which November buyers come back in December, then use Shopify’s cohort reporting to watch their retention into January and beyond.
+The goal is to
+turn first-time holiday shoppers into repeat customers while they’re still engaged
+. Doing the setup now means it’s ready to go the moment your Black Friday orders start rolling in.
+---
+‍
+💰 Customers who opt in are 2x more valuable than those you can't reach
+. 900+ brands use Dataships to maximize email, SMS, and WhatsApp opt-ins, with compliance on autopilot.
+See how it works →
+*

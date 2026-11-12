@@ -1,0 +1,92 @@
+How to actually track BFCM performance by hour
+https://themediabuyer.northbeam.io/p/how-to-actually-track-bfcm-performance-by-hour
+2026-11-12
+
+Home
+Posts
+How to actually track BFCM performance by hour
+How to actually track BFCM performance by hour
+Guidance from the masters of Black Friday Cyber Monday.
+Nov 12, 2026
+Bryan Bumgardner
+How to track Black Friday performance for real
+Our Co-founder & CEO Austin Harrison and our Head of Insights Andrew Kazsuba joined Cody and Connor to yap about how ecommerce brands track Black Friday hourly and decide when to push or pull budget.
+We love the Marketing Operators pod, and those guys are expert Northbeam users. Definitely check out the full episode.
+But if you like to read rather than watch (like me) I’ll summarize some of the biggest points in today’s issue of The Media Buyer. Let’s get into it.
+Treat Q4 like a marathon
+Most performance marketing teams treat Black Friday as one single day to be “won.” The best operators we know actually see BFCM as the capstone to a marathon performance marketing campaign they’ve been running since September (or earlier.)
+The real trick is to pace Q4 like a marathon, with upper funnel media doing the work early, then pivoting to more direct response advertising.
+In early November, one should lean on top of funnel like TV, YouTube Ads, streaming and partnerships opportunities.
+Then from Thanksgiving through Cyber Monday, everything shifts to Meta, AppLovin, and Google Search to capture that intent to purchase.
+Ad creative follows the same logic. Ridge launches their Black Friday ads early in November. By Thanksgiving week, the ads carrying the budget have been live for 12 to 14 days, which makes it far more realistic to scale from $100k spend to $400k per day. Trying to count on brand new ads to scale during that period is really tricky — don’t try it.
+Fill the funnel early
+In BFCM 2025, the median Northbeam customer got 33% of BFCM revenue from touchpoints that occurred before the week started. For Black Friday alone, it was 42%. The median BFCM customer clicked through 4.1 touchpoints before buying.
+This means that everything you’re doing BEFORE Black Friday decides how your weekend will go.
+Still, spending through a soft October takes nerve. Plofker remembered going aggressive around Oct. 10 with performance looking terrible.
+“Like, did we just kill our Q4?” he said. “But then it comes, you just have to have faith.”
+Northbeam data later showed those were the windows with the biggest ROAS lift.
+Black Friday ROAS is a lie
+In-platform Meta Ads data reports ad performance on a cash basis, meaning sales are credited to ads on the day a sale happens. If you spend on ads on Monday but the customer buys on Friday, Friday gets the credit.
+Like we said above, a huge chunk of BFCM revenue comes from touchpoints that happened before Black Friday. That means on the big day itself, in-platform ROAS probably looks great, which will invite you to overspend.
+You want to use accrual accounting in Northbeam. Accrual credits the sale to ads on the day the ad drove a click, which gives you a clearer view of how your ads are actually performing.
+The rule: scale on accrual accounting, check the health of your bank account with cash accounting.
+Pace by the hour
+During BFCM, Ridge tracks revenue hourly against last year’s curve plus its growth target. This is hardcore but I also love the genius simplicity of it.
+This gives them hourly targets. If last year 40% of the day’s revenue was in the bank by noon, and today’s forecast is $150,000 in revenue, then you should be at $60,000 by noon. At $75,000, you’re 25% ahead of your target.
+If you’re beating your ROAS targets, just scale baby scale. Also, run this target for every single day. The curve shifts by day, so Thanksgiving runs late, Black Friday runs early, and Cyber Monday peaks around 7 to 8 p.m. PT.
+Don’t focus on Friday
+Across Northbeam DTC customers (excluding Amazon), Black Friday 2025 took the biggest year-over-year spend increase at 13.5% and was the only day MER fell, down 2.8%. Saturday and Sunday took the smallest increases and gained the most efficiency.
+“I’ve seen some businesses where midday we are seeing awesome performance,” Kaszuba said. “We dump more dollars in, and we’re just really killing our efficiency.”
+In plain English: operators are more likely to overspend on Black Friday itself. Don’t fall for this.
+Move budget when the data says so
+In BFCM 2024, Meta was underperforming for Ridge during the BFCM push. Northbeam showed AppLovin driving a similar share of new visits at better ROAS, so Ridge took AppLovin from a planned 5%-10% of spend up to 40%, pushing about $200,000 a day through it.
+This is absolutely nuts. But this is the kind of power (and confidence) you can have in your paid media scaling when you have Northbeam. Serious stuff man.
+Plofker uses the same logic when Meta’s delayed reporting looks scary. “When it looks bad in Meta and you’re freaking out, but blended is good, you go look at Northbeam,” he said.
+Know who you’re paying to reach
+Before BFCM, keep those new visits high. You want to be telling your story and prepping people to purchase. During the sale, you’re more likely to reach your repeat or previous customers via email and SMS, so you really want to focus your paid media toward net new customers.
+The checklist
+Know your profitable one-day accrual ROAS by channel.
+Go top of funnel early, and launch Black Friday ads early.
+Lower your day-one ROAS bar as the sale nears.
+Measure the lead-up with a flighting analysis.
+Scale on accrual. Check health on cash.
+Pace by the hour against last year’s hourly curve.
+Don’t overspend into Friday, friends.
+Move budget when the data says so — not before!!!
+Keep new visits high until Black Friday.
+Break ties between ads with Clicks + Deterministic Views.
+🧠
+Northbeam customers: we’re doing a sick deal with Saras Analytics.
+Lifetime 25% off for Northbeam customers, plus cash for demos and more. Check this out
+💸
+Meta can add promos to your ads if they find one on your site.
+Do a quick audit before BFCM gets here.
+🎙️ Can Reddit monetize without losing it’s authenticity?
+Time will tell.
+💰 Today’s guide overlaps really well with last week’s guide to riding “The Spend Curve.”
+Check it out.
+🚨
+JOB: Head of Marketing // TUSHY // Brooklyn, NY:
+help the world have cleaner butts.
+🚨
+JOB: Growth Marketing Director // Pinned Golf // Boston, MA:
+better vibes, better golf!
+Love this newsletter? Please forward it to your friends, coworkers, or Lori Huang.
+Subscribe here to get this data in your inbox every week.
+Reply
+Newest first
+Login
+or
+Subscribe
+to participate
+Recommended for you
+View all
+caret-right
+Quick Links
+Subscribe
+Archive
+Subscription
+Reset Password
+Update Password
+Search
+Socials

@@ -1,6 +1,9 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
+2026-11-12,Modern Retail,Modern Retail+ Research 2026 Creator Marketing Index: A brand guide to effective social media campaigns,https://www.modernretail.co/marketing/modern-retail-research-2026-creator-marketing-index-a-brand-guide-to-effective-social-media-campaigns/,News,Benchmarks;Retail
+2026-11-12,Modern Retail,Hims & Hers expands benefits program for GLP-1 support with brands like Grüns and Tonal,https://www.modernretail.co/operations/hims-hers-benefits-program-gruns-tonal-viome-medjet/,News,
 2026-11-11,Modern Retail,"Mattel brings Barbie, Hot Wheels to TikTok Shop",https://www.modernretail.co/operations/mattel-brings-barbie-hot-wheels-to-tiktok-shop/,News,TikTok
+2026-11-11,Direct to Consumer,"ChatGPT Brand Visibility, TikTok Shop Plus & Holiday Gifting",https://www.directtoconsumer.co/newsletter/chatgpt-brand-visibility-tiktok-shop-plus-holiday-gifting,Newsletter,TikTok;AI;BFCM / Q4
 2026-11-10,Northbeam,What Makes One Incrementality Test Better Than Another?,https://www.northbeam.io/blog/incrementality-testing-what-makes-one-test-better-than-another,Blog,Measurement
 2026-11-10,Northbeam,Bryan Bumgardner: AI drives at least 10% of organic search visits to tracked brands,https://x.com/BryanBumgardner/status/2120206854227972232,X,AI
 2026-11-10,Modern Retail,Brands Briefing: Dr. Martens revamps stores to kickstart growth and ‘recontextualize the brand’,https://www.modernretail.co/operations/brands-briefing-dr-martens-revamps-stores-to-kickstart-growth-and-recontextualize-the-brand/,News,Retail

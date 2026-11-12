@@ -1,0 +1,20 @@
+# Northbeam Benchmarks, Q3 2026 vs Q3 2025: year-over-year % change by average order value band and percentile (25th, median, 75th). Printed values from the chart "Q3 2026: Higher AOV brands are winning", posted by Northbeam on X 11 Nov 2026 (https://x.com/northbeam/status/2120579812368519573). For CAC (new) lower is better.
+metric,percentile,<$50,$50-$100,$100-$150,$150-$200,$200-$500,$500+
+Spend,P25,-22.8,-27.0,-15.3,-6.0,-25.9,-5.3
+Spend,Median,6.7,7.6,4.8,14.3,11.0,21.8
+Spend,P75,38.5,35.9,30.0,43.6,35.4,56.4
+Revenue,P25,-24.7,-25.9,-15.8,-21.7,-4.7,0.5
+Revenue,Median,2.9,-6.8,1.8,0.5,7.8,31.1
+Revenue,P75,35.6,31.4,24.5,27.7,23.6,79.5
+Revenue (New),P25,-32.1,-42.1,-19.7,-23.4,-13.9,-5.5
+Revenue (New),Median,3.1,-5.6,1.1,-6.7,5.1,31.9
+Revenue (New),P75,53.8,32.4,24.8,30.4,27.7,72.2
+MER,P25,-23.1,-17.7,-22.9,-16.1,-13.3,-15.9
+MER,Median,-2.5,0.3,-1.0,-5.9,0.4,1.0
+MER,P75,27.1,17.4,14.2,4.5,26.5,26.5
+MER (New),P25,-27.2,-23.5,-22.9,-22.4,-12.5,-19.4
+MER (New),Median,-4.6,-7.3,-2.6,-8.7,-2.1,-3.1
+MER (New),P75,28.5,8.4,11.2,10.3,25.2,12.9
+CAC (New),P25,41.2,25.0,22.3,30.2,21.6,34.8
+CAC (New),Median,8.6,7.5,2.3,5.0,-0.6,8.6
+CAC (New),P75,-11.2,-6.0,-9.3,-5.8,-23.3,-8.9

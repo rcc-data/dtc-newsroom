@@ -32,6 +32,7 @@ REG=[
  ("h1_spend","H1 2026 YoY by monthly ad spend & percentile","h1_spend_level.csv","Newsletter 2026-08-06",None),
  ("h1_rev","H1 2026 YoY by company revenue & percentile","h1_revenue_band.csv","Newsletter 2026-08-06",None),
  ("h1_aov","H1 2026 YoY by AOV & percentile","h1_aov.csv","Newsletter 2026-08-06",None),
+ ("q3_aov","Q3 2026 YoY by AOV & percentile","nb_aov_q3_2026.csv","X 2026-11-11 (Northbeam Benchmarks chart)",None),
  ("monthly_yoy","Monthly median YoY, all businesses (assembled)","monthly_median_yoy.csv","Blog + Newsletter, multiple",None),
  ("may_retro","May 2026 aggregate YoY","may_retro.csv","Newsletter 2026-06-22",None),
  ("may_meta","May 2026 Meta spend change by spend band","may_meta_spend_by_band.csv","Newsletter 2026-06-22",None),

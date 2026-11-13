@@ -1,12 +1,12 @@
-2026-11-13 16:12 UTC
+2026-11-13 20:57 UTC
 NBNL: 1 items, 0 texts saved
 NBBLOG: 2 items, 0 texts saved
-CTC: 11 items, 0 texts saved
+CTC: 3 items, 0 texts saved
 HAUS: nothing new
 TW: 1 items, 0 texts saved
-MR: 7 items, 0 texts saved
+MR: 5 items, 0 texts saved
 2PM: 2 items, 0 texts saved
 GRAPHITE: nothing new
-DTCNL: 5 items, 0 texts saved
+DTCNL: 3 items, 0 texts saved
 HWSS: 1 items, 0 texts saved
-RUNNETH: UPDATED apparel (4 of 30 brands new, new top 3: Jenni Kayne, Comfrt, J.Crew); sports-fitness (10 of 30 brands new, new top 3: runna, runna, runna); retail (7 of 30 brands new, new top 3: Target, Target, Target); accessories (8 of 30 brands new, new top 3: Loop, The Ridge, Loop)
+RUNNETH: unchanged apparel (same since 2026-11-13), sports-fitness (same since 2026-11-13), retail (same since 2026-11-13), accessories (same since 2026-11-13)

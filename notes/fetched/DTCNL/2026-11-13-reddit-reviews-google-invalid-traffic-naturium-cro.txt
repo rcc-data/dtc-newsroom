@@ -1,0 +1,133 @@
+Reddit Reviews, Google Invalid Traffic & Naturium Amazon Optimization
+https://www.directtoconsumer.co/newsletter/reddit-reviews-google-invalid-traffic-naturium-cro
+2026-11-13
+
+Good morning.
+ESPECIALLY on a Friday.
+Here’s what’s in today’s newsletter:
+What Reddit’s new review pages could tell you about your own products
+Google will finally show you the fake clicks it blocked
+How Mattel and e.l.f. are using TikTok Shop to test demand
+Five ways Naturium could help The Glow Getter glow brighter on Amazon
+And more.
+But first… 👇
+---
+❓ Andromeda changed the rules. Has your creative caught up?
+Meta’s Andromeda has changed how much weight creative carries, and a lot of brands are still figuring out what “enough creative” looks like.
+So we’re building
+Feed the Machine: The DTC Creative Benchmark
+, a survey of DTC brands on how much creative they ship, how quickly their best ads fatigue, and how teams are adapting their creative operation for Andromeda.
+Take the
+3-minute anonymous survey
+and you’ll be entered to win a
+$1,000 Amazon gift card.*
+Take the survey
+Survey results may be used in DTC editorial and advertorial content. Personal information will not be shared.
+* One entrant will be randomly selected to win a $1,000 Amazon Gift Card. No purchase necessary to enter. Survey must be completed by November 27, 2026 to be eligible. This giveaway is open to legal residents of the United States and Canada (excluding Quebec) who are 18 years or older. Void where prohibited.
+---
+‍
+🧾 Reddit is turning product threads into review pages
+Reddit is
+testing Reddit Reviews
+, which gathers everything people are saying about a product across the platform into one page. AI sums up the conversation, shows how much of it is positive, mixed, or negative, and pulls out the things people keep praising or complaining about.
+Shoppers can also click into the original comments, filter by topic, and see which products people compare it to. Some pages even show images, prices, and links to buy.
+It’s rolling out to US users over the next few weeks, starting with about
+10,000 of the most-discussed products
+in electronics, health and beauty, home and garden, and fashion. And brands
+can’t pay to get on it
+.
+If your product has a page, it’s basically free customer research. Check the themes Reddit pulls out, the tradeoffs people keep mentioning, and which competitors show up next to you. All of that is useful for PDP copy, FAQs, comparison pages, and new ad angles.
+Worth searching your top products once it’s live, so you know what Reddit is telling shoppers about you.
+💰 Google will now show you the fake clicks it caught
+Google Ads is rolling out a new
+Invalid Traffic card
+on the Overview page. It shows how much spend Google says it blocked from invalid traffic, plus any credits it gave back after spotting bad clicks later.
+Click in for daily graphs, campaign-level breakdowns, and links to the matching invoices. It’s rolling out gradually, so you might not see it yet.
+🛍️ Mattel launches on TikTok Shop
+Mattel is opening
+a TikTok Shop storefront
+with about 20 products across Barbie, Hot Wheels, Fisher-Price, and Monster High, with plans to grow past 40.
+It’s starting with products people are already talking about on TikTok, and it’ll add recommendation videos, livestreams, and creators from the toy community. The focus is parents and adult collectors.
+If you’re launching on TikTok Shop, Mattel’s approach is a good one to borrow. Start with the products people are already talking about, then build your storefront and creator plan around them.
+💄 Amazon and TikTok Shop are fueling e.l.f.’s growth
+Mattel isn’t the only big brand leaning into TikTok Shop. e.l.f. Beauty’s fiscal Q2 sales grew
+51% YoY to $520.8 million
+, with organic net sales up about 35%.
+e.l.f. says it’s the top US cosmetics brand on Amazon and No. 2 in cosmetics on TikTok Shop. It’s also using both to test e.l.f. Pop, a new fragrance and body collection. It’s a nice example of using marketplaces to try out new products before going bigger.
+---
+🌟 How Naturium could glow even brighter on Amazon
+Speaking of e.l.f., it bought Naturium back in 2023 for about $355 million.
+If you’re into skincare, you probably know the name. Naturium launched in 2019, and Susan Yara (yep, the Mixed Makeup YouTube channel) joined as a founder a year later. Over the past year, Naturium delivered
+nearly $250 million in global retail sales
+.
+Its big body-care hit is
+The Glow Getter
+. It started with one body wash, an oil that turns into a lather once it hits water, and now there’s a body butter, oil, and scrub too.
+So how does all that come through on Amazon? The
+Pilothouse
+Amazon team went through The Glow Getter’s product page and Naturium’s Amazon Store to find out.
+What’s working
+Honestly, a lot. The
+comparison chart
+is a great touch. Shoppers can see The Glow Getter next to Naturium’s lotions, with price, key ingredient, and when to use each one, without ever leaving the page. Easy cross-sell.
+The
+A+ content
+is clean and looks like Naturium. And the Store banner,
+“Multi-oil formula to Glow All Out,”
+is just a fun line.
+Plus, the product kind of sells itself. Oil turning into lather is very satisfying to watch, which gives Naturium a lot to play with.
+[Naturium’s product comparison chart on Amazon]
+🖼️ Give every image one job
+The Glow Getter has a lot of good stuff to say. The texture, the ingredients, how it fits into a routine. Pilothouse’s suggestion is to spread that out so each image answers one question a shopper has, in roughly the order they’d ask it.
+Main image:
+Keep it simple and easy to spot in search. Pilothouse would test making the bottle fill about
+85% of the frame
+, with the label readable even at thumbnail size.
+[Current main image for The Glow Getter Multi-Oil Body Wash]
+Image 1, the oil-to-lather moment:
+This is the coolest part, so lead with it. An in-shower shot, or a before-and-after texture close-up, shows what makes it different in about one second.
+[Visual reference from Fitglow]
+Image 2, what’s in it:
+Three ingredients, one line each. 50% glycerin helps draw moisture to the skin, linoleic-rich oils help support the skin’s moisture barrier, and plant-derived squalane adds lightweight hydration.
+[Left: Naturium’s current texture image. Right: swatch reference from Fitglow]
+Image 3, what it does:
+Gentle cleansing, hydration, and nourished-feeling skin. Pair it with a close-up of skin right after rinsing.
+Image 4, how to use it:
+Pump, massage onto wet skin, rinse. A quick three-step visual or a short video works great here.
+[Left: reference from Salt & Stone. Right: concept image created with ChatGPT]
+Image 5, the proof:
+Pull the details that back up the texture (squalane, the pH range, any claims Naturium already makes) into one easy-to-scan image.
+Image 6, the routine:
+Show the wash with the scrub, body butter, and oil, and label what each one does. It’s a nice little nudge to grab more than one.
+[Concept image created with ChatGPT. Not an official Naturium asset.]
+✨ Let the A+ content stretch out
+The A+ content is already doing a lot of the work. If Naturium has access to
+Premium A+
+, Pilothouse would test opening with a short video of that oil-to-lather moment, then using the bigger, more interactive modules to walk through the ingredients. Keep the comparison chart at the end, since it’s great where it is.
+It’d also be worth testing a few lifestyle shots of the wash in a real shower, next to the current product shots.
+[Current A+ module]
+[Lifestyle test concept, created with ChatGPT]
+🛍️ Bring the website vibe to the Amazon Store
+Naturium’s own website is really good at mixing product education, pretty brand imagery, and easy ways to shop by category. The
+Amazon Store
+could borrow a lot of that. Here’s the flow Pilothouse would test:
+Open with The Glow Getter in motion.
+A full-width video of the oil turning into lather.
+Put category tiles right under it.
+Skincare, Body Care, Best Sellers, New Arrivals, Sets, Shop All.
+Add a quick About Naturium section.
+Something like “The science of skincare. Made for every day.”
+Show a shoppable routine.
+The wash, scrub, and body butter in one image, with hotspots on each.
+Finish with product education.
+Little modules that connect one ingredient or benefit to the right product.
+[Category tiles from Naturium’s DTC homepage]
+👉 Try this on your brand
+Line up your product images and write down the one question each one answers. If two are answering the same thing, swap one out for something your shoppers are still wondering about.
+Where Naturium goes from here
+Naturium’s already got a product that’s fun to watch and a brand people know. These tests are mostly about making that easier to see on Amazon:
+Lead with the oil-to-lather moment
+Give each image its own job
+Test Premium A+ with video and lifestyle shots
+Bring the website’s category tiles and brand story into the Store
+Turn the Glow Getter routine into a shoppable image

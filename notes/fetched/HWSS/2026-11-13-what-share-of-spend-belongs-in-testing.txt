@@ -1,0 +1,71 @@
+What Share of Spend Belongs in Testing?
+https://newsletter.curtishowland.com/p/what-share-of-spend-belongs-in-testing
+2026-11-13
+No need to open the email, it’s 15% but if you want to know why then click away!
+
+Most brands track creative production costs. 2% here, 5% here, but they don’t track test cost.
+In my estimation, test spend can be as much as 50% of the total cost of a new creative (meaning it’s as much as all production).
+That depends on a lot of variables but let that sink in if you aren’t tracking this.
+Testing Means 14 Days or Less and Under $1,000
+At least that’s what I’m going to use for this write up:
+14 days old or less
+Under $1,000 in spend
+Both have to be true.
+Past two weeks an ad has usually been paused, and past $1,000 it’s probably a winner.
+Share in testing = spend on ads in testing / total Meta spend, by week
+Lower CPA account? 7 days and $500 works too. It’s your analysis you get to decide :)
+Let me give you an example of what this looks like.
+Our internal dashboard / example data:
+This brand has a testing CPA that is
+59% higher than their in-market CPA
+, which is not abnormal for data that we see.
+What is abnormal in this account is that, on average, they’re putting 26% of their spend into testing. This means that a quarter of their account is spending against inflated CPAs as they try to find new winners.
+That’s a problem…
+(Do I need to say that testing new ads is important? You can’t just cut this spend to $0… if you need confirmation just read some DTC bros on twitter, ok back to testing cost)
+Hold It Under 20%
+Test spend is less efficient than scaled spend. More testing = lower ROAS.
+Blended ROAS = scaled ROAS x (1 - share in testing x how much less efficient test spend is)
+Say test spend is 50% less efficient:
+Put 20% of the budget in testing and ROAS drops 10%
+Put 50% in and it drops 25%
+Where I keep it:
+Under 20%. That’s the ceiling.
+Most of the time we’re closer to 10 to 15%.
+Above 50%, pull back and produce slower and more intentionally; you are producing too much to be effective. (Or consolidate your testing more, high test spend can be a creative issue or a media buying issue).
+What does 20% buy you? One test is one ad set with multiple creatives, roughly $200 a day for roughly a week. At $10,000 a day, 20% is $2,000 a day, which is 10 tests at a time (how many ads to launch is
+its own post
+).
+Lower isn’t automatically better either, as noted more creative = more winners = more scale. Does that cost money? Absolutely. If your testing CPA is 20% worse and you go from 9% of spend in testing to 19%, overall CPA gets about 2% worse.
+I think it’s worth it.
+Judge Test Ads on New Customer CPA
+Brought to you by Triple Whale
+This is where Triple Whale comes in. They sponsored this post, but this is an important piece, so don’t skip it. (We use Triple Whale every single day in our operation)
+Everything above is the cost of testing. What you get back depends on the number you’re calling winners on.
+Meta counts a repeat buyer’s order as a win, same as a new customer’s. So a test ad can hit target in Ads Manager while barely finding anyone new.
+Test ads get cut fast, and that only works if you’re cutting on the right number. Ours is new customer CPA from Triple Whale, for every ad. Not Meta’s ROAS.
+Most of our clients at Misfit run on Triple Whale, and we recommend it to any brand that doesn’t have an MTA yet. We use Triple Whale for more than just attribution. It’s part of how we look at performance, make decisions, and plan what’s coming next.
+Their
+BFCM Command Center
+is where you set revenue targets, channel budgets and pacing thresholds before the rush!
+Split It by Producer
+Producer = who made the ad (in-house team, agency, creator program). We pull it from the ad, ad set and campaign names.
+A producer whose spend is mostly new ads drags the account’s blended CPA up, even when their proven ads are on target.
+For example, if your account is 15% of spend in testing, but one producer has 50% of their spend in testing, that’s a good sign that they’re not producing enough winners to justify their test spend. You need to run this analysis for individual producers as well
+Blended CPA = scaled CPA / (1 - share in testing + share in testing / 1.55)
+One winner scaling changes that whole mix.
+In the meantime, run lower daily test budgets for longer.
+When I compare producers, I look at:
+CPA on their scaled ads
+Hit rate, the share of new ads that reach 10x the account’s median ad spend (
+my definition
+)
+Share in testing, week over week (a new producer starts as all new ads)
+To run this week:
+Export daily spend by ad, with each ad’s first spend date.
+For each ad, each day, count the spend as testing if the ad is 14 days old or less and under $1,000 to date.
+Divide testing spend by total spend for each week.
+Do the same inside each producer’s spend.
+If you’re over 20%, what gets you out is a winner you can scale into. Until then, consolidate test spend around your winners.
+If the share is low and new ads aren’t getting spend, shrink your test ad sets: three ads when you’re really confident, six for an average batch, a cap of nine when you’re throwing stuff at the wall.
+Question? Hit reply!
+Curtis

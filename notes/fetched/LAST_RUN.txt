@@ -1,14 +1,12 @@
-2026-11-12 21:33 UTC
-NBNL: 1 items, 1 texts saved
-NBBLOG: 2 items, 1 texts saved
-CTC: 11 items, 3 texts saved
+2026-11-13 16:12 UTC
+NBNL: 1 items, 0 texts saved
+NBBLOG: 2 items, 0 texts saved
+CTC: 11 items, 0 texts saved
 HAUS: nothing new
 TW: 1 items, 0 texts saved
-MR: 4 items, 0 texts saved
+MR: 7 items, 0 texts saved
 2PM: 2 items, 0 texts saved
 GRAPHITE: nothing new
-DTCNL: 4 items, 0 texts saved
-HWSS: nothing new
-TWAPI: 60 cohorts saved for 2026-10-13 to 2026-11-11
-RUNNETH: accessories reshuffled (13 ranks moved, 1 new brands), not a weekly update
-RUNNETH: unchanged apparel (same since 2026-11-11), sports-fitness (same since 2026-11-11), retail (same since 2026-11-11), accessories (same since 2026-11-06)
+DTCNL: 5 items, 0 texts saved
+HWSS: 1 items, 0 texts saved
+RUNNETH: UPDATED apparel (4 of 30 brands new, new top 3: Jenni Kayne, Comfrt, J.Crew); sports-fitness (10 of 30 brands new, new top 3: runna, runna, runna); retail (7 of 30 brands new, new top 3: Target, Target, Target); accessories (8 of 30 brands new, new top 3: Loop, The Ridge, Loop)

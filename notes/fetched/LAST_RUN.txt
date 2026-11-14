@@ -1,12 +1,12 @@
-2026-11-14 15:20 UTC
+2026-11-14 19:19 UTC
 NBNL: 1 items, 0 texts saved
 NBBLOG: 2 items, 0 texts saved
-CTC: 6 items, 3 texts saved
+CTC: 7 items, 1 texts saved
 HAUS: nothing new
 TW: 1 items, 0 texts saved
-MR: 6 items, 0 texts saved
+MR: 4 items, 0 texts saved
 2PM: 2 items, 0 texts saved
 GRAPHITE: nothing new
 DTCNL: 3 items, 0 texts saved
 HWSS: 1 items, 0 texts saved
-RUNNETH: UPDATED apparel (5 of 30 brands new, new top 3: Jenni Kayne, Comfrt, J.Crew); sports-fitness (0 of 30 brands new, new top 3: runna, runna, On); retail (1 of 30 brands new, new top 3: Hot Topic, Anthropologie, Anthropologie); accessories (3 of 30 brands new, new top 3: Loop, The Ridge, Ãlend)
+RUNNETH: unchanged apparel (same since 2026-11-14), sports-fitness (same since 2026-11-14), retail (same since 2026-11-14), accessories (same since 2026-11-14)

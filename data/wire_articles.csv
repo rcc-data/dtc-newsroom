@@ -1,10 +1,12 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
+2026-11-14,Modern Retail,The in-store shopping experience is broken. Can we fix it?,https://www.modernretail.co/podcasts/in-store-shopping-experience-broken/,Podcast,Retail
 2026-11-13,Modern Retail,Why brands like Anthropologie are commissioning creator-created shows instead of posts,https://www.modernretail.co/marketing/why-brands-like-anthropologie-are-commissioning-creator-created-shows-instead-of-posts/,News,
 2026-11-13,Modern Retail,Why Quince is bringing on more third-party brands,https://www.modernretail.co/operations/why-quince-is-bringing-on-more-third-party-brands/,News,
 2026-11-13,Modern Retail,Big Box Briefing: How Target’s and Walmart’s beauty department makeovers are reshaping brand strategies,https://www.modernretail.co/operations/big-box-briefing-how-targets-and-walmarts-beauty-department-makeovers-are-reshaping-brand-strategies/,News,Retail
 2026-11-13,Direct to Consumer,"Reddit Reviews, Google Invalid Traffic & Naturium Amazon Optimization",https://www.directtoconsumer.co/newsletter/reddit-reviews-google-invalid-traffic-naturium-cro,Newsletter,Google;Amazon
 2026-11-13,Curtis Howland,What Share of Spend Belongs in Testing?,https://newsletter.curtishowland.com/p/what-share-of-spend-belongs-in-testing,Newsletter,
+2026-11-13,Curtis Howland,"Competitor at 50% off, you at 30%: why matching the discount won't make you stand out",https://www.linkedin.com/feed/update/urn:li:activity:7527015244540329984/,LinkedIn,BFCM / Q4
 2026-11-12,Northbeam,How to actually track BFCM performance by hour,https://themediabuyer.northbeam.io/p/how-to-actually-track-bfcm-performance-by-hour,Newsletter,BFCM / Q4
 2026-11-12,Modern Retail,Modern Retail+ Research 2026 Creator Marketing Index: A brand guide to effective social media campaigns,https://www.modernretail.co/marketing/modern-retail-research-2026-creator-marketing-index-a-brand-guide-to-effective-social-media-campaigns/,News,Benchmarks;Retail
 2026-11-12,Modern Retail,Hims & Hers expands benefits program for GLP-1 support with brands like Grüns and Tonal,https://www.modernretail.co/operations/hims-hers-benefits-program-gruns-tonal-viome-medjet/,News,

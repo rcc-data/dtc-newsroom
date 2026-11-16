@@ -1,5 +1,8 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
+2026-11-16,Modern Retail,‘Diversify your markets’: Learnings from a Canadian brand rebuilding its US business,https://www.modernretail.co/operations/diversify-your-markets-learnings-from-a-canadian-brand-rebuilding-its-us-business/,News,Earnings
+2026-11-16,Modern Retail,Saucony sees Europe as a ‘key growth engine’ as it opens more international stores,https://www.modernretail.co/operations/saucony-sees-europe-as-a-key-growth-engine-as-it-opens-more-international-stores/,News,Retail
+2026-11-16,Modern Retail,How Celsius doubled down on sports marketing campaigns in 2026,https://www.modernretail.co/marketing/how-celsius-doubled-down-on-sports-marketing-campaigns-in-2026/,News,
 2026-11-14,Modern Retail,The in-store shopping experience is broken. Can we fix it?,https://www.modernretail.co/podcasts/in-store-shopping-experience-broken/,Podcast,Retail
 2026-11-14,CTC,Shopify's New Store Activity Log Gives Ecommerce Brands 18 Months of Change History,https://commonthreadco.com/blogs/coachs-corner/shopify-store-activity-log-18-months-ecommerce-brands-november-2026,Blog,Retail
 2026-11-13,Modern Retail,Why brands like Anthropologie are commissioning creator-created shows instead of posts,https://www.modernretail.co/marketing/why-brands-like-anthropologie-are-commissioning-creator-created-shows-instead-of-posts/,News,

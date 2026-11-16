@@ -1,0 +1,108 @@
+Meta Product Browsing, Google Smart Bidding & Holiday Retention
+https://www.directtoconsumer.co/newsletter/meta-product-browsing-google-smart-bidding-holiday-retention
+2026-11-16
+
+Good morning.
+Welcome back, Microsoft (364 😂) users; we missed you.
+Here’s what’s in today’s newsletter:
+Why some of your Meta clicks might not reach your site
+What Google’s new seven-day “Learning” limit means for your BFCM budgets
+Microsoft’s “Made with AI” labels
+How shipping and returns can make or break your 2027 retention
+And more.
+Let’s get into it.
+---
+❓ 3 minutes, one $1,000 Amazon gift card, and a creative benchmark you’ll want to see
+Meta’s Andromeda has changed how much weight creative carries, and a lot of brands are still figuring out what “enough creative” looks like.
+So we’re building
+Feed the Machine: The DTC Creative Benchmark
+, a survey of DTC brands on how much creative they ship, how quickly their best ads fatigue, and how teams are adapting their creative operation for Andromeda.
+It takes
+3 minutes
+, it’s
+anonymous
+, and you’ll be entered to win a
+$1,000 Amazon gift card.*
+The survey closes
+November 27
+, so don’t leave it until Black Friday.
+Take the survey
+Survey results may be used in DTC editorial and advertorial content. Personal information will not be shared.
+* One entrant will be randomly selected to win a $1,000 Amazon Gift Card. No purchase necessary to enter. Survey must be completed by November 27, 2026 to be eligible. This giveaway is open to legal residents of the United States and Canada (excluding Quebec) who are 18 years or older. Void where prohibited.
+---
+📈 Google’s “Learning” label now tops out at seven days
+Google’s updated guidance
+says Smart Bidding’s “Learning” status lasts seven days max. Changing your budget, bid targets, creative, or targeting won’t restart it or wipe your historical data. Switching to a new bid strategy, or making certain structural or conversion-goal changes, still can.
+So if you’re bumping budgets for BFCM, keep an eye on CPA, ROAS, and conversion lag. The label going away doesn’t mean performance has settled.
+🎯 The Meta setup one buyer goes back to every holiday season
+@herrmanndigital
+shared the campaign structure he leans on every Q4:
+Collection ads using your best-performing videos for the featured products
+A dynamic product carousel in the same ad set, with video wherever you have it
+A product set that only includes what you want to push
+Campaign budget optimization, so Meta can spread spend across ad sets, with minimums or maximums if you need them
+He says it’s usually his fastest, easiest setup to scale in Q4. If you try it, compare it with your current campaigns before moving more budget over.
+🤖 Your Microsoft ads could get a “Made with AI” label
+Using AI-generated images or video in Microsoft campaigns?
+Microsoft’s new guide
+explains when supported ads show a “Made with AI” watermark, including assets marked AI Content + Watermark that serve in the EU or New York State.
+One thing to check is that declaring AI use and asking for a visible watermark are two separate settings. For Shopping offers, the declaration applies to each individual product, and that part’s still rolling out.
+Before you upload holiday creative, double-check which labels you’re putting on your assets and product feeds. Not every AI declaration adds a visible badge.
+---
+🌟 Meta may be adding a stop before your website
+You built a landing page for your BFCM offer. But some shoppers who tap your ad might see a Meta product page before they ever get there.
+We flagged this one back in October. Meta started turning on product browsing for existing Facebook and Instagram ads on October 28, unless advertisers opted out. So if you didn’t change the setting, it’s probably on now.
+What’s different
+There’s an extra step before your site.
+Some shoppers will see product details and personalized suggestions inside Facebook or Instagram first. Not every tap triggers it.
+Your landing page might come second.
+If your offer lives on a specific page, that extra stop changes the path. And your site analytics won’t count the visit until the shopper lands on your site.
+More conversions doesn’t always mean better returns.
+Meta says advertisers saw
+3% more conversions on average in an August test with about 117,700 advertisers
+. It doesn’t say which conversions, which attribution windows, or what happened to CPA and ROAS.
+How to check it
+Open an active ad in Ads Manager.
+Go to its Advantage+ creative and Destination settings. Look for
+Product browsing
+under
+Personalized destinations
+, and switch it off if you want shoppers going straight to your site.
+Publish, then check the preview. Duplicated ads can carry the setting over, so check those too.
+Before BFCM budgets go up,
+Pilothouse
+suggests walking through the whole path from ad to checkout, the same way a shopper would.
+And if you decide to keep product browsing on, compare purchase CPA, ROAS, and store sales while keeping other changes to a minimum. Write down the date you changed the setting so you can make sense of any shifts later.
+---
+👇 Your 2027 retention strategy starts now
+Your Black Friday campaigns might bring in thousands of new customers.
+But how many will buy again in 2027?
+That might just depend on what your customers experience between checkout and delivery…
+In a recent episode of the DTC Podcast, Eric sat down with Codee Burton from ShipBob and Mike Fazio from AfterShip to discuss how
+fulfillment, shipping, and returns influence customer retention
+.
+Codee shares an example of a premium home and kitchen brand that logged more than
+20,000 customer support tickets
+in just five months, with roughly 20% related to
+customers asking where their orders were
+.
+It's a very real example of how
+shipping problems can quickly become retention problems
+.
+The episode explores four ways brands can improve their post-purchase experience:
+Make accurate delivery promises.
+Use inventory locations, shipping zones, and fulfillment cutoff times to set realistic expectations.
+Communicate proactively.
+Identify delayed shipments and notify customers before they contact support.
+Make exchanges easier.
+Speed up returns processing and restocking to keep customers from requesting refunds.
+Turn tracking into a revenue opportunity.
+One Shopify brand attributed nearly 150 orders to its tracking page experience.
+▶️
+Watch here
+|
+🎧
+Listen on Spotify
+👉
+See how ShipBob and AfterShip work together
+. *

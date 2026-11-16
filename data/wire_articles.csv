@@ -1,13 +1,18 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
+2026-11-16,Northbeam,Bryan Bumgardner: Northbeam's best-performing brands launch more than 180 Meta ads a week,https://x.com/BryanBumgardner/status/2122235723159842829,X,Meta;Creative
+2026-11-16,Northbeam,Bryan Bumgardner now expects AI's share of organic search visits to pass 30% by year end,https://x.com/BryanBumgardner/status/2122303878389772549,X,AI
 2026-11-16,Modern Retail,‘Diversify your markets’: Learnings from a Canadian brand rebuilding its US business,https://www.modernretail.co/operations/diversify-your-markets-learnings-from-a-canadian-brand-rebuilding-its-us-business/,News,Earnings
 2026-11-16,Modern Retail,Saucony sees Europe as a ‘key growth engine’ as it opens more international stores,https://www.modernretail.co/operations/saucony-sees-europe-as-a-key-growth-engine-as-it-opens-more-international-stores/,News,Retail
 2026-11-16,Modern Retail,How Celsius doubled down on sports marketing campaigns in 2026,https://www.modernretail.co/marketing/how-celsius-doubled-down-on-sports-marketing-campaigns-in-2026/,News,
+2026-11-15,Curtis Howland,"A 10-step Black Friday ad audit for ecom brands, written to paste into Claude",https://www.linkedin.com/feed/update/urn:li:activity:7527739713449795584/,LinkedIn,Meta;AI;Creative;BFCM / Q4
 2026-11-14,Modern Retail,The in-store shopping experience is broken. Can we fix it?,https://www.modernretail.co/podcasts/in-store-shopping-experience-broken/,Podcast,Retail
+2026-11-14,Curtis Howland,"Before you exclude an audience on Meta, check how you tested",https://www.linkedin.com/feed/update/urn:li:activity:7527377305615228928/,LinkedIn,Meta;Retail
 2026-11-14,CTC,Shopify's New Store Activity Log Gives Ecommerce Brands 18 Months of Change History,https://commonthreadco.com/blogs/coachs-corner/shopify-store-activity-log-18-months-ecommerce-brands-november-2026,Blog,Retail
 2026-11-13,Modern Retail,Why brands like Anthropologie are commissioning creator-created shows instead of posts,https://www.modernretail.co/marketing/why-brands-like-anthropologie-are-commissioning-creator-created-shows-instead-of-posts/,News,
 2026-11-13,Modern Retail,Why Quince is bringing on more third-party brands,https://www.modernretail.co/operations/why-quince-is-bringing-on-more-third-party-brands/,News,
 2026-11-13,Modern Retail,Big Box Briefing: How Target’s and Walmart’s beauty department makeovers are reshaping brand strategies,https://www.modernretail.co/operations/big-box-briefing-how-targets-and-walmarts-beauty-department-makeovers-are-reshaping-brand-strategies/,News,Retail
+2026-11-13,Foxwell,Is AI Making You a Worse Marketer?,https://www.foxwelldigital.com/blog/is-ai-making-you-a-worse-marketer,Blog,AI
 2026-11-13,Direct to Consumer,"Reddit Reviews, Google Invalid Traffic & Naturium Amazon Optimization",https://www.directtoconsumer.co/newsletter/reddit-reviews-google-invalid-traffic-naturium-cro,Newsletter,Google;Amazon
 2026-11-13,Curtis Howland,What Share of Spend Belongs in Testing?,https://newsletter.curtishowland.com/p/what-share-of-spend-belongs-in-testing,Newsletter,
 2026-11-13,Curtis Howland,"Competitor at 50% off, you at 30%: why matching the discount won't make you stand out",https://www.linkedin.com/feed/update/urn:li:activity:7527015244540329984/,LinkedIn,BFCM / Q4

@@ -1,0 +1,112 @@
+Meta BFCM Scaling, ChatGPT Wallet & Google AI Ads
+https://www.directtoconsumer.co/newsletter/meta-bfcm-scaling-chatgpt-wallet-google-ai-ads
+2026-11-17
+
+Good morning.
+Oh no thanks, I’m not hungry…
+Here’s what you’ll find in today’s newsletter:
+Why great blended ROAS can still be a trap during BFCM
+How Google is putting ads into AI Mode follow-up questions
+A practical plan for scaling Meta spend without wrecking performance
+How to avoid the Google Ads hangover after Cyber Monday
+And more.
+Here we go. 👇
+---
+🛒 There Are 10 Days Until BFCM. Is Your Store Ready?
+BFCM is the ultimate stress test for ecommerce brands, and the countdown is officially on.
+You’ve already spent months preparing, but too often it’s
+the smallest oversights
+that can turn into
+the most costly mistakes
+.
+With only 10 days left, here’s what experts say deserves one final look:
+Site experience:
+Is checkout friction costing you sales?
+Customer support:
+Can your team handle the holiday rush?
+Creator partnerships:
+Have you given creators a reason to prioritize your products?
+Customer retention:
+Will shoppers come back after the discounts end?
+Levanta teamed up with Gorgias and Absolute Web
+to share
+the last-minute fixes worth making now
+and the strategies that keep paying off long after Cyber Monday.
+⏰ The window is closing; make this week count.
+Watch the BFCM Checklist Webinar
+---
+💳 ChatGPT can now pick up the bill
+OpenAI just launched
+ChatGPT Wallet
+, so its agent can now buy stuff for you, not just find it. For now it’s only for eligible US Pro subscribers using its personal agents.
+Shoppers still have to OK every purchase with something like Face ID, and their card details stay hidden behind payment tokens.
+It plugs into normal checkout flows, so in theory you don’t have to do anything. But if your site or fraud tools block the agent or decline the card, that sale’s gone. Might be worth a quick check with whoever runs your fraud settings.
+🪤 Great blended ROAS? Check before scaling
+Say it’s Black Friday, sales are flying, and your blended ROAS looks incredible. Time to crank up Meta spend, right?
+Not so fast, says
+@RokHladnik
+. A lot of that could be coming from returning customers, email, SMS, and people who were just waiting for your sale. Your overall numbers can look great while every extra dollar on acquisition is getting less efficient.
+So before you bump budgets, he says to watch two things:
+New-customer CAC as spend goes up
+How much new-customer revenue that extra spend is bringing in
+And look back at your past BFCM cohorts. Sale shoppers don’t always come back as often, so your usual LTV math might be a little generous.
+(We’ve got more on scaling the right way in the Pilothouse piece below.)
+🔎 Google’s putting ads in AI Mode follow-ups
+You know when someone asks AI Mode for gift ideas and then goes “okay, under $100”? Google can now
+show an ad on that follow-up
+. It’s rolling out in the US.
+You don’t need a new campaign for it. Eligible Search, Shopping, and PMax campaigns are already in. You just can’t see how these placements do on their own, since everything gets lumped into your regular reporting.
+✂️ YouTube can turn your podcast into Shorts now
+Quick one to wrap.
+YouTube Studio
+can now clip parts of your long videos into vertical Shorts, either by timestamp or by picking text from the transcript. In some cases, it’ll even suggest moments for you. Eligible public Shorts also link back to the full video automatically.
+If you’ve got founder interviews, product explainers, or a video podcast sitting around, pull out your best answer and give it a shot. Just check the framing and captions before it goes live.
+---
+🚀 Are you ready to scale spend for BFCM?
+It’s tempting to crank budgets way up for Black Friday. And sure, it can pay off. But big budget jumps or major edits can throw ad sets back into the learning phase, which is the last thing you want on the busiest weekend of the year.
+So the
+Pilothouse Meta team
+put together a plan.
+1️⃣ Start turning it up early
+Don’t wait until Black Friday morning. Start raising budgets gradually in the week or two before, as long as your purchase CPA, store sales, and margins can handle it.
+After each bump, give it a minute. Check how things look before you add more. And try not to change your budget, targeting, and creative all at once, or you won’t know what’s working.
+If your sale kicks off early, time your increases with the offer and the demand you’re seeing.
+2️⃣ Get your Black Friday spend scheduled
+Build your sale campaigns now, get them through review, and schedule them to go live with your offer. (Quick sanity check: make sure you know what time zone your ad account is in.)
+For a dedicated Black Friday campaign, a lifetime budget lets you cap spend over a set period. Start it at midnight, end it at 11:59 p.m., and you’ve got an
+almost 24-hour window
+. Just keep an eye on delivery, because a lifetime budget doesn’t guarantee Meta will spend the whole thing.
+And heads up, Meta has two scheduling tools that sound similar. Dayparting decides
+when
+your ads run. Budget scheduling lets eligible accounts plan budget increases ahead of time.
+3️⃣ Pick how you want to scale
+There are two main ways to go, and it depends on how your account’s doing and what you want to learn.
+Vertical scaling
+is putting more money behind the campaigns that are already winning, then watching whether they stay efficient as spend goes up.
+Horizontal scaling
+is testing new campaigns with a different offer, market, or creative angle. Just know that copying a winning campaign won’t automatically get you in front of new people.
+Pilothouse’s advice is to test new campaign structures before peak whenever you can. A campaign getting approved early doesn’t mean it’s figured out how to deliver yet.
+Testing attribution settings too? Compare both versions with the same attribution reporting window.
+Plan your increases now, then let performance tell you how much more to add as the week goes on.
+---
+🎧 How to avoid the Google Ads BFCM hangover
+Your Black Friday campaigns are crushing it, conversions are rolling in, and everything looks great.
+Then the sale ends, performance drops off a cliff, and your Google Ads account takes forever to bounce back.
+On the latest AKNF, Pilothouse Google strategist Zavire joins Eric to talk about
+why the post-BFCM hangover happens and what you can do to soften it
+.
+Part of it is just the urgency disappearing once the offer’s gone. But a lot of it comes from all the changes advertisers make before, during, and after BFCM. When you switch up budgets, offers, creative, and landing pages all at once, performance shifts and it’s hard to tell what caused it.
+Zavire shares a few ways to prepare:
+Forecast your conversion rate.
+Use past promo data to estimate how much more likely visitors are to buy during your sale.
+Be picky with seasonality adjustments.
+Save them for short sales where you expect a big conversion-rate spike beyond your normal seasonal patterns.
+Give changes time.
+Adjust budgets and ROAS targets based on performance, then wait out conversion delays before judging the results.
+Plan past Cyber Monday.
+Keep the right campaigns running into December to catch the rest of the holiday demand.
+▶️
+Watch here
+|
+🎧
+Listen on Spotify

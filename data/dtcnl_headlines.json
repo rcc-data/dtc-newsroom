@@ -1,5 +1,29 @@
 [
  {
+  "date": "2026-11-16",
+  "url": "https://www.directtoconsumer.co/newsletter/meta-product-browsing-google-smart-bidding-holiday-retention",
+  "title": "Meta Product Browsing, Google Smart Bidding & Holiday Retention",
+  "headline": "Meta's product browsing is probably on in your ads, and the 3% lift is thin",
+  "take": "Meta switched product browsing on for existing Facebook and Instagram ads from 28 Oct unless advertisers opted out, so some taps now land on a Meta product page before your site. Meta cites 3% more conversions in an August test with about 117,700 advertisers, but says nothing on CPA or ROAS. Check the setting before BFCM budgets go up.",
+  "quote": "More conversions doesn’t always mean better returns.",
+  "source": "Meta",
+  "heat": 3,
+  "topic": "Meta",
+  "meta": true
+ },
+ {
+  "date": "2026-11-16",
+  "url": "https://www.directtoconsumer.co/newsletter/meta-product-browsing-google-smart-bidding-holiday-retention",
+  "title": "Meta Product Browsing, Google Smart Bidding & Holiday Retention",
+  "headline": "Google Smart Bidding's Learning label now tops out at seven days",
+  "take": "Google's updated guidance says Learning lasts seven days at most, and budget, bid target, creative or targeting changes no longer restart it. A new bid strategy or some structural or conversion-goal changes still can. The label going away is not the same as performance settling: watch CPA, ROAS and conversion lag through BFCM budget bumps.",
+  "quote": "Smart Bidding’s “Learning” status lasts seven days max",
+  "source": "Google",
+  "heat": 2,
+  "topic": "Google",
+  "meta": false
+ },
+ {
   "date": "2026-11-13",
   "url": "https://www.directtoconsumer.co/newsletter/reddit-reviews-google-invalid-traffic-naturium-cro",
   "title": "Reddit Reviews, Google Invalid Traffic & Naturium Amazon Optimization",

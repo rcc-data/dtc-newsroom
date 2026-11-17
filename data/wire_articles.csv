@@ -1,10 +1,13 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
+2026-11-17,Modern Retail,Why Express is betting on Y2K fragrance nostalgia,https://www.modernretail.co/operations/express-y2k-fragrance-nostalgia/,News,
+2026-11-17,Modern Retail,Brands Briefing: Lands’ End wants to put more than tote bags under the tree,https://www.modernretail.co/operations/brands-briefing-lands-end-wants-to-put-more-than-tote-bags-under-the-tree/,News,
 2026-11-16,Northbeam,Bryan Bumgardner: Northbeam's best-performing brands launch more than 180 Meta ads a week,https://x.com/BryanBumgardner/status/2122235723159842829,X,Meta;Creative
 2026-11-16,Northbeam,Bryan Bumgardner now expects AI's share of organic search visits to pass 30% by year end,https://x.com/BryanBumgardner/status/2122303878389772549,X,AI
 2026-11-16,Modern Retail,‘Diversify your markets’: Learnings from a Canadian brand rebuilding its US business,https://www.modernretail.co/operations/diversify-your-markets-learnings-from-a-canadian-brand-rebuilding-its-us-business/,News,Earnings
 2026-11-16,Modern Retail,Saucony sees Europe as a ‘key growth engine’ as it opens more international stores,https://www.modernretail.co/operations/saucony-sees-europe-as-a-key-growth-engine-as-it-opens-more-international-stores/,News,Retail
 2026-11-16,Modern Retail,How Celsius doubled down on sports marketing campaigns in 2026,https://www.modernretail.co/marketing/how-celsius-doubled-down-on-sports-marketing-campaigns-in-2026/,News,
+2026-11-16,Direct to Consumer,"Meta Product Browsing, Google Smart Bidding & Holiday Retention",https://www.directtoconsumer.co/newsletter/meta-product-browsing-google-smart-bidding-holiday-retention,Newsletter,Meta;Google;BFCM / Q4
 2026-11-15,Curtis Howland,"A 10-step Black Friday ad audit for ecom brands, written to paste into Claude",https://www.linkedin.com/feed/update/urn:li:activity:7527739713449795584/,LinkedIn,Meta;AI;Creative;BFCM / Q4
 2026-11-14,Modern Retail,The in-store shopping experience is broken. Can we fix it?,https://www.modernretail.co/podcasts/in-store-shopping-experience-broken/,Podcast,Retail
 2026-11-14,Curtis Howland,"Before you exclude an audience on Meta, check how you tested",https://www.linkedin.com/feed/update/urn:li:activity:7527377305615228928/,LinkedIn,Meta;Retail

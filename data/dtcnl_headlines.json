@@ -1,5 +1,29 @@
 [
  {
+  "date": "2026-11-17",
+  "url": "https://www.directtoconsumer.co/newsletter/meta-bfcm-scaling-chatgpt-wallet-google-ai-ads",
+  "title": "Meta BFCM Scaling, ChatGPT Wallet & Google AI Ads",
+  "headline": "Great blended ROAS on Black Friday can hide a worse new-customer CAC",
+  "take": "Rok Hladnik's warning: a lot of Black Friday revenue comes from returning customers, email, SMS and people waiting for the sale, so blended ROAS can look great while each extra acquisition dollar gets less efficient. Before raising Meta budgets, track new-customer CAC and new-customer revenue as spend goes up, and check whether past BFCM cohorts repurchased.",
+  "quote": "Great blended ROAS? Check before scaling",
+  "source": "Rok Hladnik",
+  "heat": 3,
+  "topic": "Meta",
+  "meta": true
+ },
+ {
+  "date": "2026-11-17",
+  "url": "https://www.directtoconsumer.co/newsletter/meta-bfcm-scaling-chatgpt-wallet-google-ai-ads",
+  "title": "Meta BFCM Scaling, ChatGPT Wallet & Google AI Ads",
+  "headline": "ChatGPT Wallet lets OpenAI's agent pay at your checkout",
+  "take": "OpenAI launched ChatGPT Wallet, so its agent can buy, not just find, products; for now only eligible US Pro subscribers using personal agents. Shoppers approve each purchase and card details sit behind payment tokens. It uses normal checkout, so the risk is your bot or fraud rules blocking it and losing the sale.",
+  "quote": "ChatGPT can now pick up the bill",
+  "source": "OpenAI",
+  "heat": 2,
+  "topic": "AI",
+  "meta": false
+ },
+ {
   "date": "2026-11-16",
   "url": "https://www.directtoconsumer.co/newsletter/meta-product-browsing-google-smart-bidding-holiday-retention",
   "title": "Meta Product Browsing, Google Smart Bidding & Holiday Retention",

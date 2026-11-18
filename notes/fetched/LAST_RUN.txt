@@ -1,15 +1,14 @@
-2026-11-18 15:19 UTC
+2026-11-18 22:11 UTC
 NBNL: nothing new
 NBBLOG: nothing new
-CTC: 4 items, 0 texts saved
+CTC: 6 items, 2 texts saved
 HAUS: nothing new
 TW: 1 items, 0 texts saved
-MR: 6 items, 0 texts saved
+MR: 4 items, 0 texts saved
 2PM: 2 items, 0 texts saved
 GRAPHITE: nothing new
-DTCNL: 2 items, 0 texts saved
+DTCNL: 3 items, 0 texts saved
 HWSS: 1 items, 0 texts saved
 RUNNETH: sports-fitness reshuffled (11 ranks moved, 2 new brands), not a weekly update
 RUNNETH: retail reshuffled (11 ranks moved, 1 new brands), not a weekly update
-RUNNETH: UPDATED apparel (2 of 30 brands new, new top 3: Jenni Kayne, Dore & Rose, Comfrt); accessories (2 of 30 brands new, new top 3: Loop, Bellroy, Loop)
-RUNNETH: unchanged sports-fitness (same since 2026-11-17), retail (same since 2026-11-16)
+RUNNETH: unchanged apparel (same since 2026-11-18), sports-fitness (same since 2026-11-17), retail (same since 2026-11-16), accessories (same since 2026-11-18)

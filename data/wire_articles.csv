@@ -1,6 +1,9 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
 2026-11-18,Modern Retail,ThredUp launches TikTok Shop livestreams as part of its social commerce push,https://www.modernretail.co/operations/thredup-launches-tiktok-shop-livestreams-as-part-of-its-social-commerce-push/,News,TikTok
+2026-11-18,Haus,Is AppLovin falling off? Not in Haus data: 79% of tests since July beat the brand's other channels,https://x.com/oliviaakory/status/2123099989932929480,X,Meta;AppLovin;Measurement;Benchmarks
+2026-11-18,Haus,"CTV vs your next dollar, not your average dollar: roughly even (Haus CTV tests)",https://x.com/oliviaakory/status/2122888352491860479,X,Measurement
+2026-11-18,Foxwell,How Different Is Different Enough? Creative Diversity and Entity ID Under Andromeda,https://www.foxwelldigital.com/blog/how-different-is-different-enough-creative-diversity-and-entity-id-under-andromeda,Blog,Meta;Creative
 2026-11-17,Northbeam,Northbeam: 1.4% of Meta advertisers make 36% of all ad creative on Meta,https://x.com/northbeam/status/2122593832701251961,X,Meta;Creative
 2026-11-17,Modern Retail,Why Express is betting on Y2K fragrance nostalgia,https://www.modernretail.co/operations/express-y2k-fragrance-nostalgia/,News,
 2026-11-17,Modern Retail,Brands Briefing: Lands’ End wants to put more than tote bags under the tree,https://www.modernretail.co/operations/brands-briefing-lands-end-wants-to-put-more-than-tote-bags-under-the-tree/,News,

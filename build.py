@@ -78,7 +78,7 @@ REG=[
  ("haus_cat","Meta catalog ads incrementality (Haus)","haus_catalog.csv","Haus, X, 25 & 28 Oct 2026",None),
  ("haus_textnow","TextNow YouTube geo test, cumulative lift (Haus)","haus_textnow.csv","Haus, X, 20 Aug 2026",None),
  ("haus_cw","Cyber Week 2025 delayed lift (Haus)","haus_cyberweek2025.csv","Haus report, 11 Dec 2025",None),
- ("haus_app","AppLovin beat rate by quarter (Haus)","haus_applovin.csv","Haus report, 18 Jun 2026",None),
+ ("haus_app","AppLovin beat rate by quarter (Haus)","haus_applovin.csv","Haus report, 18 Jun 2026; Jul-Nov 2026 from Olivia Kory on X, 18 Nov 2026",None),
  ("haus_sow","Spend share for brands live on AppLovin, Q4 2025 (Haus)","haus_sow_q4_2025.csv","Haus, X, 14 Jan 2026",None),
  ("ctc_mix","CTC Q1 2026 channel mix: platform ROAS vs incremental ROAS","ctc_channel_mix_q1_2026.csv","CTC, Apr 2026",None),
  ("ctc_tier","CTC Q1 2026 channel share by spend tier","ctc_tier_mix_q1_2026.csv","CTC, Apr 2026",None),

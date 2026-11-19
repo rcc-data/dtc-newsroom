@@ -1,0 +1,126 @@
+Memo: The Checkout Line Is the Front Line
+https://2pml.com/2026/11/18/memo-the-checkout-line-is-the-front-line/
+2026-11-18
+
+For most of 2PM’s fifteen years,
+national security lived in one part of the publication
+and commerce lived in another, and the working assumption was that a reader could follow one without owing much attention to the other. The six weeks between October 6 and November 16 should retire that assumption.
+In that span a company that got its start selling graphics cards to gamers lost its founder to a counterintelligence story, a weapons maker announced a laptop, the federal government took 40 percent of a shipyard, a discount shopping app agreed to keep American customer data on American servers, and the tariff treatment of ordinary consumer goods was renewed in the same breath as the minerals that steer missiles.
+Very few of these commerce anecdotes were filed as retail stories, and I would argue that all of them are.
+The argument of this brief is that the line between a consumer product and a defense asset has stopped doing useful work. The degree varies by category, and a graphics processor sits far closer to the center of it than a polo shirt does, but the companies, agencies and capital that used to stand on either side now behave as one system, and nothing sold to a household sits entirely outside it. The evidence follows in roughly the order it arrived, and where I reach outside the six weeks for background, the dates are marked.
+The Graphics Card Company
+On September 24, two weeks before this window opens, Jensen Huang and Tim Cook stood together at the White House
+waiting for the state dinner
+the President was hosting for Xi Jinping. Both men built their fortunes on products people buy for themselves, and both had become instruments of statecraft without anyone announcing it. On November 12, Nvidia’s board
+announced that Huang had resigned
+as president, chief executive and director, effective immediately. The reporting that preceded it, led by the New York Times, described a relationship with a former executive of Megaspeed, a Singapore data center company and Nvidia customer, whom U.S. intelligence
+suspects of working for Beijing
+. Megaspeed says it
+conducts lawful business and denies wrongdoing
+, China has
+denied that she worked on its behalf
+, and Nvidia shed roughly
+$573 billion of market value
+in the week the story broke.
+What matters for this argument is how quickly a personnel matter at a public company turned into a question of export control. The Treasury Secretary said that Treasury, the Pentagon, State and the Trade Representative had wanted Megaspeed on a trade blacklist for months, and on November 15 the ranking member of the Senate Commerce Committee
+sent a letter
+accusing the Commerce Department of failing to enforce its own controls. The next morning the Bureau of Industry and Security answered with
+an interim final rule
+on remote access to advanced chips in overseas data centers, a rule the agency says was written at the direction of Treasury and the National Security Council, and one that
+reaches data centers anywhere in the world
+above a set threshold of computing power.
+Consider which agency is in the dock, because the department accused of a national security failure is the one named for commerce, and the agencies
+reported to have lined up against it
+over a single Singapore customer were State, Treasury, Energy and the Pentagon. The office that decides who may buy an American chip has become as consequential as the one that decides who may buy an American missile.
+The President, for his part, has now weighed in twice on who should run the company. His first answer was
+Tim Cook
+, the executive chairman of the most successful consumer hardware company ever built, offered with the line “A Legend replaces a Legend!” His second, on Monday, was that he
+would not mind seeing Huang reinstated
+, a door Nvidia’s interim leadership
+closed on Tuesday’s earnings call
+. Whatever one makes of either suggestion, a sitting president who treats the succession at a chipmaker as his own business, and who proposes the phone company’s chairman for the job, has shown how the White House sees these firms, which is as interchangeable posts in a single national project.
+The Weapons Company Sells a Laptop
+On October 27, Anduril and Qualcomm
+announced BlueChip
+, a rugged laptop built on Snapdragon X, the processor line Qualcomm makes for mainstream Windows machines. The chips are to be fabricated at TSMC’s plant in Arizona, the circuit boards assembled at Anduril’s Arsenal-1 facility in Ashville, Ohio, and orders open in 2027. Palmer Luckey told reporters that the bill of materials is about 90 percent American and allied, that the machine will cost roughly 20 percent more than a comparable high-end PC, and that an ordinary shopper with no patriotic motive
+would do better buying a Dell
+. He also said that
+no government subsidy or contract
+sits behind the project, which means a company known for autonomous drones is funding a personal computer line out of its own pocket on the bet that a domestic supply chain is a product in itself.
+A commerce operator reads that announcement and sees a brand extension with a premium price and an unusually candid founder, while a defense analyst sees the first serious attempt in a generation to rebuild computer manufacturing on American soil, and the two of them are holding the same press release.
+The traffic runs just as heavily in the other direction. The Army’s next soldier headset is being built on displays and optics from Meta, the company that sells Ray-Bans with cameras in them, under a
+$159 million prototyping contract
+that Anduril won last year. Inside the window, on October 13, a startup called Rivet said it had delivered its first 70 pairs of
+militarized smart glasses
+to the same program, with the stated ambition of letting a soldier direct robots and drones in plain language through a form factor borrowed from the consumer market. The defense company is making the thing you carry to a coffee shop while the consumer company is making the thing a soldier wears into a fight, and neither considers it a departure from its core business.
+Washington Joins the Cap Table
+On October 6 the President stood at Sparrows Point, on the old Bethlehem Steel site outside Baltimore, and announced that American taxpayers would hold
+40 percent of the entity
+operating Anduril’s new submarine component yard. Anduril is putting in about $3.7 billion of its own capital against a Navy agreement worth
+up to $2.9 billion
+, and the company was careful to say that the stake sits in a new subsidiary and not in Anduril itself. A day later the Pentagon’s Office of Strategic Capital offered Wolfspeed a
+conditional loan of up to $1.5 billion
+, and the company’s own announcement says the deal would require it to issue the department
+warrants for up to 7.5 percent
+of its fully diluted equity. Wolfspeed makes silicon carbide, and its quarterly filing lists electric vehicles and fast charging ahead of aerospace and defense among the markets it serves. On October 22 the Commerce Department signed letters of intent for
+$389 million in research awards
+to four companies, two of them fusion energy startups, and said it would take a minority, non-voting equity stake in each as a condition of the money.
+The federal government now holds positions in
+dozens of companies
+, including roughly a tenth of Intel. A coalition of free-market groups
+wrote to the Armed Services committees
+last week asking them to strip the defense bill provisions that would formalize the practice, and Democrats in the next Congress could investigate the deals already struck. Both objections are reasonable, and neither changes what has already happened, which is that the customer, the regulator and the investor are frequently the same party.
+People are crossing the line along with the money. Project Meridian, the Pentagon’s 120-day study of the future of warfare, was launched on September 30 and is
+co-led by Elon Musk, Palmer Luckey and Newt Gingrich
+, in other words by a man who sells cars and home internet service and a man who made his name on a gaming headset. Three watchdog groups
+sued in early November
+to halt the panel over conflicts of interest, and the Pentagon’s chief technology officer has dismissed the concern. The legal question belongs to the court, and the structural fact is that the state now buys equity in companies that sell to consumers while the founders of those companies help write the state’s strategy.
+The Shelf as a Bargaining Chip
+On November 9, a day before last year’s trade truce was due to lapse, Washington and Beijing extended it by two months. China
+delayed its expanded rare earth export controls
+until January 10, and in exchange the United States extended tariff exclusions on 178 Chinese products, a list that includes machinery, components and consumer goods, and postponed port fees on Chinese-built ships. Put plainly, the landed cost of things that end up in an American shopping cart was exchanged for continued access to the elements that go into magnets for fighter jets and guidance systems, and both governments treated that as a natural trade.
+The Nvidia affair landed directly on top of that arrangement. Within days, Chinese analysts were telling the South China Morning Post that Beijing
+could tighten rare earth exports
+if Washington used the scandal as grounds for harder chip controls. As I write, the President is in Shenzhen for the APEC summit with a meeting with Xi set for Thursday,
+few concrete agreements are expected
+, and rare earth shipments to the United States are still running about 75 percent below their old level by one Washington think tank’s count. A chief executive’s private life, a chip rule issued on a Monday morning, a list of tariff exclusions on household goods and a supply of dysprosium now sit inside a single negotiation.
+The same logic is working its way through the driveway. A Commerce Department rule already bars Chinese software from connected vehicles beginning with the 2027 model year, and a bipartisan bill to make the ban permanent is
+racing the end of this Congress
+, with a definition of “connected” that covers any road vehicle with networked hardware, even where the capability has been switched off. The family car has been reclassified as communications infrastructure, in the same way the home router was when the FCC
+closed the market to new foreign-made models
+back in March. Every object with a radio in it is now assumed to have a second use, and the regulation follows the assumption.
+The Cart, the Closet and the Pantry
+The examples so far lean toward silicon and steel, and a reader who sells apparel or food could fairly ask whether any of this reaches them. It does, with less force than it reaches a chipmaker, and I would rather say that plainly than stretch the point.
+The shopping cart is the clearest case, because on October 16 Temu
+settled data privacy claims brought by Texas
+, the first of several states that have sued over concern that the app’s customer data could be reached by the Chinese government, which Temu denies. Under the agreement the company will keep Texans’ personal data on American servers, restrict what can be sent to China, and submit to
+annual independent security assessments
+with an $8 million penalty attached to failing one. The asset being protected is a shipping address and a purchase history, the same first-party data that every commerce operator reading this holds, and a state attorney general has now treated it as a matter of foreign access.
+The closet and the pantry are older stories that have picked up speed, and here I am reaching outside the window. The Berry Amendment has long required the military to buy
+textiles, clothing, footwear and food
+of entirely domestic origin, down to the zippers and buttons. In February the President
+opened Defense Production Act funding
+to the textile industry, which supplies about $1.8 billion a year in uniforms, footwear and gear, and the House version of the defense bill now in conference
+adds audit and supplier verification measures
+to the Berry rules. I would argue that for any brand that manufactures in the United States, that military demand is part of what keeps its factories open. On the food side, the Agriculture and War departments
+signed an agreement in February
+to treat farms as national security assets, and on November 10 USDA
+proposed new grazing rules
+under a beef plan that describes the food supply chain in the same terms.
+None of that makes a rancher or a shirtmaker a defense contractor. It does mean that where their product is made, who can see their customer file and who else is buying from their suppliers have become questions the government asks in the vocabulary of security, and that was not true of these categories a few years ago.
+The Objection
+The obvious objection is that none of this is new. GPS was a military system long before it was a feature in a running watch, the internet began as a Pentagon research network, and the Jeep went from the Army to the driveway within a few years of the war. Dual use is as old as procurement, and a skeptic could read everything above as a familiar pattern with louder headlines.
+I think three things separate the present from that history. The first is direction, because in the older model a technology was built for the state and released to the public years later on the state’s schedule, whereas the Army is now borrowing its display from a sunglasses company and the export control regime is organized around a chip that was designed to render video games. The second is ownership, since the Cold War state was a customer of its suppliers and sometimes their landlord, and it did not hold warrants in them or 40 percent of their shipyards. The third is the reach of the rules, which used to concern themselves with what left the country and now extend to what enters the home, so that a router, a car’s software and a shopping app are each judged by where their code was written. The old arrangement had a wall with a gate in it, and what we have now is closer to a shared floor.
+One Category
+I have argued for a long time that media and commerce stopped being separate businesses, that the publication and the storefront became one operation once the audience and the customer turned out to be the same person. The last six weeks describe the same collapse one level up. The buyer of a laptop and the buyer of a submarine component are served by the same founder, the same fabs and, with growing frequency, the same shareholder, and the tariff exclusion that sets the price of an imported appliance is negotiated alongside the license for a rare earth magnet.
+For an operator, this changes the meaning of documents that used to be administrative. A bill of materials is now a statement of strategic position, and Luckey has put a number on what a clean one costs, which is about 20 percent. Country of origin has moved out of the compliance binder and into the product itself, because a growing set of buyers, beginning with governments and extending to the enterprises that sell to them, will pay that premium and others will be required to. The firmware in a connected product is a regulated asset whether or not its maker has ever spoken to a defense official, and after Texas and Temu the same can be said of where a customer file is stored and who is able to open it.
+It also changes who the competition is. A brand selling wearables, vehicles, networking gear, drones or anything with a sensor should expect to meet defense-funded entrants coming down into its category, and should expect its own best engineers and suppliers to be pulled up into theirs. The consumer market has always been where technology gets cheap and reliable enough to matter, and the defense market has always been where it finds its first patient customer. Those were once two stages separated by a decade, and they now happen in the same quarter, inside the same companies, under the same set of rules. National security and commerce have become one category, and the operators who plan as though that were true will have a meaningful head start on the ones still waiting for the two to separate again.
+Research and Writing by Web Smith
+Share this:
+Share on X (Opens in new window)
+X
+Share on Facebook (Opens in new window)
+Facebook
+Like this:
+Like
+Loading…

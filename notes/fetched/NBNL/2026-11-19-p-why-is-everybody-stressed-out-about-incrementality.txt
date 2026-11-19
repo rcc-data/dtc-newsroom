@@ -1,0 +1,194 @@
+Why is everybody stressed out about incrementality?
+https://themediabuyer.northbeam.io/p/why-is-everybody-stressed-out-about-incrementality
+2026-11-19
+
+Home
+Posts
+Why is everybody stressed out about incrementality?
+Why is everybody stressed out about incrementality?
+Exploring why this marketing technique is taking off.
+Nov 19, 2026
+Bryan Bumgardner
+I was standing outside Gold’s Gym in Venice Beach a few weeks back, ordering a much-too-large protein shake from a food truck, when I overheard some guys talking ecommerce.
+We got to chatting and I mentioned incrementality testing. I got blank stares in return.
+This was a surprise. Incrementality testing is an old but standard measurement technique that’s coming into vogue as performance marketers are held to ever-increasing standards of performance.
+So, here we are: a primer on incrementality, for you and the guys outside Gold’s Gym.
+What even is incrementality?
+Incrementality is the share of your sales or conversions that happened
+because
+of your marketing and
+would not have happened without it.
+Some of your new customers who see your ads were going to buy anyway, whether they saw the ad or not. They already knew your brand, maybe heard about you from a friend, or found your product organically.
+Your ad platforms (Meta, Google, TikTok) will happily take credit for generating those conversions. This is why you have multi-touch attribution: which ad actually drove a specific conversion?
+Incrementality asks a harder question: what did this ad contribute to our total sales, compared to if we had never run this ad at all?
+That question matters more every year. It’s the ultimate budget-cutting question. Marketing is more expensive: Meta CPMs are constantly increasing. Finance is demanding proof that your marketing is driving revenue. At a point, in-platform ad performance data is no help at all.
+Enter incrementality.
+Incrementality vs. attribution
+Attribution and incrementality answer two different questions. You really need both.
+Attribution
+Question it answers:
+Which touchpoints came before a sale?
+Method:
+Tracks clicks and views on the path to purchase.
+Shows:
+Correlation.
+Speed:
+Daily, campaign and creative level.
+Best for:
+Day-to-day optimization.
+Incrementality
+Question it answers:
+Which sales would not have happened without the ad?
+Method:
+Compares an exposed group with a holdout group.
+Shows:
+Causation.
+Speed:
+Weeks per test, channel level.
+Best for:
+Validating whether a channel works and how much to trust attributed numbers.
+Think of it like basketball stats. Attribution is the box score: it tracks who touched the ball on every possession that ended in points.
+Incrementality is plus-minus: it compares how the team scores with a player on the court versus when they’re benched.
+If you look at them together, the box score tells you what happened every night, and plus-minus tells you which players actually impact games.
+Some folks prefer to use one but not the other. Maybe they only look at incrementality testing, for example. This extended baskeball metaphor demonstrates the shortcomings of that. If you only looked at plus-minus, you might celebrate a player who is always on the court when points are scored. But if you checked their attribution, you might see they never really touch the ball: they just happened to be in the game.
+You gotta use both, folks. This isn’t Moneyball.
+How incrementality is measured
+Every incrementality test follows the same logic as a clinical trial for medicine, the most widely-known comparison.
+You show your ads to one group of viewers (the testing group), but you don’t show that ad to another comparable, similar group of viewers (your control group) and measure the different in marketing performance between the two.
+You can do this for any channel, ad platform, whatever you’re using to reach people. The process:
+Pick the channel or campaign
+you want to evaluate and the KPI that matters (revenue, orders, new customers).
+Split your audience
+into a test group that sees ads and a control group, often known as the “holdout group” that doesn't see any ads.
+Run the test
+long enough to capture delayed purchases via
+conversion lag.
+Compare results.
+The gap in performance between test and control is your “
+incremental lift,
+” which is what we call that performance that wouldn’t have happened without your ads.
+Common types of incrementality tests
+There’s several types of incrementality tests:
+Geo holdout test
+How it works:
+Ads are turned off off in selected regions (DMAs, states, zip codes) while running everywhere else.
+Why it works:
+It’s measured on your own sales data and doesn’t rely on user tracking; but you need to be really diligent about making sure your geographies are actually comparable to make the test valid.
+Platform conversion lift study
+How it works:
+The ad platform (like Meta or YouTube) randomly withholds ads from a set of users, then compares those who did versus didn’t see the ads.
+However:
+This test runs inside the platform’s own measurement, so it isn’t an independent check. Also, platforms may reject or throw out tests randomly that don’t have enough volume.
+Matched market test
+How it works:
+A small number of similar markets are paired, with ads on in one and off in the other.
+Good to know:
+Simple to set up, but fewer markets means less precision than a normal geo-holdout test.
+On/off (time-based) test
+How it works:
+Spend is paused for a period and results are compared before and after.
+Good to know:
+Easy to run but easy to break because seasonality and promotions muddy your comparisons.
+Northbeam uses geo holdouts in our incrementality tests. The advantage is 3rd-party independence: every ad platform reports results through its own lens, and a geo test measures lift on your actual sales rather than asking you to take the platform's word for it.
+The quality of a geo test depends on how well the test and control regions match, so Northbeam pairs each test region with a control region that has behaved similarly in your historical data, accounting for conversion lag, discount patterns, and repeat purchases.
+This is what we’ve found makes the most sense, especially for ecommerce advertisers and growth marketers who are primarily scaling on Meta or TikTok.
+Key incrementality metrics and terms
+Incremental lift:
+how much higher the test group performed than the control, as a percentage. Lift = (test − control) ÷ control.
+Incremental revenue:
+the dollar value of that difference, the sales your ads caused.
+Incremental ROAS (iROAS):
+incremental revenue ÷ ad spend. This is the number to compare against platform-reported ROAS.
+A worked example
+Here’s an example, simplified. A brand runs a geo holdout test on one channel, with the control group's results scaled to the same size as the test group:
+Measure
+Value
+Test group revenue
+$500,000
+Control group revenue (scaled)
+$420,000
+Incremental revenue
+$80,000
+Incremental lift
+19%
+Ad spend in test group
+$25,000
+Incremental ROAS
+3.2x
+Platform-reported ROAS
+5.0x
+The ad platform’s reporting says every dollar returned $5, but the test says $3.20. The difference is the sales the platform took credit for that would have happened even if you weren’t running ads.
+That doesn't mean the channel is bad: a 3.2x iROAS can still be very profitable. Now you just know the actual numbers for your business, and knowledge is power.
+A real example: Carpe
+The
+subscription antiperspirant brand Carpe
+wanted to know how much of its growth was actually coming from Meta ads. So Northbeam ran an automated geo holdout test on Meta using Carpe's own attribution data.
+The test found 1,472 incremental new orders and $63K in incremental revenue, with lift driven almost entirely by new customers. This is great news, obviously.
+Incremental orders came in 49% higher than a clicks-only attribution model credited, and incremental ROAS lined up with Carpe's internal estimates, which gave the team the confidence to keep scaling Meta.
+Other terms you'll see
+Holdout:
+the share of geos or users excluded from ads. A 20% holdout means 20% see no ads.
+Conversion lag:
+the time between an ad running and the sale it drives. It sets how long a test must run.
+Minimum detectable effect (MDE):
+the smallest lift a test is designed to reliably detect.
+Confidence interval:
+the range where a true result is likely to fall. Narrow means precise; wide means uncertain.
+Halo effect:
+lift an ad drives on other sales channels, such as Amazon or retail stores.
+When to run an incrementality test
+Before scaling a channel.
+Confirm a channel drives real growth before you double the budget on vibes.
+When attribution and your gut feeling disagree.
+Do an incrementality tests when a channel looks great in the dashboard but revenue isn't moving, or the reverse.
+For upper-funnel channels.
+CTV, YouTube, podcasts, and other awareness channels get little click-based credit, so incrementality testing is great for proving out these.
+When you sell in many places.
+If customers who see a Meta ad buy on Amazon or in stores, a test can capture that halo effect.
+When leadership asks for proof.
+To be honest, an incrementality result is the most defensible answer to "is this spend working?"
+How incrementality fits with MTA and MMM
+Incrementality works best as one part of a measurement system. All marketers must use a variety of analyses to try and comprehend the ever-changing human customer buying cycle. You need all three:
+Incrementality
+validates what works, with causal evidence.
+Media mix modeling (MMM)
+decides where to invest across channels.
+Multi-touch attribution (MTA)
+guides daily optimization at the campaign and creative level.
+Incrementality tests can help calibrate MMM and MTA results. Your iROAS becomes a factor applied to attributed ROAS and CAC, and lift results improve the MMM's estimates of channel impact. That means you can turn a one-off incrementality test into guidelines for your daily media buying, and this is how the pros use it.
+In conclusion: I am not your attorney, doctor, or financial advisor. But from where I’m sitting, watching how millions of ad spend is distributed every day, I can tell you: you need to be running incrementality tests.
+We can show you how.
+🚨
+JOB: Performance Marketing Manager // Santa Monica, CA // Malbon:
+perfect if you like to golf and ski, this brand is on the way up.
+🤖
+Google is starting to show you bot traffic.
+Now you can tell how much traffic was invalid and filtered out by Google.
+🌋
+All these weird outages recently are fueling conspiracy theories and panic.
+Guys, I’m trying to prep for BFCM, I don’t have time for this.
+🕥
+How to actually track performance hour by hour on Black Friday.
+The Marketing Operators strike again, please watch this.
+🏁
+Grand Theft Auto Six is here.
+I think you can expect a huge drop in ad performance, considering the entire world is taking the day off to play.
+Love this newsletter? Please forward it to your friends, coworkers, or Sean Duffy.
+Subscribe here to get this data in your inbox every week.
+Reply
+Newest first
+Login
+or
+Subscribe
+to participate
+Recommended for you
+View all
+caret-right
+Quick Links
+Subscribe
+Archive
+Subscription
+Reset Password
+Update Password
+Search
+Socials

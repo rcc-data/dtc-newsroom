@@ -1,0 +1,96 @@
+Google Promotion Mode, Thread Wallets CRO & BFCM Checklist
+https://www.directtoconsumer.co/newsletter/google-promotion-mode-thread-wallets-cro-bfcm-checklist
+2026-11-19
+
+Good morning.
+Nice. 🙂‍↕️
+Here’s what you’ll find in today’s newsletter:
+What PMax’s Promotion Mode could mean for your Black Friday spend
+A five-second homepage test for first-time shoppers
+Nine BFCM checks worth running before traffic spikes
+And more.
+But first… 👇
+---
+👀 Looking for a new acquisition channel? Nanit hit 6.5X ROAS on Reddit
+New parents research everything twice, so baby-tech brand Nanit used Reddit Dynamic Product Ads to show up while parents were figuring out what to buy. The campaign delivered
+6.5X ROAS
+and
+cut CPA by 60% month over month
+.
+Here’s how Nanit set it up
+Shopify integration kept the catalog and prices in sync automatically
+Prospecting reached new shoppers, while retargeting brought back people who’d already interacted with Nanit
+Vital Proteins, Oatly, and Maybelline advertise on Reddit too. According to Reddit,
+51% of online purchasing discussions
+happen on the platform.
+If you’re deciding where to put your next test budget, Reddit will
+match your first $1,500 in spend with $1,500 in ad credit
+. (US only, new accounts, one per business. Terms apply.)
+See how Nanit hit 6.5X ROAS
+P.S. We know it’s busy season
+, so
+save this link for later
+. The credit offer runs through December 31
+.
+---
+⚙️ PMax puts Promotion Mode in campaign setup
+Building a Black Friday campaign? Advertisers are
+seeing Channel Prioritization and Promotion Mode in PMax’s setup flow
+. Both features already existed. Now they’re right there when you set the campaign up.
+Promotion Mode (still in beta) drops your target ROAS for a 3- to 14-day sale and lets you add daily budget on top. When the sale ends, your old settings come back.
+Handy for BFCM. Just know you’re telling Google it’s okay to spend more for a lower return, so run the margin math first.
+📚 One Meta ad, up to five existing posts
+Bram Van der Hallen posted about a new option
+that lets you pick up to five existing posts for a single Meta ad. Meta picks which one each person sees, based on what it thinks they’ll engage with.
+Nice if you’ve got a handful of organic posts doing well and don’t want to build five separate ads. Just don’t treat it like a creative test, since Meta’s choosing who sees what.
+We don’t know much yet about the rollout or what reporting looks like per post, so poke around your account and see if it’s there.
+---
+🚀 8 days left until Black Friday: Can shoppers understand your homepage in five seconds?
+We’re sharing quick CRO tests operators can still launch before Q4 traffic peaks. At this point, the goal is to make the traffic you’re already paying for easier to convert, without rebuilding your site.
+This week we’re looking at benefit-first hero copy.
+Thread Wallets’ current homepage headline is “New Prints, Something for Everyone.” It tells shoppers there’s variety. Someone landing there for the first time may still need another beat to figure out why they’d want a Thread wallet over the one in their pocket.
+Pilothouse would test that against a headline that leads with the product benefit:
+“Slim carry goods for everyday essentials.”
+The supporting copy can then explain the value a little further, and the CTA moves from the generic “Shop Now” to something more directional like “Shop Best Sellers.”
+Why test it?
+Black Friday can bring a lot of first-time visitors to your homepage. Those shoppers may be comparing several brands at once, so your hero has a pretty small window to answer a few basic questions:
+What makes this different?
+Why is it useful?
+Where should I click next?
+Clearer copy could help more people see the value before they bounce or start hunting around the page.
+For the test, keep the imagery and the rest of the homepage the same. Run the new headline, supporting copy, and CTA as one hero treatment against the current version.
+Primary metric:
+Hero CTA click-through rate
+Secondary metrics:
+Homepage bounce rate and conversion rate
+👉 Try this on your brand
+Open your homepage on your phone and give yourself five seconds. If you didn’t already know the brand, would you understand why you should care?
+---
+🚨 Your BFCM checklist: 9 things to check now
+Are you ready for the rush? 👀
+Here’s a few small (and easy) things to check before traffic spikes.
+Pilothouse’s email team
+pulled together nine last-minute checks across your sends, storefront, and abandoned-cart setup so you’re getting every last drop from the list you’ve been keeping warm and the new audience you’re bringing in.
+📧 Before you send
+1. Clean your lists.
+Exclude spam complaints, bounced addresses, and unsubscribed contacts so you’re protecting deliverability before volume goes up.
+2. Check how newer subscribers perform.
+Split your established sending segment into contacts created within the past 365 days and older contacts. See whether one group responds differently before you send everyone the same thing.
+3. Plan your follow-ups now.
+Second and third sends can work, especially for engaged shoppers who clicked and didn’t buy. Exclude anyone who purchases between sends and check for overlap with automated flows.
+4. Stick with segments you trust.
+This probably isn’t the weekend to introduce a completely new audience strategy. Use the segments you already understand.
+5. Make the offer obvious in the subject line.
+If there’s ever a time to be clear about the discount, it’s Black Friday. Test that against your usual subject-line style.
+🛒 Before shoppers hit the site
+6. Test every discount code.
+Check eligible products, minimum spends, exclusions, discount combinations, and any restrictions you didn’t mean to leave on.
+7. Add a sitewide sale banner.
+Someone landing on a PDP, blog post, or collection page should still be able to find the BFCM offer immediately.
+🛍️ Before they abandon
+8. Check your abandoned-cart timing.
+Pilothouse suggests testing reminders around 20 minutes, eight hours, and 24 hours.
+9. Update the abandoned-cart emails themselves.
+Make the BFCM offer easy to see, while keeping the main CTA pointed back to the shopper’s cart or checkout. A separate banner can send people to the broader sale collection.
+👉 Try this today
+Run through your own BFCM journey from inbox to checkout. Open the email, click the offer, test the code, abandon the cart, and see what happens next.

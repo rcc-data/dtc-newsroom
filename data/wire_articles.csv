@@ -1,9 +1,15 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
+2026-11-19,Modern Retail,Retailers ride the Grand Theft Auto VI wave with special promos,https://www.modernretail.co/marketing/retailers-ride-the-grand-theft-auto-vi-wave-with-special-promos/,News,Retail
+2026-11-19,Modern Retail,In Graphic Detail: Welcome to the agentic commerce quarter,https://www.modernretail.co/technology/in-graphic-detail-welcome-to-the-agentic-commerce-quarter/,News,AI;Earnings
 2026-11-18,Modern Retail,ThredUp launches TikTok Shop livestreams as part of its social commerce push,https://www.modernretail.co/operations/thredup-launches-tiktok-shop-livestreams-as-part-of-its-social-commerce-push/,News,TikTok
 2026-11-18,Haus,Is AppLovin falling off? Not in Haus data: 79% of tests since July beat the brand's other channels,https://x.com/oliviaakory/status/2123099989932929480,X,Meta;AppLovin;Measurement;Benchmarks
 2026-11-18,Haus,"CTV vs your next dollar, not your average dollar: roughly even (Haus CTV tests)",https://x.com/oliviaakory/status/2122888352491860479,X,Measurement
 2026-11-18,Foxwell,How Different Is Different Enough? Creative Diversity and Entity ID Under Andromeda,https://www.foxwelldigital.com/blog/how-different-is-different-enough-creative-diversity-and-entity-id-under-andromeda,Blog,Meta;Creative
+2026-11-18,Direct to Consumer,"Instagram Amazon Affiliate Links, BFCM Creative & Heart & Soil Growth",https://www.directtoconsumer.co/newsletter/instagram-amazon-links-bfcm-creative-heart-and-soil-growth,Newsletter,Meta;Amazon;Creative;BFCM / Q4
+2026-11-18,CTC,Introducing the Omni System,https://commonthreadco.com/blogs/coachs-corner/introducing-the-ctc-omnichannel-profit-system-a-unified-p-l-forecast-for-dot-com-tiktok-shop-and-amazon,Product,
+2026-11-18,CTC,Google Ads AI Max Is Now Making Decisions in Your Search Campaigns. Here Is What to Audit Today.,https://commonthreadco.com/blogs/coachs-corner/google-ads-ai-max-is-now-making-decisions-in-your-search-campaigns-here-is-what-to-audit-today,Blog,Google;AI
+2026-11-18,2PM,Memo: The Checkout Line Is the Front Line,https://2pml.com/2026/11/18/memo-the-checkout-line-is-the-front-line/,Memo,
 2026-11-17,Northbeam,Northbeam: 1.4% of Meta advertisers make 36% of all ad creative on Meta,https://x.com/northbeam/status/2122593832701251961,X,Meta;Creative
 2026-11-17,Modern Retail,Why Express is betting on Y2K fragrance nostalgia,https://www.modernretail.co/operations/express-y2k-fragrance-nostalgia/,News,
 2026-11-17,Modern Retail,Brands Briefing: Lands’ End wants to put more than tote bags under the tree,https://www.modernretail.co/operations/brands-briefing-lands-end-wants-to-put-more-than-tote-bags-under-the-tree/,News,

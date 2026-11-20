@@ -1,4 +1,7 @@
 <title>DTC Newsroom</title>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Newsroom">
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +30,7 @@ a{color:inherit}
 .mast .wrap{padding-block:18px 10px;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:12px}
 .mast .l,.mast .r{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);line-height:1.4}
 .mast .r{text-align:right}
+.mast .nameplate{display:flex;flex-direction:column;align-items:center;gap:6px}.mast #globe{width:44px;height:44px;display:block}
 .mast h1{margin:0;font-family:var(--head);font-weight:800;font-size:clamp(34px,6vw,64px);letter-spacing:-.02em;line-height:.95;text-align:center;white-space:nowrap}
 @media (max-width:720px){.mast .wrap{grid-template-columns:1fr}.mast .l,.mast .r{text-align:center}.mast h1{white-space:normal}}
 .rule2{border-top:3px double var(--rule);border-bottom:1px solid var(--rule);height:6px}
@@ -727,11 +731,12 @@ h2{margin-top:6px}
 <header class="mast">
   <div class="wrap">
     <div class="l" id="dateline">Wednesday, 28 October 2026<br>Market pulse for DTC performance marketers</div>
-    <h1>DTC Newsroom</h1>
+    <div class="nameplate"><canvas id="globe" width="88" height="88" aria-hidden="true"></canvas><h1>DTC Newsroom</h1></div>
     <div class="r"><span class="countdown" id="countdown"></span><br>Data through week ending <span id="thru">18 Oct 2026</span></div>
   </div>
   <div class="wrap" style="display:block;padding-block:0"><div class="rule2"></div></div>
 </header>
+<script>/*__GLOBE__*/</script>
 <div class="ticker" aria-label="Latest weekly moves"><div class="track" id="ticker"></div></div>
 <nav class="desks" aria-label="Desks">
   <div class="wrap">

@@ -111,7 +111,7 @@ for k,t,fn,src,extra in REG:
     if extra: note=(extra+' '+note).strip()
     DATA[k]=dict(title=t,file=fn,source=src,note=note,cols=cols,rows=rows)
 tpl=open('template.html').read()
-out=tpl.replace('/*__DATA__*/null',json.dumps(DATA,separators=(',',':'))).replace('/*__LIB__*/null',json.dumps(LIB,separators=(',',':'))).replace('/*__HWM__*/null',open('data/howland_meta_charts.json').read()).replace('/*__HWH__*/null',open('data/howland_headlines.json').read()).replace('/*__ANL__*/null',open('data/analysis.json').read()).replace('/*__WHL__*/null',open('data/headlines.json').read()).replace('/*__RDS__*/null',open('data/desk_reads.json').read()).replace('/*__BF26B__*/null',open('data/bfcm2026_briefing.json').read()).replace('/*__CATK__*/null',open('data/canada_takeaways.json').read()).replace('/*__DTCH__*/null',open('data/dtcnl_headlines.json').read()).replace('/*__HWX__*/null',open('data/howland_media.json').read()).replace('/*__BFPRED__*/null',open('data/bfcm2026_predictions.json').read()).replace('/*__HWBF__*/null',open('data/howland_bf_study.json').read())
+out=tpl.replace('/*__DATA__*/null',json.dumps(DATA,separators=(',',':'))).replace('/*__LIB__*/null',json.dumps(LIB,separators=(',',':'))).replace('/*__HWM__*/null',open('data/howland_meta_charts.json').read()).replace('/*__HWH__*/null',open('data/howland_headlines.json').read()).replace('/*__ANL__*/null',open('data/analysis.json').read()).replace('/*__WHL__*/null',open('data/headlines.json').read()).replace('/*__RDS__*/null',open('data/desk_reads.json').read()).replace('/*__BF26B__*/null',open('data/bfcm2026_briefing.json').read()).replace('/*__CATK__*/null',open('data/canada_takeaways.json').read()).replace('/*__DTCH__*/null',open('data/dtcnl_headlines.json').read()).replace('/*__HWX__*/null',open('data/howland_media.json').read()).replace('/*__BFPRED__*/null',open('data/bfcm2026_predictions.json').read()).replace('/*__HWBF__*/null',open('data/howland_bf_study.json').read()).replace('/*__GLOBE__*/',open('tools/globe/globe.min.js').read().strip())
 open('dtc-newsroom.html','w').write(out)
 print(len(out))
 # GitHub Pages: full document at index.html (site root)
@@ -123,6 +123,7 @@ SITE_HEAD=('<meta charset="utf-8">\n<meta name="viewport" content="width=device-
   '<meta name="keywords" content="DTC, ecommerce, marketing news, Meta ads, CPM, ROAS, CAC, BFCM, media buying, benchmarks">\n'
   '<link rel="canonical" href="https://dtcnewsroom.com/">\n<meta property="og:type" content="website">\n<meta property="og:site_name" content="DTC Newsroom">\n'
   f'<meta property="og:title" content="{SITE_TITLE}">\n<meta property="og:description" content="{SITE_DESC}">\n<meta property="og:url" content="https://dtcnewsroom.com/">\n'
-  f'<meta name="twitter:card" content="summary">\n<script type="application/ld+json">{SITE_LD}</script>\n')
+  f'<meta name="twitter:card" content="summary">\n'
+  '<meta name="theme-color" content="#ecebe5">\n<script type="application/ld+json">{SITE_LD}</script>\n')
 body=re.sub(r'^\s*<title>[^<]*</title>\s*\n','',out,count=1)
 open('index.html','w').write('<!doctype html>\n<html lang="en">\n<head>\n'+SITE_HEAD+'</head>\n<body>\n'+body+'\n</body>\n</html>\n')

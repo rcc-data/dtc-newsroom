@@ -2,37 +2,166 @@ Google Adds Visual Brand Guidelines to Performance Max: Upload Reference Images 
 https://commonthreadco.com/blogs/coachs-corner/google-adds-visual-brand-guidelines-to-performance-max-upload-reference-images-to-control-ai-generated-creatives
 2026-11-19
 
-Work With Us
-Prophit Engine
-Expand submenu Work With Us
-Collapse submenu Work With Us
-Growth Strategy
-Meta Ad Buying
-TikTok Shop
-Google Ad Buying
-Ad Creative
-Incrementality
-Omni System
-Methodology
-Forecasting
-Modeling
-Measurement
-Meta
-Google
-Case Studies
-Research
-Subscriptions
-ADmission Membership
-The DTC Index
-Media
-Blog
-Ecommerce Playbook
-YouTube
-The Thread
-Original Series
-DTC Hotline
-Hire Us
-Log In
-Create Account
-Your cart
-Close Cart
+Google Adds Visual Brand Guidelines to Performance Max: Upload Reference Images to Control AI-Generated Creatives
+
+ by Common Thread Collective
+
+ Nov. 19 2026
+
+On November 17, 2026, Google Ads announced the addition of Visual Guidelines to Performance Max Brand Settings, allowing advertisers to upload up to 3 reference images to control how AI generates and enhances creatives. For ecommerce brands running Performance Max campaigns, this means you can now steer AI-generated images toward your brand aesthetic instead of watching Google's AI guess at your style, potentially reducing off-brand creative output across campaigns using the default auto-enhancement settings.
+
+What Does Google's Visual Brand Guidelines Update Mean for Your Performance Max Campaigns?
+
+Google's AI has been generating and modifying images in Performance Max campaigns for months. Until now, the only control advertisers had was uploading reference assets and hoping the AI interpreted them correctly. This new Visual Guidelines feature adds a dedicated interface where you can define the style you want, specify content elements to include, and explicitly tell the AI what to avoid. For brands where visual identity is core to conversion, this is the most meaningful creative control update PMax has shipped.
+
+As part of our full Google Ads 2026 update tracker, we've been documenting every AI creative shift this year. Visual brand guidelines represent a step toward giving advertisers genuine guardrails, not just influence, over what Google's AI produces.
+
+What Is the Performance Max Visual Brand Guidelines Feature and How Does It Work?
+
+The new Visual Guidelines section appears inside the Brand Settings area of Performance Max campaigns. It includes three distinct controls:
+
+Style reference images: Upload up to 3 images that represent your desired visual style. Google's AI uses these as a reference point when generating or enhancing creatives.
+
+Content guidelines: Specify positive content preferences, such as "show people actively using the product" or "include lifestyle contexts."
+
+Avoidance instructions: Tell the AI what to exclude, such as "avoid busy backgrounds" or "do not use stock-photo-style lighting."
+
+The feature was first spotted by practitioners in Performance Max brand settings and confirmed by multiple paid search specialists. It is available inside existing PMax campaigns without requiring a new campaign structure.
+
+Why Does This Matter More Than Previous Performance Max Creative Controls?
+
+Google's AI creative tools have expanded significantly in 2026. Auto-generated images, video resizing, and creative enhancements have all rolled out with limited advertiser control. The common complaint from ecommerce brands was not that the AI tools performed poorly, but that they produced images inconsistent with the brand's visual identity, requiring constant creative review or disabling features entirely.
+
+Visual Brand Guidelines directly address that gap. Instead of a binary choice between using AI-enhanced creatives or turning them off, advertisers now have a middle path: use the AI tools with brand-defined parameters. For 7-9 figure ecommerce brands with established visual identities, this is the difference between AI as a liability and AI as a scalable creative tool.
+
+The update also signals Google's direction for Performance Max in 2027: more AI automation paired with more brand-level controls, rather than less automation. Brands that learn to work with these controls now will be better positioned than those waiting for AI creative to feel "ready."
+
+How Do You Measure the Impact of Visual Brand Guidelines on Your Campaign Results?
+
+Google does not expose per-asset performance breakdowns in Performance Max the way it does in standard campaigns. However, you can proxy brand guideline effectiveness through several signals:
+
+ Compare creative quality scores before and after adding visual guidelines (available in the asset group overview)
+
+ Monitor brand search volume for lift, since better brand-consistent creative should reinforce brand memory
+
+ Track new customer acquisition rate, since AI creative inconsistency tends to show up in upper-funnel metrics first
+
+ Use CTC's Prophit Engine to attribute incrementality at the campaign level, isolating whether PMax creative quality changes move the needle
+
+STAY CURRENT
+
+Ad platforms change weekly. Your inbox shouldn't miss it.
+
+Get CTC's weekly breakdown of the platform changes that actually matter for ecommerce brands, no noise, just what affects your campaigns.
+
+What Should You Do Now with Google's Visual Brand Guidelines Update?
+
+Audit your current PMax creative output today. Go into your Performance Max asset groups and review the AI-generated images Google is running. If they look off-brand, you now have a tool to fix it.
+
+Select 3 hero images that best represent your brand's visual identity. Choose images with consistent lighting, composition, and product presentation. These become your AI style anchors.
+
+Upload reference images to Brand Settings in each active PMax campaign. Navigate to the Brand Guidelines section within your campaign settings and add your style references.
+
+Write specific avoidance instructions. Be concrete: "avoid white studio backgrounds," "do not show abstract lifestyle scenes," "exclude heavy text overlays." Vague instructions have less effect.
+
+Monitor creative quality scores weekly for 4 weeks post-implementation. Look for improvement in asset strength ratings as the AI calibrates to your guidelines.
+
+Frequently Asked Questions
+
+Does adding visual guidelines to Performance Max replace the need for uploading creative assets?
+No. Visual guidelines influence how Google's AI generates and enhances images, but they do not replace the need to upload high-quality creative assets. Think of them as guardrails on the AI, not a replacement for your creative inputs.
+
+Will visual brand guidelines affect all asset types in Performance Max or only images?
+Based on current reporting, the visual guidelines feature applies specifically to image generation and enhancement. It does not currently extend to video assets or text assets within PMax campaigns.
+
+How many reference images can you upload per Performance Max campaign?
+You can upload up to 3 reference images per campaign in the Visual Guidelines section. Choose images that represent your most consistent and important visual brand signals.
+
+Is this feature available in all Performance Max campaign types?
+The feature appears in Brand Settings for Performance Max campaigns. Availability may vary by account type and rollout stage. If you do not see it yet in your account, check your campaign settings weekly as Google continues the rollout.
+
+Related Reading
+
+ Google AI Mode Multiturn Ads Are Live: Sponsored Results Now Follow Users Through Multi-Turn Conversations
+
+ Google Is Auto-Resizing Your Performance Max Videos with AI
+
+ CTC's Google Ads Management for Ecommerce Brands
+
+Performance Max is evolving faster than most ecommerce teams can track. If you want help setting up visual brand guidelines correctly, running incrementality tests on PMax creative changes, or building a creative strategy that holds up as AI automation expands, talk to us.
+
+ Common Thread Collective is the leading source of strategy and insight serving DTC ecommerce businesses. From agency services to educational resources for eccomerce leaders and marketers, CTC is committed to helping you do your job better.
+
+ For more content like this, sign up for our newsletter, listen to our podcast, or follow us on YouTube or Twitter.
+
+ Ready For a Plan
+Your Whole Team
+Can Execute Against?
+
+ Work With Us
+
+ Prophit Engine
+
+ Expand submenu Work With Us
+
+ Collapse submenu Work With Us
+
+ Growth Strategy
+
+ Meta Ad Buying
+
+ TikTok Shop
+
+ Google Ad Buying
+
+ Ad Creative
+
+ Incrementality
+
+ Omni System
+
+ Methodology
+
+ Forecasting
+
+ Modeling
+
+ Measurement
+
+ Meta
+
+ Google
+
+ Case Studies
+
+ Research
+
+ Subscriptions
+
+ ADmission Membership
+
+ The DTC Index
+
+ Media
+
+ Blog
+
+ Ecommerce Playbook
+
+ YouTube
+
+ The Thread
+
+ Original Series
+
+ DTC Hotline
+
+ Hire Us
+
+ Log In
+
+ Create Account
+
+ Your cart
+
+ Close Cart

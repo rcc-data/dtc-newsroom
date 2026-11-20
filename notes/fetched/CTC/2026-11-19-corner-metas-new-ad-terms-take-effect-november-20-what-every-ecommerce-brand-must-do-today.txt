@@ -2,37 +2,157 @@ Meta's New Ad Terms Take Effect November 20: What Every Ecommerce Brand Must Do 
 https://commonthreadco.com/blogs/coachs-corner/metas-new-ad-terms-take-effect-november-20-what-every-ecommerce-brand-must-do-today
 2026-11-19
 
-Work With Us
-Prophit Engine
-Expand submenu Work With Us
-Collapse submenu Work With Us
-Growth Strategy
-Meta Ad Buying
-TikTok Shop
-Google Ad Buying
-Ad Creative
-Incrementality
-Omni System
-Methodology
-Forecasting
-Modeling
-Measurement
-Meta
-Google
-Case Studies
-Research
-Subscriptions
-ADmission Membership
-The DTC Index
-Media
-Blog
-Ecommerce Playbook
-YouTube
-The Thread
-Original Series
-DTC Hotline
-Hire Us
-Log In
-Create Account
-Your cart
-Close Cart
+Meta's New Ad Terms Take Effect November 20: What Every Ecommerce Brand Must Do Today
+
+ by Common Thread Collective
+
+ Nov. 19 2026
+
+On November 20, 2026, Meta's updated advertising terms of service officially take effect for all advertisers running campaigns on Facebook, Instagram, and the Audience Network. For ecommerce brands spending on Meta, this means your existing ad account agreements are now superseded by the new terms, and non-compliance could result in account restrictions for campaigns running more than $1,000 per day.
+
+What Does Meta's November 20 Ad Terms Update Mean for Your Campaigns?
+
+The updated terms expand Meta's rights to use advertiser-submitted creative assets for ad delivery optimization across its AI systems, including Advantage+ placements. Brands that have not reviewed and accepted the new terms will face a grace period of up to 7 days before enforcement begins, but campaigns already running will continue uninterrupted during this window. Any new campaigns started after November 20 require acceptance of the updated terms.
+
+What Changed in Meta's New Ad Terms Compared to the Previous Agreement?
+
+The key changes in Meta's November 20 terms center on three areas that directly affect ecommerce advertisers:
+
+AI creative optimization rights: Meta can now automatically adjust creative elements, including colors, aspect ratios, and background compositions, across all ad placements without additional opt-in. Previously, this was limited to Advantage+ Creative placements. The new terms make it a default permission for all campaign types.
+
+Data retention and attribution windows: Meta is extending its allowable data retention window for conversion events from 180 days to 365 days. This affects how the pixel records purchase events and how that data feeds back into campaign optimization. For brands running 7-day click attribution, your conversion pools will now draw from a longer historical window, which can improve modeling accuracy but may change reported ROAS figures in your dashboard.
+
+Third-party data usage: The updated terms clarify how Meta can use first-party data uploaded via the Conversions API or Custom Audiences in conjunction with its broader advertiser data network. Brands using CAPI should audit their data sharing settings in Events Manager to confirm they are set appropriately for their privacy posture.
+
+For a full running list of Meta ad changes this year, see our complete Meta Ads 2026 update tracker.
+
+How Do Meta's New Ad Terms Affect Multi-Product Catalog Campaigns?
+
+Catalog-based campaigns, including Dynamic Product Ads and Advantage+ Shopping Campaigns, are most directly affected by the AI creative optimization changes. With the new terms, Meta's system can now modify the visual presentation of your product images in catalog ads, including applying background removal, adding contextual scene elements, and adjusting product image cropping, without a separate opt-in. Brands that want to maintain strict creative control over catalog ad visuals need to disable Advantage+ Creative enhancements at the ad set level before November 20.
+
+Brands running Meta ad campaigns with CTC should review their account structure with their strategist to confirm enhancement settings are aligned with their creative standards.
+
+What Are the Privacy Implications of Meta's Updated Terms for Ecommerce Brands?
+
+The expanded data usage provisions in the new terms have drawn scrutiny from privacy-focused brands, particularly those operating in markets with GDPR or CCPA obligations. Under the updated terms, Meta can use conversion data uploaded via CAPI or pixel to improve its broader ad delivery algorithms, not just optimize campaigns for the uploading advertiser. For brands that have made specific data minimization commitments to customers, it is worth reviewing your data sharing settings in Events Manager under "Advanced Matching" and ensuring your privacy policy accurately reflects how your pixel and CAPI data are shared with Meta.
+
+STAY CURRENT
+
+Ad platforms change weekly. Your inbox shouldn't miss it.
+
+Get CTC's weekly breakdown of the platform changes that actually matter for ecommerce brands, no noise, just what affects your campaigns.
+
+What Should You Do Now with Meta's November 20 Ad Terms?
+
+Accept the new terms today. Log into Meta Business Manager, go to Business Settings, and confirm you have accepted the updated terms under "Account Settings." If you have multiple ad accounts, check each one individually, as acceptance is not automatically cascaded across accounts.
+
+Audit Advantage+ Creative settings on live campaigns. Navigate to each active ad set and review "Creative enhancements" under the ad level. Disable any enhancements you do not want Meta applying automatically, specifically "Background generation," "Image brightness and contrast," and "Visual touch-ups."
+
+Review your CAPI data sharing level. In Events Manager, go to your pixel settings and check "Advanced Matching" and "Sharing Level" to confirm you are sharing only the data you intend to. Set to "Standard" if you are uncertain about your current configuration.
+
+Update your attribution windows in Ads Manager. With the extended data retention window, verify your campaign reporting attribution settings are still set to your preferred window (7-day click or 1-day click) to avoid inflated conversion reporting from the longer 365-day data pool.
+
+Brief your creative team. The AI optimization rights now apply to all creative types, not just those in Advantage+ placements. If your brand has strict visual identity standards, ensure your creative team knows to upload assets at spec rather than relying on Meta to crop or adjust them.
+
+Related Reading
+
+Meta Delayed Its New Ad Terms to November 20: What That Original Delay Meant
+
+Every Meta Ads Change in 2026 (Updated Weekly)
+
+CTC Meta Ads Management: How We Run Accounts at Scale
+
+Frequently Asked Questions
+
+Do I need to manually accept Meta's new ad terms to keep my campaigns running?
+Yes, you need to accept the updated terms in Meta Business Manager. Campaigns running before November 20 will continue for a grace period of up to 7 days, but new campaigns started after that date require acceptance. Log into Business Settings and look for a notification banner, or go directly to Account Settings to confirm.
+
+What happens if I do not accept Meta's new ad terms?
+Meta will initially continue running existing campaigns during a grace period after November 20. After that window closes, accounts that have not accepted the new terms may face restrictions on creating new campaigns or modifying existing ones. There is no indication that Meta will immediately pause live campaigns, but accepting now removes any risk.
+
+Does the updated attribution window change my historical ROAS data?
+The 365-day data retention window affects how Meta's AI models are trained and how conversion pools are built, but it does not retroactively change the reporting attribution window you have set in Ads Manager. Your reported ROAS will still reflect the 7-day click or 1-day click window you have selected. The longer retention affects optimization inputs, not the numbers on your dashboard.
+
+How do the new terms affect Advantage+ Shopping Campaigns specifically?
+Advantage+ Shopping Campaigns are most affected by the expanded AI creative optimization rights. With the new terms, Meta can apply more creative modifications to your product images and ad creatives within ASC campaigns. Brands running ASC should review creative enhancement settings at the ad level and disable anything that conflicts with their brand standards before November 20.
+
+Are there any actions specific to Shopify brands using Meta's native integrations?
+Shopify brands using the Meta Sales Channel or the native Shopify-Meta pixel integration should check that their data sharing level in both Shopify's Meta integration settings and Meta Events Manager are aligned. The new terms give Meta broader rights to use conversion data from CAPI feeds, so confirming your sharing level is intentional rather than left at a default setting is worth 10 minutes of your time today.
+
+The CTC team works with 7, 8, and 9-figure ecommerce brands navigating Meta platform changes every week. If you want a second set of eyes on how your account is configured ahead of the November 20 enforcement date, talk to us.
+
+ Common Thread Collective is the leading source of strategy and insight serving DTC ecommerce businesses. From agency services to educational resources for eccomerce leaders and marketers, CTC is committed to helping you do your job better.
+
+ For more content like this, sign up for our newsletter, listen to our podcast, or follow us on YouTube or Twitter.
+
+ Ready For a Plan
+Your Whole Team
+Can Execute Against?
+
+ Work With Us
+
+ Prophit Engine
+
+ Expand submenu Work With Us
+
+ Collapse submenu Work With Us
+
+ Growth Strategy
+
+ Meta Ad Buying
+
+ TikTok Shop
+
+ Google Ad Buying
+
+ Ad Creative
+
+ Incrementality
+
+ Omni System
+
+ Methodology
+
+ Forecasting
+
+ Modeling
+
+ Measurement
+
+ Meta
+
+ Google
+
+ Case Studies
+
+ Research
+
+ Subscriptions
+
+ ADmission Membership
+
+ The DTC Index
+
+ Media
+
+ Blog
+
+ Ecommerce Playbook
+
+ YouTube
+
+ The Thread
+
+ Original Series
+
+ DTC Hotline
+
+ Hire Us
+
+ Log In
+
+ Create Account
+
+ Your cart
+
+ Close Cart

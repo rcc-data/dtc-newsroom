@@ -2,37 +2,138 @@ Introducing the Omni System
 https://commonthreadco.com/blogs/coachs-corner/introducing-the-ctc-omnichannel-profit-system-a-unified-p-l-forecast-for-dot-com-tiktok-shop-and-amazon
 2026-11-18
 
-Work With Us
-Prophit Engine
-Expand submenu Work With Us
-Collapse submenu Work With Us
-Growth Strategy
-Meta Ad Buying
-TikTok Shop
-Google Ad Buying
-Ad Creative
-Incrementality
-Omni System
-Methodology
-Forecasting
-Modeling
-Measurement
-Meta
-Google
-Case Studies
-Research
-Subscriptions
-ADmission Membership
-The DTC Index
-Media
-Blog
-Ecommerce Playbook
-YouTube
-The Thread
-Original Series
-DTC Hotline
-Hire Us
-Log In
-Create Account
-Your cart
-Close Cart
+Introducing the Omni System
+
+ by Common Thread Collective
+
+ Nov. 18 2026
+
+ A P&L-level forecast across dot-com, TikTok Shop, and Amazon that quantifies the true demand cascade between every sales channel and media channel in your business. The Omni System gives you a unified view of where demand is actually being created and captured, with daily targets across 35 or more business and marketing metrics so you can track against a real plan.
+
+We built this because the problem it solves has never been more urgent, and nothing like it exists yet.
+
+Learn More About the Omni System →
+
+The Problem
+
+Five years ago, an 8-figure ecommerce brand had a relatively simple stack. A dot-com store, Meta, Google, Klaviyo. Today that same brand is running seven times more complexity. TikTok Shop. Amazon. GMV Max. AppLovin. Snapchat. CTV tests. Creator programs. Each of those channels reports its own numbers, claims its own credit, and tells its own story about what it contributed to the business.
+
+None of those stories account for each other.
+
+Your TikTok Shop Seller Center shows $100,000 in revenue. Your Amazon dashboard shows a 35% contribution margin and a 6X MER. Your dot-com is running at 25% CM and a 4.5X MER. Looking at those numbers independently, you might conclude that Amazon is your most efficient channel and TikTok Shop is barely breaking even. That conclusion is probably wrong. And the decisions you make based on it, budget allocation, inventory purchasing, resourcing, vendor selection, could cost you millions going into 2027.
+
+What We Actually Measured
+
+Across hundreds of brands and billions in GMV, here is what we know. For every dollar of revenue that shows up in TikTok Shop Seller Center, there is an additional $0.53 of revenue being created by that channel but captured somewhere else, primarily on dot-com and Amazon. The range runs from $0.20 on the low end to $0.93 on the high end.
+
+That spread matters enormously. A brand at the low end of that range needs a completely different investment thesis than a brand at the high end. Same channel, same surface metrics, completely different business reality underneath.
+
+Meta has the same dynamic. On a 7-day click basis, Meta underreports its true impact to the business by approximately 20%. That is a 1.2X true contribution factor. For brands that also run Amazon, that factor goes to 1.4X. Without accounting for that, you will systematically under-invest in the channel actually driving the most incremental demand in your business.
+
+90% or more of brands do not have clarity on these numbers for their specific business. That is what the Omni System is built to solve.
+
+See How the Omni System Works →
+
+How It Works
+
+The Omni System is built in three steps.
+
+Step one: unified database. We pull data from every dimension of your business, every ad channel (Meta, Google, GMV Max, AppLovin, Snapchat, and others), every sales channel (Shopify dot-com, TikTok Shop Seller Center, Amazon), COGS and fulfillment costs per channel, creator incentive platforms, promotional data, and marketing calendar history. 19 or more distinct data sources structured into one unified database.
+
+Step two: nine models. Our data science team runs nine models against that database: a dot-com spend power model, a TikTok Shop spend power model, a dot-com retention model, a TikTok Shop retention model, an Amazon revenue and spend model, a halo effect model that quantifies your specific 1.2X to 1.9X cascade factor, a media mix model that determines true channel contribution and optimal budget allocation, an event effect model that measures the actual lift from your product launches and promotions, and a creative demand model that projects how much creative is needed to support the ecosystem.
+
+Step three: P&L forecast with daily targets. A full P&L level forecast for 2027 with daily targets across 35 or more business and marketing metrics, tracked inside Statlas. Every day, you can see exactly where you are relative to plan.
+
+Reported View vs. Cascaded View
+
+The most important feature of the Omni System is the ability to toggle between two views of your business.
+
+The reported view shows what each channel claims credit for. TikTok Seller Center says $100K. Google Brand says 12X ROAS. Amazon says 35% CM. These numbers are real, but they are incomplete.
+
+The cascaded view redistributes contribution based on where demand is actually being created and captured. TikTok revenue goes up to reflect the downstream impact it drives. Amazon normalizes to reflect the dot-com and media spend that creates the demand it captures. Media channels are weighted by their true incremental impact, not their platform-reported ROAS.
+
+The aggregate total is the same in both views. What changes is how you understand the role each channel played in producing it, and therefore how you should allocate resources going into 2027. That is the decision-making view.
+
+Who This Is For
+
+The Omni System is built for 8-figure and 9-figure ecommerce brands running across dot-com, TikTok Shop, and Amazon simultaneously. If you are heading into 2027 with significant budget decisions to make and you do not have a unified view of where your demand is actually being created and captured, this is the solve.
+
+If you want to learn more about the Omni System and what it would look like built for your brand, start here.
+
+Explore the Omni System →
+
+ Common Thread Collective is the leading source of strategy and insight serving DTC ecommerce businesses. From agency services to educational resources for eccomerce leaders and marketers, CTC is committed to helping you do your job better.
+
+ For more content like this, sign up for our newsletter, listen to our podcast, or follow us on YouTube or Twitter.
+
+ Ready For a Plan
+Your Whole Team
+Can Execute Against?
+
+ Work With Us
+
+ Prophit Engine
+
+ Expand submenu Work With Us
+
+ Collapse submenu Work With Us
+
+ Growth Strategy
+
+ Meta Ad Buying
+
+ TikTok Shop
+
+ Google Ad Buying
+
+ Ad Creative
+
+ Incrementality
+
+ Omni System
+
+ Methodology
+
+ Forecasting
+
+ Modeling
+
+ Measurement
+
+ Meta
+
+ Google
+
+ Case Studies
+
+ Research
+
+ Subscriptions
+
+ ADmission Membership
+
+ The DTC Index
+
+ Media
+
+ Blog
+
+ Ecommerce Playbook
+
+ YouTube
+
+ The Thread
+
+ Original Series
+
+ DTC Hotline
+
+ Hire Us
+
+ Log In
+
+ Create Account
+
+ Your cart
+
+ Close Cart

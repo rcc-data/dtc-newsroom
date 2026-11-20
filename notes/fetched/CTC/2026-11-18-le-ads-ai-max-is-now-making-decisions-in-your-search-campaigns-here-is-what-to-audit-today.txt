@@ -2,37 +2,158 @@ Google Ads AI Max Is Now Making Decisions in Your Search Campaigns. Here Is What
 https://commonthreadco.com/blogs/coachs-corner/google-ads-ai-max-is-now-making-decisions-in-your-search-campaigns-here-is-what-to-audit-today
 2026-11-18
 
-Work With Us
-Prophit Engine
-Expand submenu Work With Us
-Collapse submenu Work With Us
-Growth Strategy
-Meta Ad Buying
-TikTok Shop
-Google Ad Buying
-Ad Creative
-Incrementality
-Omni System
-Methodology
-Forecasting
-Modeling
-Measurement
-Meta
-Google
-Case Studies
-Research
-Subscriptions
-ADmission Membership
-The DTC Index
-Media
-Blog
-Ecommerce Playbook
-YouTube
-The Thread
-Original Series
-DTC Hotline
-Hire Us
-Log In
-Create Account
-Your cart
-Close Cart
+Google Ads AI Max Is Now Making Decisions in Your Search Campaigns. Here Is What to Audit Today.
+
+ by Common Thread Collective
+
+ Nov. 18 2026
+
+On November 18, 2026, Google confirmed that AI Max for Search campaigns has now automatically migrated more than 25% of exact match keyword impressions through its AI-driven search term matching system. For ecommerce brands running Search campaigns, this means that keywords you thought were tightly controlled are now reaching broader audiences, with independent analysis of 383 million impressions showing that more than 1 in 4 exact match impressions are now being served through AI Max's expanded matching rather than your original keyword targeting.
+
+What Does Google's AI Max Expansion Mean for Your Search Campaigns?
+
+AI Max is no longer an optional feature you can ignore. Google automatically migrated campaigns using Automatically Created Assets (ACA) and campaign-level broad match starting in September 2026, and Dynamic Search Ads will follow in February 2027. Your Search campaigns are already running under AI Max rules, with Google making autonomous decisions about which searches to match, what ad copy to serve, and which landing pages to send traffic to, often outside the boundaries you originally set.
+
+If you have not audited your Search campaigns since September, your exact match keywords are probably not doing what you think they are. AI Max's keywordless matching can serve ads for competitor terms, branded queries from non-brand campaigns, and informational searches that convert at a fraction of your core rate. One analysis found a single account where competitor searches accounted for 69% of total Search impressions after AI Max was enabled.
+
+How Is AI Max Changing the Way Google Matches Your Ads?
+
+AI Max combines three features that work together to expand your reach beyond your keyword list: search term matching (which allows keywordless expansion beyond your original keywords), text customization (which lets Google rewrite your headlines and descriptions), and Final URL expansion (which lets Google redirect traffic to different pages on your site than the ones you specified). Google reports that advertisers using the full AI Max suite see an average of 7% more conversions or conversion value at a similar CPA or ROAS, though independent research from Smarter Ecommerce found a median 13% more conversions alongside a 12% higher CPA, meaning the efficiency story is more complex than Google's headline number suggests.
+
+The key issue for ecommerce brands is that Google's migration preserves your campaign structure but not necessarily your campaign intent. A campaign built to target high-intent product searches can quietly start matching informational research queries, competitor brand terms, or tangential content that burns budget without contributing to revenue. For 7, 8, and 9-figure brands running tight attribution models like the Prophit Engine, this kind of invisible budget leakage is a direct threat to your ROAS targets. For a broader tracker of everything Google has changed in 2026, see our full Google Ads 2026 update tracker.
+
+What Settings Is AI Max Controlling in Your Account Right Now?
+
+Not every campaign gets the same AI Max configuration. The settings that were automatically applied depend on which legacy features each campaign was using before September 2026:
+
+Automatically Created Assets (ACA) campaigns: Transitioned with search term matching and text customization enabled by default.
+
+Campaign-level broad match campaigns: Transitioned with search term matching enabled by default.
+
+Dynamic Search Ads (DSA) campaigns: Scheduled for February 2027 migration; will enable search term matching, text customization, and Final URL expansion while preserving URL controls.
+
+This means two campaigns can both show "AI Max enabled" in your dashboard while having completely different levels of automation running. The only way to know what Google is doing in each campaign is to check the AI Max settings at both the campaign level and the ad group level.
+
+Where Is AI Max Sending Your Traffic and Spending Your Budget?
+
+Final URL expansion is the setting that surprises most advertisers. When enabled, Google selects a different landing page from your site based on its interpretation of the search query, which can redirect PPC spend to informational blog posts, support pages, or product categories outside your campaign's intended scope. For ecommerce brands, this means your Shopping-intent campaign might be funding traffic to a size guide or a category browse page with no direct conversion path.
+
+Ad copy generation through text customization adds another layer. Google creates new headlines and descriptions using your existing ads, keywords, and landing page content. While Google allows advertisers to review and remove generated assets, the default is for these assets to run immediately. If your campaign relies on pinned assets for compliance reasons, pricing language, or partner-approved messaging, note that pinning is not always respected when Final URL expansion is enabled.
+
+STAY CURRENT
+
+Ad platforms change weekly. Your inbox should not miss it.
+
+Get CTC's weekly breakdown of the platform changes that actually matter for ecommerce brands, no noise, just what affects your campaigns.
+
+What Should You Do Now with Google's AI Max Expansion?
+
+Check which AI Max features are live in every campaign today. Go to your Google Ads account and review AI Max settings at both the campaign and ad group level. Confirm whether search term matching, text customization, and Final URL expansion are active, and which campaigns triggered automatic migration in September.
+
+Pull your Search Terms report and filter for AI Max attributed traffic. Look for competitor searches, branded queries appearing in non-brand campaigns, informational search terms with low purchase intent, and headlines being served that you did not write. Add negative keywords for anything bleeding budget without returns.
+
+Audit your landing page traffic from AI Max. Run a report on which URLs are receiving PPC traffic since September. Flag any pages receiving spend that do not have a direct conversion path, and add URL exclusions at the campaign level for pages that should not be in your PPC funnel.
+
+Review all generated ad copy for accuracy before the next billing cycle. Navigate to your optimized asset reporting and check the generated headlines and descriptions Google is running. Remove any that contain inaccurate claims, pricing you no longer offer, or messaging that is out of compliance.
+
+If you rely on pinned assets, turn off Final URL expansion for those campaigns. Google confirms that pinned assets are not always respected when Final URL expansion is active. Any campaign where message control is non-negotiable should have this setting disabled explicitly at the campaign level.
+
+Related Reading
+
+ Google Smart Bidding Exploration Is Now Live for Shopping and PMax
+
+ Every Google Ads Change in 2026 (Updated Weekly)
+
+ CTC's Google Ads Management Services
+
+Frequently Asked Questions
+
+What is Google Ads AI Max and how is it different from standard Search campaigns?
+AI Max is Google's replacement for legacy Search campaign features like Dynamic Search Ads, Automatically Created Assets, and campaign-level broad match settings. Instead of matching ads based only on your keyword list, AI Max uses broader intent signals to find searches beyond what your keywords cover, generates ad copy automatically from your website content, and can redirect traffic to landing pages it selects rather than the ones you specify. It is now being applied automatically to existing campaigns rather than requiring opt-in.
+
+Can I turn off AI Max if I do not want it running in my campaigns?
+You can control individual AI Max features rather than the system as a whole. Search term matching, text customization, and Final URL expansion each have separate controls at the campaign or ad group level. You can disable Final URL expansion entirely and add URL exclusions to restrict where traffic goes. Negative keywords continue to work normally. However, if your campaign was auto-migrated from DSA, ACA, or broad match settings, you will need to review each campaign individually to find out what is currently enabled.
+
+Will AI Max actually improve my campaign performance?
+Google reports a 7% average lift in conversions or conversion value at a similar CPA or ROAS for advertisers using the full AI Max feature suite. Independent research from Smarter Ecommerce found a median 13% more conversions but also a 12% higher CPA. For ecommerce brands optimizing for revenue efficiency rather than raw conversion volume, the tradeoff between more conversions and higher cost per acquisition deserves close attention. Results vary significantly by account, industry, and how tightly the original campaigns were structured.
+
+How do I know if competitor searches are showing up in my AI Max campaigns?
+Pull your Search Terms report and filter for AI Max as the match source. Sort by impressions and look for brand names or product names from competitors. In a documented case study, one account saw 69% of total Search impressions going to competitor searches after AI Max migration. If you are seeing high impression volume from competitor terms, add negative keywords for those brand names and review your brand controls in the AI Max settings panel, where you can restrict or allow specific brand terms from appearing in your campaigns.
+
+If you are running significant Google Ads spend and have not audited your campaigns since September 2026, you are likely running with automation you did not choose. Talk to CTC about a Google Ads audit and we can show you exactly what AI Max has changed in your account.
+
+ Common Thread Collective is the leading source of strategy and insight serving DTC ecommerce businesses. From agency services to educational resources for eccomerce leaders and marketers, CTC is committed to helping you do your job better.
+
+ For more content like this, sign up for our newsletter, listen to our podcast, or follow us on YouTube or Twitter.
+
+ Ready For a Plan
+Your Whole Team
+Can Execute Against?
+
+ Work With Us
+
+ Prophit Engine
+
+ Expand submenu Work With Us
+
+ Collapse submenu Work With Us
+
+ Growth Strategy
+
+ Meta Ad Buying
+
+ TikTok Shop
+
+ Google Ad Buying
+
+ Ad Creative
+
+ Incrementality
+
+ Omni System
+
+ Methodology
+
+ Forecasting
+
+ Modeling
+
+ Measurement
+
+ Meta
+
+ Google
+
+ Case Studies
+
+ Research
+
+ Subscriptions
+
+ ADmission Membership
+
+ The DTC Index
+
+ Media
+
+ Blog
+
+ Ecommerce Playbook
+
+ YouTube
+
+ The Thread
+
+ Original Series
+
+ DTC Hotline
+
+ Hire Us
+
+ Log In
+
+ Create Account
+
+ Your cart
+
+ Close Cart

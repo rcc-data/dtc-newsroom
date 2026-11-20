@@ -2,37 +2,163 @@ Shopify Just Opened the Shop App to Every Store, Not Just Shopify Payments Users
 https://commonthreadco.com/blogs/coachs-corner/shopify-just-opened-the-shop-app-to-every-store-not-just-shopify-payments-users
 2026-11-19
 
-Work With Us
-Prophit Engine
-Expand submenu Work With Us
-Collapse submenu Work With Us
-Growth Strategy
-Meta Ad Buying
-TikTok Shop
-Google Ad Buying
-Ad Creative
-Incrementality
-Omni System
-Methodology
-Forecasting
-Modeling
-Measurement
-Meta
-Google
-Case Studies
-Research
-Subscriptions
-ADmission Membership
-The DTC Index
-Media
-Blog
-Ecommerce Playbook
-YouTube
-The Thread
-Original Series
-DTC Hotline
-Hire Us
-Log In
-Create Account
-Your cart
-Close Cart
+Shopify Just Opened the Shop App to Every Store, Not Just Shopify Payments Users
+
+ by Common Thread Collective
+
+ Nov. 19 2026
+
+On November 10, 2026, Shopify announced that the Shop app and Shop.com marketplace are now open to stores that do not use Shopify Payments. For ecommerce brands previously blocked from Shop discovery, this change opens a free acquisition channel to more than 150 million Shop app users, with Shopify reporting that referred traffic from Shop converts at 1.4 times the rate of standard organic traffic.
+
+What Does Shopify's New Shop Eligibility Change Mean for Your Store?
+
+Previously, appearing on the Shop app required using Shopify Payments as your checkout payment processor. Now, any Shopify store that meets the updated eligibility requirements can appear on Shop and Shop.com, regardless of which payment provider they use. This directly expands discoverability for brands using Stripe, PayPal, or third-party processors as their primary checkout.
+
+Who Was Previously Excluded from Shop and Why Does This Matter Now?
+
+The Shopify Payments requirement historically excluded two significant groups of merchants: brands in product categories restricted from using Shopify Payments (including certain supplements, firearms accessories, and high-risk categories), and international brands operating in markets where Shopify Payments is not available. Both groups can now appear in Shop's discovery feed and search results. For 7 and 8-figure DTC brands that have been running non-Shopify Payments checkouts for compliance or margin reasons, this is a free channel that was previously unavailable to them.
+
+For more context on how Shopify's platform changes affect ecommerce operations, see our coverage of the Shopify Fall 2026 Edition.
+
+What Are the Updated Shop Eligibility Requirements for Shopify Stores?
+
+Shopify updated the full eligibility requirements alongside this change. All stores, including those using Shopify Payments, now need to meet revised criteria to appear on Shop. Key requirements include:
+
+Store must be on a paid Shopify plan (not a trial)
+
+Store must have a complete "About" page, refund policy, privacy policy, and contact information
+
+Products must comply with Shop's restricted products policy
+
+Store must have made at least one real transaction through Shopify's checkout
+
+Store must be in a country where Shop is available
+
+Stores not using Shopify Payments can appear in Shop discovery and receive referral traffic, but are not eligible for Shop Campaigns (the paid promotion feature within Shop). Shop Campaigns remain limited to Shopify Payments merchants.
+
+How Does Appearing on Shop Affect Ecommerce Brand Discovery and Customer Acquisition?
+
+Shop functions as a branded commerce discovery feed, surfacing products to users based on their purchase history and browsing behavior. For brands that appear on Shop, the primary benefits are order tracking (which keeps your brand visible after purchase), browse discovery from new customers in adjacent product categories, and Shop Pay availability for checkout when customers click through. The channel is free to participate in, with no cost-per-click or listing fees. Brands that have optimized their product listings, collections, and store metafields are likely to see the strongest discovery performance, as Shop's algorithm uses structured product data to match products to relevant buyers.
+
+CTC's growth teams have been monitoring Shop as an organic channel for clients. Connect with the Prophit Engine team if you want to understand how Shop referral traffic fits into your full-funnel attribution model.
+
+STAY CURRENT
+
+Ad platforms change weekly. Your inbox shouldn't miss it.
+
+Get CTC's weekly breakdown of the platform changes that actually matter for ecommerce brands, no noise, just what affects your campaigns.
+
+What Should You Do Now with Shopify's Updated Shop Eligibility?
+
+Check your store's current eligibility status. Go to your Shopify admin, open the Shop sales channel, and navigate to Settings. Shopify will show you whether your store meets the updated requirements and flag any gaps. If you are not currently using Shopify Payments, this is the first time this channel is available to you.
+
+Complete any missing store policy pages. Shop requires a refund policy, privacy policy, and contact page to be in place. If your store is missing any of these, add them through Settings in your Shopify admin. These pages improve Shop eligibility and are also a conversion best practice for your storefront.
+
+Audit your product listings for structured data completeness. Shop's algorithm uses product metafields, variant data, and category taxonomy to match your products to relevant buyers. Ensure your products have accurate category assignments, complete variant titles, and filled metafields. This directly affects how often your products appear in Shop discovery.
+
+Review your Shop channel settings for order tracking. The Shop app's post-purchase order tracking is one of its strongest features for brand retention. Enable the Shop tracking experience in your Shop channel settings to keep your brand visible to customers after they buy.
+
+Confirm your payment provider is compatible. While non-Shopify Payments stores can now appear on Shop, customers checking out through Shop's native interface will use Shop Pay if available. Verify that your checkout flow is compatible and that your store's checkout URL is correct in Shop channel settings.
+
+Related Reading
+
+Shopify Fall 2026 Edition: Agentic Shopping and Shop Pay in AI Agents
+
+Shopify's New Store Activity Log: 18 Months of Change History
+
+CTC Prophit Engine: Full-Funnel Attribution for Ecommerce Brands
+
+Frequently Asked Questions
+
+Can I appear on Shop.com if I am not using Shopify Payments?
+Yes, as of November 10, 2026. Shopify has opened the Shop app and Shop.com to all merchants that meet the updated eligibility requirements, regardless of payment provider. Check your eligibility status in the Shop channel within your Shopify admin.
+
+What is the difference between Shop discovery and Shop Campaigns?
+Shop discovery is the organic appearance of your products and store in the Shop app feed, based on relevance and product data quality. Shop Campaigns is a paid promotional feature that boosts your visibility in the Shop feed and is still limited to stores using Shopify Payments. Non-Shopify Payments stores can access organic discovery but cannot run paid Shop Campaigns.
+
+Does appearing on Shop cost anything?
+No. Appearing in the Shop app's organic discovery feed is free. Shopify does not charge listing fees or cost-per-click for organic Shop placements. The only paid feature is Shop Campaigns, which requires Shopify Payments and uses a cost-per-acquisition model.
+
+How do I know if my store is eligible for Shop under the new requirements?
+Go to your Shopify admin, navigate to Sales Channels, open the Shop channel, and check Settings. Shopify displays your current eligibility status and identifies any requirements you have not yet met. If you are on a paid plan and have your basic policy pages in place, most stores will qualify.
+
+Will Shop referral traffic appear separately in my analytics?
+Yes. Traffic referred from the Shop app and Shop.com will appear as referral traffic in your analytics, typically sourced from shop.app or shop.com. If you are using UTM parameters or the Prophit Engine for attribution, Shop referral sessions will be trackable as a distinct acquisition source once you start appearing in the feed.
+
+CTC works with 7, 8, and 9-figure ecommerce brands to maximize every available discovery and acquisition channel. If you want help evaluating whether Shop fits your acquisition mix or how to structure your Shopify store for maximum organic discoverability, talk to us.
+
+ Common Thread Collective is the leading source of strategy and insight serving DTC ecommerce businesses. From agency services to educational resources for eccomerce leaders and marketers, CTC is committed to helping you do your job better.
+
+ For more content like this, sign up for our newsletter, listen to our podcast, or follow us on YouTube or Twitter.
+
+ Ready For a Plan
+Your Whole Team
+Can Execute Against?
+
+ Work With Us
+
+ Prophit Engine
+
+ Expand submenu Work With Us
+
+ Collapse submenu Work With Us
+
+ Growth Strategy
+
+ Meta Ad Buying
+
+ TikTok Shop
+
+ Google Ad Buying
+
+ Ad Creative
+
+ Incrementality
+
+ Omni System
+
+ Methodology
+
+ Forecasting
+
+ Modeling
+
+ Measurement
+
+ Meta
+
+ Google
+
+ Case Studies
+
+ Research
+
+ Subscriptions
+
+ ADmission Membership
+
+ The DTC Index
+
+ Media
+
+ Blog
+
+ Ecommerce Playbook
+
+ YouTube
+
+ The Thread
+
+ Original Series
+
+ DTC Hotline
+
+ Hire Us
+
+ Log In
+
+ Create Account
+
+ Your cart
+
+ Close Cart

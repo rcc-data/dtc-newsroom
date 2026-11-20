@@ -1,0 +1,77 @@
+Pay Creators More (A Trybe diatribe)
+https://newsletter.curtishowland.com/p/pay-creators-more-a-trybe-diatribe
+2026-11-20
+You’ll make more money - hear me out.
+
+70% of our clients run some kind of creator groups at this point (either Trybe or elsewhere) and it's hugely impactful for most of them.
+So what do you pay them?
+Not all brands are consistent (not even the ones we work with)
+But I suggest 15% of spend.
+Why 15%? It’s a lot; hear me out!
+15% is the high end. 3% is the low end but let's talk in more detail.
+First, why 15%?
+It’s five more points of spend than 10%.
+Your total cost goes from 1.10x media to 1.15x. That’s 4.5% more.
+The creator gets paid 50% more.
+1.10 vs 1.15 is not that big of a gap. But 50% more pay is a big incentive for a creator to choose you over anyone else.
+And that top 1% of creators is so impactful to a brand.
+We’ll launch 100 ads and find two or three really big winners, same as everything else. I think we’re going to test a thousand creators and find 15 of them.
+What % of spend gets you:
+You pay almost nothing for bad ads.
+Some ads will literally get $20. The creator gets paid $3 and that’s it.
+You pay a lot for really good ads, which is a win-win.
+A good ad vs a bad ad can be a 500% difference in output. Paying 15% for that is reasonable.
+Underperformers cut themselves.
+You just pay them what they are owed and after a few ads they bow out!
+Creators are incentivized to make ads that scale.
+They make more of what worked, there are whole courses teaching them how to do this.
+No brief per video.
+Give them the selling points you know matter and leave the creative to them. (Not necessary, but it works well)
+How we set it up:
+No cap on payouts. A lot of people are tempted to cap it. The lottery mentality is powerful though and a huge ad is a huge win anyway!
+No retainers for new creators. They have to prove themselves first.
+One person to ship product, select creators and approve ads.
+You only need to test it for 6-10 weeks to validate imo, tbh it will probably work but if not you can cut at that point.
+UGC still works and we still brief it. This is a layer on top. (Why brands build creator communities in the first place is in my March post.)
+Thanks for reading Curtis Howland on DTC Marketing! Subscribe for free to receive new posts and support my work.
+Be Careful. The 15% Isn’t in Ads Manager.
+Scale a creator ad on in-platform CPA and you’re less profitable than you think.
+A flat $5k usage fee is sunk. It doesn’t change a single day-to-day decision in the account.
+A % of spend fee is different. Every dollar you scale costs you more, so it has to change how you buy.
+But DON'T raise the hurdle by the fee.
+Figure out what % of spend you pay right now.
+Let's say all in cost is $250k and you spend $3m/yr on that creative (don't care how you get it).
+Your creative cost is 8.3%
+Let's say Trybe will cost you 17% (15%+2% for management + product)
+Net cost ~9%
+At 9%:
+ROAS:
+target x 1.09. A 2.0 target becomes 2.18.
+CPA:
+target ÷ 1.09. A $100 target becomes $91.74.
+Your net will be different. Run your own numbers.
+A lot of people miss this! In-house teams and flat fee teams can cost 15% of spend as well (add it all up). If that’s you, the net is tiny.
+Then track every producer the same way. Meta spend + creator fees + management fee, against your CPA.
+It doesn’t matter what makes up your CPA as long as it’s low. (The full cost stack is in The First Customer P&L.)
+Brought to you by Triple Whale
+Most of our clients at Misfit run on Triple Whale, they are sponsoring this substack but they are a key part of our everyday management. It’s where we get new customer CPA for every ad, and that’s what we scale on.
+Not CTR. Not Meta’s ROAS.
+For creators: take new customer CPA across the creator ads and multiply by 1.17 (the all in cost from the example). Do the same for every other producer with their own cost (1.083 in the example) and put them side by side.
+Also we are getting near BFCM. Their
+BFCM Command Center
+: set revenue targets, channel budgets and pacing thresholds from last year’s data, track pacing against the plan, and see the Meta ads your competitors are running.
+Track Creators as Their Own Producer
+1. Tag every creator ad.
+Upload through Trybe and it’s automatic, every ad gets a creator code in the landing page URL. But however you do it, make sure the creator's name is there.
+2. Break it out into its own campaign if you need.
+Trybe suggests two campaigns per product (testing + scaling), one ad set per creator, three to six ads in each.
+3. Week to week, read the program as one line.
+All the creator spend and all the payouts in one bucket, as fully loaded CPA, so you know if the channel as a whole is efficient.
+4. At month end, build the creator table.
+Creator, spend, payout and CPA tell you who to bring back (and month end is plenty for finance). Add LTV by source too, in case creator ads bring in higher or lower value customers.
+5. Read both next to test share.
+Hundreds of new ads means a lot of spend on testing, so blended CPA goes up in the weeks submissions spike.
+6. Act on it.
+When a few creators are carrying most of the spend, keep their volume and cut back everyone else.
+Would you change anything? reply and lmk!
+Cheers, Curtis

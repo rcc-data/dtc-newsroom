@@ -1,0 +1,100 @@
+Meta Creative Diversity, Instagram Story Editing & Hiya CRO
+https://www.directtoconsumer.co/newsletter/meta-creative-diversity-instagram-stories-hiya-cro
+2026-11-20
+
+Good morning.
+The to do list may be long, but a reminder to anyone who’s a Microsoft user, your productivity is already up 1,000,000x from last Friday, so look at you go. 😎
+Here’s what you’ll find in today’s newsletter:
+Meta is grading whether your creative is diverse
+The 15-minute window that could save your next Instagram Story typo
+Why shipping could be the thing that kills your Black Friday deal
+Five ways Hiya could make its subscription feel easier to say yes to
+And more.
+Happy Friday, let’s dive in!
+---
+🎨 Meta’s grading your creative variety
+Are your ads different, or just versions of the same thing?
+@Peter_Quadrel
+pointed out Meta’s Creative Diversity column. You can find it under Columns → Customize columns → search “diversity.”
+It rates ad sets High, Medium, or Low by comparing images and video thumbnails. He also points out that two very different videos could score Low if their thumbnails look alike.
+He’s using it next to hook rate, hold rate, and spend allocation. So look at the rating, then check performance before you start swapping out creative.
+✏️ Posted a Story typo? You have 15 minutes to fix it
+Good news for whoever runs your Instagram account.
+You can now edit Stories after posting
+without losing views, likes, or replies.
+You get 15 minutes to change text, music, stickers, and drawings. Open the Story, tap the three dots, and hit Edit Story.
+🚚 Your Black Friday deal can fall apart at shipping
+According to
+DHL’s new Black Friday findings
+, one in three Black Friday shoppers say choosing shipping is where they’re most likely to bail on a purchase. Nine in ten care most about fast, free delivery and easy returns.
+Before traffic picks up, make shipping costs, delivery dates, and return terms easy to find on your product pages and in the cart. Nobody wants to get all the way to checkout to find out the deal doesn’t work for them.
+---
+👀 Your next best creator has 4,000 followers
+You’ll never find her.
+Not by scrolling. Not in a spreadsheet. Her last video did 2 million views, and she’s already posting about brands like yours. And by the time she lands on your shortlist, she’s out of budget.
+David Protein and Fishwife found her first because they’re using
+Nectar Creator Agent
+.
+The Creator Agent
+scans 300M+ creator profiles and flags the breakout creators whose views are outrunning their follower count
+. Then it vets them, so you’re not guessing. From there, it handles the entire influencer process, all the way to the video going live and tracking on the post.
+If you're spending money on creators, finding them before everyone else does is a pretty sweet advantage.
+See who the Creator Agent finds for you
+.
+---
+🧒 Hiya makes kids’ vitamins parents feel good about. Here’s what Pilothouse would test next.
+Hiya Health sells chewable kids’ vitamins with zero added sugar, formulated by pediatricians, and shipped on a refill subscription. You pick how many kids you’re buying for, and the first box comes with a refillable glass bottle and a sheet of stickers.
+There’s a lot Hiya gets right already:
+The product story is strong.
+Zero added sugar, pediatrician-formulated, and a glass bottle you keep refilling. That gives Hiya a lot more to talk about than the average kids’ vitamin.
+The site feels like it’s made for families.
+The imagery is built around kids, so parents know right away who it’s for.
+The subscription fits how families buy.
+Choosing by number of kids is a smart way to set up the order.
+The cart already recommends other products
+, so there’s a base to build on.
+Pilothouse
+’s CRO team went through Hiya’s site and pulled together five tests aimed at one thing, helping parents feel sure about what they’re signing up for.
+Where Hiya goes from here
+1. Make the zero-sugar difference obvious
+Zero added sugar is one of Hiya’s biggest selling points, and right now parents have to dig for it a bit. The homepage hero leads with the offer.
+Pilothouse would test a version that shows the difference up top:
+Headline:
+The Zero-Added-Sugar Vitamin Made for Kids
+Subheadline:
+One daily chewable with 15 essential vitamins and minerals, formulated by pediatricians and delivered in a refillable glass bottle.
+Visual:
+A side-by-side comparison of a gummy vitamin and Hiya’s 0g-added-sugar chewable. Hiya says some other children’s gummy vitamins contain up to 5g of added sugar per serving.
+Under the button, add the review line, something like “4.9 out of 5 from 7,000+ reviews.”
+Track CTA clicks, how many people make it to the product page, and completed subscriptions.
+2. Put the renewal price right next to the offer
+The product page shows $22.50, “Reg $45,” and “50% OFF TODAY.” There’s a footnote saying the discount is first month only, but it’s not next to the button.
+Pilothouse would move that info up, with a line under the price like this:
+$22.50 today. Renews at $45 every 30 days. Cancel by email or in your customer portal.
+Parents know exactly what they’re paying next month before they click, and that’s one less reason to hesitate.
+3. Move the pediatrician proof up to the button
+Hiya already says the vitamins are pediatrician-formulated. On mobile, that sits pretty far from where parents actually decide.
+Pilothouse would test a small “Pediatrician Formulated” badge right above the CTA, linked to a short page about the experts and how the formula was built.
+4. Help parents build the routine in the cart
+A parent buying the Kids Daily Multivitamin might also be thinking about the Probiotic or Bedtime Essentials. Hiya already recommends products in the cart, so the next test is making those picks feel like part of a routine.
+Pilothouse would test a “Complete the Routine” module with three products, a one-line reason for each, and a one-click add:
+Kids Daily Probiotic:
+for digestion, alongside the daily multivitamin
+Kids Daily Greens + Superfoods:
+55 whole-food sourced ingredients for digestion, growth, and brain health
+Kids Daily Iron+:
+for development and brain health, easy on the stomach
+Bonus points if the add-ons carry over the number-of-kids selection. Watch average order value, checkout completion, and cart abandonment to make sure it’s helping.
+5. Take the taste risk off the table
+Every parent has bought something their kid refused to touch. A guarantee could take that worry away before the first order.
+One idea Pilothouse would explore:
+“The Picky Eater Guarantee: If your kids don’t love the taste, your first month is on us. Easily snooze or cancel future orders right from your phone.”
+Test it near the CTA or the cart’s checkout button. Along with conversion, keep an eye on refund requests, support tickets, and repeat orders so you know what it costs.
+👉 Try this on your brand
+Go through your own subscription checkout like a first-time customer. Before you hit the button, could you say what you’ll pay next month, why your product beats the cheaper option, and how to cancel? If any of those take a scroll or a footnote, start there.
+---
+‍
+🗣️ They're already discussing your products, why not join the conversation?
+Advertise on Reddit with easy Shopify integration. Get $1,500 in ad credit when you spend $1,500!
+Get Started
+. *

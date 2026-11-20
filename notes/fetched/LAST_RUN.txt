@@ -1,13 +1,12 @@
-2026-11-19 22:22 UTC
-NBNL: 1 items, 1 texts saved
+2026-11-20 21:54 UTC
+NBNL: 1 items, 0 texts saved
 NBBLOG: nothing new
-CTC: 5 items, 3 texts saved
+CTC: 8 items, 3 texts saved
 HAUS: nothing new
 TW: 1 items, 0 texts saved
-MR: 4 items, 0 texts saved
+MR: 7 items, 0 texts saved
 2PM: 1 items, 0 texts saved
 GRAPHITE: nothing new
-DTCNL: 4 items, 0 texts saved
-HWSS: 1 items, 0 texts saved
-TWAPI: 60 cohorts saved for 2026-10-20 to 2026-11-18
-RUNNETH: unchanged apparel (same since 2026-11-19), sports-fitness (same since 2026-11-19), retail (same since 2026-11-19), accessories (same since 2026-11-19)
+DTCNL: 5 items, 0 texts saved
+HWSS: 2 items, 0 texts saved
+RUNNETH: UPDATED apparel (2 of 30 brands new, new top 3: Dore & Rose, Comfrt, Jenni Kayne); sports-fitness (5 of 30 brands new, new top 3: runna, Use Cadence, runna); retail (0 of 30 brands new, new top 3: Target, Sephora, Target); accessories (3 of 30 brands new, new top 3: Loop, Blenders, Bellroy)

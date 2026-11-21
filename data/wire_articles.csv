@@ -1,12 +1,18 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
+2026-11-21,Modern Retail,2026 marked a turning point for artificial dye removal from food,https://www.modernretail.co/podcasts/2026-artificial-dye-removal-from-food/,Podcast,
 2026-11-20,Modern Retail,Walmart’s convenience lures high-income shoppers,https://www.modernretail.co/operations/walmarts-convenience-lures-high-income-shoppers/,News,Retail
 2026-11-20,Modern Retail,"On is making a bigger play for American shoppers, one store at a time",https://www.modernretail.co/operations/on-is-making-a-bigger-play-for-american-shoppers-one-store-at-a-time/,News,Retail
 2026-11-20,Modern Retail,"Big-Box Briefing: Target faces off with Trader Joe’s, Quince and HomeGoods",https://www.modernretail.co/operations/big-box-briefing-targets-retail-reset-means-facing-off-with-trader-joes-quince-and-homegoods/,News,Retail
+2026-11-20,Graphite,AEO Tools,https://graphite.io/research/aeo-tools,Report,AI
 2026-11-20,Foxwell,Better Daily Pacing for Your Holiday Ad Budget,https://www.foxwelldigital.com/blog/better-daily-pacing-for-your-holiday-ad-budget,Blog,BFCM / Q4
 2026-11-20,Direct to Consumer,"Meta Creative Diversity, Instagram Story Editing & Hiya CRO",https://www.directtoconsumer.co/newsletter/meta-creative-diversity-instagram-stories-hiya-cro,Newsletter,Meta;Creative
 2026-11-20,Curtis Howland,Pay Creators More (A Trybe diatribe),https://newsletter.curtishowland.com/p/pay-creators-more-a-trybe-diatribe,Newsletter,
 2026-11-20,Curtis Howland,Cutting a Meta budget every day can overspend it by 40%,https://www.linkedin.com/feed/update/urn:li:activity:7529551781341724676/,LinkedIn,Meta
+2026-11-20,CTC,"Welcome to the Agentic Commerce Quarter: What OpenAI, Google, and Amazon Are Building and What Every Ecommerce Brand Must Do Now",https://commonthreadco.com/blogs/coachs-corner/welcome-to-the-agentic-commerce-quarter-what-openai-google-and-amazon-are-building-and-what-every-ecommerce-brand-must-do-now,Blog,Google;Amazon;AI;Earnings
+2026-11-20,CTC,Shopify Flow Just Added 8 New Updated Triggers. Here Is What Ecommerce Brands Can Automate Right Now.,https://commonthreadco.com/blogs/coachs-corner/shopify-flow-just-added-8-new-updated-triggers-here-is-what-ecommerce-brands-can-automate-right-now,Blog,
+2026-11-20,CTC,Shopify Customer Accounts Now Show Store Credit on Every Page and Personalized Recommendations for New Shoppers,https://commonthreadco.com/blogs/coachs-corner/shopify-customer-accounts-now-show-store-credit-on-every-page-and-personalized-recommendations-for-new-shoppers,Blog,Retail
+2026-11-20,CTC,Meta Just Paused Its New Ad Terms. Here Is What Every Ecommerce Brand Needs to Know.,https://commonthreadco.com/blogs/coachs-corner/meta-just-paused-its-new-ad-terms-here-is-what-every-ecommerce-brand-needs-to-know,Blog,Meta
 2026-11-20,CTC,Instagram Now Lets Creators Add Amazon Affiliate Links Directly to Reels. Here Is What Ecommerce Brands Must Do.,https://commonthreadco.com/blogs/coachs-corner/instagram-now-lets-creators-add-amazon-affiliate-links-directly-to-reels-here-is-what-ecommerce-brands-must-do,Blog,Meta;Amazon
 2026-11-19,Northbeam,Why is everybody stressed out about incrementality?,https://themediabuyer.northbeam.io/p/why-is-everybody-stressed-out-about-incrementality,Newsletter,Measurement
 2026-11-19,Northbeam,"Media Buyer Index, 8-15 Nov: the first week after the midterms cut Meta CPC 7.6%",https://x.com/BryanBumgardner/status/2123374500334969189,X,Meta;Benchmarks

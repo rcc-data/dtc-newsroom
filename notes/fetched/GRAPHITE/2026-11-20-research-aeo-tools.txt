@@ -1,0 +1,1193 @@
+AEO Tools
+https://graphite.io/research/aeo-tools
+2026-11-20
+
+Key Takeaways
+This is not a promotional or self-promotional listicle. Graphite does not sell AEO tools. We do not receive an affiliate commission for purchases through links on our site, nor do we accept payment to be mentioned. Ethan Smith is an investor in Peec AI. Neither Graphite nor the authors have any other financial interest in the companies listed on this page.
+As of November 2026, there are at least 81 dedicated answer engine optimization (AEO) tools and 14 marketing platforms with AEO features.
+The 19 AEO tool companies that have disclosed their funding have raised at least $594.3M.
+This page provides a list of AEO tools, their entry pricing, publicly disclosed funding, and what unbiased Reddit users say about them.
+Of the 11 tools with enough opinions to score, Peec AI, Otterly AI, and SE Ranking have the highest Reddit Recommendation Scores (66 out of 100).
+We flag Reddit users who are likely promoting a product, explicitly or implicitly, and exclude their opinions. Of the users who gave an opinion of an AEO tool, we identify 55% as likely promoters.
+The most discussed aspects of tools on Reddit are price, the accuracy of visibility numbers, and the completeness and usefulness of citation data.
+Contents
+01
+Reddit Opinions and Scores
+02
+Undisclosed Promotion on Reddit
+03
+What Reddit Users Praise and Criticize
+04
+Fundraising and Exits
+05
+AEO Tools
+06
+Data and Methodology
+07
+Limitations
+08
+Disclosures
+Reddit Opinions and Scores
+To understand what Reddit users think about AEO tools, we identify the 54 subreddits where AEO is regularly discussed. In these subreddits, 5,990 posts and 25,392 comments from January to September 2026 mention a tool. We classify whether each
+unbiased
+opinion of a tool encourages or discourages using it, and average these into the tool's Reddit Recommendation Score, from 0 to 100. A score of 100 means every opinion strongly encourages using the tool, 0 means every opinion strongly discourages it, and 50 is neutral. Most favorable opinions are not strong recommendations, so a tool that everyone recommended without strong praise would score 75. The
+Data and Methodology
+section describes how we identify opinions and compute the score in full.
+The chart below shows how many users gave an
+unbiased
+opinion of each tool.
+Tools With the Most Reddit Opinions
+Source:
+Graphite analysis of Reddit, Jan–Sep 2026. We include posts and comments from the 54 subreddits where AEO is regularly discussed. We count each user once per tool. We exclude opinions from users likely working for or promoting a marketing software product.
+The next chart shows the scores of the 11 tools with at least 20 opinions. Each bar is a 95% confidence interval, the range of scores consistent with the opinions we find. When two tools' bars do not overlap, the difference between their scores is statistically significant. The Average opinion row combines all 1,557 opinions of the 44 tools that received any, as if they were about a single tool. The dashed lines mark the neutral score of 50 and the average.
+Reddit Recommendation Scores of AEO Tools
+Bars represent 95% confidence intervals.
+Neutral opinion
+Average opinion
+Average opinion
+score
+61
+95% CI
+60
+–
+63
+Ahrefs
+AEO Features
+score
+58
+95% CI
+53
+–
+62
+AirOps
+score
+54
+95% CI
+39
+–
+68
+AthenaHQ
+score
+56
+95% CI
+41
+–
+71
+HubSpot
+AEO Features
+score
+65
+95% CI
+60
+–
+70
+Otterly AI
+score
+66
+95% CI
+62
+–
+69
+Peec AI
+score
+66
+95% CI
+63
+–
+69
+Profound
+score
+55
+95% CI
+50
+–
+59
+Promptwatch
+score
+65
+95% CI
+57
+–
+72
+Scrunch AI
+score
+63
+95% CI
+54
+–
+70
+SE Ranking
+AEO Features
+score
+66
+95% CI
+58
+–
+73
+Semrush
+AEO Features
+score
+60
+95% CI
+57
+–
+63
+30
+40
+50
+60
+70
+80
+90
+Reddit Recommendation Score
+Reddit Recommendation Scores of AEO Tools
+tool
+low
+high
+score
+Average opinion
+60
+63
+61
+Ahrefs
+53
+62
+58
+AirOps
+39
+68
+54
+AthenaHQ
+41
+71
+56
+HubSpot
+60
+70
+65
+Otterly AI
+62
+69
+66
+Peec AI
+63
+69
+66
+Profound
+50
+59
+55
+Promptwatch
+57
+72
+65
+Scrunch AI
+54
+70
+63
+SE Ranking
+58
+73
+66
+Semrush
+57
+63
+60
+Source:
+Graphite analysis of Reddit, Jan–Sep 2026. We include posts and comments from the 54 subreddits where AEO is regularly discussed. We classify whether each opinion of a tool encourages or discourages using it, and average these into the tool's score from 0 to 100. We exclude opinions from users likely working for or promoting a marketing software product. The chart shows the 11 tools with at least 20 opinions. The Average opinion row combines all 1,557 opinions of the 44 tools that received any.
+Every tool we score is above 50. Much of the criticism of AEO tools is about price and perceived value, which we describe in the
+Pricing and Support
+section.
+Undisclosed Promotion on Reddit
+Of the 2,365 users who gave an opinion of an AEO tool or a platform's AEO features, we flag 1,298 (55%) as likely working for or promoting a marketing software product. We exclude their opinions. In a sample of 43 flagged users that we reviewed, 12% disclosed that they were promoting a product, 62% promoted one without saying so, and we judged the rest not to be promoters.
+Below, we review some patterns of promotion in flagged accounts. Each pattern spans several posts or comments, which our classification considers together, and the classification flags all 41 accounts in these examples. We replace the name of each promoted product with [tool].
+Inconsistent details:
+An account recommended the same lesser-known tracker in eight posts and comments. In January it wrote as a customer who had switched from Peec. Eleven days later it posted as a prospective buyer.
+"We use [tool] for AEO monitoring… Before that, we used Peec and other alternatives but found it pretty lacking, hence the switch."
+"Right now I am looking at Profound, but I am not willing to pay up to $400 just for it… [tool] looks great at just a fourth of that price."
+Borrowed credibility:
+An account listed a little-known tool alongside well-known trackers in four comments over eight days.
+"Then track AI answers with tools like Profound, Otterly, or [tool]."
+Rapid posts:
+An account posted three recommendations of one product within 12 minutes.
+"Lately I've been using [tool] as part of that process, and it's been surprisingly helpful."
+Suspiciously similar language:
+Over six weeks, 38 accounts recommended the same product in 52 comments, each using the phrase "from what I've read." The phrase appears with any other tool no more than twice.
+"From what I've read, people seem to really like [tool] for helping with this."
+What Reddit Users Praise and Criticize
+To help buyers evaluate AEO tools, we identify the aspects Reddit users most often praise and criticize across 1,557
+unbiased
+opinions of 44 tools, and what they say about each. We replace the names of tools in quotes with descriptions in brackets.
+Product Features
+Reddit Praise and Criticism of AEO Tool Features
+Source:
+Graphite analysis of Reddit, Jan–Sep 2026. We include posts and comments from the 54 subreddits where AEO is regularly discussed. We identify the aspects users praise and criticize across 1,557 opinions of 44 tools. One opinion can praise or criticize several aspects. We exclude opinions from users likely working for or promoting a marketing software product.
+Measurement accuracy:
+Tools report how often a brand appears in AI answers, usually as a visibility score, and a user can only act on that score if it is accurate. Opinions of its accuracy are mostly negative (27 favorable, 143 unfavorable), and no other feature draws as many unfavorable ones. Because AI answers vary between runs, users, and locations, many treat any visibility score as an estimate. One wrote, "there is no way for you to know how accurate they are." Others noticed that tools disagree with each other: "[Two other tools] show different data too, but my opinion is that none of them tracks this well." Several advise users to "treat them as trend, not truth" and to check the numbers by hand. Favorable opinions often carry the same caveat, as in "pairing [the tool's] citations with periodic manual checks at least gives you something real to point to." In a
+separate study
+, we describe how to estimate visibility reliably.
+Citation data:
+The pages that AI answers cite as sources show which of a brand's own pages to improve and where else it could get mentioned. Opinions of this citation data are mostly positive (103 favorable, 52 unfavorable). Users say that checking answers by hand does not provide this: "The thing the manual approach can't give you is the source layer." The criticism is mostly that the data does not match what users see in their own analytics, as in "it shows that my site doesn't appear in ChatGPT, but I get most traffic from ChatGPT," or that the data is too noisy to use: "the citations and queries it gives me are largely useless."
+Recommendations:
+Some tools suggest changes to a site or its content that could improve its visibility in AI answers, which a score alone does not tell a user. Opinions of these recommendations are mixed (64 favorable, 88 unfavorable). Some users find the advice generic: "The suggested optimisations are things a normal SEO would know." Others want an explanation of why a page is cited: "[The tool] tells me I appeared but not why a specific page got pulled over others." Praise goes to tools that suggest what to do next, as in "[Both tools] have way more than just visibility tracking - they can actually help you figure out what to do next."
+Data detail and access:
+A score alone does not show why it is high or low, or why it changed. Explaining it requires the prompts, answers, and cited pages behind it, and exports let a user analyze the data elsewhere or move it to another tool. Opinions of this access are mixed (54 favorable, 73 unfavorable). Users praise a report where "by the end you're at the actual URLs instead of clicking through yet another aggregate." Users also criticize limited exports: "there's not even a good way to export useful data sheets." One user warned that without exports "its increasingly difficult to switch app over time."
+Marketing platform inclusion:
+Some marketing platforms offer AI visibility tracking alongside their other products, which saves a team that already uses one from buying and learning another tool. Opinions of these features are mostly positive (95 favorable, 27 unfavorable). The praise is about that convenience, as in "the CRM context for setup is genuinely useful if you're already in that ecosystem." The criticism is that the features are shallower than in dedicated tools: "a lot of the AI visibility features feel bolted on right now."
+Pricing and Support
+Reddit Praise and Criticism of AEO Tool Pricing and Support
+Source:
+Graphite analysis of Reddit, Jan–Sep 2026. We include posts and comments from the 54 subreddits where AEO is regularly discussed. We identify the aspects users praise and criticize across 1,557 opinions of 44 tools. One opinion can praise or criticize several aspects. We exclude opinions from users likely working for or promoting a marketing software product.
+Price and value:
+It is not yet clear how much visibility in AI answers is worth to a business, which makes it hard to know whether a tool justifies its cost. Users judge price more often than any other aspect, and opinions are mostly negative (98 favorable, 182 unfavorable). One user who tried two of the better-known tools called them "extremely expensive and no ROI" and advised others to "go for a monthly plan to test waters." Praise is mostly relative, for a tool that costs less than the alternatives, as in "Not perfect (and no Claude in it) - but cheaper than [another tool]."
+Add-on cost and price scaling:
+How a tool charges can matter as much as its entry price. An add-on raises the cost of a platform a team already pays for, and a price per prompt or project grows with the number of brands or clients tracked. Opinions of paying extra for AI visibility as an add-on are mostly negative (22 favorable, 66 unfavorable), as are opinions of how a price grows with use (5 favorable, 47 unfavorable). One user wrote, "It's a separate add-on that needs to be purchased on top of the base plan." For agencies with many clients, a price per project can make a tool impractical: "[One tool] is out for me because I'm working across too many projects." Praise goes to plans that include AI visibility tracking, as in "I also like that the tracking is included from the first plan rather than needing a separate addon just to get started."
+Fundraising and Exits
+The 19 AEO tool companies that have disclosed their funding have raised $594.3M and €11.2M in total. The following table lists each company's latest round, lead investor, founders, valuation, estimated annual recurring revenue, and whether it has exited.
+Company
+Amount Raised
+Series
+Lead Investor
+Founder
+Valuation
+Est. ARR
+Exit
+Profound
+$334.5M
+Series D
+Sequoia Capital and Kleiner Perkins
+James Cadwallader
+$1.8B
+—
+no value
+—
+no value
+Bluefish AI
+$68M
+Series B
+Threshold Ventures, NEA
+Alex Sherman
+—
+no value
+—
+no value
+—
+no value
+AirOps
+$60M
+Series B
+Greylock Partners
+Alex Halliday
+$225M
+$13M
+—
+no value
+Brandlight
+$35.8M
+Series A
+Pelion
+Imri Marcus
+—
+no value
+—
+no value
+—
+no value
+Peec AI
+$29M
+Series A
+Singular
+Marius Meiners
+—
+no value
+$10M
+—
+no value
+Scrunch AI
+$19M
+Series A
+Decibel
+Chris Andrew
+—
+no value
+—
+no value
+Acquired
+Evertune
+$19M
+Series A
+Felicis
+Poul Costinsky
+—
+no value
+—
+no value
+—
+no value
+Promptwatch
+€7.2M
+Seed
+Seed + Speed Ventures
+Gijs de Groot & Klaas Foppen
+—
+no value
+€2M
+—
+no value
+Emberos
+$6.7M
+Seed
+Private
+Justin Inman
+—
+no value
+—
+no value
+—
+no value
+Azoma
+$6.6M
+Seed
+—
+no value
+Max Sinclair
+$29.1M
+—
+no value
+—
+no value
+GetMint
+€4M
+Pre-seed
+Founders Future
+Joan Burkovic, Matthieu Poitrimolt, Emmanuel Costa
+—
+no value
+—
+no value
+—
+no value
+AthenaHQ
+$2.7M
+Seed
+FundersClub
+Andrew Yan
+—
+no value
+—
+no value
+—
+no value
+Gauge
+$2.4M
+Pre-seed
+Y Combinator
+Caelean Barnes & Evan Doyle
+—
+no value
+$2.4M
+—
+no value
+Meridian
+$2M
+Pre-seed
+Topology
+Alex Dees & Zack Xuereb
+—
+no value
+—
+no value
+Acquired
+Gumshoe
+$2M
+Pre-seed
+Pioneer Square Labs
+Todd Sawicki & Patrick O'Donnell
+—
+no value
+—
+no value
+—
+no value
+Hall
+$2M
+Pre-seed
+Blackbird Ventures
+Kai Forsyth
+—
+no value
+—
+no value
+Acquired
+Cognizo
+$1.8M
+Seed
+Private
+Deniz Ozcan & Alp Aysan
+—
+no value
+—
+no value
+—
+no value
+DemandSphere
+$1.7M
+Seed
+500 Global, Y Combinator, Hinge Capital
+Ray Grieselhuber
+—
+no value
+—
+no value
+—
+no value
+Telepathic
+$1.1M
+Pre-seed
+s16vc
+Killian Dunne
+—
+no value
+—
+no value
+—
+no value
+AEO Vision
+—
+no value
+Pre-seed
+—
+no value
+Ipek Isler, Metehan Yesilyurt, Luis Medeiros
+—
+no value
+—
+no value
+—
+no value
+Maxeo
+—
+no value
+Seed
+—
+no value
+Cihan Bilir
+—
+no value
+—
+no value
+Acquired
+Xfunnel
+—
+no value
+Seed
+Verissimo Ventures
+Beeri Amiel & Neri Bluman
+—
+no value
+—
+no value
+Acquired
+Jarts
+—
+no value
+—
+no value
+—
+no value
+Vincent Betz & Alex Geils
+—
+no value
+—
+no value
+Acquired
+AI Rank Checker
+—
+no value
+—
+no value
+—
+no value
+—
+no value
+—
+no value
+—
+no value
+Acquired
+AEO Tools
+This table lists the 81 dedicated AEO tools and 14 marketing platforms with AEO features we are aware of. For each, it gives entry pricing, a short description, the number of Reddit posts and comments that mention it, the number of users who gave an
+unbiased
+opinion of it, and, for the 11 with enough opinions, its Reddit Recommendation Score. To suggest a tool we are missing, use
+this form
+.
+Tool
+Type
+Entry Pricing
+Description
+Reddit Recommendation Score
+Reddit Posts and Comments
+Unique Unbiased Reddit Opinions
+Semrush
+Marketing platform
+Free trial; starts at $139/mo
+Semrush's AI Brand Performance shows how ChatGPT and other AI platforms feature you and your competitors.
+60
+1439
+348
+Profound
+AEO tool
+Free trial; starts at $99/mo
+Profound shows what customers ask AI, deploys agents to act on it, and measures results across AI engines.
+55
+2240
+259
+Peec AI
+AEO tool
+Free trial; starts at $95/mo
+Peec AI helps marketing teams analyze brand performance across ChatGPT, Perplexity, Claude, and Gemini.
+66
+1752
+215
+Ahrefs
+Marketing platform
+Starts at $50/mo
+Ahrefs Brand Radar maps any brand's AI visibility across 6 AI tools, using 475M+ search-backed prompts.
+58
+682
+170
+Otterly AI
+AEO tool
+Free trial; starts at $29/mo
+Otterly AI tracks brand mentions and website citations across ChatGPT · Perplexity · Google AI Overviews.
+66
+1141
+133
+HubSpot
+Marketing platform
+Free (one-time AI Search Grader); $50/mo for HubSpot AEO
+HubSpot AEO tracks how often your brand appears in answer engine responses compared with competitors, then recommends content to create or update in HubSpot so you appear more often. HubSpot’s free AI Search Grader is a one-time check of how answer engines describe your brand.
+65
+346
+121
+AirOps
+AEO tool
+-
+AirOps helps brands build and run an AI discovery strategy that earns trust across the web and gets them chosen by AI.
+54
+362
+37
+Promptwatch
+AEO tool
+Free trial; starts at $95/mo
+Promptwatch tracks and optimizes brand visibility across ChatGPT · Gemini · Claude · Perplexity and more.
+65
+306
+36
+SE Ranking
+Marketing platform
+Free trial; starts at $129/mo
+SE Ranking's AI Visibility Tracker tracks brand mentions and links in AI answers and benchmarks competitors.
+66
+198
+33
+Scrunch AI
+AEO tool
+Starts at $250/mo
+Scrunch AI monitors brand presence in AI search, optimizes your website, and delivers content to AI agents.
+63
+290
+32
+AthenaHQ
+AEO tool
+Free trial; starts at $299/mo
+AthenaHQ is an AEO and GEO platform with agents that help commercial and enterprise brands win in AI search.
+56
+390
+22
+AIclicks
+AEO tool
+Free trial; starts at $59/mo
+AIclicks offers AI search visibility and competitive benchmarking, along with unique tools like an AI content writer and a Reddit signaling agent.
+—
+no value
+226
+18
+Similarweb
+Marketing platform
+Starts at $99/mo
+Similarweb's AI Search Intelligence measures AI brand visibility and AI traffic, with prompt and citation analysis.
+—
+no value
+144
+16
+RankScale
+AEO tool
+Free trial; starts at $99/mo
+RankScale tracks brand visibility across 17+ AI engines, incl. ChatGPT · Perplexity · Gemini, for agencies.
+—
+no value
+171
+13
+Brandlight
+AEO tool
+-
+Brandlight is an enterprise platform to measure, optimize and grow how your brand appears across AI search.
+—
+no value
+289
+10
+LLMrefs
+AEO tool
+Free trial; $79/mo
+LLMrefs provides a robust suite of AI search tools, to help users understand how their brand is perceived across AI platforms. It also includes keyword tracking to monitor the AI performance of most important terms.
+—
+no value
+76
+9
+Meridian
+AEO tool
+-
+Meridian is an AI visibility platform that helps brands understand and improve how they appear in AI-driven search and recommendations.
+—
+no value
+564
+9
+SurferSEO
+Marketing platform
+Starts at $95/mo
+SurferSEO's AI Tracker audits AI visibility across ChatGPT · AI Overviews · Perplexity to find competitive gaps.
+—
+no value
+53
+8
+Goodie
+AEO tool
+Free trial; starts at $250/mo
+Goodie monitors brand presence across AI search platforms, with competitor analysis and content recommendations.
+—
+no value
+162
+7
+Gumshoe
+AEO tool
+Free audit; starts at $99/mo
+Gumshoe monitors visibility and sentiment across ChatGPT · Gemini · Claude · Perplexity and finds gaps by persona.
+—
+no value
+18
+6
+Local Falcon
+AEO tool
+Free trial; starts at $24.99/mo
+Local Falcon tracks visibility in local map search and AI answers, shown on a geo-grid map.
+—
+no value
+10
+6
+Nightwatch
+Marketing platform
+Free trial; starts at €79/mo
+Nightwatch tracks AI visibility and citations across ChatGPT · Claude · Gemini · Perplexity, tied to SERP rankings.
+—
+no value
+44
+6
+Waikay
+AEO tool
+Starts at $24.95/mo
+Waikay (What AI Knows About You) tracks brand visibility, facts and sources across ChatGPT · Gemini · Sonar.
+—
+no value
+28
+6
+Evertune
+AEO tool
+Free trial; starts at $60/mo
+Evertune covers the AI customer journey, from measuring brand visibility in AI models to paid retargeting.
+—
+no value
+192
+5
+Xfunnel
+AEO tool
+Free report; custom pricing
+Xfunnel tracks citations and the questions buyers ask to improve visibility across AI search platforms.
+—
+no value
+24
+4
+Am I on AI?
+AEO tool
+Free trial; starts at $100/mo
+Am I on AI? tracks whether ChatGPT and Google AI Overviews recommend your business, with citation gaps and actions.
+—
+no value
+12
+3
+Mangools
+Marketing platform
+Free trial; starts at $61/mo
+Mangools' AI Search Watcher tracks brand mentions in ChatGPT · Google AI Overviews and other AI search engines.
+—
+no value
+52
+3
+Rankshift
+AEO tool
+Free trial; starts at €69/mo
+Rankshift tracks brand visibility in AI answers across ChatGPT · Gemini · Claude and more, with competitor benchmarks.
+—
+no value
+49
+3
+ZipTie
+AEO tool
+Free trial; starts at $25.65/mo
+ZipTie tracks what ChatGPT · Google AI Overviews · Perplexity and 4 more AI engines say about your brand.
+—
+no value
+34
+3
+AEO Checker
+AEO tool
+Starts at $10/mo
+AEO Checker analyzes and optimizes your content's visibility in AI chatbots and LLM search engines.
+—
+no value
+7
+2
+AEO Vision
+AEO tool
+Starts at $9/mo
+AEO Vision helps companies track where they stand in AI-powered search results, compare with competitors, analyze mentions, and refine their digital presence.
+—
+no value
+3
+1
+Azoma
+AEO tool
+-
+Azoma helps products get found by AI shopping agents in ChatGPT · Gemini · AI Mode · Rufus · Perplexity.
+—
+no value
+7
+1
+ChatRank
+AEO tool
+Starts at $499/mo
+ChatRank helps brands and agencies build authority in AI search with about an hour of effort a week.
+—
+no value
+4
+1
+Chosenly
+AEO tool
+Starts at $200/mo
+Chosenly is a SaaS platform that helps B2B companies show up on ChatGPT and other LLMs.
+—
+no value
+8
+1
+Gauge
+AEO tool
+Free trial; starts at $599/mo
+Gauge specializes in B2B and SaaS AI visibility tracking. The platform tracks mentions across business-focused prompts.
+—
+no value
+29
+1
+GEO Metrics
+AEO tool
+Free trial; starts at €35/mo
+GEO Metrics measures your Share of Model across ChatGPT · Gemini · Perplexity · Copilot · Grok and 4 more engines.
+—
+no value
+5
+1
+Lumar
+Marketing platform
+-
+Lumar is an enterprise website optimization platform for technical SEO, GEO, accessibility and site speed.
+—
+no value
+4
+1
+Moz
+Marketing platform
+Starts at $45/mo
+Moz AI Explorer tracks brand mentions, trusted citations and sentiment across ChatGPT · Gemini · Perplexity.
+—
+no value
+7
+1
+Parse
+AEO tool
+Free trial; per-use pricing
+Parse asks ChatGPT and Google AI Mode your buyers' questions and shows how to get mentioned more.
+—
+no value
+22
+1
+Peekaboo
+AEO tool
+Free trial; starts at $30/mo
+Peekaboo helps brands and agencies measure AI Search visibility, optimize citations, monitor competitors, and grow with Answer Engine Optimization
+—
+no value
+59
+1
+RivalSee
+AEO tool
+Starts at $69.99/mo
+RivalSee is an AI visibility analytics platform that tracks how brands appear in conversational AI responses.
+—
+no value
+2
+1
+Serplock
+AEO tool
+Starts at $49/mo
+Serplock tracks brand visibility in AI search and builds an LLM-focused content strategy to improve it.
+—
+no value
+52
+1
+Share of Model
+AEO tool
+Starts at $799/mo
+Share of Model shows how AI perceives your brand and turns those insights into campaigns.
+—
+no value
+8
+1
+Temso AI
+AEO tool
+Free trial; starts at $10/mo
+Temso is built for marketers, agencies, and founders who want to grow their business with AI search.
+—
+no value
+44
+1
+3RD / Third
+AEO tool
+Free trial; starts at €99/mo
+3RD measures how ChatGPT · Perplexity · Gemini · Claude represent your brand, with an action plan to improve it.
+—
+no value
+0
+0
+AEO Copilot
+AEO tool
+Free baseline report; starts at $9/mo
+AEO Copilot tracks brands across ChatGPT · Claude · Perplexity · AI Overviews, via reports, an API or MCP.
+—
+no value
+0
+0
+AI Brand Monitoring
+AEO tool
+Starts at $19.99/mo
+AI Brand Monitoring reports what AI tools say about your brand, with recommendations to improve it.
+—
+no value
+0
+0
+AISEOTracker
+AEO tool
+One-time report, $49; starts at $79/mo
+AISEOTracker shows how ChatGPT · Perplexity · Gemini · Copilot · AI Overviews mention and cite your brand.
+—
+no value
+0
+0
+ALLMO.ai
+AEO tool
+Free trial; starts at €30/mo
+ALLMO.ai measures and optimizes brand visibility and citations across ChatGPT · Perplexity · Claude and more.
+—
+no value
+0
+0
+Ansehn
+AEO tool
+-
+Ansehn shows how B2B buyers research and choose vendors across AI search engines and agents.
+—
+no value
+0
+0
+AnswerRank
+AEO tool
+Starts at $29/mo
+AnswerRank is built by SEO experts with 20 years of experience. The platform provides data and steps to influence how ChatGPT, Gemini and other models see your brand.
+—
+no value
+0
+0
+Asva AI
+AEO tool
+Free baseline report; starts at $299/mo
+Asva AI provides frameworks and analytics to help brands understand and improve their visibility in this new AI-powered search landscape.
+—
+no value
+0
+0
+AuraScope
+AEO tool
+Free audit; custom pricing
+AuraScope shows travel brands what ChatGPT · Gemini · Perplexity tell travellers and what to change.
+—
+no value
+0
+0
+Bluefish AI
+AEO tool
+-
+Bluefish AI is an agentic marketing platform for Fortune 500 brands to measure and optimize AI performance.
+—
+no value
+0
+0
+Botify
+Marketing platform
+Custom enterprise
+Botify is an AI search optimization platform with GEO analytics, AI bot management and AI-optimized catalogs.
+—
+no value
+0
+0
+Bourd
+AEO tool
+Free trial; starts at $69/mo
+Bourd is a platform for tracking and optimizing a brand's visibility in AI-powered search results. Used by marketing teams at SaaS startups, creative agencies, and global brands.
+—
+no value
+0
+0
+Brandi AI
+AEO tool
+-
+Brandi AI is an AI visibility and GEO platform for tracking and boosting brand presence in AI answers.
+—
+no value
+0
+0
+CITAGEN
+AEO tool
+Free trial; starts at $49/mo
+CITAGEN publishes, structures and measures answer-ready content cited by ChatGPT · Gemini · Perplexity.
+—
+no value
+0
+0
+Clearscope
+Marketing platform
+Free trial; starts at $129/mo
+Clearscope helps teams write, optimize and track content visibility in Google, ChatGPT and other AI search.
+—
+no value
+0
+0
+Cognizo
+AEO tool
+Free report; starts at $499/mo
+Cognizo monitors how AI talks about your brand, with content optimization, AI traffic analytics and prompt volumes.
+—
+no value
+0
+0
+Convertos.ai
+AEO tool
+Credit pricing
+Convertos tracks brand visibility in ChatGPT · Perplexity · Gemini · Google AI answers, with page-level GEO fixes.
+—
+no value
+0
+0
+DemandSphere
+AEO tool
+Free trial; starts at $79/mo
+DemandSphere is a context-aware, global SERP & LLM analytics platform built for in-house and agency growth teams.
+—
+no value
+0
+0
+Emberos
+AEO tool
+Custom
+Emberos monitors, optimizes and proves how your brand appears in AI answers across paid, owned and earned.
+—
+no value
+0
+0
+EnGenius AI
+AEO tool
+Free trial; starts at $19.99/mo
+EnGenius AI is a GEO platform that helps marketers optimize content and grow visibility across AI search engines.
+—
+no value
+0
+0
+Findable
+AEO tool
+Free trial; starts at €99/mo
+Findable helps agencies monitor and improve client visibility across ChatGPT · Claude · Gemini and more.
+—
+no value
+0
+0
+FirstAnswer
+AEO tool
+Free trial; starts at $135/mo
+FirstAnswer monitors whether ChatGPT · Gemini · Claude recommend your brand or a competitor.
+—
+no value
+0
+0
+Gander
+AEO tool
+Starts at $500/mo
+Gander is a B2B AI search intelligence platform for visibility tracking, citation analysis and reputation monitoring.
+—
+no value
+0
+0
+Generative Pulse
+AEO tool
+-
+Generative Pulse by Muck Rack is a tool designed to help PR and comms teams monitor how their brand and competitors appear in AI-generated search results.
+—
+no value
+0
+0
+GetMentioned
+AEO tool
+Free trial; starts at €89/mo
+GetMentioned monitors and improves brand presence across ChatGPT · Perplexity · Gemini, with source attribution.
+—
+no value
+0
+0
+GetMint
+AEO tool
+-
+GetMint tracks mentions across ChatGPT · Gemini · Perplexity · Claude, then creates content to improve them.
+—
+no value
+0
+0
+Knowatoa
+AEO tool
+Free trial; $59/mo
+Knowatoa shows how your site appears in AI Overviews · AI Mode · ChatGPT · Claude · Perplexity and what users ask.
+—
+no value
+0
+0
+LLMConsole
+AEO tool
+Free
+LLMConsole compares how likely LLMs are to recommend your brand versus competitors.
+—
+no value
+0
+0
+Lua Rank
+AEO tool
+Free trial; starts at $29/mo
+Lua Rank grows AI visibility across ChatGPT · Perplexity · Google AI for startups, businesses and agencies.
+—
+no value
+0
+0
+Maxeo
+AEO tool
+Free trial; starts at $350/mo
+Maxeo measures how AI represents your brand, tracking visibility, authority and competitive positioning.
+—
+no value
+0
+0
+Mentions
+AEO tool
+Starts at $49/mo
+Mentions is a specialized marketing analytics platform that tracks and analyzes how brands are mentioned by AI models and other sources, offering insights and recommendations to improve brands' AI-driven visibility.
+—
+no value
+0
+0
+Morningscore
+Marketing platform
+Free trial; starts at $69/mo
+Morningscore's ChatGPT rank tracker monitors prompts and shows screenshots to verify each ranking.
+—
+no value
+0
+0
+Omnia
+AEO tool
+Free trial; starts at €79/mo
+Omnia is a platform built for SEO and marketing experts. Our platform helps monitor citations and mentions across the most popular AI engines.
+—
+no value
+0
+0
+Open Forge AI
+AEO tool
+Starts at $199/mo
+Open Forge AI tracks AI visibility for you and competitors, with plain-English next steps and tools to ship fixes.
+—
+no value
+0
+0
+Quno
+AEO tool
+-
+Quno tracks and analyzes how AI models portray your brand to consumers.
+—
+no value
+0
+0
+RankLens
+AEO tool
+Starts at $599/mo
+RankLens, from SEO Vendor, tracks your brand and website mentions in LLMs.
+—
+no value
+0
+0
+Relixir
+AEO tool
+-
+Relixir's Rex monitors your brand across ChatGPT · Perplexity · Claude · AI Overviews and deploys GEO content.
+—
+no value
+0
+0
+rocketblue
+AEO tool
+Free trial; starts at $99/mo
+rocketblue monitors your brand across AI platforms, then creates and publishes citation-winning content.
+—
+no value
+0
+0
+SCOPE
+AEO tool
+$200/mo
+SCOPE tracks brand visibility and competitor rankings in AI search results.
+—
+no value
+0
+0
+Searchify
+AEO tool
+Starts at $149/mo
+Searchify helps SMBs improve AI visibility and get recommended by ChatGPT · Gemini · Perplexity.
+—
+no value
+0
+0
+SEORCE
+AEO tool

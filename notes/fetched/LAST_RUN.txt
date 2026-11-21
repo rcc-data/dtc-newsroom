@@ -1,12 +1,12 @@
-2026-11-20 21:54 UTC
+2026-11-21 15:20 UTC
 NBNL: 1 items, 0 texts saved
 NBBLOG: nothing new
-CTC: 8 items, 3 texts saved
+CTC: 12 items, 4 texts saved
 HAUS: nothing new
 TW: 1 items, 0 texts saved
-MR: 7 items, 0 texts saved
+MR: 6 items, 0 texts saved
 2PM: 1 items, 0 texts saved
-GRAPHITE: nothing new
-DTCNL: 5 items, 0 texts saved
-HWSS: 2 items, 0 texts saved
-RUNNETH: UPDATED apparel (2 of 30 brands new, new top 3: Dore & Rose, Comfrt, Jenni Kayne); sports-fitness (5 of 30 brands new, new top 3: runna, Use Cadence, runna); retail (0 of 30 brands new, new top 3: Target, Sephora, Target); accessories (3 of 30 brands new, new top 3: Loop, Blenders, Bellroy)
+GRAPHITE: 1 items, 1 texts saved
+DTCNL: 3 items, 0 texts saved
+HWSS: 1 items, 0 texts saved
+RUNNETH: UPDATED apparel (2 of 30 brands new, new top 3: Dore & Rose, Comfrt, Alo Yoga); sports-fitness (6 of 30 brands new, new top 3: runna, Use Cadence, runna); retail (0 of 30 brands new, new top 3: Target, Sephora, Target); accessories (3 of 30 brands new, new top 3: Ãlend, Bellroy, Loop)

@@ -1,7 +1,7 @@
-2026-11-21 20:38 UTC
+2026-11-22 15:19 UTC
 NBNL: 1 items, 0 texts saved
 NBBLOG: nothing new
-CTC: 12 items, 0 texts saved
+CTC: 13 items, 1 texts saved
 HAUS: nothing new
 TW: 1 items, 0 texts saved
 MR: 4 items, 0 texts saved
@@ -9,4 +9,6 @@ MR: 4 items, 0 texts saved
 GRAPHITE: nothing new
 DTCNL: 3 items, 0 texts saved
 HWSS: 1 items, 0 texts saved
-RUNNETH: unchanged apparel (same since 2026-11-21), sports-fitness (same since 2026-11-21), retail (same since 2026-11-21), accessories (same since 2026-11-21)
+RUNNETH: apparel reshuffled (12 ranks moved, 0 new brands), not a weekly update
+RUNNETH: UPDATED sports-fitness (1 of 30 brands new, new top 3: runna, Use Cadence, runna); retail (0 of 30 brands new, new top 3: Target, Sephora, Target); accessories (2 of 30 brands new, new top 3: Loop, Ãlend, Bellroy)
+RUNNETH: unchanged apparel (same since 2026-11-21)

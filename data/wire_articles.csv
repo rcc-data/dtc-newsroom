@@ -1,7 +1,11 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
 2026-11-23,Modern Retail,Sweetgreen bets on cooking pop-ups to promote growing menu,https://www.modernretail.co/marketing/sweetgreen-cooking-pop-ups/,News,
+2026-11-23,Haus,"TikTok GMV Max geo test: +22% TikTok Shop orders, and a halo in every sales channel",https://x.com/oliviaakory/status/2124879857980936414,X,TikTok;Amazon;AI;Measurement;Retail
+2026-11-23,Curtis Howland,Is your media buyer any good? Four charts to build from your Meta change log,https://www.linkedin.com/feed/update/urn:li:activity:7530646815491366912/,LinkedIn,Meta;AI
+2026-11-22,Curtis Howland,"Brief 50 different creator stories, not five polished reads of one script",https://www.linkedin.com/feed/update/urn:li:activity:7530276409643261952/,LinkedIn,Meta;Creative
 2026-11-21,Modern Retail,2026 marked a turning point for artificial dye removal from food,https://www.modernretail.co/podcasts/2026-artificial-dye-removal-from-food/,Podcast,
+2026-11-21,Curtis Howland,"Relaunch last year's seasonal winners, then iterate on them",https://www.linkedin.com/feed/update/urn:li:activity:7529914924752379904/,LinkedIn,Meta;Creative;BFCM / Q4
 2026-11-21,CTC,Shopify Just Launched Campaign Autopilot to All Merchants. Here Is What Ecommerce Brands Must Do Now.,https://commonthreadco.com/blogs/coachs-corner/shopify-just-launched-campaign-autopilot-to-all-merchants-here-is-what-ecommerce-brands-must-do-now,Product,
 2026-11-20,Modern Retail,Walmart’s convenience lures high-income shoppers,https://www.modernretail.co/operations/walmarts-convenience-lures-high-income-shoppers/,News,Retail
 2026-11-20,Modern Retail,"On is making a bigger play for American shoppers, one store at a time",https://www.modernretail.co/operations/on-is-making-a-bigger-play-for-american-shoppers-one-store-at-a-time/,News,Retail

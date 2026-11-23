@@ -3838,3 +3838,974 @@ snapshot,list,rank,brand,aspect,active_days
 2026-11-16,toys-games,21,Big Potato,4:5,
 2026-11-16,toys-games,22,Big Potato,4:5,
 2026-11-16,toys-games,23,cuddle + kind,9:16,
+2026-11-23,all,1,DryWater,4:5,13
+2026-11-23,all,2,Instant Hydration,9:16,
+2026-11-23,all,3,Estrid,9:16,
+2026-11-23,all,4,RYZE Superfoods,9:16,9
+2026-11-23,all,5,Instant Hydration,4:5,
+2026-11-23,all,6,Ritual,4:5,
+2026-11-23,all,7,IM8 Health,9:16,5
+2026-11-23,all,8,Seed,9:16,11
+2026-11-23,all,9,Dore & Rose,9:16,
+2026-11-23,all,10,Comfrt,9:16,14
+2026-11-23,all,11,Trade,9:16,
+2026-11-23,all,12,Arrae,4:5,2
+2026-11-23,all,13,Wonderskin,9:16,11
+2026-11-23,all,14,Huel,9:16,13
+2026-11-23,all,15,Glossier,9:16,19
+2026-11-23,all,16,IL MAKIAGE,9:16,
+2026-11-23,all,17,Our Place,4:5,11
+2026-11-23,all,18,Happy Mammoth,4:5,1
+2026-11-23,all,19,O Positiv,9:16,
+2026-11-23,all,20,Spacegoods,9:16,34
+2026-11-23,all,21,Hommey,9:16,1
+2026-11-23,all,22,Jones Road Beauty,9:16,
+2026-11-23,all,23,Alo Yoga,9:16,2
+2026-11-23,all,24,Caraway,4:5,11
+2026-11-23,all,25,Thorne,9:16,
+2026-11-23,all,26,Happy Mammoth,9:16,
+2026-11-23,all,27,Happy Mammoth,9:16,
+2026-11-23,all,28,hims,4:5,1
+2026-11-23,all,29,Hume Health,9:16,7
+2026-11-23,all,30,DryWater,9:16,12
+2026-11-23,personal-care,1,Estrid,9:16,
+2026-11-23,personal-care,2,Who Gives A Crap,9:16,9
+2026-11-23,personal-care,3,Carpe,9:16,
+2026-11-23,personal-care,4,SURI / discoversuri,9:16,14
+2026-11-23,personal-care,5,Harry's,9:16,
+2026-11-23,personal-care,6,Harry's,9:16,2
+2026-11-23,personal-care,7,Native,9:16,2
+2026-11-23,personal-care,8,Harry's,9:16,2
+2026-11-23,personal-care,9,SURI / discoversuri,9:16,
+2026-11-23,personal-care,10,Lume Deodorant,4:5,2
+2026-11-23,personal-care,11,Dollar Shave Club,4:5,1
+2026-11-23,personal-care,12,Dr. Bronner's,1:1,7
+2026-11-23,personal-care,13,SURI / discoversuri,9:16,2
+2026-11-23,personal-care,14,Fussy,9:16,1
+2026-11-23,personal-care,15,Fussy,9:16,1
+2026-11-23,personal-care,16,My Filterbaby,9:16,
+2026-11-23,personal-care,17,Carpe,9:16,
+2026-11-23,personal-care,18,Harry's,9:16,5
+2026-11-23,personal-care,19,Fussy,9:16,5
+2026-11-23,personal-care,20,SURI / discoversuri,9:16,10
+2026-11-23,personal-care,21,SURI / discoversuri,9:16,10
+2026-11-23,personal-care,22,SURI / discoversuri,9:16,
+2026-11-23,personal-care,23,Carpe,9:16,
+2026-11-23,personal-care,24,Carpe,9:16,
+2026-11-23,personal-care,25,Carpe,9:16,
+2026-11-23,personal-care,26,Dr. Squatch,4:5,18
+2026-11-23,personal-care,27,Dr. Squatch,9:16,22
+2026-11-23,personal-care,28,My Filterbaby,9:16,
+2026-11-23,personal-care,29,Harry's,9:16,
+2026-11-23,personal-care,30,Wild,9:16,
+2026-11-23,supplements,1,Ritual,4:5,
+2026-11-23,supplements,2,Arrae,4:5,2
+2026-11-23,supplements,3,Spacegoods,9:16,34
+2026-11-23,supplements,4,Thorne,9:16,
+2026-11-23,supplements,5,Ritual,9:16,
+2026-11-23,supplements,6,Rheal,9:16,
+2026-11-23,supplements,7,Arrae,9:16,10
+2026-11-23,supplements,8,Create Wellness,9:16,
+2026-11-23,supplements,9,Your Heights,9:16,
+2026-11-23,supplements,10,AG1 by Athletic Greens,9:16,
+2026-11-23,supplements,11,AG1 by Athletic Greens,9:16,
+2026-11-23,supplements,12,Ritual,4:5,
+2026-11-23,supplements,13,AgeMate,3:4,
+2026-11-23,supplements,14,Ritual,9:16,
+2026-11-23,supplements,15,Timeline Longevity,9:16,
+2026-11-23,supplements,16,AG1 by Athletic Greens,9:16,3
+2026-11-23,supplements,17,Create Wellness,4:5,
+2026-11-23,supplements,18,AG1 by Athletic Greens,1:1,
+2026-11-23,supplements,19,Arrae,9:16,12
+2026-11-23,supplements,20,Rheal,9:16,
+2026-11-23,supplements,21,AG1 by Athletic Greens,9:16,
+2026-11-23,supplements,22,AG1 by Athletic Greens,9:16,150
+2026-11-23,supplements,23,AG1 by Athletic Greens,9:16,3
+2026-11-23,supplements,24,AG1 by Athletic Greens,9:16,2
+2026-11-23,supplements,25,Create Wellness,9:16,7
+2026-11-23,supplements,26,Arrae,9:16,1
+2026-11-23,supplements,27,Ritual,9:16,
+2026-11-23,supplements,28,Timeline Longevity,9:16,
+2026-11-23,supplements,29,Arrae,9:16,7
+2026-11-23,supplements,30,PROMIX Nutrition,9:16,5
+2026-11-23,health-wellness,1,DryWater,4:5,13
+2026-11-23,health-wellness,2,Instant Hydration,9:16,
+2026-11-23,health-wellness,3,RYZE Superfoods,9:16,9
+2026-11-23,health-wellness,4,Instant Hydration,4:5,
+2026-11-23,health-wellness,5,IM8 Health,9:16,5
+2026-11-23,health-wellness,6,Seed,9:16,11
+2026-11-23,health-wellness,7,Happy Mammoth,4:5,1
+2026-11-23,health-wellness,8,O Positiv,9:16,
+2026-11-23,health-wellness,9,Happy Mammoth,9:16,
+2026-11-23,health-wellness,10,Happy Mammoth,9:16,
+2026-11-23,health-wellness,11,hims,4:5,1
+2026-11-23,health-wellness,12,Hume Health,9:16,7
+2026-11-23,health-wellness,13,DryWater,9:16,12
+2026-11-23,health-wellness,14,Instant Hydration,9:16,
+2026-11-23,health-wellness,15,Seed,9:16,
+2026-11-23,health-wellness,16,Happy Mammoth,9:16,
+2026-11-23,health-wellness,17,Sans,9:16,
+2026-11-23,health-wellness,18,Join ZOE,9:16,1
+2026-11-23,health-wellness,19,IM8 Health,9:16,1
+2026-11-23,health-wellness,20,Function Health,9:16,
+2026-11-23,health-wellness,21,By Winona,9:16,8
+2026-11-23,health-wellness,22,Function Health,9:16,
+2026-11-23,health-wellness,23,Seed,1:1,
+2026-11-23,health-wellness,24,Buoy,4:5,11
+2026-11-23,health-wellness,25,iHerb,4:5,10
+2026-11-23,health-wellness,26,ŌURA,9:16,6
+2026-11-23,health-wellness,27,BetterMe: Mental Health,9:16,
+2026-11-23,health-wellness,28,Happy Mammoth,9:16,59
+2026-11-23,health-wellness,29,Hydrant,9:16,2
+2026-11-23,health-wellness,30,IM8 Health,9:16,1
+2026-11-23,finance,1,SoFi,9:16,1
+2026-11-23,finance,2,Figure,1:1,1
+2026-11-23,finance,3,NerdWallet,4:5,6
+2026-11-23,finance,4,Progressive,4:5,
+2026-11-23,finance,5,Elavate,9:16,4
+2026-11-23,finance,6,SoFi,4:5,
+2026-11-23,finance,7,Upstart,9:16,8
+2026-11-23,finance,8,Ethos,9:16,
+2026-11-23,finance,9,Wise,9:16,8
+2026-11-23,finance,10,Venmo,9:16,11
+2026-11-23,finance,11,Intuit QuickBooks,9:16,14
+2026-11-23,finance,12,Rocket,9:16,6
+2026-11-23,finance,13,"Gramms - Clean, Clear Protein",4:5,5
+2026-11-23,finance,14,Upstart,9:16,1
+2026-11-23,finance,15,Figure,1:1,4
+2026-11-23,finance,16,Locale,9:16,5
+2026-11-23,finance,17,Locale,9:16,4
+2026-11-23,finance,18,Locale,9:16,1
+2026-11-23,finance,19,Locale,9:16,4
+2026-11-23,finance,20,Locale,4:5,4
+2026-11-23,finance,21,Locale,9:16,3
+2026-11-23,finance,22,Locale,4:5,4
+2026-11-23,finance,23,Locale,9:16,4
+2026-11-23,finance,24,Copilot Money,9:16,2
+2026-11-23,finance,25,Chase,4:5,6
+2026-11-23,finance,26,OTTO Insurance,9:16,1
+2026-11-23,finance,27,OTTO Insurance,9:16,3
+2026-11-23,finance,28,SoFi,9:16,3
+2026-11-23,finance,29,SoFi,4:5,1
+2026-11-23,finance,30,Wealthsimple,4:5,1
+2026-11-23,retail,1,Target,9:16,1
+2026-11-23,retail,2,Sephora,9:16,
+2026-11-23,retail,3,Target,9:16,13
+2026-11-23,retail,4,Target,9:16,9
+2026-11-23,retail,5,Fanatics,1:1,12
+2026-11-23,retail,6,Sephora,9:16,
+2026-11-23,retail,7,Sephora,9:16,
+2026-11-23,retail,8,Sephora,1:1,18
+2026-11-23,retail,9,La Redoute,9:16,
+2026-11-23,retail,10,StockX,9:16,1
+2026-11-23,retail,11,StockX,9:16,1
+2026-11-23,retail,12,StockX,9:16,1
+2026-11-23,retail,13,Sephora,9:16,1
+2026-11-23,retail,14,Sephora,1:1,4
+2026-11-23,retail,15,notonthehighstreet,4:5,11
+2026-11-23,retail,16,Eyeglass World,9:16,
+2026-11-23,retail,17,La Redoute,9:16,8
+2026-11-23,retail,18,Sephora,9:16,1
+2026-11-23,retail,19,Sephora,9:16,11
+2026-11-23,retail,20,Sephora,1:1,1
+2026-11-23,retail,21,Anthropologie,9:16,
+2026-11-23,retail,22,Target,9:16,8
+2026-11-23,retail,23,Marks and Spencer,4:5,
+2026-11-23,retail,24,Sephora,1:1,2
+2026-11-23,retail,25,Sephora,1:1,
+2026-11-23,retail,26,Anthropologie,3:4,
+2026-11-23,retail,27,SSENSE,9:16,12
+2026-11-23,retail,28,Target,9:16,
+2026-11-23,retail,29,Sephora,9:16,
+2026-11-23,retail,30,Sephora,421:600,
+2026-11-23,sports-fitness,1,runna,9:16,
+2026-11-23,sports-fitness,2,Use Cadence,9:16,1
+2026-11-23,sports-fitness,3,runna,9:16,
+2026-11-23,sports-fitness,4,Hyperice,9:16,5
+2026-11-23,sports-fitness,5,Salomon,4:5,
+2026-11-23,sports-fitness,6,Peloton,9:16,27
+2026-11-23,sports-fitness,7,Nike Strength,9:16,
+2026-11-23,sports-fitness,8,Use Cadence,9:16,
+2026-11-23,sports-fitness,9,True Linkswear,9:16,11
+2026-11-23,sports-fitness,10,True Linkswear,9:16,11
+2026-11-23,sports-fitness,11,HOKA,1:1,4
+2026-11-23,sports-fitness,12,HOKA,1:1,4
+2026-11-23,sports-fitness,13,HOKA,9:16,4
+2026-11-23,sports-fitness,14,HOKA,9:16,4
+2026-11-23,sports-fitness,15,Burton,9:16,3
+2026-11-23,sports-fitness,16,Strava,9:16,
+2026-11-23,sports-fitness,17,Strava,9:16,2
+2026-11-23,sports-fitness,18,Free People,9:16,6
+2026-11-23,sports-fitness,19,Tapeguyluke,9:16,7
+2026-11-23,sports-fitness,20,Maurten,4:5,1
+2026-11-23,sports-fitness,21,adidas,9:16,5
+2026-11-23,sports-fitness,22,Montecwear,9:16,
+2026-11-23,sports-fitness,23,Montecwear,4:5,3
+2026-11-23,sports-fitness,24,Montecwear,4:5,3
+2026-11-23,sports-fitness,25,ASICS,9:16,1
+2026-11-23,sports-fitness,26,HOKA,1:1,4
+2026-11-23,sports-fitness,27,HOKA,1:1,4
+2026-11-23,sports-fitness,28,Muscle Nation,9:16,1
+2026-11-23,sports-fitness,29,TEN THOUSAND,9:16,
+2026-11-23,sports-fitness,30,TEN THOUSAND,4:5,6
+2026-11-23,intimates,1,Knix,4:5,
+2026-11-23,intimates,2,Thirdlove,1:1,14
+2026-11-23,intimates,3,Adore Me,1:1,6
+2026-11-23,intimates,4,Honeylove,9:16,
+2026-11-23,intimates,5,Modibodi,4:5,
+2026-11-23,intimates,6,Radiancy,1:1,1
+2026-11-23,intimates,7,Huha,9:16,2
+2026-11-23,intimates,8,Huha,9:16,2
+2026-11-23,intimates,9,Negative Underwear,4:5,
+2026-11-23,intimates,10,Eberjey,9:16,
+2026-11-23,intimates,11,Thirdlove,1:1,
+2026-11-23,intimates,12,Knix,9:16,48
+2026-11-23,intimates,13,Honeylove,9:16,11
+2026-11-23,intimates,14,Honeylove,4:5,11
+2026-11-23,intimates,15,CUUP,1:1,
+2026-11-23,intimates,16,CUUP,9:16,50
+2026-11-23,intimates,17,marlies dekkers,1:1,4
+2026-11-23,intimates,18,Huha,9:16,2
+2026-11-23,intimates,19,Triumph,9:16,
+2026-11-23,intimates,20,Thirdlove,9:16,1
+2026-11-23,intimates,21,Thirdlove,4:5,1
+2026-11-23,intimates,22,Adore Me,1:1,6
+2026-11-23,intimates,23,Pepper,4:5,1
+2026-11-23,intimates,24,Negative Underwear,1:1,
+2026-11-23,intimates,25,Negative Underwear,4:5,
+2026-11-23,intimates,26,Negative Underwear,9:16,8
+2026-11-23,intimates,27,Lounge Underwear,9:16,
+2026-11-23,intimates,28,Shapermint,9:16,
+2026-11-23,intimates,29,Shapermint,9:16,10
+2026-11-23,intimates,30,Eberjey,9:16,
+2026-11-23,hair-care,1,ActandAcre,9:16,
+2026-11-23,hair-care,2,Living Proof,9:16,2
+2026-11-23,hair-care,3,Living Proof,9:16,2
+2026-11-23,hair-care,4,Living Proof,9:16,2
+2026-11-23,hair-care,5,Prose,9:16,1
+2026-11-23,hair-care,6,Redken,9:16,6
+2026-11-23,hair-care,7,Prose,4:5,
+2026-11-23,hair-care,8,Arey,9:16,8
+2026-11-23,hair-care,9,OUAI,1:1,
+2026-11-23,hair-care,10,lo.la,9:16,
+2026-11-23,hair-care,11,Tyga Cat Food,4:5,1
+2026-11-23,hair-care,12,__abbey.lee__,4:5,1
+2026-11-23,hair-care,13,Tyga Cat Food,9:16,1
+2026-11-23,hair-care,14,Tyga Cat Food,9:16,1
+2026-11-23,hair-care,15,JVN Hair,9:16,1
+2026-11-23,hair-care,16,Polar Haircare,9:16,1
+2026-11-23,hair-care,17,Living Proof,1:1,1
+2026-11-23,hair-care,18,Living Proof,9:16,3
+2026-11-23,hair-care,19,Living Proof,9:16,2
+2026-11-23,hair-care,20,Living Proof,1:1,2
+2026-11-23,hair-care,21,Living Proof,1:1,2
+2026-11-23,hair-care,22,Living Proof,9:16,2
+2026-11-23,hair-care,23,Living Proof,9:16,2
+2026-11-23,hair-care,24,OUAI,9:16,
+2026-11-23,hair-care,25,OUAI,9:16,
+2026-11-23,hair-care,26,OUAI,9:16,
+2026-11-23,hair-care,27,TYMO Beauty,9:16,1
+2026-11-23,hair-care,28,Prose,9:16,2
+2026-11-23,hair-care,29,Prose,9:16,2
+2026-11-23,hair-care,30,Prose,9:16,2
+2026-11-23,accessories,1,Loop,9:16,7
+2026-11-23,accessories,2,Ölend,9:16,
+2026-11-23,accessories,3,Bellroy,9:16,35
+2026-11-23,accessories,4,Blenders,9:16,
+2026-11-23,accessories,5,Loop,4:5,
+2026-11-23,accessories,6,Loop,9:16,9
+2026-11-23,accessories,7,Pela Case,9:16,6
+2026-11-23,accessories,8,Casetify,1:1,1
+2026-11-23,accessories,9,Freja New York,9:16,2
+2026-11-23,accessories,10,kate spade new york,4:5,1
+2026-11-23,accessories,11,The Great Christmas Feast,9:16,
+2026-11-23,accessories,12,Brixley Bags,9:16,
+2026-11-23,accessories,13,Freja New York,9:16,7
+2026-11-23,accessories,14,The Ridge,4:5,
+2026-11-23,accessories,15,The Ridge,9:16,16
+2026-11-23,accessories,16,Loop,9:16,6
+2026-11-23,accessories,17,Loop,9:16,
+2026-11-23,accessories,18,Loop,1:1,
+2026-11-23,accessories,19,The Ridge,9:16,
+2026-11-23,accessories,20,Coach,9:16,3
+2026-11-23,accessories,21,Nordgreen,1:1,1
+2026-11-23,accessories,22,LensCrafters,9:16,1
+2026-11-23,accessories,23,Songmont,2:3,
+2026-11-23,accessories,24,Portland Leather Goods,9:16,6
+2026-11-23,accessories,25,Coach,9:16,6
+2026-11-23,accessories,26,Coach,4:5,2
+2026-11-23,accessories,27,Mansur Gavriel,9:16,11
+2026-11-23,accessories,28,Casetify,9:16,1
+2026-11-23,accessories,29,Ölend,4:5,1
+2026-11-23,accessories,30,Ölend,4:5,1
+2026-11-23,travel,1,Beis,9:16,
+2026-11-23,travel,2,Airalo Global eSIM Store,9:16,42
+2026-11-23,travel,3,Kindred,9:16,
+2026-11-23,travel,4,Beis,9:16,18
+2026-11-23,travel,5,Airalo Global eSIM Store,9:16,
+2026-11-23,travel,6,Ekster,9:16,5
+2026-11-23,travel,7,Aman Resorts,9:16,1
+2026-11-23,travel,8,Kindred,4:5,6
+2026-11-23,travel,9,Kindred,9:16,7
+2026-11-23,travel,10,Away,9:16,
+2026-11-23,travel,11,Positravelty,9:16,
+2026-11-23,travel,12,Contiki,9:16,
+2026-11-23,travel,13,Contiki,9:16,
+2026-11-23,travel,14,Contiki,9:16,
+2026-11-23,travel,15,Holafly - English,9:16,
+2026-11-23,travel,16,Beis,9:16,
+2026-11-23,travel,17,Kindred,1:1,1
+2026-11-23,travel,18,Away,4:5,6
+2026-11-23,travel,19,CALPAK,1:1,1
+2026-11-23,travel,20,CALPAK,9:16,1
+2026-11-23,travel,21,CALPAK,4:5,1
+2026-11-23,travel,22,CALPAK,4:5,1
+2026-11-23,travel,23,Cadence,9:16,4
+2026-11-23,travel,24,Cadence,9:16,3
+2026-11-23,travel,25,Db,9:16,2
+2026-11-23,travel,26,Db,9:16,2
+2026-11-23,travel,27,Db,9:16,2
+2026-11-23,travel,28,Beis,9:16,11
+2026-11-23,travel,29,Beis,1:1,1
+2026-11-23,travel,30,Beis,9:16,1
+2026-11-23,apparel,1,Dore & Rose,9:16,
+2026-11-23,apparel,2,Comfrt,9:16,14
+2026-11-23,apparel,3,Alo Yoga,9:16,2
+2026-11-23,apparel,4,True Classic,4:5,
+2026-11-23,apparel,5,Alo Yoga,9:16,
+2026-11-23,apparel,6,Jenni Kayne,9:16,
+2026-11-23,apparel,7,The Oodie,9:16,7
+2026-11-23,apparel,8,The Oodie,9:16,
+2026-11-23,apparel,9,Boody,4:5,
+2026-11-23,apparel,10,True Classic,9:16,1
+2026-11-23,apparel,11,Dissh,4:5,
+2026-11-23,apparel,12,Mars Men,4:5,1
+2026-11-23,apparel,13,Mars Men,4:5,7
+2026-11-23,apparel,14,True Classic,4:5,15
+2026-11-23,apparel,15,Everlane,9:16,17
+2026-11-23,apparel,16,Heaven Mayhem,4:5,1
+2026-11-23,apparel,17,Madewell,1:1,3
+2026-11-23,apparel,18,Veronica Beard,9:16,3
+2026-11-23,apparel,19,Alo Yoga,9:16,1
+2026-11-23,apparel,20,FP Movement,9:16,
+2026-11-23,apparel,21,SPELL,9:16,
+2026-11-23,apparel,22,Barbour,9:16,
+2026-11-23,apparel,23,True Classic,9:16,14
+2026-11-23,apparel,24,Vessi,9:16,9
+2026-11-23,apparel,25,Athleta,9:16,
+2026-11-23,apparel,26,Buck Mason,9:16,1
+2026-11-23,apparel,27,The Perfect Jean,9:16,19
+2026-11-23,apparel,28,True Classic,9:16,14
+2026-11-23,apparel,29,Mott & Bow,9:16,35
+2026-11-23,apparel,30,Dore & Rose,9:16,
+2026-11-23,education,1,Preply,1:1,
+2026-11-23,education,2,Jumpspeak,9:16,14
+2026-11-23,education,3,Jun Yuh,9:16,
+2026-11-23,education,4,MakesYouFluent,1:1,7
+2026-11-23,education,5,Foundr,9:16,8
+2026-11-23,education,6,Preply,9:16,13
+2026-11-23,education,7,Jumpspeak,1:1,14
+2026-11-23,education,8,Preply,9:16,1
+2026-11-23,education,9,Preply,1:1,
+2026-11-23,education,10,Iman Gadzhi,4:5,
+2026-11-23,education,11,Iman Gadzhi,4:5,
+2026-11-23,education,12,Iman Gadzhi,4:5,
+2026-11-23,education,13,Iman Gadzhi,4:5,
+2026-11-23,education,14,Iman Gadzhi,1:1,
+2026-11-23,education,15,Coursera,9:16,2
+2026-11-23,education,16,Blinkist,9:16,3
+2026-11-23,education,17,Primrose Schools,9:16,1
+2026-11-23,education,18,Deepstash,9:16,1
+2026-11-23,education,19,Jenna Kutcher,9:16,12
+2026-11-23,education,20,Jun Yuh,9:16,
+2026-11-23,education,21,Jun Yuh,9:16,6
+2026-11-23,education,22,Metodo Toddler,1:1,11
+2026-11-23,education,23,Coursera,9:16,1
+2026-11-23,education,24,Preply,9:16,7
+2026-11-23,education,25,Outschool,9:16,13
+2026-11-23,education,26,Amy Porterfield,9:16,9
+2026-11-23,education,27,Alex Hormozi,9:16,3
+2026-11-23,education,28,ABCmouse.com Early Learning Academy,9:16,
+2026-11-23,education,29,Mindvalley,4:5,13
+2026-11-23,education,30,Iman Gadzhi,4:5,
+2026-11-23,home-goods,1,Our Place,4:5,11
+2026-11-23,home-goods,2,Hommey,9:16,1
+2026-11-23,home-goods,3,Caraway,4:5,11
+2026-11-23,home-goods,4,Boll & Branch,9:16,
+2026-11-23,home-goods,5,Burrow,9:16,3
+2026-11-23,home-goods,6,Caraway,4:5,7
+2026-11-23,home-goods,7,Hommey,9:16,4
+2026-11-23,home-goods,8,Our Place,4:5,1
+2026-11-23,home-goods,9,Flamingo Estate,9:16,
+2026-11-23,home-goods,10,Caraway,4:5,
+2026-11-23,home-goods,11,Caraway,9:16,
+2026-11-23,home-goods,12,Blueland,9:16,7
+2026-11-23,home-goods,13,Hommey,9:16,4
+2026-11-23,home-goods,14,Hommey,9:16,4
+2026-11-23,home-goods,15,Hommey,9:16,4
+2026-11-23,home-goods,16,Our Place,9:16,1
+2026-11-23,home-goods,17,Bed Threads,9:16,1
+2026-11-23,home-goods,18,Blueland,4:5,
+2026-11-23,home-goods,19,Brooklinen,4:5,
+2026-11-23,home-goods,20,Caraway,4:5,8
+2026-11-23,home-goods,21,Hommey,9:16,2
+2026-11-23,home-goods,22,Purdy & Figg,4:5,
+2026-11-23,home-goods,23,Caraway,4:5,11
+2026-11-23,home-goods,24,Caraway,9:16,
+2026-11-23,home-goods,25,Koala,4:5,5
+2026-11-23,home-goods,26,Caraway,4:5,2
+2026-11-23,home-goods,27,Caraway,4:5,1
+2026-11-23,home-goods,28,Hommey,9:16,4
+2026-11-23,home-goods,29,Hommey,9:16,4
+2026-11-23,home-goods,30,Hommey,9:16,4
+2026-11-23,beauty,1,Wonderskin,9:16,11
+2026-11-23,beauty,2,Glossier,9:16,19
+2026-11-23,beauty,3,IL MAKIAGE,9:16,
+2026-11-23,beauty,4,Jones Road Beauty,9:16,
+2026-11-23,beauty,5,Jones Road Beauty,9:16,
+2026-11-23,beauty,6,Static Nails,4:5,
+2026-11-23,beauty,7,Jones Road Beauty,9:16,
+2026-11-23,beauty,8,Jolie,4:5,
+2026-11-23,beauty,9,ILIA Beauty,4:5,
+2026-11-23,beauty,10,Rosabella,1:1,
+2026-11-23,beauty,11,Jones Road Beauty,9:16,
+2026-11-23,beauty,12,Jones Road Beauty,9:16,
+2026-11-23,beauty,13,Kitsch,9:16,21
+2026-11-23,beauty,14,Jones Road Beauty,9:16,
+2026-11-23,beauty,15,Summer Fridays,9:16,3
+2026-11-23,beauty,16,MERIT,9:16,
+2026-11-23,beauty,17,Jolie,9:16,
+2026-11-23,beauty,18,rms beauty,1:1,
+2026-11-23,beauty,19,ALT. Fragrances,9:16,20
+2026-11-23,beauty,20,Glossier,9:16,
+2026-11-23,beauty,21,Saie Beauty,1:1,5
+2026-11-23,beauty,22,IPSY,9:16,1
+2026-11-23,beauty,23,ALT. Fragrances,9:16,2
+2026-11-23,beauty,24,e.l.f. Cosmetics,9:16,8
+2026-11-23,beauty,25,Jones Road Beauty,9:16,
+2026-11-23,beauty,26,Thrive Causemetics,9:16,11
+2026-11-23,beauty,27,Savvy Finds,9:16,6
+2026-11-23,beauty,28,Jones Road Beauty,9:16,
+2026-11-23,beauty,29,Tower 28 Beauty,9:16,20
+2026-11-23,beauty,30,Glossier,9:16,18
+2026-11-23,pets,1,Spot and Tango,9:16,
+2026-11-23,pets,2,The Farmer's Dog,3:4,
+2026-11-23,pets,3,Native Pet,1:1,4
+2026-11-23,pets,4,Wuffes,9:16,12
+2026-11-23,pets,5,Native Pet,9:16,
+2026-11-23,pets,6,Spot and Tango,1:1,3
+2026-11-23,pets,7,Native Pet,4:5,1
+2026-11-23,pets,8,Native Pet,1:1,
+2026-11-23,pets,9,Wuffes,9:16,13
+2026-11-23,pets,10,Wuffes,9:16,18
+2026-11-23,pets,11,PetLab Co.,9:16,
+2026-11-23,pets,12,Native Pet,1:1,
+2026-11-23,pets,13,Wuffes,9:16,29
+2026-11-23,pets,14,Native Pet,9:16,
+2026-11-23,pets,15,Spot and Tango,9:16,1
+2026-11-23,pets,16,Wuffes,9:16,2
+2026-11-23,pets,17,The Farmer's Dog,9:16,7
+2026-11-23,pets,18,Native Pet,9:16,1
+2026-11-23,pets,19,Spot and Tango,9:16,5
+2026-11-23,pets,20,Spot and Tango,9:16,4
+2026-11-23,pets,21,PetLab Co.,9:16,2
+2026-11-23,pets,22,Native Pet,1:1,
+2026-11-23,pets,23,Native Pet,1:1,
+2026-11-23,pets,24,Lyka Pet Food,4:5,
+2026-11-23,pets,25,Spot and Tango,9:16,12
+2026-11-23,pets,26,Wuffes,9:16,13
+2026-11-23,pets,27,Ollie,9:16,13
+2026-11-23,pets,28,Dog is Human,9:16,
+2026-11-23,pets,29,Spot and Tango,9:16,
+2026-11-23,pets,30,Wuffes,9:16,17
+2026-11-23,entertainment,1,DROOL,9:16,3
+2026-11-23,entertainment,2,Carnegie Hall,3:2,2
+2026-11-23,entertainment,3,Center Theatre Group,4:5,15
+2026-11-23,entertainment,4,Center Theatre Group,9:16,9
+2026-11-23,entertainment,5,Manchester City,9:16,2
+2026-11-23,entertainment,6,ktqlowes,9:16,1
+2026-11-23,entertainment,7,Manchester City,9:16,
+2026-11-23,entertainment,8,hannahkromahx,9:16,7
+2026-11-23,entertainment,9,sanderbruijnzeels,9:16,4
+2026-11-23,entertainment,10,Topgolf,9:16,5
+2026-11-23,entertainment,11,DROOL,9:16,6
+2026-11-23,entertainment,12,DROOL,9:16,5
+2026-11-23,entertainment,13,DROOL,9:16,6
+2026-11-23,entertainment,14,DROOL,9:16,
+2026-11-23,entertainment,15,DROOL,9:16,
+2026-11-23,entertainment,16,DROOL,9:16,6
+2026-11-23,entertainment,17,DROOL,1:1,1
+2026-11-23,entertainment,18,Sky,1:1,3
+2026-11-23,entertainment,19,Sky,1:1,1
+2026-11-23,entertainment,20,Carnegie Hall,2:3,10
+2026-11-23,entertainment,21,Manchester City,1:1,
+2026-11-23,entertainment,22,Book of the Month,9:16,7
+2026-11-23,entertainment,23,DROOL,9:16,18
+2026-11-23,entertainment,24,The Phoenix Theatre Company,4:5,1
+2026-11-23,entertainment,25,Topgolf,4:5,
+2026-11-23,entertainment,26,Sky,1:1,5
+2026-11-23,entertainment,27,Sky,1:1,8
+2026-11-23,entertainment,28,The New York Times,4:5,
+2026-11-23,entertainment,29,Sky,9:16,
+2026-11-23,entertainment,30,Sky,9:16,12
+2026-11-23,food-beverage,1,Trade,9:16,
+2026-11-23,food-beverage,2,Huel,9:16,13
+2026-11-23,food-beverage,3,Surreal,4:5,
+2026-11-23,food-beverage,4,Surreal,4:5,
+2026-11-23,food-beverage,5,Huel,9:16,
+2026-11-23,food-beverage,6,Huel,1:1,25
+2026-11-23,food-beverage,7,MUD\WTR,9:16,2
+2026-11-23,food-beverage,8,Starbucks,9:16,
+2026-11-23,food-beverage,9,TRIP,9:16,3
+2026-11-23,food-beverage,10,Atlas Coffee Club,9:16,
+2026-11-23,food-beverage,11,Oats Overnight,9:16,1
+2026-11-23,food-beverage,12,MUD\WTR,9:16,
+2026-11-23,food-beverage,13,Factor_,9:16,
+2026-11-23,food-beverage,14,Mindful Chef,9:16,
+2026-11-23,food-beverage,15,TRIP,4:5,
+2026-11-23,food-beverage,16,Huel,9:16,25
+2026-11-23,food-beverage,17,Huel,9:16,24
+2026-11-23,food-beverage,18,Chomps,9:16,
+2026-11-23,food-beverage,19,Huel,9:16,25
+2026-11-23,food-beverage,20,Huel,9:16,
+2026-11-23,food-beverage,21,Poppi,9:16,50
+2026-11-23,food-beverage,22,Graza,9:16,
+2026-11-23,food-beverage,23,Javvy,9:16,1
+2026-11-23,food-beverage,24,Huel,9:16,7
+2026-11-23,food-beverage,25,Huel,9:16,7
+2026-11-23,food-beverage,26,Everyday Dose,9:16,
+2026-11-23,food-beverage,27,Thrive Market,4:5,
+2026-11-23,food-beverage,28,Factor_,9:16,1
+2026-11-23,food-beverage,29,Ka'Chava,9:16,8
+2026-11-23,food-beverage,30,Oats Overnight,9:16,1
+2026-11-23,kitchen-dining,1,HexClad,9:16,1
+2026-11-23,kitchen-dining,2,KitchenAid,9:16,
+2026-11-23,kitchen-dining,3,HexClad,9:16,1
+2026-11-23,kitchen-dining,4,HexClad,4:5,1
+2026-11-23,kitchen-dining,5,HexClad,9:16,5
+2026-11-23,kitchen-dining,6,HexClad,9:16,5
+2026-11-23,kitchen-dining,7,HexClad,9:16,1
+2026-11-23,kitchen-dining,8,HexClad,9:16,2
+2026-11-23,kitchen-dining,9,KitchenAid,9:16,5
+2026-11-23,kitchen-dining,10,Made In Cookware,9:16,3
+2026-11-23,kitchen-dining,11,Made In Cookware,9:16,6
+2026-11-23,kitchen-dining,12,Made In Cookware,9:16,12
+2026-11-23,kitchen-dining,13,HexClad,1:1,6
+2026-11-23,kitchen-dining,14,HexClad,1:1,1
+2026-11-23,kitchen-dining,15,HexClad,9:16,7
+2026-11-23,kitchen-dining,16,HexClad,1:1,6
+2026-11-23,kitchen-dining,17,HexClad,1:1,
+2026-11-23,kitchen-dining,18,HexClad,9:16,
+2026-11-23,kitchen-dining,19,Made In Cookware,9:16,
+2026-11-23,kitchen-dining,20,Djuce Studio,4:5,
+2026-11-23,kitchen-dining,21,Djuce Studio,4:5,
+2026-11-23,kitchen-dining,22,Djuce Studio,4:5,
+2026-11-23,kitchen-dining,23,Djuce Studio,4:5,
+2026-11-23,kitchen-dining,24,HexClad,9:16,2
+2026-11-23,kitchen-dining,25,HexClad,9:16,
+2026-11-23,kitchen-dining,26,HexClad,9:16,
+2026-11-23,kitchen-dining,27,HexClad,9:16,
+2026-11-23,kitchen-dining,28,HexClad,9:16,9
+2026-11-23,kitchen-dining,29,HexClad,4:5,1
+2026-11-23,kitchen-dining,30,Matsato,9:16,
+2026-11-23,skincare,1,OSEA,4:5,
+2026-11-23,skincare,2,Herbivore Botanicals,9:16,9
+2026-11-23,skincare,3,La Mer,9:16,2
+2026-11-23,skincare,4,Naturium,9:16,8
+2026-11-23,skincare,5,OSEA,4:5,5
+2026-11-23,skincare,6,OSEA,9:16,1
+2026-11-23,skincare,7,Augustinus Bader,9:16,
+2026-11-23,skincare,8,Frøya Organics,9:16,12
+2026-11-23,skincare,9,DRMTLGY,9:16,
+2026-11-23,skincare,10,Herbivore Botanicals,9:16,8
+2026-11-23,skincare,11,The Ordinary,1:1,
+2026-11-23,skincare,12,OSEA,4:5,1
+2026-11-23,skincare,13,Tatcha,9:16,
+2026-11-23,skincare,14,Paula's Choice,4:5,18
+2026-11-23,skincare,15,Solawave,9:16,
+2026-11-23,skincare,16,The Ordinary,9:16,
+2026-11-23,skincare,17,Medik8,9:16,8
+2026-11-23,skincare,18,Herbivore Botanicals,1:1,1
+2026-11-23,skincare,19,DRMTLGY,9:16,
+2026-11-23,skincare,20,Augustinus Bader,9:16,4
+2026-11-23,skincare,21,Skin + Me,9:16,6
+2026-11-23,skincare,22,True Botanicals,9:16,10
+2026-11-23,skincare,23,True Botanicals,9:16,10
+2026-11-23,skincare,24,Tata Harper Skincare,9:16,9
+2026-11-23,skincare,25,Naturium,9:16,8
+2026-11-23,skincare,26,Naturium,4:5,9
+2026-11-23,skincare,27,DRMTLGY,9:16,
+2026-11-23,skincare,28,DRMTLGY,9:16,
+2026-11-23,skincare,29,The Ordinary,9:16,
+2026-11-23,skincare,30,Naked Sundays SPF,4:5,
+2026-11-23,outdoors,1,KUIU,9:16,1
+2026-11-23,outdoors,2,Poncho,9:16,3
+2026-11-23,outdoors,3,Peak Design,9:16,2
+2026-11-23,outdoors,4,REI,9:16,
+2026-11-23,outdoors,5,BaubleBar,9:16,
+2026-11-23,outdoors,6,REI,4:5,
+2026-11-23,outdoors,7,Kathmandu,4:5,
+2026-11-23,outdoors,8,Peak Design,9:16,
+2026-11-23,outdoors,9,KUIU,4:5,5
+2026-11-23,outdoors,10,KUIU,9:16,1
+2026-11-23,outdoors,11,Cotopaxi,9:16,11
+2026-11-23,outdoors,12,Peak Design,9:16,1
+2026-11-23,outdoors,13,Peak Design,9:16,1
+2026-11-23,outdoors,14,Peak Design,9:16,1
+2026-11-23,outdoors,15,Peak Design,9:16,1
+2026-11-23,outdoors,16,Peak Design,9:16,1
+2026-11-23,outdoors,17,Peak Design,9:16,1
+2026-11-23,outdoors,18,REI,4:5,2
+2026-11-23,outdoors,19,REI,4:5,2
+2026-11-23,outdoors,20,Backcountry,1:1,
+2026-11-23,outdoors,21,Backcountry,1:1,
+2026-11-23,outdoors,22,Backcountry,9:16,
+2026-11-23,outdoors,23,Backcountry,9:16,
+2026-11-23,outdoors,24,Sea to Summit,9:16,1
+2026-11-23,outdoors,25,Sea to Summit,3:4,1
+2026-11-23,outdoors,26,Black Diamond,1:1,
+2026-11-23,outdoors,27,Anetik Performance,9:16,1
+2026-11-23,outdoors,28,Anetik Performance,9:16,2
+2026-11-23,outdoors,29,REI,4:5,
+2026-11-23,outdoors,30,Therm-a-Rest,9:16,6
+2026-11-23,baby-kids,1,Coterie Baby,4:5,
+2026-11-23,baby-kids,2,Nestig,9:16,
+2026-11-23,baby-kids,3,Babyletto,4:5,
+2026-11-23,baby-kids,4,Lalo,9:16,1
+2026-11-23,baby-kids,5,JoJo Maman Bébé,9:16,
+2026-11-23,baby-kids,6,Kyte Baby,9:16,37
+2026-11-23,baby-kids,7,bobbie,9:16,
+2026-11-23,baby-kids,8,Totter and Tumble,9:16,2
+2026-11-23,baby-kids,9,Little Joys,4:5,8
+2026-11-23,baby-kids,10,Little Spoon,9:16,6
+2026-11-23,baby-kids,11,Momcozy,1:1,1
+2026-11-23,baby-kids,12,Rylee + Cru,9:16,1
+2026-11-23,baby-kids,13,Yoto,9:16,4
+2026-11-23,baby-kids,14,babybub,9:16,5
+2026-11-23,baby-kids,15,yella_chik,9:16,5
+2026-11-23,baby-kids,16,Katey,9:16,5
+2026-11-23,baby-kids,17,EatCerebelly,1:1,10
+2026-11-23,baby-kids,18,Momcozy,9:16,
+2026-11-23,baby-kids,19,Lovevery,9:16,4
+2026-11-23,baby-kids,20,Burt's Bees Baby,9:16,7
+2026-11-23,baby-kids,21,Pipette Baby,4:5,2
+2026-11-23,baby-kids,22,West Elm Kids,1:1,5
+2026-11-23,baby-kids,23,Nanit,9:16,7
+2026-11-23,baby-kids,24,Pipette Baby,9:16,8
+2026-11-23,baby-kids,25,Totter and Tumble,1:1,
+2026-11-23,baby-kids,26,Tubby Todd Bath Co.,9:16,
+2026-11-23,baby-kids,27,Tubby Todd Bath Co.,9:16,
+2026-11-23,baby-kids,28,Tubby Todd Bath Co.,9:16,7
+2026-11-23,baby-kids,29,Little Spoon,4:5,1
+2026-11-23,baby-kids,30,Little Spoon,9:16,
+2026-11-23,jewelry,1,Mejuri,9:16,1
+2026-11-23,jewelry,2,Kendra Scott,9:16,
+2026-11-23,jewelry,3,Pilgrim Jewellery,9:16,1
+2026-11-23,jewelry,4,D. Louise,9:16,
+2026-11-23,jewelry,5,Susan Shaw,9:16,
+2026-11-23,jewelry,6,gorjana,9:16,
+2026-11-23,jewelry,7,Missoma,1:1,
+2026-11-23,jewelry,8,Hey Harper,9:16,8
+2026-11-23,jewelry,9,At Present,9:16,11
+2026-11-23,jewelry,10,Missoma,9:16,
+2026-11-23,jewelry,11,Hey Harper,9:16,
+2026-11-23,jewelry,12,Monica Vinader,9:16,
+2026-11-23,jewelry,13,Shopatorie,9:16,2
+2026-11-23,jewelry,14,Shopatorie,9:16,2
+2026-11-23,jewelry,15,Kendra Scott,9:16,1
+2026-11-23,jewelry,16,gorjana,9:16,2
+2026-11-23,jewelry,17,Hey Harper,9:16,5
+2026-11-23,jewelry,18,Hey Harper,9:16,3
+2026-11-23,jewelry,19,Hey Harper,9:16,3
+2026-11-23,jewelry,20,Hey Harper,9:16,3
+2026-11-23,jewelry,21,Roxanne Assoulin,9:16,1
+2026-11-23,jewelry,22,Atolea Jewelry,9:16,
+2026-11-23,jewelry,23,Mejuri,1:1,1
+2026-11-23,jewelry,24,Mejuri,1:1,1
+2026-11-23,jewelry,25,Mejuri,9:16,1
+2026-11-23,jewelry,26,Claudia Macdonald,9:16,1
+2026-11-23,jewelry,27,Monica Vinader,9:16,
+2026-11-23,jewelry,28,Missoma,1:1,6
+2026-11-23,jewelry,29,Missoma,1:1,6
+2026-11-23,jewelry,30,Missoma,1:1,6
+2026-11-23,technology,1,Asana,9:16,17
+2026-11-23,technology,2,Runway,9:16,
+2026-11-23,technology,3,Canva,1:1,
+2026-11-23,technology,4,monday.com,4:5,1
+2026-11-23,technology,5,Vodafone UK,1:1,6
+2026-11-23,technology,6,monday.com,9:16,1
+2026-11-23,technology,7,monday.com,9:16,1
+2026-11-23,technology,8,Shopify,9:16,
+2026-11-23,technology,9,Dropbox,9:16,
+2026-11-23,technology,10,monday.com,9:16,1
+2026-11-23,technology,11,HubSpot,1:1,22
+2026-11-23,technology,12,madgicx.com,9:16,26
+2026-11-23,technology,13,monday.com,4:5,17
+2026-11-23,technology,14,Hinge,9:16,
+2026-11-23,technology,15,Squarespace,9:16,
+2026-11-23,technology,16,Wix,9:16,
+2026-11-23,technology,17,Otter.ai - AI Meeting Agent,9:16,2
+2026-11-23,technology,18,Otter.ai - AI Meeting Agent,9:16,1
+2026-11-23,technology,19,Surfshark,9:16,
+2026-11-23,technology,20,Artlist.io,1:1,
+2026-11-23,technology,21,YouFibre,9:16,1
+2026-11-23,technology,22,Brick - Take Back Your Time,9:16,3
+2026-11-23,technology,23,Mojo App - Create video stories,9:16,3
+2026-11-23,technology,24,Canva,9:16,
+2026-11-23,technology,25,Canva,9:16,
+2026-11-23,technology,26,Ring,9:16,1
+2026-11-23,technology,27,Ring,9:16,4
+2026-11-23,technology,28,Jenni AI,1:1,1
+2026-11-23,technology,29,Camilo Castañeda,9:16,
+2026-11-23,technology,30,GPTZero,9:16,
+2026-11-23,lifestyle,1,Papier,9:16,
+2026-11-23,lifestyle,2,Papier,9:16,
+2026-11-23,lifestyle,3,FabFitFun,9:16,
+2026-11-23,lifestyle,4,FabFitFun,9:16,
+2026-11-23,lifestyle,5,Sunnylife,9:16,7
+2026-11-23,lifestyle,6,Papier,9:16,
+2026-11-23,lifestyle,7,Quince,9:16,
+2026-11-23,lifestyle,8,Papier,9:16,
+2026-11-23,lifestyle,9,Papier,9:16,
+2026-11-23,lifestyle,10,Sisters and Seekers,9:16,6
+2026-11-23,lifestyle,11,Sunnylife,9:16,1
+2026-11-23,lifestyle,12,The Knot,9:16,1
+2026-11-23,lifestyle,13,Sculpd,9:16,3
+2026-11-23,lifestyle,14,Sculpd,9:16,
+2026-11-23,lifestyle,15,MILK Books,4:5,7
+2026-11-23,lifestyle,16,Minted,9:16,6
+2026-11-23,lifestyle,17,Oliver Bonas,9:16,1
+2026-11-23,lifestyle,18,My Subscription Addiction,9:16,7
+2026-11-23,lifestyle,19,FabFitFun,9:16,
+2026-11-23,lifestyle,20,FabFitFun,4:5,
+2026-11-23,lifestyle,21,Quince,4:5,
+2026-11-23,lifestyle,22,Quince,9:16,
+2026-11-23,lifestyle,23,Quince,9:16,
+2026-11-23,lifestyle,24,Quince,4:5,
+2026-11-23,lifestyle,25,Quince,9:16,
+2026-11-23,lifestyle,26,Quince,9:16,
+2026-11-23,lifestyle,27,Quince,9:16,
+2026-11-23,lifestyle,28,Quince,9:16,
+2026-11-23,lifestyle,29,Sunnylife,4:5,9
+2026-11-23,lifestyle,30,Papier,1:1,
+2026-11-23,fintech,1,Brex,4:5,
+2026-11-23,fintech,2,Flatpay,9:16,4
+2026-11-23,fintech,3,The Dave App,9:16,11
+2026-11-23,fintech,4,Point.com,9:16,
+2026-11-23,fintech,5,Stripe,9:16,11
+2026-11-23,fintech,6,Lemonade,4:5,
+2026-11-23,fintech,7,Lemonade,9:16,
+2026-11-23,fintech,8,Flatpay,9:16,13
+2026-11-23,fintech,9,Acorns,9:16,
+2026-11-23,fintech,10,Lemonade,9:16,
+2026-11-23,fintech,11,Qonto,9:16,
+2026-11-23,fintech,12,The Dave App,9:16,
+2026-11-23,fintech,13,The Dave App,9:16,
+2026-11-23,fintech,14,Flatpay,9:16,
+2026-11-23,fintech,15,The Dave App,9:16,
+2026-11-23,productivity,1,Notion,4:5,7
+2026-11-23,productivity,2,Notion,9:16,7
+2026-11-23,productivity,3,Brainrot Screen Time Control,4:5,
+2026-11-23,productivity,4,Notion,9:16,15
+2026-11-23,productivity,5,Graymatter,9:16,
+2026-11-23,productivity,6,Brainrot Screen Time Control,9:16,
+2026-11-23,productivity,7,Brainrot Screen Time Control,9:16,
+2026-11-23,productivity,8,ClickUp,9:16,1
+2026-11-23,productivity,9,ClickUp,9:16,1
+2026-11-23,productivity,10,Graymatter,9:16,1
+2026-11-23,productivity,11,Grammarly,9:16,7
+2026-11-23,productivity,12,Grammarly,1:1,12
+2026-11-23,productivity,13,Grammarly,1:1,12
+2026-11-23,productivity,14,Opal・#1 Screen Time App,9:16,
+2026-11-23,productivity,15,Opal・#1 Screen Time App,9:16,
+2026-11-23,productivity,16,ClickUp,4:5,
+2026-11-23,productivity,17,ClickUp,9:16,
+2026-11-23,productivity,18,ClickUp,9:16,
+2026-11-23,productivity,19,ClickUp,4:5,
+2026-11-23,productivity,20,Graymatter,9:16,10
+2026-11-23,productivity,21,Wispr Flow,9:16,
+2026-11-23,productivity,22,Brainrot Screen Time Control,4:5,
+2026-11-23,productivity,23,Scribe,1:1,22
+2026-11-23,productivity,24,Graymatter,9:16,
+2026-11-23,productivity,25,Graymatter,9:16,
+2026-11-23,productivity,26,Superhuman,4:5,13
+2026-11-23,productivity,27,Superhuman,1:1,
+2026-11-23,productivity,28,Steph Pase Planners,9:16,16
+2026-11-23,productivity,29,Grammarly,9:16,27
+2026-11-23,productivity,30,Grammarly,9:16,
+2026-11-23,automotive,1,CarMax,4:5,
+2026-11-23,automotive,2,Chemical Guys,9:16,
+2026-11-23,automotive,3,El Car Wash,1:1,
+2026-11-23,automotive,4,Quick Quack Car Wash,1:1,
+2026-11-23,automotive,5,Carvana,1:1,
+2026-11-23,automotive,6,El Car Wash,9:16,
+2026-11-23,automotive,7,Porsche,1:1,15
+2026-11-23,automotive,8,Can Auto Performance,9:16,
+2026-11-23,automotive,9,Can Auto Performance,9:16,
+2026-11-23,automotive,10,Can Auto Performance,9:16,
+2026-11-23,automotive,11,Can Auto Performance,9:16,
+2026-11-23,automotive,12,Mister Car Wash,1:1,
+2026-11-23,automotive,13,living_withlindsay,9:16,
+2026-11-23,automotive,14,Carvana,4:5,
+2026-11-23,automotive,15,Carvana,4:5,
+2026-11-23,automotive,16,Carvana,4:5,
+2026-11-23,automotive,17,El Car Wash,9:16,1
+2026-11-23,automotive,18,Club Car Wash,300:157,18
+2026-11-23,automotive,19,Club Car Wash,4:5,18
+2026-11-23,automotive,20,Club Car Wash,9:16,16
+2026-11-23,automotive,21,Tire Rack,300:157,
+2026-11-23,automotive,22,Tommy's Express Car Wash,1:1,18
+2026-11-23,automotive,23,Tommy's Express Car Wash,1:1,18
+2026-11-23,automotive,24,Safelite,9:16,15
+2026-11-23,automotive,25,Carmarket,1:1,
+2026-11-23,automotive,26,Mister Car Wash,9:16,
+2026-11-23,automotive,27,Mister Car Wash,9:16,
+2026-11-23,automotive,28,Mister Car Wash,1:1,7
+2026-11-23,automotive,29,Club Car Wash,4:5,
+2026-11-23,automotive,30,Chemical Guys,9:16,27
+2026-11-23,professional-services,1,Billo,1:1,
+2026-11-23,professional-services,2,Fiverr,9:16,
+2026-11-23,professional-services,3,Laura Higgins,9:16,7
+2026-11-23,professional-services,4,Superside,9:16,3
+2026-11-23,professional-services,5,Custom Ink,9:16,1
+2026-11-23,professional-services,6,Fiverr,9:16,
+2026-11-23,professional-services,7,Laura Higgins,9:16,
+2026-11-23,professional-services,8,Laura Higgins,4:5,
+2026-11-23,professional-services,9,Framery,9:16,1
+2026-11-23,professional-services,10,Damy Mocellin,9:16,4
+2026-11-23,professional-services,11,Damy Mocellin,9:16,5
+2026-11-23,professional-services,12,Damy Mocellin,9:16,
+2026-11-23,professional-services,13,Damy Mocellin,4:5,4
+2026-11-23,professional-services,14,Damy Mocellin,9:16,5
+2026-11-23,professional-services,15,Custom Ink,1:1,1
+2026-11-23,professional-services,16,Gusto,4:5,4
+2026-11-23,professional-services,17,Darkroom,4:5,3
+2026-11-23,professional-services,18,DEKRA Danmark,9:16,3
+2026-11-23,professional-services,19,Humantra,9:16,
+2026-11-23,professional-services,20,King Kong Co.,1:1,7
+2026-11-23,professional-services,21,King Kong Co.,4:5,7
+2026-11-23,professional-services,22,Checkatrade,1:1,3
+2026-11-23,professional-services,23,Pilothouse,9:16,5
+2026-11-23,professional-services,24,Care.com,9:16,6
+2026-11-23,professional-services,25,Care.com,9:16,6
+2026-11-23,professional-services,26,Care.com,9:16,6
+2026-11-23,professional-services,27,Care.com,9:16,6
+2026-11-23,professional-services,28,Dementia Darling,9:16,6
+2026-11-23,professional-services,29,Klaas Design & Build,16:9,1
+2026-11-23,professional-services,30,Klaas Design & Build,4:5,1
+2026-11-23,toys-games,1,Camp Snap Camera,9:16,3
+2026-11-23,toys-games,2,The Max Letters,9:16,
+2026-11-23,toys-games,3,Exploding Kittens,1:1,6
+2026-11-23,toys-games,4,The Max Letters,9:16,
+2026-11-23,toys-games,5,The Woobles,9:16,
+2026-11-23,toys-games,6,The Max Letters,9:16,104
+2026-11-23,toys-games,7,The Woobles,9:16,
+2026-11-23,toys-games,8,cuddle + kind,9:16,
+2026-11-23,toys-games,9,cuddle + kind,9:16,
+2026-11-23,toys-games,10,The Woobles,9:16,
+2026-11-23,toys-games,11,The Woobles,9:16,
+2026-11-23,toys-games,12,Exploding Kittens,1:1,
+2026-11-23,toys-games,13,cuddle + kind,9:16,
+2026-11-23,toys-games,14,tonies,4:5,
+2026-11-23,toys-games,15,The Woobles,9:16,
+2026-11-23,toys-games,16,The Woobles,9:16,
+2026-11-23,toys-games,17,The Woobles,9:16,
+2026-11-23,toys-games,18,Unstable Games,4:5,
+2026-11-23,toys-games,19,Big Potato,1:1,
+2026-11-23,toys-games,20,Big Potato,9:16,
+2026-11-23,toys-games,21,Big Potato,1:1,
+2026-11-23,toys-games,22,Big Potato,4:5,
+2026-11-23,toys-games,23,Big Potato,4:5,
+2026-11-23,toys-games,24,cuddle + kind,9:16,
+2026-11-23,gaming,1,DraftKings,9:16,
+2026-11-23,gaming,2,PrizePicks,9:16,
+2026-11-23,gaming,3,PrizePicks,9:16,
+2026-11-23,gaming,4,Game Master Worlds,1:1,
+2026-11-23,gaming,5,Game Master Worlds,9:16,
+2026-11-23,gaming,6,Game Master Worlds,1:1,
+2026-11-23,gaming,7,Game Master Worlds,1:1,
+2026-11-23,gaming,8,RpgAdventures,9:16,
+2026-11-23,gaming,9,RpgAdventures,9:16,
+2026-11-23,gaming,10,Exalted Funeral,4:5,
+2026-11-23,gaming,11,Free League Publishing,1:1,
+2026-11-23,medical,1,A Race Against Blindness,9:16,1
+2026-11-23,medical,2,A Race Against Blindness,9:16,2
+2026-11-23,medical,3,A Race Against Blindness,9:16,1
+2026-11-23,medical,4,A Race Against Blindness,9:16,1
+2026-11-23,medical,5,A Race Against Blindness,9:16,1
+2026-11-23,medical,6,A Race Against Blindness,9:16,1
+2026-11-23,medical,7,A Race Against Blindness,9:16,1
+2026-11-23,medical,8,A Race Against Blindness,9:16,1
+2026-11-23,medical,9,A Race Against Blindness,9:16,2
+2026-11-23,medical,10,A Race Against Blindness,9:16,1
+2026-11-23,medical,11,A Race Against Blindness,9:16,1
+2026-11-23,medical,12,A Race Against Blindness,9:16,1
+2026-11-23,medical,13,A Race Against Blindness,9:16,1
+2026-11-23,medical,14,A Race Against Blindness,9:16,1
+2026-11-23,medical,15,A Race Against Blindness,9:16,1
+2026-11-23,medical,16,A Race Against Blindness,9:16,2
+2026-11-23,medical,17,A Race Against Blindness,9:16,2
+2026-11-23,medical,18,A Race Against Blindness,9:16,2
+2026-11-23,medical,19,A Race Against Blindness,9:16,1
+2026-11-23,medical,20,A Race Against Blindness,9:16,1
+2026-11-23,medical,21,A Race Against Blindness,9:16,1
+2026-11-23,medical,22,A Race Against Blindness,9:16,1
+2026-11-23,medical,23,A Race Against Blindness,9:16,2
+2026-11-23,medical,24,A Race Against Blindness,9:16,1
+2026-11-23,medical,25,A Race Against Blindness,9:16,1
+2026-11-23,medical,26,A Race Against Blindness,9:16,1
+2026-11-23,medical,27,A Race Against Blindness,9:16,1
+2026-11-23,medical,28,A Race Against Blindness,9:16,1
+2026-11-23,medical,29,A Race Against Blindness,9:16,1
+2026-11-23,medical,30,A Race Against Blindness,9:16,1
+2026-11-23,luxury,1,CHANEL,1:1,1
+2026-11-23,luxury,2,CHANEL,1:1,
+2026-11-23,luxury,3,CHANEL,1:1,
+2026-11-23,luxury,4,CHANEL,1:1,
+2026-11-23,luxury,5,CHANEL,9:16,
+2026-11-23,luxury,6,CHANEL,1:1,
+2026-11-23,luxury,7,CHANEL,9:16,
+2026-11-23,luxury,8,CHANEL,1:1,
+2026-11-23,luxury,9,CHANEL,1:1,
+2026-11-23,luxury,10,CHANEL,1:1,
+2026-11-23,luxury,11,CHANEL,9:16,
+2026-11-23,luxury,12,CHANEL,1:1,
+2026-11-23,luxury,13,CHANEL,9:16,
+2026-11-23,real-estate,1,Opendoor,9:16,1
+2026-11-23,real-estate,2,Taylor Morrison,1:1,1
+2026-11-23,real-estate,3,D.R. Horton Homes,9:16,1
+2026-11-23,real-estate,4,D.R. Horton Homes,9:16,18
+2026-11-23,real-estate,5,D.R. Horton Homes,9:16,
+2026-11-23,real-estate,6,Taylor Morrison,4:5,
+2026-11-23,real-estate,7,Offerpad,1:1,
+2026-11-23,real-estate,8,Taylor Morrison,1:1,
+2026-11-23,real-estate,9,Ryan Homes,1:1,
+2026-11-23,real-estate,10,Taylor Morrison,4:5,
+2026-11-23,real-estate,11,Zillow,1:1,
+2026-11-23,real-estate,12,Zillow,9:16,
+2026-11-23,real-estate,13,Zillow,9:16,
+2026-11-23,real-estate,14,Pulte Homes,9:16,
+2026-11-23,real-estate,15,D.R. Horton Homes,16:9,
+2026-11-23,real-estate,16,Zillow,9:16,
+2026-11-23,real-estate,17,Zillow,9:16,
+2026-11-23,transportation,1,Uber,1:1,
+2026-11-23,transportation,2,DHL Express,9:16,1
+2026-11-23,transportation,3,DHL Express,1:1,16
+2026-11-23,transportation,4,Uber,1:1,
+2026-11-23,transportation,5,Fulli,1:1,6
+2026-11-23,transportation,6,Allied Van Lines,9:16,18
+2026-11-23,transportation,7,Statiq.club,1:1,
+2026-11-23,transportation,8,DHL Express,4:5,
+2026-11-23,transportation,9,Bip&Go - Télépéage,1:1,
+2026-11-23,transportation,10,Statiq.club,1:1,71
+2026-11-23,transportation,11,Statiq.club,1:1,120
+2026-11-23,marketplace,1,DoorDash,1:1,5
+2026-11-23,footwear,1,HIKE Footwear,4:5,6
+2026-11-23,footwear,2,Archies Footwear,9:16,9
+2026-11-23,footwear,3,Vibram,9:16,
+2026-11-23,footwear,4,Vibram,2:3,
+2026-11-23,footwear,5,Vibram,9:16,16
+2026-11-23,footwear,6,Archies Footwear,9:16,
+2026-11-23,footwear,7,HIKE Footwear,4:5,7
+2026-11-23,footwear,8,HIKE Footwear,4:5,7
+2026-11-23,footwear,9,Patricia Green Collection,9:16,

@@ -1,0 +1,7 @@
+# Haus geo test for one skincare brand: incremental revenue lift by sales channel, GMV Max regions vs holdout (Aug 5 - Sep 14, 2026, incl. two-week post-treatment window). Values as labelled on the chart. Olivia Kory on X, 23 Nov 2026. GMV Max also drove a 22% lift in TikTok Shop orders (stated in the post).
+channel,detail,lift_pct
+All channels,total revenue,1.3
+Online store,"Shopify, incl. TikTok Shop",1.4
+Amazon,marketplace,0.4
+Ulta,retail,0.7
+Nordstrom,retail,1.0

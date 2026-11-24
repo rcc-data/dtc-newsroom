@@ -1,0 +1,107 @@
+ChatGPT Advertising, BFCM Creative Strategy & Kith CRO
+https://www.directtoconsumer.co/newsletter/chatgpt-ads-bfcm-creative-kith-cro
+2026-11-24
+
+Good morning.
+Unless you work in ecom and it’s Black Friday week… Remember folks, there’s a turkey at the end of the tunnel.
+Here’s what we’ve got for you in today’s newsletter:
+How ChatGPT decides which ads to show
+Three apology emails that reportedly made $100K+ each
+What creative to have ready before Cyber Monday hits
+One tiny CTA change that could make your homepage easier to shop
+A BFCM ad you could recreate with a photo you already have
+And more.
+Here we gooo. 👇
+‍
+---
+❓ 3 minutes, one $1,000 Amazon gift card, and a creative benchmark you’ll want to see
+Meta’s Andromeda has changed how much weight creative carries, and a lot of brands are still figuring out what “enough creative” looks like.
+So we’re building
+Feed the Machine: The DTC Creative Benchmark
+, a survey of DTC brands on how much creative they ship, how quickly their best ads fatigue, and how teams are adapting their creative operation for Andromeda.
+It takes
+3 minutes
+, it’s
+anonymous
+, and you’ll be entered to win a
+$1,000 Amazon gift card.*
+The survey closes
+November 27
+, so don’t leave it until Black Friday.
+Take the survey
+Survey results may be used in DTC editorial and advertorial content. Personal information will not be shared.
+* One entrant will be randomly selected to win a $1,000 Amazon Gift Card. No purchase necessary to enter. Survey must be completed by November 27, 2026 to be eligible. This giveaway is open to legal residents of the United States and Canada (excluding Quebec) who are 18 years or older. Void where prohibited.
+---
+🤖 ChatGPT writes the searches that trigger your ads
+Someone doesn't have to type "buy running shoes" for ChatGPT to show them a shoe ad.
+Its ad system reads the conversation, figures out what the person might be interested in buying, and then writes its own queries to find relevant ads. Past conversations can also help shape the match.
+The problem for advertisers is that
+they can't see those queries
+. You only get aggregate reporting, so it's a lot harder to figure out why your ad showed up where it did.
+If you're testing the channel, tie your budget to results you can measure. And make sure your copy is really clear about who your product is for and why, since that's a big part of what ChatGPT has to go on.
+📧 These apology emails reportedly drove $100K+ each
+@theisaacmed
+shared three plain-text emails from Mini Katana that he says each brought in over $100K during the holidays:
+"We're sorry…"
+paired a sellout update with a buy-two offer that included $240+ in free gifts and one shopping link.
+"Our website crashed"
+came with a $5-off code (WHOOPSIE) and a link back to the store.
+"We need to apologize"
+combined stock updates with up to 50% off, a buy-two-get-one deal, and gifts at checkout.
+All three are short, specific, and easy to shop from. Just keep in mind that any crash or "selling out" story you tell has to be real.
+🛍️ TikTok's holiday playbook starts with your hero products
+Still tweaking your BFCM campaigns?
+TikTok's holiday guide
+recommends picking your hero products first, building your offers around them, and then bringing in creators to show shoppers why they should care.
+The creative advice is pretty straightforward. Show the product in use, show the different ways people use it, and test a few different messages. LIVE can also give shoppers a place to ask questions and see the product up close.
+Before the weekend, pull up your sale creative and ask yourself if someone scrolling past would instantly get what the product does, who it's for, and why the deal is a good one.
+📱 Mosseri says Muse can help plan your next post
+Staring at an empty content calendar? Instagram chief Adam Mosseri
+has a few tips for putting Muse to work
+.
+Start with your goal, ask it for a batch of ideas, then tell it which ones you like and keep going from there. He also recommends using it to check how your content is performing, group your posts by category, and see what conversations are picking up in your industry.
+For the holidays, try giving it a specific brief with your audience, hero product, offer, and the questions shoppers keep asking. Then just check its ideas against your real results before anything gets scheduled.
+---
+🎨 Is your creative ready to go the distance?
+Black Friday is three days away, and your top ad has probably been running for weeks. Will it still be pulling its weight by Cyber Monday?
+Once you turn spend up this weekend, keep an eye on whether your reach is still growing or the same shoppers are just seeing your ads over and over. If frequency climbs and results start slipping, that can be a sign of fatigue, so it helps to have a few fresh options ready to go.
+Here's what the
+Pilothouse Meta team
+would do this week:
+1️⃣ Get your backups into review today
+Count what you've got.
+Look at how many different concepts are live and which offers still need creative behind them for Black Friday and Cyber Monday.
+Have a few backups ready.
+Pilothouse suggests 2–4 extra concepts as a starting point, depending on your spend. (A new headline on the same message counts as an iteration. A new concept changes the message itself.)
+Submit them now.
+Review times can stretch during BFCM, and editing an ad later can send it back into review. Uploading them paused today means they're approved and ready when you need them.
+2️⃣ Don't rush to replace your winners
+Line up variations.
+Different hooks, headlines, and formats ready to go, plus design help on standby for mid-sale changes.
+Look into a dip before you swap creative.
+Check auction costs, tracking, inventory, and site conversion rate alongside frequency. The ad isn't always the problem, and costs usually jump for everyone on Black Friday.
+Keep profitable ads running.
+Bring in new ones where you need them, and give them a bit of time before you judge. Conversions can lag, especially over a busy weekend.
+3️⃣ Give Cyber Monday its own reason
+Tell shoppers what's changed.
+A new offer, a gifting angle, or a "last day" deadline gives people a reason to take another look.
+Keep the urgency real.
+Use real deadlines or actual stock limits, and make sure the landing page says the same thing.
+Mix up your formats.
+Product statics, demos, and creator videos all show the offer differently, so pick the one that fits the message.
+Then once the weekend kicks off, let performance and your offer changes decide what goes live next.
+---
+💡 Try this CRO test: Make your CTA easier to spot
+Kith uses full-screen campaign images to make its mobile site feel really immersive. The thin white outline on its CTA button can get a little lost, though, when it sits on top of lighter parts of the photo.
+Pilothouse would test that outlined button against a solid, high-contrast one that stands out no matter which campaign image is behind it.
+Why test it?
+If shoppers have to hunt for the button, some of them won't bother. A higher-contrast CTA could help more mobile visitors see the next step right away, which should mean more hero clicks and more people landing on a collection page.
+It's also a nice accessibility win. A solid, high-contrast button is easier to see and read for shoppers with low vision or color blindness.
+To keep the test clean, just swap the outline for a solid fill and leave the wording, size, and placement the same. Then measure hero click-through rate and keep an eye on purchase conversion rate.
+Could a shopper find your main CTA at a glance, even on the busiest image in your carousel? Hit reply and let us know!
+---
+🔥 BFCM creative of the day: Dossier's price comparison ad
+Day two of digging through Meta's Ad Library for BFCM creative you could whip up quickly. Today it's Dossier.
+Dossier sells fragrances inspired by designer scents, so its whole pitch comes down to price. This campaign leans right into that. The bottles sit in a styled bathroom cabinet, and the callouts next to them name the designer fragrance each one is inspired by, with both prices side by side.
+That comparison does a lot for the offer. "Up to 50% off" is big and easy to spot up top, but seeing a familiar designer name next to a much lower price makes the savings feel real before anyone even gets to the discount. And the cabinet makes it feel like something you'd have at home, a nice step up from a plain product shot.
+If you've got a clear price advantage, you can pull this off with a lifestyle photo you already have and an offer line on top. On mobile, though, all those small callouts can get hard to read. Try featuring one bestseller with a bigger price comparison so shoppers don't have to zoom in.

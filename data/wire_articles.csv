@@ -1,8 +1,14 @@
 # Wire inventory: every article, newsletter issue, report, podcast and post from the tracked sources since 1 Jan 2026. Built by tools/wire_inventory.py from tools/inbox listings, the library and wire headlines; topics are keyword tags. Undated pages (Runneth blog) and sponsored posts are excluded.
 date,pub,title,url,type,topics
+2026-11-24,Modern Retail,Pura doubles down on brand collaborations: ‘We want to be the Spotify of fragrance’,https://www.modernretail.co/marketing/pura-doubles-down-on-brand-collaborations-we-want-to-be-the-spotify-of-fragrance/,News,
+2026-11-24,Modern Retail,Brands Briefing: Crocs has found a social media star in new mascot Niles,https://www.modernretail.co/marketing/brands-briefing-crocs-has-found-a-social-media-star-in-new-mascot-niles/,News,
 2026-11-23,Modern Retail,Sweetgreen bets on cooking pop-ups to promote growing menu,https://www.modernretail.co/marketing/sweetgreen-cooking-pop-ups/,News,
+2026-11-23,Modern Retail,How Dibs Beauty uses heat maps to optimize its Ulta Beauty presence,https://www.modernretail.co/operations/how-dibs-beauty-uses-heat-maps-to-optimize-its-ulta-beauty-presence/,News,
 2026-11-23,Haus,"TikTok GMV Max geo test: +22% TikTok Shop orders, and a halo in every sales channel",https://x.com/oliviaakory/status/2124879857980936414,X,TikTok;Amazon;AI;Measurement;Retail
+2026-11-23,Direct to Consumer,"ChatGPT Black Friday Coupons, Meta BFCM Strategy & Subscription Creative",https://www.directtoconsumer.co/newsletter/chatgpt-coupons-meta-bfcm-strategy-subscription-creative,Newsletter,Meta;AI;Creative;BFCM / Q4
 2026-11-23,Curtis Howland,Is your media buyer any good? Four charts to build from your Meta change log,https://www.linkedin.com/feed/update/urn:li:activity:7530646815491366912/,LinkedIn,Meta;AI
+2026-11-23,CTC,How to Forecast a $10M+ Ecommerce Brand for 2027: Why the Omni System Is the Only Way to Do It Right,https://commonthreadco.com/blogs/coachs-corner/how-to-forecast-a-10m-ecommerce-brand-for-2027-why-the-omni-system-is-the-only-way-to-do-it-right,Blog,
+2026-11-23,CTC,2027 Ecommerce Revenue Forecast: How 8-Figure Brands Should Set Targets by Channel,https://commonthreadco.com/blogs/coachs-corner/2027-ecommerce-revenue-forecast-how-8-figure-brands-should-set-targets-by-channel,Blog,Retail
 2026-11-22,Curtis Howland,"Brief 50 different creator stories, not five polished reads of one script",https://www.linkedin.com/feed/update/urn:li:activity:7530276409643261952/,LinkedIn,Meta;Creative
 2026-11-21,Modern Retail,2026 marked a turning point for artificial dye removal from food,https://www.modernretail.co/podcasts/2026-artificial-dye-removal-from-food/,Podcast,
 2026-11-21,Curtis Howland,"Relaunch last year's seasonal winners, then iterate on them",https://www.linkedin.com/feed/update/urn:li:activity:7529914924752379904/,LinkedIn,Meta;Creative;BFCM / Q4

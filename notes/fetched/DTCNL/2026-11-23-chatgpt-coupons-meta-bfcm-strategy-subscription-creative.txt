@@ -1,0 +1,91 @@
+ChatGPT Black Friday Coupons, Meta BFCM Strategy & Subscription Creative
+https://www.directtoconsumer.co/newsletter/chatgpt-coupons-meta-bfcm-strategy-subscription-creative
+2026-11-23
+
+Good morning.
+May your sales be strong, your checkout be seamless, and your coffee never run out. Happy BFCM week, everyone. Cheers!
+Here’s what you’ll find in today’s newsletter:
+Why shoppers are holding out until Black Friday weekend
+What ChatGPT knows about your holiday discounts
+Which Meta ad sets to clean up before BFCM
+Why your subscription ads aren't converting
+A Black Friday ad you could recreate in minutes
+Let’s get started.
+---
+🛍️ Shoppers are still holding out
+Holiday sales feeling a bit quiet? That’s pretty normal right now.
+64% of shoppers told
+NRF
+they’re probably going to wait until Thanksgiving weekend to do most of their shopping. So they’re coming, they’re just waiting for the good deals.
+And there’s plenty of money on the way.
+Adobe’s still forecasting $275.1 billion in U.S. online spending this November and December
+(up 6.7% from last year), with discounts as deep as 30% off over Thanksgiving weekend.
+So have your offer, delivery dates, and creative all ready to go before they show up. Then when you turn the budget up, just make sure it’s making you money.
+👀 ChatGPT is handing out Black Friday codes
+Prices, coupon codes, and a little shop button, all tucked inside a ChatGPT answer. Nice, nice.
+Metehan Yesilyurt
+found these deal cards mostly showing up for hosting brands, and it could just be a test for now. Still, it only takes a couple of minutes to ask ChatGPT for deals on your own brand.
+Does the code work? Do the terms match checkout? Is that creator code from September now live for everyone? Better you find out now than from a confused customer on Black Friday.
+📧 Mailchimp’s getting a new owner
+Big week for email.
+Bending Spoons is buying Mailchimp from Intuit
+for $3.68 billion.
+It’s the same company behind Evernote, Vimeo, and WeTransfer, and it says it plans to invest heavily in Mailchimp once the deal closes in early 2027 (pending approvals). There’s nothing yet on pricing or features, so if you’re a Mailchimp brand, just keep an eye on your inbox.
+---
+🧩 Is your Meta account too fragmented for Black Friday/Cyber Monday (BFCM)?
+More ad sets don’t necessarily lead to more sales. If your budget is spread across a bunch of similar ad sets, each one has less data to learn from, and scaling gets a lot harder.
+The
+Pilothouse Meta team
+has a few places they’d look before Black Friday.
+1️⃣ Find your “Learning limited” ad sets
+Just pop into Ads Manager and have a look at the Delivery column.
+Meta’s rough rule of thumb is
+50 optimization events in 7 days
+to get out of the learning phase. If you’re optimizing for purchases, that’s 50 purchases. Getting there doesn’t mean your ad set is profitable, of course, so you’ll want to look at the numbers too.
+Check CPA, revenue, and profit before you change anything.
+If delivery is low, look at your bid caps or whether your budget is too small.
+Got similar low-volume ad sets going after the same people? Try combining them. (Low spend on its own isn’t a reason to turn anything off.)
+2️⃣ Combine the ones that overlap
+If two ad sets are going after the same audience, they can end up in the same auction. Meta will typically only let one ad per advertiser in, so one of them ends up sitting on the bench.
+Merge ad sets that do the same thing.
+Keep things separate when there’s a good reason to (e.g., a different market, offer, optimization goal, or budget).
+Advantage+ campaign budget will spread your spend across ad sets for you, but it won’t get rid of overlap.
+3️⃣ Leave room to find new winners
+Cleaning up your account shouldn’t kill your creative testing.
+If you’ve got the budget, Pilothouse recommends a separate campaign just for testing creative and angles.
+Got something crushing it in testing? Move it into your scaling campaign and see how it holds up. It doesn’t always.
+In your scaling ad sets, use a few different creative concepts. You don’t need a new ad set for every ad.
+Don’t wait too long to make changes
+Restructuring and adding new ads can send you right back into the learning phase. So fix the obvious delivery issues first, then check your results after each big change.
+And if things are working and you’re too close to BFCM to test a new setup? Just leave it alone. You can clean up in December.
+---
+💡 Why your subscription ads aren't converting
+Getting someone to buy your product once is tough enough. Getting them to pay for it every month is a whole different creative challenge.
+In this episode of Ad-venturous, Aves talks about how ecommerce brands can build better subscription offers and make ads that bring in long-term customers.
+Her biggest takeaway is that your creative needs to show why someone would want your product delivered on a regular basis. And that really depends on what you’re selling.
+For consumables (coffee, supplements, skincare, etc.), Aves recommends building your messaging around the everyday ritual. How does the product fit into your customer’s day? How does it make life easier?
+For subscription boxes with a different product each month, it’s all about surprise and discovery. Focus on the fun of getting something new each month, and let the individual products play a supporting role.
+Aves also shares three practical tips:
+Make the subscription easy to understand.
+Shoppers should know how often they’ll get a delivery, what the discount is, and how to pause or cancel.
+Build evergreen ads.
+Sell the ongoing subscription experience, so your Meta campaigns don’t depend on each month’s featured product.
+Use limited editions strategically.
+Lean into timely drops when you have them, and keep your core creative running in the background.
+▶️
+Watch here
+|
+🎧
+Listen on Spotify
+---
+🔥 BFCM creative of the day: Manmade’s “almost sold out” ad
+This week we’re looking through Meta’s Ad Library for BFCM creative you could whip up quickly. First up is Manmade.
+Most of the sale ads we’ve been seeing start with a discount. Manmade is going after pyjama shoppers with stock scarcity, telling them the set is nearly sold out.
+The ad is a flat-lay product shot on a branded background, with a headline about stock running low. There’s a red “LAST CHANCE!” sticker on it for a bit of urgency against all that navy.
+If you’ve got products selling quickly over BFCM, try building a few inventory-specific creatives as the weekend goes on. You could set up templates for your bestsellers now and then just update the copy as stock levels change (as long as the “almost sold out” numbers are real, of course).
+---
+‍
+🎁 Turn holiday shopping conversations into sales with Reddit Ads.
+Your future customers are doing their research, comparing things, and looking for recommendations on Reddit. Be there the moment they're ready to buy.
+Start now
+. *

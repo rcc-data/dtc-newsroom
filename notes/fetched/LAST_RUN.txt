@@ -1,12 +1,14 @@
-2026-11-24 01:46 UTC
+2026-11-24 15:21 UTC
 NBNL: 1 items, 0 texts saved
 NBBLOG: nothing new
-CTC: 13 items, 2 texts saved
+CTC: 13 items, 0 texts saved
 HAUS: nothing new
 TW: 1 items, 0 texts saved
-MR: 2 items, 0 texts saved
+MR: 4 items, 0 texts saved
 2PM: 1 items, 0 texts saved
 GRAPHITE: nothing new
 DTCNL: 4 items, 0 texts saved
 HWSS: nothing new
-RUNNETH: unchanged apparel (same since 2026-11-23), sports-fitness (same since 2026-11-23), retail (same since 2026-11-22), accessories (same since 2026-11-23)
+RUNNETH: accessories reshuffled (12 ranks moved, 3 new brands), not a weekly update
+RUNNETH: UPDATED apparel (3 of 30 brands new, new top 3: Comfrt, Dore & Rose, Alo Yoga); sports-fitness (6 of 30 brands new, new top 3: Use Cadence, runna, Nuun Hydration); retail (1 of 30 brands new, new top 3: Target, Sephora, StockX)
+RUNNETH: unchanged accessories (same since 2026-11-23)

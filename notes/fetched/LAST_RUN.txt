@@ -1,7 +1,7 @@
-2026-11-25 15:19 UTC
+2026-11-25 23:11 UTC
 NBNL: 1 items, 0 texts saved
 NBBLOG: nothing new
-CTC: 3 items, 0 texts saved
+CTC: 7 items, 4 texts saved
 HAUS: nothing new
 TW: 1 items, 0 texts saved
 MR: 5 items, 0 texts saved
@@ -9,4 +9,4 @@ MR: 5 items, 0 texts saved
 GRAPHITE: nothing new
 DTCNL: 2 items, 0 texts saved
 HWSS: nothing new
-RUNNETH: UPDATED apparel (2 of 30 brands new, new top 3: Comfrt, Dore & Rose, Alo Yoga); sports-fitness (4 of 30 brands new, new top 3: Use Cadence, runna, Use Cadence); retail (2 of 30 brands new, new top 3: Target, StockX, StockX); accessories (7 of 30 brands new, new top 3: Loop, Bellroy, Blenders)
+RUNNETH: unchanged apparel (same since 2026-11-25), sports-fitness (same since 2026-11-25), retail (same since 2026-11-25), accessories (same since 2026-11-25)

@@ -1,0 +1,67 @@
+Shopify AI Checkout, FCC SMS Opt-Out Rules & BFCM Creative
+https://www.directtoconsumer.co/newsletter/shopify-ai-checkout-sms-rules-bfcm-creative
+2026-11-25
+
+Good morning.
+Don’t mind if I do. 🙂‍↕️
+P.S. We've got a couple of things in the news today that are worth checking before Friday. In particular, there's a
+new SMS opt-out rule kicking in today
+and a Shopify update you may have missed in the chaos of BFCM prep.
+Here's what you'll find in today's newsletter:
+Shopify may have already enabled ChatGPT checkout for you
+An SMS rule change to flag before your BFCM sends
+How to add a live countdown to your Google ads
+Three Black Friday ads you still have time to make
+The sales channel Saatva kept under wraps for years
+Two days to go. Let's get into it. 👇
+---
+🛒 Shopify may have already turned on ChatGPT checkout for you
+AI agents can now buy products on behalf of shoppers through Shopify checkout, and those orders will show up in your admin like any other order.
+Shopify says
+it’s already enabled for eligible stores with “Manage for me” or “Automatically enable new channels” turned on.
+Pop into Agentic Storefronts and check your ChatGPT settings before Friday. If you’re keeping it on, make sure your product details, prices, and sale terms are up to date. Some of your Black Friday shoppers might be bots.
+📱 Sending BFCM texts? A new SMS rule kicks in today
+Good timing, right?
+As of today, November 25,
+the FCC is allowing brands
+to designate a specific way for US subscribers to opt out of texts, as long as those instructions are clearly included in every message.
+If you go with “Reply STOP to opt out,” you’ll still need to accept the other six standard opt-out keywords, including CANCEL and UNSUBSCRIBE.
+Check in with your SMS provider and legal team before your weekend sends go out. If you’re adding opt-out instructions to campaigns you’ve already written, check the character counts again. Those extra words could bump you into another billable SMS segment, which adds up pretty quickly over BFCM.
+⏳ Put a countdown in your Google ads
+“Sale ends soon” feels a little more urgent when it says “Ends in 11 hours.”
+@Nate_Google_
+shared a timely reminder about Google’s
+countdown customizers
+, which automatically update your ad copy with the days, hours, and minutes left in your sale.
+You could use these for your Black Friday offer, Cyber Monday, or even a last-minute shipping cutoff. Just double-check your time zone, character limits, and that the deadline matches what’s on your site.
+---
+🎨 Three Black Friday ads you still have time to make
+Black Friday is TWO days away. If you could still use a few more sale ads, we've been digging through Meta's Ad Library for ideas you can pull off with assets you already have.
+1. Skullcandy: The old-school Black Friday flyer
+Remember when you'd flip through a stack of flyers to see who had the best Black Friday deals? That's what this reminds us of.
+It's loud, colorful, and there's a massive “SAVE $120” right in the middle. What's interesting is that Skullcandy mentions the percentage off in the primary text, but puts the dollar savings on the image. If you're shopping for headphones, knowing you're saving $120 might hit a little differently.
+If you've got higher-priced products on sale this weekend, try pulling a few product cutouts into a template like this. Keep the design the same across your bestsellers and swap out the product, its name, and the dollar savings.
+You could also run two versions of the same ad, one with the dollar savings and one with the percentage off, and see which gets more people buying.
+2. SKIMS: Remember those pajamas you wanted?
+There's very little going on in this campaign, and SKIMS can get away with that.
+The primary text opens with “Cozy up in our viral PJs” and mentions the 30% off sale. If you've spent any time on TikTok, there's a decent chance you've seen someone wearing these pajamas already.
+Think about which of your products people have been showing interest in over the past few months. Maybe there's a product that keeps popping up in your organic comments or one that creators have been posting about all year.
+Pull an existing product shot and write some sale copy around that familiarity. You've already spent time getting people interested in the product, and this weekend might be when they finally buy it.
+One thing we'd test with the SKIMS ad is adding a small 30% off badge to the image. Depending on the placement, shoppers might not see the primary text, and we'd want them to know the pajamas are on sale.
+3. OSEA: Five free gifts
+OSEA is giving shoppers five free gifts worth $222 when they spend $225 or more.
+We're big fans of the little “+ ADD TO BAG” stickers scattered across the image. You start looking at the individual products and thinking about which ones you'd pick to get those free gifts.
+If you're running a spending-threshold offer this weekend, there's another version of this campaign we'd love to see: a basket that's already been built for the shopper.
+Pick a few products that work well together and get the customer over your qualifying spend. Show them the products, what they'd pay, and everything they'd get for free.
+You could build a few versions around different routines, bestsellers, or even gifts for different people. It saves shoppers from having to figure out how to reach the threshold themselves.
+Just check how much gift inventory you've got left before putting more spend behind it.
+A little reminder:
+If you build any of these today, get them into review. You can keep them on standby until you need them over the weekend.
+---
+🎧 The sales channel Saatva didn't want its competitors finding out about
+At one point, 30% of Saatva's orders came through a channel the brand wasn't even advertising.
+It was bringing in $100K to $200K a night, and co-founder Ricky Joshi deliberately avoided talking about it in interviews.
+On today's DTC Podcast, Ricky finally shares how Saatva built that sales channel, how Casper's advertising helped grow his own business, and where he'd put an extra $500K in marketing budget over the holidays.
+▶
+Watch the conversation
+Listen on Spotify

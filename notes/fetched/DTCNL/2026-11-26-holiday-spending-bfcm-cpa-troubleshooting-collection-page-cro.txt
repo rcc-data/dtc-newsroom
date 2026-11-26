@@ -1,0 +1,87 @@
+Holiday Spending Trends, BFCM CPA Troubleshooting & Collection Page CRO
+https://www.directtoconsumer.co/newsletter/holiday-spending-bfcm-cpa-troubleshooting-collection-page-cro
+2026-11-26
+
+Good morning, and Happy Thanksgiving to our American readers!
+Good luck explaining what you do for a living at the dinner table tonight.
+Here's what you'll find in today's newsletter:
+How holiday spending is shaping up ahead of Black Friday
+A $100M reminder to check your shipping promises
+A CapCut trick for last-minute sale creative
+What to check if your CPAs start climbing
+How to handle sellouts on your collection pages
+SET Active's Black Friday sale for the impatient
+Let's get through this so you can get to the turkey. 👇
+---
+🛍️ Holiday spending is already up 9.1%
+We've been talking about holiday spending forecasts for weeks, and now we've got some actual numbers.
+According to Adobe Analytics
+, US shoppers spent more than $82.5 billion online in the first 22 days of November, up 9.1% from last year. We've already had two $4 billion shopping days, a first for the weeks leading up to Thanksgiving.
+Here's what Adobe is expecting over the next few days:
+Thanksgiving: $6.9 billion (+8.5% YoY)
+Black Friday: $12.9 billion (+9.2% YoY)
+Cyber Monday: $15.1 billion (+6.2% YoY)
+If Friday goes well, make sure you've still got enough inventory and budget to carry you through Monday. Adobe's expecting it to be the biggest online shopping day of the year again.
+📦 A $100M reminder to check your shipping promises
+SHEIN has agreed to a proposed
+$100 million settlement with the FTC
+over allegations that include missed shipping promises, difficult-to-reach customer service, and suppressed negative reviews.
+With orders about to pile up, it's a good time to remind ourselves of the
+FTC's shipping rules
+.
+If you can't ship an order within the timeframe you promised, you need to notify the customer, give them an updated shipping date (if you have one), and give them the option to accept the delay or cancel for a full refund.
+Have a quick look at the shipping estimates on your product pages, at checkout, and in your order confirmation emails today. If your warehouse is expecting a backlog over BFCM, make sure those estimates account for it.
+🎬 Still need a few Black Friday videos?
+@TheSzef shared a handy little CapCut trick
+for anyone scrambling to get more video creative out the door.
+Open
+AutoCut in the CapCut mobile app
+, select a few product clips you've already got on your phone, and let it stitch them together. From there, add your Black Friday offer and tidy up the edit.
+You could even take some footage from one of your best-performing ads this year and give it a Black Friday edit. Just make sure any old pricing or offers are removed before it goes live.
+---
+📈 CPAs climbing? Read this before touching your ads
+If you've already opened Ads Manager three times this morning, we get it.
+With so many brands competing for the same eyeballs over the next few days, you're probably going to see some fluctuations in your account.
+Before you start swapping out ads or moving budgets around, spend a few minutes figuring out where the increase in CPA is coming from.
+Here's what the
+Pilothouse
+team recommends keeping an eye on over the weekend.
+1. Are your CPMs going up?
+You're likely paying more to get in front of shoppers this week. Have a look at your link click-through rate and conversion rate alongside your CPMs.
+If people are still clicking and buying at roughly the same rate, the increased competition in the auction could be what's driving up your CPA.
+Check how much you're actually making on those orders before deciding whether to pull back. You may still be well within your acquisition targets.
+2. Are fewer people clicking on your ads?
+If your CTR starts dropping, take a look at which ads are responsible. Is it happening across the account or mostly on a few ads you've been running for weeks?
+Check frequency and reach on those ads, too. If you're reaching fewer new people, frequency is climbing, and clicks are dropping, it might be time to bring in some of that backup creative you've been preparing.
+And if your offer has changed since the ad went live, make sure the creative reflects what shoppers can actually get today.
+3. Are people clicking through and then dropping off?
+This is where we'd spend some time on your site.
+Pull up your sale ads on your phone, click through, and try to buy something.
+Are your bestselling products, sizes, and colors still in stock?
+Is the advertised discount actually applying at checkout?
+Are your shipping costs or delivery estimates catching people by surprise?
+Is the site taking longer to load than usual?
+Keep an eye on where shoppers are dropping off as the weekend goes on. The products and offers that were converting well on Friday morning might look quite different by Saturday afternoon.
+4. Is your CPA higher, but you're still making money?
+It's easy to get caught up comparing today's CPA to what you were seeing last week. Your margins, AOV, and acquisition targets should help you decide how much you can afford to pay for an order this weekend.
+Also, be careful about making decisions based on a couple of hours of data. Some of the people clicking on your ads this morning may come back to buy later today.
+If you're still hitting your profitability targets, give those campaigns some room to run. If you're consistently missing them, look at where you're losing money before pulling back spend across the account.
+---
+👗 What happens to your collection pages when products sell out?
+Jordan from Pilothouse noticed something interesting while browsing DÔEN's website.
+The brand keeps its sold-out pieces visible on its collection pages, fades out the product images, and labels them as sold out. There's also an in-stock filter for shoppers who want to see what they can still buy.
+For a brand selling $1,000 jackets, seeing that other pieces from the collection have already sold out could make the ones that are still available feel a little more desirable.
+Things get a bit trickier over Black Friday, though. If half your collection sells out by Saturday morning and you're still sending paid traffic to that page, how much scrolling will shoppers have to do before they find something they can actually buy?
+A few things to check as inventory moves this weekend:
+Move available bestsellers higher up your collection pages.
+Make it easy to filter out sold-out products.
+Check whether your ads and scheduled emails are still sending shoppers to products they can buy.
+If you're planning to restock, give shoppers a way to sign up for a notification.
+It might be worth checking your most-visited collection pages a couple of times throughout the weekend, especially if you've got products selling faster than expected.
+---
+🔥 BFCM creative of the day: SET Active's sale for the impatient
+“20% OFF FOR THE IMPATIENT” is such a good line for an early-access sale.
+SET Active knows its customers are waiting for Black Friday, so it's giving them a way to shop early if they download the SET app.
+What's particularly smart about this is that SET can use the anticipation around its biggest sale to get more customers onto its app, where it can continue reaching them long after BFCM is over.
+If you've got an app or an existing VIP list, think about what you could give those customers first access to throughout the weekend. Maybe it's your Cyber Monday offer, a bestseller restock, or a new gift with purchase.
+And take a little inspiration from SET's copy. “For the impatient” has a lot more personality than the standard “EXCLUSIVE EARLY ACCESS” we're seeing everywhere right now.

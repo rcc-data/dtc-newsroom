@@ -1,0 +1,159 @@
+How to run a good incrementality test
+https://themediabuyer.northbeam.io/p/how-to-run-a-good-incrementality-test
+2026-11-26
+
+Home
+Posts
+How to run a good incrementality test
+How to run a good incrementality test
+Master the art of finding new revenue.
+Nov 26, 2026
+Bryan Bumgardner
+Black Friday Cyber Monday is upon us. We’ve already covered some last minute advice, both
+official
+and
+unofficial
+, if you need some inspiration this weekend.
+I hope things are going well today, both at family dinner and in your ad accounts.
+In this issue I’m just gonna cover incrementality testing, so as you start to think about the rest of Q4, this is top of mind.
+For the rest of this week, I’ll be sharing real-time year-over-year data on our Northbeam socials, so follow us there.
+X,
+Linkedin
+,
+YouTube
+,
+TikTok
+, and
+Instagram
+.
+What makes a good incrementality test?
+Incrementality testing is in vogue right now. If you have no idea what I’m talking about, don’t worry, I don’t judge.
+Just go read last week’s issue.
+Incrementality testing answers the ultimate question:
+what revenue would not have happened if we HADN’T run this advertising?
+While this question is annoyingly reductive, I get it. We want to keep our marketing as efficient as possible, and wasted ad spend as low as possible.
+Our bosses are all demanding more defensible justifications for our ad spend. Nobody’s escaping that, not even me.
+So we use tools like attribution and incrementality to prove ROI from marketing. Attribution tells you which touchpoints showed up before a sale. Incrementality testing tells you which touchpoints actually influenced that sale. So it’s like “here’s what happened” versus “here’s what drove a sale.”
+But not all incrementality tests are equal. Two tests on the same channel can return very different answers depending on how they're sized, which geos they use, how long they run, and whether anything changes mid-flight.
+A weak test can be worse than no test, because it gives you false confidence. When I talk to people not using Northbeam, I see more weak tests than strong ones, unfortunately.
+So what makes one incrementality test better than another? I had a chat with Shuling Ding, our VP of Data Science, to identify the four criteria that separates actionable tests from worthless ones.
+Pro tip:
+just get Northbeam Incrementality and you won’t have to worry about any of this.
+1. Statistical power sized to your business
+An underpowered test doesn't have enough statistical power to detect a meaningful effect. If you slept through your mandatory college stats class like I did, here it is in plain english:
+Each test requires a specific and unique amount of data points to be considered “trustworthy.”
+That’s not something you can infer from industry benchmarks or out of thin air. An underpowered test will have a muddy signal, and you’ll end up with an inconclusive result that’s worthless. Money down the drain bro.
+For example, imagine that you wanted to understand what Americans think about stinky cheese. So you interview 200 of them, most of whom (god forbid) seem to love stinky cheese, and you declare that, with statistical proof, Americans mostly love stinky cheese.
+Problem is, there’s 350 million Americans: there’s a strong likelihood that individual idiosyncrasies and biases don’t actually represent those 350 million people, and you end up accepting a lie as the truth.
+Where’d you find these people to interview? What qualifies as an appropriate gender, age, ethnicity breakdown to qualify as representative of America? What cheese did you even test with? All these demonstrate how a small test is rife with problems.
+The fix for underpowered testing is sizing the test properly up front: a power calculation and a minimum detectable effect (MDE) based on your own business data, not industry averages or straight “wingin’ it.”
+2. Representative test and control geos
+A biased test uses control and treatment groups that don't represent your broader market.
+Back to our stinky cheese example. Let’s say you run this survey in a neighborhood full of French expats and Wisconsinites. They’re far more likely (according to stereotypes) to appreciate a particularly fragrant Limberger. Problem is, these folks aren’t very representative of the entire United States population.
+If your test geos behave, think, and shop differently from the rest of the country, then your marketing strategy won’t work when you scale it to new areas. Properly analyzing your geographic regions and test simulations catch these problems before you launch.
+3. Protection from mid-test contamination
+A polluted or “contaminated” test is one where something changes mid-experiment: a large spend shift, a major promotion, a tactic change inside an ad platform, or a misconfigured setup. Any of these changes can invalidate weeks of work.
+Our stinky cheese example, again: Let’s say you’re surveying people across your local town about whether or not they like stinky cheese. You survey people for six weeks, but halfway through the test, your marketing team launches a massive marketing and in-store sampling campaign about the joys of stinky cheese. Insane, but ok.
+This would dramatically influence the local opinion on Vieux Boulogne, making your test pointless. After all, how could this survey be honest if the locals were driving past a pro-stinky-cheese billboard every day?
+From a performance marketing perspective, in-flight monitoring and automated tests are the defense against these sorts of issues. Imagine if you were running a 16-week test and your own team threw some extra confounding variable in the mix on the 14th week? That could waste all that time and budget: not good.
+4. A duration based on conversion lag
+A poorly timed test ignores conversion lag, which is the time between when an ad runs and when people actually purchase.
+We’ve talked a lot about conversion lag in this newsletter
+because it’s the most under-utilized marketing analysis media buyers need to embrace.
+Back to our stinky cheese, again. Let’s say that on average, in this hypothetical town, it takes two months from the FIRST time someone sees an ad, to when they finally decide to buy the local famous stinky cheese.
+If you run a holdout test that only runs two weeks, then you aren’t accounting for the average length of time it takes people to buy said cheese, which means you’ll undercount the incremental value of your holdout test.
+For performance marketers running ads for high-ticket and high average order value products, conversion lag is typically longer because it’s an expensive purchase. Your “consideration” phase of the funnel is longer.
+Your incrementality test durations should come from conversion lag analyses, not some default length of time.
+How to design an incrementality test that actually works
+Good incrementality tests are made by good planning. Our Incrementality tool at Northbeam runs in three phases, each built on your multi-touch attribution (MTA) data rather than some random or standard assumptions.
+Phase 1: Understand your business reality
+First, analyze your revenue sources, channel mix percentages, and baseline ROAS across your Northbeam attribution models. You need this prior knowledge to really size a test correctly.
+Like I said above, the most overlooked input is conversion lag. Meta might drive most conversions within a few weeks, while CTV or other upper-funnel channels can see attributed sales more than two months later.
+You need to know your conversion lag so you can run a test long enough to actually measure incremental growth.
+Conversion lag analysis tells you how long your test duration should be so you can capture the bulk of the incremental effect, not just the immediate response.
+Phase 2: Optimize the design through simulation
+Test design is an optimization problem, in most cases. This means the best way to design a good test is to figure out which groupings of geographic locations will best represent the results you want to achieve.
+Plainly: you want to design a test that’s most likely to correctly simulate the outcome you want.
+Northbeam evaluates thousands of possible geo groupings to find designs that maximize statistical precision while minimizing opportunity cost within your constraints.
+There's rarely one "best" design. Usually there’s some type of tradeoff between speed, holdout size, and precision. I prefer to run longer tests that are more accurate by design, especially when testing new channels.
+Phase 3: Validate before launch
+Geographic markets change constantly, especially in recent years. If a design is more than seven days old at launch, Northbeam re-runs its diagnostics on the most recent data before the test goes live. There’s far too many “diagnostics” to list them all here. Just ask your local data scientist.
+Stuff to think about before you launch:
+Do control and treatment groups still strongly correlate?
+Do the geos still pass every diagnostic test?
+Have seasonality or competitive conditions shifted?
+Do the statistical assumptions still hold?
+If the design has degraded or gone stale, Northbeam regenerates a fresh one from current data. For example, if your brand suddenly went viral, we’d need to redesign the test automatically. Never launch a test built on last month's marketing behavior.
+Automated execution and contamination monitoring
+Most incrementality tests fail because somebody launched something mid-flight, confounding the test. (Our stinky cheese billboard example, from earlier.) You need to control for this stuff, but you also need to have comprehensive alerts in place to catch these errors.
+Why manual geo tests break
+Manual geographic holdout tests are the largest offender for these in-flight problems. Modifying targeting and spend across 100 campaigns and 25 holdout geos by hand creates a huge surface for possible errors, especially for performance marketing incrementality tests.
+Inconsistent media flight timing, incorrect exclusions, or basic data entry mistakes (like on a budget value in Meta Ads during uploading) can invalidate your tests. For example, one of your media buyers may launch some campaign without the holdout exclusions on accident, which starts contaminating your test immediately.
+Northbeam integrates directly with ad platforms, so campaigns update automatically to reflect treatment and control groups when the test starts, and exclusions are monitored throughout. Nobody can sneak any campaigns live under the radar and mess up your test – we’d catch that.
+Preventing "muddling spend"
+Excluding holdout geos can push ad platforms to redistribute budget in ways you didn't intend. For example, in a 20% holdout, the platform may try to spend 100% of your budget on the remaining 80% of the audience, which distorts the comparison between the two groups. Northbeam sets budget constraints so treatment geos hold their usual spend levels.
+Daily contamination checks
+Once a test is live, Northbeam monitors daily against your MTA data and historical baselines:
+Spend validation:
+Is actual spend matching the design, or is spend leaking into holdout geos through new or reactivated ads?
+Campaign structure:
+Has a new ad set or campaign been added without the right geo exclusion?
+KPI disruptions:
+Have metrics moved unexpectedly versus pre-test baselines, suggesting something beyond the test is affecting results?
+Because these checks measure real deviations from expected patterns, Northbeam flags contamination while you can still fix it (as opposed to after the fact).
+Nothing is worse than waiting twelve to sixteen weeks only to discover some random variable made the results worthless. Trust me.
+From incremental ROAS to business decisions
+A test result only matters if it answers a concrete question. Usually you’re trying to understand if you should scale a channel, cut back spend, or you’re trying to reconcile differences between your MTA results. This is where Northbeam Incrementality really shines.
+Post-test verification
+Before results reach your team, Northbeam confirms that:
+Designed spend levels and duration were achieved - it ran long enough.
+Confidence intervals are tight enough to support a real decision - it’s not a wild guess.
+No late-stage contamination slipped through - nobody messed with our experiment.
+Statistical assumptions held for the full test period - results were consistent the entire time.
+Reconciling incrementality with attribution
+Here's an illustrative result from a 4-week test with a 15% holdout:
+Measure
+ROAS
+Platform-reported ROAS
+5.8x
+Northbeam MTA (Clicks + Deterministic Views)
+4.1x
+Incremental ROAS (iROAS), 95% CI 2.9x–3.9x
+3.4x
+The gap between platform-reported and incremental ROAS is exactly why the test exists. This results shows how much of the credit a platform claims would have happened anyway.
+Incrementality becomes your infrastructure for daily decisions. Real incrementality tells you what to do next.
+Want to learn how Incrementality can help your business? get a free demo today to learn more.
+📺
+Meta is looking at getting into CTV.
+What kind of TV shows you think they’ll run on “Meta TV”?
+🎮
+AppLovin is reportedly in talks to buy Criteo.
+Y’all gamers about to see a lot of sneakers.
+🤖
+Meta is still saying Muse boosts conversions.
+We can’t double verify this yet. What are you seeing?
+🚨
+JOB: Growth Marketing Director // Pinned Golf // Boston, MA:
+better vibes, better golf!
+🚨
+JOB: Performance Marketing Manager // Santa Monica, CA // Malbon:
+perfect if you like to golf and ski (not at the same time.)
+Love this newsletter? Please forward it to your friends, coworkers, or Jensen Huang, again.
+Subscribe here to get this data in your inbox every week.
+Reply
+Newest first
+Login
+or
+Subscribe
+to participate
+Recommended for you
+View all
+caret-right
+Quick Links
+Subscribe
+Archive
+Subscription
+Reset Password
+Update Password
+Search
+Socials

@@ -1,18 +1,26 @@
 [
  {
   "id": "an-meta-cpm-bfcm",
-  "date": "2026-11-10",
+  "date": "2026-11-26",
   "kicker": "Newsroom analysis · Meta costs",
   "title": "Meta's Black Friday price spike will start from a higher floor",
-  "dek": "Eight sources point the same way: Meta was already dearer than last year before Q4, the midterms added about 10% on top, and Black Friday adds a spike on that. The brands that came out ahead in 2025 judged the week on cost per purchase, not CPM.",
+  "dek": "Ten sources point the same way: Meta was already dearer than last year before Q4, the midterms added about 10% on top, and the pre-Black Friday rise has now started, with Northbeam's Meta CPM up 8.7% in the week to 22 November. The brands that came out ahead in 2025 judged the peak on cost per purchase, not CPM.",
   "body": [
    "Before November even starts, Meta is more expensive than a year ago. Northbeam's weekly CPM has been running about 24% above last year, and Meta's own earnings show the average price per ad up 14% in Q3. Common Thread's brands paid $17.13 in October 2025 and $21.55 in November, a 26% jump in a single month.",
    "The midterms made the base higher still. Across Haus brands, Meta CPMs in the typical US market ran about 10% above last year from 1 October to Election Day, in safe markets as well as contested ones (New York +9%, Los Angeles +8%, Detroit +12%, Anchorage +19%). The rise came early, +10% in September, and conversion rates did not climb to offset it, leaving pixel-attributed efficiency about 8% worse than in August. Google CPCs rose about 4% and YouTube CPMs 6%, and Haus says prices had not normalized going into the BFCM run-up.",
-   "Black Friday stacks a spike on that base. Lebesgue tracked the median Meta CPM at 84% above its September level on Black Friday 2025, with fashion and footwear up 66% and home up 116%. Curtis Howland, who runs more than $5M a month on Meta, says his Black Friday day-one CPMs ran 45% above the week before. Triple Whale's BFCM average was $22.26, up about 7.8% on 2024.",
+   "The climb has started. After a one-week dip once the midterms ended (Meta CPM -4.09% in the week to 15 November), Northbeam's index has Meta CPM up 8.66% in the week to 22 November, with new-customer CAC up 1.29% but ROAS still up 3.85%. Triple Whale's 23 November snapshot has the median Meta CPM up in all 12 industries since 19 November. Black Friday stacks a spike on that base: Lebesgue tracked the median Meta CPM at 84% above its September level on Black Friday 2025, with fashion and footwear up 66% and home up 116%. Curtis Howland, who runs more than $5M a month on Meta, says his Black Friday day-one CPMs ran 45% above the week before. Triple Whale's BFCM average was $22.26, up about 7.8% on 2024.",
    "But the expensive week was not the bad week. In the same Lebesgue data, cost per purchase fell 20% over Black Friday week because conversion rates rose 48%. Rising prices haven't stopped scaling this autumn either: Phil Kiel's biggest accounts raised spend 21% from September to October while CPA fell 3% and purchases rose 23%. Northbeam's caution is the exception: Black Friday was the one BFCM day where efficiency fell in 2025.",
    "What to do with it: set Black Friday-week guardrails on CPA or new-customer CAC, not CPM; expect CPMs 45 to 85% above their pre-peak level; and fund prospecting in the first half of November, judged on lagged attribution, so the audience is already warm when prices peak. Howland's day-by-day split is one template: 100% of the BFCM daily budget Monday to Wednesday, 120% on Thanksgiving, 150 to 200% on Black Friday and Cyber Monday, 130% over the weekend."
   ],
   "sources": [
+   [
+    "Northbeam, Media Buyer Index w/e 22 Nov 2026",
+    "https://themediabuyer.northbeam.io/p/how-to-run-a-good-incrementality-test"
+   ],
+   [
+    "Triple Whale benchmarks, 23 Nov 2026 snapshot",
+    "https://benchmark.triplewhalelabs.com/"
+   ],
    [
     "Northbeam, The Media Buyer, 22 Oct 2026",
     "https://themediabuyer.northbeam.io/p/meta-cpms-are-up-25-and-it-s-only-october"

@@ -1,0 +1,42 @@
+Cutting Budgets Tuesday Morning Is Too Late
+https://newsletter.curtishowland.com/p/black-friday-weekend-day-by-day
+2026-11-27
+Meta can spend up to 75% over a day’s budget, and a budget change at noon only counts for half the day.
+
+It’s Black Friday morning. The ads are live, and from here to Tuesday the job is mostly budgets.
+I’ve spent $20M during BFCMs. This is the general split I see:
+*Thanksgiving can be higher or lower depending on your sale structure and what product you sell. Compare to previous years.
+Don’t forget about Cyber Monday. Last year it outsold Black Friday online, $14.25B in US online spend against $11.8B (Adobe).
+Meta has a lot of liberty to overspend now. It “may spend up to 75% over your daily budget,” so it can almost double your budget without anyone touching anything. Black Friday at 200% can spend 350%.
+(We run the sale in its own campaign and also scale existing).
+A Budget Change at Noon Won’t Cut it.
+Budget changes are prorated. Double your budget halfway through the day and you’re actually only telling Meta to increase by 50%. Meta’s help page says “prorates what it aims to spend the rest of the day.”
+That’s really impactful on Black Friday.
+Example: your BFCM budget is $10K a day. Black Friday gets raised from Thanksgiving’s $12K to $20K at 9 AM, and Tuesday gets cut from Cyber Monday’s $20K to $8K at 9 AM:
+So plan what you can and get ahead of changes.
+Hold CAC a Little Tighter During the Sale
+Going into the sale, we let CAC run up to 25% higher to fill the funnel. During the sale, hold it a little better than your normal average. A sale closes more of the funnel you already built.
+Net your discount out before you lock that target. More details on my
+Nov 2 post
+.
+If the day’s CAC is pacing at or under it, raise budgets the same day, knowing Meta won’t necessarily spend all of it. Do it early.
+If it held up, raise tomorrow’s planned number too.
+Monday Night, Set Tuesday’s Budget
+Monday is the last strong day. Tuesday drops off.
+Change a budget mid-day and Meta’s limit for that day is still “75% more than the highest daily budget in place that day.”
+A cut is prorated like a raise, so it only trims the hours left.
+Cyber Monday at $20K can spend up to $35K. Then Tuesday’s ceiling:
+Cut to $8K at 9 AM Tuesday: still $35K
+Set $8K at 11 PM Monday: $14K
+With budgets changing every day, don’t count on the weekly average to pull it back either. Every budget change starts a fresh limit for the rest of the week, and spend before it doesn’t count. (Each budget reset resets the weekly clocks on overspend for Meta and it takes no consideration that it previously overspent in those cases).
+If the offer ends at midnight, the sale campaign gets paused too which helps us manage budgets.
+Tuesday, Decide if you are pulling ads.
+Last month I pulled 99 Black Friday statics from 89 brands out of the Ad Library. 27 were still running 11 months after the sale. 21 still said Black Friday on the image, and 14 still said the deal wouldn’t last:
+I won’t tell you how to run your ads (in this case) but do it with intention.
+Sources:
+Meta, About daily budgets
+.
+Adobe, Cyber Monday 2025
+. Black Friday statics from the Meta Ad Library, pulled Oct 21, 2026.
+Good luck this weekend.
+Curtis

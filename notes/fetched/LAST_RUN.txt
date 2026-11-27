@@ -1,13 +1,12 @@
-2026-11-26 23:09 UTC
-NBNL: 1 items, 1 texts saved
+2026-11-27 15:20 UTC
+NBNL: 1 items, 0 texts saved
 NBBLOG: nothing new
-CTC: 8 items, 2 texts saved
+CTC: 8 items, 0 texts saved
 HAUS: nothing new
 TW: 1 items, 0 texts saved
-MR: 5 items, 0 texts saved
+MR: 7 items, 0 texts saved
 2PM: 1 items, 0 texts saved
 GRAPHITE: nothing new
 DTCNL: 4 items, 0 texts saved
-HWSS: nothing new
-TWAPI: 60 cohorts saved for 2026-10-27 to 2026-11-25
+HWSS: 1 items, 0 texts saved
 RUNNETH: unchanged apparel (same since 2026-11-26), sports-fitness (same since 2026-11-26), retail (same since 2026-11-26), accessories (same since 2026-11-26)
